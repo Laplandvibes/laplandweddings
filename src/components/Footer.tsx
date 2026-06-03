@@ -6,13 +6,16 @@ const BLUE = '#002F6C';
 const WHITE = '#F8FAFC';
 const PINK = '#EC4899';
 
+// Travel-guide pills point to the hub's topic guide pages on laplandvibes.com,
+// NOT the spoke domains — the network grid below already links each spoke once,
+// so pointing these at spoke domains duplicated every site within this footer.
 const defaultPillarLinks = [
-  { name: 'Northern Lights', href: 'https://laplandnorthernlights.com' },
-  { name: 'Husky Safaris', href: 'https://laplandhuskysafaris.com' },
-  { name: 'Ski Resorts', href: 'https://laplandskiresorts.com' },
-  { name: 'Where to Stay', href: 'https://laplandstays.com' },
-  { name: 'Things to Do', href: 'https://laplandactivities.online' },
-  { name: 'Nature & Parks', href: 'https://laplandnature.com' },
+  { name: 'Northern Lights', href: 'https://laplandvibes.com/northern-lights' },
+  { name: 'Husky Safaris', href: 'https://laplandvibes.com/husky-safaris' },
+  { name: 'Ski Resorts', href: 'https://laplandvibes.com/ski-resorts' },
+  { name: 'Where to Stay', href: 'https://laplandvibes.com/accommodation' },
+  { name: 'Things to Do', href: 'https://laplandvibes.com/things-to-do' },
+  { name: 'Nature & Parks', href: 'https://laplandvibes.com/nature' },
 ];
 
 const siteGroups = [
@@ -60,7 +63,7 @@ const siteGroups = [
       { name: 'Deals & Offers', url: 'https://laplanddeals.com' },
       { name: 'Transport', url: 'https://laplandtransport.com' },
       { name: 'Car Rental', url: 'https://laplandcarrental.com' },
-      { name: 'Work in Lapland', url: 'https://laplandwork.fi' },
+      { name: 'Work in Lapland', url: 'https://laplandwork.com' },
     ],
   },
 ];
