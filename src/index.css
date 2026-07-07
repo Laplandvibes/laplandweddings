@@ -1,19 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
 
+@source "../../shared/**/*.{ts,tsx}";
+
 @theme {
-  --font-heading: 'Bebas Neue', sans-serif;
+  --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'DM Sans', sans-serif;
 
+  /* WARM LUXE WEDDING PALETTE — deep espresso bg + cream cards.
+     Magnolia Rouge / Vogue Weddings spread aesthetic: rich warm dark
+     background, cream cards floating on top with strong shadows,
+     blush + gold + rose accents. */
+  --color-cream: #1F1612;          /* page bg — deep espresso, warm not cold */
+  --color-cream-light: #2A1F18;    /* slightly lighter espresso for variation */
+  --color-blush: #3A2A24;           /* warm dark accent for alternating sections */
+  --color-blush-light: #2A1F18;    /* deep band */
+  --color-ivory: #FBF6F0;           /* cards — pure cream, pops off the dark bg */
+  --color-charcoal: #1F1612;        /* text on cream cards */
+  --color-stone: #5A4F48;           /* secondary muted text on cards */
+  --color-stone-light: #8B7E73;     /* tertiary text on cards */
+  --color-line: #4A382F;            /* warm hairline borders on dark bg */
+  --color-line-light: #DCCEC0;     /* borders on cream cards */
+
+  /* Light text colors for use ON the dark bg */
+  --color-cream-text: #F5EBE0;     /* primary text on dark bg */
+  --color-cream-mute: #C9B5A4;     /* secondary text on dark bg */
+
+  /* Accent colors — keep romantic warm tones */
   --color-pink: #EC4899;
-  --color-rose: #F43F5E;
-  --color-gray: #1F2937;
-  --color-gold: #D4A574;
-  --color-night: #0F172A;
-  --color-night-light: #1E293B;
-  --color-aurora-green: #22D3EE;
-  --color-aurora-purple: #A855F7;
-  --color-aurora-pink: #EC4899;
+  --color-rose: #E5879C;            /* softer warm rose, romantic */
+  --color-rose-deep: #C9466A;       /* deeper rose for buttons */
+  --color-gold: #D4A574;            /* warm gold accent */
+  --color-sage: #9CAF9D;
+
+  /* Legacy tokens — re-mapped to WARM LUXE theme */
+  --color-night: #1F1612;           /* page bg = deep espresso */
+  --color-night-light: #FBF6F0;     /* cards = ivory cream */
+  --color-gray: #5A4F48;
+  --color-aurora-green: #D4A574;   /* gold instead of teal */
+  --color-aurora-purple: #B8915C;
+  --color-aurora-pink: #C9466A;    /* deep rose */
 }
 
 @layer base {
@@ -23,35 +49,327 @@
 
   body {
     font-family: var(--font-body);
-    color: #e2e8f0;
-    background-color: var(--color-night);
+    color: var(--color-cream-text);
+    background-color: var(--color-cream);
+  }
+
+  /* On the deep page bg, default text-white stays light. */
+  .text-white {
+    color: var(--color-cream-text) !important;
+  }
+
+  /* Cream-card scope — any descendant of a cream card uses dark text.
+     Matches .on-card explicit class and .bg-night-light* card backgrounds. */
+  .on-card .text-white,
+  .on-card.text-white,
+  .bg-night-light .text-white,
+  [class*="bg-night-light\/6"] .text-white,
+  [class*="bg-night-light\/7"] .text-white {
+    color: var(--color-charcoal) !important;
+    text-shadow: none !important;
+  }
+  .on-card .text-gray-200,
+  .bg-night-light .text-gray-200,
+  [class*="bg-night-light\/6"] .text-gray-200,
+  [class*="bg-night-light\/7"] .text-gray-200 {
+    color: #3F3935 !important;
+  }
+  .on-card .text-gray-300,
+  .bg-night-light .text-gray-300,
+  [class*="bg-night-light\/6"] .text-gray-300,
+  [class*="bg-night-light\/7"] .text-gray-300 {
+    color: var(--color-stone) !important;
+  }
+  .on-card .text-gray-400,
+  .bg-night-light .text-gray-400,
+  [class*="bg-night-light\/6"] .text-gray-400,
+  [class*="bg-night-light\/7"] .text-gray-400 {
+    color: var(--color-stone-light) !important;
+  }
+  .on-card .text-gray-500,
+  .bg-night-light .text-gray-500,
+  [class*="bg-night-light\/6"] .text-gray-500,
+  [class*="bg-night-light\/7"] .text-gray-500 {
+    color: var(--color-stone-light) !important;
+  }
+
+  /* IMAGE-OVERLAY SCOPE — must come AFTER cream-card rules so it wins
+     when a card has BOTH .on-image and .bg-night-light (e.g. wedding-type
+     cards on Home where the image fills the card). */
+  .on-image .text-white,
+  .on-image.text-white,
+  .text-on-image,
+  .on-image.bg-night-light .text-white,
+  .on-image .text-white {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55), 0 0 32px rgba(0, 0, 0, 0.4) !important;
+  }
+  .on-image .text-gray-200,
+  .on-image .text-gray-300 {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5) !important;
+  }
+  /* Headings inside .on-image stay white too */
+  .on-image h1,
+  .on-image h2,
+  .on-image h3,
+  .on-image h4 {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55), 0 0 32px rgba(0, 0, 0, 0.4) !important;
+  }
+  /* Inputs inside cards use light bg — match any bg-night-light variant */
+  .bg-night-light input,
+  .bg-night-light textarea,
+  .bg-night-light select,
+  [class*="bg-night-light"] input,
+  [class*="bg-night-light"] textarea,
+  [class*="bg-night-light"] select {
+    background-color: #F8EFE5 !important;
+    color: var(--color-charcoal) !important;
+    border-color: var(--color-line-light) !important;
+  }
+  [class*="bg-night-light"] input::placeholder,
+  [class*="bg-night-light"] textarea::placeholder {
+    color: rgba(31, 22, 18, 0.45) !important;
+  }
+  /* Mail/lock icon inside email input — make it visible on cream */
+  [class*="bg-night-light"] .relative > svg,
+  [class*="bg-night-light"] label svg {
+    color: var(--color-stone) !important;
+  }
+
+  /* Partner application form — cream-on-cream made the fields illegible.
+     White fields + a clear warm border so each control stands out on the
+     cream card. Same specificity as the global rule above but later in
+     source, so it wins. */
+  .partner-form input,
+  .partner-form textarea,
+  .partner-form select {
+    background-color: #FFFFFF !important;
+    border-color: #B0997F !important;
+  }
+  .partner-form input:focus,
+  .partner-form textarea:focus,
+  .partner-form select:focus {
+    border-color: var(--color-aurora-pink) !important;
+  }
+
+  /* CTA buttons must always have white text on rose/pink backgrounds,
+     even when inside a cream card where text-white → charcoal globally. */
+  .bg-rose,
+  .bg-pink,
+  button.bg-rose,
+  button.bg-pink,
+  a.bg-rose,
+  a.bg-pink {
+    color: #FFFFFF !important;
+  }
+  .bg-rose .text-white,
+  .bg-pink .text-white,
+  .bg-rose *,
+  .bg-pink * {
+    color: #FFFFFF !important;
+  }
+  .bg-rose:hover,
+  .bg-pink:hover {
+    color: #FFFFFF !important;
+  }
+  /* Pink/rose icons inside CTA buttons stay white */
+  .bg-rose svg,
+  .bg-pink svg {
+    color: #FFFFFF !important;
+  }
+
+  .text-night {
+    color: var(--color-charcoal) !important;
+  }
+  .text-night-light {
+    color: var(--color-stone) !important;
+  }
+  /* Default text-gray-* on the dark page bg = light cream tones */
+  .text-gray-200 {
+    color: rgba(245, 235, 224, 0.95) !important;
+  }
+  .text-gray-300 {
+    color: var(--color-cream-mute) !important;
+  }
+  .text-gray-400 {
+    color: rgba(201, 181, 164, 0.7) !important;
+  }
+  .text-gray-500 {
+    color: rgba(201, 181, 164, 0.55) !important;
+  }
+  .text-gray-700 {
+    color: var(--color-charcoal) !important;
+  }
+  .text-gray-800 {
+    color: var(--color-charcoal) !important;
+  }
+
+  /* Background overrides */
+  .bg-night {
+    background-color: var(--color-cream) !important;
+  }
+  .bg-night-light {
+    background-color: var(--color-ivory) !important;
+  }
+  .bg-night-light\/20 {
+    background-color: var(--color-cream-light) !important;
+  }
+  .bg-night-light\/30 {
+    background-color: var(--color-cream-light) !important;
+  }
+  .bg-night-light\/40 {
+    background-color: var(--color-blush) !important;
+  }
+  .bg-night-light\/60 {
+    background-color: var(--color-ivory) !important;
+  }
+  .bg-night-light\/70 {
+    background-color: var(--color-ivory) !important;
+  }
+
+  /* Borders */
+  .border-white\/5 {
+    border-color: rgba(245, 235, 224, 0.08) !important;
+  }
+  .border-white\/10 {
+    border-color: rgba(245, 235, 224, 0.12) !important;
+  }
+  .border-white\/15 {
+    border-color: rgba(245, 235, 224, 0.18) !important;
+  }
+  .border-white\/20 {
+    border-color: rgba(245, 235, 224, 0.22) !important;
+  }
+  .border-white\/30 {
+    border-color: rgba(245, 235, 224, 0.32) !important;
+  }
+  .bg-white\/5 {
+    background-color: rgba(245, 235, 224, 0.04) !important;
+  }
+  .bg-white\/10 {
+    background-color: rgba(245, 235, 224, 0.08) !important;
+  }
+  .hover\:bg-white\/5:hover {
+    background-color: rgba(245, 235, 224, 0.06) !important;
+  }
+  .hover\:bg-white\/10:hover {
+    background-color: rgba(245, 235, 224, 0.10) !important;
+  }
+  .border-aurora-pink\/40 {
+    border-color: rgba(229, 135, 156, 0.5) !important;
+  }
+  .border-rose\/40 {
+    border-color: rgba(229, 135, 156, 0.5) !important;
+  }
+  .placeholder-gray-500::placeholder {
+    color: rgba(201, 181, 164, 0.55) !important;
+  }
+
+  /* Headings — by default light cream on dark bg */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-cream-text);
+  }
+  /* Inside cream cards, headings turn charcoal */
+  .on-card h1,
+  .on-card h2,
+  .on-card h3,
+  .on-card h4,
+  .on-card h5,
+  .on-card h6,
+  .bg-night-light h1,
+  .bg-night-light h2,
+  .bg-night-light h3,
+  .bg-night-light h4,
+  .bg-night-light h5,
+  .bg-night-light h6 {
+    color: var(--color-charcoal);
+  }
+
+  /* FINAL OVERRIDE — on-image cards must always show white text,
+     even when they also have .bg-night-light placeholder bg.
+     This rule is last in source order so it wins over earlier rules. */
+  .on-image,
+  .on-image .text-white,
+  .on-image.text-white,
+  .on-image h1,
+  .on-image h2,
+  .on-image h3,
+  .on-image h4,
+  .on-image h5,
+  .on-image h6,
+  .on-image p,
+  .on-image span:not(.step-num) {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7), 0 0 36px rgba(0, 0, 0, 0.5) !important;
+  }
+  .on-image .text-gold,
+  .on-image .text-aurora-pink {
+    color: #FCD9A8 !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  /* Hero text always white */
+  .hero-text-light {
+    color: #FFFFFF !important;
+  }
+
+  /* Image dynamics — punchy contrast/saturation on card images */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+  .group img,
+  a img,
+  .aspect-\[3\/4\] img,
+  .aspect-\[4\/3\] img,
+  .aspect-square img {
+    filter: contrast(1.06) saturate(1.08);
+  }
+  /* Hero image stays untouched */
+  section > .absolute > img,
+  .checklist-print img {
+    filter: none !important;
+  }
+
+  /* Section bg overrides — alternating warm dark bands */
+  section.bg-night-light\/30,
+  section.bg-night-light\/20,
+  section.bg-night-light\/40 {
+    background-color: var(--color-cream-light) !important;
+  }
+
+  /* Card shadows for depth on dark bg — cards "lift" off the page */
+  .bg-night-light,
+  [class*="bg-night-light/"] {
+    box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5),
+                0 2px 8px -2px rgba(0, 0, 0, 0.3);
+  }
+
+  /* All-card content gets dark text by default */
+  .bg-night-light p,
+  .bg-night-light li,
+  .bg-night-light span,
+  [class*="bg-night-light/6"] p,
+  [class*="bg-night-light/6"] li,
+  [class*="bg-night-light/6"] span,
+  [class*="bg-night-light/7"] p,
+  [class*="bg-night-light/7"] li,
+  [class*="bg-night-light/7"] span {
+    color: inherit;
   }
 }
 
 /* Aurora gradient keyframes */
 @keyframes aurora {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
-
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
-
 @keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }

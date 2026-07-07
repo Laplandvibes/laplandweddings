@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
@@ -7,10 +7,42 @@ import { locations } from '../data/locations';
 import { getVenueBySlug } from '../data/venues';
 import { useLang } from '../i18n/LangContext';
 import NotFound from './NotFound';
+import L from '../components/L';
+import { pickLocalized, type Localized } from '../data/localized';
+import { ui } from '../data/uiStrings';
+
+const P: Record<'weddings' | 'venuesInRegion', Localized<string>> = {
+  weddings: {
+    en: 'Weddings',
+    fi: 'Häät',
+    de: 'Hochzeiten',
+    ja: '結婚式',
+    es: 'Bodas',
+    'pt-BR': 'Casamentos',
+    'zh-CN': '婚礼',
+    ko: '웨딩',
+    fr: 'Mariages',
+    it: 'Matrimoni',
+    nl: 'Bruiloften',
+  },
+  venuesInRegion: {
+    en: 'Wedding venues in this region',
+    fi: 'Hääpaikat tällä alueella',
+    de: 'Hochzeitslocations in dieser Region',
+    ja: 'この地域のウェディング会場',
+    es: 'Lugares para bodas en esta región',
+    'pt-BR': 'Locais para casamento nesta região',
+    'zh-CN': '该地区的婚礼场地',
+    ko: '이 지역의 웨딩 장소',
+    fr: 'Lieux de mariage dans cette région',
+    it: 'Location per matrimoni in questa regione',
+    nl: 'Trouwlocaties in deze regio',
+  },
+};
 
 export default function LocationPage() {
   const { slug } = useParams<{ slug: string }>();
-  const { lang, tr } = useLang();
+  const { lang, dataLang, tr } = useLang();
   const loc = locations.find((l) => l.slug === slug);
   if (!loc) return <NotFound />;
 
@@ -19,26 +51,26 @@ export default function LocationPage() {
   return (
     <>
       <SEO
-        title={`${loc.name[lang]} — ${lang === 'fi' ? 'Häät' : 'Weddings'} | LaplandWeddings`}
-        description={loc.intro[lang].slice(0, 160)}
+        title={`${loc.name[dataLang]} — ${pickLocalized(P.weddings, lang)} | LaplandWeddings`}
+        description={loc.intro[dataLang].slice(0, 160)}
         path={`/locations/${loc.slug}`}
         image={loc.heroImage}
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Place',
-          name: loc.name[lang],
-          description: loc.intro[lang],
+          name: loc.name[dataLang],
+          description: loc.intro[dataLang],
           geo: { '@type': 'GeoCoordinates', addressCountry: 'FI' },
         }}
       />
 
       <PageHero
         compact
-        eyebrow={loc.region[lang]}
-        title={loc.name[lang]}
-        subtitle={loc.intro[lang]}
+        eyebrow={loc.region[dataLang]}
+        title={loc.name[dataLang]}
+        subtitle={loc.intro[dataLang]}
         image={loc.heroImage}
-        imageAlt={loc.heroAlt[lang]}
+        imageAlt={loc.heroAlt[dataLang]}
       />
 
       <Section>
@@ -46,22 +78,22 @@ export default function LocationPage() {
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-2">{tr.sections.airport}</p>
             <p className="font-heading text-2xl text-white">{loc.airport}</p>
-            <p className="text-sm text-gray-400 mt-1">{loc.airportDistanceKm} km {lang === 'fi' ? 'keskustasta' : 'from centre'}</p>
+            <p className="text-sm text-gray-400 mt-1">{loc.airportDistanceKm} km {ui('fromCentre', lang)}</p>
           </div>
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
-            <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-2">{lang === 'fi' ? 'Erityispiirre' : 'Highlight'}</p>
-            <p className="text-base text-white leading-relaxed">{loc.highlight[lang]}</p>
+            <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-2">{ui('highlight', lang)}</p>
+            <p className="text-base text-white leading-relaxed">{loc.highlight[dataLang]}</p>
           </div>
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-2">{tr.sections.season}</p>
-            <p className="text-sm text-gray-300 leading-relaxed">{loc.seasonNote[lang]}</p>
+            <p className="text-sm text-gray-300 leading-relaxed">{loc.seasonNote[dataLang]}</p>
           </div>
         </div>
       </Section>
 
       <Section title={tr.sections.bestFor} className="bg-night-light/20">
         <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          {loc.bestFor[lang].map((b) => (
+          {loc.bestFor[dataLang].map((b) => (
             <div key={b} className="bg-night-light/60 border border-rose/20 rounded-xl p-5 text-center">
               <p className="text-white font-medium">{b}</p>
             </div>
@@ -69,23 +101,23 @@ export default function LocationPage() {
         </div>
       </Section>
 
-      <Section title={lang === 'fi' ? 'Hääpaikat tällä alueella' : 'Wedding venues in this region'}>
+      <Section title={pickLocalized(P.venuesInRegion, lang)}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {venues.map((v) => (
-            <Link key={v.slug} to={`/venues/${v.slug}`} className="group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all">
+            <L key={v.slug} to={`/venues/${v.slug}`} className="group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all">
               <div className="aspect-[4/3] overflow-hidden">
-                <img src={v.image} alt={v.imageAlt[lang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={v.image} alt={v.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
               </div>
               <div className="p-5">
                 <h3 className="font-heading text-lg text-white mb-1 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
-                <p className="text-xs text-gray-500 mb-2">{v.region[lang]}</p>
-                <p className="text-sm text-gray-400 line-clamp-2">{v.description[lang]}</p>
+                <p className="text-xs text-gray-500 mb-2">{v.region[dataLang]}</p>
+                <p className="text-sm text-gray-400 line-clamp-2">{v.description[dataLang]}</p>
                 <div className="mt-3 text-xs text-gray-500 flex items-center justify-between">
-                  <span>{v.capacity.min}–{v.capacity.max} {lang === 'fi' ? 'vierasta' : 'guests'}</span>
+                  <span>{v.capacity.min}–{v.capacity.max} {ui('guests', lang)}</span>
                   <span className="text-gold">{v.priceTier}</span>
                 </div>
               </div>
-            </Link>
+            </L>
           ))}
         </div>
       </Section>

@@ -1,0 +1,134 @@
+{
+  "site": "laplandweddings-new",
+  "scanned_webp": 20,
+  "converted": 20,
+  "skipped_exists": 0,
+  "skipped_avif_larger": 0,
+  "errors": 0,
+  "total_webp_bytes": 6606070,
+  "total_avif_bytes": 4320363,
+  "saved_mb": "2.18",
+  "saved_pct": "34.6",
+  "report": [
+    {
+      "file": "public\\images\\heroes\\aurora-elope-hero.webp",
+      "webp_bytes": 289020,
+      "avif_bytes": 184936,
+      "saved_pct": "36.0"
+    },
+    {
+      "file": "public\\images\\heroes\\contact-bg.webp",
+      "webp_bytes": 85578,
+      "avif_bytes": 58340,
+      "saved_pct": "31.8"
+    },
+    {
+      "file": "public\\images\\heroes\\home-cover.webp",
+      "webp_bytes": 174806,
+      "avif_bytes": 101792,
+      "saved_pct": "41.8"
+    },
+    {
+      "file": "public\\images\\locations\\pyha-luosto.webp",
+      "webp_bytes": 662668,
+      "avif_bytes": 456244,
+      "saved_pct": "31.2"
+    },
+    {
+      "file": "public\\images\\types\\elopement.webp",
+      "webp_bytes": 150100,
+      "avif_bytes": 84446,
+      "saved_pct": "43.7"
+    },
+    {
+      "file": "public\\images\\types\\midnight-sun.webp",
+      "webp_bytes": 1046766,
+      "avif_bytes": 796947,
+      "saved_pct": "23.9"
+    },
+    {
+      "file": "public\\images\\types\\vow-renewal.webp",
+      "webp_bytes": 128364,
+      "avif_bytes": 78674,
+      "saved_pct": "38.7"
+    },
+    {
+      "file": "public\\images\\venues\\hotel-aurora-pyha.webp",
+      "webp_bytes": 28576,
+      "avif_bytes": 23128,
+      "saved_pct": "19.1"
+    },
+    {
+      "file": "public\\images\\venues\\lapland-hotels-pyha.webp",
+      "webp_bytes": 585948,
+      "avif_bytes": 360000,
+      "saved_pct": "38.6"
+    },
+    {
+      "file": "public\\images\\venues\\lapland-hotels-saaga.webp",
+      "webp_bytes": 509642,
+      "avif_bytes": 387093,
+      "saved_pct": "24.0"
+    },
+    {
+      "file": "public\\images\\venues\\levi-ice-castle.webp",
+      "webp_bytes": 346772,
+      "avif_bytes": 252588,
+      "saved_pct": "27.2"
+    },
+    {
+      "file": "public\\images\\venues\\levi-panorama.webp",
+      "webp_bytes": 225878,
+      "avif_bytes": 144881,
+      "saved_pct": "35.9"
+    },
+    {
+      "file": "public\\images\\venues\\northern-lights-ranch.webp",
+      "webp_bytes": 291078,
+      "avif_bytes": 146155,
+      "saved_pct": "49.8"
+    },
+    {
+      "file": "public\\images\\venues\\northern-lights-village-levi.webp",
+      "webp_bytes": 437720,
+      "avif_bytes": 159605,
+      "saved_pct": "63.5"
+    },
+    {
+      "file": "public\\images\\venues\\northern-lights-village-saariselka.webp",
+      "webp_bytes": 41654,
+      "avif_bytes": 27789,
+      "saved_pct": "33.3"
+    },
+    {
+      "file": "public\\images\\venues\\nova-skyland.webp",
+      "webp_bytes": 213598,
+      "avif_bytes": 173924,
+      "saved_pct": "18.6"
+    },
+    {
+      "file": "public\\images\\venues\\santas-hotel-santamus.webp",
+      "webp_bytes": 110720,
+      "avif_bytes": 66655,
+      "saved_pct": "39.8"
+    },
+    {
+      "file": "public\\images\\venues\\snow-village-lainio.webp",
+      "webp_bytes": 440994,
+      "avif_bytes": 243698,
+      "saved_pct": "44.7"
+    },
+    {
+      "file": "public\\images\\venues\\wilderness-hotel-inari.webp",
+      "webp_bytes": 409794,
+      "avif_bytes": 280532,
+      "saved_pct": "31.5"
+    },
+    {
+      "file": "public\\images\\venues\\wilderness-hotel-juutua.webp",
+      "webp_bytes": 426394,
+      "avif_bytes": 292936,
+      "saved_pct": "31.3"
+    }
+  ]
+}

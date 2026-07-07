@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import PageBreadcrumb from './PageBreadcrumb';
 
 interface PageHeroProps {
   eyebrow?: string;
@@ -6,30 +7,70 @@ interface PageHeroProps {
   subtitle?: string;
   image: string;
   imageAlt: string;
+  avifSrcSet?: string;
+  webpSrcSet?: string;
+  sizes?: string;
   children?: ReactNode;
   compact?: boolean;
+  /**
+   * CSS object-position for the hero image (default 'center'). Landscape hero
+   * photos get cropped hard on tall mobile viewports; point this at the real
+   * subject (e.g. '64% 50%' for a wedding scene sitting center-right) so the
+   * subject survives the portrait crop instead of showing only background.
+   */
+  objectPosition?: string;
 }
 
-export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, children, compact }: PageHeroProps) {
+export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, avifSrcSet, webpSrcSet, sizes, children, compact, objectPosition }: PageHeroProps) {
   return (
+    <>
     <section
-      className={`relative ${compact ? 'min-h-[42vh] sm:min-h-[55vh]' : 'min-h-[60vh] sm:min-h-[75vh]'} flex items-center overflow-hidden`}
+      className={`relative ${compact ? 'min-h-[58vh] sm:min-h-[68vh]' : 'min-h-[72vh] sm:min-h-[82vh]'} flex items-center overflow-hidden`}
     >
       <div className="absolute inset-0">
-        <img src={image} alt={imageAlt} className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/80 via-night/55 to-night/95" />
+        {avifSrcSet || webpSrcSet ? (
+          <picture>
+            {avifSrcSet && <source type="image/avif" srcSet={avifSrcSet} sizes={sizes ?? '100vw'} />}
+            {webpSrcSet && <source type="image/webp" srcSet={webpSrcSet} sizes={sizes ?? '100vw'} />}
+            <img src={image} alt={imageAlt} className="w-full h-full object-cover" style={objectPosition ? { objectPosition } : undefined} loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" />
+          </picture>
+        ) : (
+          <img src={image} alt={imageAlt} className="w-full h-full object-cover" style={objectPosition ? { objectPosition } : undefined} loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" />
+        )}
+        {/* Cinematic vignette — strong contrast for image dynamics + readable hero text */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(15,12,10,0.50) 0%, rgba(15,12,10,0.52) 45%, rgba(15,12,10,0.62) 75%, rgba(15,12,10,0.85) 100%)',
+          }}
+        />
+        {/* Side vignette for cinematic feel */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse at center, transparent 35%, rgba(15,12,10,0.45) 100%)',
+          }}
+        />
       </div>
       <div className="relative z-10 w-full max-w-5xl mx-auto px-5 sm:px-6 py-12 sm:py-20 text-center">
         {eyebrow && (
-          <p className="uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[10px] sm:text-sm text-aurora-pink font-semibold mb-3 sm:mb-4">
+          <p className="hero-text-light uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[10px] sm:text-sm font-semibold mb-3 sm:mb-4" style={{ color: '#FCE8E1', textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}>
             {eyebrow}
           </p>
         )}
-        <h1 className="font-heading text-[34px] leading-[1.1] sm:text-5xl md:text-6xl text-white mb-3 sm:mb-6 tracking-wide [text-wrap:balance]">
+        <h1
+          className="hero-text-light font-heading text-[40px] leading-[1.05] sm:text-6xl md:text-7xl mb-3 sm:mb-6 tracking-wide [text-wrap:balance] font-light"
+          style={{ color: '#FFFFFF', textShadow: '0 2px 16px rgba(0,0,0,0.7), 0 1px 5px rgba(0,0,0,0.55)' }}
+        >
           {title}
         </h1>
         {subtitle && (
-          <p className="text-[15px] sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed [text-wrap:pretty]">
+          <p
+            className="hero-text-light text-[15px] sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed [text-wrap:pretty]"
+            style={{ color: '#FBF6F0', textShadow: '0 1px 12px rgba(0,0,0,0.5)' }}
+          >
             {subtitle}
           </p>
         )}
@@ -40,5 +81,7 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, ch
         )}
       </div>
     </section>
+    <PageBreadcrumb />
+    </>
   );
 }

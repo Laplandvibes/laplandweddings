@@ -1,0 +1,22 @@
+# >>> LV-LINK-PRELOAD (managed by apply_link_preload_headers.py)
+/
+  Link: </images/heroes/reindeer-sleigh-hero.jpg>; rel=preload; as=image; fetchpriority=high
+
+/index.html
+  Link: </images/heroes/reindeer-sleigh-hero.jpg>; rel=preload; as=image; fetchpriority=high
+# <<< LV-LINK-PRELOAD
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/sitemap.xml
+  Content-Type: application/xml
+
+/robots.txt
+  Content-Type: text/plain

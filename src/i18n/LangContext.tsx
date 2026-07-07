@@ -1,50 +1,128 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
-import { t, type Lang } from './translations';
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { t, loadLang, subscribeLangLoaded, isLangLoaded, type Lang, type Translation } from './translations';
 
-type Translation = (typeof t)['fi'];
+type Translations = Translation;
+
+/**
+ * Data files carry all 11 locales. `dataLang` is the real current locale used
+ * to index into localized data objects (Localized<T> = Record<Lang, T>).
+ */
+export type DataLang = Lang;
 
 interface LangContextValue {
   lang: Lang;
+  /** The real current locale, used to index into localized data objects. */
+  dataLang: DataLang;
   setLang: (lang: Lang) => void;
-  tr: Translation;
+  tr: Translations;
+  localePath: (path: string) => string;
 }
 
 const LangContext = createContext<LangContextValue | null>(null);
 
-const STORAGE_KEY = 'laplandweddings_lang';
+const PREFIXES: { lang: Lang; prefix: string }[] = [
+  { lang: 'fi', prefix: '/fi' },
+  { lang: 'de', prefix: '/de' },
+  { lang: 'ja', prefix: '/ja' },
+  { lang: 'es', prefix: '/es' },
+  { lang: 'pt-BR', prefix: '/br' },
+  { lang: 'zh-CN', prefix: '/cn' },
+  { lang: 'ko', prefix: '/kr' },
+  { lang: 'fr', prefix: '/fr' },
+  { lang: 'it', prefix: '/it' },
+  { lang: 'nl', prefix: '/nl' },
+];
 
-function detectInitialLang(): Lang {
-  // English is the primary language for the international destination wedding market.
-  // Finnish is opt-in via the language switcher and stored in localStorage.
-  if (typeof window === 'undefined') return 'en';
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored === 'fi' || stored === 'en') return stored;
+/** Strips a leading locale prefix from a path, returning the canonical (EN) path. */
+function stripPrefix(path: string): string {
+  for (const { prefix } of PREFIXES) {
+    if (path === prefix) return '/';
+    if (path.startsWith(prefix + '/')) return path.slice(prefix.length);
+  }
+  return path;
+}
+
+/** Builds a path including the locale prefix when lang !== 'en'. Always starts with /. */
+export function buildPath(lang: Lang, path: string): string {
+  const clean = stripPrefix(path.startsWith('/') ? path : '/' + path);
+  if (lang === 'en') return clean;
+  const entry = PREFIXES.find((p) => p.lang === lang);
+  if (!entry) return clean;
+  return clean === '/' ? entry.prefix : entry.prefix + clean;
+}
+
+export function detectLangFromPath(pathname: string): Lang {
+  for (const { lang, prefix } of PREFIXES) {
+    if (pathname === prefix || pathname.startsWith(prefix + '/')) return lang;
+  }
   return 'en';
 }
 
+const BCP47: Record<Lang, string> = {
+  en: 'en-US',
+  fi: 'fi-FI',
+  de: 'de-DE',
+  ja: 'ja-JP',
+  es: 'es-ES',
+  'pt-BR': 'pt-BR',
+  'zh-CN': 'zh-CN',
+  ko: 'ko-KR',
+  fr: 'fr-FR',
+  it: 'it-IT',
+  nl: 'nl-NL',
+};
+
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>('en');
+  const location = useLocation();
+  const navigate = useNavigate();
+  const lang = detectLangFromPath(location.pathname);
 
+  // Re-render tick that increments when a lazy locale chunk finishes loading.
+  const [loadedTick, setLoadedTick] = useState(0);
+
+  // Kick off lazy locale load + subscribe for completion.
   useEffect(() => {
-    setLangState(detectInitialLang());
-  }, []);
+    if (isLangLoaded(lang)) return;
+    let cancelled = false;
+    const unsub = subscribeLangLoaded(() => {
+      if (!cancelled && isLangLoaded(lang)) setLoadedTick((n) => n + 1);
+    });
+    loadLang(lang).catch(() => {
+      /* fallback to EN remains in place */
+    });
+    return () => {
+      cancelled = true;
+      unsub();
+    };
+  }, [lang]);
 
+  // Sync <html lang> attribute (BCP-47)
   useEffect(() => {
     if (typeof document !== 'undefined') {
-      document.documentElement.lang = lang;
+      document.documentElement.lang = BCP47[lang];
     }
   }, [lang]);
 
-  const setLang = (next: Lang) => {
-    setLangState(next);
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(STORAGE_KEY, next);
-    }
-  };
-
-  return (
-    <LangContext.Provider value={{ lang, setLang, tr: t[lang] as Translation }}>{children}</LangContext.Provider>
+  const value = useMemo<LangContextValue>(
+    () => ({
+      lang,
+      dataLang: lang,
+      setLang: (next) => {
+        if (next === lang) return;
+        const canonical = stripPrefix(location.pathname);
+        const target = buildPath(next, canonical);
+        navigate(target + location.search + location.hash, { replace: false });
+      },
+      tr: t[lang] as Translations,
+      localePath: (path) => buildPath(lang, path),
+    }),
+    // loadedTick intentionally included so consumers refresh once locale arrives.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [lang, location.pathname, location.search, location.hash, navigate, loadedTick],
   );
+
+  return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
 }
 
 export function useLang() {
@@ -57,25 +135,47 @@ export function useTr() {
   return useContext(LangContext)!.tr;
 }
 
-/** Helper for picking a localised string from {fi,en} objects. */
-export function loc<T>(value: { fi: T; en: T } | undefined, lang: Lang): T | undefined {
+/**
+ * Helper for picking a localised value from a fully-populated 11-locale object,
+ * with EN fallback for any locale that is somehow missing at runtime.
+ * Accepts partially-populated objects too (older shapes), `en` is required.
+ */
+export function loc<T>(
+  value: ({ en: T } & Partial<Record<Lang, T>>) | undefined,
+  lang: Lang,
+): T | undefined {
   if (!value) return undefined;
-  return value[lang];
+  return value[lang] ?? value.en;
 }
 
-/**
- * Map a language label (e.g. "Suomi", "Deutsch") to the user's current UI language
- * so the languages list reads natively for the visitor.
- */
-const LANG_LABELS: Record<string, { fi: string; en: string }> = {
-  Suomi: { fi: 'Suomi', en: 'Finnish' },
-  English: { fi: 'Englanti', en: 'English' },
-  Deutsch: { fi: 'Saksa', en: 'German' },
-  Français: { fi: 'Ranska', en: 'French' },
-  Español: { fi: 'Espanja', en: 'Spanish' },
-  Svenska: { fi: 'Ruotsi', en: 'Swedish' },
-};
-
+/** Localise language labels ("Suomi" → "Finnish" in English mode, etc.) */
 export function localiseLanguage(label: string, lang: Lang): string {
-  return LANG_LABELS[label]?.[lang] ?? label;
+  if (lang === 'fi') {
+    const map: Record<string, string> = {
+      English: 'Englanti',
+      Deutsch: 'Saksa',
+      Français: 'Ranska',
+      Español: 'Espanja',
+      Suomi: 'Suomi',
+    };
+    return map[label] || label;
+  }
+  if (lang === 'de') {
+    const map: Record<string, string> = {
+      English: 'Englisch',
+      Deutsch: 'Deutsch',
+      Suomi: 'Finnisch',
+      Français: 'Französisch',
+      Español: 'Spanisch',
+    };
+    return map[label] || label;
+  }
+  const map: Record<string, string> = {
+    Suomi: 'Finnish',
+    Deutsch: 'German',
+    Français: 'French',
+    Español: 'Spanish',
+    English: 'English',
+  };
+  return map[label] || label;
 }

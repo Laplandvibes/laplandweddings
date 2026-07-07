@@ -1,11 +1,87 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- LV-LOCALE-TITLE (managed by scripts/inject_locale_titles.mjs) -->
+    <script>
+      (function () {
+        try {
+          var T = {"en":"Lapland Weddings 2026 — Arctic Venues & Marriage Paperwork","fi":"Häät Lapissa 2026 — hääpaikat ja DVV-paperit","de":"Hochzeit in Lappland 2026 — Locations & Heiratspapiere","ja":"ラップランドの結婚式2026 — 会場と婚姻手続き","es":"Bodas en Laponia 2026 — lugares y trámites de boda","pt-br":"Casamentos na Lapônia 2026 — locais e documentação","zh-cn":"拉普兰婚礼2026 — 婚礼场地与结婚手续","kr":"라플란드 결혼식 2026 — 베뉴와 혼인 서류","fr":"Mariage en Laponie 2026 — lieux et démarches de mariage","it":"Matrimonio in Lapponia 2026 — sedi e pratiche di nozze","nl":"Trouwen in Lapland 2026 — locaties en huwelijkspapieren"};
+          var path = location.pathname || '/';
+          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', br: 'pt-br', cn: 'zh-cn', kr: 'kr', fr: 'fr', it: 'it', nl: 'nl' };
+          var loc = 'en';
+          for (var p in map) {
+            if (path === '/' + p || path.indexOf('/' + p + '/') === 0) { loc = map[p]; break; }
+          }
+          if (T[loc]) document.title = T[loc];
+        } catch (e) { /* fail silent */ }
+      })();
+    </script>
+    <!-- /LV-LOCALE-TITLE -->
+    <!-- LV-SYNC-LOCALE-REDIRECT (managed by scripts/inject_sync_redirect.mjs) -->
+    <script>
+      (function () {
+        try {
+          var path = location.pathname || '/';
+          // Already on a locale prefix? — never override
+          var prefixes = ['/fi','/de','/ja','/es','/br','/cn','/kr','/fr','/it','/nl'];
+          for (var i = 0; i < prefixes.length; i++) {
+            if (path === prefixes[i] || path.indexOf(prefixes[i] + '/') === 0) return;
+          }
+          // Only redirect from bare root or sub-pages without a locale prefix
+          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-br': 'br', 'zh-cn': 'cn', ko: 'kr', fr: 'fr', it: 'it', nl: 'nl' };
+          var stored = null;
+          try { stored = localStorage.getItem('lv_locale_choice'); } catch (e) {}
+          var target = null;
+          if (stored) {
+            var k = stored.toLowerCase();
+            if (map[k]) target = '/' + map[k];
+            else if (k === 'en') return; // explicit EN choice — stay
+          }
+          if (!target) {
+            var langs = navigator.languages || [navigator.language || 'en'];
+            for (var j = 0; j < langs.length; j++) {
+              var l = (langs[j] || '').toLowerCase();
+              if (l.indexOf('en') === 0) return; // EN browser — stay on /
+              if (l.indexOf('fi') === 0) { target = '/fi'; break; }
+              if (l.indexOf('de') === 0) { target = '/de'; break; }
+              if (l.indexOf('ja') === 0) { target = '/ja'; break; }
+              if (l.indexOf('es') === 0) { target = '/es'; break; }
+              if (l.indexOf('pt') === 0) { target = '/br'; break; }
+              if (l.indexOf('zh') === 0) { target = '/cn'; break; }
+              if (l.indexOf('ko') === 0) { target = '/kr'; break; }
+              if (l.indexOf('fr') === 0) { target = '/fr'; break; }
+              if (l.indexOf('it') === 0) { target = '/it'; break; }
+              if (l.indexOf('nl') === 0) { target = '/nl'; break; }
+            }
+          }
+          if (!target) return;
+          var dest = path === '/' ? target : target + path;
+          if (location.search) dest += location.search;
+          if (location.hash) dest += location.hash;
+          location.replace(dest);
+        } catch (err) { /* fail silent — fall through to React-based redirect */ }
+      })();
+    </script>
+    <!-- /LV-SYNC-LOCALE-REDIRECT -->
+
+    <!-- Hero LCP preload — seasonal homepage hero, responsive AVIF so mobile
+         fetches the 800px variant (~30KB) instead of the 262KB JPG, before mount. -->
+    <script>
+      (function () {
+        var summer = (function () { var m = new Date().getMonth() + 1; return m >= 5 && m <= 9; })();
+        var base = summer ? '/images/heroes/reindeer-sleigh-hero' : '/images/heroes/reindeer-sleigh-hero-winter';
+        var l = document.createElement('link');
+        l.rel = 'preload'; l.as = 'image'; l.type = 'image/avif';
+        l.setAttribute('fetchpriority', 'high');
+        l.imageSizes = '100vw';
+        l.imageSrcset = base + '-800.avif 800w, ' + base + '-1200.avif 1200w';
+        document.head.appendChild(l);
+      })();
+    </script>
+
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Plan your dream destination wedding in Finnish Lapland. Northern Lights ceremonies, snow chapels, ice hotels, and midnight sun celebrations. Complete wedding planning services." />
-    <meta name="theme-color" content="#0F172A" />
     <title>LaplandWeddings — Dream Wedding Under the Northern Lights</title>
 
     <link rel="preconnect" href="https://wa-uploads.profitroom.com" crossorigin />
@@ -23,6 +99,33 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-56L3JN54PG');
+    </script>
+
+    <!-- GetYourGuide Integration Analyzer (required for affiliate attribution) -->
+    <script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="VRMKD7N"></script>
+      <!-- Open Graph image (1200×630 JPEG) -->
+    <meta property="og:image" content="https://laplandweddings.online/og-default.jpg?v=20260626b" />
+    <meta property="og:image:secure_url" content="https://laplandweddings.online/og-default.jpg?v=20260626b" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="LaplandWeddings — romantic ice chapel with aurora overhead in Finnish Lapland" />
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://laplandweddings.online/og-default.jpg?v=20260626b" />
+    <meta name="twitter:image:alt" content="LaplandWeddings — romantic ice chapel with aurora overhead in Finnish Lapland" />
+      <!-- Favicon stack (LV ecosystem unified design) -->
+    <link rel="icon" href="/favicon.svg?v=20260626b" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico?v=20260626b" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260626b" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0F172A" />
+    <meta name="apple-mobile-web-app-title" content="LaplandWeddings" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Schema.org structured data (site-level, static for crawlers; page-level schema also rendered client-side) -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://laplandweddings.online/#organization","name":"LaplandWeddings","url":"https://laplandweddings.online","description":"Destination weddings in Finnish Lapland — venues, planners and photographers for Northern Lights ceremonies, snow chapels and midnight-sun celebrations.","parentOrganization":{"@type":"Organization","name":"Lapeso Oy"}},{"@type":"WebSite","@id":"https://laplandweddings.online/#website","url":"https://laplandweddings.online","name":"LaplandWeddings","publisher":{"@id":"https://laplandweddings.online/#organization"}}]}
     </script>
   </head>
   <body>

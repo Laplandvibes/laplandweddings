@@ -1,0 +1,100 @@
+{
+  "site": "laplandweddings-new",
+  "converted": 18,
+  "swapped": 9,
+  "totalBefore": 19330607,
+  "totalAfter": 6286416,
+  "savedMB": "12.44",
+  "report": [
+    {
+      "file": "public\\images\\heroes\\aurora-elope-hero.jpg",
+      "before": 316763,
+      "after": 289020
+    },
+    {
+      "file": "public\\images\\heroes\\contact-bg.jpg",
+      "before": 481970,
+      "after": 85578
+    },
+    {
+      "file": "public\\images\\heroes\\home-cover.jpg",
+      "before": 492559,
+      "after": 174806
+    },
+    {
+      "file": "public\\images\\locations\\pyha-luosto.jpg",
+      "before": 821181,
+      "after": 662668
+    },
+    {
+      "file": "public\\images\\types\\elopement.jpg",
+      "before": 414897,
+      "after": 150100
+    },
+    {
+      "file": "public\\images\\types\\midnight-sun.jpg",
+      "before": 1531347,
+      "after": 1046766
+    },
+    {
+      "file": "public\\images\\types\\vow-renewal.jpg",
+      "before": 425556,
+      "after": 128364
+    },
+    {
+      "file": "public\\images\\venues\\lapland-hotels-pyha.jpg",
+      "before": 795416,
+      "after": 585948
+    },
+    {
+      "file": "public\\images\\venues\\lapland-hotels-saaga.jpg",
+      "before": 4305446,
+      "after": 509642
+    },
+    {
+      "file": "public\\images\\venues\\levi-ice-castle.jpg",
+      "before": 389249,
+      "after": 346772
+    },
+    {
+      "file": "public\\images\\venues\\levi-panorama.jpg",
+      "before": 4946778,
+      "after": 225878
+    },
+    {
+      "file": "public\\images\\venues\\northern-lights-village-levi.jpg",
+      "before": 1561089,
+      "after": 437720
+    },
+    {
+      "file": "public\\images\\venues\\northern-lights-village-saariselka.jpg",
+      "before": 388137,
+      "after": 41654
+    },
+    {
+      "file": "public\\images\\venues\\nova-skyland.jpg",
+      "before": 416830,
+      "after": 213598
+    },
+    {
+      "file": "public\\images\\venues\\santas-hotel-santamus.png",
+      "before": 367327,
+      "after": 110720
+    },
+    {
+      "file": "public\\images\\venues\\snow-village-lainio.jpg",
+      "before": 791029,
+      "after": 440994
+    },
+    {
+      "file": "public\\images\\venues\\wilderness-hotel-inari.jpg",
+      "before": 428187,
+      "after": 409794
+    },
+    {
+      "file": "public\\images\\venues\\wilderness-hotel-juutua.jpg",
+      "before": 456846,
+      "after": 426394
+    }
+  ]
+}

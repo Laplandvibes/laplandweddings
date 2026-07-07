@@ -1,17 +1,62 @@
-import { Link } from 'react-router-dom';
+
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { useLang } from '../i18n/LangContext';
 import { locations } from '../data/locations';
+import L from '../components/L';
+import { pickLocalized, type Localized } from '../data/localized';
+import { ui } from '../data/uiStrings';
+
+const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
+  seoTitle: {
+    en: 'Lapland Wedding Regions — Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings',
+    fi: 'Häät Lapin paikkakunnilla | LaplandWeddings',
+    de: 'Hochzeitsregionen in Lappland | LaplandWeddings',
+    ja: 'ラップランドのウェディング地域 — ロヴァニエミ、レヴィ、サーリセルカ、ウッラス | LaplandWeddings',
+    es: 'Regiones para bodas en Laponia | LaplandWeddings',
+    'pt-BR': 'Regiões para casamento na Lapônia | LaplandWeddings',
+    'zh-CN': '拉普兰婚礼地区 — 罗瓦涅米、莱维、萨利色尔卡、于拉斯 | LaplandWeddings',
+    ko: '라플란드 웨딩 지역 — 로바니에미, 레비, 사리셀캐, 윌래스 | LaplandWeddings',
+    fr: 'Régions de mariage en Laponie | LaplandWeddings',
+    it: 'Regioni per matrimoni in Lapponia | LaplandWeddings',
+    nl: 'Trouwregio’s in Lapland — Rovaniemi & meer | LaplandWeddings',
+  },
+  seoDesc: {
+    en: 'Six Lapland wedding regions — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Compare seasons, flights, and venues.',
+    fi: 'Kuusi Lapin häämatkakohdetta — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Vertaile sesonkeja, lentoyhteyksiä ja venueita.',
+    de: 'Sechs Hochzeitsregionen in Lappland — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Saisons, Flugverbindungen und Locations im Vergleich.',
+    ja: 'ラップランドのウェディング向け6地域 — ロヴァニエミ、サーリセルカ、レヴィ、ウッラス、ピュハ＝ルオスト、キルピスヤルヴィ。シーズン、フライト、会場を比較。',
+    es: 'Seis regiones para bodas en Laponia — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Compara temporadas, vuelos y lugares.',
+    'pt-BR': 'Seis regiões para casamento na Lapônia — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Compare temporadas, voos e locais.',
+    'zh-CN': '拉普兰六大婚礼地区——罗瓦涅米、萨利色尔卡、莱维、于拉斯、皮哈-卢奥斯托、基尔皮斯耶尔维。比较季节、航班与场地。',
+    ko: '라플란드의 웨딩 지역 6곳 — 로바니에미, 사리셀캐, 레비, 윌래스, 퓌해-루오스토, 킬피스얘르비. 시즌, 항공편, 웨딩 장소를 비교하세요.',
+    fr: 'Six régions de mariage en Laponie — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Comparez saisons, vols et lieux.',
+    it: 'Sei regioni per matrimoni in Lapponia — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Confronta stagioni, voli e location.',
+    nl: 'Zes trouwregio’s in Lapland — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Vergelijk seizoenen, vluchten en locaties.',
+  },
+  imageAlt: {
+    en: 'Wedding couple on a frozen lake under the Northern Lights',
+    fi: 'Hääpari jäätyneellä järvellä revontulien alla',
+    de: 'Hochzeitspaar auf einem zugefrorenen See unter Polarlichtern',
+    ja: 'オーロラの下、凍った湖の上に立つ結婚式のカップル',
+    es: 'Pareja de novios en un lago helado bajo la aurora boreal',
+    'pt-BR': 'Casal de noivos em um lago congelado sob a aurora boreal',
+    'zh-CN': '北极光下站在冰封湖面上的新婚夫妇',
+    ko: '오로라 아래 얼어붙은 호수 위의 신혼부부',
+    fr: 'Couple de mariés sur un lac gelé sous les aurores boréales',
+    it: 'Coppia di sposi su un lago ghiacciato sotto l’aurora boreale',
+    nl: 'Bruidspaar op een bevroren meer onder het noorderlicht',
+  },
+};
 
 export default function Locations() {
-  const { lang, tr } = useLang();
+  const { lang, dataLang, tr } = useLang();
   return (
     <>
       <SEO
-        title={lang === 'fi' ? 'Häät Lapin paikkakunnilla — Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings' : 'Lapland Wedding Regions — Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings'}
-        description={lang === 'fi' ? 'Kuusi Lapin häämatkakohdetta — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Vertaile sesonkeja, lentoyhteyksiä ja venueita.' : 'Six Lapland wedding regions — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi. Compare seasons, flights, and venues.'}
+        title={pickLocalized(P.seoTitle, lang)}
+        description={pickLocalized(P.seoDesc, lang)}
         path="/locations"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -20,38 +65,38 @@ export default function Locations() {
             '@type': 'ListItem',
             position: i + 1,
             url: `https://laplandweddings.online/locations/${l.slug}`,
-            name: l.name[lang],
+            name: l.name[dataLang],
           })),
         }}
       />
       <PageHero
         compact
-        eyebrow={lang === 'fi' ? 'Paikkakunnat' : 'Regions'}
+        eyebrow={ui('eyebrowRegions', lang)}
         title={tr.locations.indexTitle}
         subtitle={tr.locations.indexIntro}
-        image="https://www.visitrovaniemi.fi/wp-content/uploads/b3d5b020-7fb8-11ee-9fca-6fdb01d69922.jpeg"
-        imageAlt={lang === 'fi' ? 'Lapin tunturit ilta-auringossa' : 'Lapland fells in evening sun'}
+        image="/images/heroes/aurora-elope-hero.webp"
+        imageAlt={pickLocalized(P.imageAlt, lang)}
       />
       <Section>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {locations.map((loc) => (
-            <Link
+            <L
               key={loc.slug}
               to={`/locations/${loc.slug}`}
               className="group bg-night-light border border-white/5 hover:border-aurora-pink/40 rounded-2xl overflow-hidden transition-all"
             >
               <div className="aspect-[16/10] overflow-hidden">
-                <img src={loc.heroImage} alt={loc.heroAlt[lang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={loc.heroImage} alt={loc.heroAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
               </div>
               <div className="p-6">
-                <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[lang]}</p>
-                <h3 className="font-heading text-2xl text-white mb-2 tracking-wide">{loc.name[lang]}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed line-clamp-3 mb-3">{loc.intro[lang]}</p>
+                <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
+                <h3 className="font-heading text-2xl text-white mb-2 tracking-wide">{loc.name[dataLang]}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed line-clamp-3 mb-3">{loc.intro[dataLang]}</p>
                 <div className="text-xs text-gray-500">
                   ✈ {loc.airport} · {loc.airportDistanceKm} km
                 </div>
               </div>
-            </Link>
+            </L>
           ))}
         </div>
       </Section>

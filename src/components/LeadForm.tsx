@@ -2,6 +2,36 @@ import { useRef, useState, type ChangeEvent, type DragEvent, type FormEvent } fr
 import { useLang } from '../i18n/LangContext';
 import { weddingTypes } from '../data/weddingTypes';
 import { locations } from '../data/locations';
+import { pickLocalized, type Localized } from '../data/localized';
+
+const L11: Record<'countryPlaceholder' | 'datePlaceholder', Localized<string>> = {
+  countryPlaceholder: {
+    en: 'e.g. Finland',
+    fi: 'esim. Suomi',
+    de: 'z. B. Finnland',
+    ja: '例：フィンランド',
+    es: 'p. ej. Finlandia',
+    'pt-BR': 'ex.: Finlândia',
+    'zh-CN': '例如：芬兰',
+    ko: '예: 핀란드',
+    fr: 'p. ex. Finlande',
+    it: 'es. Finlandia',
+    nl: 'bijv. Finland',
+  },
+  datePlaceholder: {
+    en: 'e.g. February 2027',
+    fi: 'esim. helmikuu 2027',
+    de: 'z. B. Februar 2027',
+    ja: '例：2027年2月',
+    es: 'p. ej. febrero de 2027',
+    'pt-BR': 'ex.: fevereiro de 2027',
+    'zh-CN': '例如：2027 年 2 月',
+    ko: '예: 2027년 2월',
+    fr: 'p. ex. février 2027',
+    it: 'es. febbraio 2027',
+    nl: 'bijv. februari 2027',
+  },
+};
 
 interface LeadFormProps {
   presetWeddingType?: string;
@@ -34,7 +64,7 @@ function formatBytes(bytes: number): string {
 }
 
 export default function LeadForm({ presetWeddingType, presetLocation, presetVenue }: LeadFormProps) {
-  const { lang, tr } = useLang();
+  const { lang, dataLang, tr } = useLang();
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -131,6 +161,8 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         `Wedding type: ${payload.weddingType || ''}`,
         `Region: ${payload.location || ''}`,
         payload.venue ? `Venue interest: ${payload.venue}` : '',
+        payload.ceremonyType ? `Ceremony: ${payload.ceremonyType}` : '',
+        payload.accommodation ? `Accommodation in budget: ${payload.accommodation}` : '',
         `Budget: ${payload.budget || ''}`,
         `Language preference: ${lang}`,
         files.length ? `Attachments: ${files.length} file(s) — please send separately to ${LEAD_INBOX}` : '',
@@ -161,13 +193,18 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
 
   return (
     <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-night-light/60 border border-white/10 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5">
-      {/* Honeypot — bots fill this, humans do not */}
+      {/* Honeypot — bots fill this, humans do not. Renamed from "company":
+          browser/password-manager autofill fills "company" even when hidden,
+          which silently dropped real couples' enquiries. */}
       <input
         type="text"
-        name="company"
+        name="lp_hpot"
         tabIndex={-1}
         autoComplete="off"
         aria-hidden="true"
+        data-1p-ignore="true"
+        data-lpignore="true"
+        data-form-type="other"
         style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
       />
 
@@ -190,13 +227,14 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         <div>
           <label htmlFor="phone" className={t1}>{tr.form.phone}</label>
           <input id="phone" name="phone" type="tel" className={t2} />
+          <p className="text-xs text-gray-500 mt-1">{tr.form.phoneHelp}</p>
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="country" className={t1}>{tr.form.country}</label>
-          <input id="country" name="country" placeholder={lang === 'fi' ? 'esim. Suomi' : 'e.g. Finland'} className={t2} />
+          <input id="country" name="country" placeholder={pickLocalized(L11.countryPlaceholder, lang)} className={t2} />
         </div>
         <div>
           <label htmlFor="guests" className={t1}>{tr.form.guests}</label>
@@ -208,7 +246,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="preferredDate" className={t1}>{tr.form.preferredDate}</label>
-          <input id="preferredDate" name="preferredDate" placeholder={lang === 'fi' ? 'esim. helmikuu 2027' : 'e.g. February 2027'} className={t2} />
+          <input id="preferredDate" name="preferredDate" placeholder={pickLocalized(L11.datePlaceholder, lang)} className={t2} />
           <p className="text-xs text-gray-500 mt-1">{tr.form.preferredDateHelp}</p>
         </div>
         <div>
@@ -228,7 +266,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
           <select id="weddingType" name="weddingType" className={t2} defaultValue={presetWeddingType || ''}>
             <option value="">{tr.form.noPreference}</option>
             {weddingTypes.map((w) => (
-              <option key={w.slug} value={w.slug}>{w.name[lang]}</option>
+              <option key={w.slug} value={w.slug}>{w.name[dataLang]}</option>
             ))}
           </select>
         </div>
@@ -237,13 +275,36 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
           <select id="location" name="location" className={t2} defaultValue={presetLocation || ''}>
             <option value="">{tr.form.noPreference}</option>
             {locations.map((l) => (
-              <option key={l.slug} value={l.slug}>{l.name[lang]}</option>
+              <option key={l.slug} value={l.slug}>{l.name[dataLang]}</option>
             ))}
           </select>
         </div>
       </div>
 
       {presetVenue && <input type="hidden" name="venue" value={presetVenue} />}
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="ceremonyType" className={t1}>{tr.form.ceremonyType}</label>
+          <select id="ceremonyType" name="ceremonyType" className={t2} defaultValue="">
+            <option value="">{tr.form.noPreference}</option>
+            <option value="legal">{tr.form.ceremonyLegal}</option>
+            <option value="symbolic">{tr.form.ceremonySymbolic}</option>
+            <option value="unsure">{tr.form.ceremonyUnsure}</option>
+          </select>
+          <p className="text-xs text-gray-500 mt-1">{tr.form.ceremonyHelp}</p>
+        </div>
+        <div>
+          <label htmlFor="accommodation" className={t1}>{tr.form.accommodation}</label>
+          <select id="accommodation" name="accommodation" className={t2} defaultValue="">
+            <option value="">{tr.form.noPreference}</option>
+            <option value="include">{tr.form.accInclude}</option>
+            <option value="separate">{tr.form.accSeparate}</option>
+            <option value="unsure">{tr.form.accUnsure}</option>
+          </select>
+          <p className="text-xs text-gray-500 mt-1">{tr.form.accommodationHelp}</p>
+        </div>
+      </div>
 
       <div>
         <label htmlFor="budget" className={t1}>{tr.form.budget}</label>
@@ -270,16 +331,20 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       {/* Inspiration attachments */}
       <div>
         <label className={t1}>{tr.form.attachments}</label>
-        <p className="text-xs text-gray-500 mb-2">{tr.form.attachmentsHelp}</p>
+        <p className="text-xs text-gray-400 mb-2">{tr.form.attachmentsHelp}</p>
         <div
           onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
           onDragLeave={() => setDragOver(false)}
           onDrop={onDrop}
           onClick={() => fileInputRef.current?.click()}
-          className={`cursor-pointer rounded-xl border-2 border-dashed transition-colors px-5 py-8 text-center ${dragOver ? 'border-rose bg-rose/10' : 'border-white/15 hover:border-white/30 bg-night-light/40'}`}
+          className="cursor-pointer rounded-xl border-2 border-dashed transition-colors px-5 py-8 text-center"
+          style={{
+            background: dragOver ? 'rgba(201,70,106,0.12)' : '#F8EFE5',
+            borderColor: dragOver ? '#C9466A' : '#DCCEC0',
+          }}
         >
-          <p className="text-sm font-medium text-gray-200">{tr.form.attachmentsDrop}</p>
-          <p className="text-xs text-gray-500 mt-1">{tr.form.attachmentsBrowse}</p>
+          <p className="text-sm font-semibold" style={{ color: '#1F1612' }}>{tr.form.attachmentsDrop}</p>
+          <p className="text-xs mt-1" style={{ color: '#5A4F48' }}>{tr.form.attachmentsBrowse}</p>
           <input
             ref={fileInputRef}
             type="file"
@@ -294,22 +359,23 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         {files.length > 0 && (
           <ul className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-2">
             {files.map((f, i) => (
-              <li key={i} className="relative bg-night-light/60 border border-white/10 rounded-lg overflow-hidden">
-                <div className="aspect-square bg-night flex items-center justify-center overflow-hidden">
+              <li key={i} className="relative rounded-lg overflow-hidden" style={{ background: '#F8EFE5', border: '1px solid #DCCEC0' }}>
+                <div className="aspect-square flex items-center justify-center overflow-hidden" style={{ background: '#EFE2D6' }}>
                   {f.isVideo ? (
                     <video src={f.url} className="w-full h-full object-cover" muted playsInline />
                   ) : (
-                    <img src={f.url} alt={f.file.name} className="w-full h-full object-cover" />
+                    <img src={f.url} alt={f.file.name} className="w-full h-full object-cover"  loading="lazy" decoding="async" width="800" height="600"/>
                   )}
                 </div>
                 <div className="p-2 flex items-center justify-between gap-1">
-                  <span className="text-[10px] text-gray-400 truncate flex-1" title={f.file.name}>
+                  <span className="text-[10px] truncate flex-1" title={f.file.name} style={{ color: '#5A4F48' }}>
                     {formatBytes(f.file.size)}
                   </span>
                   <button
                     type="button"
                     onClick={(e) => { e.stopPropagation(); removeFile(i); }}
-                    className="text-[10px] text-rose hover:underline px-1"
+                    className="text-[10px] hover:underline px-1 font-semibold"
+                    style={{ color: '#C9466A' }}
                   >
                     {tr.form.attachmentsRemove}
                   </button>
@@ -320,8 +386,8 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         )}
       </div>
 
-      <label className="flex items-start gap-3 text-sm text-gray-400">
-        <input type="checkbox" name="consent" required className="mt-1 w-4 h-4 rounded border-white/20 bg-night-light text-rose focus:ring-rose" />
+      <label className="flex items-start gap-3 text-sm" style={{ color: '#1F1612' }}>
+        <input type="checkbox" name="consent" required className="mt-1 w-4 h-4 rounded text-rose focus:ring-rose" style={{ accentColor: '#C9466A' }} />
         <span>{tr.form.consent}</span>
       </label>
 

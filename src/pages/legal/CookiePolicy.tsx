@@ -1,27 +1,18 @@
 import Section from '../../components/Section';
 import SEO from '../../components/SEO';
-import { useLang } from '../../i18n/LangContext';
+import { useTr } from '../../i18n/LangContext';
 
 export default function CookiePolicy() {
-  const { lang } = useLang();
+  const tr = useTr();
+  const { metaTitle, title, paragraphs } = tr.legal.cookies;
   return (
     <>
-      <SEO title={lang === 'fi' ? 'Evästeseloste | LaplandWeddings' : 'Cookie Policy | LaplandWeddings'} description="Cookie policy" path="/cookie-policy" />
-      <Section title={lang === 'fi' ? 'Evästeseloste' : 'Cookie Policy'}>
+      <SEO title={metaTitle} description="Cookie policy" path="/cookie-policy" />
+      <Section title={title}>
         <div className="prose prose-invert max-w-3xl mx-auto text-gray-300 space-y-4">
-          {lang === 'fi' ? (
-            <>
-              <p>Käytämme välttämättömiä evästeitä sivuston toiminnan vuoksi (kielivalinta, suostumukset).</p>
-              <p>Suostumuksella käytämme Google Analytics 4 -palvelua kävijämäärien analysointiin.</p>
-              <p>Et tarvitse suostumustasi mainonnan kohdistamiseen — emme käytä mainosseurantaa.</p>
-            </>
-          ) : (
-            <>
-              <p>We use strictly necessary cookies for site function (language preference, consent).</p>
-              <p>With your consent we use Google Analytics 4 for visitor analytics.</p>
-              <p>We do not use advertising tracking — your consent is not required for ad targeting.</p>
-            </>
-          )}
+          {paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
       </Section>
     </>

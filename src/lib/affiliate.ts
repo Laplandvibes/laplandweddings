@@ -1,50 +1,92 @@
 /**
- * Centralised affiliate link builders for the LaplandVibes stack:
- *  - Hotels.com (lodging)
- *  - Trip.com (flights)
- *  - laplandcarrental.com (own internal site, no external affiliate)
+ * Centralised affiliate link builders for the LaplandVibes ecosystem.
  *
- * Affiliate IDs are read from Vite env at build time so they can be set per
- * environment without code changes.
+ * Active partners (only these — anything else is a leak):
+ *   • Hotels.com via CJ — routed through `go.laplandvibes.com/go/hotels`
+ *   • EconomyBookings via CJ — routed through `go.laplandvibes.com/go/cars`
+ *   • Trip.com (direct) — Allianceid 8175308, SID 309472136
+ *   • laplandcarrental.com — internal LV site, not external affiliate
+ *
+ * SID convention: lowercase a-z 0-9 _, max 50 chars, no domain prefix.
+ * Example placements: `hero_cta`, `venue_kakslauttanen`, `practical_guide`.
+ *
+ * Every affiliate <a> needs: target="_blank" rel="sponsored nofollow noopener"
+ * (NEVER add noreferrer — it kills CJ attribution).
  */
 
-const env = (import.meta as unknown as { env: Record<string, string | undefined> }).env;
+const TRIP_ALLIANCE_ID = '8175308';
+const TRIP_SID = '309472136';
+const SITE_TAG = 'laplandweddings.online';
 
-const HOTELS_AFFID = env.VITE_HOTELS_AFFID || '';
-const HOTELS_PARTNER_ID = env.VITE_HOTELS_PARTNER_ID || '';
-const TRIP_ALLIANCE_ID = env.VITE_TRIP_ALLIANCE_ID || '';
-const TRIP_SID = env.VITE_TRIP_SID || '';
+// LOCALE: 2026-05-16 — partner-specific locale params so DE/FI users land on
+// the German / Finnish partner pages instead of EN.
+export type Lang = 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+const HOTELS_LOCALE: Record<Lang, string> = {
+  en: 'en_US', fi: 'fi_FI', de: 'de_DE', ja: 'ja_JP',
+  es: 'es_ES', 'pt-BR': 'pt_BR', 'zh-CN': 'zh_CN',
+  ko: 'ko_KR', fr: 'fr_FR', it: 'it_IT', nl: 'nl_NL',
+};
+const CARS_LANG: Record<Lang, string> = {
+  en: 'en', fi: 'fi', de: 'de', ja: 'ja',
+  es: 'es', 'pt-BR': 'pt', 'zh-CN': 'zh',
+  ko: 'ko', fr: 'fr', it: 'it', nl: 'nl',
+};
+const TRIP_LOCALE: Record<Lang, string> = {
+  en: 'en-XX', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP',
+  es: 'es-ES', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN',
+  ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL',
+};
 
-/** Build a Hotels.com search link for a venue or destination. */
-export function hotelsLink(query: string): string {
-  const u = new URL('https://www.hotels.com/Hotel-Search');
-  u.searchParams.set('destination', query);
-  if (HOTELS_AFFID) u.searchParams.set('affid', HOTELS_AFFID);
-  if (HOTELS_PARTNER_ID) u.searchParams.set('PARTNERID', HOTELS_PARTNER_ID);
+/** Hotels.com via the LV Worker (CJ tracking handled server-side). */
+export function hotelsLink(query: string, sid = 'venue', lang: Lang = 'en'): string {
+  const u = new URL('https://go.laplandvibes.com/go/hotels');
+  u.searchParams.set('sid', sid);
+  u.searchParams.set('ss', query);
+  u.searchParams.set('locale', HOTELS_LOCALE[lang]);
+  return u.toString();
+}
+
+/** Hotels.com seasonal — for top-pick / featured destinations. */
+export function hotelsSeasonalLink(query: string, sid = 'seasonal', lang: Lang = 'en'): string {
+  const u = new URL('https://go.laplandvibes.com/go/hotels-seasonal');
+  u.searchParams.set('sid', sid);
+  u.searchParams.set('ss', query);
+  u.searchParams.set('locale', HOTELS_LOCALE[lang]);
+  return u.toString();
+}
+
+/** EconomyBookings via Worker — wedding-guest car rentals from airports. */
+export function carsLink(pickup: 'RVN' | 'KTT' | 'IVL' = 'RVN', sid = 'cars', lang: Lang = 'en'): string {
+  const u = new URL('https://go.laplandvibes.com/go/cars');
+  u.searchParams.set('sid', sid);
+  u.searchParams.set('pickup_location', pickup);
+  u.searchParams.set('lang', CARS_LANG[lang]);
   return u.toString();
 }
 
 /**
- * Build a Trip.com flights search link.
- * @param from IATA origin (e.g. LHR, HEL)
- * @param to IATA destination (RVN, KTT, IVL)
+ * Trip.com flights — direct (do NOT route through Worker).
+ * @param from IATA origin (lowercase, e.g. lhr, hel, fra)
+ * @param to   IATA destination (rvn, ktt, ivl)
  */
-export function tripFlightsLink(from: string, to: string, opts?: { source?: string }): string {
-  const u = new URL('https://www.trip.com/flights/showfaresearch');
+export function tripFlightsLink(from: string, to: 'rvn' | 'ktt' | 'ivl', sid = 'flights', lang: Lang = 'en'): string {
+  const u = new URL('https://www.trip.com/flights/showfarefirst');
   u.searchParams.set('dcity', from.toLowerCase());
   u.searchParams.set('acity', to.toLowerCase());
-  if (TRIP_ALLIANCE_ID) u.searchParams.set('Allianceid', TRIP_ALLIANCE_ID);
-  if (TRIP_SID) u.searchParams.set('SID', TRIP_SID);
-  if (opts?.source) u.searchParams.set('trip_sub1', opts.source);
+  u.searchParams.set('locale', TRIP_LOCALE[lang]);
+  u.searchParams.set('Allianceid', TRIP_ALLIANCE_ID);
+  u.searchParams.set('SID', TRIP_SID);
+  u.searchParams.set('trip_sub1', SITE_TAG);
+  u.searchParams.set('trip_sub2', sid);
   return u.toString();
 }
 
-/** Generic Trip.com flights search to Lapland from a given origin. */
-export function tripToLapland(from: string, airport: 'RVN' | 'KTT' | 'IVL'): string {
-  return tripFlightsLink(from, airport, { source: 'laplandweddings' });
+/** Convenience wrapper — flights to a Lapland airport from a known UK/EU origin. */
+export function tripToLapland(from: string, airport: 'RVN' | 'KTT' | 'IVL', sid = 'flights', lang: Lang = 'en'): string {
+  return tripFlightsLink(from, airport.toLowerCase() as 'rvn' | 'ktt' | 'ivl', sid, lang);
 }
 
-/** Internal car rental — own site within LaplandVibes. */
+/** Internal LV car rental — not external affiliate. */
 export function carRentalLink(airport?: 'RVN' | 'KTT' | 'IVL'): string {
   const u = new URL('https://laplandcarrental.com/');
   u.searchParams.set('utm_source', 'laplandweddings');
@@ -52,3 +94,6 @@ export function carRentalLink(airport?: 'RVN' | 'KTT' | 'IVL'): string {
   if (airport) u.searchParams.set('pickup', airport);
   return u.toString();
 }
+
+/** Standard rel attribute for every affiliate link. */
+export const AFFILIATE_REL = 'sponsored nofollow noopener';

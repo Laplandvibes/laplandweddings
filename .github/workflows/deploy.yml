@@ -1,9 +1,7 @@
 name: Deploy to Cloudflare Pages
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:  # disabled push trigger — local wrangler deploys are authoritative
 
 jobs:
   deploy:

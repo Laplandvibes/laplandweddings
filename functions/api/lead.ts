@@ -87,8 +87,12 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return badRequest('Invalid form data');
   }
 
-  // Honeypot — if a hidden field "company" is filled, drop silently as if successful
-  const honey = form.get('company');
+  // Honeypot — if the hidden field is filled, drop silently as if successful.
+  // Field renamed from "company" → "lp_hpot": autofill filled "company" on real
+  // human submissions and we were silently dropping genuine enquiries. We do NOT
+  // also check the old "company" name — cached old clients send an autofilled
+  // "company" and must NOT be dropped; the rare bot on a stale page is acceptable.
+  const honey = form.get('lp_hpot');
   if (honey) {
     return new Response(JSON.stringify({ ok: true }), { status: 200, headers: { 'Content-Type': 'application/json' } });
   }
@@ -111,6 +115,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const weddingType = get('weddingType');
   const location = get('location');
   const venue = get('venue');
+  const ceremonyType = get('ceremonyType');
+  const accommodation = get('accommodation');
   const budget = get('budget');
   const message = get('message');
   const langPref = get('lang') || 'en';
@@ -160,7 +166,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const html = renderLeadNotificationEmail({
     yourName, partnerName, email, phone, country,
     guests, preferredDate, flexibility,
-    weddingType, location, venue, budget,
+    weddingType, location, venue, ceremonyType, accommodation, budget,
     langPref, message,
     attachmentCount: attachments.length,
     totalSizeMb: totalSize / 1024 / 1024,
@@ -230,7 +236,8 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 interface LeadEmailData {
   yourName: string; partnerName: string; email: string; phone: string;
   country: string; guests: string; preferredDate: string; flexibility: string;
-  weddingType: string; location: string; venue: string; budget: string;
+  weddingType: string; location: string; venue: string;
+  ceremonyType: string; accommodation: string; budget: string;
   langPref: string; message: string;
   attachmentCount: number; totalSizeMb: number;
 }
@@ -265,21 +272,34 @@ function renderLeadNotificationEmail(d: LeadEmailData): string {
     'pyha-luosto': 'Pyhä-Luosto',
     'kilpisjarvi': 'Kilpisjärvi',
   };
+  const ceremonyLabels: Record<string, string> = {
+    legal: 'Legally binding in Finland — needs DVV paperwork',
+    symbolic: 'Symbolic / blessing — no paperwork',
+    unsure: 'Not sure yet — wants advice',
+  };
+  const accommodationLabels: Record<string, string> = {
+    include: 'Include in budget',
+    separate: 'Booking separately',
+    unsure: 'Not sure',
+  };
 
   const budgetInfo = budgetLabels[d.budget] || { label: d.budget || '—', tier: 0 };
-  const tierColor = budgetInfo.tier >= 4 ? '#22D3EE' : budgetInfo.tier >= 3 ? '#EC4899' : '#94A3B8';
+  const tierColor = budgetInfo.tier >= 4 ? '#EC4899' : budgetInfo.tier >= 3 ? '#EC4899' : '#94A3B8';
   const tierBadge = budgetInfo.tier >= 4 ? 'PREMIUM' : budgetInfo.tier >= 3 ? 'MID-RANGE' : budgetInfo.tier >= 1 ? 'STANDARD' : '';
 
   const couple = d.partnerName ? `${escapeHtml(d.yourName)} &amp; ${escapeHtml(d.partnerName)}` : escapeHtml(d.yourName);
   const flex = flexLabels[d.flexibility] || '';
-  const wt = typeLabels[d.weddingType] || (d.weddingType ? escapeHtml(d.weddingType) : '—');
-  const loc = locationLabels[d.location] || (d.location ? escapeHtml(d.location) : '—');
+  const wt = typeLabels[d.weddingType] || (d.weddingType ? escapeHtml(d.weddingType) : '');
+  const loc = locationLabels[d.location] || (d.location ? escapeHtml(d.location) : '');
+  const ceremony = ceremonyLabels[d.ceremonyType] || '';
+  const accom = accommodationLabels[d.accommodation] || '';
 
-  const detailRow = (label: string, value: string) => `
+  // Render a row only when there is real content — empty fields are hidden, not shown as "—".
+  const detailRow = (label: string, value: string) => value ? `
     <tr>
       <td style="padding:10px 0;width:140px;font-size:11px;letter-spacing:0.18em;color:#94A3B8;text-transform:uppercase;font-weight:600;vertical-align:top">${label}</td>
       <td style="padding:10px 0;font-size:15px;color:#0F172A;vertical-align:top;line-height:1.5">${value}</td>
-    </tr>`;
+    </tr>` : '';
 
   return `<!doctype html>
 <html lang="en">
@@ -294,9 +314,9 @@ function renderLeadNotificationEmail(d: LeadEmailData): string {
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
               <td style="vertical-align:middle">
-                <p style="margin:0;font-size:11px;letter-spacing:0.3em;color:#22D3EE;font-weight:700;text-transform:uppercase">New Lead</p>
+                <p style="margin:0;font-size:11px;letter-spacing:0.3em;color:#EC4899;font-weight:700;text-transform:uppercase">New Lead</p>
                 <p style="margin:6px 0 0;font-size:22px;font-weight:700;letter-spacing:0.04em">
-                  <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#F43F5E">WEDDINGS</span>
+                  <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
                 </p>
               </td>
               ${tierBadge ? `<td align="right" style="vertical-align:middle">
@@ -327,11 +347,13 @@ function renderLeadNotificationEmail(d: LeadEmailData): string {
           <p style="margin:14px 0 0;font-size:11px;letter-spacing:0.25em;color:#EC4899;font-weight:700;text-transform:uppercase;border-top:1px solid #E2E8F0;padding-top:18px">Wedding details</p>
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
             ${detailRow('Type', wt)}
+            ${detailRow('Ceremony', ceremony)}
             ${detailRow('Region', loc)}
             ${d.venue ? detailRow('Venue', `<strong>${escapeHtml(d.venue)}</strong>`) : ''}
-            ${detailRow('Guests', d.guests || '—')}
-            ${detailRow('Preferred date', `${escapeHtml(d.preferredDate || '—')}${flex ? ` · <span style="color:#64748B">${flex}</span>` : ''}`)}
+            ${detailRow('Guests', d.guests ? escapeHtml(d.guests) : '')}
+            ${detailRow('Preferred date', d.preferredDate ? `${escapeHtml(d.preferredDate)}${flex ? ` · <span style="color:#64748B">${flex}</span>` : ''}` : (flex ? `<span style="color:#64748B">${flex}</span>` : ''))}
             ${detailRow('Budget', `<span style="color:${tierColor};font-weight:700">${escapeHtml(budgetInfo.label)}</span>`)}
+            ${detailRow('Accommodation', accom)}
             ${detailRow('Language', d.langPref === 'fi' ? 'Finnish 🇫🇮' : 'English 🇬🇧')}
             ${d.attachmentCount > 0 ? detailRow('Attachments', `📎 ${d.attachmentCount} file(s) · ${d.totalSizeMb.toFixed(1)} MB`) : ''}
           </table>
@@ -362,11 +384,9 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
   const isFi = lang === 'fi';
   const attr = (s: string) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-  // Hero image — romantic Lapland wedding scene, hosted on the same domain so
-  // mail clients trust the source. Replace with an AI-generated brand asset
-  // once available; for now we use the public marketing cover that the home
-  // hero also uses, ensuring brand consistency across web + email.
-  const heroImage = 'https://mariahedengren.com/wp-content/uploads/2019/12/00-cover-lapland-wedding-kaksalauttanen-resort.jpg';
+  // Hero image — own brand asset hosted on our domain (JPG for broadest
+  // mail-client support; never hotlink third-party photography).
+  const heroImage = 'https://laplandweddings.online/images/heroes/home-cover.jpg';
   const heroAlt = isFi
     ? 'Hääpari Lapin lumimaisemassa, revontulet horisontissa'
     : 'Wedding couple in a Lapland snowscape with the Northern Lights on the horizon';
@@ -391,14 +411,14 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
   const stepsTitle = isFi ? 'Mitä seuraavaksi' : 'What happens next';
   const steps = isFi
     ? [
-        ['1', 'Tänään · tarkistamme tiedustelusi', 'Tiimimme käy läpi pyyntönne tunnin sisällä ja valitsee suunnittelijat, joiden tyyli, hinta-asema ja erikoisalat sopivat parhaiten teille.'],
-        ['2', 'Päivien sisällä · 1–3 räätälöityä tarjousta', 'Suunnittelijat lähettävät teille suoraan ehdotuksensa: paketit, esimerkkihäänsä, valokuvat, hinnat ja vapaa kalenteri. Vertailette rauhassa.'],
-        ['3', 'Te päätätte', 'Kun yksi tuntuu oikealta, hän hoitaa kaiken — DVV-paperit, vihkijän, valokuvaajan, yöpymiset, vieraiden majoituksen, kuljetukset, kaikki.'],
+        ['1', 'Ensin · sovitamme tiedustelunne', 'Käymme pyyntönne läpi ja valitsemme verkostostamme enintään kolme suunnittelijaa, joiden tyyli, hintataso ja erikoisalat sopivat teille parhaiten.'],
+        ['2', '1–7 päivän sisällä · suunnittelijat ottavat yhteyttä suoraan teihin', 'Valitut suunnittelijat lähettävät ehdotuksensa suoraan sähköpostiinne: paketit, esimerkkihäät, valokuvat, hinnat ja vapaat päivät. Vertailette rauhassa — meille ei tarvitse tehdä mitään.'],
+        ['3', 'Te päätätte', 'Kun yksi tuntuu oikealta, jatkatte suoraan hänen kanssaan — hän hoitaa kaiken DVV-papereista vihkijään, valokuvaajaan, yöpymisiin ja vieraiden kuljetuksiin.'],
       ]
     : [
-        ['1', 'Today · we review your enquiry', 'Our team reviews your request within an hour and shortlists planners whose style, price tier, and specialty fit you best.'],
-        ['2', 'Within days · 1–3 personalised proposals', 'Planners send their packages, real wedding examples, photos, pricing, and availability — directly to your inbox. Compare freely.'],
-        ['3', 'You decide', 'When one feels right, they handle everything — DVV paperwork, officiant, photographer, your stay, your guests’ accommodation, transfers, all of it.'],
+        ['1', 'First · we match your enquiry', 'We review your request and shortlist up to three planners from our network whose style, price tier, and specialty fit you best.'],
+        ['2', 'Within 1–7 days · planners contact you directly', 'The matched planners send their proposals straight to your inbox: packages, real wedding examples, photos, pricing, and availability. Compare freely — there is nothing you need to do.'],
+        ['3', 'You decide', 'When one feels right, you continue directly with them — they handle everything from DVV paperwork to officiant, photographer, your stay, and your guests’ transfers.'],
       ];
 
   const networkLabel = isFi ? 'Finnish Lapland Network' : 'Finnish Lapland Network';
@@ -421,8 +441,8 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
   const ctaButton = isFi ? 'Selaa hääpaikkoja' : 'Browse venues';
 
   const ps = isFi
-    ? 'Mikäli sinulla on välittömiä kysymyksiä, vastaa vain tähän viestiin — me luemme jokaisen vastauksen henkilökohtaisesti.'
-    : 'If you have immediate questions, just reply to this email — we read every response personally.';
+    ? 'Teidän ei tarvitse tehdä mitään — valitut suunnittelijat ottavat teihin yhteyttä suoraan. Sillä välin voitte ladata maksuttoman <a href="https://laplandweddings.online/fi/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapin häiden muistilistan</a>, jonka mukana saatte myös suunnitteluvinkkimme sähköpostiinne.'
+    : 'There is nothing you need to do — the matched planners will contact you directly. In the meantime, grab our free <a href="https://laplandweddings.online/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapland wedding checklist</a>, which also signs you up for our occasional planning tips.';
 
   const sig = isFi
     ? 'Lapeso Oy · LaplandVibes-verkosto'
@@ -447,9 +467,9 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
           </div>
         </td></tr>
         <tr><td style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 50%,#7C2D5E 100%);padding:28px 32px 26px;color:#F8FAFC;text-align:center">
-          <p style="margin:0 0 12px;font-size:11px;letter-spacing:0.3em;color:#22D3EE;text-transform:uppercase;font-weight:700">${eyebrow}</p>
+          <p style="margin:0 0 12px;font-size:11px;letter-spacing:0.3em;color:#EC4899;text-transform:uppercase;font-weight:700">${eyebrow}</p>
           <p style="margin:0;font-size:30px;letter-spacing:0.05em;font-weight:700;line-height:1">
-            <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#F43F5E">WEDDINGS</span>
+            <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
           </p>
           <p style="margin:14px 0 0;font-size:14px;color:#CBD5E1;line-height:1.5">${heroLine}</p>
         </td></tr>
@@ -488,7 +508,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:18px">
               <tr>
                 <td valign="top" width="44" style="padding:0;width:44px">
-                  <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#F43F5E);color:#FFFFFF;font-weight:700;text-align:center;line-height:34px;font-size:15px;box-shadow:0 4px 12px rgba(236,72,153,0.35)">${n}</div>
+                  <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#EC4899,#EC4899);color:#FFFFFF;font-weight:700;text-align:center;line-height:34px;font-size:15px;box-shadow:0 4px 12px rgba(236,72,153,0.35)">${n}</div>
                 </td>
                 <td valign="top" style="padding-left:16px">
                   <p style="margin:4px 0 6px;font-size:15px;font-weight:700;color:#0F172A;letter-spacing:-0.005em">${t}</p>
@@ -506,7 +526,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
               <p style="margin:0 0 6px;font-size:17px;font-weight:700;color:#F8FAFC;letter-spacing:-0.01em">${ctaTitle}</p>
               <p style="margin:0 0 16px;font-size:14px;color:#94A3B8;line-height:1.5">${ctaP}</p>
               <a href="https://laplandweddings.online/venues/"
-                 style="display:inline-block;padding:12px 26px;background:#F43F5E;color:#FFFFFF;font-size:14px;font-weight:700;border-radius:999px;text-decoration:none;letter-spacing:0.02em;box-shadow:0 6px 18px rgba(244,63,94,0.45)">
+                 style="display:inline-block;padding:12px 26px;background:#EC4899;color:#FFFFFF;font-size:14px;font-weight:700;border-radius:999px;text-decoration:none;letter-spacing:0.02em;box-shadow:0 6px 18px rgba(236,72,153,0.45)">
                 ${ctaButton} →
               </a>
             </td></tr>
