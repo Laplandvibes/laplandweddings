@@ -304,66 +304,117 @@ function buildQualificationEmail(f: {
   const accomIncluded = /include/i.test(f.accommodation);
   const accomSeparate = /separate|booking/i.test(f.accommodation);
 
-  const questions: string[] = [];
+  // Each question carries a short label used in the pre-filled reply template
+  // (mailto body) so answering is fill-in-the-blanks easy.
+  const questions: Array<{ full: string; short: string }> = [];
 
   // 1) What should the day include — always (the core qualifier).
-  questions.push(li(
-    'Besides the ceremony itself, what would you like the day to include — a photographer, a dinner, huskies or reindeer, an aurora evening, a sauna?',
-    'Mitä toivoisitte päivän sisältävän vihkimisen lisäksi — valokuvaaja, illallinen, huskyt tai porot, revontuli-ilta, sauna?',
-  ));
+  questions.push({
+    full: li(
+      'Besides the ceremony itself, what would you like the day to include — a photographer, a dinner, huskies or reindeer, an aurora evening, a sauna?',
+      'Mitä toivoisitte päivän sisältävän vihkimisen lisäksi — valokuvaaja, illallinen, huskyt tai porot, revontuli-ilta, sauna?',
+    ),
+    short: li('The day should include', 'Päivään toivomme'),
+  });
 
   // 2) Budget scope — phrased from what they told us.
   if (budgetLabel && accomIncluded) {
-    questions.push(li(
-      `Your budget (${budgetLabel}) — should it cover flights and accommodation for everyone too, or the wedding itself only?`,
-      `Budjettinne (${budgetLabel}) — pitäisikö sen kattaa myös lennot ja majoitus kaikille, vai vain itse häät?`,
-    ));
+    questions.push({
+      full: li(
+        `Your budget (${budgetLabel}) — should it cover flights and accommodation for everyone too, or the wedding itself only?`,
+        `Budjettinne (${budgetLabel}) — pitäisikö sen kattaa myös lennot ja majoitus kaikille, vai vain itse häät?`,
+      ),
+      short: li('Budget covers (wedding only / also flights + stay)', 'Budjetti kattaa (vain häät / myös lennot + majoitus)'),
+    });
   } else if (budgetLabel && accomSeparate) {
-    questions.push(li(
-      `Just to confirm: your budget (${budgetLabel}) is for the wedding itself, with travel and accommodation booked separately?`,
-      `Varmistetaan vielä: budjettinne (${budgetLabel}) koskee itse häitä, ja matkat ja majoitus hoituvat erikseen?`,
-    ));
+    questions.push({
+      full: li(
+        `Just to confirm: your budget (${budgetLabel}) is for the wedding itself, with travel and accommodation booked separately?`,
+        `Varmistetaan vielä: budjettinne (${budgetLabel}) koskee itse häitä, ja matkat ja majoitus hoituvat erikseen?`,
+      ),
+      short: li('Budget is for the wedding only (yes / no)', 'Budjetti koskee vain häitä (kyllä / ei)'),
+    });
   } else {
-    questions.push(li(
-      'Do you have a rough budget range in mind — and should it include flights and accommodation?',
-      'Onko teillä suuntaa antavaa budjettihaarukkaa — ja sisältyisivätkö siihen lennot ja majoitus?',
-    ));
+    questions.push({
+      full: li(
+        'Do you have a rough budget range in mind — and should it include flights and accommodation?',
+        'Onko teillä suuntaa antavaa budjettihaarukkaa — ja sisältyisivätkö siihen lennot ja majoitus?',
+      ),
+      short: li('Rough budget (and does it include flights + stay)', 'Budjettihaarukka (ja sisältyvätkö lennot + majoitus)'),
+    });
   }
 
   // 3) Region — only if they left it open.
   if (!hasRegion) {
-    questions.push(li(
-      'Is there a part of Lapland you are drawn to — Rovaniemi, Levi, Saariselkä, or somewhere quieter?',
-      'Vetääkö jokin Lapin kolkka puoleensa — Rovaniemi, Levi, Saariselkä vai jokin rauhallisempi paikka?',
-    ));
+    questions.push({
+      full: li(
+        'Is there a part of Lapland you are drawn to — Rovaniemi, Levi, Saariselkä, or somewhere quieter?',
+        'Vetääkö jokin Lapin kolkka puoleensa — Rovaniemi, Levi, Saariselkä vai jokin rauhallisempi paikka?',
+      ),
+      short: li('Preferred area', 'Toivottu alue'),
+    });
   }
 
   // 4) Legal vs symbolic.
   questions.push(legalPlanned
-    ? li(
-        'A legally binding ceremony in Finland needs a bit of DVV paperwork (we guide you through it) — is legally-binding-in-Finland definitely the plan, or would a symbolic ceremony here plus the legal part at home also work?',
-        'Virallinen vihkiminen Suomessa vaatii hieman DVV-paperitöitä (autamme niissä) — onko virallinen vihkiminen Suomessa varma suunnitelma, vai kävisikö myös seremonia täällä ja viralliset paperit kotimaassa?',
-      )
-    : li(
-        'Would you like a legally binding ceremony in Finland (we guide you through the DVV paperwork), or a symbolic ceremony with the legal part done at home?',
-        'Haluaisitteko virallisen vihkimisen Suomessa (autamme DVV-paperitöissä) vai seremonian, jossa viralliset paperit hoidetaan kotimaassa?',
-      ));
+    ? {
+        full: li(
+          'A legally binding ceremony in Finland needs a bit of DVV paperwork (we guide you through it) — is legally-binding-in-Finland definitely the plan, or would a symbolic ceremony here plus the legal part at home also work?',
+          'Virallinen vihkiminen Suomessa vaatii hieman DVV-paperitöitä (autamme niissä) — onko virallinen vihkiminen Suomessa varma suunnitelma, vai kävisikö myös seremonia täällä ja viralliset paperit kotimaassa?',
+        ),
+        short: li('Ceremony (legal in Finland / symbolic)', 'Vihkiminen (virallinen Suomessa / seremonia)'),
+      }
+    : {
+        full: li(
+          'Would you like a legally binding ceremony in Finland (we guide you through the DVV paperwork), or a symbolic ceremony with the legal part done at home?',
+          'Haluaisitteko virallisen vihkimisen Suomessa (autamme DVV-paperitöissä) vai seremonian, jossa viralliset paperit hoidetaan kotimaassa?',
+        ),
+        short: li('Ceremony (legal in Finland / symbolic)', 'Vihkiminen (virallinen Suomessa / seremonia)'),
+      });
 
   // 5) Date firmness OR their story — whichever adds more.
   if (f.preferredDate) {
-    questions.push(li(
-      `How firm is your date (${f.preferredDate}) — and roughly how many days will you stay in Lapland?`,
-      `Kuinka lukkoon lyöty ajankohtanne (${f.preferredDate}) on — ja suunnilleen kuinka monta päivää viivytte Lapissa?`,
-    ));
+    questions.push({
+      full: li(
+        `How firm is your date (${f.preferredDate}) — and roughly how many days will you stay in Lapland?`,
+        `Kuinka lukkoon lyöty ajankohtanne (${f.preferredDate}) on — ja suunnilleen kuinka monta päivää viivytte Lapissa?`,
+      ),
+      short: li('Date firmness + length of stay', 'Ajankohdan varmuus + matkan kesto'),
+    });
   }
   if ((f.message || '').trim().length < 80 && questions.length < 5) {
-    questions.push(li(
-      'And tell us a little about you two — how do you picture the day feeling?',
-      'Ja kertokaa hieman itsestänne — miltä unelmienne hääpäivä tuntuisi?',
-    ));
+    questions.push({
+      full: li(
+        'And tell us a little about you two — how do you picture the day feeling?',
+        'Ja kertokaa hieman itsestänne — miltä unelmienne hääpäivä tuntuisi?',
+      ),
+      short: li('About you two / your vision', 'Teistä kahdesta / visionne'),
+    });
   }
 
   const qs = questions.slice(0, 5);
+
+  // Pre-filled reply template: one tap opens a compose window with numbered
+  // blanks (mailto body). Short labels keep the URL well under client limits.
+  const replySubject = li('Answers — our Lapland wedding', 'Vastaukset — Lapin-häämme');
+  const replyTemplate = qs.map((q, i) => `${i + 1}. ${q.short}:\n`).join('\n');
+  const mailtoHref =
+    'mailto:info@laplandvibes.com' +
+    `?subject=${encodeURIComponent(replySubject)}` +
+    `&body=${encodeURIComponent(replyTemplate + '\n' + li('Anything else on your mind:', 'Muuta mielessä:') + '\n')}`;
+  const answerCta = li('Answer the questions', 'Vastaa kysymyksiin');
+  const answerHint = li(
+    'The button opens a reply with the questions pre-filled — or simply hit reply and answer in your own words.',
+    'Nappi avaa viestipohjan, jossa kysymykset ovat valmiina — tai vastaa yksinkertaisesti tähän viestiin omin sanoin.',
+  );
+
+  // Planning links — the network sites most useful while they wait.
+  const planTitle = li('Helpful while you plan', 'Avuksi suunnitteluun');
+  const planLinks: Array<[string, string, string]> = [
+    ['https://laplandstays.com', li('Stays', 'Majoitus'), li('glass igloos, cabins & hotels for you and your guests', 'lasi-iglut, mökit ja hotellit teille ja vieraillenne')],
+    ['https://laplandactivities.fi', li('Activities', 'Aktiviteetit'), li('huskies, reindeer, snowmobiles & aurora tours', 'huskyt, porot, moottorikelkat ja revontuliretket')],
+    ['https://laplandtransport.com', li('Getting there', 'Matkustaminen'), li('flights, transfers & getting around Lapland', 'lennot, siirtymät ja liikkuminen Lapissa')],
+  ];
 
   const greeting = f.firstName
     ? li(`Hi ${f.firstName},`, `Hei ${f.firstName},`)
@@ -403,9 +454,15 @@ ${opener}
 
 ${why}
 
-${qs.map((q, i) => `${i + 1}. ${q}`).join('\n')}
+${qs.map((q, i) => `${i + 1}. ${q.full}`).join('\n')}
 
+${li('To make answering easy, copy this, fill in the blanks and hit reply:', 'Vastaaminen helpoksi: kopioi tämä, täytä kohdat ja paina vastaa:')}
+
+${replyTemplate}
 ${outro}
+
+${planTitle}:
+${planLinks.map(([url, name, desc]) => `- ${name} — ${desc}: ${url}`).join('\n')}
 
 ${li('Warmly,', 'Lämpimin terveisin,')}
 Vesa Pesola
@@ -427,10 +484,24 @@ info@laplandvibes.com · laplandweddings.online`;
           <p style="margin:0 0 14px">${esc(greeting)}</p>
           <p style="margin:0 0 14px">${esc(opener)}</p>
           <p style="margin:0 0 6px">${esc(why)}</p>
-          <ol style="margin:0 0 16px;padding-left:22px">
-            ${qs.map((q) => `<li style="margin:0 0 10px">${esc(q)}</li>`).join('\n            ')}
+          <ol style="margin:0 0 18px;padding-left:22px">
+            ${qs.map((q) => `<li style="margin:0 0 10px">${esc(q.full)}</li>`).join('\n            ')}
           </ol>
+          <!-- Ready-made answer sheet: one tap opens a pre-filled reply -->
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 8px"><tr>
+            <td style="border-radius:10px;background:#EC4899">
+              <a href="${mailtoHref}" style="display:inline-block;padding:13px 26px;font-size:15px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:10px">${esc(answerCta)} →</a>
+            </td>
+          </tr></table>
+          <p style="margin:0 0 20px;font-size:13px;color:#64748B">${esc(answerHint)}</p>
           <p style="margin:0 0 18px">${esc(outro)}</p>
+
+          <!-- Planning links: stays / activities / transport -->
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 22px;background:#F6F8FB;border:1px solid #E2E8F0;border-radius:10px">
+            <tr><td style="padding:14px 18px 6px;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#64748B">${esc(planTitle)}</td></tr>
+            ${planLinks.map(([url, name, desc]) => `<tr><td style="padding:4px 18px 10px;font-size:14px"><a href="${url}" style="color:#EC4899;font-weight:700;text-decoration:none">${esc(name)}</a> <span style="color:#475569">— ${esc(desc)}</span></td></tr>`).join('\n            ')}
+          </table>
+
           <p style="margin:0 0 24px">${esc(li('Warmly,', 'Lämpimin terveisin,'))}<br>
             <strong>Vesa Pesola</strong><br>
             <span style="color:#64748B;font-size:13px">LaplandWeddings — ${esc(li('part of the LaplandVibes network', 'osa LaplandVibes-verkostoa'))}<br>
