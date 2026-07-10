@@ -442,6 +442,12 @@ function buildQualificationEmail(f: {
     'Just hit reply — I read every answer personally. As soon as we hear back, we forward your wishes to the planners that fit, and they contact you directly with real proposals.',
     'Vastaa suoraan tähän viestiin — luen jokaisen vastauksen itse. Heti kun kuulemme teistä, välitämme toiveenne sopiville suunnittelijoille, ja he ottavat teihin suoraan yhteyttä konkreettisin ehdotuksin.',
   );
+  // Expectation management (Vesa 2026-07-10): the service language is English
+  // (+ Finnish) — say it out loud so no one expects planners to speak e.g. German.
+  const langNote = li(
+    'We work with you and our planners in English (and Finnish).',
+    'Palvelemme teitä englanniksi ja suomeksi — myös suunnittelijamme toimivat näillä kielillä.',
+  );
   const subject = li(
     'Your Lapland wedding — a few quick questions',
     'Lapin-häänne — muutama nopea kysymys',
@@ -460,6 +466,8 @@ ${li('To make answering easy, copy this, fill in the blanks and hit reply:', 'Va
 
 ${replyTemplate}
 ${outro}
+
+${langNote}
 
 ${planTitle}:
 ${planLinks.map(([url, name, desc]) => `- ${name} — ${desc}: ${url}`).join('\n')}
@@ -494,7 +502,8 @@ info@laplandvibes.com · laplandweddings.online`;
             </td>
           </tr></table>
           <p style="margin:0 0 20px;font-size:13px;color:#64748B">${esc(answerHint)}</p>
-          <p style="margin:0 0 18px">${esc(outro)}</p>
+          <p style="margin:0 0 10px">${esc(outro)}</p>
+          <p style="margin:0 0 18px;font-size:13px;color:#64748B">${esc(langNote)}</p>
 
           <!-- Planning links: stays / activities / transport -->
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 22px;background:#F6F8FB;border:1px solid #E2E8F0;border-radius:10px">
