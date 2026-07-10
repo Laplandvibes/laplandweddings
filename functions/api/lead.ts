@@ -23,6 +23,8 @@ interface Env {
   RESEND_API_KEY?: string;
   LEAD_FROM?: string;
   LEAD_TO?: string;
+  /** From-address for the ~1h qualification follow-up (replies land here). */
+  QUAL_FROM?: string;
 }
 
 const ALLOWED_TYPES = [
@@ -227,11 +229,221 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     }),
   }).catch(() => {/* ignore — main email already sent */});
 
+  // Qualification follow-up (Vesa 2026-07-10): ~1 hour after submission the
+  // couple gets a short, personalised set of easy questions built from their
+  // own answers. A reply = a genuinely warm lead we can forward to partners;
+  // silence filters out the cold ones. Sent via Resend scheduled_at (server-
+  // side schedule — fires even when nothing of ours is running). From-address
+  // is info@ so replies land straight in the monitored inbox.
+  try {
+    const qual = buildQualificationEmail({
+      lang: langPref, firstName, weddingType, location, venue,
+      ceremonyType, accommodation, budget, guests, preferredDate, message,
+    });
+    await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: env.QUAL_FROM || 'Vesa | LaplandWeddings <info@laplandvibes.com>',
+        to: [email],
+        subject: qual.subject,
+        html: qual.html,
+        text: qual.text,
+        scheduled_at: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
+      }),
+    });
+  } catch { /* best-effort — lead notification + confirmation already delivered */ }
+
   return new Response(JSON.stringify({ ok: true }), {
     status: 200,
     headers: { 'Content-Type': 'application/json' },
   });
 };
+
+// ---------------------------------------------------------------------------
+// Qualification follow-up email (scheduled ~1h after submission)
+// ---------------------------------------------------------------------------
+
+/** Form slugs → human labels for the two languages the mail ships in. */
+const TYPE_LABELS: Record<string, [string, string]> = {
+  // slug: [en, fi]
+  'elopement': ['an elopement for the two of you', 'kahdenkeskinen vihkiminen'],
+  'northern-lights': ['a Northern Lights ceremony', 'revontulivihkiminen'],
+  'snow-chapel': ['a snow chapel ceremony', 'lumikappelivihkiminen'],
+  'glass-igloo': ['a glass igloo wedding', 'lasi-igluhäät'],
+};
+const REGION_LABELS: Record<string, [string, string]> = {
+  'rovaniemi': ['Rovaniemi', 'Rovaniemi'],
+  'levi': ['Levi & Kittilä', 'Levi ja Kittilä'],
+  'yllas': ['Ylläs', 'Ylläs'],
+  'saariselka': ['Saariselkä & Inari', 'Saariselkä ja Inari'],
+  'ruka': ['Ruka & Kuusamo', 'Ruka ja Kuusamo'],
+};
+const BUDGET_LABELS: Record<string, string> = {
+  'budget1': 'alle 5 000 € / under €5,000',
+  'budget2': '5 000–15 000 €',
+  'budget3': '15 000–30 000 €',
+  'budget4': '30 000–60 000 €',
+};
+
+function buildQualificationEmail(f: {
+  lang: string; firstName: string; weddingType: string; location: string;
+  venue: string; ceremonyType: string; accommodation: string; budget: string;
+  guests: string; preferredDate: string; message: string;
+}): { subject: string; html: string; text: string } {
+  const isFi = f.lang === 'fi';
+  const li = (en: string, fi: string) => (isFi ? fi : en);
+  const typeLabel = TYPE_LABELS[f.weddingType]?.[isFi ? 1 : 0] || '';
+  const regionLabel = REGION_LABELS[f.location]?.[isFi ? 1 : 0] || '';
+  const budgetLabel = BUDGET_LABELS[f.budget] || '';
+  const hasRegion = !!(regionLabel || f.venue);
+  const legalPlanned = /legal|virallinen|laillinen/i.test(f.ceremonyType);
+  const accomIncluded = /include/i.test(f.accommodation);
+  const accomSeparate = /separate|booking/i.test(f.accommodation);
+
+  const questions: string[] = [];
+
+  // 1) What should the day include — always (the core qualifier).
+  questions.push(li(
+    'Besides the ceremony itself, what would you like the day to include — a photographer, a dinner, huskies or reindeer, an aurora evening, a sauna?',
+    'Mitä toivoisitte päivän sisältävän vihkimisen lisäksi — valokuvaaja, illallinen, huskyt tai porot, revontuli-ilta, sauna?',
+  ));
+
+  // 2) Budget scope — phrased from what they told us.
+  if (budgetLabel && accomIncluded) {
+    questions.push(li(
+      `Your budget (${budgetLabel}) — should it cover flights and accommodation for everyone too, or the wedding itself only?`,
+      `Budjettinne (${budgetLabel}) — pitäisikö sen kattaa myös lennot ja majoitus kaikille, vai vain itse häät?`,
+    ));
+  } else if (budgetLabel && accomSeparate) {
+    questions.push(li(
+      `Just to confirm: your budget (${budgetLabel}) is for the wedding itself, with travel and accommodation booked separately?`,
+      `Varmistetaan vielä: budjettinne (${budgetLabel}) koskee itse häitä, ja matkat ja majoitus hoituvat erikseen?`,
+    ));
+  } else {
+    questions.push(li(
+      'Do you have a rough budget range in mind — and should it include flights and accommodation?',
+      'Onko teillä suuntaa antavaa budjettihaarukkaa — ja sisältyisivätkö siihen lennot ja majoitus?',
+    ));
+  }
+
+  // 3) Region — only if they left it open.
+  if (!hasRegion) {
+    questions.push(li(
+      'Is there a part of Lapland you are drawn to — Rovaniemi, Levi, Saariselkä, or somewhere quieter?',
+      'Vetääkö jokin Lapin kolkka puoleensa — Rovaniemi, Levi, Saariselkä vai jokin rauhallisempi paikka?',
+    ));
+  }
+
+  // 4) Legal vs symbolic.
+  questions.push(legalPlanned
+    ? li(
+        'A legally binding ceremony in Finland needs a bit of DVV paperwork (we guide you through it) — is legally-binding-in-Finland definitely the plan, or would a symbolic ceremony here plus the legal part at home also work?',
+        'Virallinen vihkiminen Suomessa vaatii hieman DVV-paperitöitä (autamme niissä) — onko virallinen vihkiminen Suomessa varma suunnitelma, vai kävisikö myös seremonia täällä ja viralliset paperit kotimaassa?',
+      )
+    : li(
+        'Would you like a legally binding ceremony in Finland (we guide you through the DVV paperwork), or a symbolic ceremony with the legal part done at home?',
+        'Haluaisitteko virallisen vihkimisen Suomessa (autamme DVV-paperitöissä) vai seremonian, jossa viralliset paperit hoidetaan kotimaassa?',
+      ));
+
+  // 5) Date firmness OR their story — whichever adds more.
+  if (f.preferredDate) {
+    questions.push(li(
+      `How firm is your date (${f.preferredDate}) — and roughly how many days will you stay in Lapland?`,
+      `Kuinka lukkoon lyöty ajankohtanne (${f.preferredDate}) on — ja suunnilleen kuinka monta päivää viivytte Lapissa?`,
+    ));
+  }
+  if ((f.message || '').trim().length < 80 && questions.length < 5) {
+    questions.push(li(
+      'And tell us a little about you two — how do you picture the day feeling?',
+      'Ja kertokaa hieman itsestänne — miltä unelmienne hääpäivä tuntuisi?',
+    ));
+  }
+
+  const qs = questions.slice(0, 5);
+
+  const greeting = f.firstName
+    ? li(`Hi ${f.firstName},`, `Hei ${f.firstName},`)
+    : li('Hi,', 'Hei,');
+
+  const openerBits: string[] = [];
+  if (typeLabel) openerBits.push(typeLabel);
+  if (regionLabel) openerBits.push(li(`around ${regionLabel}`, `${regionLabel} -alueella`));
+  else if (f.venue) openerBits.push(li(`at ${f.venue}`, `${f.venue} -paikassa`));
+  const opener = openerBits.length
+    ? li(
+        `I read your enquiry — ${openerBits.join(', ')} sounds lovely, and we would be glad to help make it happen.`,
+        `Luin tiedustelunne — ${openerBits.join(', ')} kuulostaa ihanalta, ja autamme mielellämme sen toteuttamisessa.`,
+      )
+    : li(
+        'I read your enquiry, and we would be glad to help make your Lapland wedding happen.',
+        'Luin tiedustelunne, ja autamme mielellämme Lapin-häidenne toteuttamisessa.',
+      );
+
+  const why = li(
+    'To match you with the right planners (up to three, and only ones that genuinely fit), a few quick questions — short answers are perfectly fine:',
+    'Jotta osaamme valita teille juuri oikeat suunnittelijat (enintään kolme, ja vain aidosti sopivia), muutama nopea kysymys — lyhyet vastaukset riittävät mainiosti:',
+  );
+  const outro = li(
+    'Just hit reply — I read every answer personally. As soon as we hear back, we forward your wishes to the planners that fit, and they contact you directly with real proposals.',
+    'Vastaa suoraan tähän viestiin — luen jokaisen vastauksen itse. Heti kun kuulemme teistä, välitämme toiveenne sopiville suunnittelijoille, ja he ottavat teihin suoraan yhteyttä konkreettisin ehdotuksin.',
+  );
+  const subject = li(
+    'Your Lapland wedding — a few quick questions',
+    'Lapin-häänne — muutama nopea kysymys',
+  );
+
+  const text =
+`${greeting}
+
+${opener}
+
+${why}
+
+${qs.map((q, i) => `${i + 1}. ${q}`).join('\n')}
+
+${outro}
+
+${li('Warmly,', 'Lämpimin terveisin,')}
+Vesa Pesola
+LaplandWeddings — ${li('part of the LaplandVibes network', 'osa LaplandVibes-verkostoa')}
+info@laplandvibes.com · laplandweddings.online`;
+
+  const esc = escapeHtml;
+  const html = `<!doctype html>
+<html lang="${f.lang === 'fi' ? 'fi' : 'en'}">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LaplandWeddings</title></head>
+<body style="margin:0;padding:0;background:#F6F8FB;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;color:#1F2937;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#F6F8FB;padding:24px 12px">
+    <tr><td align="center">
+      <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;background:#FFFFFF;border-radius:12px;overflow:hidden;border:1px solid #E2E8F0">
+        <tr><td style="background:#0F172A;padding:14px 28px">
+          <span style="font-size:16px;font-weight:700;letter-spacing:0.05em"><span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span></span>
+        </td></tr>
+        <tr><td style="padding:26px 28px 8px;font-size:15px;line-height:1.65">
+          <p style="margin:0 0 14px">${esc(greeting)}</p>
+          <p style="margin:0 0 14px">${esc(opener)}</p>
+          <p style="margin:0 0 6px">${esc(why)}</p>
+          <ol style="margin:0 0 16px;padding-left:22px">
+            ${qs.map((q) => `<li style="margin:0 0 10px">${esc(q)}</li>`).join('\n            ')}
+          </ol>
+          <p style="margin:0 0 18px">${esc(outro)}</p>
+          <p style="margin:0 0 24px">${esc(li('Warmly,', 'Lämpimin terveisin,'))}<br>
+            <strong>Vesa Pesola</strong><br>
+            <span style="color:#64748B;font-size:13px">LaplandWeddings — ${esc(li('part of the LaplandVibes network', 'osa LaplandVibes-verkostoa'))}<br>
+            info@laplandvibes.com · laplandweddings.online</span></p>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+  return { subject, html, text };
+}
 
 interface LeadEmailData {
   yourName: string; partnerName: string; email: string; phone: string;
