@@ -237,8 +237,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   // is info@ so replies land straight in the monitored inbox.
   try {
     const qual = buildQualificationEmail({
-      lang: langPref, firstName, weddingType, location, venue,
-      ceremonyType, accommodation, budget, guests, preferredDate, message,
+      lang: langPref, firstName, yourName, partnerName, country,
+      weddingType, location, venue, ceremonyType, accommodation, budget,
+      guests, preferredDate, flexibility, message,
     });
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -274,6 +275,8 @@ const TYPE_LABELS: Record<string, [string, string]> = {
   'northern-lights': ['a Northern Lights ceremony', 'revontulivihkiminen'],
   'snow-chapel': ['a snow chapel ceremony', 'lumikappelivihkiminen'],
   'glass-igloo': ['a glass igloo wedding', 'lasi-igluhäät'],
+  'midnight-sun': ['a Midnight Sun wedding', 'yöttömän yön häät'],
+  'vow-renewal': ['a vow renewal', 'valojen uusiminen'],
 };
 const REGION_LABELS: Record<string, [string, string]> = {
   'rovaniemi': ['Rovaniemi', 'Rovaniemi'],
@@ -281,6 +284,8 @@ const REGION_LABELS: Record<string, [string, string]> = {
   'yllas': ['Ylläs', 'Ylläs'],
   'saariselka': ['Saariselkä & Inari', 'Saariselkä ja Inari'],
   'ruka': ['Ruka & Kuusamo', 'Ruka ja Kuusamo'],
+  'pyha-luosto': ['Pyhä-Luosto', 'Pyhä-Luosto'],
+  'kilpisjarvi': ['Kilpisjärvi', 'Kilpisjärvi'],
 };
 const BUDGET_LABELS: Record<string, string> = {
   'budget1': 'alle 5 000 € / under €5,000',
@@ -289,20 +294,62 @@ const BUDGET_LABELS: Record<string, string> = {
   'budget4': '30 000–60 000 €',
 };
 
-function buildQualificationEmail(f: {
-  lang: string; firstName: string; weddingType: string; location: string;
-  venue: string; ceremonyType: string; accommodation: string; budget: string;
-  guests: string; preferredDate: string; message: string;
+export function buildQualificationEmail(f: {
+  lang: string; firstName: string; yourName: string; partnerName: string;
+  country: string; weddingType: string; location: string; venue: string;
+  ceremonyType: string; accommodation: string; budget: string;
+  guests: string; preferredDate: string; flexibility: string; message: string;
 }): { subject: string; html: string; text: string } {
   const isFi = f.lang === 'fi';
   const li = (en: string, fi: string) => (isFi ? fi : en);
-  const typeLabel = TYPE_LABELS[f.weddingType]?.[isFi ? 1 : 0] || '';
-  const regionLabel = REGION_LABELS[f.location]?.[isFi ? 1 : 0] || '';
+  const rd = (m: Record<string, [string, string]>, k: string): string => (m[k] ? m[k][isFi ? 1 : 0] : (k || '').trim());
+  const typeLabel = rd(TYPE_LABELS, f.weddingType);
+  const regionLabel = rd(REGION_LABELS, f.location);
   const budgetLabel = BUDGET_LABELS[f.budget] || '';
   const hasRegion = !!(regionLabel || f.venue);
+  const hasGuests = !!f.guests.trim() && !/^0+$/.test(f.guests.trim());
   const legalPlanned = /legal|virallinen|laillinen/i.test(f.ceremonyType);
   const accomIncluded = /include/i.test(f.accommodation);
   const accomSeparate = /separate|booking/i.test(f.accommodation);
+
+  // Original-request recap (EN/FI). The answers used to arrive detached from the
+  // form data (guests, date, budget, region), so forwarding a lead lost half the
+  // picture. We now carry a readable recap inside the follow-up (visible box +
+  // reply template) → one reply = a complete, forward-ready lead.
+  const budgetReadable: Record<string, [string, string]> = {
+    budget1: ['under €5,000', 'alle 5 000 €'],
+    budget2: ['€5,000–15,000', '5 000–15 000 €'],
+    budget3: ['€15,000–30,000', '15 000–30 000 €'],
+    budget4: ['€30,000–60,000', '30 000–60 000 €'],
+    budget5: ['over €60,000', 'yli 60 000 €'],
+  };
+  const flexReadable: Record<string, [string, string]> = {
+    flexFixed: ['fixed date', 'kiinteä päivä'],
+    flexWeek: ['±1 week', '±1 viikko'],
+    flexMonth: ['±1 month', '±1 kuukausi'],
+    flexAny: ['flexible — whenever auroras appear', 'joustava — kun revontulet näkyvät'],
+  };
+  const ceremonyReadable: Record<string, [string, string]> = {
+    legal: ['legally binding in Finland', 'virallinen Suomessa'],
+    symbolic: ['symbolic / blessing', 'symbolinen / siunaus'],
+    unsure: ['still undecided', 'vielä auki'],
+  };
+  const coupleName = f.partnerName ? `${f.yourName} & ${f.partnerName}` : f.yourName;
+  const whereVal = [regionLabel, f.venue].filter(Boolean).join(' · ');
+  const dateVal = f.preferredDate
+    ? `${f.preferredDate}${flexReadable[f.flexibility] ? ` (${flexReadable[f.flexibility][isFi ? 1 : 0]})` : ''}`
+    : rd(flexReadable, f.flexibility);
+  const recap: Array<[string, string]> = [];
+  if (coupleName) recap.push([li('Couple', 'Pari'), coupleName]);
+  if (f.country) recap.push([li('From', 'Kotimaa'), f.country]);
+  if (typeLabel) recap.push([li('Wedding', 'Häät'), typeLabel]);
+  if (whereVal) recap.push([li('Where', 'Missä'), whereVal]);
+  if (hasGuests) recap.push([li('Guests', 'Vieraita'), f.guests]);
+  if (dateVal) recap.push([li('Date', 'Ajankohta'), dateVal]);
+  const budgetVal = rd(budgetReadable, f.budget);
+  if (budgetVal) recap.push([li('Budget', 'Budjetti'), budgetVal]);
+  const ceremonyVal = ceremonyReadable[f.ceremonyType]?.[isFi ? 1 : 0] || '';
+  if (ceremonyVal) recap.push([li('Ceremony', 'Vihkiminen'), ceremonyVal]);
 
   // Each question carries a short label used in the pre-filled reply template
   // (mailto body) so answering is fill-in-the-blanks easy.
@@ -317,14 +364,27 @@ function buildQualificationEmail(f: {
     short: li('The day should include', 'Päivään toivomme'),
   });
 
-  // 2) Budget scope — phrased from what they told us.
+  // 2) Guest count — critical for planners (a budget is meaningless without it:
+  //    an elopement vs 36 guests at the same € is a different wedding). Only
+  //    asked when the form didn't already capture it.
+  if (!hasGuests) {
+    questions.push({
+      full: li(
+        'How many of you will there be — just the two of you, or with guests (roughly how many)?',
+        'Kuinka monta teitä on — pelkästään te kaksi, vai vieraita mukana (suunnilleen kuinka monta)?',
+      ),
+      short: li('Guests (just us / about how many)', 'Vieraita (vain me / suunnilleen montako)'),
+    });
+  }
+
+  // 3) Budget scope — phrased from what they told us.
   if (budgetLabel && accomIncluded) {
     questions.push({
       full: li(
-        `Your budget (${budgetLabel}) — should it cover flights and accommodation for everyone too, or the wedding itself only?`,
-        `Budjettinne (${budgetLabel}) — pitäisikö sen kattaa myös lennot ja majoitus kaikille, vai vain itse häät?`,
+        `Your budget (${budgetLabel}) — is that for the wedding day itself, or the whole trip including flights and stay for everyone?`,
+        `Budjettinne (${budgetLabel}) — koskeeko se itse hääpäivää, vai koko matkaa lentoineen ja majoituksineen kaikille?`,
       ),
-      short: li('Budget covers (wedding only / also flights + stay)', 'Budjetti kattaa (vain häät / myös lennot + majoitus)'),
+      short: li('Budget is for (the wedding day / the whole trip)', 'Budjetti koskee (hääpäivää / koko matkaa)'),
     });
   } else if (budgetLabel && accomSeparate) {
     questions.push({
@@ -344,7 +404,7 @@ function buildQualificationEmail(f: {
     });
   }
 
-  // 3) Region — only if they left it open.
+  // 4) Region — only if they left it open.
   if (!hasRegion) {
     questions.push({
       full: li(
@@ -355,7 +415,7 @@ function buildQualificationEmail(f: {
     });
   }
 
-  // 4) Legal vs symbolic.
+  // 5) Legal vs symbolic.
   questions.push(legalPlanned
     ? {
         full: li(
@@ -372,7 +432,7 @@ function buildQualificationEmail(f: {
         short: li('Ceremony (legal in Finland / symbolic)', 'Vihkiminen (virallinen Suomessa / seremonia)'),
       });
 
-  // 5) Date firmness OR their story — whichever adds more.
+  // 6) Date firmness OR their story — whichever adds more.
   if (f.preferredDate) {
     questions.push({
       full: li(
@@ -398,10 +458,20 @@ function buildQualificationEmail(f: {
   // blanks (mailto body). Short labels keep the URL well under client limits.
   const replySubject = li('Answers — our Lapland wedding', 'Vastaukset — Lapin-häämme');
   const replyTemplate = qs.map((q, i) => `${i + 1}. ${q.short}:\n`).join('\n');
+  // The recap rides along at the bottom of the reply so a submitted answer email
+  // is self-contained (original enquiry + answers) and forwards to a planner as-is.
+  const recapPlain = recap.map(([k, v]) => `${k}: ${v}`).join('\n');
+  const recapDivider = li(
+    '— — — your enquiry (our planners see this — no need to edit) — — —',
+    '— — — tiedustelunne (suunnittelijat näkevät tämän — ei tarvitse muokata) — — —',
+  );
+  const mailtoBody =
+    replyTemplate + '\n' + li('Anything else on your mind:', 'Muuta mielessä:') + '\n\n' +
+    recapDivider + '\n' + recapPlain + '\n';
   const mailtoHref =
     'mailto:info@laplandvibes.com' +
     `?subject=${encodeURIComponent(replySubject)}` +
-    `&body=${encodeURIComponent(replyTemplate + '\n' + li('Anything else on your mind:', 'Muuta mielessä:') + '\n')}`;
+    `&body=${encodeURIComponent(mailtoBody)}`;
   const answerCta = li('Answer the questions', 'Vastaa kysymyksiin');
   const answerHint = li(
     'The button opens a reply with the questions pre-filled — or simply hit reply and answer in your own words.',
@@ -465,6 +535,9 @@ ${qs.map((q, i) => `${i + 1}. ${q.full}`).join('\n')}
 ${li('To make answering easy, copy this, fill in the blanks and hit reply:', 'Vastaaminen helpoksi: kopioi tämä, täytä kohdat ja paina vastaa:')}
 
 ${replyTemplate}
+${recapDivider}
+${recapPlain}
+
 ${outro}
 
 ${langNote}
@@ -502,6 +575,17 @@ info@laplandvibes.com · laplandweddings.online`;
             </td>
           </tr></table>
           <p style="margin:0 0 20px;font-size:13px;color:#64748B">${esc(answerHint)}</p>
+
+          <!-- Enquiry recap: rides along so a plain reply is a complete, forward-ready lead -->
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:4px 0 20px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px">
+            <tr><td style="padding:12px 16px 4px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#94A3B8">${esc(li('Your enquiry so far', 'Tiedustelunne tähän mennessä'))}</td></tr>
+            <tr><td style="padding:0 16px 12px">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                ${recap.map(([k, v]) => `<tr><td style="padding:3px 0;width:96px;font-size:12px;color:#94A3B8;vertical-align:top">${esc(k)}</td><td style="padding:3px 0;font-size:13px;color:#334155;vertical-align:top">${esc(v)}</td></tr>`).join('\n                ')}
+              </table>
+            </td></tr>
+          </table>
+
           <p style="margin:0 0 10px">${esc(outro)}</p>
           <p style="margin:0 0 18px;font-size:13px;color:#64748B">${esc(langNote)}</p>
 
