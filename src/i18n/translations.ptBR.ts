@@ -65,7 +65,7 @@ const t_ptBR = {
   },
   locations: {
     indexTitle: 'Regiões da Lapônia para casamentos',
-    indexIntro: 'Seis regiões reconhecidas, cada uma com seu caráter. Clique em uma região para ver seus locais, temporadas e serviços.',
+    indexIntro: 'Sete regiões reconhecidas, cada uma com seu caráter. Clique em uma região para ver seus locais, temporadas e serviços.',
   },
   types: {
     indexTitle: 'Tipos de casamento na Lapônia',

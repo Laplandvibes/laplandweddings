@@ -67,7 +67,7 @@ const t_en = {
   },
   locations: {
     indexTitle: 'Lapland regions for weddings',
-    indexIntro: 'Six well-known regions, each with its own character. Click a region to see its venues, seasons and services.',
+    indexIntro: 'Seven well-known regions, each with its own character. Click a region to see its venues, seasons and services.',
   },
   types: {
     indexTitle: 'Lapland wedding types',

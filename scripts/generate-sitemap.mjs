@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://laplandweddings.online';
 const today = new Date().toISOString().slice(0, 10);
 
-const locations = ['rovaniemi', 'saariselka', 'levi', 'yllas', 'pyha-luosto', 'kilpisjarvi'];
+const locations = ['rovaniemi', 'saariselka', 'levi', 'yllas', 'pyha-luosto', 'kilpisjarvi', 'oulu'];
 const types = ['northern-lights', 'snow-chapel', 'glass-igloo', 'midnight-sun', 'elopement', 'vow-renewal'];
 const venues = [
   'kakslauttanen', 'arctic-snowhotel', 'snow-village-lainio', 'northern-lights-ranch', 'levi-ice-castle',

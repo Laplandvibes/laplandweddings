@@ -67,7 +67,7 @@ const t_fi = {
   },
   locations: {
     indexTitle: 'Lapin paikkakunnat häille',
-    indexIntro: 'Kuusi tunnettua aluetta, jokaisella oma erityispiirteensä. Klikkaa paikkakuntaa nähdäksesi paikalliset hääpaikat, sesongit ja palvelut.',
+    indexIntro: 'Seitsemän tunnettua aluetta, jokaisella oma erityispiirteensä. Klikkaa paikkakuntaa nähdäksesi paikalliset hääpaikat, sesongit ja palvelut.',
   },
   types: {
     indexTitle: 'Häätyypit Lapissa',

@@ -67,7 +67,7 @@ const t_it = {
   },
   locations: {
     indexTitle: 'Regioni della Lapponia per matrimoni',
-    indexIntro: 'Sei regioni ben note, ognuna con il proprio carattere. Clicca su una regione per vedere location, stagioni e servizi.',
+    indexIntro: 'Sette regioni ben note, ognuna con il proprio carattere. Clicca su una regione per vedere location, stagioni e servizi.',
   },
   types: {
     indexTitle: 'Tipi di matrimonio in Lapponia',

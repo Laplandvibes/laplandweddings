@@ -6,7 +6,8 @@ import type { Lang } from '../i18n/translations';
 import { tripToLapland, carRentalLink, AFFILIATE_REL } from '../lib/affiliate';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import L from '../components/L';
-import { Download } from 'lucide-react';
+import { Download, Package, Users, Palette } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import type { Localized } from '../data/localized';
 import { pickLocalized } from '../data/localized';
 
@@ -239,17 +240,17 @@ const UI: Record<string, Localized<string>> = {
     nl: 'Trouwen in Lapland — DVV-proces',
   },
   eyebrow: {
-    fi: 'Käytännön opas',
-    en: 'Practical guide',
-    de: 'Praktischer Leitfaden',
-    ja: '実践ガイド',
-    es: 'Guía práctica',
-    'pt-BR': 'Guia prático',
-    'zh-CN': '实用指南',
-    ko: '실용 가이드',
-    fr: 'Guide pratique',
-    it: 'Guida pratica',
-    nl: 'Praktische gids',
+    fi: 'Teidän häänne Lapissa — käytännön opas',
+    en: 'Your wedding in Lapland — practical guide',
+    de: 'Ihre Hochzeit in Lappland — praktischer Leitfaden',
+    ja: 'ラップランドでの結婚式 — 実践ガイド',
+    es: 'Vuestra boda en Laponia — guía práctica',
+    'pt-BR': 'O casamento de vocês na Lapônia — guia prático',
+    'zh-CN': '你们的拉普兰婚礼——实用指南',
+    ko: '라플란드에서의 두 분의 결혼식 — 실용 가이드',
+    fr: 'Votre mariage en Laponie — guide pratique',
+    it: 'Il vostro matrimonio in Lapponia — guida pratica',
+    nl: 'Jullie bruiloft in Lapland — praktische gids',
   },
   heroImageAlt: {
     fi: 'Vihkimisseremonia talvisessa metsässä',
@@ -328,6 +329,45 @@ const UI: Record<string, Localized<string>> = {
     fr: 'Autorisation de mariage en Finlande — 6 étapes',
     it: 'Licenza di matrimonio in Finlandia — 6 passaggi',
     nl: 'Huwelijksvergunning in Finland — 6 stappen',
+  },
+  stepsIntro: {
+    fi: 'Teidän ja kaikkialla maailmassa pätevän avioliiton välissä on kuusi paperivaihetta — useimmat parit hoitavat ne 4–8 viikossa kaiken muun ohessa.',
+    en: 'Six steps of paperwork stand between you and a marriage that is legally valid worldwide — most couples clear them in 4–8 weeks alongside everything else.',
+    de: 'Zwischen Ihnen und einer weltweit rechtsgültigen Ehe stehen sechs Schritte Papierkram — die meisten Paare erledigen sie in 4–8 Wochen, neben allem anderen.',
+    ja: '世界中で法的に有効な結婚まで、あとは6つの書類手続きだけ — ほとんどのカップルは他の準備と並行して4〜8週間で終えています。',
+    es: 'Entre vosotros y un matrimonio con validez legal en todo el mundo hay seis pasos de papeleo; la mayoría de las parejas los resuelve en 4-8 semanas junto con todo lo demás.',
+    'pt-BR': 'Entre vocês e um casamento legalmente válido no mundo inteiro há seis etapas de papelada — a maioria dos casais as resolve em 4-8 semanas, junto com todo o resto.',
+    'zh-CN': '在你们与一段全球法律有效的婚姻之间，只隔着六步文书手续——大多数新人在4—8周内就能办完，同时兼顾其他筹备。',
+    ko: '전 세계에서 법적으로 유효한 결혼까지 남은 것은 여섯 단계의 서류 절차뿐 — 대부분의 커플이 다른 준비와 병행해 4~8주 안에 마칩니다.',
+    fr: 'Entre vous et un mariage juridiquement valable dans le monde entier, il n’y a que six étapes administratives — la plupart des couples les bouclent en 4 à 8 semaines, en parallèle de tout le reste.',
+    it: 'Tra voi e un matrimonio legalmente valido in tutto il mondo ci sono sei passaggi burocratici — la maggior parte delle coppie li completa in 4-8 settimane, insieme a tutto il resto.',
+    nl: 'Tussen jullie en een huwelijk dat wereldwijd rechtsgeldig is staan zes stappen papierwerk — de meeste stellen ronden ze in 4-8 weken af, naast al het andere.',
+  },
+  guestsTitle: {
+    fi: 'Vieraat, lennot ja kuka maksaa',
+    en: 'Guests, flights and who pays',
+    de: 'Gäste, Flüge und wer was bezahlt',
+    ja: 'ゲスト、フライト、費用の分担',
+    es: 'Invitados, vuelos y quién paga',
+    'pt-BR': 'Convidados, voos e quem paga',
+    'zh-CN': '宾客、航班与费用分担',
+    ko: '하객, 항공편, 비용 부담',
+    fr: 'Invités, vols et qui paie quoi',
+    it: 'Invitati, voli e chi paga',
+    nl: 'Gasten, vluchten en wie wat betaalt',
+  },
+  guestsIntro: {
+    fi: 'Kolme asiaa, jotka kannattaa päättää ajoissa — ennen kuin kutsut lähtevät.',
+    en: 'Three decisions to make early, before the invitations go out.',
+    de: 'Drei Entscheidungen, die Sie früh treffen sollten — bevor die Einladungen verschickt werden.',
+    ja: '招待状を送る前に、早めに決めておきたい3つのこと。',
+    es: 'Tres decisiones que conviene tomar pronto, antes de enviar las invitaciones.',
+    'pt-BR': 'Três decisões para tomar cedo, antes de enviar os convites.',
+    'zh-CN': '在发出请柬之前，最好尽早做出的三个决定。',
+    ko: '청첩장을 보내기 전에 미리 정해 두면 좋은 세 가지.',
+    fr: 'Trois décisions à prendre tôt, avant d’envoyer les invitations.',
+    it: 'Tre decisioni da prendere presto, prima di spedire gli inviti.',
+    nl: 'Drie beslissingen om vroeg te nemen, nog voordat de uitnodigingen de deur uit gaan.',
   },
   seasonsTitle: {
     fi: 'Sesongit ja sää',
@@ -409,15 +449,117 @@ const UI: Record<string, Localized<string>> = {
   },
 };
 
+interface GuestCard {
+  icon: LucideIcon;
+  t: Localized<string>;
+  p: Localized<string>;
+}
+
+/** "Guests, flights and who pays" — clarifies the service split: the wedding
+    is our package, flights/hotels are booked separately (we don't sell
+    flights), and couples decide early who pays for what. Localised ×11. */
+const GUEST_CARDS: GuestCard[] = [
+  {
+    icon: Package,
+    t: {
+      fi: 'Häät ovat oma pakettinsa',
+      en: 'The wedding is its own package',
+      de: 'Die Hochzeit ist ein eigenes Paket',
+      ja: '結婚式はそれ自体がひとつのパッケージ',
+      es: 'La boda es un paquete aparte',
+      'pt-BR': 'O casamento é um pacote à parte',
+      'zh-CN': '婚礼是独立打包的服务',
+      ko: '웨딩은 하나의 독립된 패키지입니다',
+      fr: 'Le mariage est un forfait à part',
+      it: 'Il matrimonio è un pacchetto a sé',
+      nl: 'De bruiloft is een eigen pakket',
+    },
+    p: {
+      fi: 'Me suunnittelemme ja hinnoittelemme itse häät — vihkimisen, paikan, ohjelman ja toimittajat. Lennot ja hotellihuoneet varataan erikseen, yleensä jo ennen kuin hääsuunnittelu alkaa. Emme myy lentoja; kerromme, mitä varata ja milloin.',
+      en: 'We plan and price the wedding itself — ceremony, venue, programme, vendors. Flights and hotel rooms are booked separately, usually before the wedding planning even starts. We don’t sell flights; we tell you what to book and when.',
+      de: 'Wir planen und kalkulieren die Hochzeit selbst — Trauung, Location, Programm, Dienstleister. Flüge und Hotelzimmer werden separat gebucht, meist noch bevor die Hochzeitsplanung überhaupt beginnt. Wir verkaufen keine Flüge; wir sagen Ihnen, was Sie wann buchen sollten.',
+      ja: '私たちが企画し、料金を提示するのは結婚式そのもの — セレモニー、会場、プログラム、各業者の手配です。フライトとホテルは別途予約で、通常はウェディングの計画が始まる前に手配します。私たちは航空券を販売しません。何をいつ予約すべきかをお伝えします。',
+      es: 'Nosotros planificamos y presupuestamos la boda en sí: ceremonia, espacio, programa y proveedores. Los vuelos y las habitaciones de hotel se reservan aparte, normalmente antes incluso de empezar a planificar la boda. No vendemos vuelos; os decimos qué reservar y cuándo.',
+      'pt-BR': 'Nós planejamos e orçamos o casamento em si — cerimônia, local, programação e fornecedores. Voos e quartos de hotel são reservados à parte, geralmente antes mesmo de o planejamento do casamento começar. Não vendemos passagens aéreas; dizemos o que reservar e quando.',
+      'zh-CN': '我们负责策划并报价婚礼本身——仪式、场地、流程和供应商。机票和酒店客房需另行预订，通常在婚礼策划开始之前就要订好。我们不出售机票，但会告诉你该订什么、何时订。',
+      ko: '저희가 기획하고 견적을 내는 것은 결혼식 그 자체입니다 — 예식, 베뉴, 프로그램, 업체 섭외. 항공편과 호텔 객실은 별도로 예약하며, 보통 웨딩 플래닝이 시작되기 전에 이루어집니다. 저희는 항공권을 판매하지 않습니다. 무엇을 언제 예약해야 하는지 알려드립니다.',
+      fr: 'Nous planifions et chiffrons le mariage lui-même — cérémonie, lieu, programme, prestataires. Les vols et les chambres d’hôtel se réservent à part, souvent avant même le début de l’organisation du mariage. Nous ne vendons pas de vols ; nous vous disons quoi réserver et quand.',
+      it: 'Noi progettiamo e quotiamo il matrimonio in sé — cerimonia, location, programma, fornitori. Voli e camere d’albergo si prenotano a parte, di solito ancora prima che inizi l’organizzazione delle nozze. Non vendiamo voli; vi diciamo cosa prenotare e quando.',
+      nl: 'Wij plannen en begroten de bruiloft zelf — ceremonie, locatie, programma, leveranciers. Vluchten en hotelkamers boek je apart, meestal nog voordat de bruiloftsplanning begint. Wij verkopen geen vluchten; we vertellen je wat je wanneer moet boeken.',
+    },
+  },
+  {
+    icon: Users,
+    t: {
+      fi: 'Vieraat maksavat yleensä omat matkansa',
+      en: 'Guests usually pay their own way',
+      de: 'Gäste zahlen ihre Reise meist selbst',
+      ja: 'ゲストの旅費は通常自己負担',
+      es: 'Los invitados suelen pagar su propio viaje',
+      'pt-BR': 'Os convidados costumam pagar a própria viagem',
+      'zh-CN': '宾客通常自理旅费',
+      ko: '하객은 보통 각자 비용을 부담합니다',
+      fr: 'Les invités paient généralement leur voyage',
+      it: 'Gli invitati di solito pagano il proprio viaggio',
+      nl: 'Gasten betalen meestal hun eigen reis',
+    },
+    p: {
+      fi: 'Destinaatiohäissä vieraat maksavat tavallisesti omat lentonsa ja majoituksensa — sano tämä selvästi jo kutsussa. Jos haluatte tarjota osan (vaikkapa hääillallisen ja yhden aktiviteetin), viemme sen budjettiin ensimmäisestä päivästä alkaen.',
+      en: 'In destination weddings, guests normally cover their own flights and accommodation — say this clearly on the invitation. If you want to host some of it (say, the wedding-night dinner and one activity), we put it in the budget from day one.',
+      de: 'Bei Hochzeiten im Ausland zahlen die Gäste Flüge und Unterkunft in der Regel selbst — sagen Sie das klar in der Einladung. Wenn Sie einen Teil übernehmen möchten (etwa das Hochzeitsdinner und eine Aktivität), nehmen wir das von Anfang an ins Budget auf.',
+      ja: '海外ウェディングでは、フライトと宿泊は通常ゲストの自己負担です — 招待状にはっきり書きましょう。一部をおふたりが負担したい場合（例えば結婚式当日のディナーとアクティビティ1つ）は、初日から予算に組み込みます。',
+      es: 'En las bodas de destino, los invitados suelen pagar sus vuelos y su alojamiento: decidlo con claridad en la invitación. Si queréis invitar a una parte (por ejemplo, la cena nupcial y una actividad), lo incluimos en el presupuesto desde el primer día.',
+      'pt-BR': 'Em destination weddings, os convidados normalmente pagam os próprios voos e a hospedagem — deixe isso claro no convite. Se quiserem oferecer uma parte (digamos, o jantar da noite do casamento e uma atividade), colocamos isso no orçamento desde o primeiro dia.',
+      'zh-CN': '在目的地婚礼中，宾客一般自付机票和住宿——请在请柬上写清楚这一点。如果你们想承担其中一部分（比如婚礼当晚的晚宴和一项活动），我们会从第一天起就把它列入预算。',
+      ko: '데스티네이션 웨딩에서는 하객이 항공편과 숙박을 직접 부담하는 것이 일반적입니다 — 청첩장에 이를 분명히 알리세요. 일부를 두 분이 부담하고 싶다면(예: 결혼식 당일 저녁 만찬과 액티비티 하나), 처음부터 예산에 반영해 드립니다.',
+      fr: 'Dans un mariage à l’étranger, les invités prennent normalement en charge leurs vols et leur hébergement — dites-le clairement sur l’invitation. Si vous souhaitez en offrir une partie (par exemple le dîner du soir des noces et une activité), nous l’intégrons au budget dès le premier jour.',
+      it: 'Nei matrimoni all’estero gli invitati coprono di norma voli e alloggio — ditelo chiaramente già nell’invito. Se volete offrirne una parte (ad esempio la cena di nozze e un’attività), la inseriamo nel budget fin dal primo giorno.',
+      nl: 'Bij een bruiloft in het buitenland betalen gasten normaal gesproken hun eigen vluchten en verblijf — zeg dat duidelijk in de uitnodiging. Wil je een deel aanbieden (bijvoorbeeld het bruiloftsdiner en één activiteit), dan zetten we dat vanaf dag één in het budget.',
+    },
+  },
+  {
+    icon: Palette,
+    t: {
+      fi: 'Teema ja ilme, jos haluatte',
+      en: 'Theme and look, if you want',
+      de: 'Thema und Look, wenn Sie möchten',
+      ja: 'ご希望ならテーマと装飾も',
+      es: 'Tema y estética, si queréis',
+      'pt-BR': 'Tema e estilo, se vocês quiserem',
+      'zh-CN': '主题与整体风格（如你们需要）',
+      ko: '원하시면 테마와 연출까지',
+      fr: 'Thème et ambiance, si vous le souhaitez',
+      it: 'Tema e stile, se lo desiderate',
+      nl: 'Thema en stijl, als je dat wilt',
+    },
+    p: {
+      fi: 'Halutessanne suunnittelemme kanssanne myös teeman — värit, kukat, kattauksen ja ohjelman kaaren — niin että koko viikonloppu tuntuu yhdeltä tarinalta eikä varauslistalta.',
+      en: 'If you want, we also design the theme with you — colours, flowers, table setting, programme arc — so the whole weekend feels like one story instead of a list of bookings.',
+      de: 'Auf Wunsch gestalten wir mit Ihnen auch das Thema — Farben, Blumen, Tischdekoration, den Bogen des Programms — damit sich das ganze Wochenende wie eine Geschichte anfühlt und nicht wie eine Buchungsliste.',
+      ja: 'ご希望であれば、テーマづくりもご一緒します — 色、花、テーブルコーディネート、プログラムの流れまで。週末全体が予約の羅列ではなく、ひとつの物語のように感じられます。',
+      es: 'Si queréis, también diseñamos el tema con vosotros: colores, flores, montaje de mesa, hilo del programa; para que todo el fin de semana se sienta como una sola historia y no como una lista de reservas.',
+      'pt-BR': 'Se quiserem, também criamos o tema com vocês — cores, flores, decoração da mesa, o arco da programação — para que o fim de semana inteiro pareça uma história só, e não uma lista de reservas.',
+      'zh-CN': '如果你们愿意，我们还可以一起设计婚礼主题——配色、花艺、餐桌布置、流程节奏——让整个周末像一个完整的故事，而不是一串预订清单。',
+      ko: '원하신다면 테마 디자인도 함께합니다 — 색감, 꽃, 테이블 세팅, 프로그램의 흐름까지 — 주말 전체가 예약 목록이 아니라 하나의 이야기처럼 느껴지도록.',
+      fr: 'Si vous le souhaitez, nous concevons aussi le thème avec vous — couleurs, fleurs, art de la table, fil du programme — pour que tout le week-end ressemble à une seule histoire plutôt qu’à une liste de réservations.',
+      it: 'Se volete, disegniamo con voi anche il tema — colori, fiori, mise en place, arco del programma — così l’intero weekend sembra un’unica storia e non un elenco di prenotazioni.',
+      nl: 'Als je wilt, ontwerpen we samen ook het thema — kleuren, bloemen, tafelstyling, de opbouw van het programma — zodat het hele weekend als één verhaal voelt in plaats van een lijst boekingen.',
+    },
+  },
+];
+
 interface SeasonCard {
   colorClass: string;
   period: Localized<string>;
   body: Localized<string>;
 }
 
+/* colorClass is a bg-* class for the small season indicator dot. The old
+   text-aurora-* heading colours (gold/caramel on ivory cards) failed WCAG
+   contrast (2.2–2.7:1) — accent colour lives in the dot now, heading is ink. */
 const SEASONS: SeasonCard[] = [
   {
-    colorClass: 'text-aurora-purple',
+    colorClass: 'bg-aurora-purple',
     period: {
       fi: 'Joulukuu — maaliskuu',
       en: 'December – March',
@@ -446,7 +588,7 @@ const SEASONS: SeasonCard[] = [
     },
   },
   {
-    colorClass: 'text-aurora-green',
+    colorClass: 'bg-aurora-green',
     period: {
       fi: 'Toukokuu — heinäkuu',
       en: 'May – July',
@@ -475,7 +617,7 @@ const SEASONS: SeasonCard[] = [
     },
   },
   {
-    colorClass: 'text-aurora-pink',
+    colorClass: 'bg-aurora-pink',
     period: {
       fi: 'Syyskuu — lokakuu',
       en: 'September – October',
@@ -752,7 +894,8 @@ export default function PracticalGuide() {
           <div className="flex-1 text-center sm:text-left">
             <p className="text-xs uppercase tracking-[0.25em] text-aurora-pink font-semibold mb-1">{pl(UI.downloadEyebrow)}</p>
             <p className="text-white font-semibold text-lg mb-1">{pl(UI.downloadTitle)}</p>
-            <p className="text-sm text-gray-400">{pl(UI.downloadDesc)}</p>
+            {/* gray-300 (stone #5A4F48) not gray-400 (#8B7E73, 3.7:1) on ivory — AA */}
+            <p className="text-sm text-gray-300">{pl(UI.downloadDesc)}</p>
           </div>
           <L
             to="/checklist/dvv-foreign-couples"
@@ -763,7 +906,7 @@ export default function PracticalGuide() {
         </div>
       </Section>
 
-      <Section title={pl(UI.stepsTitle)}>
+      <Section title={pl(UI.stepsTitle)} subtitle={pl(UI.stepsIntro)}>
         <div className="space-y-4 max-w-4xl mx-auto">
           {STEPS.map((s) => (
             <div key={s.n} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 flex gap-5">
@@ -782,11 +925,38 @@ export default function PracticalGuide() {
         </div>
       </Section>
 
+      {/* Guests, flights and who pays — the wedding is our package; flights
+          and hotels are booked separately (we don't sell flights). */}
+      <Section
+        className="bg-gradient-to-br from-aurora-purple/10 via-rose/10 to-aurora-pink/10"
+        title={pl(UI.guestsTitle)}
+        subtitle={pl(UI.guestsIntro)}
+      >
+        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {GUEST_CARDS.map((c, i) => {
+            const Icon = c.icon;
+            return (
+              <div key={i} className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
+                <div className="w-11 h-11 rounded-full bg-rose/20 border border-rose/40 text-aurora-pink flex items-center justify-center mb-4" aria-hidden="true">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3 className="font-heading text-xl text-white mb-2 tracking-wide">{pl(c.t)}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">{pl(c.p)}</p>
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+
       <Section className="bg-night-light/20" title={pl(UI.seasonsTitle)}>
         <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {SEASONS.map((s) => (
             <div key={s.colorClass} className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
-              <p className={`${s.colorClass} font-heading text-xl mb-2`}>{pl(s.period)}</p>
+              {/* Heading in dark ink for contrast; season accent lives in the dot. */}
+              <p className="font-heading text-xl mb-2 text-night flex items-center gap-2.5">
+                <span aria-hidden="true" className={`inline-block w-2.5 h-2.5 rounded-full flex-shrink-0 ${s.colorClass}`} />
+                {pl(s.period)}
+              </p>
               <p className="text-sm text-gray-300 leading-relaxed">{pl(s.body)}</p>
             </div>
           ))}
@@ -798,7 +968,7 @@ export default function PracticalGuide() {
           {AIRPORTS.map((ap) => (
             <div key={ap.code} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 flex flex-col">
               <p className="font-heading text-xl text-white mb-2">{ap.name} ({ap.code})</p>
-              <p className="text-sm text-gray-400 leading-relaxed mb-4 flex-1">{pl(ap.body)}</p>
+              <p className="text-sm text-gray-300 leading-relaxed mb-4 flex-1">{pl(ap.body)}</p>
               <div className="flex flex-col gap-2">
                 <a href={tripToLapland('LHR', ap.code)} target="_blank" rel={AFFILIATE_REL} className="text-xs text-aurora-pink hover:underline">
                   {pl(UI.flightsFromLondon)} →

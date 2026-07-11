@@ -65,7 +65,7 @@ const t_zhCN = {
   },
   locations: {
     indexTitle: '拉普兰婚礼地区',
-    indexIntro: '六个知名地区,各具特色。点击地区查看其场地、季节和服务。',
+    indexIntro: '七个知名地区,各具特色。点击地区查看其场地、季节和服务。',
   },
   types: {
     indexTitle: '拉普兰婚礼类型',

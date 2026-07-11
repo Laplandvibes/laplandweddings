@@ -101,6 +101,7 @@ export default function LocationPage() {
         </div>
       </Section>
 
+      {venues.length > 0 && (
       <Section title={pickLocalized(P.venuesInRegion, lang)}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {venues.map((v) => (
@@ -121,6 +122,7 @@ export default function LocationPage() {
           ))}
         </div>
       </Section>
+      )}
 
       <Section className="bg-night-light/30" title={tr.contact.formTitle} subtitle={tr.contact.formSub}>
         <LeadForm presetLocation={loc.slug} />

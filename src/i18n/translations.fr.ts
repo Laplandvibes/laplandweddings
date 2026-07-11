@@ -67,7 +67,7 @@ const t_fr = {
   },
   locations: {
     indexTitle: 'Régions de Laponie pour les mariages',
-    indexIntro: 'Six régions bien connues, chacune avec son caractère. Cliquez sur une région pour voir ses lieux, saisons et services.',
+    indexIntro: 'Sept régions bien connues, chacune avec son caractère. Cliquez sur une région pour voir ses lieux, saisons et services.',
   },
   types: {
     indexTitle: 'Types de mariage en Laponie',

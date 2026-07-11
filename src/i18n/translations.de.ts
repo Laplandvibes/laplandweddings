@@ -67,7 +67,7 @@ const t_de = {
   },
   locations: {
     indexTitle: 'Lappland-Regionen für Hochzeiten',
-    indexIntro: 'Sechs bekannte Regionen, jede mit eigenem Charakter. Klicken Sie eine Region an, um Hochzeitslocations, Saisons und Dienstleistungen zu sehen.',
+    indexIntro: 'Sieben bekannte Regionen, jede mit eigenem Charakter. Klicken Sie eine Region an, um Hochzeitslocations, Saisons und Dienstleistungen zu sehen.',
   },
   types: {
     indexTitle: 'Hochzeitsarten in Lappland',

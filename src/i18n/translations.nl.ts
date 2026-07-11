@@ -67,7 +67,7 @@ const t_nl = {
   },
   locations: {
     indexTitle: 'Lapland-regio’s voor bruiloften',
-    indexIntro: 'Zes bekende regio’s, elk met een eigen karakter. Klik op een regio voor locaties, seizoenen en diensten.',
+    indexIntro: 'Zeven bekende regio’s, elk met een eigen karakter. Klik op een regio voor locaties, seizoenen en diensten.',
   },
   types: {
     indexTitle: 'Bruiloftstypes in Lapland',
