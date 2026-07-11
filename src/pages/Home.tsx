@@ -10,6 +10,8 @@ import { locations } from '../data/locations';
 import { weddingTypes } from '../data/weddingTypes';
 import { venues } from '../data/venues';
 import L from '../components/L';
+import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import { AD_SLOTS } from '../data/adSlots';
 
 // Per-locale string picker — every visible string lists fi/en/de/ja/ko/fr/it/nl.
 // es / pt-BR / zh-CN fall back to en until we add native copy.
@@ -136,6 +138,9 @@ export default function Home() {
         </div>
       </PageHero>
 
+      {/* ── PÄÄKUMPPANI-banneri heti heron alle (myyty = banneri, vapaa = house-ad) ── */}
+      <MainPartnerBanner config={AD_SLOTS} locale={lang} />
+
       {/* Why Lapland */}
       <Section title={tr.home.whyTitle}>
         <div className="grid sm:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden max-w-5xl mx-auto">
@@ -237,6 +242,9 @@ export default function Home() {
         </div>
         <p className="text-center text-gray-400 mt-10 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">{tr.home.whyP}</p>
       </Section>
+
+      {/* ── LV Media: kakkospääkumppani + 6 premium-paikkaa (tyhjät = house-adit) ── */}
+      <HomeAdSlots config={AD_SLOTS} locale={lang} />
 
       {/* Wedding Types */}
       <Section
