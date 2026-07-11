@@ -1,4 +1,5 @@
 import { useRef, useState, type ChangeEvent, type DragEvent, type FormEvent } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import { weddingTypes } from '../data/weddingTypes';
 import { locations } from '../data/locations';
@@ -190,6 +191,12 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
   const t1 = 'block text-sm font-medium text-gray-200 mb-1.5';
   // 16px input font prevents iOS auto-zoom; min-h-12 = 48px target for tap area
   const t2 = 'w-full min-h-[48px] rounded-lg bg-night-light border border-white/10 focus:border-rose focus:ring-1 focus:ring-rose px-3.5 py-2.5 text-base text-white placeholder-gray-500 outline-none transition-colors';
+  // Native <select>s: hide the OS arrow (renders poorly on dark fields) and
+  // draw our own chevron inside the field instead.
+  const t2select = `${t2} appearance-none pr-10`;
+  const selectChevron = (
+    <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500" aria-hidden="true" />
+  );
 
   return (
     <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-night-light/60 border border-white/10 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5">
@@ -251,33 +258,42 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         </div>
         <div>
           <label htmlFor="flexibility" className={t1}>{tr.form.flexibility}</label>
-          <select id="flexibility" name="flexibility" className={t2} defaultValue="flexMonth">
-            <option value="flexFixed">{tr.form.flexFixed}</option>
-            <option value="flexWeek">{tr.form.flexWeek}</option>
-            <option value="flexMonth">{tr.form.flexMonth}</option>
-            <option value="flexAny">{tr.form.flexAny}</option>
-          </select>
+          <div className="relative">
+            <select id="flexibility" name="flexibility" className={t2select} defaultValue="flexMonth">
+              <option value="flexFixed">{tr.form.flexFixed}</option>
+              <option value="flexWeek">{tr.form.flexWeek}</option>
+              <option value="flexMonth">{tr.form.flexMonth}</option>
+              <option value="flexAny">{tr.form.flexAny}</option>
+            </select>
+            {selectChevron}
+          </div>
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="weddingType" className={t1}>{tr.form.weddingType}</label>
-          <select id="weddingType" name="weddingType" className={t2} defaultValue={presetWeddingType || ''}>
-            <option value="">{tr.form.noPreference}</option>
-            {weddingTypes.map((w) => (
-              <option key={w.slug} value={w.slug}>{w.name[dataLang]}</option>
-            ))}
-          </select>
+          <div className="relative">
+            <select id="weddingType" name="weddingType" className={t2select} defaultValue={presetWeddingType || ''}>
+              <option value="">{tr.form.noPreference}</option>
+              {weddingTypes.map((w) => (
+                <option key={w.slug} value={w.slug}>{w.name[dataLang]}</option>
+              ))}
+            </select>
+            {selectChevron}
+          </div>
         </div>
         <div>
           <label htmlFor="location" className={t1}>{tr.form.location}</label>
-          <select id="location" name="location" className={t2} defaultValue={presetLocation || ''}>
-            <option value="">{tr.form.noPreference}</option>
-            {locations.map((l) => (
-              <option key={l.slug} value={l.slug}>{l.name[dataLang]}</option>
-            ))}
-          </select>
+          <div className="relative">
+            <select id="location" name="location" className={t2select} defaultValue={presetLocation || ''}>
+              <option value="">{tr.form.noPreference}</option>
+              {locations.map((l) => (
+                <option key={l.slug} value={l.slug}>{l.name[dataLang]}</option>
+              ))}
+            </select>
+            {selectChevron}
+          </div>
         </div>
       </div>
 
@@ -286,35 +302,44 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="ceremonyType" className={t1}>{tr.form.ceremonyType}</label>
-          <select id="ceremonyType" name="ceremonyType" className={t2} defaultValue="">
-            <option value="">{tr.form.noPreference}</option>
-            <option value="legal">{tr.form.ceremonyLegal}</option>
-            <option value="symbolic">{tr.form.ceremonySymbolic}</option>
-            <option value="unsure">{tr.form.ceremonyUnsure}</option>
-          </select>
+          <div className="relative">
+            <select id="ceremonyType" name="ceremonyType" className={t2select} defaultValue="">
+              <option value="">{tr.form.noPreference}</option>
+              <option value="legal">{tr.form.ceremonyLegal}</option>
+              <option value="symbolic">{tr.form.ceremonySymbolic}</option>
+              <option value="unsure">{tr.form.ceremonyUnsure}</option>
+            </select>
+            {selectChevron}
+          </div>
           <p className="text-xs text-gray-500 mt-1">{tr.form.ceremonyHelp}</p>
         </div>
         <div>
           <label htmlFor="accommodation" className={t1}>{tr.form.accommodation}</label>
-          <select id="accommodation" name="accommodation" className={t2} defaultValue="">
-            <option value="">{tr.form.noPreference}</option>
-            <option value="include">{tr.form.accInclude}</option>
-            <option value="separate">{tr.form.accSeparate}</option>
-            <option value="unsure">{tr.form.accUnsure}</option>
-          </select>
+          <div className="relative">
+            <select id="accommodation" name="accommodation" className={t2select} defaultValue="">
+              <option value="">{tr.form.noPreference}</option>
+              <option value="include">{tr.form.accInclude}</option>
+              <option value="separate">{tr.form.accSeparate}</option>
+              <option value="unsure">{tr.form.accUnsure}</option>
+            </select>
+            {selectChevron}
+          </div>
           <p className="text-xs text-gray-500 mt-1">{tr.form.accommodationHelp}</p>
         </div>
       </div>
 
       <div>
         <label htmlFor="budget" className={t1}>{tr.form.budget}</label>
-        <select id="budget" name="budget" className={t2} defaultValue="budget2">
-          <option value="budget1">{tr.form.budget1}</option>
-          <option value="budget2">{tr.form.budget2}</option>
-          <option value="budget3">{tr.form.budget3}</option>
-          <option value="budget4">{tr.form.budget4}</option>
-          <option value="budget5">{tr.form.budget5}</option>
-        </select>
+        <div className="relative">
+          <select id="budget" name="budget" className={t2select} defaultValue="budget2">
+            <option value="budget1">{tr.form.budget1}</option>
+            <option value="budget2">{tr.form.budget2}</option>
+            <option value="budget3">{tr.form.budget3}</option>
+            <option value="budget4">{tr.form.budget4}</option>
+            <option value="budget5">{tr.form.budget5}</option>
+          </select>
+          {selectChevron}
+        </div>
       </div>
 
       <div>

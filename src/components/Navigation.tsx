@@ -148,19 +148,22 @@ export default function Navigation() {
           </div>
 
           {/* Mobile dropdown */}
-          <select
-            value={lang}
-            onChange={(e) => setLangAndStore(e.target.value as Lang)}
-            aria-label={aria.language}
-            className="bg-slate-900/85 backdrop-blur-sm lg:hidden bg-transparent border border-white/40 rounded px-2 py-1 text-xs font-semibold uppercase text-white"
-            style={{ background: 'transparent' }}
-          >
-            {ALL_LANGS.map((l) => (
-              <option key={l.code} value={l.code} style={{ background: '#1F1612', color: '#fff' }}>
-                {l.label}
-              </option>
-            ))}
-          </select>
+          <div className="lg:hidden relative inline-block">
+            <select
+              value={lang}
+              onChange={(e) => setLangAndStore(e.target.value as Lang)}
+              aria-label={aria.language}
+              className="appearance-none bg-slate-900/85 backdrop-blur-sm bg-transparent border border-white/40 rounded pl-2 pr-7 py-1 text-xs font-semibold uppercase text-white"
+              style={{ background: 'transparent' }}
+            >
+              {ALL_LANGS.map((l) => (
+                <option key={l.code} value={l.code} style={{ background: '#1F1612', color: '#fff' }}>
+                  {l.label}
+                </option>
+              ))}
+            </select>
+            <ChevronDown aria-hidden="true" className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white/80" />
+          </div>
 
           <button
             className="lg:hidden p-2.5 -mr-2 text-white/80 hover:text-white"

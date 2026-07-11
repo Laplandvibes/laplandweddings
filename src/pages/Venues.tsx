@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import L from '../components/L';
 
 import PageHero from '../components/PageHero';
@@ -110,20 +111,29 @@ export default function Venues() {
       />
       <Section>
         <div className="bg-night-light/60 border border-white/5 rounded-2xl p-5 mb-8 grid sm:grid-cols-3 gap-3">
-          <select aria-label="Filter by location" value={loc} onChange={(e) => setLoc(e.target.value)} className="rounded-lg bg-night-light border border-white/10 focus:border-rose px-3 py-2.5 text-white outline-none">
-            <option value="">{tr.venues.allLocations}</option>
-            {locations.map((l) => <option key={l.slug} value={l.slug}>{l.name[dataLang]}</option>)}
-          </select>
-          <select aria-label="Filter by type" value={type} onChange={(e) => setType(e.target.value)} className="rounded-lg bg-night-light border border-white/10 focus:border-rose px-3 py-2.5 text-white outline-none">
-            <option value="">{tr.venues.allTypes}</option>
-            {weddingTypes.map((w) => <option key={w.slug} value={w.slug}>{w.name[dataLang]}</option>)}
-          </select>
-          <select aria-label="Filter by price" value={tier} onChange={(e) => setTier(e.target.value as PriceTier | '')} className="rounded-lg bg-night-light border border-white/10 focus:border-rose px-3 py-2.5 text-white outline-none">
-            <option value="">{tr.venues.allPrices}</option>
-            <option value="€€">€€ {pickLocalized(P.affordable, lang)}</option>
-            <option value="€€€">€€€ {pickLocalized(P.midRange, lang)}</option>
-            <option value="€€€€">€€€€ {pickLocalized(P.premium, lang)}</option>
-          </select>
+          <div className="relative">
+            <select aria-label="Filter by location" value={loc} onChange={(e) => setLoc(e.target.value)} className="w-full rounded-lg bg-night-light border border-white/10 focus:border-rose px-3 py-2.5 pr-9 text-white outline-none appearance-none">
+              <option value="">{tr.venues.allLocations}</option>
+              {locations.map((l) => <option key={l.slug} value={l.slug}>{l.name[dataLang]}</option>)}
+            </select>
+            <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/60" aria-hidden="true" />
+          </div>
+          <div className="relative">
+            <select aria-label="Filter by type" value={type} onChange={(e) => setType(e.target.value)} className="w-full rounded-lg bg-night-light border border-white/10 focus:border-rose px-3 py-2.5 pr-9 text-white outline-none appearance-none">
+              <option value="">{tr.venues.allTypes}</option>
+              {weddingTypes.map((w) => <option key={w.slug} value={w.slug}>{w.name[dataLang]}</option>)}
+            </select>
+            <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/60" aria-hidden="true" />
+          </div>
+          <div className="relative">
+            <select aria-label="Filter by price" value={tier} onChange={(e) => setTier(e.target.value as PriceTier | '')} className="w-full rounded-lg bg-night-light border border-white/10 focus:border-rose px-3 py-2.5 pr-9 text-white outline-none appearance-none">
+              <option value="">{tr.venues.allPrices}</option>
+              <option value="€€">€€ {pickLocalized(P.affordable, lang)}</option>
+              <option value="€€€">€€€ {pickLocalized(P.midRange, lang)}</option>
+              <option value="€€€€">€€€€ {pickLocalized(P.premium, lang)}</option>
+            </select>
+            <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/60" aria-hidden="true" />
+          </div>
         </div>
 
         {filtered.length === 0 ? (
