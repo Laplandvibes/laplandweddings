@@ -37,11 +37,23 @@ const TRIP_LOCALE: Record<Lang, string> = {
   ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL',
 };
 
+/**
+ * Anchor any hotels search to Finnish Lapland. A bare "Lapland"/venue name
+ * makes Hotels.com geocode to *Lapland, Indiana, USA* (or a US town) — a real
+ * revenue/trust bug (Vesa 2026-07-08). Force ", Finland" onto every hotels
+ * query that doesn't already name the country. Callers cannot regress.
+ */
+function anchorFinland(query: string): string {
+  return /finland|suomi/i.test(query)
+    ? query
+    : `${query.replace(/[\s,]+$/, '')}, Finland`;
+}
+
 /** Hotels.com via the LV Worker (CJ tracking handled server-side). */
 export function hotelsLink(query: string, sid = 'venue', lang: Lang = 'en'): string {
   const u = new URL('https://go.laplandvibes.com/go/hotels');
   u.searchParams.set('sid', sid);
-  u.searchParams.set('ss', query);
+  u.searchParams.set('ss', anchorFinland(query));
   u.searchParams.set('locale', HOTELS_LOCALE[lang]);
   return u.toString();
 }
@@ -50,7 +62,7 @@ export function hotelsLink(query: string, sid = 'venue', lang: Lang = 'en'): str
 export function hotelsSeasonalLink(query: string, sid = 'seasonal', lang: Lang = 'en'): string {
   const u = new URL('https://go.laplandvibes.com/go/hotels-seasonal');
   u.searchParams.set('sid', sid);
-  u.searchParams.set('ss', query);
+  u.searchParams.set('ss', anchorFinland(query));
   u.searchParams.set('locale', HOTELS_LOCALE[lang]);
   return u.toString();
 }

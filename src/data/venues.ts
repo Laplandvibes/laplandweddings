@@ -82,7 +82,6 @@ export const venues: Venue[] = [
       nl: ['Glass Teepee — glazen kapel in de wildernis', 'Snow & Ice Chapel — elke winter opnieuw gebouwd', 'Tieva Log Chapel — traditionele blokhutkapel in het bos', 'Celebration House — feestzaal voor 250 gasten'],
     },
     website: 'https://www.kakslauttanen.fi/wedding-honeymoon',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=kakslauttanen+arctic+resort',
     image: '/images/venues/kakslauttanen.jpg',
     imageAlt: {
       fi: 'Kakslauttasen lasi-iglu lumipeitteisellä metsäaukealla',
@@ -160,7 +159,6 @@ export const venues: Venue[] = [
       nl: ['IJskapel (winter)', 'Glass Igloo Restaurant', 'Saunawereld'],
     },
     website: 'https://arcticsnowhotel.fi/en/events/lapland-wedding/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=arctic+snowhotel',
     image: '/images/venues/arctic-snowhotel.jpg',
     imageAlt: {
       fi: 'Arctic SnowHotelin jääkappeli',
@@ -237,7 +235,6 @@ export const venues: Venue[] = [
       nl: ['IJskapel (dec-apr)', 'Houten kapel het hele jaar', 'Snow Suites voor overnachting'],
     },
     website: 'https://www.laplandhotels.com/en/hotels-and-destinations/yllas-levi/snowvillage',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=lapland+hotels+snowvillage',
     image: '/images/venues/snow-village-lainio.webp',
     imageAlt: {
       fi: 'Lainion lumikylän jääkappeli',
@@ -466,7 +463,6 @@ export const venues: Venue[] = [
       nl: ['Huwelijksreis-iglo', 'Northern Lights House (6 gasten)'],
     },
     website: 'https://leviniglut.fi/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=levin+iglut',
     image: '/images/venues/levin-iglut.jpg',
     imageAlt: {
       fi: 'Levin Iglut tunturin huipulla revontulien alla',
@@ -543,7 +539,6 @@ export const venues: Venue[] = [
       nl: ['Restaurant Aitta', 'Terras van de Kammi-iglo', 'IJs van het Apukka-meer (winter)'],
     },
     website: 'https://apukkaresort.fi/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=apukka+resort',
     image: '/images/venues/apukka-resort.jpeg',
     imageAlt: {
       fi: 'Apukka Resortin lasi-iglu järvenrannalla',
@@ -620,7 +615,6 @@ export const venues: Venue[] = [
       nl: ['Restaurant Rakas', 'TreeHouse-cabins'],
     },
     website: 'https://arctictreehousehotel.com/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=arctic+treehouse+hotel',
     image: '/images/venues/arctic-treehouse.jpg',
     imageAlt: {
       fi: 'Arctic TreeHouse -hotellin puumajat lumessa',
@@ -926,7 +920,6 @@ export const venues: Venue[] = [
       nl: ['Hoofdrestaurant', 'Aurora Cabins'],
     },
     website: 'https://saariselka.northernlightsvillage.com/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=northern+lights+village+saariselka',
     image: '/images/venues/northern-lights-village-saariselka.webp',
     imageAlt: {
       fi: 'Northern Lights Village Saariselkä',
@@ -1003,7 +996,6 @@ export const venues: Venue[] = [
       nl: ['Hoofdrestaurant', 'Aurora Cabins'],
     },
     website: 'https://levi.northernlightsvillage.com/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=northern+lights+village+saariselka',
     image: '/images/venues/northern-lights-village-levi.webp',
     imageAlt: {
       fi: 'Northern Lights Village Levi',
@@ -1080,7 +1072,6 @@ export const venues: Venue[] = [
       nl: ['Feestzaal Hullu Poro', 'Saaga-zaal (60 gasten)'],
     },
     website: 'https://www.hulluporo.fi/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=hotel+hullu+poro',
     image: '/images/venues/hotelli-hullu-poro.jpg',
     imageAlt: {
       fi: 'Hotelli Hullu Poro Levillä',
@@ -1157,7 +1148,6 @@ export const venues: Venue[] = [
       nl: ['Panorama-feestzaal', 'Hotelsuites'],
     },
     website: 'https://www.laplandhotels.com/en/hotels-and-destinations/yllas-levi/levi-panorama',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=lapland+hotels+levi+panorama',
     image: '/images/venues/levi-panorama.webp',
     imageAlt: {
       fi: 'Hotel Levi Panorama tunturin huipulla',
@@ -1234,7 +1224,6 @@ export const venues: Venue[] = [
       nl: ['Hoofdrestaurant', 'Hottubterras', 'Hotelsauna'],
     },
     website: 'https://www.laplandhotels.com/en/hotels-and-destinations/yllas/lapland-hotels-saaga',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=lapland+hotels+saaga',
     image: '/images/venues/lapland-hotels-saaga.webp',
     imageAlt: {
       fi: 'Lapland Hotels Saaga Ylläsjärvellä',
@@ -1311,7 +1300,6 @@ export const venues: Venue[] = [
       nl: ['Glasiglo’s', 'Fell-oase'],
     },
     website: 'https://tundrea.com/en',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=tundrea',
     image: '/images/venues/tundrea-kilpisjarvi.jpg',
     imageAlt: {
       fi: 'Tundrea Kilpisjärvi tunturien ympäröimänä',
@@ -1464,7 +1452,6 @@ export const venues: Venue[] = [
       nl: ['Amethistmijn', 'Hotelrestaurant Lumen'],
     },
     website: 'https://www.laplandhotels.com/en/hotels-and-destinations/pyha-luosto/lapland-hotels-pyha',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=lapland+hotels+pyha',
     image: '/images/venues/lapland-hotels-pyha.webp',
     imageAlt: {
       fi: 'Lapland Hotels Pyhän amethystikaivos',
@@ -1541,7 +1528,6 @@ export const venues: Venue[] = [
       nl: ['Feestruimte van het hotel', 'Houten lodge in het dorp'],
     },
     website: 'https://santashotels.fi/',
-    bookingUrl: 'https://www.hotels.com/Hotel-Search?destination=santas+hotel+santamus',
     image: '/images/venues/santas-hotel-santamus.webp',
     imageAlt: {
       fi: "Santa's Hotel Santamus joulupukin pajakylässä",
