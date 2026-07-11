@@ -22,6 +22,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
+        // "b2" cache-generation segment: 2026-07-11 a truncated LangContext chunk got
+        // stuck in visitor browser caches under max-age=31536000,immutable → permanent
+        // white page. A new URL path is the only way past an immutable-cached asset.
+        entryFileNames: 'assets/[name]-b2-[hash].js',
+        chunkFileNames: 'assets/[name]-b2-[hash].js',
+        assetFileNames: 'assets/[name]-b2-[hash][extname]',
         manualChunks(id: string) {
           if (id.includes('node_modules')) {
             if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|scheduler)[\\/]/.test(id)) return 'react-vendor'
