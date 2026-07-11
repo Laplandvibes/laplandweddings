@@ -884,7 +884,7 @@ export default function PracticalGuide() {
         eyebrow={pl(UI.eyebrow)}
         title={tr.practical.title}
         subtitle={tr.practical.subtitle}
-        image="/images/venues/wilderness-hotel-inari.webp"
+        image="/images/heroes/practical-guide-hero.webp"
         imageAlt={pl(UI.heroImageAlt)}
       />
 

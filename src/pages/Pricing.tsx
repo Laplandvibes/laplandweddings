@@ -580,7 +580,7 @@ export default function Pricing() {
         eyebrow={p('heroEyebrow')}
         title={p('heroTitle')}
         subtitle={p('heroSubtitle')}
-        image="/images/venues/lapland-hotels-saaga.webp"
+        image="/images/heroes/pricing-hero.webp"
         imageAlt={p('heroImageAlt')}
       />
 
