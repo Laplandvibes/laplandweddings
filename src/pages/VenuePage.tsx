@@ -32,12 +32,12 @@ const V: Record<VKey, Localized<string>> = {
     nl: 'Vraag een offerte aan voor deze locatie',
   },
   checkPrices: {
-    en: 'Check prices & book', fi: 'Tarkista hinnat & varaa',
+    en: 'Check rates & book', fi: 'Tarkista hinnat & varaa',
     de: 'Preise prüfen & buchen', ja: '料金を確認して予約',
-    es: 'Consulta precios y reserva', 'pt-BR': 'Verifique preços e reserve',
+    es: 'Ver precios y reservar', 'pt-BR': 'Ver preços e reservar',
     'zh-CN': '查看价格并预订', ko: '가격 확인 & 예약',
-    fr: 'Vérifier les prix et réserver', it: 'Controlla prezzi e prenota',
-    nl: 'Prijzen bekijken & boeken',
+    fr: 'Voir prix & réserver', it: 'Vedi prezzi e prenota',
+    nl: 'Bekijk prijzen & boek',
   },
   affordable: {
     en: 'Affordable', fi: 'Edullinen', de: 'Günstig', ja: 'お手頃',
@@ -248,17 +248,26 @@ export default function VenuePage() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 pb-10 sm:pb-16 pt-24 sm:pt-32">
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+              {v.region[dataLang].split('·').map((part) => (
+                <span
+                  key={part}
+                  className="whitespace-nowrap text-[11px] sm:text-xs uppercase tracking-[0.3em] font-semibold px-3 py-1.5 rounded-full"
+                  style={{ background: 'rgba(201,70,106,0.85)', color: '#FFFFFF' }}
+                >
+                  {part.trim()}
+                </span>
+              ))}
               <span
-                className="text-[11px] sm:text-xs uppercase tracking-[0.3em] font-semibold px-3 py-1.5 rounded-full"
-                style={{ background: 'rgba(201,70,106,0.85)', color: '#FFFFFF' }}
-              >
-                {v.region[dataLang]}
-              </span>
-              <span
-                className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold px-3 py-1.5 rounded-full"
+                className="whitespace-nowrap text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold px-3 py-1.5 rounded-full"
                 style={{ background: 'rgba(0,0,0,0.55)', color: '#FFFFFF', backdropFilter: 'blur(4px)' }}
               >
-                {v.capacity.min}–{v.capacity.max} {guests} · {v.priceTier}
+                {v.capacity.min}–{v.capacity.max} {guests}
+              </span>
+              <span
+                className="whitespace-nowrap text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold px-3 py-1.5 rounded-full"
+                style={{ background: 'rgba(0,0,0,0.55)', color: '#FFFFFF', backdropFilter: 'blur(4px)' }}
+              >
+                {v.priceTier}
               </span>
             </div>
             <h1
@@ -288,7 +297,7 @@ export default function VenuePage() {
                 className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full transition-colors"
                 style={{ color: '#FFFFFF', background: 'rgba(255,255,255,0.10)', border: '2px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)' }}
               >
-                {vt('checkPrices')} (Hotels.com) →
+                {vt('checkPrices')} →
               </a>
             </div>
           </div>
