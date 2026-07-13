@@ -38,6 +38,7 @@ const LOCALES = [
   { prefix: '/fr', hreflang: 'fr' },
   { prefix: '/it', hreflang: 'it' },
   { prefix: '/nl', hreflang: 'nl' },
+  { prefix: '/sv', hreflang: 'sv' },
 ];
 
 const priorityFor = (p) => {

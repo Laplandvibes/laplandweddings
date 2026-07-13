@@ -15,6 +15,7 @@ const labels: Record<PriceTier, Localized<string>> = {
     fr: 'Abordable',
     it: 'Economico',
     nl: 'Betaalbaar',
+    sv: 'Prisvärt',
   },
   '€€€': {
     en: 'Mid-range',
@@ -28,6 +29,7 @@ const labels: Record<PriceTier, Localized<string>> = {
     fr: 'Milieu de gamme',
     it: 'Fascia media',
     nl: 'Middensegment',
+    sv: 'Mellanklass',
   },
   '€€€€': {
     en: 'Premium',
@@ -41,6 +43,7 @@ const labels: Record<PriceTier, Localized<string>> = {
     fr: 'Premium',
     it: 'Premium',
     nl: 'Premium',
+    sv: 'Premium',
   },
 };
 

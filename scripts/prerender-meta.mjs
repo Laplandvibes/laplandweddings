@@ -45,6 +45,7 @@ const LOCALES = [
   { lang: 'fr', prefix: '/fr', og: 'fr_FR', hreflang: 'fr' },
   { lang: 'it', prefix: '/it', og: 'it_IT', hreflang: 'it' },
   { lang: 'nl', prefix: '/nl', og: 'nl_NL', hreflang: 'nl' },
+  { lang: 'sv', prefix: '/sv', og: 'sv_SE', hreflang: 'sv' },
 ];
 
 // Top-level routes — { path: { <lang>: { title, description }, image } }
@@ -72,6 +73,8 @@ const top = {
           description: 'Il sito più completo per pianificare il Vostro matrimonio in Lapponia. Oltre 20 location, pratiche DVV, prezzi reali e guide pratiche.' },
     nl: { title: 'Trouwen in Lapland 2026 — locaties en huwelijkspapieren',
           description: 'De meest complete website voor het plannen van een bruiloft in Lapland. Meer dan 20 locaties, DVV-papierwerk, echte prijzen en praktische gidsen.' },
+    sv: { title: 'Bröllop i Lappland 2026 — vigselplatser och äktenskapspapper',
+          description: 'Lapplands mest kompletta sajt för bröllopsplanering. Över 20 vigselplatser, DVV-papper, verkliga priser och praktiska guider för ditt bröllop i Arktis.' },
     image: '/images/heroes/home-cover.jpg',
   },
   '/locations': {
@@ -97,6 +100,8 @@ const top = {
           description: 'Sei regioni per matrimoni in Lapponia più Oulu, l’opzione urbana: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Confronti stagioni, voli e location.' },
     nl: { title: 'Bruiloftsregio’s in Lapland | LaplandWeddings',
           description: 'Zes bruiloftsregio’s in Lapland plus stadsoptie Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Vergelijk seizoenen, vluchten en locaties.' },
+    sv: { title: 'Bröllopsregioner i Lappland | LaplandWeddings',
+          description: 'Sex bröllopsregioner i Lappland plus stadsalternativet Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Jämför säsonger, flyg och vigselplatser.' },
     image: '/images/venues/apukka-resort.jpeg',
   },
   '/wedding-types': {
@@ -122,6 +127,8 @@ const top = {
           description: 'Sei tipi di matrimonio in Lapponia: aurora boreale, cappella di neve, igloo di vetro, sole di mezzanotte, fuga d’amore e rinnovo delle promesse.' },
     nl: { title: 'Bruiloftstypes in Lapland | LaplandWeddings',
           description: 'Zes bruiloftstypes in Lapland: noorderlicht, sneeuwkapel, glaziglo, middernachtszon, eloperen en geloftehernieuwing.' },
+    sv: { title: 'Bröllopstyper i Lappland | LaplandWeddings',
+          description: 'Sex bröllopstyper i Lappland: norrsken, snökapell, glasigloo, midnattssol, rymningsbröllop och förnyade löften.' },
     image: '/images/heroes/home-cover.jpg',
   },
   '/venues': {
@@ -147,6 +154,8 @@ const top = {
           description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e molte altre. Oltre 20 location di matrimonio verificate nelle regioni della Lapponia.' },
     nl: { title: 'Bruiloftslocaties in Lapland | LaplandWeddings',
           description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. Meer dan 20 geverifieerde bruiloftslocaties in heel Lapland.' },
+    sv: { title: 'Bröllopsplatser i Lappland | LaplandWeddings',
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. Över 20 verifierade bröllopsplatser i hela Lappland.' },
     image: '/images/venues/kakslauttanen.jpg',
   },
   '/photographers': {
@@ -172,6 +181,8 @@ const top = {
           description: 'Sei dei migliori fotografi di matrimonio della Lapponia. Aurora boreale, cappelle di neve, igloo di vetro — collaudati nel freddo.' },
     nl: { title: 'Bruiloftsfotografen in Lapland | LaplandWeddings',
           description: 'Zes van de beste bruiloftsfotografen in Lapland. Noorderlicht, sneeuwkapellen, glaziglo’s — beproefd in de kou.' },
+    sv: { title: 'Bröllopsfotografer i Lappland | LaplandWeddings',
+          description: 'Sex av de bästa bröllopsfotograferna i Lappland. Norrsken, snökapell, glasigloor — beprövade i kylan.' },
     image: '/images/types/elopement.jpg',
   },
   '/practical-guide': {
@@ -197,6 +208,8 @@ const top = {
           description: 'Guida pratica per coppie straniere: pratiche DVV, esame degli impedimenti (3–5 settimane), testimoni, celebrante, registrazione nel Paese di origine.' },
     nl: { title: 'Trouwen in Lapland | LaplandWeddings',
           description: 'Praktische gids voor buitenlandse paren: DVV-papierwerk, onderzoek naar huwelijksbeletselen (3–5 weken), getuigen, ambtenaar, registratie in het thuisland.' },
+    sv: { title: 'Gifta sig i Lappland | LaplandWeddings',
+          description: 'Praktisk guide för utländska par: DVV-papper, hindersprövning (3–5 veckor), vittnen, vigselförrättare och registrering i hemlandet.' },
     image: '/images/venues/wilderness-hotel-inari.jpg',
   },
   '/pricing': {
@@ -222,6 +235,8 @@ const top = {
           description: 'Quanto costa un matrimonio in Lapponia? Fuga d’amore da 1 600 €, matrimoni premium fino a 40 000 €. Prezzi di mercato verificati.' },
     nl: { title: 'Bruiloften in Lapland | LaplandWeddings',
           description: 'Wat kost een bruiloft in Lapland? Eloperen vanaf € 1.600, premiumbruiloften tot € 40.000. Geverifieerde marktprijzen.' },
+    sv: { title: 'Bröllop i Lappland — priser och paket | LaplandWeddings',
+          description: 'Vad kostar ett bröllop i Lappland? Rymningsbröllop från 1 600 €, premiumbröllop upp till 40 000 €. Verifierade marknadspriser.' },
     image: '/images/venues/lapland-hotels-saaga.jpg',
   },
   '/checklist/dvv-foreign-couples': {
@@ -247,6 +262,8 @@ const top = {
           description: 'Checklist DVV di una pagina per coppie straniere che pianificano il matrimonio nella Lapponia finlandese. Stampi o salvi in PDF.' },
     nl: { title: 'DVV-checklist voor buitenlandse paren | LaplandWeddings',
           description: 'Eenzijdige DVV-checklist voor het huwelijksvergunning voor buitenlandse paren die in Fins Lapland willen trouwen. Print of bewaar als PDF.' },
+    sv: { title: 'DVV-checklista för utländska par | LaplandWeddings',
+          description: 'En ensidig DVV-checklista för hindersprövning för utländska par som planerar bröllop i finska Lappland. Skriv ut eller spara som PDF.' },
     image: '/images/venues/wilderness-hotel-inari.jpg',
   },
   '/privacy': {
@@ -261,6 +278,7 @@ const top = {
     fr: { title: 'Confidentialité | LaplandWeddings', description: 'Politique de confidentialité de laplandweddings.online — comment nous traitons les données de demande et l’analytique.' },
     it: { title: 'Privacy | LaplandWeddings', description: 'Informativa sulla privacy di laplandweddings.online — come trattiamo i dati delle richieste e l’analitica.' },
     nl: { title: 'Privacy | LaplandWeddings', description: 'Privacybeleid voor laplandweddings.online — hoe wij omgaan met aanvraaggegevens en analyses.' },
+    sv: { title: 'Integritetspolicy | LaplandWeddings', description: 'Integritetspolicy för laplandweddings.online — hur vi hanterar förfrågningsdata och analys.' },
     image: '/images/heroes/home-cover.jpg',
   },
   '/terms': {
@@ -275,6 +293,7 @@ const top = {
     fr: { title: 'Conditions d’utilisation | LaplandWeddings', description: 'Conditions d’utilisation de laplandweddings.online.' },
     it: { title: 'Condizioni d’uso | LaplandWeddings', description: 'Condizioni d’uso di laplandweddings.online.' },
     nl: { title: 'Gebruiksvoorwaarden | LaplandWeddings', description: 'Gebruiksvoorwaarden van laplandweddings.online.' },
+    sv: { title: 'Användarvillkor | LaplandWeddings', description: 'Användarvillkor för laplandweddings.online.' },
     image: '/images/heroes/home-cover.jpg',
   },
   '/cookie-policy': {
@@ -289,6 +308,7 @@ const top = {
     fr: { title: 'Politique relative aux cookies | LaplandWeddings', description: 'Politique relative aux cookies de laplandweddings.online.' },
     it: { title: 'Politica sui cookie | LaplandWeddings', description: 'Politica sui cookie di laplandweddings.online.' },
     nl: { title: 'Cookiebeleid | LaplandWeddings', description: 'Cookiebeleid van laplandweddings.online.' },
+    sv: { title: 'Cookiepolicy | LaplandWeddings', description: 'Cookiepolicy för laplandweddings.online.' },
     image: '/images/heroes/home-cover.jpg',
   },
 };
@@ -349,6 +369,7 @@ const LOC_TITLE_SUFFIX = {
   fr: '— Mariages | LaplandWeddings',
   it: '— Matrimoni | LaplandWeddings',
   nl: '— Bruiloften | LaplandWeddings',
+  sv: '— Bröllop | LaplandWeddings',
 };
 
 // Per-locale "X — Lapland Weddings | LaplandWeddings" pattern for types
@@ -364,6 +385,7 @@ const TYPE_TITLE_SUFFIX = {
   fr: '— Mariages en Laponie | LaplandWeddings',
   it: '— Matrimoni in Lapponia | LaplandWeddings',
   nl: '— Bruiloften in Lapland | LaplandWeddings',
+  sv: '— Bröllop i Lappland | LaplandWeddings',
 };
 
 function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }

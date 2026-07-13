@@ -17,7 +17,7 @@ const L11: Record<'countryPlaceholder' | 'datePlaceholder', Localized<string>> =
     ko: '예: 핀란드',
     fr: 'p. ex. Finlande',
     it: 'es. Finlandia',
-    nl: 'bijv. Finland',
+    nl: 'bijv. Finland', sv: 'e.g. Finland',
   },
   datePlaceholder: {
     en: 'e.g. February 2027',
@@ -30,7 +30,7 @@ const L11: Record<'countryPlaceholder' | 'datePlaceholder', Localized<string>> =
     ko: '예: 2027년 2월',
     fr: 'p. ex. février 2027',
     it: 'es. febbraio 2027',
-    nl: 'bijv. februari 2027',
+    nl: 'bijv. februari 2027', sv: 'e.g. February 2027',
   },
 };
 

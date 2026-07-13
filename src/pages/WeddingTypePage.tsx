@@ -23,7 +23,7 @@ const P: Record<'titleSuffix' | 'suitableVenues', Localized<string>> = {
     ko: '라플란드 웨딩',
     fr: 'Mariages en Laponie',
     it: 'Matrimoni in Lapponia',
-    nl: 'Bruiloften in Lapland',
+    nl: 'Bruiloften in Lapland', sv: 'Lapland Weddings',
   },
   suitableVenues: {
     en: 'Suitable venues',
@@ -36,7 +36,7 @@ const P: Record<'titleSuffix' | 'suitableVenues', Localized<string>> = {
     ko: '어울리는 웨딩 장소',
     fr: 'Lieux adaptés',
     it: 'Location adatte',
-    nl: 'Geschikte locaties',
+    nl: 'Geschikte locaties', sv: 'Suitable venues',
   },
 };
 

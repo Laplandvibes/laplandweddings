@@ -20,7 +20,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '라플란드 웨딩 지역 — 로바니에미, 레비, 사리셀캐, 윌래스 | LaplandWeddings',
     fr: 'Régions de mariage en Laponie | LaplandWeddings',
     it: 'Regioni per matrimoni in Lapponia | LaplandWeddings',
-    nl: 'Trouwregio’s in Lapland — Rovaniemi & meer | LaplandWeddings',
+    nl: 'Trouwregio’s in Lapland — Rovaniemi & meer | LaplandWeddings', sv: 'Lapland Wedding Regions — Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings',
   },
   seoDesc: {
     en: 'Six Lapland wedding regions plus city-option Oulu — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Compare seasons, flights, and venues.',
@@ -33,7 +33,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '라플란드의 웨딩 지역 6곳과 도시 옵션 오울루 — 로바니에미, 사리셀캐, 레비, 윌래스, 퓌해-루오스토, 킬피스얘르비, 오울루. 시즌, 항공편, 웨딩 장소를 비교하세요.',
     fr: 'Six régions de mariage en Laponie plus Oulu, l’option urbaine — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Comparez saisons, vols et lieux.',
     it: 'Sei regioni per matrimoni in Lapponia più Oulu, l’opzione urbana — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Confronta stagioni, voli e location.',
-    nl: 'Zes trouwregio’s in Lapland plus stadsoptie Oulu — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Vergelijk seizoenen, vluchten en locaties.',
+    nl: 'Zes trouwregio’s in Lapland plus stadsoptie Oulu — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Vergelijk seizoenen, vluchten en locaties.', sv: 'Six Lapland wedding regions plus city-option Oulu — Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Compare seasons, flights, and venues.',
   },
   imageAlt: {
     en: 'Wedding couple on a frozen lake under the Northern Lights',
@@ -46,7 +46,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '오로라 아래 얼어붙은 호수 위의 신혼부부',
     fr: 'Couple de mariés sur un lac gelé sous les aurores boréales',
     it: 'Coppia di sposi su un lago ghiacciato sotto l’aurora boreale',
-    nl: 'Bruidspaar op een bevroren meer onder het noorderlicht',
+    nl: 'Bruidspaar op een bevroren meer onder het noorderlicht', sv: 'Wedding couple on a frozen lake under the Northern Lights',
   },
 };
 

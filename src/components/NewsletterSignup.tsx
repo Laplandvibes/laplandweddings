@@ -18,6 +18,7 @@ const L11: Record<'thanks' | 'failed', Localized<string>> = {
     fr: 'Merci ! Vous êtes inscrit·e à la liste.',
     it: 'Grazie! Sei nella lista.',
     nl: 'Bedankt! Je staat op de lijst.',
+    sv: 'Tack! Du är med på listan.',
   },
   failed: {
     en: 'Subscription failed. Please try again.',
@@ -31,6 +32,7 @@ const L11: Record<'thanks' | 'failed', Localized<string>> = {
     fr: 'L’inscription a échoué. Veuillez réessayer.',
     it: 'Iscrizione non riuscita. Riprova.',
     nl: 'Aanmelden mislukt. Probeer het opnieuw.',
+    sv: 'Prenumerationen misslyckades. Försök igen.',
   },
 };
 

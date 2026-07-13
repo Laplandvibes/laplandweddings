@@ -30,6 +30,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Mariage sous les aurores boréales',
       it: 'Matrimonio sotto l’aurora boreale',
       nl: 'Noorderlichtbruiloft',
+      sv: 'Norrskensbröllop',
     },
     tagline: {
       fi: 'Vihkiminen aurora borealiksen alla',
@@ -43,6 +44,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Échangez vos vœux sous l’aurore boréale',
       it: 'Scambiatevi le promesse sotto l’aurora boreale',
       nl: 'Geef elkaar het jawoord onder het noorderlicht',
+      sv: 'Ge varandra löftena under norrskenet',
     },
     description: {
       fi: 'Revontulet ovat Lapin tunnetuin häätoive — eikä turhaan. Pohjois-Lapin korkeilla leveysasteilla revontulet näkyvät pilvettöminä öinä keskimäärin 200 kertaa vuodessa. Vihkiminen pidetään tyypillisesti varhaisessa illassa lähellä venuea, jotta revontulet ehtivät ilmestyä juhlien aikana. Kakslauttanen, Northern Lights Ranch ja Apukka Resort ovat osaavimpia revontuli-pareiden kanssa.',
@@ -56,6 +58,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Les aurores boréales sont le souhait de mariage le plus demandé de Laponie — et à juste titre. Aux hautes latitudes de la Laponie du Nord, l’aurore apparaît environ 200 fois par an par nuits dégagées. La cérémonie a généralement lieu en début de soirée, près du lieu, afin que les lumières surgissent pendant la célébration. Kakslauttanen, Northern Lights Ranch et Apukka Resort sont les plus expérimentés avec les couples en quête d’aurores.',
       it: 'Le aurore boreali sono il desiderio nuziale più richiesto della Lapponia — e a ragione. Alle alte latitudini della Lapponia settentrionale, l’aurora appare nelle notti serene circa 200 volte all’anno. La cerimonia si tiene di solito nel primo pomeriggio-sera, vicino alla location, così che le luci possano comparire durante la festa. Kakslauttanen, Northern Lights Ranch e Apukka Resort sono i più esperti con le coppie in cerca di aurore.',
       nl: 'Het noorderlicht is de meest gevraagde trouwwens van Lapland — en niet zonder reden. Op de hoge breedtegraden van Noord-Lapland verschijnt de aurora op heldere nachten zo’n 200 keer per jaar. De ceremonie vindt meestal in de vroege avond plaats, dicht bij de locatie, zodat het licht tijdens de viering kan opkomen. Kakslauttanen, Northern Lights Ranch en Apukka Resort hebben de meeste ervaring met aurorastellen.',
+      sv: 'Norrskenet är Lapplands mest efterfrågade bröllopsönskan — och med rätta. På Nordlapplands höga breddgrader syns norrskenet klara nätter omkring 200 gånger per år. Ceremonin hålls oftast tidig kväll nära platsen så att ljuset hinner tändas under festen. Kakslauttanen, Northern Lights Ranch och Apukka Resort har mest erfarenhet av norrskenspar.',
     },
     bestSeason: {
       fi: 'Syyskuu–maaliskuu, paras lokakuu–helmikuu',
@@ -69,6 +72,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'De septembre à mars, idéal d’octobre à février',
       it: 'Da settembre a marzo, ottimale da ottobre a febbraio',
       nl: 'September–maart, het best oktober–februari',
+      sv: 'september–mars, bäst oktober–februari',
     },
     priceRange: '€2 500 – €40 000',
     capacity: '2–60 vierasta',
@@ -84,6 +88,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Systèmes d’alerte aurores chez les lieux partenaires', 'Igloo de verre pour la nuit (lumières à travers le toit)', 'Photographe au matériel calibré pour les aurores', 'Traditions d’after sous les lumières'],
       it: ['Sistemi di allerta aurore nelle location partner', 'Igloo di vetro per la notte (luci attraverso il tetto)', 'Fotografo con attrezzatura tarata per le aurore', 'Tradizioni di after-party sotto le luci'],
       nl: ['Aurora-waarschuwingssystemen bij partnerlocaties', 'Glasiglo voor de nacht (licht door het dak)', 'Fotograaf met op aurora afgestelde apparatuur', 'Afterparty-tradities onder het licht'],
+      sv: ['Norrskenslarm hos partnerplatserna', 'Glasigloo för natten (norrsken genom taket)', 'Fotograf med norrskenskalibrerad utrustning', 'Fest efteråt under norrskenet'],
     },
     considerations: {
       fi: ['Revontulet eivät ole taatusti — kysy hääpaikalta varasuunnitelma', 'Pakkanen voi olla -25 °C — pukukohtainen suunnittelu', 'Pilvinen yö syö revontulet — pidä hääpäivä joustavana ±2 päivää'],
@@ -97,6 +102,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Les aurores ne sont pas garanties — demandez un plan B météo au lieu', 'Les températures peuvent atteindre -25 °C — prévoyez la tenue en conséquence', 'Les nuits nuageuses cachent les lumières — gardez la date flexible à ±2 jours'],
       it: ['Le aurore non sono garantite — chiedete alla location un piano B per il meteo', 'Le temperature possono toccare i -25 °C — pianificate l’abbigliamento di conseguenza', 'Le notti nuvolose nascondono le luci — mantenete la data flessibile di ±2 giorni'],
       nl: ['Aurora’s zijn niet gegarandeerd — vraag de locatie om een weer-back-up', 'Temperaturen kunnen tot -25 °C zakken — kies je kleding daarop', 'Bewolkte nachten verbergen het licht — houd de trouwdatum ±2 dagen flexibel'],
+      sv: ['Norrsken kan inte garanteras — be platsen om en väderreserv', 'Temperaturen kan nå −25 °C — planera klädseln därefter', 'Molniga nätter döljer ljuset — håll bröllopsdatumet flexibelt ±2 dagar'],
     },
     venueSlugs: ['kakslauttanen', 'northern-lights-ranch', 'apukka-resort', 'arctic-snowhotel', 'northern-lights-village-saariselka'],
     heroImage: '/images/types/northern-lights.jpg',
@@ -116,6 +122,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Mariage en chapelle de neige',
       it: 'Matrimonio in cappella di neve',
       nl: 'Sneeuwkapelbruiloft',
+      sv: 'Snökapellsbröllop',
     },
     tagline: {
       fi: 'Vihille puhtaaksi veistetyssä lumi- tai jääkappelissa',
@@ -129,6 +136,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Mariez-vous dans une chapelle sculptée dans la neige et la glace pures',
       it: 'Sposatevi in una cappella scolpita nella neve e nel ghiaccio puri',
       nl: 'Trouw in een kapel uitgehouwen uit zuivere sneeuw en ijs',
+      sv: 'Gift er i ett kapell format av ren snö och is',
     },
     description: {
       fi: 'Lumikappelit rakennetaan joka talvi uudelleen joulukuun alusta huhtikuuhun. Seinät, alttari ja istuimet veistetään kristallinkirkkaasta jäästä. Kappelit ovat kylmempiä kuin ulkona (-3 °C…-7 °C), joten seremoniat ovat lyhyitä (15–30 min) ja vieraat istuvat lampaantaljojen päällä. Kapasiteetit vaihtelevat: Lainion Snow Village 50, Northern Lights Ranch 60, Arctic SnowHotel 30, Levi Ice Castle 50.',
@@ -142,6 +150,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Les chapelles de neige sont reconstruites chaque hiver, de début décembre à avril. Murs, autel et sièges sont sculptés dans une glace cristalline. Les chapelles sont plus froides qu’à l’extérieur (-3 °C…-7 °C), les cérémonies sont donc courtes (15-30 min) et les invités s’assoient sur des peaux de mouton. Les capacités varient : Lainio Snow Village 50, Northern Lights Ranch 60, Arctic SnowHotel 30, Levi Ice Castle 50.',
       it: 'Le cappelle di neve vengono ricostruite ogni inverno, da inizio dicembre ad aprile. Pareti, altare e sedute sono scolpiti nel ghiaccio cristallino. Le cappelle sono più fredde dell’esterno (-3 °C…-7 °C), perciò le cerimonie sono brevi (15-30 min) e gli ospiti siedono su pelli di pecora. Le capienze variano: Lainio Snow Village 50, Northern Lights Ranch 60, Arctic SnowHotel 30, Levi Ice Castle 50.',
       nl: 'Sneeuwkapellen worden elke winter opnieuw gebouwd, van begin december tot april. Muren, altaar en zitplaatsen worden uit kristalhelder ijs gehouwen. De kapellen zijn kouder dan buiten (-3 °C…-7 °C), dus de ceremonies zijn kort (15-30 min) en gasten zitten op schapenvachten. De capaciteit verschilt: Lainio Snow Village 50, Northern Lights Ranch 60, Arctic SnowHotel 30, Levi Ice Castle 50.',
+      sv: 'Snökapellen byggs upp på nytt varje vinter från början av december till april. Väggar, altare och bänkar huggs ur kristallklar is. Kapellen är kallare än utomhus (−3 °C…−7 °C), så ceremonierna är korta (15–30 min) och gästerna sitter på fårskinn. Kapaciteten varierar: Lainio Snow Village 50, Northern Lights Ranch 60, Arctic SnowHotel 30, Levi Ice Castle 50.',
     },
     bestSeason: {
       fi: 'Joulukuu–huhtikuu (kappelit avoinna)',
@@ -155,6 +164,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'De décembre à avril (chapelles ouvertes)',
       it: 'Da dicembre ad aprile (cappelle aperte)',
       nl: 'December–april (kapellen open)',
+      sv: 'december–april (kapellen öppna)',
     },
     priceRange: '€1 500 – €15 000',
     capacity: '2–60 vierasta',
@@ -170,6 +180,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Chaque chapelle est reconstruite chaque année — vraiment unique', 'Cérémonie + toasts en verres de glace', 'Invités sur peaux de mouton et enveloppés dans des couvertures', 'La plupart des chapelles organisent l’officiant sur place'],
       it: ['Ogni cappella viene ricostruita ogni anno — davvero unica', 'Cerimonia + brindisi con bicchieri di ghiaccio', 'Ospiti su pelli di pecora e avvolti in coperte', 'La maggior parte delle cappelle organizza il celebrante in loco'],
       nl: ['Elke kapel wordt jaarlijks opnieuw gebouwd — werkelijk uniek', 'Ceremonie + toosten met ijsglazen', 'Gasten op schapenvachten en in dekens gewikkeld', 'De meeste kapellen regelen de voltrekker ter plaatse'],
+      sv: ['Varje kapell byggs om varje år — helt unikt', 'Ceremoni + skål i isglas', 'Gästerna på fårskinn och insvepta i filtar', 'De flesta kapell ordnar vigselförrättare på plats'],
     },
     considerations: {
       fi: ['Kappelit avoinna vain joulukuusta huhtikuuhun — varaus lukitaan jopa vuotta etukäteen', 'Sisälämpötila pakkasella — vihkimekko + lämmin alusasu', 'Sähköttömät kappelit → valaistus on kynttilä + lyhty, valokuvaajan tekninen taito ratkaisee'],
@@ -183,6 +194,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Chapelles ouvertes seulement de décembre à avril — réservations souvent bloquées un an à l’avance', 'Température intérieure négative — robe de mariée avec sous-couche thermique', 'Pas d’éclairage électrique → bougies et lanternes seulement ; la maîtrise technique du photographe est cruciale'],
       it: ['Le cappelle sono aperte solo da dicembre ad aprile — le prenotazioni si bloccano spesso con un anno di anticipo', 'Temperatura interna sotto zero — abito da sposa con strato termico', 'Niente illuminazione elettrica → solo candele e lanterne; l’abilità tecnica del fotografo è decisiva'],
       nl: ['Kapellen alleen open van december tot april — boekingen vaak een jaar vooruit vastgelegd', 'Binnentemperatuur onder nul — trouwjurk met thermische onderlaag', 'Geen elektrische verlichting → alleen kaarsen en lantaarns; de technische vaardigheid van de fotograaf is cruciaal'],
+      sv: ['Kapellen är öppna endast december–april — bokningar låses ofta ett år i förväg', 'Minusgrader inomhus — brudklänning med värmande underställ', 'Ingen elbelysning → endast ljus och lyktor; fotografens tekniska skicklighet är avgörande'],
     },
     venueSlugs: ['snow-village-lainio', 'northern-lights-ranch', 'arctic-snowhotel', 'levi-ice-castle', 'kakslauttanen'],
     heroImage: '/images/types/snow-chapel.jpg',
@@ -202,6 +214,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Mariage en igloo de verre',
       it: 'Matrimonio in igloo di vetro',
       nl: 'Glasiglobruiloft',
+      sv: 'Glasigloobröllop',
     },
     tagline: {
       fi: 'Hääyö revontulien alla lämpöisessä lasikuvussa',
@@ -215,6 +228,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Nuit de noces sous les lumières dans un dôme de verre chauffé',
       it: 'Prima notte di nozze sotto le luci in una cupola di vetro riscaldata',
       nl: 'Huwelijksnacht onder het licht in een verwarmde glazen koepel',
+      sv: 'Bröllopsnatt under norrskenet i en uppvärmd glaskupol',
     },
     description: {
       fi: 'Lasi-iglu ei ole varsinaista vihkimistilaa, vaan ainutlaatuinen ensimmäinen yhteinen yö. Useimmat parit yhdistävät vihkimisen jäätai hirsikappelissa lasi-iglu-yhöeen. Iglujen pohjalämmitys ja sähkölämmitetty lasi pitää näkymän kirkkaana -30 °C:ssä. Levin Iglut, Apukka Kammi, Kakslauttanen, Arctic SnowHotel ja NLV Saariselkä ovat top-tier tason vaihtoehtoja.',
@@ -228,6 +242,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Un igloo de verre n’est pas le lieu de la cérémonie en soi, mais une première nuit ensemble unique. La plupart des couples associent une cérémonie en chapelle de glace ou de bois à une nuit en igloo de verre. Le chauffage au sol et le verre chauffé électriquement gardent la vue claire à -30 °C. Levin Iglut, Apukka Kammi, Kakslauttanen, Arctic SnowHotel et NLV Saariselkä sont des options haut de gamme.',
       it: 'Un igloo di vetro non è lo spazio della cerimonia in sé, ma una prima notte insieme davvero unica. La maggior parte delle coppie abbina una cerimonia in cappella di ghiaccio o di legno a una notte in igloo di vetro. Il riscaldamento a pavimento e il vetro riscaldato elettricamente mantengono la vista nitida a -30 °C. Levin Iglut, Apukka Kammi, Kakslauttanen, Arctic SnowHotel e NLV Saariselkä sono opzioni di altissimo livello.',
       nl: 'Een glasiglo is niet de ceremonieruimte zelf, maar een unieke eerste nacht samen. De meeste stellen combineren een ceremonie in een ijs- of houten kapel met een overnachting in een glasiglo. Vloerverwarming en elektrisch verwarmd glas houden het zicht helder bij -30 °C. Levin Iglut, Apukka Kammi, Kakslauttanen, Arctic SnowHotel en NLV Saariselkä behoren tot de topopties.',
+      sv: 'En glasigloo är inte själva ceremoniplatsen utan en unik första natt tillsammans. De flesta par kombinerar en ceremoni i is- eller timmerkapell med en övernattning i glasigloo. Golvvärme och eluppvärmt glas håller utsikten klar vid −30 °C. Levin Iglut, Apukka Kammi, Kakslauttanen, Arctic SnowHotel och NLV Saariselkä hör till de bästa alternativen.',
     },
     bestSeason: {
       fi: 'Marraskuu–huhtikuu lumelle ja revontulille',
@@ -241,6 +256,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'De novembre à avril pour la neige et les aurores boréales',
       it: 'Da novembre ad aprile per neve e aurore boreali',
       nl: 'November–april voor sneeuw en noorderlicht',
+      sv: 'november–april för snö och norrsken',
     },
     priceRange: '€300 – €1 200 / yö',
     capacity: '2 hengen yöpyminen',
@@ -256,6 +272,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['L’alerte aurore vous réveille en pleine nuit si les lumières apparaissent', 'Chauffage au sol + toit de verre chauffé électriquement', 'Sauna et baignoire généralement inclus dans les modèles premium', 'Petit-déjeuner dans l’igloo ou au restaurant principal'],
       it: ['L’allarme aurora vi sveglia nel cuore della notte se compaiono le luci', 'Riscaldamento a pavimento + tetto di vetro riscaldato elettricamente', 'Sauna e vasca di solito inclusi nei modelli premium', 'Colazione nell’igloo o nel ristorante principale'],
       nl: ['Het aurora-alarm wekt je midden in de nacht als het licht verschijnt', 'Vloerverwarming + elektrisch verwarmd glasdak', 'Sauna en bad meestal inbegrepen bij premiummodellen', 'Ontbijt in de iglo of in het hoofdrestaurant'],
+      sv: ['Norrskenslarm väcker er mitt i natten om ljuset kommer', 'Golvvärme + eluppvärmt glastak', 'Bastu och badtunna ingår oftast i premiummodellerna', 'Frukost i igloon eller i huvudrestaurangen'],
     },
     considerations: {
       fi: ['Iglu on hääyö, ei juhlatila — vihkimisen järjestäjä toinen', 'Yhteen iglun mahtuu vain pari (4 hengen iglutyyppejä rajoitetusti)', 'Lasi peilaa sisävalon → revontulia varten valot pois'],
@@ -269,6 +286,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['L’igloo est pour la nuit de noces, pas pour la cérémonie — le lieu se réserve à part', 'Un igloo n’accueille que le couple (les igloos pour 4 sont limités)', 'Le verre reflète la lumière intérieure → éteignez pour voir les aurores'],
       it: ['L’igloo è per la prima notte di nozze, non per la cerimonia — la location si organizza a parte', 'Un singolo igloo ospita solo la coppia (gli igloo per 4 sono limitati)', 'Il vetro riflette la luce interna → spegnete le luci per vedere le aurore'],
       nl: ['De iglo is voor de huwelijksnacht, niet voor de ceremonie — de locatie wordt apart geregeld', 'Eén iglo biedt alleen plaats aan het paar (iglo’s voor 4 zijn beperkt)', 'Glas weerspiegelt het binnenlicht → licht uit om aurora’s te zien'],
+      sv: ['Igloon är för bröllopsnatten, inte ceremonin — platsen ordnas separat', 'En vanlig igloo rymmer bara paret (fyrapersonersiglor är få)', 'Glaset speglar ljuset inifrån → släck lamporna för att se norrskenet'],
     },
     venueSlugs: ['kakslauttanen', 'levin-iglut', 'apukka-resort', 'arctic-snowhotel', 'northern-lights-village-saariselka', 'tundrea-kilpisjarvi'],
     heroImage: '/images/venues/kakslauttanen.jpg',
@@ -288,6 +306,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Mariage sous le soleil de minuit',
       it: 'Matrimonio sotto il sole di mezzanotte',
       nl: 'Middernachtzonbruiloft',
+      sv: 'Midnattssolsbröllop',
     },
     tagline: {
       fi: 'Vihille kun aurinko ei laske',
@@ -301,6 +320,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Mariez-vous quand le soleil ne se couche jamais',
       it: 'Sposatevi quando il sole non tramonta mai',
       nl: 'Trouw wanneer de zon nooit ondergaat',
+      sv: 'Gift er när solen aldrig går ner',
     },
     description: {
       fi: 'Pohjois-Lapissa aurinko ei laske horisontin alle 23.5.–24.7. — vihkiminen voidaan pitää keskellä yötä luonnonvalossa. Saariselkä, Inari ja Kilpisjärvi ovat täydellisiä. Sää on lämmin (15–25 °C päivällä), joten ulkohäät metsässä, järvenrannassa tai tunturilla onnistuvat ilman lumipukuja. Kasvavin trendi 2025–2027.',
@@ -314,6 +334,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Dans la Laponie du Nord, le soleil ne passe pas sous l’horizon du 23 mai au 24 juillet — la cérémonie peut avoir lieu à minuit à la lumière naturelle. Saariselkä, Inari et Kilpisjärvi sont parfaits. Le climat est doux (15-25 °C en journée), si bien que les mariages en plein air en forêt, au bord d’un lac ou sur les fells se font sans tenue d’hiver. La tendance qui croît le plus vite pour 2025-2027.',
       it: 'Nella Lapponia settentrionale il sole non scende sotto l’orizzonte dal 23 maggio al 24 luglio — la cerimonia può tenersi a mezzanotte con la luce naturale. Saariselkä, Inari e Kilpisjärvi sono perfetti. Il clima è mite (15-25 °C di giorno), così i matrimoni all’aperto nei boschi, in riva al lago o sui fell si svolgono senza abbigliamento da neve. La tendenza in più rapida crescita per il 2025-2027.',
       nl: 'In Noord-Lapland zakt de zon van 23 mei tot 24 juli niet onder de horizon — de ceremonie kan om middernacht bij natuurlijk licht plaatsvinden. Saariselkä, Inari en Kilpisjärvi zijn perfect. Het weer is mild (overdag 15-25 °C), dus buitenbruiloften in bossen, aan het meer of op de fells gaan zonder winterkleding. De snelst groeiende trend voor 2025-2027.',
+      sv: 'I Nordlappland går solen inte ner under horisonten från 23 maj till 24 juli — ceremonin kan hållas vid midnatt i naturligt ljus. Saariselkä, Inari och Kilpisjärvi passar perfekt. Vädret är varmt (15–25 °C dagtid), så utomhusbröllop i skogen, vid sjön eller på fjället fungerar utan vinterkläder. Den snabbast växande trenden för 2025–2027.',
     },
     bestSeason: {
       fi: '23. toukokuuta – 24. heinäkuuta',
@@ -327,6 +348,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Du 23 mai au 24 juillet',
       it: 'Dal 23 maggio al 24 luglio',
       nl: '23 mei – 24 juli',
+      sv: '23 maj – 24 juli',
     },
     priceRange: '€2 000 – €30 000',
     capacity: '2–80 vierasta',
@@ -342,6 +364,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Lumière naturelle 24 h — séance photo à tout moment', 'Climat doux — robe traditionnelle sans couches thermiques', 'Pic de moustiques en juin-juillet — répulsif indispensable', 'Saison moins chère que l’hiver — igloos premium à -40 à -50 %'],
       it: ['Luce naturale 24 h — servizio fotografico a qualsiasi ora', 'Clima mite — abito tradizionale senza strati termici', 'Picco di zanzare a giugno-luglio — repellente indispensabile', 'Stagione più economica dell’inverno — igloo premium scontati del 40-50 %'],
       nl: ['24 uur natuurlijk licht — fotoshoot op elk moment', 'Mild weer — traditionele jurk zonder thermische lagen', 'Muggenpiek in juni–juli — insectenwerend middel essentieel', 'Goedkoper seizoen dan de winter — premiumiglo’s met 40-50 % korting'],
+      sv: ['Dygnet runt naturligt ljus — fotografering när som helst', 'Varmt väder — bär en vanlig klänning utan värmelager', 'Myggtoppen i juni–juli — myggmedel är ett måste', 'Billigare säsong än vintern — premiumiglor 40–50 % billigare'],
     },
     considerations: {
       fi: ['Hyttyset peak — heinäkuu helpoin, elokuussa hyttyset jo vähissä', 'Ei revontulia kesällä — tämä on eri estetiikka', 'Ei lunta tai lumikappelia — wow-tekijä on auringonvalo'],
@@ -355,6 +378,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Pic de moustiques — juillet plus supportable, moins de moustiques en août', 'Pas d’aurores boréales en été — une autre esthétique', 'Pas de neige ni de chapelle de neige — l’effet wow, c’est la lumière du soleil'],
       it: ['Picco di zanzare — luglio più gestibile, ad agosto già meno zanzare', 'Niente aurore boreali in estate — un’estetica diversa', 'Niente neve o cappella di neve — il fattore wow è la luce del sole'],
       nl: ['Muggenpiek — juli het draaglijkst, in augustus al minder muggen', 'Geen noorderlicht in de zomer — een andere esthetiek', 'Geen sneeuw of sneeuwkapel — de wow-factor is het zonlicht'],
+      sv: ['Myggen är som flest — juli är lättast, färre mygg i augusti', 'Inget norrsken på sommaren — ett annat uttryck', 'Ingen snö eller snökapell — det som imponerar är ljuset'],
     },
     venueSlugs: ['kakslauttanen', 'wilderness-hotel-inari', 'tundrea-kilpisjarvi', 'apukka-resort', 'lapland-hotels-saaga'],
     heroImage: '/images/types/midnight-sun.webp',
@@ -374,6 +398,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Elopement / Mariage à deux',
       it: 'Elopement / Matrimonio a due',
       nl: 'Elopement / Bruiloft met z’n tweeën',
+      sv: 'Rymningsbröllop / bröllop för två',
     },
     tagline: {
       fi: 'Pelkästään te kaksi, vihkijä ja valokuvaaja',
@@ -387,6 +412,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Juste vous deux, l’officiant et un photographe',
       it: 'Solo voi due, il celebrante e un fotografo',
       nl: 'Alleen jullie tweeën, de voltrekker en een fotograaf',
+      sv: 'Bara ni två, vigselförrättaren och en fotograf',
     },
     description: {
       fi: 'Suomen helpoin häämuoto: vain hääpari, vihkijä ja kaksi todistajaa. Kaikki paperitehtävät hoituu DVV:n kautta, ja monet plannerit (Lapland Romance, Adventure Wedding) tarjoavat avaimet käteen -elopement -paketteja 1 600 €:sta alkaen. Elopement vie 1–2 päivää ja antaa parille kaksin juhlavuoden hetken Lapin maisemassa.',
@@ -400,6 +426,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'La forme de mariage la plus simple de Finlande : seulement le couple, l’officiant et deux témoins. Toutes les formalités passent par le DVV, et de nombreux organisateurs (Lapland Romance, Adventure Wedding) proposent des forfaits elopement clés en main à partir de 1 600 €. Un elopement dure 1-2 jours et offre au couple son moment de mariage en tête-à-tête dans le paysage lapon.',
       it: 'La forma di matrimonio più semplice della Finlandia: solo la coppia, il celebrante e due testimoni. Tutta la burocrazia passa per il DVV, e molti planner (Lapland Romance, Adventure Wedding) offrono pacchetti elopement chiavi in mano a partire da 1 600 €. L’elopement dura 1-2 giorni e regala alla coppia il proprio momento di nozze in intimità nel paesaggio lappone.',
       nl: 'De eenvoudigste trouwvorm van Finland: alleen het paar, de voltrekker en twee getuigen. Alle papierwerk loopt via het DVV, en veel planners (Lapland Romance, Adventure Wedding) bieden kant-en-klare elopementpakketten vanaf € 1 600. Een elopement duurt 1-2 dagen en geeft het paar zijn trouwmoment samen in het Laplandse landschap.',
+      sv: 'Finlands enklaste bröllopsform: bara paret, vigselförrättaren och två vittnen. Allt pappersarbete går via DVV, och många planerare (Lapland Romance, Adventure Wedding) erbjuder färdiga rymningsbröllopspaket från 1 600 €. Ett rymningsbröllop tar 1–2 dagar och ger paret sitt bröllopsögonblick ensamma i Lapplands landskap.',
     },
     bestSeason: {
       fi: 'Ympäri vuoden — paras joulukuussa, helmikuussa ja kesäkuussa',
@@ -413,6 +440,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Toute l’année — idéal en décembre, février et juin',
       it: 'Tutto l’anno — ottimale a dicembre, febbraio e giugno',
       nl: 'Het hele jaar — het best in december, februari en juni',
+      sv: 'året runt — bäst i december, februari och juni',
     },
     priceRange: '€1 600 – €5 200',
     capacity: '2 hengen',
@@ -428,6 +456,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Coût 1/10 d’un mariage traditionnel', 'Formalités DVV réglées en 3-5 semaines', 'Forfaits clés en main avec photographe et officiant', 'Aucune pression des invités — choisissez le meilleur lieu'],
       it: ['Costo pari a 1/10 di un matrimonio tradizionale', 'Pratiche DVV sbrigate in 3-5 settimane', 'Pacchetti chiavi in mano con fotografo e celebrante', 'Nessuna pressione degli ospiti — scegliete la location migliore'],
       nl: ['Kosten 1/10 van een traditionele bruiloft', 'DVV-papierwerk geregeld in 3-5 weken', 'Kant-en-klare pakketten met fotograaf en voltrekker', 'Geen gastendruk — kies de beste locatie'],
+      sv: ['Kostar en tiondel av ett traditionellt bröllop', 'DVV-pappren klara på 3–5 veckor', 'Färdiga paket med fotograf och vigselförrättare', 'Ingen gästpress — välj den bästa platsen'],
     },
     considerations: {
       fi: ['DVV-paperit on aloitettava 2 kuukautta ennen vihkimistä', 'Vain 2 todistajaa pakollinen — haetaan paikan päältä', 'Useimmat hääpaikat ottavat elopement-pareja vain arkipäivisin'],
@@ -441,6 +470,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Les formalités DVV doivent commencer 2 mois avant la cérémonie', 'Seuls 2 témoins requis — trouvés sur place', 'La plupart des lieux accueillent les elopements en semaine, hors saison'],
       it: ['Le pratiche DVV vanno avviate 2 mesi prima della cerimonia', 'Servono solo 2 testimoni — reperiti sul posto', 'La maggior parte delle location accoglie le coppie elopement infrasettimanali, in bassa stagione'],
       nl: ['Het DVV-papierwerk moet 2 maanden voor de ceremonie beginnen', 'Slechts 2 getuigen vereist — ter plaatse geregeld', 'De meeste locaties nemen elopementstellen doordeweeks, buiten het hoogseizoen'],
+      sv: ['DVV-pappersarbetet måste börja 2 månader före ceremonin', 'Endast 2 vittnen krävs — ordnas på plats', 'De flesta platser tar rymningspar mitt i veckan, utanför högsäsong'],
     },
     venueSlugs: ['kakslauttanen', 'apukka-resort', 'tundrea-kilpisjarvi', 'wilderness-hotel-muotka'],
     heroImage: '/images/types/elopement.webp',
@@ -460,6 +490,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Renouvellement des vœux',
       it: 'Rinnovo delle promesse',
       nl: 'Hernieuwing van de geloften',
+      sv: 'Förnyade löften',
     },
     tagline: {
       fi: 'Uudistakaa lupauksenne Lapin lumessa',
@@ -473,6 +504,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Renouvelez vos vœux dans la neige de Laponie',
       it: 'Rinnovate le vostre promesse nella neve della Lapponia',
       nl: 'Hernieuw je geloften in de sneeuw van Lapland',
+      sv: 'Förnya era löften i Lapplands snö',
     },
     description: {
       fi: 'Lupausten uusiminen ei vaadi mitään juridisia papereita — vain seremonia ja hääpari. Useimmat plannerit tarjoavat "renewal"-paketteja 50 % alennuksella verrattuna virallisiin häihin. Sopii hyvin pitkien parisuhteiden virstanpylväiseen tai uusiin perheisiin (uusperheen aloitus). Tällä on merkittävä trendi USA:ssa, eivätkä paperisotalupaukset paina.',
@@ -486,6 +518,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Le renouvellement des vœux ne nécessite aucune formalité juridique — seulement une cérémonie et le couple. La plupart des organisateurs proposent des forfaits « renouvellement » à -50 % par rapport aux mariages officiels. Idéal pour les jalons d’une longue relation ou les nouvelles familles (lancement d’une famille recomposée). Grande tendance aux États-Unis, sans la pression de la paperasse.',
       it: 'Il rinnovo delle promesse non richiede alcuna pratica legale — solo una cerimonia e la coppia. La maggior parte dei planner offre pacchetti "renewal" scontati del 50 % rispetto ai matrimoni ufficiali. Perfetto per i traguardi di relazioni lunghe o per le nuove famiglie (l’avvio di una famiglia allargata). Grande tendenza negli USA, senza lo stress della burocrazia.',
       nl: 'Het hernieuwen van geloften vereist geen enkel juridisch papierwerk — alleen een ceremonie en het paar. De meeste planners bieden "renewal"-pakketten met 50 % korting ten opzichte van officiële bruiloften. Uitstekend voor mijlpalen van lange relaties of nieuwe gezinnen (start van een samengesteld gezin). Grote trend in de VS, zonder papierwerkdruk.',
+      sv: 'Att förnya löftena kräver inget juridiskt pappersarbete — bara en ceremoni och paret. De flesta planerare erbjuder "förnyelsepaket" till 50 % av priset för ett officiellt bröllop. Perfekt för milstolpar i långa förhållanden eller nya familjer (när en ombildad familj tar form). Stor trend i USA, utan press från papper.',
     },
     bestSeason: {
       fi: 'Ympäri vuoden, paras 5/10/25/50 vuotta yhdessä',
@@ -499,6 +532,7 @@ export const weddingTypes: WeddingType[] = [
       fr: 'Toute l’année, idéal aux jalons de 5/10/25/50 ans',
       it: 'Tutto l’anno, ideale ai traguardi di 5/10/25/50 anni',
       nl: 'Het hele jaar, het best bij de mijlpaal van 5/10/25/50 jaar',
+      sv: 'året runt, bäst vid 5/10/25/50-årsmilstolpen',
     },
     priceRange: '€800 – €3 500',
     capacity: '2–30 vierasta',
@@ -514,6 +548,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Aucune formalité DVV', 'Format libre — vous rédigez les vœux', 'Convient aux familles recomposées (bénédiction de l’enfant incluse)', 'Moins cher qu’un mariage officiel'],
       it: ['Nessuna pratica DVV', 'Formato libero — scrivete voi le promesse', 'Adatto alle famiglie allargate (benedizione del bambino inclusa)', 'Più economico di un matrimonio ufficiale'],
       nl: ['Geen DVV-papierwerk', 'Vrij format — je schrijft de geloften zelf', 'Geschikt voor samengestelde gezinnen (kinderzegen inbegrepen)', 'Goedkoper dan een officiële bruiloft'],
+      sv: ['Inget DVV-pappersarbete', 'Fritt upplägg — ni skriver löftena själva', 'Fungerar för ombildade familjer (välsignelse av barnet ingår)', 'Billigare än ett officiellt bröllop'],
     },
     considerations: {
       fi: ['Ei juridista vaikutusta — paperi-avioliitto on jo voimassa', 'Tarvitaan vihkijä-tuntuinen henkilö (ei pakko olla virallinen)', 'Valokuvaus-arvo on kuitenkin sama kuin häissä — investoikaa siihen'],
@@ -527,6 +562,7 @@ export const weddingTypes: WeddingType[] = [
       fr: ['Aucun effet juridique — le mariage officiel est déjà valable', 'Besoin de quelqu’un ayant la prestance d’un officiant (non requis par la loi)', 'La valeur de la photographie égale celle d’un vrai mariage — investissez-y'],
       it: ['Nessun effetto legale — il matrimonio ufficiale è già in vigore', 'Serve qualcuno con la presenza di un celebrante (non richiesto per legge)', 'Il valore della fotografia equivale a quello di un vero matrimonio — investiteci'],
       nl: ['Geen juridisch effect — het officiële huwelijk is al van kracht', 'Iemand met voltrekker-uitstraling nodig (wettelijk niet verplicht)', 'De fotografiewaarde staat gelijk aan een echte bruiloft — investeer daarin'],
+      sv: ['Ingen juridisk verkan — äktenskapet gäller redan på papper', 'Behöver någon med förrättarnärvaro (inget lagkrav)', 'Fotografin är lika mycket värd som på ett riktigt bröllop — satsa där'],
     },
     venueSlugs: ['kakslauttanen', 'apukka-resort', 'lapland-hotels-saaga', 'wilderness-hotel-muotka'],
     heroImage: '/images/types/vow-renewal.webp',

@@ -29,7 +29,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Solicita un presupuesto para este lugar', 'pt-BR': 'Peça um orçamento para este local',
     'zh-CN': '获取此场地的报价', ko: '이 웨딩 장소 견적 받기',
     fr: 'Demander un devis pour ce lieu', it: 'Richiedi un preventivo per questa location',
-    nl: 'Vraag een offerte aan voor deze locatie',
+    nl: 'Vraag een offerte aan voor deze locatie', sv: 'Get a quote for this venue',
   },
   checkPrices: {
     en: 'Check rates & book', fi: 'Tarkista hinnat & varaa',
@@ -37,57 +37,57 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Ver precios y reservar', 'pt-BR': 'Ver preços e reservar',
     'zh-CN': '查看价格并预订', ko: '가격 확인 & 예약',
     fr: 'Voir prix & réserver', it: 'Vedi prezzi e prenota',
-    nl: 'Bekijk prijzen & boek',
+    nl: 'Bekijk prijzen & boek', sv: 'Check rates & book',
   },
   affordable: {
     en: 'Affordable', fi: 'Edullinen', de: 'Günstig', ja: 'お手頃',
     es: 'Económico', 'pt-BR': 'Acessível', 'zh-CN': '经济实惠', ko: '합리적',
-    fr: 'Abordable', it: 'Economico', nl: 'Betaalbaar',
+    fr: 'Abordable', it: 'Economico', nl: 'Betaalbaar', sv: 'Affordable',
   },
   midRange: {
     en: 'Mid-range', fi: 'Keskihintainen', de: 'Mittelklasse', ja: '中価格帯',
     es: 'Gama media', 'pt-BR': 'Intermediário', 'zh-CN': '中档', ko: '중급',
-    fr: 'Milieu de gamme', it: 'Fascia media', nl: 'Middensegment',
+    fr: 'Milieu de gamme', it: 'Fascia media', nl: 'Middensegment', sv: 'Mid-range',
   },
   premium: {
     en: 'Premium', fi: 'Premium', de: 'Premium', ja: 'プレミアム',
     es: 'Premium', 'pt-BR': 'Premium', 'zh-CN': '高端', ko: '프리미엄',
-    fr: 'Premium', it: 'Premium', nl: 'Premium',
+    fr: 'Premium', it: 'Premium', nl: 'Premium', sv: 'Premium',
   },
   open: {
     en: 'Open', fi: 'Aukiolo', de: 'Geöffnet', ja: '営業',
     es: 'Apertura', 'pt-BR': 'Funcionamento', 'zh-CN': '开放', ko: '운영',
-    fr: 'Ouverture', it: 'Apertura', nl: 'Geopend',
+    fr: 'Ouverture', it: 'Apertura', nl: 'Geopend', sv: 'Open',
   },
   yearRound: {
     en: 'Year-round', fi: 'Ympäri vuoden', de: 'Ganzjährig', ja: '通年',
     es: 'Todo el año', 'pt-BR': 'O ano todo', 'zh-CN': '全年', ko: '연중',
-    fr: 'Toute l’année', it: 'Tutto l’anno', nl: 'Het hele jaar',
+    fr: 'Toute l’année', it: 'Tutto l’anno', nl: 'Het hele jaar', sv: 'Year-round',
   },
   seasonal: {
     en: 'Seasonal', fi: 'Sesonki', de: 'Saisonal', ja: 'シーズン制',
     es: 'Por temporada', 'pt-BR': 'Sazonal', 'zh-CN': '季节性', ko: '시즌제',
-    fr: 'Saisonnier', it: 'Stagionale', nl: 'Seizoensgebonden',
+    fr: 'Saisonnier', it: 'Stagionale', nl: 'Seizoensgebonden', sv: 'Seasonal',
   },
   open12: {
     en: '12 months/year', fi: 'avoinna 12 kk', de: '12 Monate/Jahr', ja: '年間12か月',
     es: '12 meses al año', 'pt-BR': '12 meses por ano', 'zh-CN': '一年 12 个月', ko: '연 12개월',
-    fr: '12 mois/an', it: '12 mesi all’anno', nl: '12 maanden/jaar',
+    fr: '12 mois/an', it: '12 mesi all’anno', nl: '12 maanden/jaar', sv: '12 months/year',
   },
   winterSeason: {
     en: 'winter season', fi: 'talvikausi', de: 'Wintersaison', ja: '冬季',
     es: 'temporada de invierno', 'pt-BR': 'temporada de inverno', 'zh-CN': '冬季', ko: '겨울 시즌',
-    fr: 'saison hivernale', it: 'stagione invernale', nl: 'winterseizoen',
+    fr: 'saison hivernale', it: 'stagione invernale', nl: 'winterseizoen', sv: 'winter season',
   },
   suitsWeddings: {
     en: 'Suits weddings', fi: 'Sopii häihin', de: 'Für Hochzeiten geeignet', ja: '結婚式向き',
     es: 'Apto para bodas', 'pt-BR': 'Ideal para casamentos', 'zh-CN': '适合婚礼', ko: '웨딩에 적합',
-    fr: 'Adapté aux mariages', it: 'Adatto ai matrimoni', nl: 'Geschikt voor bruiloften',
+    fr: 'Adapté aux mariages', it: 'Adatto ai matrimoni', nl: 'Geschikt voor bruiloften', sv: 'Suits weddings',
   },
   weddingTypesCount: {
     en: 'wedding types', fi: 'eri häätyyppiä', de: 'Hochzeitsarten', ja: 'タイプの結婚式',
     es: 'tipos de boda', 'pt-BR': 'tipos de casamento', 'zh-CN': '种婚礼类型', ko: '가지 웨딩 유형',
-    fr: 'types de mariage', it: 'tipi di matrimonio', nl: 'soorten bruiloften',
+    fr: 'types de mariage', it: 'tipi di matrimonio', nl: 'soorten bruiloften', sv: 'wedding types',
   },
   tailoredProposal: {
     en: 'Get a tailored proposal', fi: 'Pyydä räätälöity ehdotus',
@@ -95,7 +95,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Recibe una propuesta a medida', 'pt-BR': 'Receba uma proposta sob medida',
     'zh-CN': '获取量身定制方案', ko: '맞춤 제안 받기',
     fr: 'Recevoir une proposition sur mesure', it: 'Ricevi una proposta su misura',
-    nl: 'Ontvang een voorstel op maat',
+    nl: 'Ontvang een voorstel op maat', sv: 'Get a tailored proposal',
   },
   atAGlance: {
     en: 'This venue at a glance', fi: 'Tämä venue lyhyesti',
@@ -103,7 +103,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Este lugar de un vistazo', 'pt-BR': 'Este local em resumo',
     'zh-CN': '场地速览', ko: '이 웨딩 장소 한눈에',
     fr: 'Ce lieu en un coup d’œil', it: 'Questa location in breve',
-    nl: 'Deze locatie in het kort',
+    nl: 'Deze locatie in het kort', sv: 'This venue at a glance',
   },
   venueOffers: {
     en: 'What this venue offers', fi: 'Mitä paikka tarjoaa',
@@ -111,7 +111,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Lo que ofrece este lugar', 'pt-BR': 'O que este local oferece',
     'zh-CN': '此场地提供的服务', ko: '이 웨딩 장소가 제공하는 것',
     fr: 'Ce que ce lieu propose', it: 'Cosa offre questa location',
-    nl: 'Wat deze locatie biedt',
+    nl: 'Wat deze locatie biedt', sv: 'What this venue offers',
   },
   weddingSpaces: {
     en: 'Wedding spaces', fi: 'Tilat häihin',
@@ -119,7 +119,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Espacios para bodas', 'pt-BR': 'Espaços para casamento',
     'zh-CN': '婚礼空间', ko: '웨딩 공간',
     fr: 'Espaces de mariage', it: 'Spazi per matrimoni',
-    nl: 'Trouwruimtes',
+    nl: 'Trouwruimtes', sv: 'Wedding spaces',
   },
   weddingTypes: {
     en: 'Wedding types', fi: 'Häätyypit',
@@ -127,7 +127,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Tipos de boda', 'pt-BR': 'Tipos de casamento',
     'zh-CN': '婚礼类型', ko: '웨딩 유형',
     fr: 'Types de mariage', it: 'Tipi di matrimonio',
-    nl: 'Soorten bruiloften',
+    nl: 'Soorten bruiloften', sv: 'Wedding types',
   },
   otherVenues: {
     en: 'Other venues', fi: 'Muita hääpaikkoja',
@@ -135,7 +135,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Otros lugares', 'pt-BR': 'Outros locais',
     'zh-CN': '其他场地', ko: '다른 웨딩 장소',
     fr: 'Autres lieux', it: 'Altre location',
-    nl: 'Andere locaties',
+    nl: 'Andere locaties', sv: 'Other venues',
   },
   compareNearby: {
     en: 'Compare nearby alternatives', fi: 'Vertaa lähialueen vaihtoehtoihin',
@@ -143,7 +143,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Compara alternativas cercanas', 'pt-BR': 'Compare alternativas próximas',
     'zh-CN': '比较附近的选择', ko: '주변 대안 비교하기',
     fr: 'Comparez les alternatives à proximité', it: 'Confronta le alternative vicine',
-    nl: 'Vergelijk alternatieven in de buurt',
+    nl: 'Vergelijk alternatieven in de buurt', sv: 'Compare nearby alternatives',
   },
   freeQuote: {
     en: 'Free quote', fi: 'Maksuton tarjous',
@@ -151,7 +151,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Presupuesto gratuito', 'pt-BR': 'Orçamento gratuito',
     'zh-CN': '免费报价', ko: '무료 견적',
     fr: 'Devis gratuit', it: 'Preventivo gratuito',
-    nl: 'Gratis offerte',
+    nl: 'Gratis offerte', sv: 'Free quote',
   },
   leadIntro: {
     en: 'Fill in the form and the LaplandWeddings team will route your enquiry to this venue’s trusted wedding planners. You get 1–3 tailored quotes within 48 hours.',
@@ -164,7 +164,7 @@ const V: Record<VKey, Localized<string>> = {
     ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 웨딩 장소의 신뢰할 수 있는 웨딩 플래너에게 전달합니다. 48시간 이내에 맞춤 견적 1~3건을 받습니다.',
     fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners de confiance de ce lieu. Vous recevez 1 à 3 devis sur mesure sous 48 heures.',
     it: 'Compila il modulo e il team LaplandWeddings inoltrerà la tua richiesta ai wedding planner di fiducia di questa location. Ricevi 1–3 preventivi su misura entro 48 ore.',
-    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt je aanvraag door naar de vertrouwde trouwplanners van deze locatie. Je ontvangt binnen 48 uur 1–3 offertes op maat.',
+    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt je aanvraag door naar de vertrouwde trouwplanners van deze locatie. Je ontvangt binnen 48 uur 1–3 offertes op maat.', sv: 'Fill in the form and the LaplandWeddings team will route your enquiry to this venue’s trusted wedding planners. You get 1–3 tailored quotes within 48 hours.',
   },
   // Templates — {name} / {region} are substituted at render time.
   whatMakesSpecial: {
@@ -173,7 +173,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Qué hace especial a {name}', 'pt-BR': 'O que torna {name} especial',
     'zh-CN': '{name} 的特别之处', ko: '{name}이(가) 특별한 이유',
     fr: 'Ce qui rend {name} unique', it: 'Cosa rende speciale {name}',
-    nl: 'Wat {name} bijzonder maakt',
+    nl: 'Wat {name} bijzonder maakt', sv: 'What makes {name} special',
   },
   stylesItFits: {
     en: 'Wedding styles {name} fits', fi: '{name} sopii näihin häihin',
@@ -181,7 +181,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Estilos de boda que encajan con {name}', 'pt-BR': 'Estilos de casamento que combinam com {name}',
     'zh-CN': '{name} 适合的婚礼风格', ko: '{name}에 어울리는 웨딩 스타일',
     fr: 'Styles de mariage adaptés à {name}', it: 'Stili di matrimonio adatti a {name}',
-    nl: 'Trouwstijlen die bij {name} passen',
+    nl: 'Trouwstijlen die bij {name} passen', sv: 'Wedding styles {name} fits',
   },
   otherRegionVenues: {
     en: 'Other {region} venues', fi: 'Muita {region}n hääpaikkoja',
@@ -189,7 +189,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Otros lugares en {region}', 'pt-BR': 'Outros locais em {region}',
     'zh-CN': '{region}的其他场地', ko: '{region}의 다른 웨딩 장소',
     fr: 'Autres lieux à {region}', it: 'Altre location a {region}',
-    nl: 'Andere locaties in {region}',
+    nl: 'Andere locaties in {region}', sv: 'Other {region} venues',
   },
   getQuoteFor: {
     en: 'Get a quote — {name}', fi: 'Pyydä tarjous — {name}',
@@ -197,7 +197,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Solicita un presupuesto — {name}', 'pt-BR': 'Peça um orçamento — {name}',
     'zh-CN': '获取报价 — {name}', ko: '견적 받기 — {name}',
     fr: 'Demander un devis — {name}', it: 'Richiedi un preventivo — {name}',
-    nl: 'Vraag een offerte aan — {name}',
+    nl: 'Vraag een offerte aan — {name}', sv: 'Get a quote — {name}',
   },
 };
 

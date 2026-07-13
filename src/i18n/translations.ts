@@ -18,8 +18,9 @@ import koSync from './translations.ko';
 import frSync from './translations.fr';
 import itSync from './translations.it';
 import nlSync from './translations.nl';
+import svSync from './translations.sv';
 
-export type Lang = 'fi' | 'en' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl';
+export type Lang = 'fi' | 'en' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv';
 
 // Use the EN block as the canonical shape, all other locales share the same keys.
 export type Translation = typeof enSync;
@@ -37,6 +38,7 @@ export const t: Record<Lang, Translation> = {
   fr: frSync as unknown as Translation,
   it: itSync as unknown as Translation,
   nl: nlSync as unknown as Translation,
+  sv: svSync as unknown as Translation,
 };
 
 /** No-op kept for API compatibility with LangContext (used to be async loader). */

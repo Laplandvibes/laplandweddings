@@ -17,6 +17,7 @@ const TEXT: Record<string, string> = {
   fr: "LaplandWeddings fait partie du réseau LaplandVibes. Ce site contient des liens partenaires (Hotels.com, Trip.com, etc.) : si vous cliquez et réservez, nous touchons une petite commission sans frais supplémentaires pour vous. Cela finance le site — merci d'utiliser nos liens.",
   it: 'LaplandWeddings fa parte della rete LaplandVibes. Questo sito contiene link partner (Hotels.com, Trip.com, ecc.): se clicca e prenota, riceviamo una piccola commissione senza costi aggiuntivi per Lei. In questo modo finanziamo il sito — grazie per aver utilizzato i nostri link.',
   nl: 'LaplandWeddings maakt deel uit van het LaplandVibes-netwerk. Deze site bevat partnerlinks (bijv. Hotels.com, Trip.com): als u klikt en boekt, ontvangen wij een kleine commissie zonder extra kosten voor u. Dit financiert de site — bedankt voor het gebruik van onze links.',
+  sv: 'LaplandWeddings är en del av LaplandVibes-nätverket. Sajten innehåller partnerlänkar (t.ex. Hotels.com, Trip.com): om du klickar och bokar får vi en liten provision utan extra kostnad för dig. Det finansierar sajten — tack för att du använder våra länkar.',
 };
 
 export default function AffiliateDisclosure() {

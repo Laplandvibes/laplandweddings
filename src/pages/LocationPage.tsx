@@ -23,7 +23,7 @@ const P: Record<'weddings' | 'venuesInRegion', Localized<string>> = {
     ko: '웨딩',
     fr: 'Mariages',
     it: 'Matrimoni',
-    nl: 'Bruiloften',
+    nl: 'Bruiloften', sv: 'Weddings',
   },
   venuesInRegion: {
     en: 'Wedding venues in this region',
@@ -36,7 +36,7 @@ const P: Record<'weddings' | 'venuesInRegion', Localized<string>> = {
     ko: '이 지역의 웨딩 장소',
     fr: 'Lieux de mariage dans cette région',
     it: 'Location per matrimoni in questa regione',
-    nl: 'Trouwlocaties in deze regio',
+    nl: 'Trouwlocaties in deze regio', sv: 'Wedding venues in this region',
   },
 };
 

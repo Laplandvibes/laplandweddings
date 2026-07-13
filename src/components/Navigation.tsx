@@ -18,6 +18,7 @@ const ALL_LANGS: { code: Lang; label: string; native: string }[] = [
   { code: 'fr', label: 'FR', native: 'Français' },
   { code: 'it', label: 'IT', native: 'Italiano' },
   { code: 'nl', label: 'NL', native: 'Nederlands' },
+  { code: 'sv', label: 'SV', native: 'Svenska' },
 ];
 
 export default function Navigation() {
@@ -62,6 +63,7 @@ export default function Navigation() {
     fr:      { switchLang: 'Changer de langue',   language: 'Langue',   menu: 'Menu' },
     it:      { switchLang: 'Cambia lingua',       language: 'Lingua',   menu: 'Menu' },
     nl:      { switchLang: 'Taal wijzigen',       language: 'Taal',     menu: 'Menu' },
+    sv:      { switchLang: 'Byt språk',           language: 'Språk',    menu: 'Meny' },
   };
   const aria = ARIA[lang] ?? ARIA.en;
 

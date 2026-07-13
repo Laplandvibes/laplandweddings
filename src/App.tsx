@@ -42,7 +42,7 @@ const routes = [
   { path: 'cookie-policy', element: <CookiePolicy /> },
 ];
 
-const LOCALE_PREFIXES = ['fi', 'de', 'ja', 'es', 'br', 'cn', 'kr', 'fr', 'it', 'nl'] as const;
+const LOCALE_PREFIXES = ['fi', 'de', 'ja', 'es', 'br', 'cn', 'kr', 'fr', 'it', 'nl', 'sv'] as const;
 
 function LocalisedCookieBanner() {
   const { lang, localePath } = useLang();

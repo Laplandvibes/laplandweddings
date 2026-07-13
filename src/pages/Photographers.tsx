@@ -18,7 +18,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '라플란드 사진가 — Maria Hedengren, Robin Goodlad | LaplandWeddings',
     fr: 'Photographes de mariage en Laponie | LaplandWeddings',
     it: 'Fotografi di matrimonio in Lapponia | LaplandWeddings',
-    nl: 'Trouwfotografen in Lapland | LaplandWeddings',
+    nl: 'Trouwfotografen in Lapland | LaplandWeddings', sv: 'Lapland Wedding Photographers — Maria Hedengren, Robin Goodlad et al. | LaplandWeddings',
   },
   seoDesc: {
     en: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos — proven in the cold.',
@@ -31,7 +31,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '라플란드 최고의 웨딩 포토그래퍼 6인. 오로라, 스노우 채플, 글라스 이글루 — 혹한 속에서 검증됨.',
     fr: 'Six des meilleurs photographes de mariage de Laponie. Aurores boréales, chapelles de neige, igloos de verre — éprouvés dans le froid.',
     it: 'Sei tra i migliori fotografi di matrimonio della Lapponia. Aurora boreale, cappelle di neve, igloo di vetro — collaudati nel gelo.',
-    nl: 'Zes van de beste trouwfotografen van Lapland. Noorderlicht, sneeuwkapellen, glazen iglo’s — bewezen in de kou.',
+    nl: 'Zes van de beste trouwfotografen van Lapland. Noorderlicht, sneeuwkapellen, glazen iglo’s — bewezen in de kou.', sv: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos — proven in the cold.',
   },
   title: {
     en: 'Lapland wedding photographers',
@@ -44,7 +44,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '라플란드 웨딩 포토그래퍼',
     fr: 'Photographes de mariage en Laponie',
     it: 'Fotografi di matrimonio in Lapponia',
-    nl: 'Trouwfotografen in Lapland',
+    nl: 'Trouwfotografen in Lapland', sv: 'Lapland wedding photographers',
   },
   subtitle: {
     en: 'Six of the most experienced wedding photographers in Lapland. Aurora-calibrated, snow-chapel lighting, glass-igloo composition — all proven in sub-zero conditions.',
@@ -57,7 +57,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '라플란드에서 가장 노련한 웨딩 포토그래퍼 6인. 오로라 맞춤 세팅, 스노우 채플 조명, 글라스 이글루 구도 — 모두 영하의 환경에서 검증되었습니다.',
     fr: 'Six des photographes de mariage les plus expérimentés de Laponie. Réglages calibrés pour les aurores, éclairage en chapelle de neige, composition en igloo de verre — le tout éprouvé par grand froid.',
     it: 'Sei tra i fotografi di matrimonio più esperti della Lapponia. Tarati sull’aurora, illuminazione per cappelle di neve, composizione negli igloo di vetro — tutto collaudato sotto zero.',
-    nl: 'Zes van de meest ervaren trouwfotografen van Lapland. Gekalibreerd op het noorderlicht, belichting in sneeuwkapellen, compositie in glazen iglo’s — alles bewezen bij temperaturen onder nul.',
+    nl: 'Zes van de meest ervaren trouwfotografen van Lapland. Gekalibreerd op het noorderlicht, belichting in sneeuwkapellen, compositie in glazen iglo’s — alles bewezen bij temperaturen onder nul.', sv: 'Six of the most experienced wedding photographers in Lapland. Aurora-calibrated, snow-chapel lighting, glass-igloo composition — all proven in sub-zero conditions.',
   },
   imageAlt: {
     en: 'Wedding couple in winter Lapland',
@@ -70,7 +70,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '겨울 라플란드의 신혼부부',
     fr: 'Couple de mariés en Laponie hivernale',
     it: 'Coppia di sposi nella Lapponia invernale',
-    nl: 'Bruidspaar in winters Lapland',
+    nl: 'Bruidspaar in winters Lapland', sv: 'Wedding couple in winter Lapland',
   },
   sourceNote: {
     en: 'Information sourced from public photographer websites. LaplandWeddings is not in a contractual relationship with all listed — contact directly via their own sites.',
@@ -83,7 +83,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '정보는 각 포토그래퍼의 공개 웹사이트에서 수집했습니다. LaplandWeddings는 게재된 모든 분과 계약 관계에 있지 않습니다 — 각자의 사이트를 통해 직접 연락하세요.',
     fr: 'Informations issues des sites web publics des photographes. LaplandWeddings n’est pas lié par contrat à tous les photographes répertoriés — contactez-les directement via leurs propres sites.',
     it: 'Informazioni tratte dai siti web pubblici dei fotografi. LaplandWeddings non ha un rapporto contrattuale con tutti gli elencati — contattali direttamente tramite i loro siti.',
-    nl: 'Informatie afkomstig van de openbare websites van de fotografen. LaplandWeddings heeft geen contractuele relatie met alle vermelde fotografen — neem rechtstreeks contact op via hun eigen sites.',
+    nl: 'Informatie afkomstig van de openbare websites van de fotografen. LaplandWeddings heeft geen contractuele relatie met alle vermelde fotografen — neem rechtstreeks contact op via hun eigen sites.', sv: 'Information sourced from public photographer websites. LaplandWeddings is not in a contractual relationship with all listed — contact directly via their own sites.',
   },
 };
 

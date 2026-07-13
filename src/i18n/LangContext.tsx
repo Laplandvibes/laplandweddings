@@ -32,6 +32,7 @@ const PREFIXES: { lang: Lang; prefix: string }[] = [
   { lang: 'fr', prefix: '/fr' },
   { lang: 'it', prefix: '/it' },
   { lang: 'nl', prefix: '/nl' },
+  { lang: 'sv', prefix: '/sv' },
 ];
 
 /** Strips a leading locale prefix from a path, returning the canonical (EN) path. */
@@ -71,6 +72,7 @@ const BCP47: Record<Lang, string> = {
   fr: 'fr-FR',
   it: 'it-IT',
   nl: 'nl-NL',
+  sv: 'sv-SE',
 };
 
 export function LangProvider({ children }: { children: ReactNode }) {

@@ -131,6 +131,15 @@ const COPY: Record<Lang, Block> = {
       { href: 'https://laplandvisit.com/itineraries/', label: 'Plan je hele reis door Lapland', body: 'Wat te zien en te doen voor en na de ceremonie — een complete reisgids voor Lapland.' },
       { href: 'https://laplandtransport.com/lapland-guide/', label: 'Naar Lapland reizen', body: 'Vluchten, treinen en luchthaventransfers naar Rovaniemi, Kittilä en Ivalo voor het hele gezelschap.' },
     ],
+  }, sv: {
+    eyebrow: 'Planning your Lapland wedding',
+    title: 'Get everyone there — and somewhere to stay',
+    subtitle: 'A Lapland wedding is also a trip for your guests. These sister guides cover the rest of the journey.',
+    cards: [
+      { href: 'https://laplandstays.com/property-types/', label: 'Where to stay for the wedding party', body: 'Cabins, glass igloos and hotels with room blocks for your guests across Lapland.' },
+      { href: 'https://laplandvisit.com/itineraries/', label: 'Plan your wider Lapland trip', body: 'What to see and do before and after the ceremony — a full Lapland travel guide.' },
+      { href: 'https://laplandtransport.com/lapland-guide/', label: 'Getting to Lapland', body: 'Flights, trains and airport transfers to Rovaniemi, Kittilä and Ivalo for the whole party.' },
+    ],
   },
 };
 

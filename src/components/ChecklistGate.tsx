@@ -23,7 +23,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '무료 리드 마그넷',
     fr: 'Ressource gratuite',
     it: 'Risorsa gratuita',
-    nl: 'Gratis weggever',
+    nl: 'Gratis weggever', sv: 'Free lead magnet',
   },
   title: {
     en: 'Unlock the DVV checklist — one email, that’s it',
@@ -36,7 +36,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: 'DVV 체크리스트 받기 — 이메일 하나면 끝',
     fr: 'Débloquez la checklist DVV — un e-mail suffit',
     it: 'Sblocca la checklist DVV — basta un’email',
-    nl: 'Ontgrendel de DVV-checklist — één e-mail, meer niet',
+    nl: 'Ontgrendel de DVV-checklist — één e-mail, meer niet', sv: 'Unlock the DVV checklist — one email, that’s it',
   },
   sub: {
     en: 'Get every step and link instantly, plus regular updates from inside Lapland’s wedding market — venues, season tips, offers. Unsubscribe anytime.',
@@ -49,7 +49,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '모든 단계와 링크를 즉시 받고, 라플란드 웨딩 시장의 소식(웨딩 장소, 시즌 팁, 혜택)도 정기적으로 받아보세요. 언제든 구독을 취소할 수 있습니다.',
     fr: 'Recevez instantanément toutes les étapes et les liens, ainsi que des nouvelles régulières du marché du mariage en Laponie : lieux, conseils de saison, offres. Désinscription à tout moment.',
     it: 'Ricevi subito tutti i passaggi e i link, oltre ad aggiornamenti regolari dal mercato dei matrimoni in Lapponia: location, consigli stagionali, offerte. Disiscriviti quando vuoi.',
-    nl: 'Ontvang direct elke stap en link, plus regelmatige updates uit de huwelijksmarkt van Lapland — locaties, seizoenstips, aanbiedingen. Schrijf je op elk moment uit.',
+    nl: 'Ontvang direct elke stap en link, plus regelmatige updates uit de huwelijksmarkt van Lapland — locaties, seizoenstips, aanbiedingen. Schrijf je op elk moment uit.', sv: 'Get every step and link instantly, plus regular updates from inside Lapland’s wedding market — venues, season tips, offers. Unsubscribe anytime.',
   },
   bulletA: {
     en: 'One-page checklist — every document and witness',
@@ -62,7 +62,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '한 장짜리 체크리스트 — 모든 서류와 증인',
     fr: 'Checklist d’une page — chaque document et témoin',
     it: 'Checklist di una pagina: tutti i documenti e i testimoni',
-    nl: 'Checklist van één pagina — elk document en getuige',
+    nl: 'Checklist van één pagina — elk document en getuige', sv: 'One-page checklist — every document and witness',
   },
   bulletB: {
     en: 'Timeline: 8 weeks before → after the wedding',
@@ -75,7 +75,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '일정: 결혼식 8주 전 → 결혼식 후',
     fr: 'Calendrier : 8 semaines avant → après le mariage',
     it: 'Tempistiche: 8 settimane prima → dopo il matrimonio',
-    nl: 'Tijdlijn: 8 weken vooraf → na de bruiloft',
+    nl: 'Tijdlijn: 8 weken vooraf → na de bruiloft', sv: 'Timeline: 8 weeks before → after the wedding',
   },
   bulletC: {
     en: 'Direct links to the DVV official pages',
@@ -88,7 +88,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: 'DVV 공식 페이지로 바로 가는 링크',
     fr: 'Liens directs vers les pages officielles du DVV',
     it: 'Link diretti alle pagine ufficiali del DVV',
-    nl: 'Directe links naar de officiële DVV-pagina’s',
+    nl: 'Directe links naar de officiële DVV-pagina’s', sv: 'Direct links to the DVV official pages',
   },
   bulletD: {
     en: 'Print on A4 or save as PDF',
@@ -101,7 +101,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: 'A4로 인쇄하거나 PDF로 저장',
     fr: 'Imprimez en A4 ou enregistrez en PDF',
     it: 'Stampa in A4 o salva come PDF',
-    nl: 'Print op A4 of bewaar als pdf',
+    nl: 'Print op A4 of bewaar als pdf', sv: 'Print on A4 or save as PDF',
   },
   firstNameLabel: {
     en: 'First name (optional)',
@@ -114,7 +114,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '이름 (선택)',
     fr: 'Prénom (facultatif)',
     it: 'Nome (facoltativo)',
-    nl: 'Voornaam (optioneel)',
+    nl: 'Voornaam (optioneel)', sv: 'First name (optional)',
   },
   emailLabel: {
     en: 'Email address *',
@@ -127,7 +127,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '이메일 주소 *',
     fr: 'Adresse e-mail *',
     it: 'Indirizzo email *',
-    nl: 'E-mailadres *',
+    nl: 'E-mailadres *', sv: 'Email address *',
   },
   emailPlaceholder: {
     en: 'you@email.com',
@@ -140,7 +140,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: 'you@email.com',
     fr: 'vous@email.com',
     it: 'tu@email.com',
-    nl: 'jij@email.com',
+    nl: 'jij@email.com', sv: 'you@email.com',
   },
   consent: {
     en: 'I agree that I may be contacted about Lapland-wedding topics. I can unsubscribe anytime.',
@@ -153,7 +153,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '라플란드 웨딩 관련 안내를 받는 데 동의합니다. 언제든 구독을 취소할 수 있습니다.',
     fr: 'J’accepte d’être contacté·e au sujet des mariages en Laponie. Je peux me désinscrire à tout moment.',
     it: 'Acconsento a essere contattato su temi legati ai matrimoni in Lapponia. Posso annullare l’iscrizione in qualsiasi momento.',
-    nl: 'Ik ga ermee akkoord benaderd te worden over onderwerpen rond trouwen in Lapland. Ik kan me altijd uitschrijven.',
+    nl: 'Ik ga ermee akkoord benaderd te worden over onderwerpen rond trouwen in Lapland. Ik kan me altijd uitschrijven.', sv: 'I agree that I may be contacted about Lapland-wedding topics. I can unsubscribe anytime.',
   },
   submit: {
     en: 'Open the checklist →',
@@ -166,7 +166,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '체크리스트 열기 →',
     fr: 'Ouvrir la checklist →',
     it: 'Apri la checklist →',
-    nl: 'Open de checklist →',
+    nl: 'Open de checklist →', sv: 'Open the checklist →',
   },
   submitting: {
     en: 'Sending…',
@@ -179,7 +179,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '전송 중…',
     fr: 'Envoi…',
     it: 'Invio…',
-    nl: 'Verzenden…',
+    nl: 'Verzenden…', sv: 'Sending…',
   },
   privacy: {
     en: 'Your details are safe with the LaplandVibes network. We never share your email with third parties.',
@@ -192,7 +192,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '귀하의 정보는 LaplandVibes 네트워크에서 안전하게 보호됩니다. 이메일을 제3자와 공유하지 않습니다.',
     fr: 'Vos données sont en sécurité au sein du réseau LaplandVibes. Nous ne partageons jamais votre e-mail avec des tiers.',
     it: 'I tuoi dati sono al sicuro nella rete LaplandVibes. Non condividiamo mai la tua email con terze parti.',
-    nl: 'Je gegevens zijn veilig binnen het LaplandVibes-netwerk. We delen je e-mail nooit met derden.',
+    nl: 'Je gegevens zijn veilig binnen het LaplandVibes-netwerk. We delen je e-mail nooit met derden.', sv: 'Your details are safe with the LaplandVibes network. We never share your email with third parties.',
   },
 };
 
@@ -207,7 +207,7 @@ const GATE_ERROR: Localized<string> = {
   ko: '전송에 실패했습니다. 다시 시도해 주세요.',
   fr: 'L’envoi a échoué. Veuillez réessayer.',
   it: 'Invio non riuscito. Riprova.',
-  nl: 'Verzenden mislukt. Probeer het opnieuw.',
+  nl: 'Verzenden mislukt. Probeer het opnieuw.', sv: 'Submission failed. Please try again.',
 };
 
 interface Props {

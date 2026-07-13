@@ -20,7 +20,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '라플란드 웨딩 유형 — 오로라, 스노우 채플, 글라스 이글루 | LaplandWeddings',
     fr: 'Types de mariage en Laponie | LaplandWeddings',
     it: 'Tipi di matrimonio in Lapponia | LaplandWeddings',
-    nl: 'Soorten bruiloften in Lapland | LaplandWeddings',
+    nl: 'Soorten bruiloften in Lapland | LaplandWeddings', sv: 'Lapland Wedding Types — Northern Lights, Snow Chapel, Glass Igloo | LaplandWeddings',
   },
   seoDesc: {
     en: 'Six Lapland wedding types: Northern Lights, snow chapel, glass igloo, midnight sun, elopement, and vow renewal.',
@@ -33,7 +33,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '라플란드의 여섯 가지 웨딩 유형: 오로라, 스노우 채플, 글라스 이글루, 백야, 엘로프먼트, 서약 갱신.',
     fr: 'Six types de mariage en Laponie : aurores boréales, chapelle de neige, igloo de verre, soleil de minuit, elopement et renouvellement des vœux.',
     it: 'Sei tipi di matrimonio in Lapponia: aurora boreale, cappella di neve, igloo di vetro, sole di mezzanotte, elopement e rinnovo delle promesse.',
-    nl: 'Zes soorten bruiloften in Lapland: noorderlicht, sneeuwkapel, glazen iglo, middernachtzon, elopement en hernieuwing van geloften.',
+    nl: 'Zes soorten bruiloften in Lapland: noorderlicht, sneeuwkapel, glazen iglo, middernachtzon, elopement en hernieuwing van geloften.', sv: 'Six Lapland wedding types: Northern Lights, snow chapel, glass igloo, midnight sun, elopement, and vow renewal.',
   },
   imageAlt: {
     en: 'Wedding couple in a snow chapel by candlelight',
@@ -46,7 +46,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '촛불이 켜진 스노우 채플 안의 신혼부부',
     fr: 'Couple de mariés dans une chapelle de neige à la lueur des bougies',
     it: 'Coppia di sposi in una cappella di neve a lume di candela',
-    nl: 'Bruidspaar in een sneeuwkapel bij kaarslicht',
+    nl: 'Bruidspaar in een sneeuwkapel bij kaarslicht', sv: 'Wedding couple in a snow chapel by candlelight',
   },
 };
 

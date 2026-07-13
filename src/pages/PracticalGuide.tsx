@@ -33,7 +33,7 @@ const STEPS: Step[] = [
       ko: 'DVV에 혼인 장애 조사를 신청하세요',
       fr: 'Demandez l’examen des empêchements au DVV',
       it: 'Richiedi al DVV l’esame degli impedimenti',
-      nl: 'Vraag het onderzoek naar huwelijksbeletselen aan bij het DVV',
+      nl: 'Vraag het onderzoek naar huwelijksbeletselen aan bij het DVV', sv: 'Request the Examination of Impediments from DVV',
     },
     p: {
       fi: 'Suomalaisille 1–2 viikkoa, ulkomaalaisille 3–5 viikkoa. Maksuton (paitsi 15 € EU-käännös tarvittaessa). Hae 2 kuukautta ennen vihkimistä.',
@@ -46,7 +46,7 @@ const STEPS: Step[] = [
       ko: '핀란드 커플은 1~2주, 외국인 커플은 3~5주. 무료(필요 시 EU 번역 15유로 별도). 결혼식 2개월 전에 신청하세요.',
       fr: 'Couples finlandais : 1-2 semaines. Couples étrangers : 3-5 semaines. Gratuit (sauf 15 € de traduction UE si nécessaire). À déposer 2 mois avant le mariage.',
       it: 'Coppie finlandesi: 1-2 settimane. Coppie straniere: 3-5 settimane. Gratuito (tranne 15 € di traduzione UE se necessaria). Presentate 2 mesi prima delle nozze.',
-      nl: 'Finse stellen: 1-2 weken. Buitenlandse stellen: 3-5 weken. Gratis (behalve € 15 EU-vertaling indien nodig). Dien 2 maanden voor de bruiloft in.',
+      nl: 'Finse stellen: 1-2 weken. Buitenlandse stellen: 3-5 weken. Gratis (behalve € 15 EU-vertaling indien nodig). Dien 2 maanden voor de bruiloft in.', sv: 'Finnish couples: 1–2 weeks. Foreign couples: 3–5 weeks. Free (except €15 EU translation if needed). Submit 2 months before the wedding.',
     },
     link: { url: 'https://dvv.fi/en/examination-of-impediments-to-marriage', label: 'DVV — Examination of impediments' },
   },
@@ -63,7 +63,7 @@ const STEPS: Step[] = [
       ko: '본국에서 혼인 무장애 증명서를 발급받으세요',
       fr: 'Obtenez un certificat de non-empêchement de votre pays d’origine',
       it: 'Procurati un certificato di assenza di impedimenti dal tuo Paese',
-      nl: 'Haal een verklaring van geen huwelijksbeletsel uit je thuisland',
+      nl: 'Haal een verklaring van geen huwelijksbeletsel uit je thuisland', sv: 'Get a Certificate of No Impediment from your home country',
     },
     p: {
       fi: 'Pyydä se omasta maistraatistasi tai ulkoasiainministeriöstä ennen Suomeen tuloa. Useimmissa maissa apostille-leima ja valallinen käännös tarvitaan.',
@@ -76,7 +76,7 @@ const STEPS: Step[] = [
       ko: '핀란드 도착 전에 본국의 등록 기관이나 외교부에 신청하세요. 대부분의 국가에서 아포스티유와 선서 번역이 필요합니다.',
       fr: 'Demandez-le auprès de votre état civil ou de votre ministère des Affaires étrangères avant d’arriver en Finlande. La plupart des pays exigent une apostille et une traduction assermentée.',
       it: 'Richiedilo all’ufficio di stato civile o al ministero degli esteri del tuo Paese prima di arrivare in Finlandia. La maggior parte dei Paesi richiede apostille e traduzione giurata.',
-      nl: 'Vraag het aan bij je burgerlijke stand of ministerie van Buitenlandse Zaken voordat je in Finland aankomt. De meeste landen vereisen een apostille en een beëdigde vertaling.',
+      nl: 'Vraag het aan bij je burgerlijke stand of ministerie van Buitenlandse Zaken voordat je in Finland aankomt. De meeste landen vereisen een apostille en een beëdigde vertaling.', sv: 'Request from your home registrar or foreign ministry before arriving in Finland. Most countries require an apostille stamp and a sworn translation.',
     },
     link: { url: 'https://dvv.fi/en/a-certificate-of-the-right-granted-by-the-finnish-legislation-to-enter-a-marriage-in-a-foreign-country', label: 'DVV — Certificate of right to marry' },
   },
@@ -93,7 +93,7 @@ const STEPS: Step[] = [
       ko: '주례를 선택하세요',
       fr: 'Choisissez votre officiant',
       it: 'Scegli il tuo celebrante',
-      nl: 'Kies je voltrekker',
+      nl: 'Kies je voltrekker', sv: 'Choose your officiant',
     },
     p: {
       fi: 'Siviilivihkimys on yleisin: kunnan vihkijä Rovaniemellä, Inarissa, Kittilässä tai Sodankylässä. Englanninkielinen vihkijä järjestyy yleensä suunnittelijan kautta. Kirkollinen vihkimys vain ev.lut. kirkkoon kuuluville.',
@@ -106,7 +106,7 @@ const STEPS: Step[] = [
       ko: '민사 예식이 가장 일반적입니다: 로바니에미, 이나리, 키틸레, 소단퀼래의 지자체 주례가 진행합니다. 영어가 가능한 주례는 보통 플래너가 섭외합니다. 종교 예식은 루터교회 신자만 가능합니다.',
       fr: 'La cérémonie civile est la plus courante : un officiant municipal à Rovaniemi, Inari, Kittilä ou Sodankylä. L’officiant anglophone est généralement organisé par votre organisateur. Cérémonie religieuse réservée aux membres de l’Église luthérienne.',
       it: 'La cerimonia civile è la più comune: un celebrante comunale a Rovaniemi, Inari, Kittilä o Sodankylä. Il celebrante anglofono è di solito organizzato dal tuo planner. Cerimonia religiosa solo per i membri della Chiesa luterana.',
-      nl: 'De burgerlijke ceremonie is het meest gangbaar: een gemeentelijke voltrekker in Rovaniemi, Inari, Kittilä of Sodankylä. Een Engelstalige voltrekker wordt meestal door je planner geregeld. Een kerkelijke ceremonie alleen voor leden van de Lutherse Kerk.',
+      nl: 'De burgerlijke ceremonie is het meest gangbaar: een gemeentelijke voltrekker in Rovaniemi, Inari, Kittilä of Sodankylä. Een Engelstalige voltrekker wordt meestal door je planner geregeld. Een kerkelijke ceremonie alleen voor leden van de Lutherse Kerk.', sv: 'Civil ceremony is most common: a municipal officiant in Rovaniemi, Inari, Kittilä or Sodankylä. An English-speaking officiant is usually arranged by your planner. Religious ceremony only for members of the Lutheran Church.',
     },
   },
   {
@@ -122,7 +122,7 @@ const STEPS: Step[] = [
       ko: '증인 2명을 준비하세요',
       fr: 'Trouvez 2 témoins',
       it: 'Procurati 2 testimoni',
-      nl: 'Regel 2 getuigen',
+      nl: 'Regel 2 getuigen', sv: 'Get 2 witnesses',
     },
     p: {
       fi: 'Suomen laki vaatii kaksi todistajaa. Useimmat venuet ja suunnittelijat järjestävät heidät paikan päältä — ei vaadi suomalaisia.',
@@ -135,7 +135,7 @@ const STEPS: Step[] = [
       ko: '핀란드 법은 증인 2명을 요구합니다. 대부분의 베뉴와 플래너가 현장에서 마련하며, 핀란드인일 필요는 없습니다.',
       fr: 'La loi finlandaise exige deux témoins. La plupart des lieux et organisateurs les fournissent sur place — ils n’ont pas besoin d’être finlandais.',
       it: 'La legge finlandese richiede due testimoni. La maggior parte delle location e dei planner li fornisce in loco — non devono essere finlandesi.',
-      nl: 'De Finse wet vereist twee getuigen. De meeste locaties en planners regelen ze ter plaatse — ze hoeven niet Fins te zijn.',
+      nl: 'De Finse wet vereist twee getuigen. De meeste locaties en planners regelen ze ter plaatse — ze hoeven niet Fins te zijn.', sv: 'Finnish law requires two witnesses. Most venues and planners arrange them on site — they do not need to be Finnish.',
     },
   },
   {
@@ -151,7 +151,7 @@ const STEPS: Step[] = [
       ko: '결혼식 당일 + 혼인 증명서 2부',
       fr: 'Jour du mariage + 2 actes de mariage',
       it: 'Giorno delle nozze + 2 certificati di matrimonio',
-      nl: 'Trouwdag + 2 huwelijksakten',
+      nl: 'Trouwdag + 2 huwelijksakten', sv: 'Wedding day + 2 marriage certificates',
     },
     p: {
       fi: 'Saat 2 virallista vihkimistodistusta englanniksi. Apostille-leima nopeasti DVV:n kautta — kotimaata varten useimmissa tapauksissa.',
@@ -164,7 +164,7 @@ const STEPS: Step[] = [
       ko: '영어로 된 공식 혼인 증명서 2부를 받습니다. DVV를 통한 아포스티유는 신속하며, 대부분의 본국에서 요구됩니다.',
       fr: 'Vous recevez 2 actes de mariage officiels en anglais. L’apostille via le DVV est rapide — exigée par la plupart des pays d’origine.',
       it: 'Ricevi 2 certificati di matrimonio ufficiali in inglese. L’apostille tramite il DVV è rapida — richiesta dalla maggior parte dei Paesi d’origine.',
-      nl: 'Je ontvangt 2 officiële huwelijksakten in het Engels. De apostille via het DVV gaat snel — vereist door de meeste thuislanden.',
+      nl: 'Je ontvangt 2 officiële huwelijksakten in het Engels. De apostille via het DVV gaat snel — vereist door de meeste thuislanden.', sv: 'You receive 2 official marriage certificates in English. Apostille via DVV is fast — required by most home countries.',
     },
     link: { url: 'https://um.fi/registration-of-marriage-in-the-population-information-system', label: 'Finnish MFA — Marriage registration' },
   },
@@ -181,7 +181,7 @@ const STEPS: Step[] = [
       ko: '본국에서 혼인을 등록하세요',
       fr: 'Enregistrez le mariage dans votre pays d’origine',
       it: 'Registra il matrimonio nel tuo Paese d’origine',
-      nl: 'Registreer het huwelijk in je thuisland',
+      nl: 'Registreer het huwelijk in je thuisland', sv: 'Register the marriage in your home country',
     },
     p: {
       fi: 'Vie todistus apostille-leimalla kotimaasi rekisteriin. EU-maissa yleensä kuukauden sisällä. Tämän jälkeen avioliitto on pätevä globaalisti.',
@@ -194,7 +194,7 @@ const STEPS: Step[] = [
       ko: '아포스티유가 부착된 증명서를 본국 등록 기관에 제출하세요. EU 국가에서는 보통 한 달 이내에 처리됩니다. 이후 혼인은 전 세계적으로 유효합니다.',
       fr: 'Présentez l’acte apostillé au registre de votre pays d’origine. Dans les pays de l’UE, cela prend généralement moins d’un mois. Le mariage est alors valable dans le monde entier.',
       it: 'Porta il certificato con apostille all’anagrafe del tuo Paese d’origine. Nei Paesi UE di solito entro un mese. Dopodiché il matrimonio è valido a livello mondiale.',
-      nl: 'Lever de geapostilleerde akte in bij het register van je thuisland. In EU-landen meestal binnen een maand. Daarna is het huwelijk wereldwijd geldig.',
+      nl: 'Lever de geapostilleerde akte in bij het register van je thuisland. In EU-landen meestal binnen een maand. Daarna is het huwelijk wereldwijd geldig.', sv: 'Take the apostilled certificate to your home country’s registry. In EU countries this is usually within a month. The marriage is then globally valid.',
     },
   },
 ];
@@ -211,7 +211,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '라플란드에서 결혼하기 — DVV 서류, 주례, 실용 가이드 | LaplandWeddings',
     fr: 'Se marier en Laponie — démarches DVV | LaplandWeddings',
     it: 'Sposarsi in Lapponia — pratiche DVV | LaplandWeddings',
-    nl: 'Trouwen in Lapland — DVV-papierwerk | LaplandWeddings',
+    nl: 'Trouwen in Lapland — DVV-papierwerk | LaplandWeddings', sv: 'Getting Married in Lapland — DVV paperwork, officiant, practical guide | LaplandWeddings',
   },
   seoDescription: {
     fi: 'Käytännön opas ulkomaalaisille pareille: DVV-paperit, esteiden tutkinta (3–5 vk), todistajat, vihkijä, kotimaan rekisteröinti.',
@@ -224,7 +224,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '외국인 커플을 위한 실용 가이드: DVV 서류, 혼인 장애 조사(3~5주), 증인, 주례, 본국 등록.',
     fr: 'Guide pratique pour les couples étrangers : démarches DVV, examen des empêchements (3-5 semaines), témoins, officiant, enregistrement dans le pays d’origine.',
     it: 'Guida pratica per coppie straniere: pratiche DVV, esame degli impedimenti (3-5 settimane), testimoni, celebrante, registrazione nel Paese d’origine.',
-    nl: 'Praktische gids voor buitenlandse stellen: DVV-papierwerk, onderzoek naar huwelijksbeletselen (3-5 weken), getuigen, voltrekker, registratie in het thuisland.',
+    nl: 'Praktische gids voor buitenlandse stellen: DVV-papierwerk, onderzoek naar huwelijksbeletselen (3-5 weken), getuigen, voltrekker, registratie in het thuisland.', sv: 'Practical guide for foreign couples: DVV paperwork, examination of impediments (3–5 weeks), witnesses, officiant, home-country registration.',
   },
   howToName: {
     fi: 'Häät Lapissa — DVV-prosessi',
@@ -237,7 +237,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '라플란드에서 결혼하기 — DVV 절차',
     fr: 'Se marier en Laponie — démarche DVV',
     it: 'Sposarsi in Lapponia — iter DVV',
-    nl: 'Trouwen in Lapland — DVV-proces',
+    nl: 'Trouwen in Lapland — DVV-proces', sv: 'Getting married in Lapland — DVV process',
   },
   eyebrow: {
     fi: 'Teidän häänne Lapissa — käytännön opas',
@@ -250,7 +250,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '라플란드에서의 두 분의 결혼식 — 실용 가이드',
     fr: 'Votre mariage en Laponie — guide pratique',
     it: 'Il vostro matrimonio in Lapponia — guida pratica',
-    nl: 'Jullie bruiloft in Lapland — praktische gids',
+    nl: 'Jullie bruiloft in Lapland — praktische gids', sv: 'Your wedding in Lapland — practical guide',
   },
   heroImageAlt: {
     fi: 'Vihkimisseremonia talvisessa metsässä',
@@ -263,7 +263,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '겨울 숲에서의 결혼식',
     fr: 'Cérémonie de mariage dans une forêt hivernale',
     it: 'Cerimonia nuziale in un bosco invernale',
-    nl: 'Huwelijksceremonie in een winters bos',
+    nl: 'Huwelijksceremonie in een winters bos', sv: 'Wedding ceremony in winter forest',
   },
   downloadEyebrow: {
     fi: 'Lataa tarkistuslista',
@@ -276,7 +276,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '체크리스트 다운로드',
     fr: 'Télécharger la check-list',
     it: 'Scarica la checklist',
-    nl: 'Download de checklist',
+    nl: 'Download de checklist', sv: 'Download the checklist',
   },
   downloadTitle: {
     fi: 'Yksisivuinen DVV-tarkistuslista PDF:nä',
@@ -289,7 +289,7 @@ const UI: Record<string, Localized<string>> = {
     ko: 'PDF로 된 한 장짜리 DVV 체크리스트',
     fr: 'Check-list DVV d’une page en PDF',
     it: 'Checklist DVV di una pagina in PDF',
-    nl: 'DVV-checklist van één pagina als pdf',
+    nl: 'DVV-checklist van één pagina als pdf', sv: 'One-page DVV checklist as PDF',
   },
   downloadDesc: {
     fi: 'Printtaa tai tallenna matkalle — kaikki vaiheet 8 viikkoa ennen häitä jälkeen vihkimisen.',
@@ -302,7 +302,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '인쇄하거나 여행 폴더에 저장하세요 — 결혼식 8주 전부터 식 이후까지 모든 단계.',
     fr: 'Imprimez-la ou enregistrez-la pour votre dossier de voyage — toutes les étapes, de 8 semaines avant jusqu’après le mariage.',
     it: 'Stampala o salvala nella cartella di viaggio — tutti i passaggi, da 8 settimane prima fino a dopo le nozze.',
-    nl: 'Print of bewaar voor je reismap — elke stap, van 8 weken vooraf tot na de bruiloft.',
+    nl: 'Print of bewaar voor je reismap — elke stap, van 8 weken vooraf tot na de bruiloft.', sv: 'Print or save for your travel folder — every step from 8 weeks before to after the wedding.',
   },
   downloadOpen: {
     fi: 'Avaa lista',
@@ -315,7 +315,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '체크리스트 열기',
     fr: 'Ouvrir la check-list',
     it: 'Apri la checklist',
-    nl: 'Open de checklist',
+    nl: 'Open de checklist', sv: 'Open the checklist',
   },
   stepsTitle: {
     fi: 'Avioliittolupa Suomessa — 6 vaihetta',
@@ -328,7 +328,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '핀란드 혼인 허가 — 6단계',
     fr: 'Autorisation de mariage en Finlande — 6 étapes',
     it: 'Licenza di matrimonio in Finlandia — 6 passaggi',
-    nl: 'Huwelijksvergunning in Finland — 6 stappen',
+    nl: 'Huwelijksvergunning in Finland — 6 stappen', sv: 'Marriage license in Finland — 6 steps',
   },
   stepsIntro: {
     fi: 'Teidän ja kaikkialla maailmassa pätevän avioliiton välissä on kuusi paperivaihetta — useimmat parit hoitavat ne 4–8 viikossa kaiken muun ohessa.',
@@ -341,7 +341,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '전 세계에서 법적으로 유효한 결혼까지 남은 것은 여섯 단계의 서류 절차뿐 — 대부분의 커플이 다른 준비와 병행해 4~8주 안에 마칩니다.',
     fr: 'Entre vous et un mariage juridiquement valable dans le monde entier, il n’y a que six étapes administratives — la plupart des couples les bouclent en 4 à 8 semaines, en parallèle de tout le reste.',
     it: 'Tra voi e un matrimonio legalmente valido in tutto il mondo ci sono sei passaggi burocratici — la maggior parte delle coppie li completa in 4-8 settimane, insieme a tutto il resto.',
-    nl: 'Tussen jullie en een huwelijk dat wereldwijd rechtsgeldig is staan zes stappen papierwerk — de meeste stellen ronden ze in 4-8 weken af, naast al het andere.',
+    nl: 'Tussen jullie en een huwelijk dat wereldwijd rechtsgeldig is staan zes stappen papierwerk — de meeste stellen ronden ze in 4-8 weken af, naast al het andere.', sv: 'Six steps of paperwork stand between you and a marriage that is legally valid worldwide — most couples clear them in 4–8 weeks alongside everything else.',
   },
   guestsTitle: {
     fi: 'Vieraat, lennot ja kuka maksaa',
@@ -354,7 +354,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '하객, 항공편, 비용 부담',
     fr: 'Invités, vols et qui paie quoi',
     it: 'Invitati, voli e chi paga',
-    nl: 'Gasten, vluchten en wie wat betaalt',
+    nl: 'Gasten, vluchten en wie wat betaalt', sv: 'Guests, flights and who pays',
   },
   guestsIntro: {
     fi: 'Kolme asiaa, jotka kannattaa päättää ajoissa — ennen kuin kutsut lähtevät.',
@@ -367,7 +367,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '청첩장을 보내기 전에 미리 정해 두면 좋은 세 가지.',
     fr: 'Trois décisions à prendre tôt, avant d’envoyer les invitations.',
     it: 'Tre decisioni da prendere presto, prima di spedire gli inviti.',
-    nl: 'Drie beslissingen om vroeg te nemen, nog voordat de uitnodigingen de deur uit gaan.',
+    nl: 'Drie beslissingen om vroeg te nemen, nog voordat de uitnodigingen de deur uit gaan.', sv: 'Three decisions to make early, before the invitations go out.',
   },
   seasonsTitle: {
     fi: 'Sesongit ja sää',
@@ -380,7 +380,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '시즌과 날씨',
     fr: 'Saisons et météo',
     it: 'Stagioni e clima',
-    nl: 'Seizoenen en weer',
+    nl: 'Seizoenen en weer', sv: 'Seasons and weather',
   },
   flightsTitle: {
     fi: 'Lentoyhteydet ja saavutettavuus',
@@ -393,7 +393,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '항공편과 접근성',
     fr: 'Vols et accessibilité',
     it: 'Voli e accessibilità',
-    nl: 'Vluchten en bereikbaarheid',
+    nl: 'Vluchten en bereikbaarheid', sv: 'Flights and accessibility',
   },
   carTitle: {
     fi: 'Autovuokraus ja kuljetukset',
@@ -406,7 +406,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '렌터카 및 이동 서비스',
     fr: 'Location de voiture et transferts',
     it: 'Noleggio auto e transfer',
-    nl: 'Autohuur en transfers',
+    nl: 'Autohuur en transfers', sv: 'Car rental and transfers',
   },
   carBody: {
     fi: 'Vuokraa auto suoraan Rovaniemen, Kittilän tai Ivalon lentokentältä — verkostomme oma laplandcarrental.com tarjoaa hinnat ja varaukset suomeksi ja englanniksi.',
@@ -419,7 +419,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '로바니에미, 키틸레, 이발로 공항에서 바로 차를 빌리세요 — 네트워크 사이트 laplandcarrental.com에서 핀란드어와 영어로 요금과 예약을 제공합니다.',
     fr: 'Louez une voiture directement à l’aéroport de Rovaniemi, Kittilä ou Ivalo — notre site du réseau laplandcarrental.com propose tarifs et réservations en finnois et en anglais.',
     it: 'Noleggia un’auto direttamente dall’aeroporto di Rovaniemi, Kittilä o Ivalo — il sito della nostra rete laplandcarrental.com offre prezzi e prenotazioni in finlandese e inglese.',
-    nl: 'Huur een auto direct op de luchthaven van Rovaniemi, Kittilä of Ivalo — onze netwerksite laplandcarrental.com biedt prijzen en reserveringen in het Fins en Engels.',
+    nl: 'Huur een auto direct op de luchthaven van Rovaniemi, Kittilä of Ivalo — onze netwerksite laplandcarrental.com biedt prijzen en reserveringen in het Fins en Engels.', sv: 'Rent a car directly from Rovaniemi, Kittilä or Ivalo airport — our network site laplandcarrental.com offers pricing and reservations in Finnish and English.',
   },
   flightsFromLondon: {
     fi: 'Etsi lentoja Lontoosta (Trip.com)',
@@ -432,7 +432,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '런던발 항공편 찾기(Trip.com)',
     fr: 'Trouver des vols depuis Londres (Trip.com)',
     it: 'Cerca voli da Londra (Trip.com)',
-    nl: 'Zoek vluchten vanuit Londen (Trip.com)',
+    nl: 'Zoek vluchten vanuit Londen (Trip.com)', sv: 'Find flights from London (Trip.com)',
   },
   flightsFromHelsinki: {
     fi: 'Etsi lentoja Helsingistä (Trip.com)',
@@ -445,7 +445,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '헬싱키발 항공편 찾기(Trip.com)',
     fr: 'Trouver des vols depuis Helsinki (Trip.com)',
     it: 'Cerca voli da Helsinki (Trip.com)',
-    nl: 'Zoek vluchten vanuit Helsinki (Trip.com)',
+    nl: 'Zoek vluchten vanuit Helsinki (Trip.com)', sv: 'Find flights from Helsinki (Trip.com)',
   },
 };
 
@@ -472,7 +472,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '웨딩은 하나의 독립된 패키지입니다',
       fr: 'Le mariage est un forfait à part',
       it: 'Il matrimonio è un pacchetto a sé',
-      nl: 'De bruiloft is een eigen pakket',
+      nl: 'De bruiloft is een eigen pakket', sv: 'The wedding is its own package',
     },
     p: {
       fi: 'Me suunnittelemme ja hinnoittelemme itse häät — vihkimisen, paikan, ohjelman ja toimittajat. Lennot ja hotellihuoneet varataan erikseen, yleensä jo ennen kuin hääsuunnittelu alkaa. Emme myy lentoja; kerromme, mitä varata ja milloin.',
@@ -485,7 +485,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '저희가 기획하고 견적을 내는 것은 결혼식 그 자체입니다 — 예식, 베뉴, 프로그램, 업체 섭외. 항공편과 호텔 객실은 별도로 예약하며, 보통 웨딩 플래닝이 시작되기 전에 이루어집니다. 저희는 항공권을 판매하지 않습니다. 무엇을 언제 예약해야 하는지 알려드립니다.',
       fr: 'Nous planifions et chiffrons le mariage lui-même — cérémonie, lieu, programme, prestataires. Les vols et les chambres d’hôtel se réservent à part, souvent avant même le début de l’organisation du mariage. Nous ne vendons pas de vols ; nous vous disons quoi réserver et quand.',
       it: 'Noi progettiamo e quotiamo il matrimonio in sé — cerimonia, location, programma, fornitori. Voli e camere d’albergo si prenotano a parte, di solito ancora prima che inizi l’organizzazione delle nozze. Non vendiamo voli; vi diciamo cosa prenotare e quando.',
-      nl: 'Wij plannen en begroten de bruiloft zelf — ceremonie, locatie, programma, leveranciers. Vluchten en hotelkamers boek je apart, meestal nog voordat de bruiloftsplanning begint. Wij verkopen geen vluchten; we vertellen je wat je wanneer moet boeken.',
+      nl: 'Wij plannen en begroten de bruiloft zelf — ceremonie, locatie, programma, leveranciers. Vluchten en hotelkamers boek je apart, meestal nog voordat de bruiloftsplanning begint. Wij verkopen geen vluchten; we vertellen je wat je wanneer moet boeken.', sv: 'We plan and price the wedding itself — ceremony, venue, programme, vendors. Flights and hotel rooms are booked separately, usually before the wedding planning even starts. We don’t sell flights; we tell you what to book and when.',
     },
   },
   {
@@ -501,7 +501,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '하객은 보통 각자 비용을 부담합니다',
       fr: 'Les invités paient généralement leur voyage',
       it: 'Gli invitati di solito pagano il proprio viaggio',
-      nl: 'Gasten betalen meestal hun eigen reis',
+      nl: 'Gasten betalen meestal hun eigen reis', sv: 'Guests usually pay their own way',
     },
     p: {
       fi: 'Destinaatiohäissä vieraat maksavat tavallisesti omat lentonsa ja majoituksensa — sano tämä selvästi jo kutsussa. Jos haluatte tarjota osan (vaikkapa hääillallisen ja yhden aktiviteetin), viemme sen budjettiin ensimmäisestä päivästä alkaen.',
@@ -514,7 +514,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '데스티네이션 웨딩에서는 하객이 항공편과 숙박을 직접 부담하는 것이 일반적입니다 — 청첩장에 이를 분명히 알리세요. 일부를 두 분이 부담하고 싶다면(예: 결혼식 당일 저녁 만찬과 액티비티 하나), 처음부터 예산에 반영해 드립니다.',
       fr: 'Dans un mariage à l’étranger, les invités prennent normalement en charge leurs vols et leur hébergement — dites-le clairement sur l’invitation. Si vous souhaitez en offrir une partie (par exemple le dîner du soir des noces et une activité), nous l’intégrons au budget dès le premier jour.',
       it: 'Nei matrimoni all’estero gli invitati coprono di norma voli e alloggio — ditelo chiaramente già nell’invito. Se volete offrirne una parte (ad esempio la cena di nozze e un’attività), la inseriamo nel budget fin dal primo giorno.',
-      nl: 'Bij een bruiloft in het buitenland betalen gasten normaal gesproken hun eigen vluchten en verblijf — zeg dat duidelijk in de uitnodiging. Wil je een deel aanbieden (bijvoorbeeld het bruiloftsdiner en één activiteit), dan zetten we dat vanaf dag één in het budget.',
+      nl: 'Bij een bruiloft in het buitenland betalen gasten normaal gesproken hun eigen vluchten en verblijf — zeg dat duidelijk in de uitnodiging. Wil je een deel aanbieden (bijvoorbeeld het bruiloftsdiner en één activiteit), dan zetten we dat vanaf dag één in het budget.', sv: 'In destination weddings, guests normally cover their own flights and accommodation — say this clearly on the invitation. If you want to host some of it (say, the wedding-night dinner and one activity), we put it in the budget from day one.',
     },
   },
   {
@@ -530,7 +530,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '원하시면 테마와 연출까지',
       fr: 'Thème et ambiance, si vous le souhaitez',
       it: 'Tema e stile, se lo desiderate',
-      nl: 'Thema en stijl, als je dat wilt',
+      nl: 'Thema en stijl, als je dat wilt', sv: 'Theme and look, if you want',
     },
     p: {
       fi: 'Halutessanne suunnittelemme kanssanne myös teeman — värit, kukat, kattauksen ja ohjelman kaaren — niin että koko viikonloppu tuntuu yhdeltä tarinalta eikä varauslistalta.',
@@ -543,7 +543,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '원하신다면 테마 디자인도 함께합니다 — 색감, 꽃, 테이블 세팅, 프로그램의 흐름까지 — 주말 전체가 예약 목록이 아니라 하나의 이야기처럼 느껴지도록.',
       fr: 'Si vous le souhaitez, nous concevons aussi le thème avec vous — couleurs, fleurs, art de la table, fil du programme — pour que tout le week-end ressemble à une seule histoire plutôt qu’à une liste de réservations.',
       it: 'Se volete, disegniamo con voi anche il tema — colori, fiori, mise en place, arco del programma — così l’intero weekend sembra un’unica storia e non un elenco di prenotazioni.',
-      nl: 'Als je wilt, ontwerpen we samen ook het thema — kleuren, bloemen, tafelstyling, de opbouw van het programma — zodat het hele weekend als één verhaal voelt in plaats van een lijst boekingen.',
+      nl: 'Als je wilt, ontwerpen we samen ook het thema — kleuren, bloemen, tafelstyling, de opbouw van het programma — zodat het hele weekend als één verhaal voelt in plaats van een lijst boekingen.', sv: 'If you want, we also design the theme with you — colours, flowers, table setting, programme arc — so the whole weekend feels like one story instead of a list of bookings.',
     },
   },
 ];
@@ -571,7 +571,7 @@ const SEASONS: SeasonCard[] = [
       ko: '12월 – 3월',
       fr: 'De décembre à mars',
       it: 'Da dicembre a marzo',
-      nl: 'December – maart',
+      nl: 'December – maart', sv: 'December – March',
     },
     body: {
       fi: 'Peak-sesonki (95 % kysynnästä). Lumi, jää, revontulet. Kaamos joulu–tammikuussa, sininen tunti maaliskuussa.',
@@ -584,7 +584,7 @@ const SEASONS: SeasonCard[] = [
       ko: '성수기(수요의 95%). 눈, 얼음, 오로라. 12~1월 극야, 3월 블루아워.',
       fr: 'Haute saison (95 % de la demande). Neige, glace, aurores. Nuit polaire de décembre à janvier, heure bleue en mars.',
       it: 'Alta stagione (95 % della domanda). Neve, ghiaccio, aurore. Notte polare a dicembre-gennaio, ora blu a marzo.',
-      nl: 'Hoogseizoen (95 % van de vraag). Sneeuw, ijs, noorderlicht. Poolnacht in december–januari, blauwe uur in maart.',
+      nl: 'Hoogseizoen (95 % van de vraag). Sneeuw, ijs, noorderlicht. Poolnacht in december–januari, blauwe uur in maart.', sv: 'Peak season (95 % of demand). Snow, ice, Northern Lights. Polar night December–January, blue hour in March.',
     },
   },
   {
@@ -600,7 +600,7 @@ const SEASONS: SeasonCard[] = [
       ko: '5월 – 7월',
       fr: 'De mai à juillet',
       it: 'Da maggio a luglio',
-      nl: 'Mei – juli',
+      nl: 'Mei – juli', sv: 'May – July',
     },
     body: {
       fi: 'Keskiyön aurinko 23.5.–24.7. Lämmin (15–25 °C), ei lunta. Hyttyset huipussaan kesäkuussa.',
@@ -613,7 +613,7 @@ const SEASONS: SeasonCard[] = [
       ko: '백야는 5월 23일~7월 24일. 온화함(15~25°C), 눈 없음. 모기는 6월에 절정.',
       fr: 'Soleil de minuit du 23 mai au 24 juillet. Doux (15-25 °C), sans neige. Pic de moustiques en juin.',
       it: 'Sole di mezzanotte dal 23 maggio al 24 luglio. Mite (15-25 °C), niente neve. Picco di zanzare a giugno.',
-      nl: 'Middernachtzon van 23 mei tot 24 juli. Mild (15-25 °C), geen sneeuw. Muggenpiek in juni.',
+      nl: 'Middernachtzon van 23 mei tot 24 juli. Mild (15-25 °C), geen sneeuw. Muggenpiek in juni.', sv: 'Midnight Sun 23 May – 24 July. Warm (15–25 °C), no snow. Mosquitoes peak in June.',
     },
   },
   {
@@ -629,7 +629,7 @@ const SEASONS: SeasonCard[] = [
       ko: '9월 – 10월',
       fr: 'De septembre à octobre',
       it: 'Da settembre a ottobre',
-      nl: 'September – oktober',
+      nl: 'September – oktober', sv: 'September – October',
     },
     body: {
       fi: 'Ruskakausi syyskuun puolivälissä — Lapin värikkäin aika. Revontulet alkavat näkyä lokakuussa.',
@@ -642,7 +642,7 @@ const SEASONS: SeasonCard[] = [
       ko: '9월 중순의 가을 단풍(루스카) — 라플란드에서 가장 다채로운 시기. 오로라는 10월부터 보이기 시작합니다.',
       fr: 'La ruska (couleurs d’automne) à la mi-septembre — la période la plus colorée de Laponie. Les aurores commencent à apparaître en octobre.',
       it: 'La ruska (colori autunnali) a metà settembre — il periodo più colorato della Lapponia. Le aurore iniziano a comparire a ottobre.',
-      nl: 'De ruska (herfstkleuren) medio september — de kleurrijkste tijd van Lapland. Het noorderlicht verschijnt vanaf oktober.',
+      nl: 'De ruska (herfstkleuren) medio september — de kleurrijkste tijd van Lapland. Het noorderlicht verschijnt vanaf oktober.', sv: 'Ruska (autumn colours) in mid-September — Lapland’s most colourful time. Northern Lights start showing in October.',
     },
   },
 ];
@@ -668,7 +668,7 @@ const AIRPORTS: AirportCard[] = [
       ko: '헬싱키, 런던, 프랑크푸르트, 파리에서 직항. 중심부까지 10km.',
       fr: 'Vols directs depuis Helsinki, Londres, Francfort, Paris. À 10 km du centre.',
       it: 'Voli diretti da Helsinki, Londra, Francoforte, Parigi. A 10 km dal centro.',
-      nl: 'Rechtstreekse vluchten vanuit Helsinki, Londen, Frankfurt, Parijs. 10 km tot het centrum.',
+      nl: 'Rechtstreekse vluchten vanuit Helsinki, Londen, Frankfurt, Parijs. 10 km tot het centrum.', sv: 'Direct flights from Helsinki, London, Frankfurt, Paris. 10 km to the centre.',
     },
   },
   {
@@ -685,7 +685,7 @@ const AIRPORTS: AirportCard[] = [
       ko: '헬싱키, 런던, 맨체스터, 버밍엄에서 직항. 레비까지 14km.',
       fr: 'Vols directs depuis Helsinki, Londres, Manchester, Birmingham. À 14 km de Levi.',
       it: 'Voli diretti da Helsinki, Londra, Manchester, Birmingham. A 14 km da Levi.',
-      nl: 'Rechtstreekse vluchten vanuit Helsinki, Londen, Manchester, Birmingham. 14 km tot Levi.',
+      nl: 'Rechtstreekse vluchten vanuit Helsinki, Londen, Manchester, Birmingham. 14 km tot Levi.', sv: 'Direct flights from Helsinki, London, Manchester, Birmingham. 14 km to Levi.',
     },
   },
   {
@@ -702,7 +702,7 @@ const AIRPORTS: AirportCard[] = [
       ko: '헬싱키에서 직항. 핀란드 최북단 공항이며 사리셀카까지 30km.',
       fr: 'Vols directs depuis Helsinki. L’aéroport le plus septentrional de Finlande, à 30 km de Saariselkä.',
       it: 'Voli diretti da Helsinki. L’aeroporto più a nord della Finlandia, a 30 km da Saariselkä.',
-      nl: 'Rechtstreekse vluchten vanuit Helsinki. De noordelijkste luchthaven van Finland, 30 km tot Saariselkä.',
+      nl: 'Rechtstreekse vluchten vanuit Helsinki. De noordelijkste luchthaven van Finland, 30 km tot Saariselkä.', sv: 'Direct flights from Helsinki. Finland’s northernmost airport, 30 km to Saariselkä.',
     },
   },
 ];
@@ -720,7 +720,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '외국인 커플의 경우 DVV 서류는 얼마나 걸리나요?',
       fr: 'Combien de temps prennent les démarches DVV pour un couple étranger ?',
       it: 'Quanto tempo richiedono le pratiche DVV per una coppia straniera?',
-      nl: 'Hoe lang duurt het DVV-papierwerk voor een buitenlands stel?',
+      nl: 'Hoe lang duurt het DVV-papierwerk voor een buitenlands stel?', sv: 'How long does the DVV paperwork take for a foreign couple?',
     },
     a: {
       fi: '3–5 viikkoa. Suomen kansalaisille 1–2 viikkoa. Aloita prosessi vähintään 2 kuukautta ennen vihkimistä.',
@@ -733,7 +733,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '3~5주. 핀란드 국민은 1~2주. 결혼식 최소 2개월 전에 절차를 시작하세요.',
       fr: '3-5 semaines. Pour les citoyens finlandais, 1-2 semaines. Commencez la démarche au moins 2 mois avant le mariage.',
       it: '3-5 settimane. Per i cittadini finlandesi, 1-2 settimane. Avviate la pratica almeno 2 mesi prima delle nozze.',
-      nl: '3-5 weken. Voor Finse staatsburgers 1-2 weken. Begin het proces minstens 2 maanden voor de bruiloft.',
+      nl: '3-5 weken. Voor Finse staatsburgers 1-2 weken. Begin het proces minstens 2 maanden voor de bruiloft.', sv: '3–5 weeks. For Finnish citizens, 1–2 weeks. Begin the process at least 2 months before the wedding.',
     },
   },
   {
@@ -748,7 +748,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '핀란드 법은 증인을 몇 명 요구하나요?',
       fr: 'Combien de témoins la loi finlandaise exige-t-elle ?',
       it: 'Quanti testimoni richiede la legge finlandese?',
-      nl: 'Hoeveel getuigen vereist de Finse wet?',
+      nl: 'Hoeveel getuigen vereist de Finse wet?', sv: 'How many witnesses does Finnish law require?',
     },
     a: {
       fi: 'Tasan kaksi. Useimmat venuet ja suunnittelijat järjestävät heidät paikan päältä — heidän ei tarvitse olla suomalaisia.',
@@ -761,7 +761,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '정확히 두 명입니다. 대부분의 베뉴와 플래너가 현장에서 마련하며, 핀란드인일 필요는 없습니다.',
       fr: 'Exactement deux. La plupart des lieux et organisateurs les fournissent sur place — ils n’ont pas besoin d’être finlandais.',
       it: 'Esattamente due. La maggior parte delle location e dei planner li fornisce in loco — non devono essere finlandesi.',
-      nl: 'Precies twee. De meeste locaties en planners regelen ze ter plaatse — ze hoeven niet Fins te zijn.',
+      nl: 'Precies twee. De meeste locaties en planners regelen ze ter plaatse — ze hoeven niet Fins te zijn.', sv: 'Exactly two. Most venues and planners arrange them on site — they do not need to be Finnish.',
     },
   },
   {
@@ -776,7 +776,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '핀란드에서 한 결혼이 본국에서도 유효한가요?',
       fr: 'Un mariage célébré en Finlande est-il valable dans mon pays d’origine ?',
       it: 'Un matrimonio celebrato in Finlandia è valido nel mio Paese d’origine?',
-      nl: 'Is een in Finland voltrokken huwelijk geldig in mijn thuisland?',
+      nl: 'Is een in Finland voltrokken huwelijk geldig in mijn thuisland?', sv: 'Is a marriage celebrated in Finland valid in my home country?',
     },
     a: {
       fi: 'Kyllä. Saat 2 virallista todistusta englanniksi. Apostille-leima DVV:ltä kotimaata varten useimmissa tapauksissa.',
@@ -789,7 +789,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '네. 영어로 된 공식 증명서 2부를 받습니다. 대부분의 본국에서 DVV 아포스티유를 요구하며, 발급은 빠릅니다.',
       fr: 'Oui. Vous recevez 2 actes officiels en anglais. L’apostille via le DVV est exigée par la plupart des pays d’origine — rapide à obtenir.',
       it: 'Sì. Ricevi 2 certificati ufficiali in inglese. La maggior parte dei Paesi d’origine richiede l’apostille del DVV — veloce da ottenere.',
-      nl: 'Ja. Je ontvangt 2 officiële akten in het Engels. De meeste thuislanden vereisen een apostille via het DVV — snel te verkrijgen.',
+      nl: 'Ja. Je ontvangt 2 officiële akten in het Engels. De meeste thuislanden vereisen een apostille via het DVV — snel te verkrijgen.', sv: 'Yes. You receive 2 official certificates in English. Apostille via DVV is required by most home countries — fast to obtain.',
     },
   },
   {
@@ -804,7 +804,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '라플란드 결혼식 비용은 얼마인가요?',
       fr: 'Combien coûte un mariage en Laponie ?',
       it: 'Quanto costa un matrimonio in Lapponia?',
-      nl: 'Hoeveel kost een bruiloft in Lapland?',
+      nl: 'Hoeveel kost een bruiloft in Lapland?', sv: 'How much do Lapland weddings cost?',
     },
     a: {
       fi: 'Elopement 1 600–5 000 €, pieni häät 4 500–15 000 €, premium 15 000–40 000 €, luksus jopa 100 000 €.',
@@ -817,7 +817,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '엘로프먼트 1,600~5,000유로, 소규모 결혼식 4,500~15,000유로, 프리미엄 15,000~40,000유로, 럭셔리 최대 10만 유로.',
       fr: 'Elopement 1 600-5 000 €, petit mariage 4 500-15 000 €, premium 15 000-40 000 €, luxe jusqu’à 100 000 €.',
       it: 'Elopement 1 600-5 000 €, matrimonio piccolo 4 500-15 000 €, premium 15 000-40 000 €, lusso fino a 100 000 €.',
-      nl: 'Elopement € 1 600-5 000, kleine bruiloft € 4 500-15 000, premium € 15 000-40 000, luxe tot € 100 000.',
+      nl: 'Elopement € 1 600-5 000, kleine bruiloft € 4 500-15 000, premium € 15 000-40 000, luxe tot € 100 000.', sv: 'Elopement €1 600–5 000, small wedding €4 500–15 000, premium €15 000–40 000, luxury up to €100 000.',
     },
   },
   {
@@ -832,7 +832,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '라플란드 결혼식에 가장 좋은 달은 언제인가요?',
       fr: 'Quel est le meilleur mois pour un mariage en Laponie ?',
       it: 'Qual è il mese migliore per un matrimonio in Lapponia?',
-      nl: 'Wat is de beste maand voor een bruiloft in Lapland?',
+      nl: 'Wat is de beste maand voor een bruiloft in Lapland?', sv: 'When is the best month for a Lapland wedding?',
     },
     a: {
       fi: 'Helmikuu–maaliskuu antaa pisimmät päivät, varmimman lumen ja revontulet. Joulukuu on tunnelmallisin.',
@@ -845,7 +845,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '2월~3월은 낮이 가장 길고 눈이 가장 확실하며 오로라를 볼 수 있습니다. 12월은 가장 분위기 있는 달입니다.',
       fr: 'Février-mars offrent les journées les plus longues, la neige la plus fiable et les aurores. Décembre est le plus féerique.',
       it: 'Febbraio-marzo offrono le giornate più lunghe, la neve più affidabile e le aurore. Dicembre è il più suggestivo.',
-      nl: 'Februari-maart bieden de langste daglichturen, de betrouwbaarste sneeuw en het noorderlicht. December is het sfeervolst.',
+      nl: 'Februari-maart bieden de langste daglichturen, de betrouwbaarste sneeuw en het noorderlicht. December is het sfeervolst.', sv: 'February–March offer the longest daylight, the most reliable snow, and the Northern Lights. December is the most atmospheric.',
     },
   },
 ];

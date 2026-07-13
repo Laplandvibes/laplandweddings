@@ -5,9 +5,9 @@
     <script>
       (function () {
         try {
-          var T = {"en":"Lapland Weddings 2026 — Arctic Venues & Marriage Paperwork","fi":"Häät Lapissa 2026 — hääpaikat ja DVV-paperit","de":"Hochzeit in Lappland 2026 — Locations & Heiratspapiere","ja":"ラップランドの結婚式2026 — 会場と婚姻手続き","es":"Bodas en Laponia 2026 — lugares y trámites de boda","pt-br":"Casamentos na Lapônia 2026 — locais e documentação","zh-cn":"拉普兰婚礼2026 — 婚礼场地与结婚手续","kr":"라플란드 결혼식 2026 — 베뉴와 혼인 서류","fr":"Mariage en Laponie 2026 — lieux et démarches de mariage","it":"Matrimonio in Lapponia 2026 — sedi e pratiche di nozze","nl":"Trouwen in Lapland 2026 — locaties en huwelijkspapieren"};
+          var T = {"en":"Lapland Weddings 2026 — Arctic Venues & Marriage Paperwork","fi":"Häät Lapissa 2026 — hääpaikat ja DVV-paperit","de":"Hochzeit in Lappland 2026 — Locations & Heiratspapiere","ja":"ラップランドの結婚式2026 — 会場と婚姻手続き","es":"Bodas en Laponia 2026 — lugares y trámites de boda","pt-br":"Casamentos na Lapônia 2026 — locais e documentação","zh-cn":"拉普兰婚礼2026 — 婚礼场地与结婚手续","kr":"라플란드 결혼식 2026 — 베뉴와 혼인 서류","fr":"Mariage en Laponie 2026 — lieux et démarches de mariage","it":"Matrimonio in Lapponia 2026 — sedi e pratiche di nozze","nl":"Trouwen in Lapland 2026 — locaties en huwelijkspapieren","sv":"Bröllop i Lappland 2026 — vigselplatser och äktenskapspapper"};
           var path = location.pathname || '/';
-          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', br: 'pt-br', cn: 'zh-cn', kr: 'kr', fr: 'fr', it: 'it', nl: 'nl' };
+          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', br: 'pt-br', cn: 'zh-cn', kr: 'kr', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv' };
           var loc = 'en';
           for (var p in map) {
             if (path === '/' + p || path.indexOf('/' + p + '/') === 0) { loc = map[p]; break; }
@@ -23,12 +23,12 @@
         try {
           var path = location.pathname || '/';
           // Already on a locale prefix? — never override
-          var prefixes = ['/fi','/de','/ja','/es','/br','/cn','/kr','/fr','/it','/nl'];
+          var prefixes = ['/fi','/de','/ja','/es','/br','/cn','/kr','/fr','/it','/nl','/sv'];
           for (var i = 0; i < prefixes.length; i++) {
             if (path === prefixes[i] || path.indexOf(prefixes[i] + '/') === 0) return;
           }
           // Only redirect from bare root or sub-pages without a locale prefix
-          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-br': 'br', 'zh-cn': 'cn', ko: 'kr', fr: 'fr', it: 'it', nl: 'nl' };
+          var map = { fi: 'fi', de: 'de', ja: 'ja', es: 'es', 'pt-br': 'br', 'zh-cn': 'cn', ko: 'kr', fr: 'fr', it: 'it', nl: 'nl', sv: 'sv' };
           var stored = null;
           try { stored = localStorage.getItem('lv_locale_choice'); } catch (e) {}
           var target = null;
@@ -52,6 +52,7 @@
               if (l.indexOf('fr') === 0) { target = '/fr'; break; }
               if (l.indexOf('it') === 0) { target = '/it'; break; }
               if (l.indexOf('nl') === 0) { target = '/nl'; break; }
+              if (l.indexOf('sv') === 0) { target = '/sv'; break; }
             }
           }
           if (!target) return;

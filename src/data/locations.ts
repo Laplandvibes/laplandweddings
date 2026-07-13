@@ -30,6 +30,7 @@ export const locations: Location[] = [
       fr: 'Rovaniemi',
       it: 'Rovaniemi',
       nl: 'Rovaniemi',
+      sv: 'Rovaniemi',
     },
     region: {
       fi: 'Lappi · Joulupukin kotikaupunki',
@@ -43,6 +44,7 @@ export const locations: Location[] = [
       fr: 'Laponie · Ville natale du Père Noël',
       it: 'Lapponia · Città natale di Babbo Natale',
       nl: 'Lapland · Woonplaats van de Kerstman',
+      sv: 'Lappland · Jultomtens hem',
     },
     airport: 'RVN',
     airportDistanceKm: 10,
@@ -58,6 +60,7 @@ export const locations: Location[] = [
       fr: 'La capitale de la Laponie et la porte d’entrée la plus accessible grâce à son aéroport international. Le Village du Père Noël, la chapelle de glace de l’Arctic SnowHotel et les igloos de verre de l’Apukka Resort font de Rovaniemi la destination de mariage la plus polyvalente de Laponie.',
       it: 'La capitale della Lapponia e la porta d’accesso più comoda grazie al suo aeroporto internazionale. Il Villaggio di Babbo Natale, la cappella di ghiaccio dell’Arctic SnowHotel e gli igloo di vetro dell’Apukka Resort rendono Rovaniemi la destinazione per matrimoni più versatile della Lapponia.',
       nl: 'De hoofdstad van Lapland en dankzij de internationale luchthaven de makkelijkst bereikbare toegangspoort. Het Kerstmandorp, de ijskapel van het Arctic SnowHotel en de glasiglo’s van Apukka Resort maken Rovaniemi de veelzijdigste trouwbestemming van Lapland.',
+      sv: 'Lapplands huvudstad och den enklaste porten tack vare sin internationella flygplats. Santa Claus Village, iskapellet på Arctic SnowHotel och glasigloorna på Apukka Resort gör Rovaniemi till Lapplands mest mångsidiga bröllopsdestination.',
     },
     highlight: {
       fi: 'Suorat lennot Helsingistä, Lontoosta, Frankfurtista ja Pariisista — vieraat saapuvat vaivatta.',
@@ -71,6 +74,7 @@ export const locations: Location[] = [
       fr: 'Vols directs depuis Helsinki, Londres, Francfort et Paris — les invités arrivent sans effort.',
       it: 'Voli diretti da Helsinki, Londra, Francoforte e Parigi — gli ospiti arrivano senza sforzo.',
       nl: 'Rechtstreekse vluchten vanuit Helsinki, Londen, Frankfurt en Parijs — gasten arriveren moeiteloos.',
+      sv: 'Direktflyg från Helsingfors, London, Frankfurt och Paris — gästerna tar sig hit utan besvär.',
     },
     bestFor: {
       fi: ['Talvihäät jääkappelissa', 'Häät joulupukin pajakylän tuntumassa', 'Helppo saavutettavuus kansainvälisille vieraille'],
@@ -84,6 +88,7 @@ export const locations: Location[] = [
       fr: ['Mariages d’hiver dans une chapelle de glace', 'Mariages près du Village du Père Noël', 'Accès facile pour les invités internationaux'],
       it: ['Matrimoni invernali in una cappella di ghiaccio', 'Matrimoni vicino al Villaggio di Babbo Natale', 'Facile accesso per ospiti internazionali'],
       nl: ['Winterbruiloften in een ijskapel', 'Bruiloften bij het Kerstmandorp', 'Goed bereikbaar voor internationale gasten'],
+      sv: ['Vinterbröllop i ett iskapell', 'Bröllop nära Santa Claus Village', 'Lätt att nå för internationella gäster'],
     },
     venueSlugs: ['arctic-snowhotel', 'apukka-resort', 'arctic-treehouse', 'santas-hotel-santamus', 'nova-skyland'],
     heroImage: '/images/venues/arctic-treehouse.jpg',
@@ -99,6 +104,7 @@ export const locations: Location[] = [
       fr: 'Forêts enneigées de Rovaniemi au crépuscule',
       it: 'Boschi innevati di Rovaniemi al crepuscolo',
       nl: 'Besneeuwde bossen van Rovaniemi in de schemering',
+      sv: 'Snöiga skogar i Rovaniemi i skymningen',
     },
     seasonNote: {
       fi: 'Lumi maassa marraskuusta huhtikuuhun. Revontulia odotettavissa syyskuusta maaliskuuhun pilvettöminä öinä.',
@@ -112,6 +118,7 @@ export const locations: Location[] = [
       fr: 'Neige au sol de novembre à avril. Aurores boréales attendues de septembre à mars par nuits dégagées.',
       it: 'Neve al suolo da novembre ad aprile. Aurore boreali attese da settembre a marzo nelle notti serene.',
       nl: 'Sneeuw van november tot april. Noorderlicht te verwachten van september tot maart op heldere nachten.',
+      sv: 'Snö på marken från november till april. Norrsken att vänta från september till mars klara nätter.',
     },
   },
   {
@@ -128,6 +135,7 @@ export const locations: Location[] = [
       fr: 'Saariselkä et Inari',
       it: 'Saariselkä e Inari',
       nl: 'Saariselkä & Inari',
+      sv: 'Saariselkä & Inari',
     },
     region: {
       fi: 'Pohjois-Lappi · Urho Kekkosen kansallispuiston laidalla',
@@ -141,6 +149,7 @@ export const locations: Location[] = [
       fr: 'Laponie du Nord · En bordure du parc national Urho Kekkonen',
       it: 'Lapponia settentrionale · Ai margini del Parco Nazionale Urho Kekkonen',
       nl: 'Noord-Lapland · Aan de rand van Nationaal Park Urho Kekkonen',
+      sv: 'Nordlappland · Vid kanten av Urho Kekkonens nationalpark',
     },
     airport: 'IVL',
     airportDistanceKm: 30,
@@ -156,6 +165,7 @@ export const locations: Location[] = [
       fr: 'Le cœur de la Laponie du Nord, où les aurores boréales apparaissent statistiquement plus souvent que dans toute autre zone touristique. Les igloos de verre et la chapelle de glace de Kakslauttanen sont les lieux de mariage les plus célèbres de la région. Le lac Inari apporte histoire et culture samie à votre célébration.',
       it: 'Il cuore della Lapponia settentrionale, dove le aurore boreali compaiono statisticamente più spesso che in qualsiasi altra area turistica. Gli igloo di vetro e la cappella di ghiaccio di Kakslauttanen sono le location per matrimoni più famose della zona. Il lago Inari aggiunge storia e cultura sami alla vostra celebrazione.',
       nl: 'Het hart van Noord-Lapland, waar het noorderlicht statistisch vaker verschijnt dan in welk ander toeristisch gebied ook. De glasiglo’s en de ijskapel van Kakslauttanen zijn de bekendste trouwlocaties van de regio. Het Inarimeer voegt geschiedenis en Sámi-cultuur toe aan je viering.',
+      sv: 'Nordlapplands hjärta, där norrskenet statistiskt syns oftare än någon annanstans i turistområdet. Kakslauttanens glasigloor och iskapell är traktens mest kända bröllopsplatser. Enaresjön tillför historia och samisk kultur till er fest.',
     },
     highlight: {
       fi: 'Korkein revontulitodennäköisyys koko Lapissa — keskimäärin 200 yötä vuodessa.',
@@ -169,6 +179,7 @@ export const locations: Location[] = [
       fr: 'La plus forte probabilité d’aurores boréales de toute la Laponie — environ 200 nuits par an.',
       it: 'La più alta probabilità di aurore boreali di tutta la Lapponia — circa 200 notti all’anno.',
       nl: 'De hoogste kans op noorderlicht in heel Lapland — gemiddeld 200 nachten per jaar.',
+      sv: 'Störst chans till norrsken i hela Lappland — omkring 200 nätter per år.',
     },
     bestFor: {
       fi: ['Revontulihäät', 'Lasi-iglu-hääyö', 'Saamelaiskulttuuri ja Inarinjärvi'],
@@ -182,6 +193,7 @@ export const locations: Location[] = [
       fr: ['Mariages sous les aurores boréales', 'Nuits de noces en igloo de verre', 'Culture samie et lac Inari'],
       it: ['Matrimoni con aurore boreali', 'Prime notti di nozze in igloo di vetro', 'Cultura sami e lago Inari'],
       nl: ['Noorderlichtbruiloften', 'Huwelijksnachten in een glasiglo', 'Sámi-cultuur en het Inarimeer'],
+      sv: ['Norrskensbröllop', 'Bröllopsnätter i glasigloo', 'Samisk kultur och Enaresjön'],
     },
     venueSlugs: ['kakslauttanen', 'northern-lights-village-saariselka', 'wilderness-hotel-muotka', 'wilderness-hotel-inari', 'wilderness-hotel-juutua'],
     heroImage: '/images/venues/kakslauttanen.jpg',
@@ -197,6 +209,7 @@ export const locations: Location[] = [
       fr: 'Igloo de verre sous les aurores boréales à Saariselkä',
       it: 'Igloo di vetro sotto le aurore boreali a Saariselkä',
       nl: 'Glasiglo onder het noorderlicht in Saariselkä',
+      sv: 'Glasigloo under norrsken i Saariselkä',
     },
     seasonNote: {
       fi: 'Kaamos kestää joulukuusta tammikuuhun, mutta revontulet näkyvät päivänvalossakin pimeimpinä viikkoina. Keskiyön aurinko 23.5.–24.7.',
@@ -210,6 +223,7 @@ export const locations: Location[] = [
       fr: 'La nuit polaire dure de décembre à janvier, mais les aurores apparaissent même de jour pendant les semaines les plus sombres. Soleil de minuit du 23 mai au 24 juillet.',
       it: 'La notte polare va da dicembre a gennaio, ma nelle settimane più buie le aurore appaiono anche di giorno. Sole di mezzanotte dal 23 maggio al 24 luglio.',
       nl: 'De poolnacht duurt van december tot januari, maar in de donkerste weken verschijnt het noorderlicht zelfs overdag. Middernachtzon van 23 mei tot 24 juli.',
+      sv: 'Polarnatten varar från december till januari, men norrskenet syns även dagtid under de mörkaste veckorna. Midnattssol 23 maj – 24 juli.',
     },
   },
   {
@@ -226,6 +240,7 @@ export const locations: Location[] = [
       fr: 'Levi et Kittilä',
       it: 'Levi e Kittilä',
       nl: 'Levi & Kittilä',
+      sv: 'Levi & Kittilä',
     },
     region: {
       fi: 'Tunturi-Lappi · Suomen suurin hiihtokeskus',
@@ -239,6 +254,7 @@ export const locations: Location[] = [
       fr: 'Laponie des fells · La plus grande station de ski de Finlande',
       it: 'Lapponia dei fell · Il più grande comprensorio sciistico della Finlandia',
       nl: 'Fell-Lapland · Het grootste skigebied van Finland',
+      sv: 'Fjällappland · Finlands största skidort',
     },
     airport: 'KTT',
     airportDistanceKm: 14,
@@ -254,6 +270,7 @@ export const locations: Location[] = [
       fr: 'Levi réunit toute l’infrastructure d’une station de ski, le Lainio Snow Village et le Northern Lights Ranch, où les aurores sont visibles directement à travers la paroi de verre de la cabine. L’aéroport de Kittilä propose des vols directs depuis Londres, ce qui explique pourquoi Levi est le préféré des Britanniques.',
       it: 'Levi riunisce l’intera infrastruttura di un comprensorio sciistico, il Lainio Snow Village e il Northern Lights Ranch, dove le aurore si vedono direttamente attraverso la parete di vetro della cabina. L’aeroporto di Kittilä ha voli diretti da Londra, ed è per questo che Levi è il preferito dei britannici.',
       nl: 'Levi brengt een complete skiresort-infrastructuur, het Lainio Snow Village en Northern Lights Ranch samen, waar je het noorderlicht recht door de glazen wand van je cabin ziet. De luchthaven Kittilä heeft rechtstreekse vluchten vanuit Londen, en daarom is Levi de favoriet van de Britten.',
+      sv: 'Levi samlar en komplett skidortsinfrastruktur, Lainio Snow Village och Northern Lights Ranch där norrskenet syns rakt genom stugans glasvägg. Kittilä flygplats har direktflyg från London, vilket gör Levi till britternas favorit.',
     },
     highlight: {
       fi: 'Suorat lennot Lontoosta, Manchesterista ja Birminghamista koko sesongin.',
@@ -267,6 +284,7 @@ export const locations: Location[] = [
       fr: 'Vols directs depuis Londres, Manchester et Birmingham pendant toute la saison.',
       it: 'Voli diretti da Londra, Manchester e Birmingham per tutta la stagione.',
       nl: 'Rechtstreekse vluchten vanuit Londen, Manchester en Birmingham gedurende het hele seizoen.',
+      sv: 'Direktflyg från London, Manchester och Birmingham hela säsongen.',
     },
     bestFor: {
       fi: ['Lumikappelihäät Lainiossa', 'Northern Lights Ranchin Snow Chapel', 'Hiihto- ja laskettelumatkailijoiden häät'],
@@ -280,6 +298,7 @@ export const locations: Location[] = [
       fr: ['Mariages en chapelle de neige à Lainio', 'Snow Chapel du Northern Lights Ranch', 'Mariages associés au ski'],
       it: ['Matrimoni in cappella di neve a Lainio', 'Snow Chapel del Northern Lights Ranch', 'Matrimoni abbinati allo sci'],
       nl: ['Sneeuwkapelbruiloften in Lainio', 'Snow Chapel bij Northern Lights Ranch', 'Bruiloften gecombineerd met skiën'],
+      sv: ['Snökapellsbröllop i Lainio', 'Snökapellet på Northern Lights Ranch', 'Bröllop i kombination med skidåkning'],
     },
     venueSlugs: ['snow-village-lainio', 'levi-ice-castle', 'northern-lights-ranch', 'levin-iglut', 'northern-lights-village-levi', 'hotelli-hullu-poro', 'levi-panorama'],
     heroImage: '/images/venues/northern-lights-ranch.webp',
@@ -295,6 +314,7 @@ export const locations: Location[] = [
       fr: 'Les fells de Levi au coucher du soleil',
       it: 'I fell di Levi al tramonto',
       nl: 'De fells van Levi bij zonsondergang',
+      sv: 'Levis fjäll i solnedgången',
     },
     seasonNote: {
       fi: 'Lumikappelit ovat avoinna joulukuusta huhtikuuhun. Pisin sesonki Suomessa.',
@@ -308,6 +328,7 @@ export const locations: Location[] = [
       fr: 'Les chapelles de neige sont ouvertes de décembre à avril. La plus longue saison de Finlande.',
       it: 'Le cappelle di neve sono aperte da dicembre ad aprile. La stagione più lunga della Finlandia.',
       nl: 'De sneeuwkapellen zijn open van december tot april. Het langste seizoen van Finland.',
+      sv: 'Snökapellen är öppna från december till april. Den längsta säsongen i Finland.',
     },
   },
   {
@@ -324,6 +345,7 @@ export const locations: Location[] = [
       fr: 'Ylläs',
       it: 'Ylläs',
       nl: 'Ylläs',
+      sv: 'Ylläs',
     },
     region: {
       fi: 'Tunturi-Lappi · Pallas-Yllästunturin kansallispuisto',
@@ -337,6 +359,7 @@ export const locations: Location[] = [
       fr: 'Laponie des fells · Parc national Pallas-Yllästunturi',
       it: 'Lapponia dei fell · Parco Nazionale Pallas-Yllästunturi',
       nl: 'Fell-Lapland · Nationaal Park Pallas-Yllästunturi',
+      sv: 'Fjällappland · Pallas-Yllästunturi nationalpark',
     },
     airport: 'KTT',
     airportDistanceKm: 50,
@@ -352,6 +375,7 @@ export const locations: Location[] = [
       fr: 'Une alternative plus calme à côté de Levi. Le Lapland Hotels Saaga s’est fait une réputation de mariages sur TripAdvisor, et le Lainio Snow Village est le plus proche d’Ylläs. Idéal pour les couples recherchant la tranquillité des fells sans l’agitation d’une station de ski.',
       it: 'Un’alternativa più tranquilla accanto a Levi. Il Lapland Hotels Saaga si è fatto una reputazione per i matrimoni su TripAdvisor, e il Lainio Snow Village è il più vicino a Ylläs. Ideale per coppie che desiderano la tranquillità dei fell senza il trambusto di un comprensorio sciistico.',
       nl: 'Een rustiger alternatief naast Levi. Lapland Hotels Saaga heeft op TripAdvisor naam gemaakt met bruiloften, en het Lainio Snow Village ligt het dichtst bij Ylläs. Ideaal voor stellen die de rust van de fells willen zonder de drukte van een skigebied.',
+      sv: 'Ett lugnare alternativ intill Levi. Lapland Hotels Saaga har blivit känt för bröllop på TripAdvisor, och Lainio Snow Village ligger närmast Ylläs. Passar bäst för par som vill ha fjällets lugn utan skidortens vimmel.',
     },
     highlight: {
       fi: 'Suomen puhtainta ilmaa, hiljaisin tunturikohde häille.',
@@ -365,6 +389,7 @@ export const locations: Location[] = [
       fr: 'L’air le plus pur de Finlande, la destination de fells la plus paisible pour les mariages.',
       it: 'L’aria più pulita della Finlandia, la destinazione dei fell più tranquilla per i matrimoni.',
       nl: 'De schoonste lucht van Finland, de rustigste fell-bestemming voor bruiloften.',
+      sv: 'Finlands renaste luft, den lugnaste fjälldestinationen för bröllop.',
     },
     bestFor: {
       fi: ['Pieni ja intiimi häät', 'Tunturikylpyläjuhlat', 'Luonnonrauha vieraille'],
@@ -378,6 +403,7 @@ export const locations: Location[] = [
       fr: ['Mariages petits et intimes', 'Célébrations spa au sommet du fell', 'Calme de la nature pour les invités'],
       it: ['Matrimoni piccoli e intimi', 'Celebrazioni spa in cima al fell', 'Pace della natura per gli ospiti'],
       nl: ['Kleine en intieme bruiloften', 'Spa-vieringen op de fell', 'Natuurrust voor de gasten'],
+      sv: ['Små och intima bröllop', 'Spa-fester uppe på fjället', 'Vildmarkens lugn för gästerna'],
     },
     venueSlugs: ['lapland-hotels-saaga', 'snow-village-lainio'],
     heroImage: '/images/venues/lapland-hotels-saaga.webp',
@@ -393,6 +419,7 @@ export const locations: Location[] = [
       fr: 'Sommets enneigés du fell d’Ylläs',
       it: 'Cime innevate del fell di Ylläs',
       nl: 'Besneeuwde toppen van de fell van Ylläs',
+      sv: 'Snötäckta fjälltoppar i Ylläs',
     },
     seasonNote: {
       fi: 'Ruskakausi syyskuun puolivälissä on Ylläksen kauneinta aikaa kesähäille.',
@@ -406,6 +433,7 @@ export const locations: Location[] = [
       fr: 'La ruska automnale de mi-septembre est la plus belle période d’Ylläs pour les mariages d’automne.',
       it: 'La ruska autunnale di metà settembre è il periodo più bello di Ylläs per i matrimoni autunnali.',
       nl: 'De herfstruska medio september is de mooiste tijd in Ylläs voor herfstbruiloften.',
+      sv: 'Höstens ruska i mitten av september är Ylläs vackraste tid för höstbröllop.',
     },
   },
   {
@@ -422,6 +450,7 @@ export const locations: Location[] = [
       fr: 'Pyhä-Luosto',
       it: 'Pyhä-Luosto',
       nl: 'Pyhä-Luosto',
+      sv: 'Pyhä-Luosto',
     },
     region: {
       fi: 'Itä-Lappi · Pyhä-Luoston kansallispuisto',
@@ -435,6 +464,7 @@ export const locations: Location[] = [
       fr: 'Laponie orientale · Parc national Pyhä-Luosto',
       it: 'Lapponia orientale · Parco Nazionale Pyhä-Luosto',
       nl: 'Oost-Lapland · Nationaal Park Pyhä-Luosto',
+      sv: 'Östra Lappland · Pyhä-Luosto nationalpark',
     },
     airport: 'RVN',
     airportDistanceKm: 110,
@@ -450,6 +480,7 @@ export const locations: Location[] = [
       fr: 'Le secret le mieux gardé de Laponie. L’Hotel Aurora Pyhä est le site d’observation des étoiles le plus septentrional au monde, et le Lapland Hotels Pyhä propose une mine d’améthyste que les couples peuvent réserver en privé.',
       it: 'Il segreto meglio custodito della Lapponia. L’Hotel Aurora Pyhä è il sito di osservazione delle stelle più a nord del mondo, e il Lapland Hotels Pyhä offre una miniera di ametista che le coppie possono prenotare in esclusiva.',
       nl: 'Het best bewaarde geheim van Lapland. Hotel Aurora Pyhä is de noordelijkste sterrenkijkplek ter wereld, en Lapland Hotels Pyhä biedt een amethistmijn die stellen privé kunnen boeken.',
+      sv: 'Lapplands bäst bevarade hemlighet. Hotel Aurora Pyhä är världens nordligaste plats för stjärnskådning, och Lapland Hotels Pyhä erbjuder en ametistgruva som par kan boka privat.',
     },
     highlight: {
       fi: 'Ainutlaatuinen amethyst-kaivosvihkiminen.',
@@ -463,6 +494,7 @@ export const locations: Location[] = [
       fr: 'Une cérémonie de mariage unique dans une mine d’améthyste.',
       it: 'Una cerimonia di nozze unica in una miniera di ametista.',
       nl: 'Een unieke trouwceremonie in een amethistmijn.',
+      sv: 'En vigselceremoni i ametistgruva utan motstycke.',
     },
     bestFor: {
       fi: ['Tähtibongaus + revontulet', 'Amethystikaivos-vihkiminen', 'Etäinen, vähän vieraita'],
@@ -476,6 +508,7 @@ export const locations: Location[] = [
       fr: ['Observation des étoiles + aurores boréales', 'Cérémonies en mine d’améthyste', 'Cérémonies isolées et intimes'],
       it: ['Osservazione delle stelle + aurore boreali', 'Cerimonie nella miniera di ametista', 'Cerimonie remote e intime'],
       nl: ['Sterren kijken + noorderlicht', 'Ceremonies in de amethistmijn', 'Afgelegen, intieme ceremonies'],
+      sv: ['Stjärnskådning + norrsken', 'Ceremonier i ametistgruva', 'Avskilda, intima ceremonier'],
     },
     venueSlugs: ['hotel-aurora-pyha', 'lapland-hotels-pyha'],
     heroImage: '/images/locations/pyha-luosto.webp',
@@ -491,6 +524,7 @@ export const locations: Location[] = [
       fr: 'Forêts du fell de Pyhä',
       it: 'Boschi del fell di Pyhä',
       nl: 'Bossen van de fell van Pyhä',
+      sv: 'Skogar vid Pyhäfjället',
     },
     seasonNote: {
       fi: 'Joulukuu–maaliskuu on parasta revontuliaikaa. Kesäkuu–elokuu vaellushäille.',
@@ -504,6 +538,7 @@ export const locations: Location[] = [
       fr: 'De décembre à mars pour les plus belles aurores boréales. De juin à août pour les mariages-randonnées.',
       it: 'Da dicembre a marzo per le migliori aurore boreali. Da giugno ad agosto per i matrimoni con trekking.',
       nl: 'December–maart voor het mooiste noorderlicht. Juni–augustus voor wandelbruiloften.',
+      sv: 'december–mars för bästa norrsken. juni–augusti för vandringsbröllop.',
     },
   },
   {
@@ -520,6 +555,7 @@ export const locations: Location[] = [
       fr: 'Kilpisjärvi',
       it: 'Kilpisjärvi',
       nl: 'Kilpisjärvi',
+      sv: 'Kilpisjärvi',
     },
     region: {
       fi: 'Käsivarsi · Norjan ja Ruotsin rajalla',
@@ -533,6 +569,7 @@ export const locations: Location[] = [
       fr: 'Le Bras de la Finlande · Aux frontières norvégienne et suédoise',
       it: 'Il Braccio della Finlandia · Ai confini con Norvegia e Svezia',
       nl: 'De Arm van Finland · Aan de Noorse en Zweedse grens',
+      sv: 'Finlands arm · Vid gränsen mot Norge och Sverige',
     },
     airport: 'KTT',
     airportDistanceKm: 220,
@@ -548,6 +585,7 @@ export const locations: Location[] = [
       fr: 'Le point le plus septentrional et le plus élevé de Finlande, offrant les plus belles vues sur les aurores boréales de Laponie au-dessus des fells. Tundrea Igloos propose des cabines à toit de verre au bord du lac.',
       it: 'Il punto più a nord e più alto della Finlandia, con le migliori viste sulle aurore boreali della Lapponia sopra i fell. Tundrea Igloos offre cabine con tetto di vetro in riva al lago.',
       nl: 'Het noordelijkste en hoogste punt van Finland, met het beste noorderlicht van Lapland boven de fells. Tundrea Igloos biedt cabins met glasdak aan de oever van het meer.',
+      sv: 'Finlands nordligaste och högsta punkt, med Lapplands bästa norrskensvyer ovanför fjällen. Tundrea Igloos erbjuder stugor med glastak vid sjöstranden.',
     },
     highlight: {
       fi: 'Kolmen valtakunnan rajapyykkivihkiminen Suomessa, Norjassa ja Ruotsissa samaan aikaan.',
@@ -561,6 +599,7 @@ export const locations: Location[] = [
       fr: 'Cérémonie à la frontière de trois pays — mariez-vous en Finlande, en Norvège et en Suède au même endroit.',
       it: 'Cerimonia al confine di tre Paesi — sposatevi in Finlandia, Norvegia e Svezia nello stesso punto.',
       nl: 'Ceremonie op het drielandenpunt — trouw tegelijk in Finland, Noorwegen en Zweden.',
+      sv: 'Vigsel vid trelandsgränsen — gift er i Finland, Norge och Sverige på samma punkt.',
     },
     bestFor: {
       fi: ['Adventure-elopement', 'Kolmen maan rajavihkiminen', 'Eksklusiivinen pieni häät'],
@@ -574,6 +613,7 @@ export const locations: Location[] = [
       fr: ['Elopements d’aventure', 'Cérémonies à la frontière de trois pays', 'Petits mariages exclusifs'],
       it: ['Elopement d’avventura', 'Cerimonie al confine di tre Paesi', 'Piccoli matrimoni esclusivi'],
       nl: ['Avontuurlijke elopements', 'Ceremonies op het drielandenpunt', 'Exclusieve kleine bruiloften'],
+      sv: ['Äventyrliga rymningsbröllop', 'Ceremonier vid trelandsgränsen', 'Exklusiva små bröllop'],
     },
     venueSlugs: ['tundrea-kilpisjarvi'],
     heroImage: '/images/venues/tundrea-kilpisjarvi.jpg',
@@ -589,6 +629,7 @@ export const locations: Location[] = [
       fr: 'Les fells de Kilpisjärvi en été',
       it: 'I fell di Kilpisjärvi in estate',
       nl: 'De fells van Kilpisjärvi in de zomer',
+      sv: 'Kilpisjärvis fjäll på sommaren',
     },
     seasonNote: {
       fi: 'Tunturikesä on kompakti — kesäkuun loppu elokuun alkuun. Talvella tie auki Kilpisjärvelle ympäri vuoden.',
@@ -602,6 +643,7 @@ export const locations: Location[] = [
       fr: 'L’été des fells est court — de fin juin à début août. La route vers Kilpisjärvi est ouverte toute l’année, même en hiver.',
       it: 'L’estate dei fell è breve — da fine giugno a inizio agosto. La strada per Kilpisjärvi è aperta tutto l’anno, anche in inverno.',
       nl: 'De fell-zomer is kort — eind juni tot begin augustus. De weg naar Kilpisjärvi is het hele jaar open, ook in de winter.',
+      sv: 'Fjällsommaren är kort — slutet av juni till början av augusti. Vägen till Kilpisjärvi är öppen året runt.',
     },
   },
   {
@@ -618,6 +660,7 @@ export const locations: Location[] = [
       fr: 'Oulu',
       it: 'Oulu',
       nl: 'Oulu',
+      sv: 'Oulu',
     },
     region: {
       fi: 'Perämeren rannikko · Kaupunkivaihtoehto matkalla Lappiin',
@@ -631,6 +674,7 @@ export const locations: Location[] = [
       fr: 'Côte de la baie de Botnie · L’option urbaine sur la route de la Laponie',
       it: 'Costa della Baia di Botnia · L’opzione urbana sulla via della Lapponia',
       nl: 'Kust van de Botnische Baai · De stadsoptie op weg naar Lapland',
+      sv: 'Bottenvikens kust · Stadsalternativet på väg till Lappland',
     },
     airport: 'OUL',
     airportDistanceKm: 15,
@@ -646,6 +690,7 @@ export const locations: Location[] = [
       fr: 'À proprement parler, c’est l’Ostrobotnie du Nord et non la Laponie — et c’est justement pour cela qu’Oulu figure ici. Cinquième ville de Finlande, sur la côte de la baie de Botnie, à environ 170 km au sud du cercle polaire, elle s’adresse aux couples qui veulent une nuit de noces citadine : hôtels, restaurants, vie nocturne et un vrai petit-déjeuner le lendemain matin, avec la nature de la Laponie à une route facile vers le nord.',
       it: 'A rigor di termini è Ostrobotnia settentrionale, non Lapponia — ed è proprio per questo che è in questa lista. La quinta città della Finlandia si affaccia sulla costa della Baia di Botnia, a circa 170 km a sud del Circolo Polare Artico, ed è adatta alle coppie che vogliono una prima notte di nozze in città: hotel, ristoranti, vita notturna e una vera colazione il mattino dopo, con la natura della Lapponia a un comodo tragitto in auto verso nord.',
       nl: 'Strikt genomen is het Noord-Österbotten en geen Lapland — en dat is precies waarom het op deze lijst staat. De vijfde stad van Finland ligt aan de kust van de Botnische Baai, zo’n 170 km ten zuiden van de poolcirkel, en past bij stellen die een stedelijke huwelijksnacht willen: hotels, restaurants, nachtleven en een goed ontbijt de ochtend erna, met de natuur van Lapland op een makkelijke rit naar het noorden.',
+      sv: 'Strikt taget Norra Österbotten snarare än Lappland — och det är just därför det finns med på listan. Finlands femte största stad ligger vid Bottenvikens kust, omkring 170 km söder om polcirkeln, och passar par som vill ha en stadsbröllopsnatt: hotell, restauranger, nattliv och en riktig frukost dagen efter, med Lapplands natur på nära köravstånd norrut.',
     },
     highlight: {
       fi: 'Suorat lennot Helsingistä noin tunnissa — vähiten erämaata kaikista kohteistamme, ihan tarkoituksella.',
@@ -659,6 +704,7 @@ export const locations: Location[] = [
       fr: 'Vols directs depuis Helsinki en une heure environ — la moins sauvage de nos régions, et c’est voulu.',
       it: 'Voli diretti da Helsinki in circa un’ora — la meno selvaggia delle nostre regioni, di proposito.',
       nl: 'Rechtstreekse vluchten vanuit Helsinki in ongeveer een uur — de minst wilde van onze regio’s, met opzet.',
+      sv: 'Direktflyg från Helsingfors på cirka en timme — den minst vildmarksbetonade av våra regioner, med avsikt.',
     },
     bestFor: {
       fi: ['Kaupunkimainen hääilta ravintoloineen ja yöelämineen', 'Merenjää ja rannikon talvimaisema', 'Helpot lentoyhteydet Helsingin kautta'],
@@ -672,6 +718,7 @@ export const locations: Location[] = [
       fr: ['Nuits de noces citadines avec restaurants et vie nocturne', 'Mer gelée et paysages côtiers d’hiver', 'Correspondances aériennes faciles via Helsinki'],
       it: ['Prime notti di nozze in città tra ristoranti e vita notturna', 'Mare ghiacciato e paesaggi costieri invernali', 'Collegamenti aerei comodi via Helsinki'],
       nl: ['Stedelijke huwelijksnachten met restaurants en nachtleven', 'Bevroren zee en winters kustlandschap', 'Vlotte vliegverbindingen via Helsinki'],
+      sv: ['Stadsbröllopsnätter med restauranger och nattliv', 'Fruset hav och vinterlandskap vid kusten', 'Smidiga flygförbindelser via Helsingfors'],
     },
     venueSlugs: [],
     heroImage: '/images/locations/oulu.webp',
@@ -687,6 +734,7 @@ export const locations: Location[] = [
       fr: 'Rivage gelé de la baie de Botnie à Oulu au crépuscule',
       it: 'Riva ghiacciata della Baia di Botnia a Oulu al crepuscolo',
       nl: 'Bevroren kustlijn van de Botnische Baai in Oulu in de schemering',
+      sv: 'Frusen strandlinje vid Bottenviken i Oulu i skymningen',
     },
     seasonNote: {
       fi: 'Perämeri jäätyy talvisin — merenjäämaisemaa tyypillisesti tammikuusta maaliskuuhun. Kesällä rannikolla riittää valoisia iltoja.',
@@ -700,6 +748,7 @@ export const locations: Location[] = [
       fr: 'La baie de Botnie gèle en hiver — paysages de glace de mer généralement de janvier à mars. En été, de longues soirées claires sur la côte.',
       it: 'La Baia di Botnia gela in inverno — paesaggi di ghiaccio marino di norma da gennaio a marzo. In estate, lunghe serate luminose sulla costa.',
       nl: 'De Botnische Baai vriest ’s winters dicht — zee-ijslandschap doorgaans van januari tot maart. In de zomer lange, lichte avonden aan de kust.',
+      sv: 'Bottenviken fryser på vintern — havsislandskap oftast från januari till mars. På sommaren långa ljusa kvällar vid kusten.',
     },
   },
 ];

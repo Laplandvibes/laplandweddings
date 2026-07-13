@@ -15,7 +15,7 @@ import { AD_SLOTS } from '../data/adSlots';
 
 // Per-locale string picker — every visible string lists fi/en/de/ja/ko/fr/it/nl.
 // es / pt-BR / zh-CN fall back to en until we add native copy.
-type Bag = { fi: string; en: string; de: string; ja: string; ko: string; fr: string; it: string; nl: string };
+type Bag = { fi: string; en: string; de: string; ja: string; ko: string; fr: string; it: string; nl: string; sv: string };
 const pick = (lang: Lang, b: Bag): string => {
   switch (lang) {
     case 'fi': return b.fi;
@@ -25,6 +25,7 @@ const pick = (lang: Lang, b: Bag): string => {
     case 'fr': return b.fr;
     case 'it': return b.it;
     case 'nl': return b.nl;
+    case 'sv': return b.sv;
     default:   return b.en;
   }
 };
@@ -49,6 +50,7 @@ export default function Home() {
     fr: 'Mariage en Laponie 2026 — lieux et démarches de mariage',
     it: 'Matrimonio in Lapponia 2026 — sedi e pratiche di nozze',
     nl: 'Trouwen in Lapland 2026 — locaties en huwelijkspapieren',
+    sv: 'Bröllop i Lappland 2026 — vigselplatser och äktenskapspapper',
   };
   const seoTitle = SEO_TITLE[lang];
   const seoDesc = pick(lang, {
@@ -60,6 +62,7 @@ export default function Home() {
     fr: 'Le site le plus complet pour organiser votre mariage en Laponie. Plus de 20 lieux, 7 wedding planners, démarches DVV et prix réels. Recevez 3 devis personnalisés avec un seul formulaire.',
     it: 'Il sito più completo per organizzare il Suo matrimonio in Lapponia. Oltre 20 sedi, 7 wedding planner, pratiche DVV e prezzi reali. Riceva 3 preventivi personalizzati con un unico modulo.',
     nl: 'De meest complete site om uw bruiloft in Lapland te plannen. Meer dan 20 locaties, 7 wedding planners, DVV-papierwerk en echte prijzen. Ontvang met één formulier 3 persoonlijke offertes.',
+    sv: 'Lapplands mest kompletta sajt för bröllopsplanering. Över 20 platser, 7 planerare, DVV-papper, verkliga priser. Få 3 personliga offerter med ett enda formulär.',
   });
 
   const featuredVenues = venues.slice(0, 6);
@@ -117,6 +120,7 @@ export default function Home() {
           fr: 'Décor de mariage estival au bord d’un lac paisible de Laponie à l’heure dorée du soleil de minuit',
           it: 'Allestimento di matrimonio estivo in riva a un tranquillo lago della Lapponia nell’ora dorata del sole di mezzanotte',
           nl: 'Zomerse trouwlocatie aan een rustig meer in Lapland tijdens het gouden uur van de middernachtzon',
+          sv: 'Sommarbröllopsdukning vid en stilla lappländsk sjö i midnattssolens gyllene timme',
         })}
       >
         <div className="flex flex-col items-center gap-3 w-full">
@@ -156,6 +160,7 @@ export default function Home() {
                 fr: 'mariages par an',
                 it: 'matrimoni all’anno',
                 nl: 'bruiloften per jaar',
+                sv: 'bröllop per år',
               }),
               body: pick(lang, {
                 fi: 'Lappi on vakiintunut Pohjois-Euroopan suosituin destination wedding -kohde. Sesonki jouluk.–maalisk.',
@@ -166,6 +171,7 @@ export default function Home() {
                 fr: 'La Laponie s’est imposée comme la première destination de mariage du Nord de l’Europe. La saison s’étend de décembre à mars.',
                 it: 'La Lapponia è la destinazione per matrimoni più richiesta del Nord Europa. La stagione va da dicembre a marzo.',
                 nl: 'Lapland is uitgegroeid tot de populairste bestemmingsbruiloftregio van Noord-Europa. Het seizoen loopt van december tot maart.',
+                sv: 'Lappland är den populäraste regionen för destinationsbröllop i Nordeuropa. Säsongen pågår december–mars.',
               }),
             },
             {
@@ -178,6 +184,7 @@ export default function Home() {
                 fr: 'à partir de 1 600 €',
                 it: 'da 1 600 €',
                 nl: 'vanaf € 1.600',
+                sv: 'från 1 600 €',
               }),
               label: pick(lang, {
                 fi: 'pienin paketti',
@@ -188,6 +195,7 @@ export default function Home() {
                 fr: 'plus petite formule',
                 it: 'pacchetto base',
                 nl: 'kleinste pakket',
+                sv: 'minsta paketet',
               }),
               body: pick(lang, {
                 fi: 'Kahdestaan vihille 1 600 €:sta, premium-juhlat 50 000 €:on. Luksus jopa 100 000 €.',
@@ -198,6 +206,7 @@ export default function Home() {
                 fr: 'Mariage en tête-à-tête à partir de 1 600 €, célébrations premium jusqu’à 50 000 €, prestations de luxe au-delà de 100 000 €.',
                 it: 'Matrimonio in due da 1 600 €, celebrazioni premium fino a 50 000 €, allestimenti di lusso oltre i 100 000 €.',
                 nl: 'Elopen vanaf € 1.600, premium feesten tot € 50.000 en luxe vieringen tot € 100.000 en meer.',
+                sv: 'Rymningsbröllop från 1 600 €, premiumfester upp till 50 000 €, lyx upp till 100 000 €+.',
               }),
             },
             {
@@ -210,6 +219,7 @@ export default function Home() {
                 fr: '3 à 5 semaines',
                 it: '3–5 settimane',
                 nl: '3–5 weken',
+                sv: '3–5 veckor',
               }),
               label: pick(lang, {
                 fi: 'paperityö valmista',
@@ -220,6 +230,7 @@ export default function Home() {
                 fr: 'formalités réglées',
                 it: 'pratiche completate',
                 nl: 'papierwerk geregeld',
+                sv: 'pappren klara',
               }),
               body: pick(lang, {
                 fi: 'DVV hoitaa avioliittoluvan ulkomaalaisille pareille 3–5 viikossa. Maksuton.',
@@ -230,6 +241,7 @@ export default function Home() {
                 fr: 'Le DVV finlandais délivre l’autorisation de mariage pour les couples étrangers en 3 à 5 semaines, gratuitement.',
                 it: 'Il DVV finlandese rilascia il nulla osta al matrimonio per le coppie straniere in 3–5 settimane, gratuitamente.',
                 nl: 'De Finse DVV verwerkt de huwelijksvergunning voor buitenlandse paren in 3 tot 5 weken — kosteloos.',
+                sv: 'DVV behandlar hindersprövningen för utländska par på 3–5 veckor. Kostnadsfritt.',
               }),
             },
           ].map((stat) => (
@@ -257,6 +269,7 @@ export default function Home() {
           fr: 'Types de mariage',
           it: 'Tipologie di matrimonio',
           nl: 'Soorten bruiloft',
+          sv: 'Bröllopstyper',
         })}
         title={tr.home.typesTitle}
         className="bg-night-light/30"
@@ -301,6 +314,7 @@ export default function Home() {
           fr: 'Instants de mariage en Laponie',
           it: 'Istanti di matrimonio in Lapponia',
           nl: 'Bruiloftsmomenten in Lapland',
+          sv: 'Bröllopsstunder i Lappland',
         })}
         title={pick(lang, {
           fi: 'Hetket joista vieraat puhuvat vuosia',
@@ -311,6 +325,7 @@ export default function Home() {
           fr: 'Les instants dont vos invités parleront pendant des années',
           it: 'I momenti di cui i Suoi ospiti parleranno per anni',
           nl: 'De momenten die uw gasten nog jaren zullen herinneren',
+          sv: 'Stunderna som era gäster minns i åratal',
         })}
         className="bg-night-light/30"
       >
@@ -327,6 +342,7 @@ export default function Home() {
                 fr: 'Arrivée en traîneau à huskies',
                 it: 'Arrivo con gli husky',
                 nl: 'Aankomst per huskyslee',
+                sv: 'Ankomst med husky',
               }),
               body: pick(lang, {
                 fi: 'Pari saapuu vihkimykseen 8 huskyn vetämällä rekellä — viraali hetki joka kerta.',
@@ -337,6 +353,7 @@ export default function Home() {
                 fr: 'Les mariés arrivent à la cérémonie en traîneau tiré par 8 huskies — un moment qui devient viral à chaque fois.',
                 it: 'Gli sposi arrivano alla cerimonia su una slitta trainata da 8 husky — un momento virale ogni volta.',
                 nl: 'Het bruidspaar arriveert bij de ceremonie achter 8 husky’s — telkens een viraal moment.',
+                sv: 'Paret anländer till ceremonin draget av 8 huskyer — en viral stund varje gång.',
               }),
             },
             {
@@ -350,6 +367,7 @@ export default function Home() {
                 fr: 'Lacs gelés',
                 it: 'Laghi ghiacciati',
                 nl: 'Bevroren meren',
+                sv: 'Frusna sjöar',
               }),
               body: pick(lang, {
                 fi: 'Inarinjärvellä iltahämärässä — koko jäätikkö ulottuu tunturille saakka.',
@@ -360,6 +378,7 @@ export default function Home() {
                 fr: 'Sur le lac Inari au crépuscule — la banquise s’étend jusqu’aux fjälls.',
                 it: 'Sul lago Inari al tramonto — la distesa di ghiaccio si estende fino ai fjäll.',
                 nl: 'Op het Inarimeer in de schemering — het ijsdek strekt zich uit tot aan het fjäll.',
+                sv: 'På Enaresjön i skymningen — hela istäcket sträcker sig ut mot fjället.',
               }),
             },
             {
@@ -373,6 +392,7 @@ export default function Home() {
                 fr: 'Du sauna à la neige',
                 it: 'Dalla sauna alla neve',
                 nl: 'Van sauna de sneeuw in',
+                sv: 'Från bastu till snö',
               }),
               body: pick(lang, {
                 fi: 'Hääyön jälkeen saunasta paljain jaloin lumeen — suomalaisten oma traditio.',
@@ -383,6 +403,7 @@ export default function Home() {
                 fr: 'Sauna du soir de noces, puis pieds nus dans la neige — un rituel typiquement finlandais.',
                 it: 'La sauna della notte di nozze e poi a piedi nudi nella neve — un rito tipicamente finlandese.',
                 nl: 'Sauna in de huwelijksnacht en daarna op blote voeten de sneeuw in — een typisch Fins ritueel.',
+                sv: 'Bastu på bröllopsnatten, sedan barfota ut i snön — en helt finsk ritual.',
               }),
             },
             {
@@ -396,6 +417,7 @@ export default function Home() {
                 fr: 'Bain glacé et champagne',
                 it: 'Bagno nel ghiaccio e champagne',
                 nl: 'IJsbad met champagne',
+                sv: 'Isbad + champagne',
               }),
               body: pick(lang, {
                 fi: 'Hääpuvuissa avantoon, samppanjalasi kädessä — Instagram-hetki.',
@@ -406,6 +428,7 @@ export default function Home() {
                 fr: 'En tenue de mariage, coupe de champagne à la main, plongée dans l’avanto — l’instant Instagram par excellence.',
                 it: 'In abito da sposi, calice di champagne in mano, dentro l’avanto — l’istante perfetto per Instagram.',
                 nl: 'In trouwkleding, champagneglas in de hand, het ijsbad in — pure Instagram.',
+                sv: 'I bröllopskläder, champagne i handen, ner i vaken — ren Instagram.',
               }),
             },
           ].map((exp) => (
@@ -444,6 +467,7 @@ export default function Home() {
           fr: 'Régions',
           it: 'Regioni',
           nl: 'Regio’s',
+          sv: 'Regioner',
         })}
         title={tr.home.locationsTitle}
       >
@@ -483,6 +507,7 @@ export default function Home() {
           fr: 'Lieux de mariage vérifiés',
           it: 'Sedi di matrimonio verificate',
           nl: 'Geverifieerde locaties',
+          sv: 'Verifierade platser',
         })}
         title={pick(lang, {
           fi: 'Lapin kuuluisimmat hääpaikat',
@@ -493,6 +518,7 @@ export default function Home() {
           fr: 'Les lieux de mariage les plus prisés de Laponie',
           it: 'Le sedi di matrimonio più celebri della Lapponia',
           nl: 'De bekendste bruiloftslocaties van Lapland',
+          sv: 'Lapplands mest kända bröllopsplatser',
         })}
         className="bg-night-light/30"
       >
@@ -522,6 +548,7 @@ export default function Home() {
                       fr: 'invités',
                       it: 'ospiti',
                       nl: 'gasten',
+                      sv: 'gäster',
                     })}
                   </span>
                   <span className="text-gold">{v.priceTier}</span>
