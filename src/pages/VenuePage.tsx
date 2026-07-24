@@ -192,12 +192,12 @@ const V: Record<VKey, Localized<string>> = {
     nl: 'Andere locaties in {region}', sv: 'Other {region} venues',
   },
   getQuoteFor: {
-    en: 'Get a quote — {name}', fi: 'Pyydä tarjous — {name}',
-    de: 'Angebot anfordern — {name}', ja: '見積もりを依頼 — {name}',
-    es: 'Solicita un presupuesto — {name}', 'pt-BR': 'Peça um orçamento — {name}',
-    'zh-CN': '获取报价 — {name}', ko: '견적 받기 — {name}',
-    fr: 'Demander un devis — {name}', it: 'Richiedi un preventivo — {name}',
-    nl: 'Vraag een offerte aan — {name}', sv: 'Get a quote — {name}',
+    en: 'Get a quote: {name}', fi: 'Pyydä tarjous: {name}',
+    de: 'Angebot anfordern: {name}', ja: '見積もりを依頼：{name}',
+    es: 'Solicita un presupuesto: {name}', 'pt-BR': 'Peça um orçamento: {name}',
+    'zh-CN': '获取报价：{name}', ko: '견적 받기: {name}',
+    fr: 'Demander un devis: {name}', it: 'Richiedi un preventivo: {name}',
+    nl: 'Vraag een offerte aan: {name}', sv: 'Get a quote: {name}',
   },
 };
 
@@ -217,7 +217,7 @@ export default function VenuePage() {
   return (
     <>
       <SEO
-        title={`${v.name} — ${v.region[dataLang]} | LaplandWeddings`}
+        title={`${v.name}: ${v.region[dataLang]} | LaplandWeddings`}
         description={v.description[dataLang].slice(0, 160)}
         path={`/venues/${v.slug}`}
         image={v.image}

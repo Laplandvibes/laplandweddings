@@ -149,7 +149,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       data.forEach((v, k) => {
         if (typeof v === 'string') payload[k] = v;
       });
-      const subject = `Wedding enquiry — ${payload.weddingType || 'open'} (${payload.location || 'open'})`;
+      const subject = `Wedding enquiry: ${payload.weddingType || 'open'} (${payload.location || 'open'})`;
       const lines = [
         `Name: ${payload.yourName || ''}`,
         `Partner: ${payload.partnerName || ''}`,
@@ -166,7 +166,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         payload.accommodation ? `Accommodation in budget: ${payload.accommodation}` : '',
         `Budget: ${payload.budget || ''}`,
         `Language preference: ${lang}`,
-        files.length ? `Attachments: ${files.length} file(s) — please send separately to ${LEAD_INBOX}` : '',
+        files.length ? `Attachments: ${files.length} file(s), please send separately to ${LEAD_INBOX}` : '',
         '',
         'Message:',
         payload.message || '',

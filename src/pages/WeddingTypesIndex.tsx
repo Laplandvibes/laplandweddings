@@ -10,17 +10,17 @@ import { ui } from '../data/uiStrings';
 
 const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
   seoTitle: {
-    en: 'Lapland Wedding Types — Northern Lights, Snow Chapel, Glass Igloo | LaplandWeddings',
-    fi: 'Häätyypit Lapissa — revontulet | LaplandWeddings',
+    en: 'Lapland Wedding Types: Northern Lights, Snow Chapel, Glass Igloo | LaplandWeddings',
+    fi: 'Häätyypit Lapissa: revontulet | LaplandWeddings',
     de: 'Hochzeitsarten in Lappland | LaplandWeddings',
-    ja: 'ラップランドのウェディングタイプ — オーロラ、スノーチャペル、ガラスのイグルー | LaplandWeddings',
+    ja: 'ラップランドのウェディングタイプ：オーロラ、スノーチャペル、ガラスのイグルー | LaplandWeddings',
     es: 'Tipos de boda en Laponia | LaplandWeddings',
     'pt-BR': 'Tipos de casamento na Lapônia | LaplandWeddings',
-    'zh-CN': '拉普兰婚礼类型 — 北极光、雪教堂、玻璃冰屋 | LaplandWeddings',
-    ko: '라플란드 웨딩 유형 — 오로라, 스노우 채플, 글라스 이글루 | LaplandWeddings',
+    'zh-CN': '拉普兰婚礼类型：北极光、雪教堂、玻璃冰屋 | LaplandWeddings',
+    ko: '라플란드 웨딩 유형: 오로라, 스노우 채플, 글라스 이글루 | LaplandWeddings',
     fr: 'Types de mariage en Laponie | LaplandWeddings',
     it: 'Tipi di matrimonio in Lapponia | LaplandWeddings',
-    nl: 'Soorten bruiloften in Lapland | LaplandWeddings', sv: 'Lapland Wedding Types — Northern Lights, Snow Chapel, Glass Igloo | LaplandWeddings',
+    nl: 'Soorten bruiloften in Lapland | LaplandWeddings', sv: 'Lapland Wedding Types: Northern Lights, Snow Chapel, Glass Igloo | LaplandWeddings',
   },
   seoDesc: {
     en: 'Six Lapland wedding types: Northern Lights, snow chapel, glass igloo, midnight sun, elopement, and vow renewal.',

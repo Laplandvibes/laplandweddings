@@ -15,17 +15,17 @@ import { ui } from '../data/uiStrings';
 
 const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' | 'premium', Localized<string>> = {
   seoTitle: {
-    en: 'Lapland Wedding Venues — 20+ verified venues | LaplandWeddings',
-    fi: 'Hääpaikat Lapissa — yli 20 kohdetta | LaplandWeddings',
+    en: 'Lapland Wedding Venues: 20+ verified venues | LaplandWeddings',
+    fi: 'Hääpaikat Lapissa: yli 20 kohdetta | LaplandWeddings',
     de: 'Hochzeitslocations in Lappland | LaplandWeddings',
-    ja: 'ラップランドのウェディング会場 — 検証済み20以上の会場 | LaplandWeddings',
-    es: 'Lugares para bodas en Laponia — más de 20 | LaplandWeddings',
+    ja: 'ラップランドのウェディング会場：検証済み20以上の会場 | LaplandWeddings',
+    es: 'Lugares para bodas en Laponia: más de 20 | LaplandWeddings',
     'pt-BR': 'Locais para casamento na Lapônia | LaplandWeddings',
-    'zh-CN': '拉普兰婚礼场地 — 20+ 个经核实的场地 | LaplandWeddings',
-    ko: '라플란드 웨딩 장소 — 검증된 20곳 이상 | LaplandWeddings',
+    'zh-CN': '拉普兰婚礼场地：20+ 个经核实的场地 | LaplandWeddings',
+    ko: '라플란드 웨딩 장소: 검증된 20곳 이상 | LaplandWeddings',
     fr: 'Lieux de mariage en Laponie | LaplandWeddings',
     it: 'Location per matrimoni in Lapponia | LaplandWeddings',
-    nl: 'Trouwlocaties in Lapland — 20+ locaties | LaplandWeddings', sv: 'Lapland Wedding Venues — 20+ verified venues | LaplandWeddings',
+    nl: 'Trouwlocaties in Lapland: 20+ locaties | LaplandWeddings', sv: 'Lapland Wedding Venues: 20+ verified venues | LaplandWeddings',
   },
   seoDesc: {
     en: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village and more. 20+ verified Lapland wedding venues across the regions.',
