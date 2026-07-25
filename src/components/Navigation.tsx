@@ -80,10 +80,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3 px-3 sm:px-6 py-2.5 sm:py-3">
         <div className="flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
-          <L to="/" className="font-heading text-lg sm:text-3xl tracking-wider whitespace-nowrap font-semibold" onClick={() => setOpen(false)}>
-            <span style={{ color: '#F472B6', fontWeight: 700 }}>#</span>
-            <span style={{ color: '#FFFFFF', fontWeight: 600, letterSpacing: '0.05em' }}>LAPLAND</span>
-            <span style={{ color: '#F472B6', fontWeight: 700, letterSpacing: '0.05em' }}>WEDDINGS</span>
+          <L to="/" className="font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap" onClick={() => setOpen(false)}>
+            <span style={{ color: '#F472B6' }}>#</span>
+            <span style={{ color: '#FFFFFF' }}>LAPLAND</span>
+            <span style={{ color: '#F472B6' }}>WEDDINGS</span>
           </L>
         </div>
 
