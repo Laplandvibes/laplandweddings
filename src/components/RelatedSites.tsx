@@ -84,11 +84,11 @@ const COPY: Record<Lang, Block> = {
   },
   'zh-CN': {
     eyebrow: '筹备你的拉普兰婚礼',
-    title: '让所有人抵达——并安排住宿',
+    title: '让所有人抵达，并安排住宿',
     subtitle: '拉普兰婚礼对宾客来说也是一次旅行。这些姊妹指南涵盖旅程的其余部分。',
     cards: [
       { href: 'https://laplandstays.com/property-types/', label: '婚礼宾客的住宿', body: '遍布拉普兰的木屋、玻璃冰屋和可预留房间的酒店,为你的宾客而备。' },
-      { href: 'https://laplandvisit.com/itineraries/', label: '规划你的整段拉普兰之旅', body: '仪式前后值得一看一玩的内容——完整的拉普兰旅行指南。' },
+      { href: 'https://laplandvisit.com/itineraries/', label: '规划你的整段拉普兰之旅', body: '仪式前后值得一看一玩的内容，完整的拉普兰旅行指南。' },
       { href: 'https://laplandtransport.com/lapland-guide/', label: '如何前往拉普兰', body: '飞往罗瓦涅米、基蒂莱和伊瓦洛的航班、火车及机场接送,供全体宾客使用。' },
     ],
   },

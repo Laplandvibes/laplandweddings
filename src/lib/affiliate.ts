@@ -109,3 +109,24 @@ export function carRentalLink(airport?: 'RVN' | 'KTT' | 'IVL'): string {
 
 /** Standard rel attribute for every affiliate link. */
 export const AFFILIATE_REL = 'sponsored nofollow noopener';
+
+/**
+ * Editorial referral tag for outbound links to a vendor's OWN website (e.g. a
+ * listed photographer's portfolio). This is NOT a monetised/affiliate link — it
+ * carries an editorial `utm_medium=referral` so the partner can see we sent the
+ * traffic. Do NOT use for affiliate / Trip.com / Maps / internal links, and do
+ * NOT change the anchor's `rel` (stays editorial `noopener noreferrer`).
+ * @param url     the vendor's own-website URL
+ * @param context short campaign context → utm_campaign=weddings_<context>
+ */
+export function withReferral(url: string, context: string): string {
+  try {
+    const u = new URL(url);
+    u.searchParams.set('utm_source', 'laplandvibes');
+    u.searchParams.set('utm_medium', 'referral');
+    u.searchParams.set('utm_campaign', `weddings_${context}`);
+    return u.toString();
+  } catch {
+    return url;
+  }
+}

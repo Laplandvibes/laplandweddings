@@ -77,10 +77,10 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md" style={{ background: 'rgba(31, 22, 18, 0.92)', borderBottom: '1px solid rgba(245,235,224,0.10)' }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3 px-3 sm:px-6 py-2.5 sm:py-3">
         <div className="flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
-          <L to="/" className="font-heading text-xl sm:text-3xl tracking-wider whitespace-nowrap font-semibold" onClick={() => setOpen(false)}>
+          <L to="/" className="font-heading text-lg sm:text-3xl tracking-wider whitespace-nowrap font-semibold" onClick={() => setOpen(false)}>
             <span style={{ color: '#F472B6', fontWeight: 700 }}>#</span>
             <span style={{ color: '#FFFFFF', fontWeight: 600, letterSpacing: '0.05em' }}>LAPLAND</span>
             <span style={{ color: '#F472B6', fontWeight: 700, letterSpacing: '0.05em' }}>WEDDINGS</span>
@@ -149,23 +149,8 @@ export default function Navigation() {
             )}
           </div>
 
-          {/* Mobile dropdown */}
-          <div className="lg:hidden relative inline-block">
-            <select
-              value={lang}
-              onChange={(e) => setLangAndStore(e.target.value as Lang)}
-              aria-label={aria.language}
-              className="appearance-none bg-slate-900/85 backdrop-blur-sm bg-transparent border border-white/40 rounded pl-2 pr-7 py-1 text-xs font-semibold uppercase text-white"
-              style={{ background: 'transparent' }}
-            >
-              {ALL_LANGS.map((l) => (
-                <option key={l.code} value={l.code} style={{ background: '#1F1612', color: '#fff' }}>
-                  {l.label}
-                </option>
-              ))}
-            </select>
-            <ChevronDown aria-hidden="true" className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white/80" />
-          </div>
+          {/* Mobile: language switching lives in the open menu below (full grid),
+              so no duplicate top-bar select — keeps the 375px header from overflowing. */}
 
           <button
             className="lg:hidden p-2.5 -mr-2 text-white/80 hover:text-white"

@@ -5,6 +5,7 @@ import { useLang } from '../i18n/LangContext';
 import { photographers } from '../data/photographers';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
+import { withReferral } from '../lib/affiliate';
 
 const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'sourceNote', Localized<string>> = {
   seoTitle: {
@@ -27,7 +28,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ja: 'ラップランド屈指のウェディングフォトグラファー6人。オーロラ、スノーチャペル、ガラスのイグルー。極寒で実証済み。',
     es: 'Seis de los mejores fotógrafos de bodas de Laponia. Auroras boreales, capillas de nieve, iglús de cristal: probados en el frío.',
     'pt-BR': 'Seis dos melhores fotógrafos de casamento da Lapônia. Aurora boreal, capelas de neve, iglus de vidro. Testados no frio.',
-    'zh-CN': '拉普兰最出色的六位婚礼摄影师。北极光、雪教堂、玻璃冰屋——在严寒中久经考验。',
+    'zh-CN': '拉普兰最出色的六位婚礼摄影师。北极光、雪教堂、玻璃冰屋，在严寒中久经考验。',
     ko: '라플란드 최고의 웨딩 포토그래퍼 6인. 오로라, 스노우 채플, 글라스 이글루. 혹한 속에서 검증됨.',
     fr: 'Six des meilleurs photographes de mariage de Laponie. Aurores boréales, chapelles de neige, igloos de verre. Éprouvés dans le froid.',
     it: 'Sei tra i migliori fotografi di matrimonio della Lapponia. Aurora boreale, cappelle di neve, igloo di vetro. Collaudati nel gelo.',
@@ -53,7 +54,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ja: 'ラップランドで最も経験豊富なウェディングフォトグラファー6人。オーロラに最適化した設定、スノーチャペルのライティング、ガラスイグルーの構図。すべて氷点下で実証済み。',
     es: 'Seis de los fotógrafos de bodas con más experiencia de Laponia. Calibrados para auroras, iluminación de capillas de nieve, composición en iglús de cristal: todo probado bajo cero.',
     'pt-BR': 'Seis dos fotógrafos de casamento mais experientes da Lapônia. Calibrados para a aurora, iluminação de capelas de neve, composição em iglus de vidro. Tudo testado abaixo de zero.',
-    'zh-CN': '拉普兰最具经验的六位婚礼摄影师。专为极光校准、雪教堂布光、玻璃冰屋构图——全部在零下环境中久经验证。',
+    'zh-CN': '拉普兰最具经验的六位婚礼摄影师。专为极光校准、雪教堂布光、玻璃冰屋构图，全部在零下环境中久经验证。',
     ko: '라플란드에서 가장 노련한 웨딩 포토그래퍼 6인. 오로라 맞춤 세팅, 스노우 채플 조명, 글라스 이글루 구도. 모두 영하의 환경에서 검증되었습니다.',
     fr: 'Six des photographes de mariage les plus expérimentés de Laponie. Réglages calibrés pour les aurores, éclairage en chapelle de neige, composition en igloo de verre. Le tout éprouvé par grand froid.',
     it: 'Sei tra i fotografi di matrimonio più esperti della Lapponia. Tarati sull’aurora, illuminazione per cappelle di neve, composizione negli igloo di vetro. Tutto collaudato sotto zero.',
@@ -79,7 +80,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ja: '情報は各フォトグラファーの公開ウェブサイトから収集しています。LaplandWeddingsは掲載者全員と契約関係にあるわけではありません。各自の公式サイトから直接ご連絡ください。',
     es: 'Información obtenida de los sitios web públicos de los fotógrafos. LaplandWeddings no mantiene una relación contractual con todos los listados: contacta directamente a través de sus propios sitios.',
     'pt-BR': 'Informações obtidas dos sites públicos dos fotógrafos. A LaplandWeddings não tem relação contratual com todos os listados. Entre em contato diretamente pelos sites de cada um.',
-    'zh-CN': '信息来源于摄影师的公开网站。LaplandWeddings 并未与所有列出的摄影师建立合同关系——请通过他们各自的网站直接联系。',
+    'zh-CN': '信息来源于摄影师的公开网站。LaplandWeddings 并未与所有列出的摄影师建立合同关系，请通过他们各自的网站直接联系。',
     ko: '정보는 각 포토그래퍼의 공개 웹사이트에서 수집했습니다. LaplandWeddings는 게재된 모든 분과 계약 관계에 있지 않습니다. 각자의 사이트를 통해 직접 연락하세요.',
     fr: 'Informations issues des sites web publics des photographes. LaplandWeddings n’est pas lié par contrat à tous les photographes répertoriés. Contactez-les directement via leurs propres sites.',
     it: 'Informazioni tratte dai siti web pubblici dei fotografi. LaplandWeddings non ha un rapporto contrattuale con tutti gli elencati. Contattali direttamente tramite i loro siti.',
@@ -121,7 +122,7 @@ export default function Photographers() {
               <p className="text-xs text-aurora-green italic mb-4">★ {p.highlight[dataLang]}</p>
               <div className="flex items-center justify-between text-xs pt-4 border-t border-white/5">
                 <a
-                  href={p.website}
+                  href={withReferral(p.website, 'photographers')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-aurora-pink hover:text-rose transition-colors font-semibold"
