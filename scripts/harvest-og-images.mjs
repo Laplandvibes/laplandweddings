@@ -28,8 +28,8 @@ const targets = [
   ['levi-panorama', 'https://www.laplandhotels.com/en/hotels-and-destinations/yllas-levi/levi-panorama'],
   ['lapland-hotels-saaga', 'https://www.laplandhotels.com/en/hotels-and-destinations/yllas/lapland-hotels-saaga'],
   ['tundrea-kilpisjarvi', 'https://tundrea.com/en'],
-  ['hotel-aurora-pyha', 'https://www.laplandhotels.com/en/hotels-and-destinations/pyha-luosto/lapland-hotels-pyha'],
-  ['lapland-hotels-pyha', 'https://www.laplandhotels.com/en/hotels-and-destinations/pyha-luosto/lapland-hotels-pyha'],
+  ['santas-hotel-aurora', 'https://santashotels.fi/en/hotels/luosto-hotel-aurora/'],
+  ['lapland-hotels-luostotunturi', 'https://www.laplandhotels.com/en/hotels-and-destinations/luosto/lapland-hotels-luostotunturi'],
   ['santas-hotel-santamus', 'https://santashotels.fi/'],
   ['nova-skyland', 'https://novaskyland.com/'],
 ];

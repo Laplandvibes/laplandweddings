@@ -1,1 +1,17 @@
+# Venue slug corrections, 2026-07-26.
+# "Hotel Aurora Pyha" and "Lapland Hotels Pyha" never existed: the two registry
+# entries shared one (404) laplandhotels.com URL and turned out to be two
+# different real properties in Luosto. The old /venues/ URLs are in the live
+# sitemap, so they keep a 301 to the corrected slugs. Both the bare and the
+# trailing-slash form are listed because Pages matches the path as given, and
+# ":lang" covers the 11 localised prefixes.
+/venues/hotel-aurora-pyha /venues/santas-hotel-aurora 301
+/venues/hotel-aurora-pyha/ /venues/santas-hotel-aurora/ 301
+/:lang/venues/hotel-aurora-pyha /:lang/venues/santas-hotel-aurora 301
+/:lang/venues/hotel-aurora-pyha/ /:lang/venues/santas-hotel-aurora/ 301
+/venues/lapland-hotels-pyha /venues/lapland-hotels-luostotunturi 301
+/venues/lapland-hotels-pyha/ /venues/lapland-hotels-luostotunturi/ 301
+/:lang/venues/lapland-hotels-pyha /:lang/venues/lapland-hotels-luostotunturi 301
+/:lang/venues/lapland-hotels-pyha/ /:lang/venues/lapland-hotels-luostotunturi/ 301
+
 /* /index.html 200

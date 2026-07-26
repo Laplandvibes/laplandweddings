@@ -146,6 +146,30 @@
       },
       "lastVerified": "2026-07-26"
     },
+    "santas-hotel-aurora": {
+      "matchedName": "Santa's Hotel Aurora",
+      "rating": 4.4,
+      "reviewCount": 424,
+      "googlePlaceId": "ChIJE3a5K2DPLEQR3kPeBczkFAk",
+      "address": "Luppokeino 1, 99555 Luosto",
+      "location": {
+        "latitude": 67.154752,
+        "longitude": 26.912188
+      },
+      "lastVerified": "2026-07-26"
+    },
+    "lapland-hotels-luostotunturi": {
+      "matchedName": "Lapland Hotels Luostotunturi",
+      "rating": 4.3,
+      "reviewCount": 1456,
+      "googlePlaceId": "ChIJPdpR5mPPLEQRdgOlC2UQkfs",
+      "address": "Luostontie 1, 99555 Luosto",
+      "location": {
+        "latitude": 67.1570886,
+        "longitude": 26.914915999999998
+      },
+      "lastVerified": "2026-07-26"
+    },
     "nova-skyland": {
       "matchedName": "Nova Skyland Hotel",
       "rating": 4.6,
@@ -184,16 +208,6 @@
       "key": "tundrea-kilpisjarvi",
       "name": "Tundrea Kilpisjärvi",
       "reason": "\"Tundrea Holiday Resort & Restaurant\" name mismatch (dice 0.28)"
-    },
-    {
-      "key": "hotel-aurora-pyha",
-      "name": "Hotel Aurora Pyhä",
-      "reason": "\"Santa's Hotel Aurora\" name mismatch (dice 0.67) | \"Pyhä Igloos\" name mismatch (dice 0.26) | \"Hotel Pyhätunturi\" name mismatch (dice 0.57) | \"SKI-INN Hotelli Kultakero\" name mismatch (dice 0.29) | \"Aurora Igloos & Suites, Pelkosenniemi\" name mismatch (dice 0.33)"
-    },
-    {
-      "key": "lapland-hotels-pyha",
-      "name": "Lapland Hotels Pyhä",
-      "reason": "\"Hotel Pyhätunturi\" name mismatch (dice 0.48) | \"Lapland Hotels Luostotunturi\" name mismatch (dice 0.59) | \"Sunday Morning Resort\" name mismatch (dice 0.06) | \"Kurula's Resort\" name mismatch (dice 0.07) | \"SKI-INN Hotelli Kultakero\" name mismatch (dice 0.22)"
     },
     {
       "key": "santas-hotel-santamus",

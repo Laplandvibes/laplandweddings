@@ -12,8 +12,8 @@ const venues = [
   'kakslauttanen', 'arctic-snowhotel', 'snow-village-lainio', 'northern-lights-ranch', 'levi-ice-castle',
   'levin-iglut', 'apukka-resort', 'arctic-treehouse', 'wilderness-hotel-muotka', 'wilderness-hotel-inari',
   'wilderness-hotel-juutua', 'northern-lights-village-saariselka', 'northern-lights-village-levi',
-  'hotelli-hullu-poro', 'levi-panorama', 'lapland-hotels-saaga', 'tundrea-kilpisjarvi', 'hotel-aurora-pyha',
-  'lapland-hotels-pyha', 'santas-hotel-santamus', 'nova-skyland',
+  'hotelli-hullu-poro', 'levi-panorama', 'lapland-hotels-saaga', 'tundrea-kilpisjarvi', 'santas-hotel-aurora',
+  'lapland-hotels-luostotunturi', 'santas-hotel-santamus', 'nova-skyland',
 ];
 
 const enPaths = [

@@ -54,12 +54,13 @@
  *                 unverifiable invented data).
  *   7. UNIQUE   — post-pass: if two registry venues resolve to the SAME Google
  *      PLACE      Place ID, BOTH are dropped. Wedding venues frequently operate
- *                 inside a hotel or share an address with a parent business,
- *                 and `hotel-aurora-pyha` / `lapland-hotels-pyha` even share a
- *                 website in the registry. Showing one company's reviews twice
- *                 under two different venue names would be a fabricated
- *                 comparison, so neither gets a rating until a human resolves
- *                 the registry entry.
+ *                 inside a hotel or share an address with a parent business.
+ *                 This gate is what surfaced the 2026-07-26 Pyhä defect: two
+ *                 registry entries shared one website URL, and tracing it
+ *                 showed neither venue existed under the name we published.
+ *                 Showing one company's reviews twice under two different
+ *                 venue names would be a fabricated comparison, so neither
+ *                 gets a rating until a human resolves the registry entry.
  *
  * Anything that does not clear every gate is dropped and listed under
  * "UNMATCHED" in the output. The site then simply shows no rating for that
@@ -136,8 +137,13 @@ const TARGETS = {
   'levi-panorama': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila'] },
   'lapland-hotels-saaga': { queryCity: 'Ylläs, Kolari, Lapland, Finland', locality: ['yllas', 'yllasjarvi', 'akaslompolo', 'kolari'] },
   'tundrea-kilpisjarvi': { queryCity: 'Kilpisjärvi, Enontekiö, Lapland, Finland', locality: ['kilpisjarvi', 'enontekio'] },
-  'hotel-aurora-pyha': { queryCity: 'Pyhätunturi, Pelkosenniemi, Lapland, Finland', locality: ['pyha', 'pyhatunturi', 'pelkosenniemi'] },
-  'lapland-hotels-pyha': { queryCity: 'Pyhätunturi, Pelkosenniemi, Lapland, Finland', locality: ['pyha', 'pyhatunturi', 'pelkosenniemi'] },
+  // Both sit in the Luosto log village, NOT in Pyhä: the registry called them
+  // "Hotel Aurora Pyhä" and "Lapland Hotels Pyhä" until 2026-07-26, when the
+  // shared (404) website URL was traced back to two different real properties
+  // 20 km away. Keeping the locality list to Luosto is what stops the Pyhä
+  // hotels (Hotel Pyhätunturi, SKI-INN Kultakero) from being matched here again.
+  'santas-hotel-aurora': { queryCity: 'Luosto, Sodankylä, Lapland, Finland', locality: ['luosto', 'sodankyla'] },
+  'lapland-hotels-luostotunturi': { queryCity: 'Luosto, Sodankylä, Lapland, Finland', locality: ['luosto', 'sodankyla'] },
   'santas-hotel-santamus': { queryCity: 'Rovaniemi, Lapland, Finland', locality: ['rovaniemi'] },
   'nova-skyland': { queryCity: 'Rovaniemi, Lapland, Finland', locality: ['rovaniemi'] },
 };
@@ -220,7 +226,7 @@ function nameGate(expected, candidate) {
  * Wedding-venue hardening (not in the hoteldeals original).
  *
  * Almost every venue here is named after where it stands — "Levi Ice Castle",
- * "Tundrea Kilpisjärvi", "Lapland Hotels Pyhä". Plain containment therefore
+ * "Tundrea Kilpisjärvi", "Lapland Hotels Luostotunturi". Plain containment therefore
  * accepts a Google result named merely "Levi" or "Pyhä", i.e. the ski resort or
  * the fell itself, and the place + bbox gates cannot catch it because that
  * resort really is at that address. Reject any candidate whose entire name is

@@ -22,12 +22,20 @@ import type { Lang } from '../i18n/translations';
  *
  * The sync FAILS CLOSED, and on wedding venues it has to fail closed more often
  * than on a hotel site: these venues frequently trade inside, next door to, or
- * under the same brand as a larger business. 8 of 21 venues currently carry no
+ * under the same brand as a larger business. 6 of 21 venues currently carry no
  * rating at all — among them one whose only candidate was a sibling property of
  * the same chain (Santa's Hotel Santamus vs Santa's Hotel Santa Claus) and one
  * whose resort Google splits into separate village listings (Kakslauttanen).
  * Every consumer must therefore treat "no rating" as the normal case and render
  * nothing rather than a guess.
+ *
+ * Two of the eight originally-unmatched venues were unmatchable for a reason
+ * the gates could only point at, not fix: "Hotel Aurora Pyhä" and "Lapland
+ * Hotels Pyhä" shared one website URL in the registry, and that URL 404s.
+ * Neither name exists. They were two real but misnamed properties in Luosto,
+ * corrected on 2026-07-26 to Santa's Hotel Aurora and Lapland Hotels
+ * Luostotunturi, after which both matched on the first pass with no gate
+ * relaxed.
  */
 
 /**
@@ -111,11 +119,14 @@ export const PICK_MIN_REVIEWS = 100;
  * the median (4.3) so the chip stays a recommendation instead of a mere argmax —
  * something that must be earned against the field, not won by being least bad.
  *
- * Here the 13 venues with verified data are 4.4, 4.4, 4.4, 4.5, 4.5, 4.6, 4.6,
- * 4.6, 4.6, 4.6, 4.7, 4.7, 4.8 — min 4.4, median 4.6, max 4.8. A 4.3 floor
- * copied over from the hotel site would sit below the whole field and do
+ * Here the 15 venues with verified data are 4.3, 4.4, 4.4, 4.4, 4.4, 4.5, 4.5,
+ * 4.6, 4.6, 4.6, 4.6, 4.6, 4.7, 4.7, 4.8 — min 4.3, median 4.6, max 4.8. A 4.3
+ * floor copied over from the hotel site would admit the entire field and do
  * nothing. One display step below this median gives 4.5, which excludes the
- * bottom three and leaves ten venues genuinely competing.
+ * bottom five and leaves ten venues genuinely competing.
+ *
+ * Re-derived 2026-07-26 after the Pyhä registry fix added two more matches
+ * (4.4 and 4.3). The median did not move, so the threshold did not either.
  *
  * Re-derive this whenever the registry or the snapshot changes materially:
  * `node scripts/sync-venues.mjs` prints the min / median / max it just fetched.
