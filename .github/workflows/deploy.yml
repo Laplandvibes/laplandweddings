@@ -1,7 +1,45 @@
 name: Deploy to Cloudflare Pages
 
+# =============================================================================
+# STATUS: MANUAL DISPATCH ONLY -- the `push` trigger is disabled ON PURPOSE.
+#
+# WHY THIS COULD NEVER WORK AS A PLAIN CHECKOUT
+#   This site's src/ imports `../../../shared/*`. Those files do NOT live in
+#   this repo -- they live in the PRIVATE parent monorepo Laplandvibes/lv-ops.
+#   A workflow that only checks out this repo therefore always dies in the
+#   build step with:
+#       error TS2307: Cannot find module '../../../shared/Footer'
+#   Reading lv-ops from here needs a CROSS-REPO token. secrets.GITHUB_TOKEN is
+#   scoped to this repository alone and is NOT sufficient.
+#
+#   Until the LV_MONOREPO_TOKEN secret exists, `on: push` stays commented out
+#   so this workflow cannot keep producing red runs that falsely imply
+#   "push to main deploys the site". It does not. Deploy is manual:
+#
+#     cd laplandweddings-new && npm run build \
+#       && npx wrangler pages deploy dist --project-name=laplandweddings \
+#            --branch=main --commit-dirty=true
+#
+# HOW TO ENABLE PUSH-TO-DEPLOY  (Vesa only -- creating secrets is not
+# something an agent may do)
+#   1. Create a fine-grained PAT, READ-ONLY "Contents" on Laplandvibes/lv-ops:
+#        https://github.com/settings/personal-access-tokens/new
+#      NOTE: `Laplandvibes` is a User account, not an organisation, so there
+#      are no org-level secrets -- the secret must be set per repo.
+#   2. gh secret set LV_MONOREPO_TOKEN \
+#        --repo Laplandvibes/laplandweddings --body "<the-pat>"
+#   3. Uncomment the `push:` block below and commit.
+#
+# The build steps below are NOT guesswork: the parent/shared + parent/site
+# layout was reproduced locally on 2026-07-26 and produced a green
+# `npm run build` with a single React instance and shared/ Tailwind classes
+# present in the emitted CSS.
+# =============================================================================
+
 on:
-  workflow_dispatch:  # disabled push trigger — local wrangler deploys are authoritative
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
 
 jobs:
   deploy:
@@ -10,20 +48,53 @@ jobs:
       contents: read
       deployments: write
     steps:
-      - uses: actions/checkout@v4
+      # 1) Parent monorepo -- shared/ only. Needs the cross-repo PAT.
+      - name: Checkout parent monorepo (shared/ only)
+        uses: actions/checkout@v4
+        with:
+          repository: Laplandvibes/lv-ops
+          ref: main
+          token: ${{ secrets.LV_MONOREPO_TOKEN }}
+          path: parent
+          sparse-checkout: shared
 
-      - uses: actions/setup-node@v4
+      # 2) This site, nested exactly ONE level under parent/ so that
+      #    src/<dir>/<file> -> ../../../shared resolves to parent/shared.
+      - name: Checkout site
+        uses: actions/checkout@v4
+        with:
+          path: parent/site
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
+          cache-dependency-path: parent/site/package-lock.json
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
+        working-directory: parent/site
 
-      - run: npm run build
+      # 3) parent/shared/*.tsx import bare `react` / `react-router-dom` /
+      #    `lucide-react`. Node resolves those by walking UP from
+      #    parent/shared/, i.e. to parent/node_modules -- which does not exist
+      #    in CI, because the monorepo root package.json is untracked. Point it
+      #    at the site's own install so exactly ONE React copy is bundled.
+      #    Two React copies break useContext across the ecosystem
+      #    (laplandweddings.online prod outage 2026-05-22).
+      - name: Link parent/node_modules -> site install
+        run: ln -s site/node_modules node_modules
+        working-directory: parent
+
+      - name: Build
+        run: npm run build
+        working-directory: parent/site
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: parent/site
           command: pages deploy dist --project-name=laplandweddings --branch=main
