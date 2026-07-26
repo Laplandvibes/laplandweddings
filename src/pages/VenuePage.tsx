@@ -11,6 +11,11 @@ import NotFound from './NotFound';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
+import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
+import GoogleRatingRow from '../components/GoogleRatingRow';
+import EditorsPickChip from '../components/EditorsPickChip';
+import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
+import { editorialCopy } from '../data/editorialCopy';
 
 type VKey =
   | 'getQuoteVenue' | 'checkPrices'
@@ -214,6 +219,16 @@ export default function VenuePage() {
     .filter((x) => x.locationSlug === v.locationSlug && x.slug !== v.slug)
     .slice(0, 3);
 
+  // No chip on this page's own venue: a single venue is not a field, so there
+  // is nothing to be "top of". The chip belongs to the sibling grid below,
+  // where several venues are actually compared. bestGoogleRated enforces the
+  // same rule anyway (it returns null below two eligible venues).
+  const siblingPick = bestGoogleRated(siblings);
+  const siblingPickNote = editorialPickNote(siblingPick, lang, {
+    pickReason: pickLocalized(editorialCopy.pickReason, lang),
+    verifiedOn: pickLocalized(editorialCopy.verifiedOn, lang),
+  });
+
   return (
     <>
       <SEO
@@ -306,6 +321,12 @@ export default function VenuePage() {
 
       {/* QUICK FACTS BAR */}
       <Section>
+        {/* Google's verdict on this venue, on the page that is entirely about
+            it. Renders nothing when the sync produced no certain match — the
+            common case here (8 of 21 venues), and the fail-closed path. */}
+        <div className="max-w-6xl mx-auto mb-5">
+          <GoogleRatingRow venue={v} tone="dark" />
+        </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
             <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: '#C9466A' }}>{tr.sections.capacity}</p>
@@ -411,18 +432,40 @@ export default function VenuePage() {
       {/* SIBLING VENUES IN SAME REGION */}
       {siblings.length > 0 && (
         <Section className="bg-night-light/30" eyebrow={vt('otherRegionVenues').replace('{region}', v.region[dataLang])} title={vt('compareNearby')}>
+          {/* Myytävä Esittelykumppani-paikka (KKV: merkitty mainokseksi).
+              Tyhjänä = kanoninen vaalea house-ad. Ei-mainoslokaaleilla ei
+              renderöidy mitään, ja venue-kortisto alla säilyy ennallaan. */}
+          <div className="max-w-5xl mx-auto">
+            <FeaturedPartnerSlot placement="venue_related" locale={lang} />
+          </div>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {siblings.map((sib) => (
-              <L key={sib.slug} to={`/venues/${sib.slug}`} className="group bg-night-light rounded-2xl overflow-hidden border border-line-light transition-all hover:scale-[1.02]">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={sib.image} alt={sib.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
+              // The rating row is an <a>, so it sits BESIDE the card link, not
+              // inside it: nested anchors are invalid HTML.
+              <div key={sib.slug} className="group flex flex-col bg-night-light rounded-2xl overflow-hidden border border-line-light transition-all hover:scale-[1.02]">
+                <L to={`/venues/${sib.slug}`} className="block">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img src={sib.image} alt={sib.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
+                  </div>
+                  <div className="px-5 pt-5">
+                    {siblingPick === sib && (
+                      <EditorsPickChip
+                        label={pickLocalized(editorialCopy.pickLabel, lang)}
+                        reason={pickLocalized(editorialCopy.pickReason, lang)}
+                        note={siblingPickNote}
+                        className="mb-3"
+                      />
+                    )}
+                    <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: '#C9466A' }}>{sib.region[dataLang]}</p>
+                    <h4 className="font-heading text-xl mb-1" style={{ color: '#1F1612' }}>{sib.name}</h4>
+                    <p className="text-xs" style={{ color: '#5A4F48' }}>{sib.capacity.min}–{sib.capacity.max} {guests} · {sib.priceTier}</p>
+                  </div>
+                </L>
+                <div className="px-5 pt-3 pb-5 mt-auto">
+                  <GoogleRatingRow venue={sib} />
                 </div>
-                <div className="p-5">
-                  <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: '#C9466A' }}>{sib.region[dataLang]}</p>
-                  <h4 className="font-heading text-xl mb-1" style={{ color: '#1F1612' }}>{sib.name}</h4>
-                  <p className="text-xs" style={{ color: '#5A4F48' }}>{sib.capacity.min}–{sib.capacity.max} {guests} · {sib.priceTier}</p>
-                </div>
-              </L>
+              </div>
             ))}
           </div>
         </Section>

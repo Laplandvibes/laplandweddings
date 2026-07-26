@@ -12,6 +12,12 @@ import { venues } from '../data/venues';
 import L from '../components/L';
 import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
+import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
+import GoogleRatingRow from '../components/GoogleRatingRow';
+import EditorsPickChip from '../components/EditorsPickChip';
+import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
+import { editorialCopy } from '../data/editorialCopy';
+import { pickLocalized } from '../data/localized';
 
 // Per-locale string picker — every visible string lists fi/en/de/ja/ko/fr/it/nl.
 // es / pt-BR / zh-CN fall back to en until we add native copy.
@@ -66,6 +72,16 @@ export default function Home() {
   });
 
   const featuredVenues = venues.slice(0, 6);
+
+  // Earned, derived, unpurchasable: the best real Google rating among the six
+  // venues shown here (see bestGoogleRated). Every card prints its own rating
+  // and links to Google's review list, so the reader can check the claim on the
+  // spot. The sellable surface is the slot above the grid.
+  const venuePick = bestGoogleRated(featuredVenues);
+  const venuePickNote = editorialPickNote(venuePick, lang, {
+    pickReason: pickLocalized(editorialCopy.pickReason, lang),
+    verifiedOn: pickLocalized(editorialCopy.verifiedOn, lang),
+  });
 
   // Seasonal hero copy flips with the SAME isSummerSeason() that drives the hero
   // image. Summer = midnight-sun / white-night wording (no aurora, no snow).
@@ -522,39 +538,58 @@ export default function Home() {
         })}
         className="bg-night-light/30"
       >
+        {/* Myytävä Esittelykumppani-paikka (KKV: merkitty mainokseksi).
+            Tyhjänä = kanoninen vaalea house-ad. Ei-mainoslokaaleilla ei
+            renderöidy mitään, ja venue-kortisto alla säilyy ennallaan. */}
+        <FeaturedPartnerSlot placement="home_featured" locale={lang} />
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {featuredVenues.map((v) => (
-            <L
+            // The rating row is an <a>, so it sits BESIDE the card link, not
+            // inside it: nested anchors are invalid HTML.
+            <div
               key={v.slug}
-              to={`/venues/${v.slug}`}
-              className="group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all"
+              className="group flex flex-col bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all"
             >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={v.image} alt={v.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
-              </div>
-              <div className="p-5">
-                <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{v.region[dataLang]}</p>
-                <h3 className="font-heading text-lg text-white mb-2 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
-                <p className="text-sm text-gray-400 line-clamp-3">{v.description[dataLang]}</p>
-                <div className="mt-3 text-xs text-gray-500 flex items-center justify-between">
-                  <span>
-                    {v.capacity.min}–{v.capacity.max}{' '}
-                    {pick(lang, {
-                      fi: 'vierasta',
-                      en: 'guests',
-                      de: 'Gäste',
-                      ja: '名',
-                      ko: '명',
-                      fr: 'invités',
-                      it: 'ospiti',
-                      nl: 'gasten',
-                      sv: 'gäster',
-                    })}
-                  </span>
-                  <span className="text-gold">{v.priceTier}</span>
+              <L to={`/venues/${v.slug}`} className="block">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={v.image} alt={v.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
                 </div>
+                <div className="px-5 pt-5">
+                  {venuePick === v && (
+                    <EditorsPickChip
+                      label={pickLocalized(editorialCopy.pickLabel, lang)}
+                      reason={pickLocalized(editorialCopy.pickReason, lang)}
+                      note={venuePickNote}
+                      className="mb-3"
+                    />
+                  )}
+                  <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{v.region[dataLang]}</p>
+                  <h3 className="font-heading text-lg text-white mb-2 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
+                  <p className="text-sm text-gray-400 line-clamp-3">{v.description[dataLang]}</p>
+                  <div className="mt-3 text-xs text-gray-500 flex items-center justify-between">
+                    <span>
+                      {v.capacity.min}–{v.capacity.max}{' '}
+                      {pick(lang, {
+                        fi: 'vierasta',
+                        en: 'guests',
+                        de: 'Gäste',
+                        ja: '名',
+                        ko: '명',
+                        fr: 'invités',
+                        it: 'ospiti',
+                        nl: 'gasten',
+                        sv: 'gäster',
+                      })}
+                    </span>
+                    <span className="text-gold">{v.priceTier}</span>
+                  </div>
+                </div>
+              </L>
+              <div className="px-5 pt-3 pb-5 mt-auto">
+                <GoogleRatingRow venue={v} />
               </div>
-            </L>
+            </div>
           ))}
         </div>
         <div className="text-center mt-10">

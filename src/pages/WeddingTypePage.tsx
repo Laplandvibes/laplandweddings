@@ -10,6 +10,11 @@ import NotFound from './NotFound';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
+import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
+import GoogleRatingRow from '../components/GoogleRatingRow';
+import EditorsPickChip from '../components/EditorsPickChip';
+import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
+import { editorialCopy } from '../data/editorialCopy';
 
 const P: Record<'titleSuffix' | 'suitableVenues', Localized<string>> = {
   titleSuffix: {
@@ -47,6 +52,16 @@ export default function WeddingTypePage() {
   if (!wt) return <NotFound />;
 
   const venues = wt.venueSlugs.map(getVenueBySlug).filter((v): v is NonNullable<ReturnType<typeof getVenueBySlug>> => !!v);
+
+  // Earned, derived, unpurchasable: the best real Google rating among the
+  // venues shown for this wedding type. Every card prints its own rating and
+  // links to Google's review list, so the claim is checkable. The sellable
+  // surface is the slot above the grid.
+  const pick = bestGoogleRated(venues);
+  const pickNote = editorialPickNote(pick, lang, {
+    pickReason: pickLocalized(editorialCopy.pickReason, lang),
+    verifiedOn: pickLocalized(editorialCopy.verifiedOn, lang),
+  });
 
   return (
     <>
@@ -111,18 +126,38 @@ export default function WeddingTypePage() {
       </Section>
 
       <Section title={pickLocalized(P.suitableVenues, lang)}>
+        {/* Myytävä Esittelykumppani-paikka (KKV: merkitty mainokseksi).
+            Tyhjänä = kanoninen vaalea house-ad. Ei-mainoslokaaleilla ei
+            renderöidy mitään, ja venue-kortisto alla säilyy ennallaan. */}
+        <FeaturedPartnerSlot placement="wedding_type_venues" locale={lang} />
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {venues.map((v) => (
-            <L key={v.slug} to={`/venues/${v.slug}`} className="group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={v.image} alt={v.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
+            // The rating row is an <a>, so it sits BESIDE the card link, not
+            // inside it: nested anchors are invalid HTML.
+            <div key={v.slug} className="group flex flex-col bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all">
+              <L to={`/venues/${v.slug}`} className="block">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={v.image} alt={v.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
+                </div>
+                <div className="px-5 pt-5">
+                  {pick === v && (
+                    <EditorsPickChip
+                      label={pickLocalized(editorialCopy.pickLabel, lang)}
+                      reason={pickLocalized(editorialCopy.pickReason, lang)}
+                      note={pickNote}
+                      className="mb-3"
+                    />
+                  )}
+                  <h3 className="font-heading text-lg text-white mb-1 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
+                  <p className="text-xs text-gray-500 mb-2">{v.region[dataLang]}</p>
+                  <p className="text-sm text-gray-400 line-clamp-2">{v.description[dataLang]}</p>
+                </div>
+              </L>
+              <div className="px-5 pt-3 pb-5 mt-auto">
+                <GoogleRatingRow venue={v} />
               </div>
-              <div className="p-5">
-                <h3 className="font-heading text-lg text-white mb-1 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
-                <p className="text-xs text-gray-500 mb-2">{v.region[dataLang]}</p>
-                <p className="text-sm text-gray-400 line-clamp-2">{v.description[dataLang]}</p>
-              </div>
-            </L>
+            </div>
           ))}
         </div>
       </Section>

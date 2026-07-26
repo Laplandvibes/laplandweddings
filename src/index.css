@@ -31,6 +31,10 @@
 
   /* Accent colors — keep romantic warm tones */
   --color-pink: #EC4899;
+  /* Network ad-marker pink. shared/PartnerSlot uses `bg-vibe-pink/90` for the
+     KKV advertising badge on a SOLD partner card; without this token that badge
+     renders with no background on this site. */
+  --color-vibe-pink: #EC4899;
   --color-rose: #E5879C;            /* softer warm rose, romantic */
   --color-rose-deep: #C9466A;       /* deeper rose for buttons */
   --color-gold: #D4A574;            /* warm gold accent */

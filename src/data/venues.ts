@@ -1,4 +1,5 @@
 import type { Localized } from './localized';
+import { withGoogleReviews } from './googleReviews';
 
 export type PriceTier = '€€' | '€€€' | '€€€€';
 
@@ -22,7 +23,12 @@ export interface Venue {
   yearRound: boolean;
 }
 
-export const venues: Venue[] = [
+/**
+ * EDITORIAL layer — hand-maintained, never machine-written. Real Google review
+ * data is merged on below from the gitted sync snapshot; keep the two apart so
+ * re-running `node scripts/sync-venues.mjs` can never clobber editorial work.
+ */
+const venueRegistry: Venue[] = [
   {
     slug: 'kakslauttanen',
     name: 'Kakslauttanen Arctic Resort',
@@ -1727,6 +1733,16 @@ export const venues: Venue[] = [
     yearRound: true,
   },
 ];
+
+/**
+ * Published venue list: the editorial registry with real Google review data
+ * merged on by slug (rating, review count, Place ID, verification date).
+ *
+ * Venues whose Places match was not certain arrive here with none of those
+ * fields — the sync fails closed, and 8 of 21 currently do. Consumers must
+ * render no rating rather than a guess; `GoogleRatingRow` already does.
+ */
+export const venues = withGoogleReviews(venueRegistry);
 
 export const getVenueBySlug = (slug: string) => venues.find((v) => v.slug === slug);
 export const getVenuesByLocation = (locationSlug: string) => venues.filter((v) => v.locationSlug === locationSlug);
