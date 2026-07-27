@@ -149,16 +149,38 @@ export default function Navigation() {
             )}
           </div>
 
-          {/* Mobile: language switching lives in the open menu below (full grid),
-              so no duplicate top-bar select — keeps the 375px header from overflowing. */}
+          {/* Mobile language switcher, next to the hamburger — the network pattern
+              (cf. laplandskiresorts Header.tsx). It had been dropped here to stop the
+              375px header overflowing, which left the only mobile control buried at
+              the bottom of the drawer. Restored as the compact ISO-code select: the
+              wordmark + ecosystem button already crowd this bar, so it shows `label`
+              (FR) rather than `native` (Français) and is width-capped. Verified: no
+              horizontal overflow at 375px. */}
+          <div className="lg:hidden flex items-center gap-1.5 shrink-0">
+            <div className="relative inline-block">
+              <select
+                value={lang}
+                onChange={(e) => setLangAndStore(e.target.value as Lang)}
+                aria-label={aria.language}
+                className="appearance-none max-w-[5.5rem] bg-transparent border border-white/40 rounded pl-2 pr-5 py-1 text-xs font-semibold text-white/90"
+              >
+                {ALL_LANGS.map((l) => (
+                  <option key={l.code} value={l.code} className="bg-night text-white">
+                    {l.label}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 text-white/80" />
+            </div>
 
-          <button
-            className="lg:hidden p-2.5 -mr-2 text-white/80 hover:text-white"
-            onClick={() => setOpen(!open)}
-            aria-label={aria.menu}
-          >
-            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            <button
+              className="p-2.5 -mr-2 text-white/80 hover:text-white"
+              onClick={() => setOpen(!open)}
+              aria-label={aria.menu}
+            >
+              {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -179,19 +201,10 @@ export default function Navigation() {
                 {it.label}
               </NL>
             ))}
-            <div className="flex flex-wrap items-center gap-1 rounded-2xl bg-white/5 border border-white/40 p-1 mt-2">
-              {ALL_LANGS.map(({ code, label }) => (
-                <button
-                  key={code}
-                  onClick={() => setLangAndStore(code)}
-                  className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-colors ${
-                    lang === code ? 'bg-rose text-white' : 'text-white/85'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+            {/* The 12-language pill grid that used to sit here is gone: the switcher
+                now lives in the top bar next to the hamburger, as on the rest of the
+                network. Keeping both duplicated the control and was what made this
+                drawer feel unlike the other sites. */}
           </nav>
         </div>
       )}
