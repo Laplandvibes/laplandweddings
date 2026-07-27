@@ -26,7 +26,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '종합 기획 / 코디네이션',
     fr: 'Organisation / coordination complète',
     it: 'Pianificazione / coordinamento completo',
-    nl: 'Volledige planning / coördinatie', sv: 'Full planning / coordination',
+    nl: 'Volledige planning / coördinatie', sv: 'Helhetsplanering / koordinering',
   },
   venue: {
     en: 'Venues',
@@ -39,7 +39,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '웨딩 장소',
     fr: 'Lieux',
     it: 'Location',
-    nl: 'Locaties', sv: 'Venues',
+    nl: 'Locaties', sv: 'Bröllopsplatser',
   },
   ceremony: {
     en: 'Ceremony / officiant',
@@ -52,7 +52,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '예식 / 주례',
     fr: 'Cérémonie / officiant',
     it: 'Cerimonia / celebrante',
-    nl: 'Ceremonie / voltrekker', sv: 'Ceremony / officiant',
+    nl: 'Ceremonie / voltrekker', sv: 'Vigsel / vigselförrättare',
   },
   catering: {
     en: 'Catering & drinks',
@@ -65,7 +65,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '케이터링 & 음료',
     fr: 'Traiteur et boissons',
     it: 'Catering e bevande',
-    nl: 'Catering & drankjes', sv: 'Catering & drinks',
+    nl: 'Catering & drankjes', sv: 'Catering & dryck',
   },
   photography: {
     en: 'Photography / video',
@@ -78,7 +78,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '사진 / 영상',
     fr: 'Photo / vidéo',
     it: 'Fotografia / video',
-    nl: 'Fotografie / video', sv: 'Photography / video',
+    nl: 'Fotografie / video', sv: 'Foto / video',
   },
   accommodation: {
     en: 'Accommodation',
@@ -91,7 +91,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '숙박',
     fr: 'Hébergement',
     it: 'Alloggio',
-    nl: 'Accommodatie', sv: 'Accommodation',
+    nl: 'Accommodatie', sv: 'Boende',
   },
   transfers: {
     en: 'Transfers / logistics',
@@ -104,7 +104,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '이동 / 물류',
     fr: 'Transferts / logistique',
     it: 'Transfer / logistica',
-    nl: 'Transfers / logistiek', sv: 'Transfers / logistics',
+    nl: 'Transfers / logistiek', sv: 'Transporter / logistik',
   },
   decor: {
     en: 'Décor / florals',
@@ -117,7 +117,7 @@ const SERVICE_LABELS: Record<ServiceKey, Localized<string>> = {
     ko: '장식 / 플라워',
     fr: 'Décoration / fleurs',
     it: 'Allestimenti / fiori',
-    nl: 'Decoratie / bloemen', sv: 'Décor / florals',
+    nl: 'Decoratie / bloemen', sv: 'Dekor / blommor',
   },
 };
 
@@ -134,22 +134,22 @@ const T: Record<FormKey, Localized<string>> = {
   businessName: {
     en: 'Business name', fi: 'Yrityksen nimi', de: 'Firmenname', ja: '会社名',
     es: 'Nombre de la empresa', 'pt-BR': 'Nome da empresa', 'zh-CN': '公司名称',
-    ko: '회사명', fr: 'Nom de l’entreprise', it: 'Nome dell’azienda', nl: 'Bedrijfsnaam', sv: 'Business name',
+    ko: '회사명', fr: 'Nom de l’entreprise', it: 'Nome dell’azienda', nl: 'Bedrijfsnaam', sv: 'Företagsnamn',
   },
   contactName: {
     en: 'Contact name', fi: 'Yhteyshenkilö', de: 'Ansprechpartner', ja: '担当者名',
     es: 'Persona de contacto', 'pt-BR': 'Pessoa de contato', 'zh-CN': '联系人',
-    ko: '담당자명', fr: 'Personne de contact', it: 'Referente', nl: 'Contactpersoon', sv: 'Contact name',
+    ko: '담당자명', fr: 'Personne de contact', it: 'Referente', nl: 'Contactpersoon', sv: 'Kontaktperson',
   },
   email: {
     en: 'Email', fi: 'Sähköposti', de: 'E-Mail', ja: 'メール',
     es: 'Correo electrónico', 'pt-BR': 'E-mail', 'zh-CN': '电子邮箱',
-    ko: '이메일', fr: 'E-mail', it: 'Email', nl: 'E-mail', sv: 'Email',
+    ko: '이메일', fr: 'E-mail', it: 'Email', nl: 'E-mail', sv: 'E-post',
   },
   phone: {
     en: 'Phone', fi: 'Puhelin', de: 'Telefon', ja: '電話',
     es: 'Teléfono', 'pt-BR': 'Telefone', 'zh-CN': '电话',
-    ko: '전화', fr: 'Téléphone', it: 'Telefono', nl: 'Telefoon', sv: 'Phone',
+    ko: '전화', fr: 'Téléphone', it: 'Telefono', nl: 'Telefoon', sv: 'Telefon',
   },
   phoneHelp: {
     en: 'WhatsApp works, often the fastest way to reach you.',
@@ -162,7 +162,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: 'WhatsApp도 가능합니다. 가장 빠르게 연락할 수 있는 방법입니다.',
     fr: 'WhatsApp convient, souvent le moyen le plus rapide de vous joindre.',
     it: 'Va bene anche WhatsApp: spesso è il modo più rapido per contattarti.',
-    nl: 'WhatsApp kan ook, vaak de snelste manier om je te bereiken.', sv: 'WhatsApp works, often the fastest way to reach you.',
+    nl: 'WhatsApp kan ook, vaak de snelste manier om je te bereiken.', sv: 'WhatsApp fungerar bra, ofta det snabbaste sättet att nå dig.',
   },
   regions: {
     en: 'Regions you serve in Lapland',
@@ -175,7 +175,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '라플란드 내 서비스 지역',
     fr: 'Régions desservies en Laponie',
     it: 'Aree in cui operi in Lapponia',
-    nl: 'Regio’s die je bedient in Lapland', sv: 'Regions you serve in Lapland',
+    nl: 'Regio’s die je bedient in Lapland', sv: 'Regioner du verkar i inom Lappland',
   },
   regionsPlaceholder: {
     en: 'e.g. Rovaniemi, Levi, Saariselkä',
@@ -188,13 +188,13 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '예: 로바니에미, 레비, 사리셀캐',
     fr: 'p. ex. Rovaniemi, Levi, Saariselkä',
     it: 'es. Rovaniemi, Levi, Saariselkä',
-    nl: 'bijv. Rovaniemi, Levi, Saariselkä', sv: 'e.g. Rovaniemi, Levi, Saariselkä',
+    nl: 'bijv. Rovaniemi, Levi, Saariselkä', sv: 't.ex. Rovaniemi, Levi, Saariselkä',
   },
   website: {
     en: 'Website / Instagram', fi: 'Verkkosivu / Instagram', de: 'Website / Instagram',
     ja: 'ウェブサイト／Instagram', es: 'Sitio web / Instagram', 'pt-BR': 'Site / Instagram',
     'zh-CN': '网站 / Instagram', ko: '웹사이트 / 인스타그램', fr: 'Site web / Instagram',
-    it: 'Sito web / Instagram', nl: 'Website / Instagram', sv: 'Website / Instagram',
+    it: 'Sito web / Instagram', nl: 'Website / Instagram', sv: 'Webbplats / Instagram',
   },
   years: {
     en: 'How long have you run Lapland weddings?',
@@ -207,7 +207,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '라플란드 웨딩을 운영하신 지 얼마나 되셨나요?',
     fr: 'Depuis combien de temps organisez-vous des mariages en Laponie ?',
     it: 'Da quanto tempo organizzi matrimoni in Lapponia?',
-    nl: 'Hoe lang organiseer je al bruiloften in Lapland?', sv: 'How long have you run Lapland weddings?',
+    nl: 'Hoe lang organiseer je al bruiloften in Lapland?', sv: 'Hur länge har du arrangerat bröllop i Lappland?',
   },
   yearsPlaceholder: {
     en: 'e.g. 6 years, 40+ weddings',
@@ -220,7 +220,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '예: 6년, 40건 이상의 웨딩',
     fr: 'p. ex. 6 ans, plus de 40 mariages',
     it: 'es. 6 anni, oltre 40 matrimoni',
-    nl: 'bijv. 6 jaar, 40+ bruiloften', sv: 'e.g. 6 years, 40+ weddings',
+    nl: 'bijv. 6 jaar, 40+ bruiloften', sv: 't.ex. 6 år, 40+ bröllop',
   },
   servicesLabel: {
     en: 'What do you deliver yourself or through trusted partners?',
@@ -233,7 +233,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '직접 또는 신뢰할 수 있는 파트너를 통해 제공하는 항목은?',
     fr: 'Que proposez-vous vous-même ou via des partenaires de confiance ?',
     it: 'Cosa offri direttamente o tramite partner fidati?',
-    nl: 'Wat lever je zelf of via vertrouwde partners?', sv: 'What do you deliver yourself or through trusted partners?',
+    nl: 'Wat lever je zelf of via vertrouwde partners?', sv: 'Vad levererar du själv eller via betrodda partner?',
   },
   servicesHelp: {
     en: 'We look for operators who can deliver the whole wedding, in-house or through established relationships.',
@@ -259,7 +259,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '간단히 소개해 주세요',
     fr: 'Présentez-vous brièvement',
     it: 'Raccontaci brevemente di voi',
-    nl: 'Vertel ons kort over jezelf', sv: 'Tell us briefly about yourselves',
+    nl: 'Vertel ons kort over jezelf', sv: 'Berätta kort om er',
   },
   messagePlaceholder: {
     en: 'Style, specialties, example weddings, what makes you a fit…',
@@ -272,7 +272,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '스타일, 전문 분야, 진행했던 웨딩 사례, 적합한 이유 등…',
     fr: 'Style, spécialités, exemples de mariages, pourquoi vous correspondez…',
     it: 'Stile, specialità, matrimoni d’esempio, perché siete adatti…',
-    nl: 'Stijl, specialiteiten, voorbeeldbruiloften, waarom je past…', sv: 'Style, specialties, example weddings, what makes you a fit…',
+    nl: 'Stijl, specialiteiten, voorbeeldbruiloften, waarom je past…', sv: 'Stil, specialiteter, exempelbröllop, varför ni passar…',
   },
   consent: {
     en: 'I agree that the LaplandVibes team may contact me about partnership. I can withdraw anytime.',
@@ -290,12 +290,12 @@ const T: Record<FormKey, Localized<string>> = {
   submit: {
     en: 'Send application', fi: 'Lähetä hakemus', de: 'Bewerbung senden', ja: '申し込みを送信',
     es: 'Enviar solicitud', 'pt-BR': 'Enviar candidatura', 'zh-CN': '提交申请',
-    ko: '신청서 보내기', fr: 'Envoyer la candidature', it: 'Invia candidatura', nl: 'Aanmelding versturen', sv: 'Send application',
+    ko: '신청서 보내기', fr: 'Envoyer la candidature', it: 'Invia candidatura', nl: 'Aanmelding versturen', sv: 'Skicka ansökan',
   },
   submitting: {
     en: 'Sending…', fi: 'Lähetetään…', de: 'Wird gesendet…', ja: '送信中…',
     es: 'Enviando…', 'pt-BR': 'Enviando…', 'zh-CN': '发送中…', ko: '전송 중…',
-    fr: 'Envoi…', it: 'Invio…', nl: 'Verzenden…', sv: 'Sending…',
+    fr: 'Envoi…', it: 'Invio…', nl: 'Verzenden…', sv: 'Skickar…',
   },
   error: {
     en: 'Submission failed. Try again or email info@laplandvibes.com directly.',
@@ -308,7 +308,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '전송에 실패했습니다. 다시 시도하거나 info@laplandvibes.com 으로 직접 메일을 보내주세요.',
     fr: 'L’envoi a échoué. Réessayez ou écrivez directement à info@laplandvibes.com.',
     it: 'Invio non riuscito. Riprova o scrivi direttamente a info@laplandvibes.com.',
-    nl: 'Verzenden mislukt. Probeer het opnieuw of mail direct naar info@laplandvibes.com.', sv: 'Submission failed. Try again or email info@laplandvibes.com directly.',
+    nl: 'Verzenden mislukt. Probeer het opnieuw of mail direct naar info@laplandvibes.com.', sv: 'Det gick inte att skicka. Försök igen eller mejla info@laplandvibes.com direkt.',
   },
   successTitle: {
     en: 'Thank you. Your application is in.',
@@ -321,7 +321,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '감사합니다. 신청서가 접수되었습니다.',
     fr: 'Merci. Votre candidature est bien arrivée.',
     it: 'Grazie. Abbiamo ricevuto la tua candidatura.',
-    nl: 'Bedankt. Je aanmelding is binnen.', sv: 'Thank you. Your application is in.',
+    nl: 'Bedankt. Je aanmelding is binnen.', sv: 'Tack! Din ansökan är registrerad.',
   },
   successBody: {
     en: 'We will review it and get back to you within a few days. Approved partners receive their first lead free.',

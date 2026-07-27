@@ -30,7 +30,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     ko: '라플란드 웨딩 장소: 검증된 20곳 이상 | LaplandWeddings',
     fr: 'Lieux de mariage en Laponie | LaplandWeddings',
     it: 'Location per matrimoni in Lapponia | LaplandWeddings',
-    nl: 'Trouwlocaties in Lapland: 20+ locaties | LaplandWeddings', sv: 'Lapland Wedding Venues: 20+ verified venues | LaplandWeddings',
+    nl: 'Trouwlocaties in Lapland: 20+ locaties | LaplandWeddings', sv: 'Bröllopsplatser i Lappland: 20+ verifierade platser | LaplandWeddings',
   },
   seoDesc: {
     en: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village and more. 20+ verified Lapland wedding venues across the regions.',
@@ -56,17 +56,17 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     ko: '카크슬라우타넨의 오로라 아래 글라스 이글루',
     fr: 'Igloo de verre sous les aurores boréales à Kakslauttanen',
     it: 'Igloo di vetro sotto l’aurora boreale a Kakslauttanen',
-    nl: 'Glazen iglo onder het noorderlicht in Kakslauttanen', sv: 'Glass igloo under the Northern Lights at Kakslauttanen',
+    nl: 'Glazen iglo onder het noorderlicht in Kakslauttanen', sv: 'Glasiglo under norrskenet på Kakslauttanen',
   },
   affordable: {
     en: 'affordable', fi: 'edullinen', de: 'günstig', ja: 'お手頃',
     es: 'económico', 'pt-BR': 'acessível', 'zh-CN': '经济实惠', ko: '합리적',
-    fr: 'abordable', it: 'economico', nl: 'betaalbaar', sv: 'affordable',
+    fr: 'abordable', it: 'economico', nl: 'betaalbaar', sv: 'prisvärd',
   },
   midRange: {
     en: 'mid-range', fi: 'keskihinta', de: 'Mittelklasse', ja: '中価格帯',
     es: 'gama media', 'pt-BR': 'intermediário', 'zh-CN': '中档', ko: '중급',
-    fr: 'milieu de gamme', it: 'fascia media', nl: 'middensegment', sv: 'mid-range',
+    fr: 'milieu de gamme', it: 'fascia media', nl: 'middensegment', sv: 'mellanklass',
   },
   premium: {
     en: 'premium', fi: 'premium', de: 'Premium', ja: 'プレミアム',

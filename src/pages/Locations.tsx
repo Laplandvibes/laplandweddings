@@ -20,7 +20,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '라플란드 웨딩 지역: 로바니에미, 레비, 사리셀캐, 윌래스 | LaplandWeddings',
     fr: 'Régions de mariage en Laponie | LaplandWeddings',
     it: 'Regioni per matrimoni in Lapponia | LaplandWeddings',
-    nl: 'Trouwregio’s in Lapland: Rovaniemi & meer | LaplandWeddings', sv: 'Lapland Wedding Regions: Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings',
+    nl: 'Trouwregio’s in Lapland: Rovaniemi & meer | LaplandWeddings', sv: 'Bröllopsregioner i Lappland: Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings',
   },
   seoDesc: {
     en: 'Six Lapland wedding regions plus city-option Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Oulu. Compare seasons, flights, and venues.',
@@ -46,7 +46,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     ko: '오로라 아래 얼어붙은 호수 위의 신혼부부',
     fr: 'Couple de mariés sur un lac gelé sous les aurores boréales',
     it: 'Coppia di sposi su un lago ghiacciato sotto l’aurora boreale',
-    nl: 'Bruidspaar op een bevroren meer onder het noorderlicht', sv: 'Wedding couple on a frozen lake under the Northern Lights',
+    nl: 'Bruidspaar op een bevroren meer onder het noorderlicht', sv: 'Brudpar på en frusen sjö under norrskenet',
   },
 };
 

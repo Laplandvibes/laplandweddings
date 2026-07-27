@@ -19,7 +19,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '라플란드 사진가: Maria Hedengren, Robin Goodlad | LaplandWeddings',
     fr: 'Photographes de mariage en Laponie | LaplandWeddings',
     it: 'Fotografi di matrimonio in Lapponia | LaplandWeddings',
-    nl: 'Trouwfotografen in Lapland | LaplandWeddings', sv: 'Lapland Wedding Photographers: Maria Hedengren, Robin Goodlad et al. | LaplandWeddings',
+    nl: 'Trouwfotografen in Lapland | LaplandWeddings', sv: 'Bröllopsfotografer i Lappland: Maria Hedengren, Robin Goodlad m.fl. | LaplandWeddings',
   },
   seoDesc: {
     en: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos. Proven in the cold.',
@@ -45,7 +45,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '라플란드 웨딩 포토그래퍼',
     fr: 'Photographes de mariage en Laponie',
     it: 'Fotografi di matrimonio in Lapponia',
-    nl: 'Trouwfotografen in Lapland', sv: 'Lapland wedding photographers',
+    nl: 'Trouwfotografen in Lapland', sv: 'Bröllopsfotografer i Lappland',
   },
   subtitle: {
     en: 'Six of the most experienced wedding photographers in Lapland. Aurora-calibrated, snow-chapel lighting, glass-igloo composition. All proven in sub-zero conditions.',
@@ -71,7 +71,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '겨울 라플란드의 신혼부부',
     fr: 'Couple de mariés en Laponie hivernale',
     it: 'Coppia di sposi nella Lapponia invernale',
-    nl: 'Bruidspaar in winters Lapland', sv: 'Wedding couple in winter Lapland',
+    nl: 'Bruidspaar in winters Lapland', sv: 'Brudpar i vinterns Lappland',
   },
   sourceNote: {
     en: 'Information sourced from public photographer websites. LaplandWeddings is not in a contractual relationship with all listed. Contact directly via their own sites.',

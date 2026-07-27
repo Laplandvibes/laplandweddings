@@ -34,7 +34,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Solicita un presupuesto para este lugar', 'pt-BR': 'Peça um orçamento para este local',
     'zh-CN': '获取此场地的报价', ko: '이 웨딩 장소 견적 받기',
     fr: 'Demander un devis pour ce lieu', it: 'Richiedi un preventivo per questa location',
-    nl: 'Vraag een offerte aan voor deze locatie', sv: 'Get a quote for this venue',
+    nl: 'Vraag een offerte aan voor deze locatie', sv: 'Begär offert för den här platsen',
   },
   checkPrices: {
     en: 'Check rates & book', fi: 'Tarkista hinnat & varaa',
@@ -42,17 +42,17 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Ver precios y reservar', 'pt-BR': 'Ver preços e reservar',
     'zh-CN': '查看价格并预订', ko: '가격 확인 & 예약',
     fr: 'Voir prix & réserver', it: 'Vedi prezzi e prenota',
-    nl: 'Bekijk prijzen & boek', sv: 'Check rates & book',
+    nl: 'Bekijk prijzen & boek', sv: 'Se priser & boka',
   },
   affordable: {
     en: 'Affordable', fi: 'Edullinen', de: 'Günstig', ja: 'お手頃',
     es: 'Económico', 'pt-BR': 'Acessível', 'zh-CN': '经济实惠', ko: '합리적',
-    fr: 'Abordable', it: 'Economico', nl: 'Betaalbaar', sv: 'Affordable',
+    fr: 'Abordable', it: 'Economico', nl: 'Betaalbaar', sv: 'Prisvärd',
   },
   midRange: {
     en: 'Mid-range', fi: 'Keskihintainen', de: 'Mittelklasse', ja: '中価格帯',
     es: 'Gama media', 'pt-BR': 'Intermediário', 'zh-CN': '中档', ko: '중급',
-    fr: 'Milieu de gamme', it: 'Fascia media', nl: 'Middensegment', sv: 'Mid-range',
+    fr: 'Milieu de gamme', it: 'Fascia media', nl: 'Middensegment', sv: 'Mellanklass',
   },
   premium: {
     en: 'Premium', fi: 'Premium', de: 'Premium', ja: 'プレミアム',
@@ -62,37 +62,37 @@ const V: Record<VKey, Localized<string>> = {
   open: {
     en: 'Open', fi: 'Aukiolo', de: 'Geöffnet', ja: '営業',
     es: 'Apertura', 'pt-BR': 'Funcionamento', 'zh-CN': '开放', ko: '운영',
-    fr: 'Ouverture', it: 'Apertura', nl: 'Geopend', sv: 'Open',
+    fr: 'Ouverture', it: 'Apertura', nl: 'Geopend', sv: 'Öppet',
   },
   yearRound: {
     en: 'Year-round', fi: 'Ympäri vuoden', de: 'Ganzjährig', ja: '通年',
     es: 'Todo el año', 'pt-BR': 'O ano todo', 'zh-CN': '全年', ko: '연중',
-    fr: 'Toute l’année', it: 'Tutto l’anno', nl: 'Het hele jaar', sv: 'Year-round',
+    fr: 'Toute l’année', it: 'Tutto l’anno', nl: 'Het hele jaar', sv: 'Året runt',
   },
   seasonal: {
     en: 'Seasonal', fi: 'Sesonki', de: 'Saisonal', ja: 'シーズン制',
     es: 'Por temporada', 'pt-BR': 'Sazonal', 'zh-CN': '季节性', ko: '시즌제',
-    fr: 'Saisonnier', it: 'Stagionale', nl: 'Seizoensgebonden', sv: 'Seasonal',
+    fr: 'Saisonnier', it: 'Stagionale', nl: 'Seizoensgebonden', sv: 'Säsong',
   },
   open12: {
     en: '12 months/year', fi: 'avoinna 12 kk', de: '12 Monate/Jahr', ja: '年間12か月',
     es: '12 meses al año', 'pt-BR': '12 meses por ano', 'zh-CN': '一年 12 个月', ko: '연 12개월',
-    fr: '12 mois/an', it: '12 mesi all’anno', nl: '12 maanden/jaar', sv: '12 months/year',
+    fr: '12 mois/an', it: '12 mesi all’anno', nl: '12 maanden/jaar', sv: '12 månader/år',
   },
   winterSeason: {
     en: 'winter season', fi: 'talvikausi', de: 'Wintersaison', ja: '冬季',
     es: 'temporada de invierno', 'pt-BR': 'temporada de inverno', 'zh-CN': '冬季', ko: '겨울 시즌',
-    fr: 'saison hivernale', it: 'stagione invernale', nl: 'winterseizoen', sv: 'winter season',
+    fr: 'saison hivernale', it: 'stagione invernale', nl: 'winterseizoen', sv: 'vintersäsong',
   },
   suitsWeddings: {
     en: 'Suits weddings', fi: 'Sopii häihin', de: 'Für Hochzeiten geeignet', ja: '結婚式向き',
     es: 'Apto para bodas', 'pt-BR': 'Ideal para casamentos', 'zh-CN': '适合婚礼', ko: '웨딩에 적합',
-    fr: 'Adapté aux mariages', it: 'Adatto ai matrimoni', nl: 'Geschikt voor bruiloften', sv: 'Suits weddings',
+    fr: 'Adapté aux mariages', it: 'Adatto ai matrimoni', nl: 'Geschikt voor bruiloften', sv: 'Passar för bröllop',
   },
   weddingTypesCount: {
     en: 'wedding types', fi: 'eri häätyyppiä', de: 'Hochzeitsarten', ja: 'タイプの結婚式',
     es: 'tipos de boda', 'pt-BR': 'tipos de casamento', 'zh-CN': '种婚礼类型', ko: '가지 웨딩 유형',
-    fr: 'types de mariage', it: 'tipi di matrimonio', nl: 'soorten bruiloften', sv: 'wedding types',
+    fr: 'types de mariage', it: 'tipi di matrimonio', nl: 'soorten bruiloften', sv: 'bröllopstyper',
   },
   tailoredProposal: {
     en: 'Get a tailored proposal', fi: 'Pyydä räätälöity ehdotus',
@@ -100,7 +100,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Recibe una propuesta a medida', 'pt-BR': 'Receba uma proposta sob medida',
     'zh-CN': '获取量身定制方案', ko: '맞춤 제안 받기',
     fr: 'Recevoir une proposition sur mesure', it: 'Ricevi una proposta su misura',
-    nl: 'Ontvang een voorstel op maat', sv: 'Get a tailored proposal',
+    nl: 'Ontvang een voorstel op maat', sv: 'Få ett skräddarsytt förslag',
   },
   atAGlance: {
     en: 'This venue at a glance', fi: 'Tämä venue lyhyesti',
@@ -108,7 +108,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Este lugar de un vistazo', 'pt-BR': 'Este local em resumo',
     'zh-CN': '场地速览', ko: '이 웨딩 장소 한눈에',
     fr: 'Ce lieu en un coup d’œil', it: 'Questa location in breve',
-    nl: 'Deze locatie in het kort', sv: 'This venue at a glance',
+    nl: 'Deze locatie in het kort', sv: 'Platsen i korthet',
   },
   venueOffers: {
     en: 'What this venue offers', fi: 'Mitä paikka tarjoaa',
@@ -116,7 +116,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Lo que ofrece este lugar', 'pt-BR': 'O que este local oferece',
     'zh-CN': '此场地提供的服务', ko: '이 웨딩 장소가 제공하는 것',
     fr: 'Ce que ce lieu propose', it: 'Cosa offre questa location',
-    nl: 'Wat deze locatie biedt', sv: 'What this venue offers',
+    nl: 'Wat deze locatie biedt', sv: 'Vad platsen erbjuder',
   },
   weddingSpaces: {
     en: 'Wedding spaces', fi: 'Tilat häihin',
@@ -124,7 +124,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Espacios para bodas', 'pt-BR': 'Espaços para casamento',
     'zh-CN': '婚礼空间', ko: '웨딩 공간',
     fr: 'Espaces de mariage', it: 'Spazi per matrimoni',
-    nl: 'Trouwruimtes', sv: 'Wedding spaces',
+    nl: 'Trouwruimtes', sv: 'Bröllopslokaler',
   },
   weddingTypes: {
     en: 'Wedding types', fi: 'Häätyypit',
@@ -132,7 +132,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Tipos de boda', 'pt-BR': 'Tipos de casamento',
     'zh-CN': '婚礼类型', ko: '웨딩 유형',
     fr: 'Types de mariage', it: 'Tipi di matrimonio',
-    nl: 'Soorten bruiloften', sv: 'Wedding types',
+    nl: 'Soorten bruiloften', sv: 'Bröllopstyper',
   },
   otherVenues: {
     en: 'Other venues', fi: 'Muita hääpaikkoja',
@@ -140,7 +140,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Otros lugares', 'pt-BR': 'Outros locais',
     'zh-CN': '其他场地', ko: '다른 웨딩 장소',
     fr: 'Autres lieux', it: 'Altre location',
-    nl: 'Andere locaties', sv: 'Other venues',
+    nl: 'Andere locaties', sv: 'Andra bröllopsplatser',
   },
   compareNearby: {
     en: 'Compare nearby alternatives', fi: 'Vertaa lähialueen vaihtoehtoihin',
@@ -148,7 +148,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Compara alternativas cercanas', 'pt-BR': 'Compare alternativas próximas',
     'zh-CN': '比较附近的选择', ko: '주변 대안 비교하기',
     fr: 'Comparez les alternatives à proximité', it: 'Confronta le alternative vicine',
-    nl: 'Vergelijk alternatieven in de buurt', sv: 'Compare nearby alternatives',
+    nl: 'Vergelijk alternatieven in de buurt', sv: 'Jämför alternativ i närheten',
   },
   freeQuote: {
     en: 'Free quote', fi: 'Maksuton tarjous',
@@ -156,20 +156,23 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Presupuesto gratuito', 'pt-BR': 'Orçamento gratuito',
     'zh-CN': '免费报价', ko: '무료 견적',
     fr: 'Devis gratuit', it: 'Preventivo gratuito',
-    nl: 'Gratis offerte', sv: 'Free quote',
+    nl: 'Gratis offerte', sv: 'Kostnadsfri offert',
   },
+  // No delivery SLA and no quote count here: the planner network is real, but the
+  // turnaround is not ours to promise (Vesa 2026-07-27). Planners reply directly.
   leadIntro: {
-    en: 'Fill in the form and the LaplandWeddings team will route your enquiry to this venue’s trusted wedding planners. You get 1–3 tailored quotes within 48 hours.',
-    fi: 'Täytä lomake, niin LaplandWeddings-tiimi ohjaa kyselysi tämän venuen luotetuille hääsuunnittelijoille. Saat 1–3 räätälöityä tarjousta 48 tunnissa.',
-    de: 'Füllen Sie das Formular aus, und das LaplandWeddings-Team leitet Ihre Anfrage an die vertrauenswürdigen Hochzeitsplaner dieser Location weiter. Sie erhalten innerhalb von 48 Stunden 1–3 maßgeschneiderte Angebote.',
-    ja: 'フォームにご記入いただくと、LaplandWeddingsチームがこの会場の信頼できるウェディングプランナーへお問い合わせを取り次ぎます。48時間以内に1〜3件のオーダーメイド見積もりをお届けします。',
-    es: 'Rellena el formulario y el equipo de LaplandWeddings dirigirá tu consulta a los organizadores de bodas de confianza de este lugar. Recibirás de 1 a 3 presupuestos a medida en 48 horas.',
-    'pt-BR': 'Preencha o formulário e a equipe da LaplandWeddings encaminhará sua solicitação aos organizadores de casamento de confiança deste local. Você recebe de 1 a 3 orçamentos sob medida em 48 horas.',
-    'zh-CN': '填写表单，LaplandWeddings 团队会将你的咨询转给此场地信赖的婚礼策划师。你将在 48 小时内获得 1–3 份量身定制的报价。',
-    ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 웨딩 장소의 신뢰할 수 있는 웨딩 플래너에게 전달합니다. 48시간 이내에 맞춤 견적 1~3건을 받습니다.',
-    fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners de confiance de ce lieu. Vous recevez 1 à 3 devis sur mesure sous 48 heures.',
-    it: 'Compila il modulo e il team LaplandWeddings inoltrerà la tua richiesta ai wedding planner di fiducia di questa location. Ricevi 1–3 preventivi su misura entro 48 ore.',
-    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt je aanvraag door naar de vertrouwde trouwplanners van deze locatie. Je ontvangt binnen 48 uur 1–3 offertes op maat.', sv: 'Fill in the form and the LaplandWeddings team will route your enquiry to this venue’s trusted wedding planners. You get 1–3 tailored quotes within 48 hours.',
+    en: 'Fill in the form and the LaplandWeddings team will route your enquiry to this venue’s trusted wedding planners. They send you tailored quotes directly.',
+    fi: 'Täytä lomake, niin LaplandWeddings-tiimi ohjaa kyselysi tämän venuen luotetuille hääsuunnittelijoille. He lähettävät räätälöidyt tarjoukset sinulle suoraan.',
+    de: 'Füllen Sie das Formular aus, und das LaplandWeddings-Team leitet Ihre Anfrage an die vertrauenswürdigen Hochzeitsplaner dieser Location weiter. Ihre maßgeschneiderten Angebote erhalten Sie direkt von ihnen.',
+    ja: 'フォームにご記入いただくと、LaplandWeddingsチームがこの会場の信頼できるウェディングプランナーへお問い合わせを取り次ぎます。オーダーメイドのお見積もりはプランナーから直接お届けします。',
+    es: 'Rellena el formulario y el equipo de LaplandWeddings dirigirá tu consulta a los organizadores de bodas de confianza de este lugar. Ellos te enviarán sus presupuestos a medida directamente.',
+    'pt-BR': 'Preencha o formulário e a equipe da LaplandWeddings encaminhará sua solicitação aos organizadores de casamento de confiança deste local. Eles enviam os orçamentos sob medida diretamente para você.',
+    'zh-CN': '填写表单，LaplandWeddings 团队会将你的咨询转给此场地信赖的婚礼策划师。量身定制的报价将由策划师直接发送给你。',
+    ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 웨딩 장소의 신뢰할 수 있는 웨딩 플래너에게 전달합니다. 맞춤 견적은 플래너가 직접 보내드립니다.',
+    fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners de confiance de ce lieu. Ils vous envoient directement leurs devis sur mesure.',
+    it: 'Compila il modulo e il team LaplandWeddings inoltrerà la tua richiesta ai wedding planner di fiducia di questa location. Saranno loro a inviarti direttamente i preventivi su misura.',
+    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt je aanvraag door naar de vertrouwde trouwplanners van deze locatie. Zij sturen jou rechtstreeks offertes op maat.',
+    sv: 'Fyll i formuläret så vidarebefordrar LaplandWeddings-teamet din förfrågan till de betrodda bröllopsplanerarna för den här platsen. De skickar sina skräddarsydda offerter direkt till dig.',
   },
   // Templates — {name} / {region} are substituted at render time.
   whatMakesSpecial: {
@@ -178,7 +181,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Qué hace especial a {name}', 'pt-BR': 'O que torna {name} especial',
     'zh-CN': '{name} 的特别之处', ko: '{name}이(가) 특별한 이유',
     fr: 'Ce qui rend {name} unique', it: 'Cosa rende speciale {name}',
-    nl: 'Wat {name} bijzonder maakt', sv: 'What makes {name} special',
+    nl: 'Wat {name} bijzonder maakt', sv: 'Det här gör {name} speciellt',
   },
   stylesItFits: {
     en: 'Wedding styles {name} fits', fi: '{name} sopii näihin häihin',
@@ -186,7 +189,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Estilos de boda que encajan con {name}', 'pt-BR': 'Estilos de casamento que combinam com {name}',
     'zh-CN': '{name} 适合的婚礼风格', ko: '{name}에 어울리는 웨딩 스타일',
     fr: 'Styles de mariage adaptés à {name}', it: 'Stili di matrimonio adatti a {name}',
-    nl: 'Trouwstijlen die bij {name} passen', sv: 'Wedding styles {name} fits',
+    nl: 'Trouwstijlen die bij {name} passen', sv: 'Bröllopsstilar som passar {name}',
   },
   otherRegionVenues: {
     en: 'Other {region} venues', fi: 'Muita {region}n hääpaikkoja',
@@ -194,7 +197,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Otros lugares en {region}', 'pt-BR': 'Outros locais em {region}',
     'zh-CN': '{region}的其他场地', ko: '{region}의 다른 웨딩 장소',
     fr: 'Autres lieux à {region}', it: 'Altre location a {region}',
-    nl: 'Andere locaties in {region}', sv: 'Other {region} venues',
+    nl: 'Andere locaties in {region}', sv: 'Andra platser i {region}',
   },
   getQuoteFor: {
     en: 'Get a quote: {name}', fi: 'Pyydä tarjous: {name}',
@@ -202,7 +205,7 @@ const V: Record<VKey, Localized<string>> = {
     es: 'Solicita un presupuesto: {name}', 'pt-BR': 'Peça um orçamento: {name}',
     'zh-CN': '获取报价：{name}', ko: '견적 받기: {name}',
     fr: 'Demander un devis: {name}', it: 'Richiedi un preventivo: {name}',
-    nl: 'Vraag een offerte aan: {name}', sv: 'Get a quote: {name}',
+    nl: 'Vraag een offerte aan: {name}', sv: 'Begär offert: {name}',
   },
 };
 
@@ -329,30 +332,31 @@ export default function VenuePage() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
-            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: '#C9466A' }}>{tr.sections.capacity}</p>
+            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{tr.sections.capacity}</p>
             <p className="font-heading text-3xl mb-0.5" style={{ color: '#1F1612' }}>{v.capacity.min}–{v.capacity.max}</p>
             <p className="text-sm" style={{ color: '#5A4F48' }}>{guests}</p>
           </div>
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
-            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: '#C9466A' }}>{tr.sections.priceRange}</p>
+            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{tr.sections.priceRange}</p>
+            {/* PriceTierBadge already renders "€€€€ · Premium" — printing the tier
+                label again below it read as a duplicate on every venue. */}
             <PriceTierBadge tier={v.priceTier} lang={lang} />
-            <p className="text-sm mt-2" style={{ color: '#5A4F48' }}>
-              {v.priceTier === '€€' && vt('affordable')}
-              {v.priceTier === '€€€' && vt('midRange')}
-              {v.priceTier === '€€€€' && vt('premium')}
-            </p>
           </div>
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
-            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: '#C9466A' }}>{vt('open')}</p>
+            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{vt('open')}</p>
             <p className="font-heading text-2xl mb-0.5" style={{ color: '#1F1612' }}>
               {v.yearRound ? vt('yearRound') : vt('seasonal')}
             </p>
-            <p className="text-sm" style={{ color: '#5A4F48' }}>{v.yearRound ? vt('open12') : vt('winterSeason')}</p>
+            {/* Year-round venues said it three times ("OPEN / Year-round / 12 months/year").
+                Seasonal ones genuinely gain from the second line, so keep it only there. */}
+            {!v.yearRound && (
+              <p className="text-sm" style={{ color: '#5A4F48' }}>{vt('winterSeason')}</p>
+            )}
           </div>
           <div className="bg-night-light rounded-2xl p-6 border border-line-light flex flex-col justify-center">
-            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: '#C9466A' }}>{vt('suitsWeddings')}</p>
+            <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{vt('suitsWeddings')}</p>
             <p className="text-sm mb-3" style={{ color: '#1F1612', lineHeight: '1.5' }}>{v.weddingTypeSlugs.length} {vt('weddingTypesCount')}</p>
-            <a href="#quote" className="text-xs font-semibold inline-flex items-center" style={{ color: '#C9466A' }}>
+            <a href="#quote" className="text-xs font-semibold inline-flex items-center" style={{ color: 'var(--color-rose-ink)' }}>
               {vt('tailoredProposal')} →
             </a>
           </div>
@@ -363,7 +367,7 @@ export default function VenuePage() {
       <Section className="bg-night-light/30">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <p className="uppercase tracking-[0.3em] text-xs font-semibold mb-3" style={{ color: '#C9466A' }}>
+            <p className="uppercase tracking-[0.3em] text-xs font-semibold mb-3" style={{ color: 'var(--color-rose-glow)' }}>
               {vt('atAGlance')}
             </p>
             <h2 className="font-heading text-3xl sm:text-4xl mb-4 tracking-wide" style={{ color: '#F5EBE0' }}>
@@ -395,7 +399,7 @@ export default function VenuePage() {
               <ul className="space-y-3">
                 {v.weddingSpaces[dataLang].map((s) => (
                   <li key={s} className="flex items-start gap-3" style={{ color: '#1F1612' }}>
-                    <span className="mt-1 flex-shrink-0" style={{ color: '#C9466A' }}>◆</span>
+                    <span className="mt-1 flex-shrink-0" style={{ color: 'var(--color-rose-ink)' }}>◆</span>
                     <span className="text-[15px] leading-relaxed">{s}</span>
                   </li>
                 ))}
@@ -408,7 +412,7 @@ export default function VenuePage() {
       {/* WEDDING TYPES */}
       <Section>
         <div className="max-w-4xl mx-auto text-center">
-          <p className="uppercase tracking-[0.3em] text-xs font-semibold mb-3" style={{ color: '#C9466A' }}>
+          <p className="uppercase tracking-[0.3em] text-xs font-semibold mb-3" style={{ color: 'var(--color-rose-glow)' }}>
             {vt('weddingTypes')}
           </p>
           <h3 className="font-heading text-2xl sm:text-3xl mb-6 tracking-wide" style={{ color: '#F5EBE0' }}>
@@ -457,7 +461,7 @@ export default function VenuePage() {
                         className="mb-3"
                       />
                     )}
-                    <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: '#C9466A' }}>{sib.region[dataLang]}</p>
+                    <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: 'var(--color-rose-ink)' }}>{sib.region[dataLang]}</p>
                     <h4 className="font-heading text-xl mb-1" style={{ color: '#1F1612' }}>{sib.name}</h4>
                     <p className="text-xs" style={{ color: '#5A4F48' }}>{sib.capacity.min}–{sib.capacity.max} {guests} · {sib.priceTier}</p>
                   </div>
