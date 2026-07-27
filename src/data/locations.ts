@@ -259,7 +259,7 @@ export const locations: Location[] = [
     airport: 'KTT',
     airportDistanceKm: 14,
     intro: {
-      fi: 'Levin alueella yhdistyvät hiihtokeskuksen palvelut, Lainion lumikylä ja Northern Lights Ranchin lasiseinämökit, joista revontulet näkee suoraan vuoteesta. Kittilän lentokentälle suorat lennot Lontoosta, siksi brittien suosikki.',
+      fi: 'Levin alueella yhdistyvät hiihtokeskuksen palvelut, Lainion lumikylä ja Northern Lights Ranchin lasiseinämökit, joista revontulet näkee suoraan vuoteesta. Kittilän lentokentälle suorat lennot Lontoosta, ja siksi se on brittien suosikki.',
       en: 'Levi brings together a full ski-resort infrastructure, the Lainio Snow Village, and Northern Lights Ranch where the auroras are visible straight through your cabin’s glass wall. Kittilä Airport has direct flights from London, which is why Levi is the British favourite.',
       de: 'Levi vereint die komplette Infrastruktur eines Skigebiets, das Lainio Snow Village und die Northern Lights Ranch, wo die Polarlichter direkt durch die Glaswand der Cabin zu sehen sind. Der Flughafen Kittilä hat Direktflüge aus London, deshalb ist Levi der Favorit der Briten.',
       ja: 'レヴィには、スキーリゾートのフルインフラ、ライニオのSnow Village、そしてキャビンのガラス壁から直接オーロラが見えるNorthern Lights Ranchが揃っています。キッティラ空港はロンドンからの直行便があり、英国人に人気の理由です。',
@@ -364,7 +364,7 @@ export const locations: Location[] = [
     airport: 'KTT',
     airportDistanceKm: 50,
     intro: {
-      fi: 'Hiljaisempi vaihtoehto Levin viereen. Ylläsjärven Saaga on saanut wedding-mainetta TripAdvisorissa, ja Lainion lumikylä sijaitsee Yllästä lähinnä. Sopii pareille jotka haluavat tunturi-rauhaa ilman hiihtokeskuksen vilskettä.',
+      fi: 'Hiljaisempi vaihtoehto Levin viereen. Ylläsjärven Saaga on saanut wedding-mainetta TripAdvisorissa, ja Lainion lumikylä sijaitsee Yllästä lähinnä. Sopii pareille, jotka haluavat tunturirauhaa ilman hiihtokeskuksen vilskettä.',
       en: 'A quieter alternative next to Levi. Lapland Hotels Saaga has earned wedding fame on TripAdvisor, and the Lainio Snow Village sits closest to Ylläs. Best for couples wanting fell tranquility without ski resort bustle.',
       de: 'Eine ruhigere Alternative neben Levi. Das Lapland Hotels Saaga hat sich auf TripAdvisor einen Ruf für Hochzeiten erworben, und das Lainio Snow Village liegt am nächsten zu Ylläs. Ideal für Paare, die Fjell-Ruhe ohne den Trubel eines Skigebiets suchen.',
       ja: 'レヴィの隣にある、より静かな選択肢。Lapland Hotels SaagaはTripAdvisorでウェディングの評判を得ており、ライニオのSnow Villageはウッラスに最も近い場所にあります。スキーリゾートの喧騒を避け、フェルの静けさを求めるカップルに最適です。',
@@ -679,7 +679,7 @@ export const locations: Location[] = [
     airport: 'OUL',
     airportDistanceKm: 15,
     intro: {
-      fi: 'Tarkkaan ottaen Pohjois-Pohjanmaata eikä Lappia, ja juuri siksi Oulu on listalla. Suomen viidenneksi suurin kaupunki Perämeren rannalla, noin 170 km napapiiriltä etelään, sopii pareille jotka haluavat kaupunkimaisen hääillan: hotellit, ravintolat, yöelämä ja kunnon aamiainen seuraavana aamuna. Lapin luonto on helpon ajomatkan päässä pohjoisessa.',
+      fi: 'Tarkkaan ottaen Pohjois-Pohjanmaata eikä Lappia, ja juuri siksi Oulu on listalla. Suomen viidenneksi suurin kaupunki Perämeren rannalla, noin 170 km napapiiriltä etelään, sopii pareille, jotka haluavat kaupunkimaisen hääillan: hotellit, ravintolat, yöelämä ja kunnon aamiainen seuraavana aamuna. Lapin luonto on helpon ajomatkan päässä pohjoisessa.',
       en: 'Strictly speaking North Ostrobothnia rather than Lapland, and that is exactly why it is on this list. Finland’s fifth-largest city sits on the Bothnian Bay coast, about 170 km south of the Arctic Circle, and suits couples who want a city wedding night: hotels, restaurants, nightlife and a proper morning-after breakfast, with Lapland’s nature an easy drive north.',
       de: 'Genau genommen Nordösterbotten und nicht Lappland, und genau deshalb steht Oulu auf dieser Liste. Finnlands fünftgrößte Stadt liegt an der Küste der Bottenwiek, rund 170 km südlich des Polarkreises, und passt zu Paaren, die eine städtische Hochzeitsnacht wollen: Hotels, Restaurants, Nachtleben und ein richtiges Frühstück am Morgen danach. Lapplands Natur ist eine bequeme Autofahrt weiter nördlich.',
       ja: '厳密にはラップランドではなく北ポフヤンマー地方。でも、それこそがこのリストに載っている理由です。ボスニア湾岸に位置するフィンランド第5の都市オウルは、北極圏の約170km南にあり、ホテル、レストラン、ナイトライフ、翌朝のしっかりした朝食といった都会的なウェディングナイトを望むカップルに向いています。ラップランドの自然へは北へ車で気軽に行ける距離です。',

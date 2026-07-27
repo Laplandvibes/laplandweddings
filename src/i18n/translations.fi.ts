@@ -29,7 +29,7 @@ const t_fi = {
     heroTitle: 'Tahdon, revontulten alla.',
     heroSubtitle: 'Revontulet lasikaton takana, kynttilät lumikappelissa, poro odottamassa pihalla. Lapin kokeneimmat hääsuunnittelijat tekevät siitä totta.',
     heroTitleSummer: 'Tahdon, yöttömän auringon alla.',
-    heroSubtitleSummer: 'Vihkiminen järven rannalla, koristekaari tunturin juurella, valoisa ilta joka ei pimene. Lapin kokeneimmat hääsuunnittelijat tekevät siitä totta.',
+    heroSubtitleSummer: 'Vihkiminen järven rannalla, koristekaari tunturin juurella, valoisa ilta, joka ei pimene. Lapin kokeneimmat hääsuunnittelijat tekevät siitä totta.',
     heroReassure: 'Maksuton & sitoumukseton · vastaus 1–7 päivässä',
     whyTitle: 'Miksi Lappi häämatkakohteena',
     whyP: 'Lapissa on vihille kahdestaan 1 600 €:sta alkaen ja 100 hengen luksusjuhlia 50 000 € hinnalla. Suomi sallii ulkomaalaisten avioliiton helposti, paperit kestävät 3–5 viikkoa DVV:n kautta. Verkostomme toimittaa sinulle 3 räätälöityä tarjousta paikallisilta suunnittelijoilta yhdellä lomakkeella.',
@@ -71,7 +71,7 @@ const t_fi = {
   },
   types: {
     indexTitle: 'Häätyypit Lapissa',
-    indexIntro: 'Lasi-iglu-yöt, lumikappelit, revontulet, keskiyön aurinko, elopementit ja lupausten uusiminen, kuusi pääsuuntaa joista valita.',
+    indexIntro: 'Lasi-iglu-yöt, lumikappelit, revontulet, keskiyön aurinko, elopementit ja lupausten uusiminen: kuusi pääsuuntaa, joista valita.',
   },
   venues: {
     indexTitle: 'Vahvistetut hääpaikat Lapissa',

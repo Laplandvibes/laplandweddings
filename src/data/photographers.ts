@@ -44,7 +44,7 @@ export const photographers: Photographer[] = [
       sv: 'Fine Art + documentary',
     },
     description: {
-      fi: 'Northern Lights Ranchin pääkumppani-valokuvaaja. Erikoisalana revontulet ja lumikappelit. Häämedialehdet (Junebug, Green Wedding Shoes) ovat julkaisseet hänen häitään (Junebug, Green Wedding Shoes).',
+      fi: 'Northern Lights Ranchin pääkumppani-valokuvaaja. Erikoisalana revontulet ja lumikappelit. Häämedialehdet Junebug ja Green Wedding Shoes ovat julkaisseet hänen kuvaamiaan häitä.',
       en: 'Lead photography partner of Northern Lights Ranch. Specialised in Northern Lights and snow chapels. Multiple destination wedding media features (Junebug, Green Wedding Shoes).',
       de: 'Haupt-Fotografiepartnerin der Northern Lights Ranch. Spezialisiert auf Polarlichter und Schneekapellen. Mehrfach in Destination-Wedding-Medien vorgestellt (Junebug, Green Wedding Shoes).',
       ja: 'Northern Lights Ranchのメイン提携フォトグラファー。オーロラとスノーチャペルが専門。デスティネーションウェディングのメディア（Junebug、Green Wedding Shoes）に複数掲載。',
@@ -106,7 +106,7 @@ export const photographers: Photographer[] = [
       sv: 'Award-winning documentary',
     },
     description: {
-      fi: 'UK-pohjainen palkittu hääjvalokuvaaja, joka matkustaa säännöllisesti Lappiin. Sopii UK-pareille jotka haluavat saman valokuvaajan koko matkan ajan.',
+      fi: 'UK-pohjainen palkittu hääkuvaaja, joka matkustaa säännöllisesti Lappiin. Sopii UK-pareille, jotka haluavat saman valokuvaajan koko matkan ajaksi.',
       en: 'A UK-based award-winning wedding photographer who travels to Lapland regularly. Best for UK couples wanting the same photographer throughout the journey.',
       de: 'Ein preisgekrönter Hochzeitsfotograf aus UK, der regelmäßig nach Lappland reist. Ideal für UK-Paare, die denselben Fotografen für die ganze Reise wünschen.',
       ja: '英国を拠点とし、定期的にラップランドを訪れる受賞歴のあるウェディングフォトグラファー。旅の最初から最後まで同じ写真家に任せたい英国のカップルに最適。',
@@ -228,7 +228,7 @@ export const photographers: Photographer[] = [
       sv: 'Cinematic, warm',
     },
     description: {
-      fi: 'Paikallinen Lappi-pohjainen valokuvaaja, joka toimii myös konsultointi-plannerina. Sopii pareille jotka haluavat lokaalin hinnoittelun ja ohjeistuksen.',
+      fi: 'Paikallinen Lappi-pohjainen valokuvaaja, joka toimii myös konsultointi-plannerina. Sopii pareille, jotka haluavat paikallisen hinnoittelun ja ohjeistuksen.',
       en: 'A Lapland-based local photographer who also offers planning consultancy. Best for couples wanting local pricing and guidance.',
       de: 'Eine in Lappland ansässige Fotografin, die auch Planungsberatung anbietet. Ideal für Paare, die lokale Preise und Beratung wünschen.',
       ja: 'ラップランド在住の地元フォトグラファーで、プランニングのコンサルティングも行っています。ローカルな料金とガイダンスを求めるカップルに最適。',

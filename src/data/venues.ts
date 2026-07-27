@@ -132,7 +132,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 30 },
     description: {
-      fi: 'Rovaniemen lähellä sijaitseva Snow Hotel rakennetaan joka 15. joulukuuta. Sisältää jääkappelin (kapasiteetti 30 hh), jääravintolan ja jääbaarin. Lasi-iglut ovat kesäkin auki, alkaen 314 €/yö 360°-lasikatolla ja Aurora-hälytyksellä.',
+      fi: 'Rovaniemen lähellä sijaitseva Snow Hotel rakennetaan joka 15. joulukuuta. Sisältää jääkappelin (kapasiteetti 30 hh), jääravintolan ja jääbaarin. Lasi-iglut ovat auki kesälläkin, alkaen 314 €/yö 360°-lasikatolla ja Aurora-hälytyksellä.',
       en: 'A Snow Hotel near Rovaniemi rebuilt every December 15. Includes an ice chapel (30-guest capacity), ice restaurant, and ice bar. Glass igloos open year-round, from €314/night with a 360° glass roof and Aurora alerts.',
       de: 'Ein Schneehotel nahe Rovaniemi, das jedes Jahr am 15. Dezember neu gebaut wird. Mit Eiskapelle (30 Gäste), Eisrestaurant und Eisbar. Die Glasiglus sind ganzjährig geöffnet – ab 314 €/Nacht mit 360°-Glasdach und Aurora-Alarm.',
       ja: 'ロヴァニエミ近郊のスノーホテルで、毎年12月15日に建て直されます。アイスチャペル（30名収容）、アイスレストラン、アイスバーを併設。ガラスイグルーは通年営業で、360°のガラス天井とオーロラアラート付きで1泊314ユーロから。',
@@ -213,7 +213,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 50 },
     description: {
-      fi: 'Maailmankuulu Snow Village rakennetaan vuosittain marraskuusta huhtikuuhun. Jääkappeli rakennetaan eri taiteellisella teemalla joka talvi: kävelyt jäästä veistetyn alttarin luo, ja morsian saapuu poro­saralla. Sopii sekä jää- että puukappelivihkimisille.',
+      fi: 'Maailmankuulu Snow Village rakennetaan vuosittain marraskuusta huhtikuuhun. Jääkappeli rakennetaan eri taiteellisella teemalla joka talvi: kävelyt jäästä veistetyn alttarin luo, ja morsian saapuu poron vetämässä reessä. Sopii sekä jää- että puukappelivihkimisille.',
       en: 'World-famous Snow Village rebuilt annually November–April. The ice chapel is built with a new artistic theme each winter. Walk down an ice-carved aisle, with the bride arriving by reindeer sleigh. Both ice and wooden chapel ceremonies available.',
       de: 'Das weltberühmte Snow Village wird jährlich von November bis April neu errichtet. Die Eiskapelle entsteht jeden Winter zu einem neuen künstlerischen Thema – Sie schreiten durch einen eisgemeißelten Mittelgang, während die Braut im Rentierschlitten eintrifft. Zeremonien sowohl in der Eis- als auch in der Holzkapelle möglich.',
       ja: '世界的に有名なSnow Villageは毎年11月から4月にかけて建設されます。アイスチャペルは毎冬異なる芸術的テーマで造られ、氷で彫られたバージンロードを歩み、花嫁はトナカイのソリで到着します。氷のチャペルでも木造チャペルでも挙式が可能です。',
@@ -294,7 +294,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€€',
     capacity: { min: 2, max: 60 },
     description: {
-      fi: 'Premium-luksusresortti lasiseiniä cabineja ja Snow Chapel kapasiteettiä 60 hengelle. Ainoa Lapin venue, jolla on eksklusiivinen yhteistyö brittiläisen Sun & Snow Weddings -planneeyhtiön kanssa. Sopii UK/US-pareille jotka odottavat top-tier-tasoa.',
+      fi: 'Premium-luksusresortti, jossa on lasiseinäisiä mökkejä ja 60 hengen Snow Chapel. Ainoa Lapin venue, jolla on eksklusiivinen yhteistyö brittiläisen Sun & Snow Weddings -planneeyhtiön kanssa. Sopii UK/US-pareille, jotka odottavat huippuluokan tasoa.',
       en: 'Premium luxury resort with glass-walled cabins and a Snow Chapel for 60 guests. The only Lapland venue with an exclusive partnership with the British Sun & Snow Weddings planner. Best for UK/US couples expecting top-tier service.',
       de: 'Premium-Luxusresort mit Glaswand-Cabins und einer Snow Chapel für 60 Gäste. Die einzige Location in Lappland mit einer exklusiven Partnerschaft mit dem britischen Hochzeitsplaner Sun & Snow Weddings. Ideal für Paare aus UK/USA, die Spitzenservice erwarten.',
       ja: 'ガラス張りのキャビンと60名収容のSnow Chapelを備えたプレミアム・ラグジュアリーリゾート。英国のプランナーSun & Snow Weddingsと独占提携している、ラップランドで唯一の会場です。トップクラスのサービスを求める英国・米国のカップルに最適。',
@@ -537,7 +537,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 80 },
     description: {
-      fi: 'Apukka-järven rannalla sijaitseva resort, jossa Aurora Cabineja, kaksikerroksinen Kammi Glass Igloo Suite ja Lakeview-suiteja. Kaksi ravintolaa: Aitta + Kota. Sopii pareille jotka haluavat sekä joulupukin lähelle että luonnonrauhaa.',
+      fi: 'Apukka-järven rannalla sijaitseva resort, jossa Aurora Cabineja, kaksikerroksinen Kammi Glass Igloo Suite ja Lakeview-suiteja. Kaksi ravintolaa: Aitta + Kota. Sopii pareille, jotka haluavat sekä joulupukin lähelle että luonnonrauhaa.',
       en: 'A resort by Lake Apukka with Aurora Cabins, the two-storey Kammi Glass Igloo Suite, and Lakeview Suites. Two restaurants: Aitta + Kota. For couples who want both Santa proximity and wilderness peace.',
       de: 'Ein Resort am Apukka-See mit Aurora Cabins, der zweistöckigen Kammi Glass Igloo Suite und Lakeview Suites. Zwei Restaurants: Aitta + Kota. Für Paare, die Nähe zum Weihnachtsmann und Naturruhe zugleich suchen.',
       ja: 'アプッカ湖畔のリゾートで、Aurora Cabin、2階建てのKammi Glass Igloo Suite、Lakeview Suiteを備えています。レストランはAittaとKotaの2軒。サンタクロースの近さと自然の静けさの両方を求めるカップルに最適。',
@@ -862,7 +862,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 60 },
     description: {
-      fi: 'Avattu 2022, uusin Wilderness Hotels -kohde. Aanaar-ravintola Inarin keskustassa. Sopii pareille jotka haluavat saamelaiskulttuurin lähelle ja kompaktin sijainnin.',
+      fi: 'Avattu 2022, uusin Wilderness Hotels -kohde. Aanaar-ravintola Inarin keskustassa. Sopii pareille, jotka haluavat saamelaiskulttuurin lähelle ja kompaktin sijainnin.',
       en: 'Opened 2022, the newest Wilderness Hotels venue. Aanaar Restaurant in central Inari. For couples wanting Sámi culture nearby and a compact location.',
       de: '2022 eröffnet, die neueste Location der Wilderness Hotels. Restaurant Aanaar im Zentrum von Inari. Für Paare, die samische Kultur in der Nähe und eine kompakte Lage wünschen.',
       ja: '2022年オープン、Wilderness Hotelsの最新拠点。イナリ中心部にAanaarレストランがあります。サーミ文化が身近で、コンパクトな立地を望むカップルに最適です。',
@@ -943,7 +943,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 80 },
     description: {
-      fi: 'Avattu 2016. 80 Aurora Cabineja ja 20 Polar Sky Suiteja. Lasikatto kaikissa, ja keskeinen sijainti Saariselän palveluille.',
+      fi: 'Avattu 2016. 80 Aurora Cabinia ja 20 Polar Sky Suitea. Lasikatto kaikissa, ja keskeinen sijainti Saariselän palveluille.',
       en: 'Opened 2016. 80 Aurora Cabins and 20 Polar Sky Suites. Glass roofs throughout, with a central location for Saariselkä’s services.',
       de: '2016 eröffnet. 80 Aurora Cabins und 20 Polar Sky Suites. Überall Glasdächer und eine zentrale Lage zu den Angeboten von Saariselkä.',
       ja: '2016年オープン。Aurora Cabin 80室とPolar Sky Suite 20室。すべてガラス天井で、サーリセルカの各種サービスへアクセスしやすい中心立地です。',
@@ -1024,7 +1024,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 60 },
     description: {
-      fi: 'Avattu 2019, Saariselän sisarkohde Levillä. Sopii pareille jotka haluavat NLV-tyylin Levin palveluiden lähelle.',
+      fi: 'Avattu 2019, Saariselän sisarkohde Levillä. Sopii pareille, jotka haluavat NLV-tyylin Levin palveluiden lähelle.',
       en: 'Opened 2019, the sister site of Saariselkä in Levi. For couples wanting the NLV style near Levi’s services.',
       de: '2019 eröffnet, das Schwesterhaus von Saariselkä in Levi. Für Paare, die den NLV-Stil in der Nähe der Angebote von Levi wünschen.',
       ja: '2019年オープン、サーリセルカ姉妹施設のレヴィ拠点。レヴィのサービスの近くでNLVスタイルを楽しみたいカップルに最適です。',
@@ -1672,7 +1672,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 30 },
     description: {
-      fi: 'Joulupukin pajakylän kompakti, moderni boutique-hotelli. Sopii pienille hääseurueille jotka haluavat sijainnin lähelle ja modernin sisustuksen.',
+      fi: 'Joulupukin pajakylän kompakti, moderni boutique-hotelli. Sopii pienille hääseurueille, jotka haluavat keskeisen sijainnin ja modernin sisustuksen.',
       en: 'A compact, modern boutique hotel in Santa Claus Village. Best for small wedding parties wanting central location and contemporary design.',
       de: 'Ein kompaktes, modernes Boutique-Hotel im Weihnachtsmanndorf. Ideal für kleine Hochzeitsgesellschaften, die zentrale Lage und zeitgemäßes Design wünschen.',
       ja: 'サンタクロース村にあるコンパクトでモダンなブティックホテル。中心立地とモダンな内装を求める少人数の結婚式に最適です。',
