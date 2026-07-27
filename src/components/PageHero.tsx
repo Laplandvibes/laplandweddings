@@ -28,7 +28,13 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
       className={`relative ${compact ? 'min-h-[58vh] sm:min-h-[68vh]' : 'min-h-[72vh] sm:min-h-[82vh]'} flex items-center overflow-hidden`}
     >
       <div className="absolute inset-0">
-        {avifSrcSet || webpSrcSet ? (
+        {!image ? (
+          /* No photo yet for this page. Stock imagery is banned and borrowing
+             another location's picture would misrepresent it, so render the
+             house gradient instead of a broken <img>. The vignette below still
+             applies, so hero text stays readable. */
+          <div role="img" aria-label={imageAlt} className="w-full h-full bg-gradient-to-br from-[#3A2A24] via-[#1F1612] to-[#2A1F18]" />
+        ) : avifSrcSet || webpSrcSet ? (
           <picture>
             {avifSrcSet && <source type="image/avif" srcSet={avifSrcSet} sizes={sizes ?? '100vw'} />}
             {webpSrcSet && <source type="image/webp" srcSet={webpSrcSet} sizes={sizes ?? '100vw'} />}

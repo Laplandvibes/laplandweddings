@@ -27,7 +27,7 @@ export const photographers: Photographer[] = [
       fr: 'Laponie · destination',
       it: 'Lapponia · destination',
       nl: 'Lapland · destination',
-      sv: 'Lapland · destination',
+      sv: 'Lappland · destination',
     },
     style: {
       fi: 'Fine Art + dokumentaarinen',
@@ -41,7 +41,7 @@ export const photographers: Photographer[] = [
       fr: 'Fine Art + documentaire',
       it: 'Fine Art + documentaristico',
       nl: 'Fine Art + documentair',
-      sv: 'Fine Art + documentary',
+      sv: 'Fine art + dokumentärt',
     },
     description: {
       fi: 'Northern Lights Ranchin pääkumppani-valokuvaaja. Erikoisalana revontulet ja lumikappelit. Häämedialehdet Junebug ja Green Wedding Shoes ovat julkaisseet hänen kuvaamiaan häitä.',
@@ -71,7 +71,7 @@ export const photographers: Photographer[] = [
       fr: 'Spécialiste de la Snow Chapel du NLR: éprouvée par temps glacial.',
       it: 'Specialista della Snow Chapel di NLR: collaudata in condizioni sotto zero.',
       nl: 'Specialist in de Snow Chapel van NLR: bewezen bij temperaturen onder nul.',
-      sv: 'NLR Snow Chapel specialist: proven in sub-zero conditions.',
+      sv: 'Specialist på NLR Snow Chapel: beprövad i minusgrader.',
     },
   },
   {
@@ -89,7 +89,7 @@ export const photographers: Photographer[] = [
       fr: 'Royaume-Uni · destination Laponie',
       it: 'Regno Unito · destination Lapponia',
       nl: 'VK · destination Lapland',
-      sv: 'UK · destination Lapland',
+      sv: 'Storbritannien · destination Lappland',
     },
     style: {
       fi: 'Palkittu dokumentaarinen',
@@ -103,7 +103,7 @@ export const photographers: Photographer[] = [
       fr: 'Documentaire primé',
       it: 'Documentaristico pluripremiato',
       nl: 'Bekroond documentair',
-      sv: 'Award-winning documentary',
+      sv: 'Prisbelönt dokumentärt',
     },
     description: {
       fi: 'UK-pohjainen palkittu hääkuvaaja, joka matkustaa säännöllisesti Lappiin. Sopii UK-pareille, jotka haluavat saman valokuvaajan koko matkan ajaksi.',
@@ -132,7 +132,7 @@ export const photographers: Photographer[] = [
       fr: 'Lauréat: MPA + The Wedding Photographer Awards.',
       it: 'Vincitore di premi: MPA + The Wedding Photographer Awards.',
       nl: 'Prijswinnaar: MPA + The Wedding Photographer Awards.',
-      sv: 'Award winner: MPA + The Wedding Photographer Awards.',
+      sv: 'Prisbelönt: MPA + The Wedding Photographer Awards.',
     },
   },
   {
@@ -150,7 +150,7 @@ export const photographers: Photographer[] = [
       fr: 'Royaume-Uni · NLR Snow Chapel',
       it: 'Regno Unito · NLR Snow Chapel',
       nl: 'VK · NLR Snow Chapel',
-      sv: 'UK · NLR Snow Chapel',
+      sv: 'Storbritannien · NLR Snow Chapel',
     },
     style: {
       fi: 'Romanttinen, valoisa',
@@ -164,7 +164,7 @@ export const photographers: Photographer[] = [
       fr: 'Romantique et lumineux',
       it: 'Romantico e luminoso',
       nl: 'Romantisch en licht',
-      sv: 'Romantic, light',
+      sv: 'Romantiskt, ljust',
     },
     description: {
       fi: 'Erikoistunut NLR Snow Chapel -elopement-pareihin. Vaalea, ilmava käsittely sopii talvisten lumimaisemien kanssa.',
@@ -193,7 +193,7 @@ export const photographers: Photographer[] = [
       fr: 'Spécialiste des elopements à la NLR Snow Chapel.',
       it: 'Specialista degli elopement alla NLR Snow Chapel.',
       nl: 'Specialist in elopements bij de NLR Snow Chapel.',
-      sv: 'NLR Snow Chapel elopement specialist.',
+      sv: 'Specialist på smygbröllop i NLR Snow Chapel.',
     },
   },
   {
@@ -211,7 +211,7 @@ export const photographers: Photographer[] = [
       fr: 'Sur place en Laponie',
       it: 'Residente in Lapponia',
       nl: 'Lokaal in Lapland',
-      sv: 'Local in Lapland',
+      sv: 'Lokal i Lappland',
     },
     style: {
       fi: 'Filminen, lämmin',
@@ -225,7 +225,7 @@ export const photographers: Photographer[] = [
       fr: 'Cinématographique et chaleureux',
       it: 'Cinematografico e caldo',
       nl: 'Filmisch en warm',
-      sv: 'Cinematic, warm',
+      sv: 'Filmiskt, varmt',
     },
     description: {
       fi: 'Paikallinen Lappi-pohjainen valokuvaaja, joka toimii myös konsultointi-plannerina. Sopii pareille, jotka haluavat paikallisen hinnoittelun ja ohjeistuksen.',
@@ -255,7 +255,7 @@ export const photographers: Photographer[] = [
       fr: 'Locale + conseil en organisation.',
       it: 'Locale + consulenza di planning.',
       nl: 'Lokaal + planningsadvies.',
-      sv: 'Local + planning consultancy.',
+      sv: 'Lokal fotograf + bröllopsrådgivning.',
     },
   },
   {
@@ -273,7 +273,7 @@ export const photographers: Photographer[] = [
       fr: 'Sur place en Laponie',
       it: 'Residente in Lapponia',
       nl: 'Lokaal in Lapland',
-      sv: 'Local in Lapland',
+      sv: 'Lokal i Lappland',
     },
     style: {
       fi: 'Intimate / dokumentaarinen',
@@ -287,7 +287,7 @@ export const photographers: Photographer[] = [
       fr: 'Intime / documentaire',
       it: 'Intimo / documentaristico',
       nl: 'Intiem / documentair',
-      sv: 'Intimate / documentary',
+      sv: 'Intimt / dokumentärt',
     },
     description: {
       fi: 'Suomalainen valokuvaaja jonka oma "Lapland Intimate Wedding Guide" rankaa Googlessa. Sopii pareille jotka haluavat mainostekstin lisäksi paikallisia oppaita matkan suunnitteluun.',
@@ -316,7 +316,7 @@ export const photographers: Photographer[] = [
       fr: 'Produit du contenu SEO + photographie.',
       it: 'Produce contenuti SEO + fotografia.',
       nl: 'Maakt SEO-content + fotografie.',
-      sv: 'Produces SEO content + photography.',
+      sv: 'Producerar SEO-innehåll + fotografi.',
     },
   },
   {
@@ -334,7 +334,7 @@ export const photographers: Photographer[] = [
       fr: 'Sur place en Laponie',
       it: 'Residente in Lapponia',
       nl: 'Lokaal in Lapland',
-      sv: 'Local in Lapland',
+      sv: 'Lokal i Lappland',
     },
     style: {
       fi: 'Lifestyle + adventure',
@@ -348,7 +348,7 @@ export const photographers: Photographer[] = [
       fr: 'Lifestyle + aventure',
       it: 'Lifestyle + avventura',
       nl: 'Lifestyle + avontuur',
-      sv: 'Lifestyle + adventure',
+      sv: 'Lifestyle + äventyr',
     },
     description: {
       fi: 'Adventure-elopement-spesialisti, joka tekee paritöitä myös tunturi- ja erämaapaikoissa.',
@@ -362,7 +362,7 @@ export const photographers: Photographer[] = [
       fr: 'Spécialiste des elopements d’aventure, travaillant aussi dans les fells et les lieux sauvages.',
       it: 'Specialista di elopement d’avventura, attiva anche in location tra fell e natura selvaggia.',
       nl: 'Specialist in avontuurlijke elopements, ook actief op fells en in wildernislocaties.',
-      sv: 'Adventure elopement specialist, also working in fell and wilderness locations.',
+      sv: 'Specialist på äventyrliga smygbröllop, arbetar även på fjäll och i vildmarken.',
     },
     website: 'https://laplandphotographer.com/blog',
     highlight: {
@@ -377,7 +377,7 @@ export const photographers: Photographer[] = [
       fr: 'Spécialiste des fells et de la nature sauvage.',
       it: 'Specialista di fell e natura selvaggia.',
       nl: 'Specialist in fells en wildernis.',
-      sv: 'Fell and wilderness specialist.',
+      sv: 'Specialist på fjäll och vildmark.',
     },
   },
 ];

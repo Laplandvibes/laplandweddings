@@ -163,7 +163,12 @@ export default function Home() {
 
       {/* Why Lapland */}
       <Section title={tr.home.whyTitle}>
-        <div className="grid sm:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden max-w-5xl mx-auto">
+        {/* Was `sm:grid-cols-3`, which turned 3 columns on at 640px — the exact
+            breakpoint where the stat below jumped to text-5xl. Narrower column +
+            bigger type at once wrapped "från 1 600 €" onto two lines across the
+            whole 640–1024px band. Hold one column until 768px and grow the type
+            back gradually. */}
+        <div className="grid md:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden max-w-5xl mx-auto">
           {[
             {
               stat: '300+',
@@ -262,7 +267,7 @@ export default function Home() {
             },
           ].map((stat) => (
             <div key={stat.label} className="bg-night-light p-7 sm:p-9 flex flex-col">
-              <p className="font-heading text-4xl sm:text-5xl text-rose tracking-wide mb-1">{stat.stat}</p>
+              <p className="font-heading text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-rose tracking-wide mb-1">{stat.stat}</p>
               <p className="text-xs uppercase tracking-[0.25em] text-aurora-pink font-semibold mb-4">{stat.label}</p>
               <p className="text-sm text-gray-300 leading-relaxed">{stat.body}</p>
             </div>
