@@ -389,7 +389,7 @@ export default function Home() {
                 fi: 'Inarinjärvellä iltahämärässä, koko jäätikkö ulottuu tunturille saakka.',
                 en: 'On Lake Inari at dusk, the entire ice sheet stretches to the fjeld.',
                 de: 'Auf dem Inarisee in der Dämmerung, die Eisfläche reicht bis zum Fjäll.',
-                ja: '夕暮れのイナリ湖、一面の氷原がフィエルまで広がります。',
+                ja: '夕暮れのイナリ湖、一面の氷原が山まで広がります。',
                 ko: '해 질 녘의 이나리 호수, 광활한 빙판이 산자락까지 펼쳐집니다.',
                 fr: 'Sur le lac Inari au crépuscule, la banquise s’étend jusqu’aux fjälls.',
                 it: 'Sul lago Inari al tramonto, la distesa di ghiaccio si estende fino ai fjäll.',
