@@ -364,6 +364,19 @@
     color: #8E2842 !important;
   }
 
+  /* MUST stay after the surface rules above. A card can carry BOTH `.on-image`
+     and `bg-night-light` (the region cards on the home page do), and since the
+     surface rules have equal specificity and came later, they repainted text
+     sitting ON TOP OF A PHOTO to dark rose — unreadable. Text over an image has
+     no predictable background, so it always wins with the light warm tone plus
+     a shadow. Regression found 2026-07-27 on /sv region cards. */
+  .on-image .text-gold,
+  .on-image .text-aurora-pink,
+  .on-image .text-rose {
+    color: #FCD9A8 !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7) !important;
+  }
+
   /* Hero text always white */
   .hero-text-light {
     color: #FFFFFF !important;
