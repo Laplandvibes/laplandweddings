@@ -21,7 +21,12 @@
   --color-ivory: #FBF6F0;           /* cards — pure cream, pops off the dark bg */
   --color-charcoal: #1F1612;        /* text on cream cards */
   --color-stone: #5A4F48;           /* secondary muted text on cards */
-  --color-stone-light: #8B7E73;     /* tertiary text on cards */
+  --color-stone-light: #75685E;     /* tertiary text on cards — 5.0:1 on ivory.
+                                       Was #8B7E73 (3.67:1), which failed AA on the
+                                       form helper lines ("WhatsApp fungerar bra…").
+                                       Only ever used on ivory cards (see the
+                                       .text-gray-400/500 rules below), so darkening
+                                       it cannot affect any dark surface. */
   --color-line: #4A382F;            /* warm hairline borders on dark bg */
   --color-line-light: #DCCEC0;     /* borders on cream cards */
 
@@ -36,7 +41,12 @@
      renders with no background on this site. */
   --color-vibe-pink: #EC4899;
   --color-rose: #E5879C;            /* softer warm rose, romantic */
-  --color-rose-deep: #C9466A;       /* deeper rose for buttons */
+  --color-rose-deep: #C9466A;       /* deeper rose for buttons — WHITE text on it = 4.6:1, AA ok.
+                                       Do NOT use as TEXT colour: it fails AA on both surfaces
+                                       (4.28:1 on ivory cards, 3.5–3.9:1 on the espresso bg).
+                                       Use the two surface-specific tokens below instead. */
+  --color-rose-ink: #B03A5B;        /* rose TEXT on ivory cards (#FBF6F0) — 5.42:1, AA */
+  --color-rose-glow: #DD6E86;       /* rose TEXT on espresso bg (#1F1612 / #2A1F18) — 5.6 / 5.1:1, AA */
   --color-gold: #D4A574;            /* warm gold accent */
   --color-sage: #9CAF9D;
 
@@ -46,7 +56,12 @@
   --color-gray: #5A4F48;
   --color-aurora-green: #D4A574;   /* gold instead of teal */
   --color-aurora-purple: #B8915C;
-  --color-aurora-pink: #C9466A;    /* deep rose */
+  /* Section eyebrows (shared Section.tsx) use this as TEXT on the espresso bg on
+     every page. At the old #C9466A that was 3.5–3.9:1 — below AA. Lightened to
+     the same value as --color-rose-glow so every eyebrow site-wide passes.
+     Unaffected: `.on-image .text-aurora-pink` (forced #FCD9A8) and
+     `.border-aurora-pink/40` (hardcoded rgba). */
+  --color-aurora-pink: #DD6E86;    /* deep rose — AA as text on dark (5.1–5.6:1) */
 }
 
 @layer base {
@@ -315,6 +330,38 @@
   .on-image .text-aurora-pink {
     color: #FCD9A8 !important;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  /* Surface-aware rose, same pattern as the .on-image override above.
+     `--color-rose` and `--color-aurora-pink` are tuned for the espresso bg; on
+     the ivory cards (`bg-night-light` / `bg-ivory`, both #FBF6F0) they dropped to
+     2.4–2.9:1. Re-point them at the ink token there, which is 5.4:1. Measured in
+     the live DOM on /sv/pricing, where 21 rose elements sat on ivory.
+     Opacity variants matter: `/30` composites DARK, `/6*` and `/7*` composite to
+     ivory — the same split the .text-white / .text-gray-* rules above already use,
+     so this follows that convention rather than inventing a second one. */
+  .bg-night-light .text-aurora-pink,
+  [class*="bg-night-light\/6"] .text-aurora-pink,
+  [class*="bg-night-light\/7"] .text-aurora-pink,
+  .bg-ivory .text-aurora-pink,
+  .bg-night-light .text-rose,
+  [class*="bg-night-light\/6"] .text-rose,
+  [class*="bg-night-light\/7"] .text-rose,
+  .bg-ivory .text-rose {
+    color: var(--color-rose-ink) !important;
+  }
+
+  /* Third surface: rose text on a rose-tinted chip (`bg-rose/20`, e.g. the step
+     numbers in the DVV guide). That composites lighter still, so even the ink
+     token only reached 3.4:1 at 20px/400. Measured chip bg rgb(201,197,192);
+     this value is 4.8:1 there. Scoped to chips INSIDE an ivory card — the same
+     chip on the espresso bg (hero eyebrows) must keep the light rose, and an
+     unscoped rule dropped it to 2.2:1. Must stay AFTER the rule above. */
+  [class*="bg-night-light\/6"] [class*="bg-rose\/"].text-rose,
+  [class*="bg-night-light\/7"] [class*="bg-rose\/"].text-rose,
+  .bg-night-light [class*="bg-rose\/"].text-rose,
+  .bg-ivory [class*="bg-rose\/"].text-rose {
+    color: #8E2842 !important;
   }
 
   /* Hero text always white */
