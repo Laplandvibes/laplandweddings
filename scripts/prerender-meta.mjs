@@ -321,6 +321,9 @@ const locations = [
   { slug: 'pyha-luosto', en: { name: 'Pyhä-Luosto', desc: 'The quieter side of eastern Lapland: two hotels in the Luosto log village on the edge of Pyhä-Luosto National Park.' }, fi: { name: 'Pyhä-Luosto', desc: 'Itä-Lapin hiljaisempi puoli: kaksi hotellia Luoston hirsikylässä Pyhä-Luoston kansallispuiston laidalla.' }, img: '/images/locations/pyha-luosto.jpg' },
   { slug: 'kilpisjarvi', en: { name: 'Kilpisjärvi', desc: 'Finland’s northernmost and highest point: Tundrea’s glass igloos and the three-country border ceremony.' }, fi: { name: 'Kilpisjärvi', desc: 'Suomen pohjoisin ja korkein paikka: Tundrean lasi-iglut ja kolmen valtakunnan rajavihkiminen.' }, img: '/images/venues/tundrea-kilpisjarvi.jpg' },
   { slug: 'oulu', en: { name: 'Oulu', desc: 'The big-city option on the way to Lapland, Finland’s fifth-largest city on the Bothnian Bay coast. City wedding nights with restaurants and nightlife, direct flights from Helsinki in about an hour.' }, fi: { name: 'Oulu', desc: 'Kaupunkivaihtoehto matkalla Lappiin, Suomen viidenneksi suurin kaupunki Perämeren rannalla. Kaupunkimainen hääilta ravintoloineen ja yöelämineen, suorat lennot Helsingistä noin tunnissa.' }, img: '/images/locations/oulu.jpg' },
+  // No `img`: Kemijärvi has no photo of its own yet, and the site falls back to
+  // the default OG image rather than borrowing another region's picture.
+  { slug: 'kemijarvi', en: { name: 'Kemijärvi', desc: 'Finland’s northernmost town, in eastern Lapland: a centre wrapped in lake, 7,029 residents, and a direct train from Helsinki. Five fells within driving distance.' }, fi: { name: 'Kemijärvi', desc: 'Suomen pohjoisin kaupunki Itä-Lapissa: järven ympäröimä keskusta, 7 029 asukasta ja suora junayhteys Helsingistä. Viisi tunturia ajomatkan päässä.' } },
 ];
 
 const types = [

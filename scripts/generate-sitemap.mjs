@@ -6,7 +6,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://laplandweddings.online';
 const today = new Date().toISOString().slice(0, 10);
 
-const locations = ['rovaniemi', 'saariselka', 'levi', 'yllas', 'pyha-luosto', 'kilpisjarvi', 'oulu'];
+// 🔴 THIRD copy of the location list. Adding a region means editing all three:
+//   src/data/locations.ts          — the page content itself
+//   scripts/prerender-meta.mjs     — <title>/description for the prerendered HTML
+//   this file                      — sitemap entries
+// Miss one and the page exists but is invisible to crawlers, with no error.
+const locations = ['rovaniemi', 'saariselka', 'levi', 'yllas', 'pyha-luosto', 'kilpisjarvi', 'oulu', 'kemijarvi'];
 const types = ['northern-lights', 'snow-chapel', 'glass-igloo', 'midnight-sun', 'elopement', 'vow-renewal'];
 const venues = [
   'kakslauttanen', 'arctic-snowhotel', 'snow-village-lainio', 'northern-lights-ranch', 'levi-ice-castle',
