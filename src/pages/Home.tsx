@@ -43,7 +43,7 @@ export default function Home() {
   const { lang, dataLang, tr } = useLang();
 
   // HOME meta <title> — leads with the "Lapland Weddings" keyword + concrete
-  // value (venues + marriage paperwork). All 11 locales native (no EN bleed).
+  // value (venues + marriage paperwork). All 12 locales native (no EN bleed).
   const SEO_TITLE: Record<Lang, string> = {
     en: 'Lapland Weddings 2026: Arctic Venues & Marriage Paperwork',
     fi: 'Häät Lapissa 2026: hääpaikat ja DVV-paperit',

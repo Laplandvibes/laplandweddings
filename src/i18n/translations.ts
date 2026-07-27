@@ -1,5 +1,5 @@
 /**
- * Static per-locale translations. All 11 locales bundled into the main chunk.
+ * Static per-locale translations. All 12 locales bundled into the main chunk.
  * Lazy-loading was attempted (Faasi 9) but caused React useContext=null in
  * production, reverted to static imports 2026-05-22.
  *

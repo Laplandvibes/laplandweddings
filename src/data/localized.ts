@@ -4,7 +4,7 @@ import type { Lang } from '../i18n/translations';
  * A localized value carrying every supported locale.
  *
  * Data files (venues, locations, weddingTypes, planners, photographers) fill
- * all 11 locales so consumers can index directly with `value[dataLang]`.
+ * all 12 locales so consumers can index directly with `value[dataLang]`.
  * For robustness, `pickLocalized` is provided with an English fallback in case
  * a key is ever missing at runtime.
  */

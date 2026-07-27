@@ -18,7 +18,7 @@ interface Step {
   link?: { url: string; label: string };
 }
 
-/** Six-step marriage-licence process, fully localised across all 11 locales. */
+/** Six-step marriage-licence process, fully localised across all 12 locales. */
 const STEPS: Step[] = [
   {
     n: 1,

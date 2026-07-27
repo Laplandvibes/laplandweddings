@@ -16,7 +16,7 @@ import { Inbox, Megaphone, ShieldCheck, Handshake, Globe, Languages, Sun } from 
  * '/partner-with-us' to scripts/generate-sitemap.mjs enPaths + scripts/prerender-meta.mjs
  * top map, and add a nav/footer link.
  *
- * Visitor reach is stated qualitatively + with true facts (25+ sites, 11 languages,
+ * Visitor reach is stated qualitatively + with true facts (25+ sites, 12 languages,
  * year-round) — no fabricated numbers. Add real traffic figures here when available.
  */
 
@@ -47,7 +47,7 @@ const conceptStats: { icon: typeof Globe; data: Stat }[] = [
   {
     icon: Languages,
     data: {
-      stat: { en: '11', fi: '11', de: '11', ja: '11', es: '11', 'pt-BR': '11', 'zh-CN': '11', ko: '11', fr: '11', it: '11', nl: '11' , sv: '11'},
+      stat: { en: '12', fi: '12', de: '12', ja: '12', es: '12', 'pt-BR': '12', 'zh-CN': '12', ko: '12', fr: '12', it: '12', nl: '12' , sv: '12'},
       label: {
         en: 'languages: couples from the UK, Asia and Central Europe find you',
         fi: 'kieltä: parit Britanniasta, Aasiasta ja Keski-Euroopasta löytävät teidät',
@@ -127,17 +127,17 @@ const valueProps: { icon: typeof Inbox; data: Card }[] = [
         nl: 'Wij regelen de marketing', sv: 'We handle the marketing',
       },
       body: {
-        en: 'The LaplandVibes network and SEO bring couples to one form in 11 languages. You focus on the wedding. The visibility costs you nothing.',
-        fi: 'LaplandVibes-verkosto ja hakukoneoptimointi tuovat parit yhdelle lomakkeelle 11 kielellä. Sinä keskityt häihin. Näkyvyys ei maksa sinulle mitään.',
-        de: 'Das LaplandVibes-Netzwerk und SEO bringen Paare in 11 Sprachen zu einem Formular. Sie konzentrieren sich auf die Hochzeit. Die Sichtbarkeit kostet Sie nichts.',
-        ja: 'LaplandVibesネットワークとSEOが、11言語でカップルを1つのフォームへ誘導します。あなたは結婚式に集中。露出のコストはゼロです。',
-        es: 'La red LaplandVibes y el SEO llevan a las parejas a un único formulario en 11 idiomas. Tú te centras en la boda. La visibilidad no te cuesta nada.',
-        'pt-BR': 'A rede LaplandVibes e o SEO levam os casais a um único formulário em 11 idiomas. Você foca no casamento. A visibilidade não custa nada.',
-        'zh-CN': 'LaplandVibes 网络与 SEO 用 11 种语言把情侣引导到同一个表单。你专注于婚礼，曝光对你来说毫无成本。',
-        ko: 'LaplandVibes 네트워크와 SEO가 11개 언어로 커플을 하나의 양식으로 모읍니다. 여러분은 결혼식에 집중하세요. 노출 비용은 들지 않습니다.',
-        fr: 'Le réseau LaplandVibes et le SEO amènent les couples vers un seul formulaire en 11 langues. Vous vous concentrez sur le mariage. La visibilité ne vous coûte rien.',
-        it: 'La rete LaplandVibes e la SEO portano le coppie a un unico modulo in 11 lingue. Tu pensi al matrimonio. La visibilità non ti costa nulla.',
-        nl: 'Het LaplandVibes-netwerk en SEO brengen stellen naar één formulier in 11 talen. Jij richt je op de bruiloft. De zichtbaarheid kost je niets.', sv: 'The LaplandVibes network and SEO bring couples to one form in 11 languages. You focus on the wedding. The visibility costs you nothing.',
+        en: 'The LaplandVibes network and SEO bring couples to one form in 12 languages. You focus on the wedding. The visibility costs you nothing.',
+        fi: 'LaplandVibes-verkosto ja hakukoneoptimointi tuovat parit yhdelle lomakkeelle 12 kielellä. Sinä keskityt häihin. Näkyvyys ei maksa sinulle mitään.',
+        de: 'Das LaplandVibes-Netzwerk und SEO bringen Paare in 12 Sprachen zu einem Formular. Sie konzentrieren sich auf die Hochzeit. Die Sichtbarkeit kostet Sie nichts.',
+        ja: 'LaplandVibesネットワークとSEOが、12言語でカップルを1つのフォームへ誘導します。あなたは結婚式に集中。露出のコストはゼロです。',
+        es: 'La red LaplandVibes y el SEO llevan a las parejas a un único formulario en 12 idiomas. Tú te centras en la boda. La visibilidad no te cuesta nada.',
+        'pt-BR': 'A rede LaplandVibes e o SEO levam os casais a um único formulário em 12 idiomas. Você foca no casamento. A visibilidade não custa nada.',
+        'zh-CN': 'LaplandVibes 网络与 SEO 用 12 种语言把情侣引导到同一个表单。你专注于婚礼，曝光对你来说毫无成本。',
+        ko: 'LaplandVibes 네트워크와 SEO가 12개 언어로 커플을 하나의 양식으로 모읍니다. 여러분은 결혼식에 집중하세요. 노출 비용은 들지 않습니다.',
+        fr: 'Le réseau LaplandVibes et le SEO amènent les couples vers un seul formulaire en 12 langues. Vous vous concentrez sur le mariage. La visibilité ne vous coûte rien.',
+        it: 'La rete LaplandVibes e la SEO portano le coppie a un unico modulo in 12 lingue. Tu pensi al matrimonio. La visibilità non ti costa nulla.',
+        nl: 'Het LaplandVibes-netwerk en SEO brengen stellen naar één formulier in 12 talen. Jij richt je op de bruiloft. De zichtbaarheid kost je niets.', sv: 'The LaplandVibes network and SEO bring couples to one form in 12 languages. You focus on the wedding. The visibility costs you nothing.',
       },
     },
   },

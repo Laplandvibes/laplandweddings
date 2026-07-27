@@ -1,7 +1,7 @@
 /**
  * Build-time meta prerender for the Vite SPA — multilingual edition.
  *
- * For every canonical route, generates pages in 11 locales:
+ * For every canonical route, generates pages in 12 locales:
  *   en  → /<path>/
  *   fi  → /fi/<path>/
  *   de  → /de/<path>/

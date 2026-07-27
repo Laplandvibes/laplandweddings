@@ -16,7 +16,7 @@ import Section from './Section';
  *  → laplandvisit.com/itineraries/    — planning the wider Lapland trip
  *  → laplandtransport.com/lapland-guide/ — getting everyone to Lapland (flights, transfers)
  *
- * All 11 locales carry native copy (matches the project's i18n bar).
+ * All 12 locales carry native copy (matches the project's i18n bar).
  */
 type Card = { href: string; label: string; body: string };
 type Block = { eyebrow: string; title: string; subtitle: string; cards: Card[] };

@@ -5,7 +5,7 @@ import { t, loadLang, subscribeLangLoaded, isLangLoaded, type Lang, type Transla
 type Translations = Translation;
 
 /**
- * Data files carry all 11 locales. `dataLang` is the real current locale used
+ * Data files carry all 12 locales. `dataLang` is the real current locale used
  * to index into localized data objects (Localized<T> = Record<Lang, T>).
  */
 export type DataLang = Lang;
