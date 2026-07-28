@@ -30,7 +30,7 @@ const t_ptBR = {
     heroSubtitle: 'Iglus de vidro · Capelas de neve · Aurora boreal · Sol da meia-noite. Em finlandês e inglês. Conectamos você com os organizadores de casamento mais experientes da Lapônia.',
     heroReassure: 'Grátis e sem compromisso · resposta em 1–7 dias',
     whyTitle: 'Por que a Lapônia para seu casamento',
-    whyP: 'Na Lapônia você pode fazer uma cerimônia íntima a partir de 1.600 € ou um casamento de luxo para 100 convidados por 50.000 €. A Finlândia facilita os casamentos de casais estrangeiros, a documentação via DVV leva de 3 a 5 semanas. Nossa rede entrega 3 orçamentos personalizados de organizadores locais com um único formulário.',
+    whyP: 'Na Lapônia os casamentos acontecem em iglus de vidro, capelas de neve e no alto dos fells, e na maioria das vezes a cerimônia é simbólica. Este site reúne os locais, as estações e quanto as coisas custam de verdade. Não organizamos casamentos nem representamos nenhum local: vocês nos contam o que desejam e nós repassamos a organizadores de casamento na Lapônia.',
     audienceTitle: 'Organizadores locais para casais internacionais',
     audienceFi: 'Sim, atendemos também em finlandês para casais locais.',
     audienceEn: 'Casal internacional? Organizadores de casamento finlandeses com experiência em documentação estrangeira o DVV é cuidado para você.',
@@ -65,15 +65,15 @@ const t_ptBR = {
   },
   locations: {
     indexTitle: 'Regiões da Lapônia para casamentos',
-    indexIntro: 'Sete regiões reconhecidas, cada uma com seu caráter. Clique em uma região para ver seus locais, temporadas e serviços.',
+    indexIntro: 'Oito regiões reconhecidas, cada uma com seu caráter. Clique em uma região para ver seus locais, temporadas e serviços.',
   },
   types: {
     indexTitle: 'Tipos de casamento na Lapônia',
     indexIntro: 'Noites em iglus de vidro, capelas de neve, aurora boreal, sol da meia-noite, fugas românticas e renovação de votos, seis grandes direções entre as quais escolher.',
   },
   venues: {
-    indexTitle: 'Locais para casamento na Lapônia verificados',
-    indexIntro: 'Mais de 20 locais para casamento, todos verificados: espaços, capacidades e contatos. Filtre por região, tipo de casamento ou faixa de preço.',
+    indexTitle: 'Os locais para casamento mais populares da Lapônia',
+    indexIntro: '21 lugares onde se realizam casamentos na Lapônia. As informações vêm das fontes de cada local. Filtre por região, tipo de casamento ou faixa de preço.',
     filterByLocation: 'Filtrar por região',
     filterByType: 'Filtrar por tipo de casamento',
     filterByPrice: 'Filtrar por faixa de preço',

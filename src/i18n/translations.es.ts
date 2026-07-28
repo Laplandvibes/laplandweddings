@@ -30,7 +30,7 @@ const t_es = {
     heroSubtitle: 'Iglús de cristal · Capillas de nieve · Aurora boreal · Sol de medianoche. En finlandés y en inglés. Le conectamos con los planificadores de bodas más experimentados de Laponia.',
     heroReassure: 'Gratis y sin compromiso · respuesta en 1–7 días',
     whyTitle: 'Por qué Laponia para su boda',
-    whyP: 'En Laponia puede fugarse para una ceremonia a partir de 1.600 € o celebrar una boda de lujo para 100 invitados por 50.000 €. Finlandia facilita las bodas de parejas extranjeras, los trámites a través del DVV duran 3 a 5 semanas. Nuestra red le proporciona 3 presupuestos personalizados de planificadores locales con un solo formulario.',
+    whyP: 'En Laponia las bodas se celebran en iglús de cristal, capillas de nieve y en lo alto de los fells, y la mayoría de las veces la ceremonia es simbólica. Esta web reúne los lugares, las temporadas y lo que cuestan realmente las cosas. No organizamos bodas ni representamos a ningún lugar: nos contáis vuestro deseo y lo transmitimos a organizadores de bodas en Laponia.',
     audienceTitle: 'Planificadores locales para parejas internacionales',
     audienceFi: 'Sí, atendemos también en finlandés a parejas locales.',
     audienceEn: '¿Pareja internacional? Planificadores de boda finlandeses con experiencia en documentación extranjera, el DVV se ocupa por usted.',
@@ -65,15 +65,15 @@ const t_es = {
   },
   locations: {
     indexTitle: 'Regiones de Laponia para bodas',
-    indexIntro: 'Siete regiones reconocidas, cada una con su carácter. Pulse en una región para ver sus lugares, temporadas y servicios.',
+    indexIntro: 'Ocho regiones reconocidas, cada una con su carácter. Pulse en una región para ver sus lugares, temporadas y servicios.',
   },
   types: {
     indexTitle: 'Tipos de boda en Laponia',
     indexIntro: 'Noches en iglús de cristal, capillas de nieve, aurora boreal, sol de medianoche, ceremonias de fuga y renovación de votos, seis grandes orientaciones entre las que elegir.',
   },
   venues: {
-    indexTitle: 'Lugares para bodas en Laponia verificados',
-    indexIntro: 'Más de 20 lugares para bodas, todos verificados: espacios, capacidades y contactos. Filtre por región, tipo de boda o nivel de precio.',
+    indexTitle: 'Los lugares para bodas más populares de Laponia',
+    indexIntro: '21 lugares donde se celebran bodas en Laponia. Los datos proceden de las fuentes de cada lugar. Filtre por región, tipo de boda o nivel de precio.',
     filterByLocation: 'Filtrar por región',
     filterByType: 'Filtrar por tipo de boda',
     filterByPrice: 'Filtrar por nivel de precio',

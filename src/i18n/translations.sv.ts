@@ -32,7 +32,7 @@ const t_sv = {
     heroSubtitleSummer: 'Löften vid sjön · Ceremonier på fjälltoppen · Glastak under en himmel som aldrig mörknar · Långa ljusa kvällar. På finska och engelska. Vi matchar dig med Lapplands mest erfarna bröllopsplanerare.',
     heroReassure: 'Gratis och utan förbindelse · svar inom 1–7 dagar',
     whyTitle: 'Varför gifta sig i Lappland',
-    whyP: 'I Lappland kan du hålla ett rymningsbröllop från 1 600 € eller ordna en lyxfest för 100 gäster för 50 000 €. Finland gör utländska bröllop enkla, pappersarbetet tar 3–5 veckor via DVV. Vårt nätverk ger dig 3 personliga offerter från lokala planerare med ett enda formulär.',
+    whyP: 'I Lappland hålls bröllop i glasigloor, snökapell och på fjälltoppar, och för det mesta är ceremonin symbolisk. Den här sajten samlar platserna, årstiderna och vad saker faktiskt kostar. Vi arrangerar inga bröllop och företräder ingen plats: ni berättar vad ni önskar, vi för det vidare till bröllopsplanerare i Lappland.',
     audienceTitle: 'På finska för finländare, på engelska för internationella par',
     audienceFi: 'Ett finländskt par? Få finskspråkiga planerare och tydliga prisintervall på ditt eget språk.',
     audienceEn: 'Internationellt par? Få finländska bröllopsplanerare med vana vid utländskt pappersarbete, DVV sköter vi åt er.',
@@ -67,15 +67,15 @@ const t_sv = {
   },
   locations: {
     indexTitle: 'Lapplands regioner för bröllop',
-    indexIntro: 'Sju kända regioner, var och en med sin egen karaktär. Klicka på en region för att se dess platser, säsonger och tjänster.',
+    indexIntro: 'Åtta kända regioner, var och en med sin egen karaktär. Klicka på en region för att se dess platser, säsonger och tjänster.',
   },
   types: {
     indexTitle: 'Bröllopstyper i Lappland',
     indexIntro: 'Nätter i glasigloo, snökapell, norrsken, midnattssol, rymningsbröllop och förnyade löften, sex huvudinriktningar att välja mellan.',
   },
   venues: {
-    indexTitle: 'Verifierade bröllopsplatser i Lappland',
-    indexIntro: 'Över 20 bröllopsplatser, alla verifierade: utrymmen, kapacitet och kontakter. Filtrera efter region, bröllopstyp eller prisklass.',
+    indexTitle: 'Lapplands populäraste bröllopsplatser',
+    indexIntro: '21 platser där bröllop hålls i Lappland. Uppgifterna kommer från varje plats egna källor. Filtrera efter region, bröllopstyp eller prisklass.',
     filterByLocation: 'Filtrera efter region',
     filterByType: 'Filtrera efter bröllopstyp',
     filterByPrice: 'Filtrera efter prisklass',

@@ -289,7 +289,10 @@ export const weddingTypes: WeddingType[] = [
       sv: ['Igloon är för bröllopsnatten, inte ceremonin: platsen ordnas separat', 'En vanlig igloo rymmer bara paret (fyrapersonersiglor är få)', 'Glaset speglar ljuset inifrån → släck lamporna för att se norrskenet'],
     },
     venueSlugs: ['kakslauttanen', 'levin-iglut', 'apukka-resort', 'arctic-snowhotel', 'northern-lights-village-saariselka', 'tundrea-kilpisjarvi'],
-    heroImage: '/images/venues/kakslauttanen.jpg',
+    // Was borrowing Kakslauttanen's venue photograph, which made a generic
+    // wedding-type card look like a portrait of one specific hotel. Now has its
+    // own image (Vesa 2026-07-28).
+    heroImage: '/images/types/glass-igloo.webp',
     icon: '🏔',
   },
   {

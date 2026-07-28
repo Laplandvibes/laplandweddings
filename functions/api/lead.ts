@@ -811,9 +811,12 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
   ];
 
   const ctaTitle = isFi ? 'Selaa Lapin hääpaikkoja sillä välin' : 'Browse Lapland venues while you wait';
+  // "Verified" implied we had vetted or partnered with these venues; we have no
+  // agreement with any of them (Vesa 2026-07-28). Em dash also removed, it is
+  // banned in LV copy.
   const ctaP = isFi
-    ? 'Yli 20 vahvistettua hääpaikkaa, jokaisella oma sivu kapasiteetein, hintoineen ja kuvineen.'
-    : '20+ verified venues, each with its own page — capacities, pricing, and photos.';
+    ? '21 paikkaa, joissa Lapissa vietetään häitä, jokaisella oma sivu tiloineen, hintatasoineen ja kuvineen.'
+    : '21 places where weddings are held in Lapland, each with its own page: spaces, price level and photos.';
   const ctaButton = isFi ? 'Selaa hääpaikkoja' : 'Browse venues';
 
   const ps = isFi

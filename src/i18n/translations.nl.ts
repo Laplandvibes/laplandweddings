@@ -32,7 +32,7 @@ const t_nl = {
     heroSubtitleSummer: 'Geloften aan het meer · Ceremonies op de fjäll · Glazen daken onder een hemel die nooit donker wordt · Lange lichte avonden. We koppelen u aan de meest ervaren weddingplanners van Lapland.',
     heroReassure: 'Gratis & vrijblijvend · antwoord binnen 1–7 dagen',
     whyTitle: 'Waarom trouwen in Lapland',
-    whyP: 'In Lapland kunt u vanaf € 1 600 een intieme bruiloft houden of een luxe viering voor 100 gasten organiseren voor € 50 000. Finland maakt buitenlandse bruiloften eenvoudig, papierwerk duurt 3–5 weken via de DVV. Ons netwerk levert via één formulier 3 persoonlijke offertes van lokale planners.',
+    whyP: 'In Lapland trouwt men in glazen iglo’s, sneeuwkapellen en op de top van een fjell, en meestal is de ceremonie symbolisch. Deze site verzamelt de plekken, de seizoenen en wat dingen werkelijk kosten. Wij organiseren geen bruiloften en vertegenwoordigen geen enkele locatie: u vertelt ons uw wens, wij geven die door aan weddingplanners in Lapland.',
     audienceTitle: 'In het Fins voor Finnen, in het Engels voor internationale stellen',
     audienceFi: 'Fins stel? Krijg Finstalige planners en duidelijke prijsranges in uw eigen taal.',
     audienceEn: 'Internationaal stel? Krijg Finse weddingplanners met ervaring in buitenlands papierwerk, DVV nemen we uit handen.',
@@ -67,15 +67,15 @@ const t_nl = {
   },
   locations: {
     indexTitle: 'Lapland-regio’s voor bruiloften',
-    indexIntro: 'Zeven bekende regio’s, elk met een eigen karakter. Klik op een regio voor locaties, seizoenen en diensten.',
+    indexIntro: 'Acht bekende regio’s, elk met een eigen karakter. Klik op een regio voor locaties, seizoenen en diensten.',
   },
   types: {
     indexTitle: 'Bruiloftstypes in Lapland',
     indexIntro: 'Nachten in glazen iglo’s, sneeuwkapellen, bruiloft onder noorderlicht, middernachtzon, intieme bruiloften en hernieuwen van geloften, zes hoofdrichtingen.',
   },
   venues: {
-    indexTitle: 'Geverifieerde Lapland-trouwlocaties',
-    indexIntro: 'Meer dan 20 locaties, allemaal geverifieerd: ruimtes, capaciteiten en contacten. Filter op regio, bruiloftstype of prijsklasse.',
+    indexTitle: 'De populairste trouwlocaties van Lapland',
+    indexIntro: '21 plekken waar in Lapland bruiloften worden gehouden. De gegevens komen uit de eigen bronnen van elke locatie. Filter op regio, bruiloftstype of prijsklasse.',
     filterByLocation: 'Filter op regio',
     filterByType: 'Filter op type',
     filterByPrice: 'Filter op prijs',

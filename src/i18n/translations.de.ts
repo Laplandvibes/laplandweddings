@@ -32,7 +32,7 @@ const t_de = {
     heroSubtitleSummer: 'Trauung am Seeufer · Bogen am Fuß des Fjälls · helle Nächte ohne Dunkelheit. Lapplands erfahrenste Hochzeitsplaner, fordern Sie 3 maßgeschneiderte Angebote mit einem Formular an.',
     heroReassure: 'Kostenlos & unverbindlich · Antwort in 1–7 Tagen',
     whyTitle: 'Warum Lappland für Ihre Hochzeit',
-    whyP: 'In Lappland heiraten Sie zu zweit ab 1 600 € oder feiern luxuriös mit 100 Gästen für 50 000 €. Finnland erleichtert Auslandshochzeiten, die Formalitäten beim DVV dauern 3–5 Wochen. Unser Netzwerk liefert Ihnen über ein einziges Formular 3 maßgeschneiderte Angebote lokaler Hochzeitsplaner.',
+    whyP: 'In Lappland wird in Glasiglus, Schneekapellen und auf Fjellgipfeln geheiratet, und meistens ist die Zeremonie symbolisch. Diese Seite sammelt die Orte, die Jahreszeiten und die tatsächlichen Kosten. Wir richten keine Hochzeiten aus und vertreten keine Location: Sie nennen uns Ihren Wunsch, wir geben ihn an Hochzeitsplaner in Lappland weiter.',
     audienceTitle: 'Auf Deutsch für deutschsprachige Paare, auf Finnisch und Englisch für alle anderen',
     audienceFi: 'Sie sind ein deutschsprachiges Paar? Erhalten Sie finnische Hochzeitsplaner mit Erfahrung in deutscher Korrespondenz und allen rechtlichen Unterlagen, wir kümmern uns um den DVV.',
     audienceEn: 'International couple? Get Finnish wedding planners experienced with foreign legal paperwork, DVV done for you.',
@@ -67,15 +67,15 @@ const t_de = {
   },
   locations: {
     indexTitle: 'Lappland-Regionen für Hochzeiten',
-    indexIntro: 'Sieben bekannte Regionen, jede mit eigenem Charakter. Klicken Sie eine Region an, um Hochzeitslocations, Saisons und Dienstleistungen zu sehen.',
+    indexIntro: 'Acht bekannte Regionen, jede mit eigenem Charakter. Klicken Sie eine Region an, um Hochzeitslocations, Saisons und Dienstleistungen zu sehen.',
   },
   types: {
     indexTitle: 'Hochzeitsarten in Lappland',
     indexIntro: 'Glasiglu-Nächte, Schneekapellen, Polarlicht-Hochzeit, Mitternachtssonne, Elopement zu zweit und Erneuerung des Eheversprechens, sechs Richtungen zur Auswahl.',
   },
   venues: {
-    indexTitle: 'Verifizierte Hochzeitslocations in Lappland',
-    indexIntro: 'Über 20 Hochzeitslocations, alle geprüft: Räume, Kapazitäten und Kontaktdaten. Filtern Sie nach Region, Hochzeitsart oder Preisklasse.',
+    indexTitle: 'Die beliebtesten Hochzeitsorte Lapplands',
+    indexIntro: '21 Orte, an denen in Lappland geheiratet wird. Die Angaben stammen aus den eigenen Quellen der jeweiligen Location. Filtern Sie nach Region, Hochzeitsart oder Preisklasse.',
     filterByLocation: 'Nach Region filtern',
     filterByType: 'Nach Hochzeitsart filtern',
     filterByPrice: 'Nach Preisklasse filtern',

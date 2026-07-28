@@ -59,16 +59,20 @@ export default function Home() {
     sv: 'Bröllop i Lappland 2026: vigselplatser och äktenskapspapper',
   };
   const seoTitle = SEO_TITLE[lang];
+  // Description states only what the site actually contains. The old version
+  // promised "7 planners"; the data holds 6 wedding *photographers* and no
+  // planner directory at all, so both the number and the profession were wrong
+  // (same class of error as the "11 languages" claim, Vesa 2026-07-27).
   const seoDesc = pick(lang, {
-    fi: 'Lapin kattavin häämatkasivu. Yli 20 hääpaikkaa, 7 hääsuunnittelijaa, DVV-paperit, hinta-arviot. Pyydä 3 räätälöityä tarjousta yhdellä lomakkeella.',
-    en: 'The most complete Lapland wedding planning site. 20+ venues, 7 planners, DVV paperwork, real prices. Get 3 personalised quotes with one form.',
-    de: 'Die umfassendste Seite für Hochzeiten in Lappland. Über 20 Hochzeitslocations, 7 Hochzeitsplaner, DVV-Unterlagen, echte Preise. 3 maßgeschneiderte Angebote mit einem Formular.',
-    ja: 'ラップランドのウェディングを総合的に企画できるサイト。20以上の会場、7名のプランナー、DVV書類手続き、実勢価格を網羅。1つのフォームで3件のオーダーメイド見積もりを取得できます。',
-    ko: '라플란드 결혼식을 한 번에 계획할 수 있는 가장 완성도 높은 사이트입니다. 20곳 이상의 결혼식 장소, 7명의 웨딩 플래너, DVV 서류 안내, 실제 견적까지 모두 확인하세요. 하나의 양식으로 3건의 맞춤 견적을 받아보실 수 있습니다.',
-    fr: 'Le site le plus complet pour organiser votre mariage en Laponie. Plus de 20 lieux, 7 wedding planners, démarches DVV et prix réels. Recevez 3 devis personnalisés avec un seul formulaire.',
-    it: 'Il sito più completo per organizzare il Suo matrimonio in Lapponia. Oltre 20 sedi, 7 wedding planner, pratiche DVV e prezzi reali. Riceva 3 preventivi personalizzati con un unico modulo.',
-    nl: 'De meest complete site om uw bruiloft in Lapland te plannen. Meer dan 20 locaties, 7 wedding planners, DVV-papierwerk en echte prijzen. Ontvang met één formulier 3 persoonlijke offertes.',
-    sv: 'Lapplands mest kompletta sajt för bröllopsplanering. Över 20 platser, 7 planerare, DVV-papper, verkliga priser. Få 3 personliga offerter med ett enda formulär.',
+    fi: 'Riippumaton opas häihin Lapissa: 21 hääpaikkaa, 8 paikkakuntaa, symbolinen ja juridinen seremonia, todelliset kustannukset. Emme edusta yhtäkään paikkaa.',
+    en: 'An independent guide to getting married in Lapland: 21 venues, 8 regions, symbolic and legal ceremonies, real costs. We represent none of the venues.',
+    de: 'Ein unabhängiger Leitfaden zum Heiraten in Lappland: 21 Locations, 8 Regionen, symbolische und rechtsgültige Trauung, echte Kosten. Wir vertreten keine der Locations.',
+    ja: 'ラップランドでの結婚式を中立の立場でまとめたガイド。会場21か所、エリア8か所、シンボリック挙式と法的婚姻、実際にかかる費用。当サイトはいずれの会場の代理店でもありません。',
+    ko: '라플란드 결혼식을 위한 독립적인 안내서입니다. 결혼식 장소 21곳, 지역 8곳, 상징 예식과 법적 혼인, 실제 비용을 정리했습니다. 저희는 어떤 장소도 대리하지 않습니다.',
+    fr: 'Un guide indépendant pour se marier en Laponie : 21 lieux, 8 régions, cérémonie symbolique ou mariage civil, coûts réels. Nous ne représentons aucun de ces lieux.',
+    it: 'Una guida indipendente per sposarsi in Lapponia: 21 location, 8 regioni, cerimonia simbolica e matrimonio civile, costi reali. Non rappresentiamo nessuna delle location.',
+    nl: 'Een onafhankelijke gids voor trouwen in Lapland: 21 locaties, 8 regio’s, symbolische en wettelijke ceremonie, echte kosten. Wij vertegenwoordigen geen enkele locatie.',
+    sv: 'En oberoende guide till att gifta sig i Lappland: 21 platser, 8 regioner, symbolisk och juridisk vigsel, verkliga kostnader. Vi företräder ingen av platserna.',
   });
 
   const featuredVenues = venues.slice(0, 6);
@@ -158,9 +162,6 @@ export default function Home() {
         </div>
       </PageHero>
 
-      {/* ── PÄÄKUMPPANI-banneri heti heron alle (myyty = banneri, vapaa = house-ad) ── */}
-      <MainPartnerBanner config={AD_SLOTS} locale={lang} />
-
       {/* Why Lapland */}
       <Section title={tr.home.whyTitle}>
         {/* Was `sm:grid-cols-3`, which turned 3 columns on at 640px — the exact
@@ -170,99 +171,95 @@ export default function Home() {
             back gradually. */}
         <div className="grid md:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden max-w-5xl mx-auto">
           {[
+            /* Vesa 2026-07-28. The previous three stats were "300+ weddings a
+               year" (no source anywhere), "from €1 600 — smallest package" (we
+               sell no packages and have no agreement with any venue) and "3–5
+               weeks — paperwork done" (leads with bureaucracy that most couples
+               never need, because a symbolic ceremony requires none). Replaced
+               with three claims that are checkable on this site. */
             {
-              stat: '300+',
+              stat: '21',
               label: pick(lang, {
-                fi: 'häät vuodessa',
-                en: 'weddings a year',
-                de: 'Hochzeiten pro Jahr',
-                ja: '年間挙式数',
-                ko: '연간 결혼식 건수',
-                fr: 'mariages par an',
-                it: 'matrimoni all’anno',
-                nl: 'bruiloften per jaar',
-                sv: 'bröllop per år',
+                fi: 'kartoitettua hääpaikkaa',
+                en: 'venues surveyed',
+                de: 'erfasste Hochzeitsorte',
+                ja: '掲載会場数',
+                ko: '조사한 결혼식 장소',
+                fr: 'lieux recensés',
+                it: 'location censite',
+                nl: 'geïnventariseerde locaties',
+                sv: 'kartlagda platser',
               }),
               body: pick(lang, {
-                fi: 'Lappi on vakiintunut Pohjois-Euroopan suosituin destination wedding -kohde. Sesonki jouluk.–maalisk.',
-                en: 'Lapland is the most popular destination wedding region in Northern Europe. Season runs December–March.',
-                de: 'Lappland ist die beliebteste Destination-Wedding-Region Nordeuropas. Hauptsaison Dezember–März.',
-                ja: 'ラップランドは北ヨーロッパで最も人気の高いデスティネーション・ウェディング地域。シーズンは12月から3月までです。',
-                ko: '라플란드는 북유럽에서 가장 인기 있는 데스티네이션 웨딩 지역으로 자리매김했습니다. 성수기는 12월부터 3월까지입니다.',
-                fr: 'La Laponie s’est imposée comme la première destination de mariage du Nord de l’Europe. La saison s’étend de décembre à mars.',
-                it: 'La Lapponia è la destinazione per matrimoni più richiesta del Nord Europa. La stagione va da dicembre a marzo.',
-                nl: 'Lapland is uitgegroeid tot de populairste bestemmingsbruiloftregio van Noord-Europa. Het seizoen loopt van december tot maart.',
-                sv: 'Lappland är den populäraste regionen för destinationsbröllop i Nordeuropa. Säsongen pågår december–mars.',
+                fi: 'Kävimme Lapin hääpaikat läpi ja kokosimme ne yhteen listaan. Emme edusta yhtäkään niistä emmekä myy niitä, joten järjestystä ei voi ostaa.',
+                en: 'We went through the wedding venues in Lapland and gathered them into one list. We represent none of them and sell none of them, so the order cannot be bought.',
+                de: 'Wir haben die Hochzeitsorte Lapplands durchgesehen und in einer Liste zusammengestellt. Wir vertreten keinen davon und verkaufen keinen, die Reihenfolge ist also nicht käuflich.',
+                ja: 'ラップランドの結婚式会場を一つずつ確認し、一つのリストにまとめました。当サイトはいずれの会場の代理店でもなく、販売もしていません。掲載順を買うことはできません。',
+                ko: '라플란드의 결혼식 장소를 하나씩 살펴보고 한 목록으로 정리했습니다. 저희는 그 어느 곳도 대리하지 않고 판매하지도 않으므로, 순서를 돈으로 살 수 없습니다.',
+                fr: 'Nous avons passé en revue les lieux de mariage de Laponie et les avons réunis en une seule liste. Nous n’en représentons aucun et n’en vendons aucun : l’ordre ne s’achète pas.',
+                it: 'Abbiamo esaminato le location per matrimoni della Lapponia e le abbiamo raccolte in un unico elenco. Non ne rappresentiamo nessuna e non ne vendiamo nessuna, quindi l’ordine non si può comprare.',
+                nl: 'We hebben de trouwlocaties in Lapland doorgenomen en in één lijst gebundeld. We vertegenwoordigen er geen en verkopen er geen, dus de volgorde is niet te koop.',
+                sv: 'Vi gick igenom bröllopsplatserna i Lappland och samlade dem i en lista. Vi företräder ingen av dem och säljer ingen av dem, så ordningen går inte att köpa.',
+              }),
+            },
+            {
+              stat: '0',
+              label: pick(lang, {
+                fi: 'lupaa symboliseen seremoniaan',
+                en: 'permits for a symbolic ceremony',
+                de: 'Genehmigungen für eine freie Trauung',
+                ja: 'シンボリック挙式に必要な許可',
+                ko: '상징 예식에 필요한 허가',
+                fr: 'démarche pour une cérémonie symbolique',
+                it: 'permessi per una cerimonia simbolica',
+                nl: 'vergunningen voor een symbolische ceremonie',
+                sv: 'tillstånd för en symbolisk ceremoni',
+              }),
+              body: pick(lang, {
+                fi: 'Useimmat Lappiin tulevat parit pitävät symbolisen seremonian ja solmivat juridisen avioliiton kotimaassaan. Silloin viranomaispapereita ei tarvita lainkaan.',
+                en: 'Most couples who come to Lapland hold a symbolic ceremony and register the marriage legally at home. Nothing official is required here.',
+                de: 'Die meisten Paare, die nach Lappland kommen, feiern eine freie Trauung und schließen die Ehe rechtlich in ihrer Heimat. Dafür sind hier keinerlei Behördenpapiere nötig.',
+                ja: 'ラップランドを訪れるカップルの多くはシンボリック挙式を行い、法的な婚姻は母国で成立させます。その場合、こちらでの役所手続きは一切必要ありません。',
+                ko: '라플란드를 찾는 대부분의 커플은 상징 예식을 올리고 법적 혼인은 본국에서 신고합니다. 이 경우 현지 관공서 서류는 전혀 필요하지 않습니다.',
+                fr: 'La plupart des couples qui viennent en Laponie célèbrent une cérémonie symbolique et enregistrent leur mariage dans leur pays. Aucune formalité administrative n’est alors nécessaire ici.',
+                it: 'La maggior parte delle coppie che arriva in Lapponia celebra una cerimonia simbolica e registra il matrimonio nel proprio Paese. In quel caso qui non serve alcun documento ufficiale.',
+                nl: 'De meeste paren die naar Lapland komen houden een symbolische ceremonie en leggen het huwelijk juridisch thuis vast. Dan is hier geen enkel officieel papier nodig.',
+                sv: 'De flesta par som kommer till Lappland håller en symbolisk ceremoni och ingår äktenskapet juridiskt hemma. Då behövs inga myndighetspapper här.',
               }),
             },
             {
               stat: pick(lang, {
-                fi: '€1 600 →',
-                en: 'from €1 600',
-                de: 'ab 1 600 €',
-                ja: '€1,600〜',
-                ko: '€1,600부터',
-                fr: 'à partir de 1 600 €',
-                it: 'da 1 600 €',
-                nl: 'vanaf € 1.600',
-                sv: 'från 1 600 €',
+                fi: 'Jouluk.–maalisk.',
+                en: 'Dec–Mar',
+                de: 'Dez.–März',
+                ja: '12月〜3月',
+                ko: '12월~3월',
+                fr: 'déc.–mars',
+                it: 'dic.–mar.',
+                nl: 'dec.–mrt.',
+                sv: 'dec.–mars',
               }),
               label: pick(lang, {
-                fi: 'pienin paketti',
-                en: 'smallest package',
-                de: 'kleinstes Paket',
-                ja: '最小パッケージ',
-                ko: '최소 패키지',
-                fr: 'plus petite formule',
-                it: 'pacchetto base',
-                nl: 'kleinste pakket',
-                sv: 'minsta paketet',
+                fi: 'vilkkain sesonki',
+                en: 'the busiest season',
+                de: 'Hauptsaison',
+                ja: '最盛期',
+                ko: '가장 붐비는 시기',
+                fr: 'la haute saison',
+                it: 'alta stagione',
+                nl: 'het drukste seizoen',
+                sv: 'högsäsongen',
               }),
               body: pick(lang, {
-                fi: 'Kahdestaan vihille 1 600 €:sta, premium-juhlat 50 000 €:on. Luksus jopa 100 000 €.',
-                en: 'Elope from €1 600, premium celebrations to €50 000, luxury up to €100 000+.',
-                de: 'Heiraten zu zweit ab 1 600 €, Premiumfeiern bis 50 000 €, Luxus bis 100 000 € und mehr.',
-                ja: 'お二人だけの挙式は€1,600から、プレミアム挙式は€50,000まで、ラグジュアリー挙式は€100,000以上まで対応します。',
-                ko: '두 분만의 엘로프먼트 예식은 €1,600부터, 프리미엄 예식은 €50,000까지, 럭셔리 예식은 €100,000 이상까지 준비해 드립니다.',
-                fr: 'Mariage en tête-à-tête à partir de 1 600 €, célébrations premium jusqu’à 50 000 €, prestations de luxe au-delà de 100 000 €.',
-                it: 'Matrimonio in due da 1 600 €, celebrazioni premium fino a 50 000 €, allestimenti di lusso oltre i 100 000 €.',
-                nl: 'Elopen vanaf € 1.600, premium feesten tot € 50.000 en luxe vieringen tot € 100.000 en meer.',
-                sv: 'Rymningsbröllop från 1 600 €, premiumfester upp till 50 000 €, lyx upp till 100 000 €+.',
-              }),
-            },
-            {
-              stat: pick(lang, {
-                fi: '3–5 viikkoa',
-                en: '3–5 weeks',
-                de: '3–5 Wochen',
-                ja: '3〜5週間',
-                ko: '3~5주',
-                fr: '3 à 5 semaines',
-                it: '3–5 settimane',
-                nl: '3–5 weken',
-                sv: '3–5 veckor',
-              }),
-              label: pick(lang, {
-                fi: 'paperityö valmista',
-                en: 'paperwork done',
-                de: 'Formalitäten erledigt',
-                ja: '書類手続き完了',
-                ko: '서류 절차 완료',
-                fr: 'formalités réglées',
-                it: 'pratiche completate',
-                nl: 'papierwerk geregeld',
-                sv: 'pappren klara',
-              }),
-              body: pick(lang, {
-                fi: 'DVV hoitaa avioliittoluvan ulkomaalaisille pareille 3–5 viikossa. Maksuton.',
-                en: 'The DVV processes the marriage licence for foreign couples in 3–5 weeks. Free of charge.',
-                de: 'Das DVV erteilt die Heiratserlaubnis für ausländische Paare in 3–5 Wochen. Kostenlos.',
-                ja: 'フィンランド・デジタル人口データサービス局(DVV)が外国人カップルの婚姻許可を3〜5週間で発行します。手数料は無料です。',
-                ko: '핀란드 디지털·인구정보국(DVV)이 외국인 커플의 혼인 허가를 3~5주 안에 처리해 드리며, 비용은 무료입니다.',
-                fr: 'Le DVV finlandais délivre l’autorisation de mariage pour les couples étrangers en 3 à 5 semaines, gratuitement.',
-                it: 'Il DVV finlandese rilascia il nulla osta al matrimonio per le coppie straniere in 3–5 settimane, gratuitamente.',
-                nl: 'De Finse DVV verwerkt de huwelijksvergunning voor buitenlandse paren in 3 tot 5 weken, kosteloos.',
-                sv: 'DVV behandlar hindersprövningen för utländska par på 3–5 veckor. Kostnadsfritt.',
+                fi: 'Lumi ja revontulet ovat varmimmillaan keskitalvella. Kesäkuusta heinäkuuhun aurinko ei laske lainkaan, jolloin ulkoseremonian voi pitää keskellä yötä.',
+                en: 'Snow and the aurora are at their most reliable in midwinter. From June to July the sun never sets, so an outdoor ceremony can be held in the middle of the night.',
+                de: 'Schnee und Polarlichter sind im Hochwinter am verlässlichsten. Von Juni bis Juli geht die Sonne gar nicht unter, eine Trauung im Freien ist also mitten in der Nacht möglich.',
+                ja: '雪とオーロラがもっとも確実なのは真冬です。6月から7月にかけては太陽が沈まないため、真夜中でも屋外での挙式ができます。',
+                ko: '눈과 오로라는 한겨울에 가장 확실합니다. 6월부터 7월까지는 해가 지지 않아 한밤중에도 야외 예식을 올릴 수 있습니다.',
+                fr: 'La neige et les aurores sont les plus fiables au cœur de l’hiver. De juin à juillet, le soleil ne se couche pas : une cérémonie en plein air est possible en pleine nuit.',
+                it: 'Neve e aurora sono più affidabili nel pieno dell’inverno. Da giugno a luglio il sole non tramonta mai, quindi una cerimonia all’aperto si può celebrare nel cuore della notte.',
+                nl: 'Sneeuw en noorderlicht zijn het betrouwbaarst midden in de winter. Van juni tot juli gaat de zon niet onder, dus een ceremonie buiten kan midden in de nacht.',
+                sv: 'Snö och norrsken är som säkrast mitt i vintern. Från juni till juli går solen aldrig ner, så en ceremoni utomhus kan hållas mitt i natten.',
               }),
             },
           ].map((stat) => (
@@ -275,9 +272,6 @@ export default function Home() {
         </div>
         <p className="text-center text-gray-400 mt-10 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">{tr.home.whyP}</p>
       </Section>
-
-      {/* ── LV Media: kakkospääkumppani + 6 premium-paikkaa (tyhjät = house-adit) ── */}
-      <HomeAdSlots config={AD_SLOTS} locale={lang} />
 
       {/* Wedding Types */}
       <Section
@@ -323,6 +317,12 @@ export default function Home() {
           ))}
         </div>
       </Section>
+
+      {/* ── PÄÄKUMPPANI-banneri. Oli aiemmin heti heron alla, jolloin ensimmäinen
+           asia sivulla oli mainospaikan myynti-ilmoitus (Vesa 2026-07-28:
+           "tämä alku on aivan paska"). Nyt kahden sisältölohkon takana, yhä
+           sivun yläkolmanneksessa. ── */}
+      <MainPartnerBanner config={AD_SLOTS} locale={lang} />
 
       {/* Experiences — visual storytelling */}
       <Section
@@ -517,32 +517,57 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* ── LV Media: kakkospääkumppani + 6 premium-paikkaa (tyhjät = house-adit).
+           Oli ennen Häätyyppien yläpuolella, eli lukija sai yhden sisältölohkon
+           ja sitten kuusi mainospaikkaa. Nyt kolmen lohkon takana. ── */}
+      <HomeAdSlots config={AD_SLOTS} locale={lang} />
+
       {/* Featured venues */}
+      {/* "Vahvistettuja hääpaikkoja" implied we had vetted or partnered with
+          these venues. We have no agreement with any of them (Vesa 2026-07-28),
+          so the eyebrow now says what we actually did: surveyed them. */}
       <Section
         eyebrow={pick(lang, {
-          fi: 'Vahvistettuja hääpaikkoja',
-          en: 'Verified venues',
-          de: 'Verifizierte Hochzeitslocations',
-          ja: '認証済み会場',
-          ko: '검증된 결혼식 장소',
-          fr: 'Lieux de mariage vérifiés',
-          it: 'Sedi di matrimonio verificate',
-          nl: 'Geverifieerde locaties',
-          sv: 'Verifierade platser',
+          fi: 'Riippumaton kartoitus',
+          en: 'Independent survey',
+          de: 'Unabhängige Übersicht',
+          ja: '独立した調査',
+          ko: '독립적인 조사',
+          fr: 'Recensement indépendant',
+          it: 'Ricognizione indipendente',
+          nl: 'Onafhankelijke inventarisatie',
+          sv: 'Oberoende kartläggning',
         })}
         title={pick(lang, {
-          fi: 'Lapin kuuluisimmat hääpaikat',
-          en: 'Lapland’s most famous wedding venues',
-          de: 'Die bekanntesten Hochzeitslocations Lapplands',
-          ja: 'ラップランドで最も有名な結婚式会場',
-          ko: '라플란드에서 가장 유명한 결혼식 장소',
-          fr: 'Les lieux de mariage les plus prisés de Laponie',
-          it: 'Le sedi di matrimonio più celebri della Lapponia',
-          nl: 'De bekendste bruiloftslocaties van Lapland',
-          sv: 'Lapplands mest kända bröllopsplatser',
+          fi: 'Lapin suosituimmat hääpaikat',
+          en: 'The most popular wedding venues in Lapland',
+          de: 'Die beliebtesten Hochzeitsorte Lapplands',
+          ja: 'ラップランドで人気の高い結婚式会場',
+          ko: '라플란드에서 인기 있는 결혼식 장소',
+          fr: 'Les lieux de mariage les plus populaires de Laponie',
+          it: 'Le location per matrimoni più popolari della Lapponia',
+          nl: 'De populairste trouwlocaties van Lapland',
+          sv: 'Lapplands populäraste bröllopsplatser',
         })}
         className="bg-night-light/30"
       >
+        {/* Says the quiet part out loud, before the grid rather than in a
+            footnote: this is a list, not a catalogue, and a couple who already
+            has a venue in mind will not be steered somewhere else. */}
+        <p className="text-center text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10">
+          {pick(lang, {
+            fi: 'Nämä ovat Lapin tunnetuimmat paikat, joissa häitä vietetään. Emme edusta niitä emmekä järjestä häitä. Jos jokin paikka on jo mielessänne, kirjoittakaa se lomakkeeseen, niin toive kulkee sellaisenaan eteenpäin.',
+            en: 'These are the best-known places in Lapland where weddings are held. We do not represent them and we do not organise weddings. If you already have a venue in mind, write it in the form and your wish is passed on exactly as you gave it.',
+            de: 'Das sind die bekanntesten Orte Lapplands, an denen Hochzeiten gefeiert werden. Wir vertreten sie nicht und richten keine Hochzeiten aus. Wenn Sie bereits einen Ort im Sinn haben, tragen Sie ihn ins Formular ein, Ihr Wunsch wird unverändert weitergegeben.',
+            ja: 'ラップランドで結婚式が行われている、よく知られた場所を集めました。当サイトはこれらの会場の代理店ではなく、結婚式の運営も行いません。すでに希望の会場がある場合はフォームにご記入ください。ご希望はそのままの形でお伝えします。',
+            ko: '라플란드에서 결혼식이 열리는 잘 알려진 장소들입니다. 저희는 이곳들을 대리하지 않으며 결혼식을 직접 주최하지도 않습니다. 이미 마음에 둔 장소가 있다면 양식에 적어 주세요. 그 희망은 그대로 전달됩니다.',
+            fr: 'Voici les lieux les plus connus de Laponie où l’on célèbre des mariages. Nous ne les représentons pas et nous n’organisons pas de mariages. Si un lieu vous tient déjà à cœur, indiquez-le dans le formulaire : votre souhait sera transmis tel quel.',
+            it: 'Questi sono i luoghi più noti della Lapponia in cui si celebrano matrimoni. Non li rappresentiamo e non organizziamo matrimoni. Se avete già una location in mente, scrivetela nel modulo: il vostro desiderio viene trasmesso così com’è.',
+            nl: 'Dit zijn de bekendste plekken in Lapland waar bruiloften worden gevierd. Wij vertegenwoordigen ze niet en organiseren geen bruiloften. Heeft u al een locatie op het oog, zet die dan in het formulier: uw wens gaat ongewijzigd door.',
+            sv: 'Det här är de mest kända platserna i Lappland där bröllop hålls. Vi företräder dem inte och vi arrangerar inga bröllop. Har ni redan en plats i tankarna, skriv in den i formuläret så förs önskemålet vidare precis som ni angav det.',
+          })}
+        </p>
+
         {/* Myytävä Esittelykumppani-paikka (KKV: merkitty mainokseksi).
             Tyhjänä = kanoninen vaalea house-ad. Ei-mainoslokaaleilla ei
             renderöidy mitään, ja venue-kortisto alla säilyy ennallaan. */}
@@ -571,24 +596,12 @@ export default function Home() {
                   )}
                   <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{v.region[dataLang]}</p>
                   <h3 className="font-heading text-lg text-white mb-2 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
-                  <p className="text-sm text-gray-400 line-clamp-3">{v.description[dataLang]}</p>
-                  <div className="mt-3 text-xs text-gray-500 flex items-center justify-between">
-                    <span>
-                      {v.capacity.min}–{v.capacity.max}{' '}
-                      {pick(lang, {
-                        fi: 'vierasta',
-                        en: 'guests',
-                        de: 'Gäste',
-                        ja: '名',
-                        ko: '명',
-                        fr: 'invités',
-                        it: 'ospiti',
-                        nl: 'gasten',
-                        sv: 'gäster',
-                      })}
-                    </span>
-                    <span className="text-gold">{v.priceTier}</span>
-                  </div>
+                  {/* Capacity and price-tier chips removed 2026-07-28. Side by
+                      side on a card they read as a bookable product with terms
+                      we can quote, and we have spoken to none of these venues.
+                      Both figures still live on the venue page, where there is
+                      room to say where they came from. */}
+                  <p className="text-sm text-gray-400 line-clamp-3 mb-1">{v.description[dataLang]}</p>
                 </div>
               </L>
               <div className="px-5 pt-3 pb-5 mt-auto">

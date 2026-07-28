@@ -32,7 +32,7 @@ const t_en = {
     heroSubtitleSummer: 'Lakeside vows · Fell-top ceremonies · Glass roofs under the never-dark sky · Long luminous evenings. In Finnish and English. Get matched with Lapland’s most experienced planners.',
     heroReassure: 'Free & no commitment · reply within 1–7 days',
     whyTitle: 'Why Lapland for your wedding',
-    whyP: 'In Lapland you can elope for as little as €1 600 or host a 100-guest luxury celebration for €50 000. Finland makes foreign weddings simple, paperwork takes 3–5 weeks via the DVV. Our network gets you 3 personalised quotes from local planners with one form.',
+    whyP: 'Weddings in Lapland happen in glass igloos, snow chapels and on fell tops, and most of the time the ceremony is symbolic. This site gathers the places, the seasons and what things actually cost. We do not organise weddings and we represent no venue: you tell us what you want, we pass it on to wedding planners in Lapland.',
     audienceTitle: 'In Finnish for Finns, in English for international couples',
     audienceFi: 'A Finnish couple? Get Finnish-speaking planners and clear price ranges in your own language.',
     audienceEn: 'International couple? Get Finnish wedding planners experienced with foreign legal paperwork, DVV done for you.',
@@ -67,15 +67,15 @@ const t_en = {
   },
   locations: {
     indexTitle: 'Lapland regions for weddings',
-    indexIntro: 'Seven well-known regions, each with its own character. Click a region to see its venues, seasons and services.',
+    indexIntro: 'Eight well-known regions, each with its own character. Click a region to see its venues, seasons and services.',
   },
   types: {
     indexTitle: 'Lapland wedding types',
     indexIntro: 'Glass igloo nights, snow chapels, Northern Lights, Midnight Sun, elopements and vow renewals, six main directions to choose from.',
   },
   venues: {
-    indexTitle: 'Verified Lapland wedding venues',
-    indexIntro: 'Over 20 wedding venues, all verified: spaces, capacities, and contacts. Filter by region, wedding type, or price tier.',
+    indexTitle: 'The most popular wedding venues in Lapland',
+    indexIntro: '21 places where weddings are held in Lapland. The details are compiled from each venue’s own sources. Filter by region, wedding type or price tier.',
     filterByLocation: 'Filter by region',
     filterByType: 'Filter by wedding type',
     filterByPrice: 'Filter by price tier',

@@ -5,7 +5,49 @@ import { weddingTypes } from '../data/weddingTypes';
 import { locations } from '../data/locations';
 import { pickLocalized, type Localized } from '../data/localized';
 
-const L11: Record<'countryPlaceholder' | 'datePlaceholder', Localized<string>> = {
+const L11: Record<'countryPlaceholder' | 'datePlaceholder' | 'venueWish' | 'venueWishPlaceholder' | 'venueWishHelp', Localized<string>> = {
+  venueWish: {
+    en: 'A venue you already have in mind',
+    fi: 'Onko jokin paikka jo mielessänne',
+    de: 'Ein Ort, den Sie bereits im Sinn haben',
+    ja: 'すでに希望されている会場',
+    es: 'Un lugar que ya tengáis en mente',
+    'pt-BR': 'Um local que vocês já tenham em mente',
+    'zh-CN': '您心中已有的场地',
+    ko: '이미 마음에 둔 장소',
+    fr: 'Un lieu que vous avez déjà en tête',
+    it: 'Una location che avete già in mente',
+    nl: 'Een locatie die u al op het oog heeft',
+    sv: 'En plats ni redan har i tankarna',
+  },
+  venueWishPlaceholder: {
+    en: 'e.g. Arctic SnowHotel, or a place not listed here',
+    fi: 'esim. Arctic SnowHotel, tai paikka jota ei ole listassa',
+    de: 'z. B. Arctic SnowHotel oder ein Ort, der hier nicht steht',
+    ja: '例：Arctic SnowHotel、または掲載のない会場',
+    es: 'p. ej. Arctic SnowHotel, o un lugar que no aparece aquí',
+    'pt-BR': 'ex.: Arctic SnowHotel, ou um local que não está na lista',
+    'zh-CN': '例如：Arctic SnowHotel，或未列在此处的场地',
+    ko: '예: Arctic SnowHotel, 또는 목록에 없는 장소',
+    fr: 'p. ex. Arctic SnowHotel, ou un lieu absent de cette liste',
+    it: 'es. Arctic SnowHotel, o un luogo non presente in elenco',
+    nl: 'bijv. Arctic SnowHotel, of een plek die hier niet staat',
+    sv: 't.ex. Arctic SnowHotel, eller en plats som inte finns här',
+  },
+  venueWishHelp: {
+    en: 'If you name a place, it goes to the planners exactly as you wrote it. Nobody will talk you into somewhere else.',
+    fi: 'Jos nimeätte paikan, se menee suunnittelijoille juuri niin kuin sen kirjoititte. Kukaan ei ala tyrkyttää toista paikkaa.',
+    de: 'Wenn Sie einen Ort nennen, geht er genau so an die Hochzeitsplaner, wie Sie ihn geschrieben haben. Niemand wird Ihnen etwas anderes einreden.',
+    ja: '会場名をご記入いただくと、書かれたとおりの形でプランナーに伝わります。別の会場を勧められることはありません。',
+    ko: '장소를 적어 주시면 쓰신 그대로 플래너에게 전달됩니다. 다른 곳을 권유받는 일은 없습니다.',
+    es: 'Si indicáis un lugar, llega a los organizadores tal y como lo escribisteis. Nadie os intentará convencer de otro sitio.',
+    'pt-BR': 'Se indicarem um local, ele chega aos organizadores exatamente como foi escrito. Ninguém vai tentar convencê-los de outro lugar.',
+    'zh-CN': '若您写下场地名称，它会原样转达给策划师。不会有人劝您改选别处。',
+    fr: 'Si vous nommez un lieu, il est transmis aux wedding planners tel que vous l’avez écrit. Personne ne tentera de vous en proposer un autre.',
+    it: 'Se indicate una location, arriva ai wedding planner esattamente come l’avete scritta. Nessuno proverà a dirottarvi altrove.',
+    nl: 'Noemt u een locatie, dan gaat die precies zo naar de weddingplanners als u hem opschreef. Niemand praat u een andere plek aan.',
+    sv: 'Om ni namnger en plats går den vidare till bröllopsplanerarna precis som ni skrev den. Ingen försöker övertala er till något annat.',
+  },
   countryPlaceholder: {
     en: 'e.g. Finland',
     fi: 'esim. Suomi',
@@ -297,7 +339,24 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         </div>
       </div>
 
-      {presetVenue && <input type="hidden" name="venue" value={presetVenue} />}
+      {/* Venue wish. Used to be a hidden input that only existed on a venue
+          page, so a couple arriving from the venue index or the home page had
+          nowhere to name the place they had already fallen for, and the lead
+          reached the planners without it. Vesa 2026-07-28: "jos asiakas haluaa
+          johonkin tiettyyn paikkaan niin sekin on väärin jos ehdotamme sitten
+          toista paikkaa." Now always visible, prefilled when we know it, and
+          carried verbatim into the lead and the qualification email. */}
+      <div>
+        <label htmlFor="venue" className={t1}>{pickLocalized(L11.venueWish, lang)}</label>
+        <input
+          id="venue"
+          name="venue"
+          defaultValue={presetVenue || ''}
+          placeholder={pickLocalized(L11.venueWishPlaceholder, lang)}
+          className={t2}
+        />
+        <p className="text-xs text-gray-500 mt-1">{pickLocalized(L11.venueWishHelp, lang)}</p>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>

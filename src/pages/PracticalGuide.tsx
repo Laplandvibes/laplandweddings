@@ -200,6 +200,95 @@ const STEPS: Step[] = [
 ];
 
 const UI: Record<string, Localized<string>> = {
+  /* Two-routes block, added 2026-07-28 (Vesa). This page used to open straight
+     into the DVV sequence, which told every reader that marrying in Lapland
+     means weeks of Finnish paperwork. For most destination couples it does not:
+     they hold a symbolic ceremony here and the marriage is legally registered
+     at home. The legal route is the premium add-on, not the default. */
+  routesTitle: {
+    fi: 'Kaksi tapaa mennä naimisiin Lapissa',
+    en: 'Two ways to get married in Lapland',
+    de: 'Zwei Wege, in Lappland zu heiraten',
+    ja: 'ラップランドで結婚する二つの方法',
+    es: 'Dos formas de casarse en Laponia',
+    'pt-BR': 'Duas formas de se casar na Lapônia',
+    'zh-CN': '在拉普兰结婚的两种方式',
+    ko: '라플란드에서 결혼하는 두 가지 방법',
+    fr: 'Deux façons de se marier en Laponie',
+    it: 'Due modi per sposarsi in Lapponia',
+    nl: 'Twee manieren om in Lapland te trouwen',
+    sv: 'Två sätt att gifta sig i Lappland',
+  },
+  routesIntro: {
+    fi: 'Valinta kannattaa tehdä ensin, koska se ratkaisee tarvitsetteko viranomaispapereita lainkaan.',
+    en: 'Make this choice first, because it decides whether you need any official paperwork at all.',
+    de: 'Treffen Sie diese Entscheidung zuerst, denn sie bestimmt, ob Sie überhaupt Behördenpapiere brauchen.',
+    ja: 'まずこの選択をしてください。役所の手続きが必要かどうかが、ここで決まります。',
+    es: 'Tomad primero esta decisión, porque determina si necesitáis algún trámite oficial.',
+    'pt-BR': 'Façam essa escolha primeiro, porque ela define se vocês precisam de alguma documentação oficial.',
+    'zh-CN': '请先做这个选择，它决定了你们是否需要办理任何官方手续。',
+    ko: '이 선택을 먼저 하세요. 관공서 서류가 필요한지 아닌지가 여기서 결정됩니다.',
+    fr: 'Faites ce choix en premier : il détermine si vous avez besoin de la moindre formalité officielle.',
+    it: 'Fate prima questa scelta, perché decide se vi serve o meno qualche documento ufficiale.',
+    nl: 'Maak deze keuze eerst, want die bepaalt of u überhaupt officieel papierwerk nodig heeft.',
+    sv: 'Gör det här valet först, för det avgör om ni behöver några myndighetspapper alls.',
+  },
+  symbolicTitle: {
+    fi: 'Symbolinen seremonia',
+    en: 'A symbolic ceremony',
+    de: 'Eine freie Trauung',
+    ja: 'シンボリック挙式',
+    es: 'Ceremonia simbólica',
+    'pt-BR': 'Cerimônia simbólica',
+    'zh-CN': '象征性仪式',
+    ko: '상징 예식',
+    fr: 'Une cérémonie symbolique',
+    it: 'Una cerimonia simbolica',
+    nl: 'Een symbolische ceremonie',
+    sv: 'En symbolisk ceremoni',
+  },
+  symbolicBody: {
+    fi: 'Näin tekee suurin osa Lappiin tulevista pareista. Seremonia pidetään jäällä, lumikappelissa tai tunturin laella, ja juridinen avioliitto solmitaan kotimaassa joko ennen matkaa tai sen jälkeen. Lupia, esteiden tutkintaa tai DVV:tä ei tarvita, ja päivämäärän voi lyödä lukkoon milloin vain. Alla oleva vaiheistus ei koske teitä.',
+    en: 'This is what most couples coming to Lapland do. The ceremony is held on the ice, in a snow chapel or on a fell top, and the marriage is registered legally at home either before or after the trip. No permits, no examination of impediments, no DVV, and you can fix the date whenever you like. The steps below do not apply to you.',
+    de: 'So machen es die meisten Paare, die nach Lappland kommen. Die Zeremonie findet auf dem Eis, in einer Schneekapelle oder auf einem Fjellgipfel statt, die Ehe wird vor oder nach der Reise in der Heimat rechtsgültig geschlossen. Keine Genehmigungen, keine Ehefähigkeitsprüfung, kein DVV, und das Datum können Sie frei festlegen. Die Schritte unten betreffen Sie nicht.',
+    ja: 'ラップランドを訪れるカップルの多くがこの形を選びます。式は氷の上、スノーチャペル、あるいは山の頂で行い、法的な婚姻は渡航の前後に母国で成立させます。許可も婚姻障害の調査もDVVも不要で、日程は自由に決められます。以下の手順は該当しません。',
+    es: 'Es lo que hace la mayoría de las parejas que vienen a Laponia. La ceremonia se celebra sobre el hielo, en una capilla de nieve o en lo alto de un fell, y el matrimonio se registra legalmente en casa antes o después del viaje. Sin permisos, sin examen de impedimentos, sin DVV, y podéis fijar la fecha cuando queráis. Los pasos de abajo no os afectan.',
+    'pt-BR': 'É o que faz a maioria dos casais que vem à Lapônia. A cerimônia acontece no gelo, em uma capela de neve ou no alto de um fell, e o casamento é registrado legalmente em casa antes ou depois da viagem. Sem licenças, sem exame de impedimentos, sem DVV, e vocês marcam a data quando quiserem. Os passos abaixo não se aplicam a vocês.',
+    'zh-CN': '来拉普兰的大多数情侣都这样做。仪式在冰面上、雪教堂或山顶举行，法律意义上的结婚则在出行前后于本国登记。无需许可、无需婚姻障碍审查、无需 DVV，日期也可以随意确定。下面的步骤与你们无关。',
+    ko: '라플란드를 찾는 대부분의 커플이 택하는 방식입니다. 예식은 얼음 위나 스노우 채플, 또는 펠 정상에서 올리고, 법적 혼인은 여행 전후에 본국에서 신고합니다. 허가도, 혼인 장애 조사도, DVV도 필요 없으며 날짜도 원하는 대로 정할 수 있습니다. 아래 절차는 해당되지 않습니다.',
+    fr: 'C’est ce que font la plupart des couples qui viennent en Laponie. La cérémonie a lieu sur la glace, dans une chapelle de neige ou au sommet d’un fell, et le mariage est enregistré légalement dans votre pays avant ou après le voyage. Aucune autorisation, aucun examen des empêchements, aucun DVV, et vous fixez la date quand vous voulez. Les étapes ci-dessous ne vous concernent pas.',
+    it: 'È quello che fa la maggior parte delle coppie che viene in Lapponia. La cerimonia si tiene sul ghiaccio, in una cappella di neve o in cima a un fjell, e il matrimonio viene registrato legalmente a casa prima o dopo il viaggio. Nessun permesso, nessun esame degli impedimenti, nessun DVV, e la data la fissate quando volete. I passaggi qui sotto non vi riguardano.',
+    nl: 'Dit doen de meeste paren die naar Lapland komen. De ceremonie is op het ijs, in een sneeuwkapel of op een fjelltop, en het huwelijk wordt voor of na de reis thuis juridisch vastgelegd. Geen vergunningen, geen onderzoek naar huwelijksbeletselen, geen DVV, en de datum kiest u vrij. De stappen hieronder gelden niet voor u.',
+    sv: 'Så gör de flesta par som kommer till Lappland. Ceremonin hålls på isen, i ett snökapell eller på en fjälltopp, och äktenskapet registreras juridiskt hemma före eller efter resan. Inga tillstånd, ingen hindersprövning, ingen DVV, och datumet bestämmer ni fritt. Stegen nedan gäller inte er.',
+  },
+  legalTitle: {
+    fi: 'Juridinen avioliitto Suomessa',
+    en: 'A legally Finnish marriage',
+    de: 'Eine rechtsgültige Ehe in Finnland',
+    ja: 'フィンランドでの法的な婚姻',
+    es: 'Matrimonio legal en Finlandia',
+    'pt-BR': 'Casamento legal na Finlândia',
+    'zh-CN': '在芬兰缔结具法律效力的婚姻',
+    ko: '핀란드에서의 법적 혼인',
+    fr: 'Un mariage légal en Finlande',
+    it: 'Un matrimonio legale in Finlandia',
+    nl: 'Een wettelijk Fins huwelijk',
+    sv: 'Ett juridiskt giltigt äktenskap i Finland',
+  },
+  legalBody: {
+    fi: 'Tämä on mahdollista myös ulkomaalaiselle parille, mutta se on lisä eikä perusratkaisu. Vihkiä saavat vain DVV, käräjäoikeus ja rekisteröidyt uskonnolliset yhdyskunnat, emme me. Ennen vihkimistä tarvitaan avioliiton esteiden tutkinta, ja siihen kuluu viikkoja: kotimaan esteettömyystodistus, usein apostille ja auktorisoitu käännös. Aikatauluttakaa se ennen kuin lyötte päivämäärän lukkoon. Alla oleva vaiheistus koskee tätä reittiä.',
+    en: 'This is possible for foreign couples too, but it is an addition rather than the default. Only the DVV, a district court and registered religious communities may perform the marriage; we cannot. Before the ceremony an examination of impediments to marriage is required, and it takes weeks: a certificate of no impediment from your own country, often an apostille and an authorised translation. Schedule that before you fix the date. The steps below describe this route.',
+    de: 'Auch für ausländische Paare ist das möglich, aber es ist eine Ergänzung und nicht der Normalfall. Trauen dürfen nur das DVV, ein Amtsgericht und eingetragene Religionsgemeinschaften, wir nicht. Vor der Trauung ist eine Ehefähigkeitsprüfung nötig, und die dauert Wochen: ein Ehefähigkeitszeugnis aus Ihrem Heimatland, oft mit Apostille und beglaubigter Übersetzung. Planen Sie das ein, bevor Sie das Datum festlegen. Die Schritte unten beschreiben diesen Weg.',
+    ja: '外国人カップルでも可能ですが、これは基本形ではなく追加の選択肢です。婚姻を執り行えるのはDVV、地方裁判所、登録された宗教団体のみで、当サイトにその権限はありません。挙式の前に婚姻障害の調査が必要で、これには数週間かかります。母国の婚姻要件具備証明書、多くの場合アポスティーユと公認翻訳も必要です。日程を確定する前に、この期間を見込んでください。以下の手順はこの経路についてのものです。',
+    es: 'También es posible para parejas extranjeras, pero es un añadido, no la opción por defecto. Solo el DVV, un juzgado y las comunidades religiosas registradas pueden oficiar el matrimonio; nosotros no. Antes de la ceremonia se exige el examen de impedimentos, y lleva semanas: certificado de capacidad matrimonial de vuestro país, a menudo apostilla y traducción jurada. Planificadlo antes de fijar la fecha. Los pasos de abajo describen esta vía.',
+    'pt-BR': 'Também é possível para casais estrangeiros, mas é um acréscimo, não o padrão. Somente o DVV, um tribunal distrital e comunidades religiosas registradas podem celebrar o casamento; nós não. Antes da cerimônia é exigido o exame de impedimentos, e ele leva semanas: certidão de nada consta do seu país, muitas vezes apostila e tradução juramentada. Planejem isso antes de fixar a data. Os passos abaixo descrevem este caminho.',
+    'zh-CN': '外国情侣同样可以选择，但这是附加选项而非默认方式。只有 DVV、地方法院和登记在册的宗教团体可以主持婚姻登记，我们不能。仪式前须进行婚姻障碍审查，需要数周：本国出具的无婚姻障碍证明，通常还需海牙认证和有资质的翻译。请在确定日期之前预留这段时间。下面的步骤描述的正是这条路径。',
+    ko: '외국인 커플에게도 가능하지만, 기본이 아니라 추가 선택지입니다. 혼인을 집전할 수 있는 곳은 DVV와 지방법원, 등록된 종교 단체뿐이며 저희에게는 그 권한이 없습니다. 예식 전에 혼인 장애 조사가 필요하고 여기에 몇 주가 걸립니다. 본국의 혼인요건증명서, 많은 경우 아포스티유와 공인 번역도 필요합니다. 날짜를 확정하기 전에 이 기간을 계산해 두세요. 아래 절차는 이 경로에 관한 것입니다.',
+    fr: 'C’est possible aussi pour les couples étrangers, mais c’est un complément et non la solution par défaut. Seuls le DVV, un tribunal de district et les communautés religieuses enregistrées peuvent célébrer le mariage ; nous, non. Avant la cérémonie, un examen des empêchements est exigé, et il prend des semaines : certificat de capacité matrimoniale de votre pays, souvent apostille et traduction assermentée. Prévoyez ce délai avant de fixer la date. Les étapes ci-dessous décrivent cette voie.',
+    it: 'È possibile anche per le coppie straniere, ma è un’aggiunta e non la soluzione di base. Possono celebrare il matrimonio solo il DVV, un tribunale distrettuale e le comunità religiose registrate; noi no. Prima della cerimonia serve l’esame degli impedimenti, e richiede settimane: nulla osta dal vostro Paese, spesso apostille e traduzione asseverata. Mettetelo in calendario prima di fissare la data. I passaggi qui sotto descrivono questa via.',
+    nl: 'Ook voor buitenlandse paren kan dit, maar het is een aanvulling en niet de standaard. Alleen het DVV, een rechtbank en geregistreerde religieuze gemeenschappen mogen het huwelijk voltrekken; wij niet. Voor de ceremonie is een onderzoek naar huwelijksbeletselen vereist, en dat duurt weken: een verklaring van geen bezwaar uit uw eigen land, vaak met apostille en beëdigde vertaling. Plan dat in voordat u de datum vastlegt. De stappen hieronder beschrijven deze route.',
+    sv: 'Det går även för utländska par, men det är ett tillägg och inte grundlösningen. Endast DVV, en tingsrätt och registrerade religiösa samfund får viga, inte vi. Före vigseln krävs en hindersprövning, och den tar veckor: intyg om äktenskapshinder från ert eget land, ofta apostille och auktoriserad översättning. Planera in det innan ni spikar datumet. Stegen nedan beskriver den här vägen.',
+  },
   seoTitle: {
     fi: 'Häät Lapissa: DVV-paperit ja vihkijä | LaplandWeddings',
     en: 'Getting Married in Lapland: DVV paperwork, officiant, practical guide | LaplandWeddings',
@@ -887,6 +976,26 @@ export default function PracticalGuide() {
         image="/images/heroes/practical-guide-hero.webp"
         imageAlt={pl(UI.heroImageAlt)}
       />
+
+      {/* Symbolic vs legal, before anything else. Without this the page reads as
+          "marrying in Lapland means weeks of Finnish paperwork", which is only
+          true for the minority who want the marriage to be legally Finnish. */}
+      <Section title={pl(UI.routesTitle)} subtitle={pl(UI.routesIntro)}>
+        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+          <div className="bg-night-light/60 border border-rose/30 rounded-2xl p-6 sm:p-7">
+            <p className="text-xs uppercase tracking-[0.25em] text-aurora-pink font-semibold mb-2">
+              {pl(UI.symbolicTitle)}
+            </p>
+            <p className="text-sm text-gray-300 leading-relaxed">{pl(UI.symbolicBody)}</p>
+          </div>
+          <div className="bg-night-light/60 border border-white/10 rounded-2xl p-6 sm:p-7">
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-400 font-semibold mb-2">
+              {pl(UI.legalTitle)}
+            </p>
+            <p className="text-sm text-gray-300 leading-relaxed">{pl(UI.legalBody)}</p>
+          </div>
+        </div>
+      </Section>
 
       <Section className="bg-gradient-to-br from-aurora-purple/10 via-rose/10 to-aurora-pink/10">
         <div className="max-w-3xl mx-auto bg-night-light/60 border border-rose/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-5">

@@ -43,12 +43,17 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
         ) : (
           <img src={image} alt={imageAlt} className="w-full h-full object-cover" style={objectPosition ? { objectPosition } : undefined} loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" />
         )}
-        {/* Cinematic vignette — strong contrast for image dynamics + readable hero text */}
+        {/* Base gradient. Kept light across the picture itself and only heavy at
+            the very bottom, where the CTA row and the reassurance line sit. The
+            old 0.50→0.85 wash stacked with the side vignette below and buried
+            the photograph under ~70–90% black (Vesa 2026-07-28: "tämä alku on
+            aivan paska"). Readability now comes from the focused scrim behind
+            the text block, not from darkening the whole frame. */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom, rgba(15,12,10,0.50) 0%, rgba(15,12,10,0.52) 45%, rgba(15,12,10,0.62) 75%, rgba(15,12,10,0.85) 100%)',
+              'linear-gradient(to bottom, rgba(15,12,10,0.20) 0%, rgba(15,12,10,0.24) 45%, rgba(15,12,10,0.50) 78%, rgba(15,12,10,0.80) 100%)',
           }}
         />
         {/* Side vignette for cinematic feel */}
@@ -56,7 +61,17 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse at center, transparent 35%, rgba(15,12,10,0.45) 100%)',
+              'radial-gradient(ellipse at center, transparent 45%, rgba(15,12,10,0.28) 100%)',
+          }}
+        />
+        {/* Scrim behind the headline column only. This is what carries WCAG AA
+            for the white h1 and the cream subtitle, so the rest of the frame
+            does not have to be darkened to earn it. */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse 72% 58% at 50% 48%, rgba(15,12,10,0.46) 0%, rgba(15,12,10,0.28) 55%, transparent 78%)',
           }}
         />
       </div>

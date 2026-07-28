@@ -32,7 +32,7 @@ const t_it = {
     heroSubtitleSummer: 'Promesse in riva al lago · Cerimonie in cima ai fjäll · Tetti di vetro sotto un cielo che non si fa mai buio · Lunghe sere luminose. Ti mettiamo in contatto con i planner più esperti della Lapponia.',
     heroReassure: 'Gratis e senza impegno · risposta in 1–7 giorni',
     whyTitle: 'Perché sposarsi in Lapponia',
-    whyP: 'In Lapponia puoi fuggire e sposarti a partire da 1 600 € o ospitare un matrimonio di lusso da 100 invitati per 50 000 €. La Finlandia rende semplici i matrimoni di stranieri, la pratica richiede 3–5 settimane tramite il DVV. La nostra rete ti fornisce 3 preventivi personalizzati con un solo modulo.',
+    whyP: 'In Lapponia ci si sposa negli igloo di vetro, nelle cappelle di neve e in cima ai fjell, e nella maggior parte dei casi la cerimonia è simbolica. Questo sito raccoglie i luoghi, le stagioni e quanto costano davvero le cose. Non organizziamo matrimoni e non rappresentiamo alcuna location: voi ci dite cosa desiderate e noi lo trasmettiamo ai wedding planner in Lapponia.',
     audienceTitle: 'In finlandese per i finlandesi, in inglese per le coppie internazionali',
     audienceFi: 'Coppia finlandese? Ricevi planner che parlano finlandese e fasce di prezzo chiare nella tua lingua.',
     audienceEn: 'Coppia internazionale? Ricevi wedding planner finlandesi esperti nelle pratiche legali per stranieri, DVV gestito per te.',
@@ -67,15 +67,15 @@ const t_it = {
   },
   locations: {
     indexTitle: 'Regioni della Lapponia per matrimoni',
-    indexIntro: 'Sette regioni ben note, ognuna con il proprio carattere. Clicca su una regione per vedere location, stagioni e servizi.',
+    indexIntro: 'Otto regioni ben note, ognuna con il proprio carattere. Clicca su una regione per vedere location, stagioni e servizi.',
   },
   types: {
     indexTitle: 'Tipi di matrimonio in Lapponia',
     indexIntro: 'Notti in igloo di vetro, cappelle di neve, aurora boreale, sole di mezzanotte, matrimoni intimi e rinnovo dei voti, sei direzioni principali.',
   },
   venues: {
-    indexTitle: 'Location verificate per matrimoni in Lapponia',
-    indexIntro: 'Oltre 20 location, tutte verificate: spazi, capienze e contatti. Filtra per regione, tipo di matrimonio o fascia di prezzo.',
+    indexTitle: 'Le location per matrimoni più popolari della Lapponia',
+    indexIntro: '21 luoghi in cui in Lapponia si celebrano matrimoni. Le informazioni provengono dalle fonti di ciascuna location. Filtra per regione, tipo di matrimonio o fascia di prezzo.',
     filterByLocation: 'Filtra per regione',
     filterByType: 'Filtra per tipo',
     filterByPrice: 'Filtra per prezzo',

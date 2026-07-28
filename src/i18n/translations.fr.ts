@@ -32,7 +32,7 @@ const t_fr = {
     heroSubtitleSummer: 'Vœux au bord du lac · Cérémonies au sommet des fjälls · Toits de verre sous un ciel qui ne s’assombrit jamais · Longues soirées lumineuses. Mis en relation avec les organisateurs les plus expérimentés de Laponie.',
     heroReassure: 'Gratuit et sans engagement · réponse sous 1–7 jours',
     whyTitle: 'Pourquoi se marier en Laponie',
-    whyP: 'En Laponie, vous pouvez vous marier en petit comité à partir de 1 600 € ou organiser une célébration de luxe pour 100 invités à 50 000 €. La Finlande facilite les mariages d’étrangers, les démarches prennent 3 à 5 semaines via le DVV. Notre réseau vous obtient 3 devis personnalisés en un seul formulaire.',
+    whyP: 'En Laponie, on se marie dans des igloos de verre, des chapelles de neige et au sommet des fells, et la cérémonie est le plus souvent symbolique. Ce site rassemble les lieux, les saisons et ce que les choses coûtent réellement. Nous n’organisons pas de mariages et ne représentons aucun lieu : vous nous dites ce que vous souhaitez, nous le transmettons à des wedding planners en Laponie.',
     audienceTitle: 'En finnois pour les Finlandais en anglais pour les couples internationaux',
     audienceFi: 'Couple finlandais ? Obtenez des organisateurs finlandais et des fourchettes de prix claires dans votre langue.',
     audienceEn: 'Couple international ? Obtenez des organisateurs de mariage finlandais expérimentés avec les démarches juridiques étrangères, DVV pris en charge.',
@@ -67,15 +67,15 @@ const t_fr = {
   },
   locations: {
     indexTitle: 'Régions de Laponie pour les mariages',
-    indexIntro: 'Sept régions bien connues, chacune avec son caractère. Cliquez sur une région pour voir ses lieux, saisons et services.',
+    indexIntro: 'Huit régions bien connues, chacune avec son caractère. Cliquez sur une région pour voir ses lieux, saisons et services.',
   },
   types: {
     indexTitle: 'Types de mariage en Laponie',
     indexIntro: 'Nuits en igloo de verre, chapelles de neige, aurores boréales, soleil de minuit, mariages intimes et renouvellements de vœux, six directions principales.',
   },
   venues: {
-    indexTitle: 'Lieux de mariage en Laponie vérifiés',
-    indexIntro: 'Plus de 20 lieux de mariage, tous vérifiés : espaces, capacités et contacts. Filtrez par région, type de mariage ou gamme de prix.',
+    indexTitle: 'Les lieux de mariage les plus populaires de Laponie',
+    indexIntro: '21 lieux où l’on célèbre des mariages en Laponie. Les informations proviennent des sources propres à chaque lieu. Filtrez par région, type de mariage ou gamme de prix.',
     filterByLocation: 'Filtrer par région',
     filterByType: 'Filtrer par type',
     filterByPrice: 'Filtrer par prix',

@@ -32,7 +32,7 @@ const t_fi = {
     heroSubtitleSummer: 'Vihkiminen järven rannalla, koristekaari tunturin juurella, valoisa ilta, joka ei pimene. Lapin kokeneimmat hääsuunnittelijat tekevät siitä totta.',
     heroReassure: 'Maksuton & sitoumukseton · vastaus 1–7 päivässä',
     whyTitle: 'Miksi Lappi häämatkakohteena',
-    whyP: 'Lapissa on vihille kahdestaan 1 600 €:sta alkaen ja 100 hengen luksusjuhlia 50 000 € hinnalla. Suomi sallii ulkomaalaisten avioliiton helposti, paperit kestävät 3–5 viikkoa DVV:n kautta. Verkostomme toimittaa sinulle 3 räätälöityä tarjousta paikallisilta suunnittelijoilta yhdellä lomakkeella.',
+    whyP: 'Lapissa vietetään häitä lasi-igluissa, lumikappeleissa ja tuntureiden laella, ja useimmiten seremonia on symbolinen. Tälle sivustolle on koottu paikat, ajankohdat ja todelliset kustannukset. Emme järjestä häitä emmekä edusta yhtäkään paikkaa: te kerrotte toiveenne, me välitämme sen Lapin hääsuunnittelijoille.',
     audienceTitle: 'Suomeksi suomalaisille pareille, englanniksi kansainvälisille',
     audienceFi: 'Suomalainen pari? Saat kotimaiset hääsuunnittelijat ja kovat hinta-arviot. Ei mainosenglantia.',
     audienceEn: 'International couple? Get Finnish wedding planners experienced with foreign legal paperwork, DVV done for you.',
@@ -67,15 +67,15 @@ const t_fi = {
   },
   locations: {
     indexTitle: 'Lapin paikkakunnat häille',
-    indexIntro: 'Seitsemän tunnettua aluetta, jokaisella oma erityispiirteensä. Klikkaa paikkakuntaa nähdäksesi paikalliset hääpaikat, sesongit ja palvelut.',
+    indexIntro: 'Kahdeksan tunnettua aluetta, jokaisella oma erityispiirteensä. Klikkaa paikkakuntaa nähdäksesi paikalliset hääpaikat, sesongit ja palvelut.',
   },
   types: {
     indexTitle: 'Häätyypit Lapissa',
     indexIntro: 'Lasi-iglu-yöt, lumikappelit, revontulet, keskiyön aurinko, elopementit ja lupausten uusiminen: kuusi pääsuuntaa, joista valita.',
   },
   venues: {
-    indexTitle: 'Vahvistetut hääpaikat Lapissa',
-    indexIntro: 'Yli 20 hääpaikkaa, kaikki tarkistettu: tilat, kapasiteetit ja yhteystiedot. Valitse sijainnin, häätyypin tai hintaluokan mukaan.',
+    indexTitle: 'Lapin suosituimmat hääpaikat',
+    indexIntro: '21 paikkaa, joissa Lapissa vietetään häitä. Tiedot on koottu kohteiden omista lähteistä. Suodata paikkakunnan, häätyypin tai hintatason mukaan.',
     filterByLocation: 'Suodata paikkakunnan mukaan',
     filterByType: 'Suodata häätyypin mukaan',
     filterByPrice: 'Suodata hintatason mukaan',
