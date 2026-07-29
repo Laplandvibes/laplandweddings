@@ -5,258 +5,6 @@ import LeadForm from '../components/LeadForm';
 import { useLang } from '../i18n/LangContext';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
-import { ui } from '../data/uiStrings';
-
-interface Story {
-  emoji: string;
-  label: Localized<string>;
-  type: string;
-  guests: string;
-  range: string;
-  story: Localized<string>;
-  spends: Localized<string[]>;
-  takeaway: Localized<string>;
-  image: string;
-}
-
-const stories: Story[] = [
-  {
-    emoji: '💍',
-    label: {
-      en: 'Elopement for two',
-      fi: 'Elopement kahdelle',
-      de: 'Elopement zu zweit',
-      ja: 'ふたりだけの挙式',
-      es: 'Fuga romántica para dos',
-      'pt-BR': 'Elopement para dois',
-      'zh-CN': '两人私奔婚礼',
-      ko: '단둘이 올리는 결혼식',
-      fr: 'Elopement à deux',
-      it: 'Elopement per due',
-      nl: 'Elopement voor twee', sv: 'Smygbröllop för två',
-    },
-    type: 'Elopement',
-    guests: '2',
-    range: '€2 100',
-    story: {
-      en: 'Fly into Rovaniemi on a Friday evening, marry on Saturday in an ice chapel, and be home Sunday night. A planner handles the DVV paperwork, officiant, a two-hour photographer and the hotel nights. A weekend like this, ceremony, two nights in an igloo, transfers, lands under €2 100.',
-      fi: 'Lennätte Rovaniemelle perjantai-iltana, vihille lauantaina jääkappelissa, kotona sunnuntai-iltana. Suunnittelija hoitaa DVV-paperit, vihkijän, kahden tunnin valokuvauksen ja yöpymiset. Tällainen viikonloppu, vihkimys, kaksi yötä iglussa, kuljetukset, jää alle 2 100 euron.',
-      de: 'Sie fliegen am Freitagabend nach Rovaniemi, heiraten am Samstag in einer Eiskapelle und sind am Sonntagabend wieder zu Hause. Ein Planer kümmert sich um die DVV-Unterlagen, den Trauredner, zwei Stunden Fotograf und die Übernachtungen. So ein Wochenende, Zeremonie, zwei Nächte im Iglu, Transfers, bleibt unter 2 100 €.',
-      ja: '金曜の夜にロヴァニエミに到着し、土曜に氷のチャペルで挙式、日曜の夜には帰宅。プランナーがDVV書類、司式者、2時間の写真撮影、宿泊を手配します。こうした週末の費用は、挙式、イグルー2泊、送迎を含めて、2,100ユーロ未満に収まります。',
-      es: 'Voláis a Rovaniemi un viernes por la noche, os casáis el sábado en una capilla de hielo y estáis de vuelta en casa el domingo por la noche. Un organizador se encarga de los trámites del DVV, el oficiante, dos horas de fotógrafo y las noches de hotel. Un fin de semana así, ceremonia, dos noches en iglú, traslados, queda por debajo de 2 100 €.',
-      'pt-BR': 'Vocês voam para Rovaniemi numa sexta à noite, casam-se no sábado em uma capela de gelo e voltam para casa no domingo à noite. Um organizador cuida da documentação do DVV, do celebrante, de duas horas de fotógrafo e das noites de hotel. Um fim de semana assim, cerimônia, duas noites em iglu, transfers, fica abaixo de € 2.100.',
-      'zh-CN': '周五晚上飞抵罗瓦涅米，周六在冰教堂完婚，周日晚上就能回到家。策划师负责 DVV 文件、主婚人、两小时摄影和住宿。这样一个周末，仪式、两晚冰屋住宿、接送，花费不到 2,100 欧元。',
-      ko: '금요일 저녁 로바니에미에 도착해 토요일 아이스 채플에서 결혼식을 올리고 일요일 밤이면 집에 돌아갑니다. 플래너가 DVV 서류, 주례, 2시간의 사진 촬영, 숙박을 처리합니다. 이런 주말은, 예식, 이글루 2박, 이동 포함, 2,100유로 미만입니다.',
-      fr: 'Vous atterrissez à Rovaniemi un vendredi soir, vous vous mariez le samedi dans une chapelle de glace et vous êtes de retour chez vous le dimanche soir. Un planner gère les formalités DVV, l’officiant, deux heures de photographe et les nuits d’hôtel. Un week-end comme celui-ci, cérémonie, deux nuits en igloo, transferts, reste sous les 2 100 €.',
-      it: 'Atterrate a Rovaniemi un venerdì sera, vi sposate il sabato in una cappella di ghiaccio e siete a casa la domenica sera. Un planner gestisce i documenti DVV, il celebrante, due ore di fotografo e i pernottamenti. Un weekend così, cerimonia, due notti in igloo, transfer, resta sotto i 2 100 €.',
-      nl: 'Jullie vliegen op vrijdagavond naar Rovaniemi, trouwen op zaterdag in een ijskapel en zijn zondagavond weer thuis. Een planner regelt het DVV-papierwerk, de voltrekker, twee uur fotografie en de overnachtingen. Zo’n weekend, ceremonie, twee nachten in een iglo, transfers, blijft onder de € 2.100.', sv: 'Fly into Rovaniemi on a Friday evening, marry on Saturday in an ice chapel, and be home Sunday night. A planner handles the DVV paperwork, officiant, a two-hour photographer and the hotel nights. A weekend like this, ceremony, two nights in an igloo, transfers, lands under €2 100.',
-    },
-    spends: {
-      en: ['Officiant + DVV: €390', 'Photographer 2h: €590', '2× igloo nights: €628', 'Bouquet + suit hire: €240', 'Cab transfers: €280'],
-      fi: ['Vihkijä + DVV: 390 €', 'Valokuvaaja 2 h: 590 €', '2× iglu-yötä: 628 €', 'Kimppu + puku: 240 €', 'Taksit: 280 €'],
-      de: ['Trauredner + DVV: 390 €', 'Fotograf 2 Std.: 590 €', '2× Iglu-Nächte: 628 €', 'Brautstrauß + Anzugverleih: 240 €', 'Taxitransfers: 280 €'],
-      ja: ['司式者＋DVV：390ユーロ', '写真撮影2時間：590ユーロ', 'イグルー2泊：628ユーロ', 'ブーケ＋スーツレンタル：240ユーロ', 'タクシー送迎：280ユーロ'],
-      es: ['Oficiante + DVV: 390 €', 'Fotógrafo 2 h: 590 €', '2 noches en iglú: 628 €', 'Ramo + alquiler de traje: 240 €', 'Traslados en taxi: 280 €'],
-      'pt-BR': ['Celebrante + DVV: € 390', 'Fotógrafo 2 h: € 590', '2 noites em iglu: € 628', 'Buquê + aluguel de terno: € 240', 'Transfers de táxi: € 280'],
-      'zh-CN': ['主婚人 + DVV：390 欧元', '摄影 2 小时：590 欧元', '冰屋 2 晚：628 欧元', '捧花 + 西装租赁：240 欧元', '出租车接送：280 欧元'],
-      ko: ['주례 + DVV: 390유로', '사진 촬영 2시간: 590유로', '이글루 2박: 628유로', '부케 + 정장 대여: 240유로', '택시 이동: 280유로'],
-      fr: ['Officiant + DVV : 390 €', 'Photographe 2 h : 590 €', '2 nuits en igloo : 628 €', 'Bouquet + location de costume : 240 €', 'Transferts en taxi : 280 €'],
-      it: ['Celebrante + DVV: 390 €', 'Fotografo 2 h: 590 €', '2 notti in igloo: 628 €', 'Bouquet + noleggio abito: 240 €', 'Transfer in taxi: 280 €'],
-      nl: ['Voltrekker + DVV: € 390', 'Fotograaf 2 u: € 590', '2× iglo-nachten: € 628', 'Boeket + pakhuur: € 240', 'Taxitransfers: € 280'], sv: ['Officiant + DVV: €390', 'Photographer 2h: €590', '2× igloo nights: €628', 'Bouquet + suit hire: €240', 'Cab transfers: €280'],
-    },
-    takeaway: {
-      en: 'Elopement is the most cost-efficient way: just the two of you and the magic.',
-      fi: 'Kahdestaan vihkiminen on kustannustehokkain tapa: vain te kaksi ja taika.',
-      de: 'Eine Elopement-Hochzeit ist der kosteneffizienteste Weg: nur ihr beide und der Zauber.',
-      ja: '二人だけの結婚式が最もコスト効率の良い方法：あなたたち二人と魔法だけ。',
-      es: 'La fuga romántica es la opción más rentable: solo vosotros dos y la magia.',
-      'pt-BR': 'O elopement é a forma mais econômica: só vocês dois e a magia.',
-      'zh-CN': '私奔式婚礼最具性价比，只有你们两人和这份魔法。',
-      ko: '단둘이 올리는 결혼식이 가장 비용 효율적입니다. 두 사람과 마법만 있으면 됩니다.',
-      fr: 'L’elopement est la formule la plus économique: juste vous deux et la magie.',
-      it: 'L’elopement è la soluzione più conveniente: solo voi due e la magia.',
-      nl: 'Met z’n tweeën trouwen is het meest kostenefficiënt, alleen jullie twee en de magie.', sv: 'Smygbröllop är det mest kostnadseffektiva: bara ni två och magin.',
-    },
-    image: '/images/pricing/elope-hannah-tom.jpg',
-  },
-  {
-    emoji: '❄',
-    label: {
-      en: 'Snow-chapel wedding · 18 guests',
-      fi: 'Lumikappelihäät · 18 vierasta',
-      de: 'Schneekapellen-Hochzeit · 18 Gäste',
-      ja: 'スノーチャペル挙式 · ゲスト18人',
-      es: 'Boda en capilla de nieve · 18 invitados',
-      'pt-BR': 'Casamento em capela de neve · 18 convidados',
-      'zh-CN': '雪教堂婚礼 · 18 位宾客',
-      ko: '스노우 채플 웨딩 · 하객 18명',
-      fr: 'Mariage en chapelle de neige · 18 invités',
-      it: 'Matrimonio in cappella di neve · 18 ospiti',
-      nl: 'Sneeuwkapelbruiloft · 18 gasten', sv: 'Bröllop i snökapell · 18 gäster',
-    },
-    type: 'Snow Chapel',
-    guests: '18',
-    range: '€8 400',
-    story: {
-      en: 'Bring 16 guests on a five-day trip: ceremony in a carved snow chapel, dinner in a warm timber hall next door, everyone sleeping on the same grounds. Venues like this re-sculpt their ice halls every winter, so no two years look alike.',
-      fi: 'Tuokaa 16 vierasta viiden päivän matkalle: vihkimys veistetyssä lumikappelissa, illallinen viereisessä lämpimässä hirsisalissa, kaikki yöpyvät samalla alueella. Tällaiset paikat veistävät jääsalinsa joka talvi uudelleen, joten kahta samanlaista vuotta ei ole.',
-      de: 'Nehmen Sie 16 Gäste mit auf eine fünftägige Reise: Zeremonie in einer geschnitzten Schneekapelle, Dinner in einem warmen Holzsaal nebenan, alle übernachten auf demselben Gelände. Solche Locations gestalten ihre Eissäle jeden Winter neu. Kein Jahr gleicht dem anderen.',
-      ja: '16人のゲストと5日間の旅へ：彫刻が施されたスノーチャペルでの挙式、隣接する暖かな木造ホールでのディナー、全員が同じ敷地内に宿泊します。こうした会場は毎年冬に氷のホールを彫り直すため、同じ姿の年は二度とありません。',
-      es: 'Llevad a 16 invitados a un viaje de cinco días: ceremonia en una capilla de nieve esculpida, cena en un cálido salón de madera contiguo y todos alojados en el mismo recinto. Lugares así vuelven a esculpir sus salas de hielo cada invierno, así que no hay dos años iguales.',
-      'pt-BR': 'Levem 16 convidados em uma viagem de cinco dias: cerimônia em uma capela de neve esculpida, jantar em um acolhedor salão de madeira ao lado e todos hospedados no mesmo terreno. Locais assim reesculpem seus salões de gelo a cada inverno. Não há dois anos iguais.',
-      'zh-CN': '带上 16 位宾客开启五天的旅程：在雕刻而成的雪教堂举行仪式，在隔壁温暖的木屋大厅共进晚宴，所有人都住在同一园区。这类场地每年冬天都会重新雕刻冰厅，因此没有两年是相同的。',
-      ko: '16명의 하객과 함께 5일간의 여행을 떠나 보세요: 조각된 스노우 채플에서의 예식, 바로 옆 따뜻한 목조 홀에서의 저녁 식사, 모두가 같은 단지 안에서 숙박합니다. 이런 장소들은 매 겨울 얼음 홀을 새로 조각하기 때문에 같은 모습의 해가 없습니다.',
-      fr: 'Emmenez 16 invités pour un voyage de cinq jours : cérémonie dans une chapelle de neige sculptée, dîner dans une chaleureuse salle en bois juste à côté, tout le monde logé sur le même domaine. Ces lieux resculptent leurs salles de glace chaque hiver. Aucune année ne ressemble à la précédente.',
-      it: 'Portate 16 ospiti in un viaggio di cinque giorni: cerimonia in una cappella di neve scolpita, cena in un caldo salone di legno accanto, tutti alloggiati nella stessa area. Location come queste riscolpiscono le loro sale di ghiaccio ogni inverno. Non esistono due anni uguali.',
-      nl: 'Neem 16 gasten mee op een vijfdaagse reis: ceremonie in een uitgehouwen sneeuwkapel, diner in een warme houten zaal ernaast, iedereen slaapt op hetzelfde terrein. Zulke locaties bouwen hun ijszalen elke winter opnieuw. Geen twee jaren zien er hetzelfde uit.', sv: 'Bring 16 guests on a five-day trip: ceremony in a carved snow chapel, dinner in a warm timber hall next door, everyone sleeping on the same grounds. Venues like this re-sculpt their ice halls every winter, so no two years look alike.',
-    },
-    spends: {
-      en: ['Snow chapel ceremony: €1 800', 'Wooden chapel reception: €2 400', '3-course dinner ×18: €1 980', 'Ice suite for couple: €840', 'Photographer 6h + video: €1 380'],
-      fi: ['Lumikappeli-vihkimys: 1 800 €', 'Puukappeli-juhlat: 2 400 €', '3 ruokalajia ×18: 1 980 €', 'Jäiglu pariskunnalle: 840 €', 'Valokuvaaja 6 h + video: 1 380 €'],
-      de: ['Schneekapellen-Zeremonie: 1 800 €', 'Holzkapellen-Empfang: 2 400 €', '3-Gänge-Menü ×18: 1 980 €', 'Eis-Suite für das Paar: 840 €', 'Fotograf 6 Std. + Video: 1 380 €'],
-      ja: ['スノーチャペル挙式：1,800ユーロ', '木造チャペル披露宴：2,400ユーロ', '3コースディナー×18：1,980ユーロ', 'カップル用アイススイート：840ユーロ', '写真撮影6時間＋動画：1,380ユーロ'],
-      es: ['Ceremonia en capilla de nieve: 1 800 €', 'Recepción en capilla de madera: 2 400 €', 'Cena de 3 platos ×18: 1 980 €', 'Suite de hielo para la pareja: 840 €', 'Fotógrafo 6 h + vídeo: 1 380 €'],
-      'pt-BR': ['Cerimônia na capela de neve: € 1.800', 'Recepção na capela de madeira: € 2.400', 'Jantar de 3 pratos ×18: € 1.980', 'Suíte de gelo para o casal: € 840', 'Fotógrafo 6 h + vídeo: € 1.380'],
-      'zh-CN': ['雪教堂仪式：1,800 欧元', '木教堂宴会：2,400 欧元', '三道菜晚宴 ×18：1,980 欧元', '新人冰套房：840 欧元', '摄影 6 小时 + 视频：1,380 欧元'],
-      ko: ['스노우 채플 예식: 1,800유로', '목조 채플 피로연: 2,400유로', '3코스 디너 ×18: 1,980유로', '신혼부부 아이스 스위트: 840유로', '사진 촬영 6시간 + 영상: 1,380유로'],
-      fr: ['Cérémonie en chapelle de neige : 1 800 €', 'Réception en chapelle de bois : 2 400 €', 'Dîner 3 plats ×18 : 1 980 €', 'Suite de glace pour le couple : 840 €', 'Photographe 6 h + vidéo : 1 380 €'],
-      it: ['Cerimonia in cappella di neve: 1 800 €', 'Ricevimento in cappella di legno: 2 400 €', 'Cena 3 portate ×18: 1 980 €', 'Suite di ghiaccio per la coppia: 840 €', 'Fotografo 6 h + video: 1 380 €'],
-      nl: ['Ceremonie in sneeuwkapel: € 1.800', 'Receptie in houten kapel: € 2.400', '3-gangendiner ×18: € 1.980', 'IJssuite voor het paar: € 840', 'Fotograaf 6 u + video: € 1.380'], sv: ['Snow chapel ceremony: €1 800', 'Wooden chapel reception: €2 400', '3-course dinner ×18: €1 980', 'Ice suite for couple: €840', 'Photographer 6h + video: €1 380'],
-    },
-    takeaway: {
-      en: 'Mid-size weddings benefit from venues that combine ceremony, dinner and accommodation under one roof.',
-      fi: 'Keskikokoiset häät hyötyvät kohteista joissa vihkimys, illallinen ja majoitus yhdellä alueella.',
-      de: 'Mittelgroße Hochzeiten profitieren von Locations, die Zeremonie, Dinner und Unterkunft unter einem Dach vereinen.',
-      ja: '中規模の結婚式は、挙式・ディナー・宿泊を一か所にまとめられる会場が有利です。',
-      es: 'Las bodas de tamaño medio se benefician de lugares que combinan ceremonia, cena y alojamiento bajo un mismo techo.',
-      'pt-BR': 'Casamentos de porte médio se beneficiam de locais que reúnem cerimônia, jantar e hospedagem sob o mesmo teto.',
-      'zh-CN': '中等规模的婚礼受益于将仪式、晚宴和住宿集于一处的场地。',
-      ko: '중간 규모 결혼식은 예식, 저녁 식사, 숙박을 한곳에서 해결할 수 있는 장소에서 유리합니다.',
-      fr: 'Les mariages de taille moyenne profitent des lieux qui réunissent cérémonie, dîner et hébergement sous un même toit.',
-      it: 'I matrimoni di medie dimensioni traggono vantaggio da location che uniscono cerimonia, cena e alloggio sotto lo stesso tetto.',
-      nl: 'Middelgrote bruiloften profiteren van locaties die ceremonie, diner en overnachting onder één dak combineren.', sv: 'Mid-size weddings benefit from venues that combine ceremony, dinner and accommodation under one roof.',
-    },
-    image: '/images/pricing/midtier-mei-david.jpg',
-  },
-  {
-    emoji: '✨',
-    label: {
-      en: 'Northern-lights wedding · 32 guests',
-      fi: 'Revontulihäät · 32 vierasta',
-      de: 'Polarlicht-Hochzeit · 32 Gäste',
-      ja: 'オーロラ挙式 · ゲスト32人',
-      es: 'Boda bajo auroras · 32 invitados',
-      'pt-BR': 'Casamento sob a aurora · 32 convidados',
-      'zh-CN': '极光婚礼 · 32 位宾客',
-      ko: '오로라 웨딩 · 하객 32명',
-      fr: 'Mariage sous les aurores · 32 invités',
-      it: 'Matrimonio sotto l’aurora · 32 ospiti',
-      nl: 'Noorderlichtbruiloft · 32 gasten', sv: 'Norrskensbröllop · 32 gäster',
-    },
-    type: 'Northern Lights',
-    guests: '32',
-    range: '€24 800',
-    story: {
-      en: 'A wedding your families will talk about for 30 years: snow-chapel ceremony in the fells, a glass-walled reception cabin, arrival by husky sled, live music, and a planner who watches the aurora forecast and is ready to move the ceremony earlier the moment it says tonight.',
-      fi: 'Häät joista perheet puhuvat 30 vuotta: lumikappelivihkimys tunturissa, lasiseinäinen juhlacabin, saapuminen huskyvaljakolla, live-musiikkia ja suunnittelija, joka seuraa revontuliennustetta ja on valmis aikaistamaan vihkimystä heti kun se sanoo: tänä iltana.',
-      de: 'Eine Hochzeit, über die Ihre Familien 30 Jahre lang sprechen werden: Schneekapellen-Zeremonie in den Fjälls, eine verglaste Feier-Hütte, Ankunft per Husky-Schlitten, Live-Musik und ein Planer, der die Polarlicht-Vorhersage im Blick behält und bereit ist, die Zeremonie vorzuziehen, sobald sie sagt: heute Abend.',
-      ja: '家族が30年語り継ぐような結婚式：山地のスノーチャペルでの挙式、ガラス張りの披露宴キャビン、ハスキーそりでの登場、生演奏、そしてオーロラ予報を見守り、「今夜」と出た瞬間に挙式を前倒しできるプランナー。',
-      es: 'Una boda de la que vuestras familias hablarán durante 30 años: ceremonia en una capilla de nieve en las colinas árticas, una cabaña de recepción con paredes de cristal, llegada en trineo de huskies, música en directo y un organizador que vigila el pronóstico de auroras y está listo para adelantar la ceremonia en cuanto diga: esta noche.',
-      'pt-BR': 'Um casamento do qual as famílias falarão por 30 anos: cerimônia em capela de neve nas colinas árticas, uma cabana de recepção com paredes de vidro, chegada em trenó de huskies, música ao vivo e um organizador que acompanha a previsão da aurora e está pronto para adiantar a cerimônia assim que ela disser: hoje à noite.',
-      'zh-CN': '一场让家人念叨 30 年的婚礼：在山地雪教堂举行仪式、玻璃幕墙的宴会小屋、乘哈士奇雪橇抵达、现场音乐，还有一位随时关注极光预报的策划师，一旦预报说"就在今晚"，便立刻把仪式提前。',
-      ko: '가족들이 30년 동안 이야기할 결혼식: 설원 언덕의 스노우 채플 예식, 유리벽 피로연 캐빈, 허스키 썰매로 도착, 라이브 음악, 그리고 오로라 예보를 지켜보다가 "오늘 밤"이라는 예보가 뜨는 순간 예식을 앞당길 준비가 된 플래너.',
-      fr: 'Un mariage dont vos familles parleront pendant 30 ans : cérémonie en chapelle de neige dans les collines lapones, une cabane de réception aux parois de verre, arrivée en traîneau de huskies, musique en direct et un planner qui surveille les prévisions d’aurores et se tient prêt à avancer la cérémonie dès qu’elles annoncent : ce soir.',
-      it: 'Un matrimonio di cui le vostre famiglie parleranno per 30 anni: cerimonia in una cappella di neve tra le alture lapponi, una cabina di ricevimento con pareti di vetro, arrivo in slitta trainata da husky, musica dal vivo e un planner che tiene d’occhio le previsioni dell’aurora ed è pronto ad anticipare la cerimonia non appena dicono: stasera.',
-      nl: 'Een bruiloft waar jullie families 30 jaar over zullen praten: ceremonie in een sneeuwkapel in de fjells, een receptiecabin met glazen wanden, aankomst per huskyslee, livemuziek en een planner die de noorderlichtvoorspelling in de gaten houdt en klaarstaat om de ceremonie te vervroegen zodra die zegt: vanavond.', sv: 'A wedding your families will talk about for 30 years: snow-chapel ceremony in the fells, a glass-walled reception cabin, arrival by husky sled, live music, and a planner who watches the aurora forecast and is ready to move the ceremony earlier the moment it says tonight.',
-    },
-    spends: {
-      en: ['Snow chapel + cabin reception: €7 200', 'Catering 3-course ×32: €4 800', 'Photographer 10h + video team: €4 200', 'Husky safari for ceremony arrival: €1 800', 'Couple suite + 4 cabins for family: €4 200', 'Florist + bouquet: €1 600', 'Officiant + DVV: €420', 'Live Sámi music: €580'],
-      fi: ['Lumikappeli + cabin-juhlat: 7 200 €', 'Catering 3 ruokalajia ×32: 4 800 €', 'Valokuvaaja 10 h + video: 4 200 €', 'Husky-sara vihkimykseen: 1 800 €', 'Sviitti + 4 cabinia perheelle: 4 200 €', 'Kukkasidonta + kimppu: 1 600 €', 'Vihkijä + DVV: 420 €', 'Live-saamenmusiikki: 580 €'],
-      de: ['Schneekapelle + Hütten-Empfang: 7 200 €', 'Catering 3-Gänge ×32: 4 800 €', 'Fotograf 10 Std. + Videoteam: 4 200 €', 'Husky-Safari zur Zeremonie-Ankunft: 1 800 €', 'Paar-Suite + 4 Hütten für die Familie: 4 200 €', 'Florist + Brautstrauß: 1 600 €', 'Trauredner + DVV: 420 €', 'Live-Sámi-Musik: 580 €'],
-      ja: ['スノーチャペル＋キャビン披露宴：7,200ユーロ', 'ケータリング3コース×32：4,800ユーロ', '写真撮影10時間＋動画チーム：4,200ユーロ', '挙式到着のハスキーサファリ：1,800ユーロ', 'カップルスイート＋家族用キャビン4棟：4,200ユーロ', 'フローリスト＋ブーケ：1,600ユーロ', '司式者＋DVV：420ユーロ', 'サーミ族のライブ音楽：580ユーロ'],
-      es: ['Capilla de nieve + recepción en cabaña: 7 200 €', 'Catering de 3 platos ×32: 4 800 €', 'Fotógrafo 10 h + equipo de vídeo: 4 200 €', 'Safari de huskies para la llegada a la ceremonia: 1 800 €', 'Suite para la pareja + 4 cabañas para la familia: 4 200 €', 'Floristería + ramo: 1 600 €', 'Oficiante + DVV: 420 €', 'Música sami en directo: 580 €'],
-      'pt-BR': ['Capela de neve + recepção em cabana: € 7.200', 'Buffet de 3 pratos ×32: € 4.800', 'Fotógrafo 10 h + equipe de vídeo: € 4.200', 'Safári de huskies para a chegada à cerimônia: € 1.800', 'Suíte do casal + 4 cabanas para a família: € 4.200', 'Floricultura + buquê: € 1.600', 'Celebrante + DVV: € 420', 'Música sámi ao vivo: € 580'],
-      'zh-CN': ['雪教堂 + 小屋宴会：7,200 欧元', '三道菜餐饮 ×32：4,800 欧元', '摄影 10 小时 + 视频团队：4,200 欧元', '仪式抵达哈士奇雪橇：1,800 欧元', '新人套房 + 家庭 4 间小屋：4,200 欧元', '花艺 + 捧花：1,600 欧元', '主婚人 + DVV：420 欧元', '现场萨米音乐：580 欧元'],
-      ko: ['스노우 채플 + 캐빈 피로연: 7,200유로', '3코스 케이터링 ×32: 4,800유로', '사진 촬영 10시간 + 영상 팀: 4,200유로', '예식 도착용 허스키 사파리: 1,800유로', '신혼부부 스위트 + 가족용 캐빈 4채: 4,200유로', '플로리스트 + 부케: 1,600유로', '주례 + DVV: 420유로', '라이브 사미 음악: 580유로'],
-      fr: ['Chapelle de neige + réception en cabane : 7 200 €', 'Traiteur 3 plats ×32 : 4 800 €', 'Photographe 10 h + équipe vidéo : 4 200 €', 'Safari husky pour l’arrivée à la cérémonie : 1 800 €', 'Suite du couple + 4 cabanes pour la famille : 4 200 €', 'Fleuriste + bouquet : 1 600 €', 'Officiant + DVV : 420 €', 'Musique sámi en direct : 580 €'],
-      it: ['Cappella di neve + ricevimento in cabina: 7 200 €', 'Catering 3 portate ×32: 4 800 €', 'Fotografo 10 h + troupe video: 4 200 €', 'Husky-safari per l’arrivo alla cerimonia: 1 800 €', 'Suite per la coppia + 4 cabine per la famiglia: 4 200 €', 'Fiorista + bouquet: 1 600 €', 'Celebrante + DVV: 420 €', 'Musica sámi dal vivo: 580 €'],
-      nl: ['Sneeuwkapel + cabin-receptie: € 7.200', 'Catering 3-gangen ×32: € 4.800', 'Fotograaf 10 u + videoteam: € 4.200', 'Husky-safari voor aankomst ceremonie: € 1.800', 'Suite voor het paar + 4 cabins voor familie: € 4.200', 'Bloemist + boeket: € 1.600', 'Voltrekker + DVV: € 420', 'Live Sámi-muziek: € 580'], sv: ['Snow chapel + cabin reception: €7 200', 'Catering 3-course ×32: €4 800', 'Photographer 10h + video team: €4 200', 'Husky safari for ceremony arrival: €1 800', 'Couple suite + 4 cabins for family: €4 200', 'Florist + bouquet: €1 600', 'Officiant + DVV: €420', 'Live Sámi music: €580'],
-    },
-    takeaway: {
-      en: 'Premium weddings invest in moments, auroras, music, husky arrival, that guests photograph and remember.',
-      fi: 'Premium-häissä rahaa kuluu hetkiin, revontulet, musiikki, husky-sara, joista vieraat ottavat kuvia ja muistavat.',
-      de: 'Premium-Hochzeiten investieren in Momente, Polarlichter, Musik, Husky-Ankunft, die Gäste fotografieren und in Erinnerung behalten.',
-      ja: 'プレミアムな結婚式は、ゲストが写真に収め記憶に残す瞬間、オーロラ、音楽、ハスキーでの登場にお金をかけます。',
-      es: 'Las bodas premium invierten en momentos, auroras, música, llegada en huskies, que los invitados fotografían y recuerdan.',
-      'pt-BR': 'Casamentos premium investem em momentos, auroras, música, chegada de huskies, que os convidados fotografam e lembram.',
-      'zh-CN': '高端婚礼把钱花在那些宾客会拍照并铭记的瞬间，极光、音乐、哈士奇登场。',
-      ko: '프리미엄 결혼식은 하객들이 사진에 담고 기억하는 순간, 오로라, 음악, 허스키 도착 에 투자합니다.',
-      fr: 'Les mariages haut de gamme investissent dans des moments, aurores, musique, arrivée en husky, que les invités photographient et retiennent.',
-      it: 'I matrimoni premium investono in momenti, aurore, musica, arrivo in husky, che gli ospiti fotografano e ricordano.',
-      nl: 'Premium bruiloften investeren in momenten, noorderlicht, muziek, aankomst per husky, die gasten fotograferen en onthouden.', sv: 'Premium weddings invest in moments, auroras, music, husky arrival, that guests photograph and remember.',
-    },
-    image: '/images/pricing/premium-sofia-lukas.jpg',
-  },
-  {
-    emoji: '🥂',
-    label: {
-      en: 'Luxury celebration · 80 guests',
-      fi: 'Luksusjuhla · 80 vierasta',
-      de: 'Luxusfeier · 80 Gäste',
-      ja: 'ラグジュアリーな祝宴 · ゲスト80人',
-      es: 'Celebración de lujo · 80 invitados',
-      'pt-BR': 'Celebração de luxo · 80 convidados',
-      'zh-CN': '奢华庆典 · 80 位宾客',
-      ko: '럭셔리 셀러브레이션 · 하객 80명',
-      fr: 'Célébration de luxe · 80 invités',
-      it: 'Celebrazione di lusso · 80 ospiti',
-      nl: 'Luxe viering · 80 gasten', sv: 'Lyxfest · 80 gäster',
-    },
-    type: 'Luxury · 80 guests',
-    guests: '80',
-    range: '€78 000',
-    story: {
-      en: 'Eighty guests, four days, one large log hall in northern Lapland. Helicopter transfers from the airport, a private chef team, glass-igloo nights for every couple, and a full programme: arrival sauna, ceremony, post-wedding husky safari, farewell brunch.',
-      fi: 'Kahdeksankymmentä vierasta, neljä päivää, yksi suuri hirsisali Pohjois-Lapissa. Helikopterikuljetukset kentältä, yksityinen kokkitiimi, lasi-iglu-yöt jokaiselle parille ja koko ohjelma: saapumissauna, vihkimys, hääjuhlan jälkeinen huskysafari, läksiäisbrunssi.',
-      de: 'Achtzig Gäste, vier Tage, ein großer Blockhaussaal im Norden Lapplands. Hubschraubertransfers vom Flughafen, ein privates Kochteam, Glasiglu-Nächte für jedes Paar und ein volles Programm: Ankunftssauna, Zeremonie, Husky-Safari nach der Hochzeit, Abschiedsbrunch.',
-      ja: 'ゲスト80人、4日間、北ラップランドの大きなログホールがひとつ。空港からのヘリコプター送迎、専属のプライベートシェフチーム、各カップルにガラスイグルー泊、そしてフルプログラム：到着サウナ、挙式、挙式後のハスキーサファリ、お別れブランチ。',
-      es: 'Ochenta invitados, cuatro días, un gran salón de troncos en el norte de Laponia. Traslados en helicóptero desde el aeropuerto, un equipo de chef privado, noches en iglú de cristal para cada pareja y un programa completo: sauna de llegada, ceremonia, safari de huskies posboda y brunch de despedida.',
-      'pt-BR': 'Oitenta convidados, quatro dias, um grande salão de troncos no norte da Lapônia. Transfers de helicóptero do aeroporto, uma equipe de chef privado, noites em iglu de vidro para cada casal e um programa completo: sauna de chegada, cerimônia, safári de huskies pós-casamento, brunch de despedida.',
-      'zh-CN': '八十位宾客，四天行程，拉普兰北部的一座大型原木大厅。直升机机场接送、私人主厨团队、每对情侣的玻璃冰屋之夜，以及完整安排：抵达桑拿、仪式、婚后哈士奇雪橇之旅、告别早午餐。',
-      ko: '하객 80명, 4일, 라플란드 북부의 커다란 통나무 홀 하나. 공항에서의 헬리콥터 이동, 전담 프라이빗 셰프 팀, 모든 커플을 위한 글라스 이글루 숙박, 그리고 풀 프로그램: 도착 사우나, 예식, 결혼식 후 허스키 사파리, 작별 브런치.',
-      fr: 'Quatre-vingts invités, quatre jours, une grande salle en rondins dans le nord de la Laponie. Transferts en hélicoptère depuis l’aéroport, une brigade de chef privé, des nuits en igloo de verre pour chaque couple et un programme complet : sauna d’arrivée, cérémonie, safari husky après le mariage, brunch d’adieu.',
-      it: 'Ottanta ospiti, quattro giorni, un grande salone in tronchi nel nord della Lapponia. Transfer in elicottero dall’aeroporto, un team di chef privato, notti in igloo di vetro per ogni coppia e un programma completo: sauna di arrivo, cerimonia, husky-safari post-matrimonio, brunch di addio.',
-      nl: 'Tachtig gasten, vier dagen, één grote blokhuiszaal in het noorden van Lapland. Helikoptertransfers vanaf de luchthaven, een privéchef-team, glazen-iglo-nachten voor elk paar en een volledig programma: aankomstsauna, ceremonie, husky-safari na de bruiloft, afscheidsbrunch.', sv: 'Eighty guests, four days, one large log hall in northern Lapland. Helicopter transfers from the airport, a private chef team, glass-igloo nights for every couple, and a full programme: arrival sauna, ceremony, post-wedding husky safari, farewell brunch.',
-    },
-    spends: {
-      en: ['Log-hall venue + ceremony: €18 000', 'Fine-dining catering ×80: €22 000', 'Helicopter transfers: €8 400', 'Photo + video team (3 people, full programme): €11 000', 'Glass igloo nights for guests ×3: €14 800', 'Florist + decor: €3 800'],
-      fi: ['Hirsisali + vihkimys: 18 000 €', 'Fine dining -catering ×80: 22 000 €', 'Helikopterikuljetukset: 8 400 €', 'Kuvaus + video (3 henkilöä, koko ohjelma): 11 000 €', 'Lasi-iglu-yöt vieraille ×3: 14 800 €', 'Kukkasidonta + dekoraatio: 3 800 €'],
-      de: ['Blockhaussaal + Zeremonie: 18 000 €', 'Fine-Dining-Catering ×80: 22 000 €', 'Hubschraubertransfers: 8 400 €', 'Foto- + Videoteam (3 Personen, ganzes Programm): 11 000 €', 'Glasiglu-Nächte für Gäste ×3: 14 800 €', 'Florist + Dekoration: 3 800 €'],
-      ja: ['ログホール会場＋挙式：18,000ユーロ', 'ファインダイニング・ケータリング×80：22,000ユーロ', 'ヘリコプター送迎：8,400ユーロ', '写真＋動画チーム（3名、全プログラム）：11,000ユーロ', 'ゲスト用ガラスイグルー泊×3：14,800ユーロ', 'フローリスト＋装飾：3,800ユーロ'],
-      es: ['Salón de troncos + ceremonia: 18 000 €', 'Catering de alta cocina ×80: 22 000 €', 'Traslados en helicóptero: 8 400 €', 'Equipo de foto + vídeo (3 personas, programa completo): 11 000 €', 'Noches en iglú de cristal para invitados ×3: 14 800 €', 'Floristería + decoración: 3 800 €'],
-      'pt-BR': ['Salão de troncos + cerimônia: € 18.000', 'Buffet de alta gastronomia ×80: € 22.000', 'Transfers de helicóptero: € 8.400', 'Equipe de foto + vídeo (3 pessoas, programa completo): € 11.000', 'Noites em iglu de vidro para convidados ×3: € 14.800', 'Floricultura + decoração: € 3.800'],
-      'zh-CN': ['原木大厅场地 + 仪式：18,000 欧元', '高级餐饮 ×80：22,000 欧元', '直升机接送：8,400 欧元', '摄影 + 视频团队（3 人，全程）：11,000 欧元', '宾客玻璃冰屋住宿 ×3：14,800 欧元', '花艺 + 布置：3,800 欧元'],
-      ko: ['통나무 홀 장소 + 예식: 18,000유로', '파인다이닝 케이터링 ×80: 22,000유로', '헬리콥터 이동: 8,400유로', '사진 + 영상 팀(3인, 전체 프로그램): 11,000유로', '하객용 글라스 이글루 숙박 ×3: 14,800유로', '플로리스트 + 데코: 3,800유로'],
-      fr: ['Salle en rondins + cérémonie : 18 000 €', 'Traiteur gastronomique ×80 : 22 000 €', 'Transferts en hélicoptère : 8 400 €', 'Équipe photo + vidéo (3 personnes, programme complet) : 11 000 €', 'Nuits en igloo de verre pour les invités ×3 : 14 800 €', 'Fleuriste + décoration : 3 800 €'],
-      it: ['Salone in tronchi + cerimonia: 18 000 €', 'Catering di alta cucina ×80: 22 000 €', 'Transfer in elicottero: 8 400 €', 'Troupe foto + video (3 persone, programma completo): 11 000 €', 'Notti in igloo di vetro per gli ospiti ×3: 14 800 €', 'Fiorista + decorazioni: 3 800 €'],
-      nl: ['Blokhuiszaal-locatie + ceremonie: € 18.000', 'Fine-dining catering ×80: € 22.000', 'Helikoptertransfers: € 8.400', 'Foto- + videoteam (3 personen, volledig programma): € 11.000', 'Glazen-iglo-nachten voor gasten ×3: € 14.800', 'Bloemist + decoratie: € 3.800'], sv: ['Log-hall venue + ceremony: €18 000', 'Fine-dining catering ×80: €22 000', 'Helicopter transfers: €8 400', 'Photo + video team (3 people, full programme): €11 000', 'Glass igloo nights for guests ×3: €14 800', 'Florist + decor: €3 800'],
-    },
-    takeaway: {
-      en: 'Luxury is logistics. Helicopters, multi-day programmes, every couple in their own glass igloo. That is what €70k+ buys.',
-      fi: 'Luksus on logistiikkaa. Helikopterit, monipäiväinen ohjelma, jokaiselle parille oma lasi-iglu. Se on mitä yli 70 000 € ostaa.',
-      de: 'Luxus ist Logistik. Hubschrauber, mehrtägige Programme, jedes Paar in seinem eigenen Glasiglu. Das bekommt man für 70 000 €+.',
-      ja: 'ラグジュアリーとはロジスティクスです。ヘリコプター、数日にわたるプログラム、各カップルに専用のガラスイグルー。それが7万ユーロ超で得られるものです。',
-      es: 'El lujo es logística. Helicópteros, programas de varios días, cada pareja en su propio iglú de cristal: eso es lo que se compra por más de 70 000 €.',
-      'pt-BR': 'Luxo é logística. Helicópteros, programas de vários dias, cada casal em seu próprio iglu de vidro. É isso que mais de € 70 mil compram.',
-      'zh-CN': '奢华即物流。直升机、多日行程、每对情侣专属玻璃冰屋，这就是 7 万欧元以上所买到的。',
-      ko: '럭셔리는 곧 물류입니다. 헬리콥터, 여러 날에 걸친 프로그램, 커플마다 전용 글라스 이글루. 7만 유로 이상이 사는 것이 바로 이것입니다.',
-      fr: 'Le luxe, c’est la logistique. Hélicoptères, programmes sur plusieurs jours, chaque couple dans son propre igloo de verre. Voilà ce qu’on obtient pour plus de 70 000 €.',
-      it: 'Il lusso è logistica. Elicotteri, programmi di più giorni, ogni coppia nel proprio igloo di vetro. È questo che si compra con oltre 70 000 €.',
-      nl: 'Luxe is logistiek. Helikopters, meerdaagse programma’s, elk paar in een eigen glazen iglo. Dat is wat € 70k+ oplevert.', sv: 'Luxury is logistics. Helicopters, multi-day programmes, every couple in their own glass igloo. That is what €70k+ buys.',
-    },
-    image: '/images/pricing/luxury-helena-james.jpg',
-  },
-];
 
 const breakdown: Array<{ title: Localized<string>; range: Localized<string> }> = [
   {
@@ -336,38 +84,23 @@ const breakdown: Array<{ title: Localized<string>; range: Localized<string> }> =
 type PKey =
   | 'seoTitle' | 'seoDesc' | 'heroEyebrow' | 'heroTitle' | 'heroSubtitle' | 'heroImageAlt'
   | 's1Eyebrow' | 's1Title' | 'exampleDisclaimer'
+  | 'floorNote'
+  | 'd1Title' | 'd1Body' | 'd2Title' | 'd2Body' | 'd3Title' | 'd3Body'
   | 'whereMoneyGoes' | 'getQuoteLike'
   | 's2Eyebrow' | 's2Title' | 's2Subtitle'
   | 'ctaEyebrow' | 'ctaTitle' | 'ctaBody' | 'ctaButton'
   | 's4Eyebrow' | 's4Title' | 's4Subtitle';
 
 const P: Record<PKey, Localized<string>> = {
-  seoTitle: {
-    en: 'Lapland Weddings: pricing with four example budgets | LaplandWeddings',
-    fi: 'Häät Lapissa: hinta-arviot ja neljä esimerkkibudjettia | LaplandWeddings',
-    de: 'Hochzeiten in Lappland: Preise mit vier Beispielbudgets | LaplandWeddings',
-    ja: 'ラップランドの結婚式：4つの予算例で見る費用 | LaplandWeddings',
-    es: 'Bodas en Laponia: precios con cuatro presupuestos de ejemplo | LaplandWeddings',
-    'pt-BR': 'Casamentos na Lapônia: preços com quatro orçamentos de exemplo | LaplandWeddings',
-    'zh-CN': '拉普兰婚礼：四个示例预算的价格 | LaplandWeddings',
-    ko: '라플란드 웨딩: 예산 예시 4건으로 보는 비용 | LaplandWeddings',
-    fr: 'Mariages en Laponie: tarifs et quatre budgets d’exemple | LaplandWeddings',
-    it: 'Matrimoni in Lapponia: prezzi con quattro budget di esempio | LaplandWeddings',
-    nl: 'Bruiloften in Lapland: prijzen met vier voorbeeldbudgetten | LaplandWeddings', sv: 'Bröllop i Lappland: priser med fyra exempelbudgetar | LaplandWeddings',
-  },
-  seoDesc: {
-    en: 'What does a Lapland wedding cost? Four example budgets: elopement (€2 100), snow chapel for 18 (€8 400), northern-lights wedding for 32 (€24 800), luxury for 80 (€78 000). Detailed breakdowns.',
-    fi: 'Mitä Lapin häät maksavat? Neljä esimerkkibudjettia: elopement (2 100 €), lumikappelihäät 18 vieraalle (8 400 €), revontulihäät 32 vieraalle (24 800 €), luksusjuhla 80 vieraalle (78 000 €). Tarkat erittelyt.',
-    de: 'Was kostet eine Hochzeit in Lappland? Vier Beispielbudgets: Elopement (2 100 €), Schneekapelle für 18 (8 400 €), Polarlicht-Hochzeit für 32 (24 800 €), Luxusfeier für 80 (78 000 €). Detaillierte Aufschlüsselungen.',
-    ja: 'ラップランドの結婚式はいくら？4つの予算例：ふたりだけの挙式（2,100ユーロ）、18人のスノーチャペル（8,400ユーロ）、32人のオーロラ挙式（24,800ユーロ）、80人のラグジュアリーな祝宴（78,000ユーロ）。詳細な内訳付き。',
-    es: '¿Cuánto cuesta una boda en Laponia? Cuatro presupuestos de ejemplo: fuga romántica (2 100 €), capilla de nieve para 18 (8 400 €), boda bajo auroras para 32 (24 800 €), celebración de lujo para 80 (78 000 €). Desgloses detallados.',
-    'pt-BR': 'Quanto custa um casamento na Lapônia? Quatro orçamentos de exemplo: elopement (€ 2.100), capela de neve para 18 (€ 8.400), casamento sob a aurora para 32 (€ 24.800), celebração de luxo para 80 (€ 78.000). Detalhamentos completos.',
-    'zh-CN': '在拉普兰办婚礼要花多少钱？四个示例预算：私奔婚礼（2,100 欧元）、18 人雪教堂婚礼（8,400 欧元）、32 人极光婚礼（24,800 欧元）、80 人奢华庆典（78,000 欧元）。附详细明细。',
-    ko: '라플란드 결혼식 비용은 얼마일까요? 네 가지 예산 예시: 단둘이 올리는 결혼식(2,100유로), 하객 18명 스노우 채플(8,400유로), 하객 32명 오로라 웨딩(24,800유로), 하객 80명 럭셔리 셀러브레이션(78,000유로). 상세 내역 포함.',
-    fr: 'Combien coûte un mariage en Laponie ? Quatre budgets d’exemple : elopement (2 100 €), chapelle de neige pour 18 (8 400 €), mariage sous les aurores pour 32 (24 800 €), célébration de luxe pour 80 (78 000 €). Détails complets.',
-    it: 'Quanto costa un matrimonio in Lapponia? Quattro budget di esempio: elopement (2 100 €), cappella di neve per 18 (8 400 €), matrimonio sotto l’aurora per 32 (24 800 €), celebrazione di lusso per 80 (78 000 €). Ripartizioni dettagliate.',
-    nl: 'Wat kost een bruiloft in Lapland? Vier voorbeeldbudgetten: elopement (€ 2.100), sneeuwkapel voor 18 (€ 8.400), noorderlichtbruiloft voor 32 (€ 24.800), luxe viering voor 80 (€ 78.000). Gedetailleerde uitsplitsingen.', sv: 'What does a Lapland wedding cost? Four example budgets: elopement (€2 100), snow chapel for 18 (€8 400), northern-lights wedding for 32 (€24 800), luxury for 80 (€78 000). Detailed breakdowns.',
-  },
+  floorNote: { en: 'What moves the number', fi: 'Mikä summaa liikuttaa', de: 'Was die Summe bewegt', ja: '費用を左右する要素', es: 'Qué mueve la cifra', 'pt-BR': 'O que move o valor', 'zh-CN': '哪些因素影响金额', ko: '금액을 좌우하는 요소', fr: 'Ce qui fait bouger le chiffre', it: 'Cosa muove la cifra', nl: 'Wat het bedrag beweegt', sv: 'Vad som rör summan' },
+  d1Title: { en: 'Number of guests', fi: 'Vieraiden määrä', de: 'Zahl der Gäste', ja: 'ゲストの人数', es: 'Número de invitados', 'pt-BR': 'Número de convidados', 'zh-CN': '宾客人数', ko: '하객 수', fr: 'Nombre d’invités', it: 'Numero di ospiti', nl: 'Aantal gasten', sv: 'Antal gäster' },
+  d1Body: { en: 'Every guest adds a meal, a transfer and a bed. Going from two to thirty multiplies the total more than any other single choice.', fi: 'Jokainen vieras tuo ruoan, kuljetuksen ja vuoteen. Kahdesta kolmeenkymmeneen siirtyminen moninkertaistaa summan enemmän kuin mikään muu yksittäinen valinta.', de: 'Jeder Gast bedeutet ein Essen, einen Transfer und ein Bett. Der Sprung von zwei auf dreißig vervielfacht die Summe stärker als jede andere einzelne Entscheidung.', ja: 'ゲストが一人増えるごとに、食事、送迎、宿泊が加わります。2名から30名への変化は、ほかのどの選択よりも総額を大きく押し上げます。', es: 'Cada invitado suma una comida, un traslado y una cama. Pasar de dos a treinta multiplica el total más que ninguna otra decisión.', 'pt-BR': 'Cada convidado acrescenta uma refeição, um traslado e uma cama. Passar de dois para trinta multiplica o total mais do que qualquer outra escolha.', 'zh-CN': '每多一位宾客，就多一份餐食、一趟接送和一张床位。从两人增加到三十人，对总额的影响超过任何其他单项选择。', ko: '하객 한 명마다 식사와 이동, 잠자리가 더해집니다. 두 명에서 서른 명으로 늘리는 것이 다른 어떤 선택보다 총액을 크게 올립니다.', fr: 'Chaque invité ajoute un repas, un transfert et un lit. Passer de deux à trente multiplie le total plus que tout autre choix.', it: 'Ogni ospite aggiunge un pasto, un transfer e un letto. Passare da due a trenta moltiplica il totale più di qualsiasi altra scelta.', nl: 'Elke gast betekent een maaltijd, een transfer en een bed. Van twee naar dertig gaan vermenigvuldigt het totaal sterker dan welke andere keuze ook.', sv: 'Varje gäst innebär en måltid, en transfer och en säng. Att gå från två till trettio mångdubblar summan mer än något annat enskilt val.' },
+  d2Title: { en: 'Season', fi: 'Sesonki', de: 'Saison', ja: 'シーズン', es: 'Temporada', 'pt-BR': 'Temporada', 'zh-CN': '季节', ko: '시즌', fr: 'Saison', it: 'Stagione', nl: 'Seizoen', sv: 'Säsong' },
+  d2Body: { en: 'December to March is the expensive stretch: accommodation and activities are at their peak. Spring and autumn cost clearly less for the same programme.', fi: 'Jouluk.–maalisk. on kallein jakso: majoitus ja ohjelmapalvelut ovat huipussaan. Kevät ja syksy maksavat samasta ohjelmasta selvästi vähemmän.', de: 'Dezember bis März ist der teure Abschnitt: Unterkunft und Programm sind auf dem Höchststand. Frühjahr und Herbst kosten für dasselbe Programm deutlich weniger.', ja: '12月から3月が最も高い時期で、宿泊もアクティビティも価格のピークを迎えます。同じ内容でも春と秋なら明らかに安く収まります。', es: 'De diciembre a marzo es el tramo caro: el alojamiento y las actividades están en su punto más alto. Primavera y otoño cuestan claramente menos por el mismo programa.', 'pt-BR': 'De dezembro a março é o trecho caro: hospedagem e atividades estão no pico. Primavera e outono custam claramente menos pelo mesmo programa.', 'zh-CN': '十二月至三月是最贵的时段，住宿与活动均处于价格高峰。同样的安排，在春秋两季明显更便宜。', ko: '12월부터 3월까지가 가장 비싼 시기로, 숙박과 액티비티 요금이 정점에 이릅니다. 같은 구성이라도 봄과 가을은 확실히 저렴합니다.', fr: 'De décembre à mars, c’est la période chère : hébergement et activités sont au plus haut. Le printemps et l’automne coûtent nettement moins pour le même programme.', it: 'Da dicembre a marzo è il periodo caro: alloggio e attività sono al massimo. Primavera e autunno costano nettamente meno a parità di programma.', nl: 'December tot maart is het dure stuk: overnachtingen en activiteiten staan op hun hoogst. Voorjaar en najaar kosten voor hetzelfde programma duidelijk minder.', sv: 'December till mars är den dyra perioden: boende och aktiviteter ligger på topp. Vår och höst kostar klart mindre för samma program.' },
+  d3Title: { en: 'Nights and programme', fi: 'Yöt ja ohjelma', de: 'Nächte und Programm', ja: '宿泊数とプログラム', es: 'Noches y programa', 'pt-BR': 'Noites e programação', 'zh-CN': '住宿天数与活动安排', ko: '숙박과 프로그램', fr: 'Nuits et programme', it: 'Notti e programma', nl: 'Nachten en programma', sv: 'Nätter och program' },
+  d3Body: { en: 'A glass igloo for one night and a cabin for the rest is a different figure from three nights under glass. Husky, reindeer and snowmobile outings are priced per person, per trip.', fi: 'Yksi yö lasi-iglussa ja loput mökissä on eri summa kuin kolme yötä lasikaton alla. Husky-, poro- ja kelkkaretket hinnoitellaan per henkilö ja per retki.', de: 'Eine Nacht im Glasiglu und der Rest in einer Hütte ist eine andere Zahl als drei Nächte unter Glas. Husky-, Rentier- und Schneemobiltouren werden pro Person und pro Ausflug berechnet.', ja: 'ガラスイグルーに1泊して残りをコテージで過ごす場合と、3泊すべてをガラス屋根の下で過ごす場合とでは金額が異なります。ハスキー、トナカイ、スノーモービルの各ツアーは一人あたり・一回あたりの料金です。', es: 'Una noche en iglú de cristal y el resto en cabaña es una cifra distinta a tres noches bajo el cristal. Las excursiones de huskies, renos y motos de nieve se cobran por persona y por salida.', 'pt-BR': 'Uma noite em iglu de vidro e o resto em cabana dá um número diferente de três noites sob o vidro. Passeios de husky, rena e moto de neve são cobrados por pessoa e por saída.', 'zh-CN': '在玻璃冰屋住一晚、其余住木屋，与三晚都住在玻璃屋顶下，是两个不同的数字。哈士奇、驯鹿和雪地摩托行程按人次计价。', ko: '유리 이글루에서 하룻밤을 보내고 나머지를 캐빈에서 지내는 것과 사흘 내내 유리 지붕 아래에서 묵는 것은 금액이 다릅니다. 허스키, 순록, 스노모빌 투어는 1인당, 1회당 요금입니다.', fr: 'Une nuit en igloo de verre et le reste en chalet, ce n’est pas le même chiffre que trois nuits sous le verre. Les sorties husky, renne et motoneige se facturent par personne et par excursion.', it: 'Una notte in igloo di vetro e il resto in chalet è una cifra diversa da tre notti sotto il vetro. Le escursioni con husky, renne e motoslitte si pagano a persona e a uscita.', nl: 'Eén nacht in een glazen iglo en de rest in een cabin is een ander bedrag dan drie nachten onder glas. Husky-, rendier- en sneeuwscootertochten rekenen per persoon en per tocht.', sv: 'En natt i glasigloo och resten i stuga är en annan siffra än tre nätter under glas. Husky-, ren- och skoterturer prissätts per person och per tur.' },
+  seoTitle: { en: 'Lapland Wedding Costs: from EUR 5,000 | LaplandWeddings', fi: 'Häiden hinta Lapissa: alkaen 5 000 € | LaplandWeddings', de: 'Hochzeitskosten in Lappland: ab 5 000 € | LaplandWeddings', ja: 'ラップランドの結婚式費用：5,000ユーロから | LaplandWeddings', es: 'Coste de una boda en Laponia: desde 5 000 € | LaplandWeddings', 'pt-BR': 'Custo de casamento na Lapônia: a partir de € 5.000 | LaplandWeddings', 'zh-CN': '拉普兰婚礼费用：5,000 欧元起 | LaplandWeddings', ko: '라플란드 결혼식 비용: 5,000유로부터 | LaplandWeddings', fr: 'Coût d’un mariage en Laponie : à partir de 5 000 € | LaplandWeddings', it: 'Costi matrimonio in Lapponia: da 5 000 € | LaplandWeddings', nl: 'Bruiloftskosten in Lapland: vanaf € 5.000 | LaplandWeddings', sv: 'Bröllopskostnader i Lappland: från 5 000 € | LaplandWeddings' },
+  seoDesc: { en: 'What does a wedding in Lapland cost? Our smallest budget is EUR 5,000. What that covers, what pushes the number up, and price ranges for each part of the day.', fi: 'Mitä häät Lapissa maksavat? Pienin budjettimme on 5 000 €. Mitä se kattaa, mikä summaa nostaa ja hintahaarukat päivän jokaiselle osalle.', de: 'Was kostet eine Hochzeit in Lappland? Unser kleinstes Budget sind 5 000 €. Was darin enthalten ist, was die Summe erhöht, und Preisspannen für jeden Teil des Tages.', ja: 'ラップランドの結婚式はいくら？当サイトが承る最小のご予算は5,000ユーロです。その内訳、費用が上がる要因、そして各項目の価格帯をご紹介します。', es: '¿Cuánto cuesta una boda en Laponia? Nuestro presupuesto mínimo son 5 000 €. Qué incluye, qué eleva la cifra y rangos de precio para cada parte del día.', 'pt-BR': 'Quanto custa um casamento na Lapônia? Nosso orçamento mínimo é de € 5.000. O que ele cobre, o que aumenta o valor e faixas de preço para cada parte do dia.', 'zh-CN': '在拉普兰办婚礼要花多少钱？我们承接的最低预算为 5,000 欧元。本页说明这笔预算涵盖什么、哪些因素会推高费用，以及当天各项开支的价格区间。', ko: '라플란드 결혼식 비용은 얼마일까요? 저희가 진행하는 최소 예산은 5,000유로입니다. 그 안에 무엇이 포함되는지, 무엇이 금액을 높이는지, 그리고 항목별 가격대를 정리했습니다.', fr: 'Combien coûte un mariage en Laponie ? Notre budget minimum est de 5 000 €. Ce qu’il couvre, ce qui fait grimper le chiffre, et les fourchettes de prix pour chaque poste.', it: 'Quanto costa un matrimonio in Lapponia? Il nostro budget minimo è di 5 000 €. Cosa comprende, cosa fa salire la cifra e le fasce di prezzo per ogni voce.', nl: 'Wat kost een bruiloft in Lapland? Ons kleinste budget is € 5.000. Wat dat dekt, wat het bedrag omhoog duwt en prijsranges voor elk onderdeel van de dag.', sv: 'Vad kostar ett bröllop i Lappland? Vår minsta budget är 5 000 €. Vad den täcker, vad som driver upp summan och prisintervall för varje del av dagen.' },
   heroEyebrow: {
     en: 'Pricing', fi: 'Hinta-arviot', de: 'Preise', ja: '費用',
     es: 'Precios', 'pt-BR': 'Preços', 'zh-CN': '价格', ko: '가격',
@@ -386,19 +119,7 @@ const P: Record<PKey, Localized<string>> = {
     it: 'Quanto costa davvero un matrimonio in Lapponia',
     nl: 'Wat een bruiloft in Lapland echt kost', sv: 'Vad ett bröllop i Lappland faktiskt kostar',
   },
-  heroSubtitle: {
-    en: 'Four example budgets: from a €2 100 elopement to a €78 000 luxury celebration. Every example breaks down where the money goes. Prices are indicative estimates.',
-    fi: 'Neljä esimerkkibudjettia: 2 100 euron elopementista 78 000 euron luksusjuhlaan. Joka esimerkissä erittely, mihin raha kuluu. Hinnat ovat suuntaa-antavia arvioita.',
-    de: 'Vier Beispielbudgets: von einem 2 100-€-Elopement bis zur 78 000-€-Luxusfeier. Jedes Beispiel schlüsselt auf, wohin das Geld fließt. Die Preise sind unverbindliche Richtwerte.',
-    ja: '4つの予算例：2,100ユーロのふたりだけの挙式から78,000ユーロのラグジュアリーな祝宴まで。各例でお金の使い道を内訳します。価格は目安の概算です。',
-    es: 'Cuatro presupuestos de ejemplo: desde una fuga romántica de 2 100 € hasta una celebración de lujo de 78 000 €. Cada ejemplo desglosa adónde va el dinero. Los precios son estimaciones orientativas.',
-    'pt-BR': 'Quatro orçamentos de exemplo: de um elopement de € 2.100 a uma celebração de luxo de € 78.000. Cada exemplo detalha para onde vai o dinheiro. Os preços são estimativas indicativas.',
-    'zh-CN': '四个示例预算，从 2,100 欧元的私奔婚礼到 78,000 欧元的奢华庆典。每个示例都详细说明钱花在哪里。价格为参考估算。',
-    ko: '네 가지 예산 예시: 2,100유로의 단둘이 올리는 결혼식부터 78,000유로의 럭셔리 셀러브레이션까지. 각 예시마다 돈이 어디에 쓰이는지 분석합니다. 가격은 참고용 추정치입니다.',
-    fr: 'Quatre budgets d’exemple: d’un elopement à 2 100 € à une célébration de luxe à 78 000 €. Chaque exemple détaille où va l’argent. Les prix sont des estimations indicatives.',
-    it: 'Quattro budget di esempio: da un elopement da 2 100 € a una celebrazione di lusso da 78 000 €. Ogni esempio mostra dove va il denaro. I prezzi sono stime indicative.',
-    nl: 'Vier voorbeeldbudgetten: van een elopement van € 2.100 tot een luxe viering van € 78.000. Elk voorbeeld laat zien waar het geld naartoe gaat. Prijzen zijn indicatieve schattingen.', sv: 'Four example budgets: from a €2 100 elopement to a €78 000 luxury celebration. Every example breaks down where the money goes. Prices are indicative estimates.',
-  },
+  heroSubtitle: { en: 'The smallest budget we take on is EUR 5,000. Below: what makes up that sum, and what pushes it higher.', fi: 'Pienin budjetti jolla lähdemme liikkeelle on 5 000 €. Alla mistä summa muodostuu ja mikä sitä nostaa.', de: 'Das kleinste Budget, mit dem wir arbeiten, sind 5 000 €. Unten: woraus sich die Summe zusammensetzt und was sie erhöht.', ja: 'お受けする最小のご予算は5,000ユーロです。以下では、その金額の内訳と、費用が上がる要因をご説明します。', es: 'El presupuesto mínimo con el que trabajamos son 5 000 €. Abajo: de qué se compone esa cifra y qué la eleva.', 'pt-BR': 'O menor orçamento com que trabalhamos é de € 5.000. Abaixo: do que se compõe essa quantia e o que a aumenta.', 'zh-CN': '我们承接的最低预算为 5,000 欧元。以下说明这笔预算的构成，以及哪些因素会推高费用。', ko: '저희가 진행하는 최소 예산은 5,000유로입니다. 아래에서 그 금액의 구성과 비용을 높이는 요인을 설명합니다.', fr: 'Le budget minimum que nous prenons en charge est de 5 000 €. Ci-dessous : ce qui compose cette somme et ce qui la fait grimper.', it: 'Il budget minimo con cui lavoriamo è di 5 000 €. Qui sotto: da cosa è composta quella cifra e cosa la fa salire.', nl: 'Het kleinste budget waarmee wij werken is € 5.000. Hieronder: waaruit dat bedrag bestaat en wat het omhoog duwt.', sv: 'Den minsta budget vi åtar oss är 5 000 €. Nedan: vad summan består av och vad som driver upp den.' },
   heroImageAlt: {
     en: 'Lapland wedding couple in winter',
     fi: 'Lapin hääpari talvisessa maisemassa',
@@ -412,46 +133,15 @@ const P: Record<PKey, Localized<string>> = {
     it: 'Coppia di sposi in Lapponia d’inverno',
     nl: 'Laplands bruidspaar in de winter', sv: 'Brudpar i Lappland på vintern',
   },
-  s1Eyebrow: {
-    en: 'Four budgets', fi: 'Neljä budjettia',
-    de: 'Vier Budgets', ja: '4つの予算',
-    es: 'Cuatro presupuestos', 'pt-BR': 'Quatro orçamentos',
-    'zh-CN': '四种预算', ko: '네 가지 예산',
-    fr: 'Quatre budgets', it: 'Quattro budget',
-    nl: 'Vier budgetten', sv: 'Fyra budgetar',
-  },
-  s1Title: {
-    en: 'How a Lapland wedding scales by budget',
-    fi: 'Miltä Lapin häät näyttävät rahasummasta riippuen',
-    de: 'Wie eine Hochzeit in Lappland mit dem Budget skaliert',
-    ja: '予算によってラップランドの結婚式はどう変わるか',
-    es: 'Cómo escala una boda en Laponia según el presupuesto',
-    'pt-BR': 'Como um casamento na Lapônia varia conforme o orçamento',
-    'zh-CN': '拉普兰婚礼如何随预算变化',
-    ko: '예산에 따라 라플란드 결혼식은 어떻게 달라지는가',
-    fr: 'Comment un mariage en Laponie évolue selon le budget',
-    it: 'Come un matrimonio in Lapponia cambia in base al budget',
-    nl: 'Hoe een Laplandse bruiloft schaalt met het budget', sv: 'Så skalar ett lappländskt bröllop med budgeten',
-  },
+  s1Eyebrow: { en: 'Starting point', fi: 'Lähtötaso', de: 'Ausgangspunkt', ja: 'スタートライン', es: 'Punto de partida', 'pt-BR': 'Ponto de partida', 'zh-CN': '起点', ko: '시작 기준', fr: 'Point de départ', it: 'Punto di partenza', nl: 'Startpunt', sv: 'Utgångsläge' },
+  s1Title: { en: 'The smallest budget is EUR 5,000', fi: 'Pienin budjetti on 5 000 €', de: 'Das kleinste Budget sind 5 000 €', ja: '最小のご予算は5,000ユーロ', es: 'El presupuesto mínimo son 5 000 €', 'pt-BR': 'O orçamento mínimo é de € 5.000', 'zh-CN': '最低预算为 5,000 欧元', ko: '최소 예산은 5,000유로입니다', fr: 'Le budget minimum est de 5 000 €', it: 'Il budget minimo è di 5 000 €', nl: 'Het kleinste budget is € 5.000', sv: 'Den minsta budgeten är 5 000 €' },
   whereMoneyGoes: {
     en: 'Where the money goes', fi: 'Mihin raha kuluu', de: 'Wohin das Geld fließt',
     ja: 'お金の使い道', es: 'Adónde va el dinero', 'pt-BR': 'Para onde vai o dinheiro',
     'zh-CN': '钱花在哪里', ko: '돈이 어디에 쓰이는가', fr: 'Où va l’argent',
     it: 'Dove va il denaro', nl: 'Waar het geld naartoe gaat', sv: 'Vart pengarna går',
   },
-  exampleDisclaimer: {
-    en: 'These are example calculations at indicative price levels, not past client weddings. We plan yours from scratch and gather real quotes from venues and vendors.',
-    fi: 'Nämä ovat esimerkkilaskelmia suuntaa-antavilla hintatasoilla, eivät toteutuneita asiakashäitä. Suunnittelemme teidän häänne alusta asti ja pyydämme todelliset tarjoukset paikoilta ja palveluilta.',
-    de: 'Dies sind Beispielrechnungen auf Basis unverbindlicher Preisniveaus, keine tatsächlich durchgeführten Kundenhochzeiten. Ihre Hochzeit planen wir von Grund auf und holen echte Angebote von Locations und Dienstleistern ein.',
-    ja: 'これらは目安の価格水準に基づく試算例であり、実際に行われたお客様の結婚式ではありません。お二人の結婚式は一から企画し、会場や各サービスから実際の見積もりを取得します。',
-    es: 'Estos son cálculos de ejemplo con niveles de precio orientativos, no bodas reales de clientes. Planificamos vuestra boda desde cero y solicitamos presupuestos reales a lugares y proveedores.',
-    'pt-BR': 'Estes são cálculos de exemplo com níveis de preço indicativos, não casamentos reais de clientes. Planejamos o casamento de vocês do zero e buscamos orçamentos reais com locais e fornecedores.',
-    'zh-CN': '这些是基于参考价格水平的示例计算，并非过往客户的真实婚礼。我们会为你们从零开始策划，并向场地和服务商索取真实报价。',
-    ko: '이는 참고용 가격 수준으로 작성한 예시 계산이며, 실제 진행된 고객 결혼식이 아닙니다. 두 분의 결혼식은 처음부터 새로 기획하고, 장소와 업체로부터 실제 견적을 받아 드립니다.',
-    fr: 'Il s’agit de calculs d’exemple à des niveaux de prix indicatifs, pas de mariages de clients réalisés. Nous planifions le vôtre à partir de zéro et recueillons de vrais devis auprès des lieux et prestataires.',
-    it: 'Si tratta di calcoli di esempio a livelli di prezzo indicativi, non di matrimoni di clienti realmente svolti. Il vostro matrimonio lo progettiamo da zero e raccogliamo preventivi reali da location e fornitori.',
-    nl: 'Dit zijn voorbeeldberekeningen op indicatieve prijsniveaus, geen daadwerkelijk uitgevoerde klantbruiloften. Jullie bruiloft plannen we vanaf nul en we vragen echte offertes op bij locaties en leveranciers.', sv: 'These are example calculations at indicative price levels, not past client weddings. We plan yours from scratch and gather real quotes from venues and vendors.',
-  },
+  exampleDisclaimer: { en: 'This is the smallest budget at which we pass an enquiry on to the planners. It is not the cheapest wedding possible in Lapland: below it, a planner cannot put together something worth travelling here for, so we would rather say so now than waste your time.', fi: 'Tämä on pienin budjetti, jolla välitämme toimeksiannon suunnittelijoille. Se ei ole halvin mahdollinen tapa mennä naimisiin Lapissa: sen alle jäävällä summalla suunnittelija ei saa kokoon kokonaisuutta, jonka vuoksi kannattaa matkustaa tänne. Sanomme sen mieluummin heti kuin tuhlaamme aikaanne.', de: 'Das ist das kleinste Budget, mit dem wir eine Anfrage an die Hochzeitsplaner weitergeben. Es ist nicht die günstigste Hochzeit, die in Lappland möglich wäre: darunter bekommt ein Planer nichts zusammen, wofür sich die Reise lohnt. Das sagen wir lieber jetzt, als Ihre Zeit zu verschwenden.', ja: 'これは、私たちがプランナーにお問い合わせをお繋ぎする最小のご予算です。ラップランドで挙式できる最安の金額という意味ではありません。これを下回ると、はるばるお越しいただく価値のある内容をプランナーが組めないため、お時間を無駄にする前に正直にお伝えしています。', es: 'Este es el presupuesto mínimo con el que trasladamos una consulta a los organizadores. No es la boda más barata posible en Laponia: por debajo, un organizador no puede montar algo por lo que merezca la pena viajar hasta aquí, y preferimos decirlo ahora antes que haceros perder el tiempo.', 'pt-BR': 'Este é o menor orçamento com que encaminhamos um pedido aos organizadores. Não é o casamento mais barato possível na Lapônia: abaixo disso, um organizador não consegue montar algo que justifique a viagem até aqui, e preferimos dizer isso agora a fazer vocês perderem tempo.', 'zh-CN': '这是我们将咨询转交给策划师的最低预算。它并不代表在拉普兰结婚的最低花费：低于这个数额，策划师无法安排出值得你们专程前来的内容，我们宁愿现在就说清楚，也不愿浪费你们的时间。', ko: '이것은 저희가 문의를 플래너에게 전달하는 최소 예산입니다. 라플란드에서 결혼할 수 있는 가장 저렴한 금액이라는 뜻은 아닙니다. 이보다 낮으면 플래너가 먼 길을 오실 만한 구성을 만들 수 없기에, 시간을 낭비하시기 전에 미리 말씀드립니다.', fr: 'C’est le budget minimum à partir duquel nous transmettons une demande aux wedding planners. Ce n’est pas le mariage le moins cher possible en Laponie : en dessous, un planner ne peut pas monter quelque chose qui justifie le voyage jusqu’ici, et nous préférons le dire tout de suite plutôt que de vous faire perdre du temps.', it: 'Questo è il budget minimo con cui trasmettiamo una richiesta ai wedding planner. Non è il matrimonio più economico possibile in Lapponia: al di sotto, un planner non riesce a costruire qualcosa per cui valga la pena viaggiare fin qui, e preferiamo dirlo subito piuttosto che farvi perdere tempo.', nl: 'Dit is het kleinste budget waarmee wij een aanvraag doorgeven aan de weddingplanners. Het is niet de goedkoopste bruiloft die in Lapland mogelijk is: daaronder krijgt een planner niets samengesteld waarvoor de reis hierheen de moeite waard is, en dat zeggen we liever nu dan dat we uw tijd verspillen.', sv: 'Det här är den minsta budget som vi för en förfrågan vidare till planerarna med. Det är inte det billigaste bröllop som går att ordna i Lappland: under den nivån får en planerare inte ihop något som är värt resan hit, och det säger vi hellre nu än slösar er tid.' },
   getQuoteLike: {
     en: 'Get a quote for a wedding like this',
     fi: 'Pyydä tarjous tällaisille häille',
@@ -566,7 +256,6 @@ const P: Record<PKey, Localized<string>> = {
 export default function Pricing() {
   const { lang } = useLang();
   const p = (k: PKey) => pickLocalized(P[k], lang);
-  const guests = ui('guests', lang);
 
   return (
     <>
@@ -589,68 +278,17 @@ export default function Pricing() {
         title={p('s1Title')}
         subtitle={p('exampleDisclaimer')}
       >
-        <div className="space-y-10 sm:space-y-14 max-w-5xl mx-auto">
-          {stories.map((s) => (
-            <article
-              key={s.image}
-              className="bg-night-light/60 border border-white/5 rounded-3xl overflow-hidden grid md:grid-cols-2 md:items-start"
-            >
-              <div className="aspect-[4/3] relative overflow-hidden md:rounded-l-3xl">
-                <img
-                  src={s.image}
-                  alt={pickLocalized(s.label, lang)}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                  width="800"
-                  height="600"
-                />
-                <div className="absolute top-4 left-4 px-3 py-1.5 bg-black/55 backdrop-blur rounded-full text-[11px] font-semibold text-white tracking-wider uppercase">
-                  {s.emoji} {s.type}
-                </div>
+        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {([['d1Title', 'd1Body'], ['d2Title', 'd2Body'], ['d3Title', 'd3Body']] as const).map(
+            ([tk, bk]) => (
+              <div key={tk} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 sm:p-7">
+                <p className="text-xs uppercase tracking-[0.2em] text-aurora-pink font-semibold mb-2.5">
+                  {p(tk)}
+                </p>
+                <p className="text-sm text-gray-300 leading-[1.7]">{p(bk)}</p>
               </div>
-              <div className="p-6 sm:p-8 flex flex-col">
-                <div className="flex items-baseline justify-between gap-3 mb-1">
-                  <h3 className="font-heading text-2xl sm:text-3xl text-white tracking-wide min-w-0 break-words">{pickLocalized(s.label, lang)}</h3>
-                  <p className="font-heading tracking-wide text-rose text-2xl sm:text-3xl whitespace-nowrap shrink-0">{s.range}</p>
-                </div>
-                <p className="text-xs uppercase tracking-[0.2em] text-aurora-pink font-semibold mb-3">
-                  {s.guests} {guests}
-                </p>
-                <p className="text-sm sm:text-[15px] text-gray-300 leading-relaxed mb-5">
-                  {pickLocalized(s.story, lang)}
-                </p>
-
-                <div className="border border-line rounded-xl p-4 mb-5" style={{ background: 'rgba(252, 232, 225, 0.45)' }}>
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-gray-500 font-semibold mb-2">
-                    {p('whereMoneyGoes')}
-                  </p>
-                  <ul className="space-y-1.5">
-                    {pickLocalized(s.spends, lang).map((line) => (
-                      <li key={line} className="flex items-start gap-2 text-[13px] text-gray-300">
-                        <span className="text-aurora-green mt-0.5">·</span>
-                        <span>{line}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <p className="text-[13px] italic text-aurora-pink leading-relaxed mb-5 border-l-2 border-aurora-pink pl-3">
-                  {pickLocalized(s.takeaway, lang)}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  <L
-                    to="/contact"
-                    className="text-xs px-3 py-1.5 rounded-full font-semibold transition-colors"
-                    style={{ color: '#FFFFFF', background: '#C9466A' }}
-                  >
-                    {p('getQuoteLike')} →
-                  </L>
-                </div>
-              </div>
-            </article>
-          ))}
+            ),
+          )}
         </div>
       </Section>
 
