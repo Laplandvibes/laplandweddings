@@ -333,7 +333,7 @@ export default function VenuePage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
             <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{tr.sections.capacity}</p>
-            <p className="font-heading text-3xl mb-0.5" style={{ color: '#1F1612' }}>{v.capacity.min}–{v.capacity.max}</p>
+            <p className="font-heading tracking-wide text-3xl mb-0.5" style={{ color: '#1F1612' }}>{v.capacity.min}–{v.capacity.max}</p>
             <p className="text-sm" style={{ color: '#5A4F48' }}>{guests}</p>
           </div>
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
@@ -344,7 +344,7 @@ export default function VenuePage() {
           </div>
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
             <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{vt('open')}</p>
-            <p className="font-heading text-2xl mb-0.5" style={{ color: '#1F1612' }}>
+            <p className="font-heading tracking-wide text-2xl mb-0.5" style={{ color: '#1F1612' }}>
               {v.yearRound ? vt('yearRound') : vt('seasonal')}
             </p>
             {/* Year-round venues said it three times ("OPEN / Year-round / 12 months/year").
@@ -462,7 +462,7 @@ export default function VenuePage() {
                       />
                     )}
                     <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: 'var(--color-rose-ink)' }}>{sib.region[dataLang]}</p>
-                    <h4 className="font-heading text-xl mb-1" style={{ color: '#1F1612' }}>{sib.name}</h4>
+                    <h4 className="font-heading tracking-wide text-xl mb-1" style={{ color: '#1F1612' }}>{sib.name}</h4>
                     <p className="text-xs" style={{ color: '#5A4F48' }}>{sib.capacity.min}–{sib.capacity.max} {guests} · {sib.priceTier}</p>
                   </div>
                 </L>

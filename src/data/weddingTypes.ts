@@ -6,7 +6,9 @@ export interface WeddingType {
   tagline: Localized<string>;
   description: Localized<string>;
   bestSeason: Localized<string>;
-  priceRange: string;
+  /* priceRange removed 2026-07-29 (Vesa): the six ranges were invented,
+     spanned up to 16x, and mixed per-night with per-wedding units. Re-add
+     only with figures that can be sourced. Money lives on /pricing. */
   capacity: string;
   highlights: Localized<string[]>;
   considerations: Localized<string[]>;
@@ -74,7 +76,6 @@ export const weddingTypes: WeddingType[] = [
       nl: 'September–maart, het best oktober–februari',
       sv: 'september–mars, bäst oktober–februari',
     },
-    priceRange: '€2 500 – €40 000',
     capacity: '2–60 vierasta',
     highlights: {
       fi: ['Aurora-hälytysjärjestelmät yhteistyö-venueilla', 'Lasi-iglu yöksi (revontulet katosta)', 'Valokuvaaja jolla revontulikalibrointi', 'Polttariperinteet revontulien alla'],
@@ -166,7 +167,6 @@ export const weddingTypes: WeddingType[] = [
       nl: 'December–april (kapellen open)',
       sv: 'december–april (kapellen öppna)',
     },
-    priceRange: '€1 500 – €15 000',
     capacity: '2–60 vierasta',
     highlights: {
       fi: ['Joka kappeli rakennetaan vuosittain uudelleen, ainutkertainen', 'Vihkiminen + lasinen jäätyikkä-toivotus', 'Vieraat lampaantaljoissa ja viltteihin käärittyinä', 'Useimmilla kappeleilla oma vihkijä-järjestely paikalla'],
@@ -258,7 +258,6 @@ export const weddingTypes: WeddingType[] = [
       nl: 'November–april voor sneeuw en noorderlicht',
       sv: 'november–april för snö och norrsken',
     },
-    priceRange: '€300 – €1 200 / yö',
     capacity: '2 hengen yöpyminen',
     highlights: {
       fi: ['Aurora-hälytys herättää keskellä yötä jos revontulet ilmestyvät', 'Pohjalämmitys + sähkölämmitetty lasikatto', 'Sauna ja amme yleensä mukana premium-mallissa', 'Aamiainen iglussa tai pääravintolassa'],
@@ -353,7 +352,6 @@ export const weddingTypes: WeddingType[] = [
       nl: '23 mei – 24 juli',
       sv: '23 maj – 24 juli',
     },
-    priceRange: '€2 000 – €30 000',
     capacity: '2–80 vierasta',
     highlights: {
       fi: ['24h luonnonvalo: kuvaussessio milloin tahansa', 'Lämmin sää: perinteinen morsiuspuku ilman ekstrapakkasta', 'Hyttysmäärä huipussaan kesä–heinäkuussa: torjunta tärkeää', 'Halvempi sesonki kuin talvi: premium-iglut 40–50 % alennuksessa'],
@@ -445,7 +443,6 @@ export const weddingTypes: WeddingType[] = [
       nl: 'Het hele jaar: het best in december, februari en juni',
       sv: 'året runt: bäst i december, februari och juni',
     },
-    priceRange: '€1 600 – €5 200',
     capacity: '2 hengen',
     highlights: {
       fi: ['Kustannus 1/10 perinteisistä häistä', 'DVV-paperit hoituu 3–5 viikossa', 'Avaimet käteen -paketit valokuvaaja ja vihkijä mukana', 'Ei painetta vieraille: paras lokaatiovalinta'],
@@ -537,7 +534,6 @@ export const weddingTypes: WeddingType[] = [
       nl: 'Het hele jaar, het best bij de mijlpaal van 5/10/25/50 jaar',
       sv: 'året runt, bäst vid 5/10/25/50-årsmilstolpen',
     },
-    priceRange: '€800 – €3 500',
     capacity: '2–30 vierasta',
     highlights: {
       fi: ['Ei DVV-papereita', 'Vapaa muoto: voitte itse kirjoittaa lupaukset', 'Sopii uusperheille (lapsen siunaus mukana)', 'Halvempi kuin viralliset häät'],

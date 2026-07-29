@@ -92,7 +92,7 @@ export default function LocationPage() {
         <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-2">{tr.sections.airport}</p>
-            <p className="font-heading text-2xl text-white">{loc.airport}</p>
+            <p className="font-heading tracking-wide text-2xl text-white">{loc.airport}</p>
             <p className="text-sm text-gray-400 mt-1">{loc.airportDistanceKm} km {ui('fromCentre', lang)}</p>
           </div>
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">

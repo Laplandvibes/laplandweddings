@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @source "../../shared/**/*.{ts,tsx}";
@@ -7,7 +7,13 @@
   /* Network rule (Vesa 2026-07-24): the #LAPLAND* wordmark renders in Bebas Neue
      on every site, variant fonts stay for headings/body. */
   --font-logo: 'Bebas Neue', 'Arial Narrow', sans-serif;
-  --font-heading: 'Cormorant Garamond', serif;
+  /* Network standard (Vesa 2026-07-29). Was Cormorant Garamond; this site was
+     never on CLAUDE.md's list of approved font variants and the Command Center
+     already described it as Standard LV. Same unification laplandstays got
+     2026-07-23 and laplandchristmas 2026-07-24: the cream palette stays as the
+     site's own trait, the typography returns to the network's.
+     Bebas is condensed and caps-only, so never pair it with tracking-tight. */
+  --font-heading: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 
   /* WARM LUXE WEDDING PALETTE — deep espresso bg + cream cards.

@@ -612,7 +612,7 @@ export default function Pricing() {
               <div className="p-6 sm:p-8 flex flex-col">
                 <div className="flex items-baseline justify-between gap-3 mb-1">
                   <h3 className="font-heading text-2xl sm:text-3xl text-white tracking-wide min-w-0 break-words">{pickLocalized(s.label, lang)}</h3>
-                  <p className="font-heading text-rose text-2xl sm:text-3xl whitespace-nowrap shrink-0">{s.range}</p>
+                  <p className="font-heading tracking-wide text-rose text-2xl sm:text-3xl whitespace-nowrap shrink-0">{s.range}</p>
                 </div>
                 <p className="text-xs uppercase tracking-[0.2em] text-aurora-pink font-semibold mb-3">
                   {s.guests} {guests}
@@ -669,7 +669,7 @@ export default function Pricing() {
               }`}
             >
               <p className="text-[15px] text-gray-200 min-w-0 pr-3">{pickLocalized(b.title, lang)}</p>
-              <p className="font-heading text-rose text-base sm:text-lg whitespace-nowrap shrink-0">
+              <p className="font-heading tracking-wide text-rose text-base sm:text-lg whitespace-nowrap shrink-0">
                 {pickLocalized(b.range, lang)}
               </p>
             </div>

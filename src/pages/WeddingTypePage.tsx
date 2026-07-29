@@ -81,19 +81,22 @@ export default function WeddingTypePage() {
       />
 
       <Section>
-        <div className="grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
+        {/* The price-range box is gone (Vesa 2026-07-29): the figure was invented
+            and said nothing useful at a 16x span. Money lives on the pricing
+            page only, and this card now points there instead of quoting one. */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-1">{tr.sections.season}</p>
             <p className="text-base text-white">{wt.bestSeason[dataLang]}</p>
           </div>
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
-            <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-1">{tr.sections.priceRange}</p>
-            <p className="text-base text-white">{wt.priceRange}</p>
-          </div>
-          <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-1">{tr.sections.capacity}</p>
             <p className="text-base text-white">{wt.capacity}</p>
           </div>
+          <L to="/pricing" className="bg-night-light/60 border border-white/5 hover:border-rose/40 rounded-2xl p-6 transition-colors">
+            <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-1">{tr.sections.priceRange}</p>
+            <p className="text-base text-rose">{tr.cta.learnMore} →</p>
+          </L>
         </div>
         <p className="text-gray-300 leading-relaxed text-base sm:text-lg max-w-3xl mx-auto">{wt.description[dataLang]}</p>
       </Section>

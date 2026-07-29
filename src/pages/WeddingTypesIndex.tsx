@@ -84,9 +84,10 @@ export default function WeddingTypesIndex() {
                  decoding="async" width="800" height="600"/>
               </div>
               <div className="p-6 sm:p-7 flex-1 flex flex-col">
-                <div className="flex items-start justify-between gap-3 mb-2">
+                {/* Price range removed 2026-07-29 (Vesa): the figures were
+                    invented and the units were inconsistent between cards. */}
+                <div className="mb-2">
                   <h3 className="font-heading text-2xl text-white tracking-wide group-hover:text-rose transition-colors min-w-0 break-words">{wt.name[dataLang]}</h3>
-                  <span className="text-xs text-gold font-semibold whitespace-nowrap shrink-0 mt-1">{wt.priceRange}</span>
                 </div>
                 <p className="text-sm text-gray-300 mb-3 leading-relaxed">{wt.tagline[dataLang]}</p>
                 <p className="text-sm text-gray-400 line-clamp-3 mb-4 flex-1">{wt.description[dataLang]}</p>

@@ -392,7 +392,7 @@ export default function PartnerForm() {
   if (submitted) {
     return (
       <div className="bg-night-light border border-aurora-green/40 rounded-2xl p-8 text-center">
-        <p className="font-heading text-2xl text-white mb-2">
+        <p className="font-heading tracking-wide text-2xl text-white mb-2">
           {tr('successTitle')}
         </p>
         <p className="text-gray-300 text-sm leading-relaxed">

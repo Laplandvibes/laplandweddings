@@ -1019,7 +1019,7 @@ export default function PracticalGuide() {
         <div className="space-y-4 max-w-4xl mx-auto">
           {STEPS.map((s) => (
             <div key={s.n} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 flex gap-5">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-rose/20 border border-rose/40 text-rose font-heading text-xl flex items-center justify-center">{s.n}</div>
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-rose/20 border border-rose/40 text-rose font-heading tracking-wide text-xl flex items-center justify-center">{s.n}</div>
               <div>
                 <h3 className="font-heading text-xl text-white mb-2 tracking-wide">{pl(s.t)}</h3>
                 <p className="text-gray-300 leading-relaxed mb-2">{pl(s.p)}</p>
@@ -1062,7 +1062,7 @@ export default function PracticalGuide() {
           {SEASONS.map((s) => (
             <div key={s.colorClass} className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
               {/* Heading in dark ink for contrast; season accent lives in the dot. */}
-              <p className="font-heading text-xl mb-2 text-night flex items-center gap-2.5">
+              <p className="font-heading tracking-wide text-xl mb-2 text-night flex items-center gap-2.5">
                 <span aria-hidden="true" className={`inline-block w-2.5 h-2.5 rounded-full flex-shrink-0 ${s.colorClass}`} />
                 {pl(s.period)}
               </p>
@@ -1076,7 +1076,7 @@ export default function PracticalGuide() {
         <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {AIRPORTS.map((ap) => (
             <div key={ap.code} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 flex flex-col">
-              <p className="font-heading text-xl text-white mb-2">{ap.name} ({ap.code})</p>
+              <p className="font-heading tracking-wide text-xl text-white mb-2">{ap.name} ({ap.code})</p>
               <p className="text-sm text-gray-300 leading-relaxed mb-4 flex-1">{pl(ap.body)}</p>
               <div className="flex flex-col gap-2">
                 <a href={tripToLapland('LHR', ap.code)} target="_blank" rel={AFFILIATE_REL} className="text-xs text-aurora-pink hover:underline">

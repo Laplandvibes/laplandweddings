@@ -180,93 +180,104 @@ export default function Home() {
             {
               stat: '21',
               label: pick(lang, {
-                fi: 'kartoitettua hääpaikkaa',
+                fi: 'hääpaikkaa kartoitettu',
                 en: 'venues surveyed',
-                de: 'erfasste Hochzeitsorte',
-                ja: '掲載会場数',
-                ko: '조사한 결혼식 장소',
+                de: 'Orte erfasst',
+                ja: '会場を調査',
+                ko: '곳을 조사',
                 fr: 'lieux recensés',
                 it: 'location censite',
-                nl: 'geïnventariseerde locaties',
-                sv: 'kartlagda platser',
+                nl: 'locaties bekeken',
+                sv: 'platser kartlagda',
               }),
               body: pick(lang, {
-                fi: 'Kävimme Lapin hääpaikat läpi ja kokosimme ne yhteen listaan. Emme edusta yhtäkään niistä emmekä myy niitä, joten järjestystä ei voi ostaa.',
-                en: 'We went through the wedding venues in Lapland and gathered them into one list. We represent none of them and sell none of them, so the order cannot be bought.',
-                de: 'Wir haben die Hochzeitsorte Lapplands durchgesehen und in einer Liste zusammengestellt. Wir vertreten keinen davon und verkaufen keinen, die Reihenfolge ist also nicht käuflich.',
-                ja: 'ラップランドの結婚式会場を一つずつ確認し、一つのリストにまとめました。当サイトはいずれの会場の代理店でもなく、販売もしていません。掲載順を買うことはできません。',
-                ko: '라플란드의 결혼식 장소를 하나씩 살펴보고 한 목록으로 정리했습니다. 저희는 그 어느 곳도 대리하지 않고 판매하지도 않으므로, 순서를 돈으로 살 수 없습니다.',
-                fr: 'Nous avons passé en revue les lieux de mariage de Laponie et les avons réunis en une seule liste. Nous n’en représentons aucun et n’en vendons aucun : l’ordre ne s’achète pas.',
-                it: 'Abbiamo esaminato le location per matrimoni della Lapponia e le abbiamo raccolte in un unico elenco. Non ne rappresentiamo nessuna e non ne vendiamo nessuna, quindi l’ordine non si può comprare.',
-                nl: 'We hebben de trouwlocaties in Lapland doorgenomen en in één lijst gebundeld. We vertegenwoordigen er geen en verkopen er geen, dus de volgorde is niet te koop.',
-                sv: 'Vi gick igenom bröllopsplatserna i Lappland och samlade dem i en lista. Vi företräder ingen av dem och säljer ingen av dem, så ordningen går inte att köpa.',
+                fi: 'Emme edusta yhtäkään niistä emmekä myy niitä. Järjestystä ei voi ostaa.',
+                en: 'We represent none of them and sell none of them. The order cannot be bought.',
+                de: 'Wir vertreten keinen davon und verkaufen keinen. Die Reihenfolge ist nicht käuflich.',
+                ja: 'いずれの代理店でもなく、販売もしていません。掲載順は買えません。',
+                ko: '어느 곳도 대리하거나 판매하지 않습니다. 순서는 살 수 없습니다.',
+                fr: 'Nous n’en représentons aucun et n’en vendons aucun. L’ordre ne s’achète pas.',
+                it: 'Non ne rappresentiamo e non ne vendiamo nessuna. L’ordine non si compra.',
+                nl: 'We vertegenwoordigen er geen en verkopen er geen. De volgorde is niet te koop.',
+                sv: 'Vi företräder ingen och säljer ingen. Ordningen går inte att köpa.',
               }),
             },
             {
               stat: '0',
               label: pick(lang, {
-                fi: 'lupaa symboliseen seremoniaan',
-                en: 'permits for a symbolic ceremony',
-                de: 'Genehmigungen für eine freie Trauung',
-                ja: 'シンボリック挙式に必要な許可',
-                ko: '상징 예식에 필요한 허가',
-                fr: 'démarche pour une cérémonie symbolique',
-                it: 'permessi per una cerimonia simbolica',
-                nl: 'vergunningen voor een symbolische ceremonie',
-                sv: 'tillstånd för en symbolisk ceremoni',
+                fi: 'lupaa tai papereita',
+                en: 'permits or paperwork',
+                de: 'Genehmigungen nötig',
+                ja: '許可も書類も不要',
+                ko: '허가도 서류도 없이',
+                fr: 'démarche administrative',
+                it: 'permessi o documenti',
+                nl: 'vergunningen of papieren',
+                sv: 'tillstånd eller papper',
               }),
               body: pick(lang, {
-                fi: 'Useimmat Lappiin tulevat parit pitävät symbolisen seremonian ja solmivat juridisen avioliiton kotimaassaan. Silloin viranomaispapereita ei tarvita lainkaan.',
-                en: 'Most couples who come to Lapland hold a symbolic ceremony and register the marriage legally at home. Nothing official is required here.',
-                de: 'Die meisten Paare, die nach Lappland kommen, feiern eine freie Trauung und schließen die Ehe rechtlich in ihrer Heimat. Dafür sind hier keinerlei Behördenpapiere nötig.',
-                ja: 'ラップランドを訪れるカップルの多くはシンボリック挙式を行い、法的な婚姻は母国で成立させます。その場合、こちらでの役所手続きは一切必要ありません。',
-                ko: '라플란드를 찾는 대부분의 커플은 상징 예식을 올리고 법적 혼인은 본국에서 신고합니다. 이 경우 현지 관공서 서류는 전혀 필요하지 않습니다.',
-                fr: 'La plupart des couples qui viennent en Laponie célèbrent une cérémonie symbolique et enregistrent leur mariage dans leur pays. Aucune formalité administrative n’est alors nécessaire ici.',
-                it: 'La maggior parte delle coppie che arriva in Lapponia celebra una cerimonia simbolica e registra il matrimonio nel proprio Paese. In quel caso qui non serve alcun documento ufficiale.',
-                nl: 'De meeste paren die naar Lapland komen houden een symbolische ceremonie en leggen het huwelijk juridisch thuis vast. Dan is hier geen enkel officieel papier nodig.',
-                sv: 'De flesta par som kommer till Lappland håller en symbolisk ceremoni och ingår äktenskapet juridiskt hemma. Då behövs inga myndighetspapper här.',
+                fi: 'Symbolinen seremonia ei vaadi viranomaisilta mitään. Juridisen avioliiton useimmat solmivat kotimaassaan.',
+                en: 'A symbolic ceremony needs nothing from the authorities. Most couples register the marriage legally at home.',
+                de: 'Eine freie Trauung braucht keinerlei Behördenpapiere. Die Ehe schließen die meisten rechtlich zu Hause.',
+                ja: 'シンボリック挙式に役所の手続きは不要。法的な婚姻は多くが母国で行います。',
+                ko: '상징 예식에는 관공서 절차가 필요 없습니다. 법적 혼인은 대부분 본국에서 합니다.',
+                fr: 'Une cérémonie symbolique n’exige aucune formalité. Le mariage légal se fait le plus souvent au pays.',
+                it: 'Una cerimonia simbolica non richiede nulla alle autorità. Il matrimonio legale si registra a casa.',
+                nl: 'Een symbolische ceremonie vraagt niets van de overheid. Het huwelijk legt men meestal thuis vast.',
+                sv: 'En symbolisk ceremoni kräver inget av myndigheterna. Äktenskapet ingås oftast hemma.',
               }),
             },
             {
+              /* Was "Jouluk.–maalisk." as the display token. It wrapped onto two
+                 lines even on desktop, which pushed this card's label and body
+                 out of line with the other two (Vesa 2026-07-29). The months
+                 moved into the label, where they fit on one line. */
               stat: pick(lang, {
-                fi: 'Jouluk.–maalisk.',
-                en: 'Dec–Mar',
-                de: 'Dez.–März',
-                ja: '12月〜3月',
-                ko: '12월~3월',
-                fr: 'déc.–mars',
-                it: 'dic.–mar.',
-                nl: 'dec.–mrt.',
-                sv: 'dec.–mars',
+                fi: 'Talvi',
+                en: 'Winter',
+                de: 'Winter',
+                ja: '冬',
+                ko: '겨울',
+                fr: 'L’hiver',
+                it: 'Inverno',
+                nl: 'Winter',
+                sv: 'Vintern',
               }),
               label: pick(lang, {
-                fi: 'vilkkain sesonki',
-                en: 'the busiest season',
-                de: 'Hauptsaison',
-                ja: '最盛期',
-                ko: '가장 붐비는 시기',
-                fr: 'la haute saison',
-                it: 'alta stagione',
-                nl: 'het drukste seizoen',
-                sv: 'högsäsongen',
+                fi: 'sesonki jouluk.–maalisk.',
+                en: 'season runs Dec–Mar',
+                de: 'Saison Dez.–März',
+                ja: 'シーズンは12〜3月',
+                ko: '성수기 12~3월',
+                fr: 'saison déc.–mars',
+                it: 'stagione dic.–mar.',
+                nl: 'seizoen dec.–mrt.',
+                sv: 'säsong dec.–mars',
               }),
               body: pick(lang, {
-                fi: 'Lumi ja revontulet ovat varmimmillaan keskitalvella. Kesäkuusta heinäkuuhun aurinko ei laske lainkaan, jolloin ulkoseremonian voi pitää keskellä yötä.',
-                en: 'Snow and the aurora are at their most reliable in midwinter. From June to July the sun never sets, so an outdoor ceremony can be held in the middle of the night.',
-                de: 'Schnee und Polarlichter sind im Hochwinter am verlässlichsten. Von Juni bis Juli geht die Sonne gar nicht unter, eine Trauung im Freien ist also mitten in der Nacht möglich.',
-                ja: '雪とオーロラがもっとも確実なのは真冬です。6月から7月にかけては太陽が沈まないため、真夜中でも屋外での挙式ができます。',
-                ko: '눈과 오로라는 한겨울에 가장 확실합니다. 6월부터 7월까지는 해가 지지 않아 한밤중에도 야외 예식을 올릴 수 있습니다.',
-                fr: 'La neige et les aurores sont les plus fiables au cœur de l’hiver. De juin à juillet, le soleil ne se couche pas : une cérémonie en plein air est possible en pleine nuit.',
-                it: 'Neve e aurora sono più affidabili nel pieno dell’inverno. Da giugno a luglio il sole non tramonta mai, quindi una cerimonia all’aperto si può celebrare nel cuore della notte.',
-                nl: 'Sneeuw en noorderlicht zijn het betrouwbaarst midden in de winter. Van juni tot juli gaat de zon niet onder, dus een ceremonie buiten kan midden in de nacht.',
-                sv: 'Snö och norrsken är som säkrast mitt i vintern. Från juni till juli går solen aldrig ner, så en ceremoni utomhus kan hållas mitt i natten.',
+                fi: 'Lumi ja revontulet ovat silloin varmimmillaan. Kesällä aurinko ei laske lainkaan.',
+                en: 'Snow and the aurora are at their most reliable then. In summer the sun never sets.',
+                de: 'Schnee und Polarlichter sind dann am verlässlichsten. Im Sommer geht die Sonne nie unter.',
+                ja: '雪とオーロラがもっとも確実な時期です。夏は太陽が沈みません。',
+                ko: '눈과 오로라가 가장 확실한 시기입니다. 여름에는 해가 지지 않습니다.',
+                fr: 'La neige et les aurores sont alors les plus fiables. En été, le soleil ne se couche pas.',
+                it: 'Neve e aurora sono allora più affidabili. D’estate il sole non tramonta mai.',
+                nl: 'Sneeuw en noorderlicht zijn dan het betrouwbaarst. In de zomer gaat de zon nooit onder.',
+                sv: 'Snö och norrsken är då som säkrast. På sommaren går solen aldrig ner.',
               }),
             },
           ].map((stat) => (
-            <div key={stat.label} className="bg-night-light p-7 sm:p-9 flex flex-col">
-              <p className="font-heading text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-rose tracking-wide mb-1">{stat.stat}</p>
-              <p className="text-xs uppercase tracking-[0.25em] text-aurora-pink font-semibold mb-4">{stat.label}</p>
-              <p className="text-sm text-gray-300 leading-relaxed">{stat.body}</p>
+            /* The display token sits in a fixed-height box so the labels and
+               body copy start on the same line in all three cards regardless of
+               how tall the token renders in a given language. */
+            <div key={stat.label} className="bg-night-light p-7 sm:p-8 lg:p-9 flex flex-col">
+              <p className="font-heading text-[44px] sm:text-5xl lg:text-[52px] leading-none text-rose tracking-wide min-h-[52px] sm:min-h-[48px] lg:min-h-[52px] flex items-end">
+                {stat.stat}
+              </p>
+              <p className="text-[11px] sm:text-xs uppercase tracking-[0.16em] text-aurora-pink font-semibold mt-3.5 mb-3 leading-snug [text-wrap:balance]">
+                {stat.label}
+              </p>
+              <p className="text-sm text-gray-300 leading-[1.7] max-w-[34ch]">{stat.body}</p>
             </div>
           ))}
         </div>
@@ -308,9 +319,13 @@ export default function Home() {
                   {wt.name[dataLang]}
                 </h3>
                 <p className="hidden sm:block text-sm text-gray-200/90 mb-3 line-clamp-2">{wt.tagline[dataLang]}</p>
-                <div className="flex items-center justify-between text-[10px] sm:text-xs gap-2">
-                  <span className="text-gold font-semibold whitespace-nowrap">{wt.priceRange}</span>
-                  <span className="hidden sm:inline text-gray-300">{wt.capacity}</span>
+                {/* Price range removed 2026-07-29 (Vesa). The figures were
+                    invented, spanned 16x (€2 500–€40 000), and mixed units: the
+                    glass-igloo card quoted a price per night beside cards
+                    quoting the cost of a whole wedding. Money now lives only on
+                    the pricing page, where a number can be explained. */}
+                <div className="text-[10px] sm:text-xs text-gray-300">
+                  {wt.capacity}
                 </div>
               </div>
             </L>

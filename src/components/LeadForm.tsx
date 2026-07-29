@@ -224,7 +224,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
   if (submitted) {
     return (
       <div className="max-w-2xl mx-auto bg-night-light/60 border border-aurora-green/40 rounded-2xl p-8 text-center">
-        <p className="text-2xl font-heading text-white mb-2">{tr.form.success}</p>
+        <p className="text-2xl font-heading tracking-wide text-white mb-2">{tr.form.success}</p>
         <p className="text-gray-400 text-sm">{LEAD_INBOX}</p>
       </div>
     );

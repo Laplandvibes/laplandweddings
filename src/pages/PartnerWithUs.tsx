@@ -814,7 +814,7 @@ export default function PartnerWithUs() {
         <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div key={step.n} className="text-center sm:text-left">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose to-pink text-white font-heading text-2xl flex items-center justify-center mx-auto sm:mx-0 mb-4 shadow-lg shadow-rose/30">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-rose to-pink text-white font-heading tracking-wide text-2xl flex items-center justify-center mx-auto sm:mx-0 mb-4 shadow-lg shadow-rose/30">
                 {step.n}
               </div>
               <h3 className="font-heading text-xl text-white tracking-wide mb-2">{pickLocalized(step.title, lang)}</h3>
@@ -834,14 +834,14 @@ export default function PartnerWithUs() {
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           <article className="bg-night-light border border-white/10 rounded-2xl p-7">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-2">{c('sharedLead')}</p>
-            <p className="font-heading text-4xl text-white mb-1">€35<span className="text-lg text-gray-400 font-body"> / {c('perLead')}</span></p>
+            <p className="font-heading tracking-wide text-4xl text-white mb-1">€35<span className="text-lg text-gray-400 font-body"> / {c('perLead')}</span></p>
             <p className="text-sm text-gray-300 leading-relaxed mt-3">
               {c('sharedBody')}
             </p>
           </article>
           <article className="bg-night-light border border-gold/30 rounded-2xl p-7">
             <p className="text-xs uppercase tracking-wider text-gold font-semibold mb-2">{c('exclusiveLead')}</p>
-            <p className="font-heading text-4xl text-white mb-1">{c('fromPrice')}<span className="text-lg text-gray-400 font-body"> / {c('perLead')}</span></p>
+            <p className="font-heading tracking-wide text-4xl text-white mb-1">{c('fromPrice')}<span className="text-lg text-gray-400 font-body"> / {c('perLead')}</span></p>
             <p className="text-sm text-gray-300 leading-relaxed mt-3">
               {c('exclusiveBody')}
             </p>
