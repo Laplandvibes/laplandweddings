@@ -230,14 +230,22 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
     );
   }
 
-  const t1 = 'block text-sm font-medium text-gray-200 mb-1.5';
+  /* The form card is always a cream surface, so `bg-night-light` fields ended up
+     the same colour as the card they sit on and `border-white/10` was invisible
+     against it: the inputs read as flat beige rectangles with no edges (Vesa
+     2026-07-29: "lomakkeen kontrasti ja tyyli ei ole kyllä houkutteleva").
+     Fields are now explicitly white with a warm visible border, so they look
+     like something you can type into. */
+  const t1 = 'block text-sm font-semibold text-gray-200 mb-1.5';
   // 16px input font prevents iOS auto-zoom; min-h-12 = 48px target for tap area
-  const t2 = 'w-full min-h-[48px] rounded-lg bg-night-light border border-white/10 focus:border-rose focus:ring-1 focus:ring-rose px-3.5 py-2.5 text-base text-white placeholder-gray-500 outline-none transition-colors';
-  // Native <select>s: hide the OS arrow (renders poorly on dark fields) and
-  // draw our own chevron inside the field instead.
+  const t2 =
+    'w-full min-h-[48px] rounded-lg bg-white border border-[#DDD0C4] hover:border-[#C4B2A2] ' +
+    'focus:border-[#C9466A] focus:ring-2 focus:ring-[#C9466A]/25 px-3.5 py-2.5 text-base ' +
+    'text-[#1F1612] placeholder-[#8C7F74] outline-none transition-colors';
+  // Native <select>s: hide the OS arrow and draw our own chevron in the field.
   const t2select = `${t2} appearance-none pr-10`;
   const selectChevron = (
-    <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500" aria-hidden="true" />
+    <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-[#8C7F74]" aria-hidden="true" />
   );
 
   return (

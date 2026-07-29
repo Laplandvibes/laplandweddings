@@ -15,7 +15,7 @@ import { ui } from '../data/uiStrings';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
 import GoogleRatingRow from '../components/GoogleRatingRow';
 import EditorsPickChip from '../components/EditorsPickChip';
-import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
+import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
 const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' | 'premium' | 'independence', Localized<string>> = {
@@ -182,7 +182,7 @@ export default function Venues() {
           <p className="text-center text-gray-400 py-12">{tr.venues.noResults}</p>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((v) => (
+            {pickFirst(filtered, pick).map((v) => (
               // The rating row is an <a>, so it sits BESIDE the card link, not
               // inside it: nested anchors are invalid HTML.
               <div key={v.slug} className="group flex flex-col bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all">

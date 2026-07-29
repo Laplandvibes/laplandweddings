@@ -15,7 +15,7 @@ import { AD_SLOTS } from '../data/adSlots';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
 import GoogleRatingRow from '../components/GoogleRatingRow';
 import EditorsPickChip from '../components/EditorsPickChip';
-import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
+import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 import { pickLocalized } from '../data/localized';
 
@@ -589,7 +589,7 @@ export default function Home() {
         <FeaturedPartnerSlot placement="home_featured" locale={lang} />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {featuredVenues.map((v) => (
+          {pickFirst(featuredVenues, venuePick).map((v) => (
             // The rating row is an <a>, so it sits BESIDE the card link, not
             // inside it: nested anchors are invalid HTML.
             <div

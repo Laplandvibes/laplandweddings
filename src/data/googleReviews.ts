@@ -244,3 +244,20 @@ export function editorialPickNote(
   if (!pick.lastVerified) return copy.pickReason;
   return `${copy.pickReason} · ${copy.verifiedOn.replace('{d}', formatVerifiedDate(pick.lastVerified, lang))}`;
 }
+
+/**
+ * Move the editorial pick to the front of a list.
+ *
+ * The chip says "toimituksen valinta" / "editor's pick", but the grid used to
+ * render registry order, so the pick could sit anywhere on the page. Vesa
+ * 2026-07-29: "jos on toimituksen valinta niin eikö se ole aina ensimmäisenä?"
+ * Correct: a pick that is not first is not a pick, it is a sticker.
+ *
+ * Returns the array unchanged when there is no pick, so callers can wrap
+ * unconditionally. Order is otherwise preserved.
+ */
+export function pickFirst<T>(items: readonly T[], pick: T | null): T[] {
+  if (!pick) return [...items];
+  const rest = items.filter((i) => i !== pick);
+  return rest.length === items.length ? [...items] : [pick, ...rest];
+}

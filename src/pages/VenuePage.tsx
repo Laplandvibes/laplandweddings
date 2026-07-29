@@ -356,7 +356,15 @@ export default function VenuePage() {
           <div className="bg-night-light rounded-2xl p-6 border border-line-light flex flex-col justify-center">
             <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{vt('suitsWeddings')}</p>
             <p className="text-sm mb-3" style={{ color: '#1F1612', lineHeight: '1.5' }}>{v.weddingTypeSlugs.length} {vt('weddingTypesCount')}</p>
-            <a href="#quote" className="text-xs font-semibold inline-flex items-center" style={{ color: 'var(--color-rose-ink)' }}>
+            {/* Was a small text link. The form itself sits at the very bottom of
+                a long page, so this is the only entry point most readers see
+                above the fold (Vesa 2026-07-29: "lomake on jotenkin tosi oudosti
+                sivun lopussa, moni edes nää sitä"). Made it a real button. */}
+            <a
+              href="#quote"
+              className="inline-flex items-center justify-center text-center text-sm font-semibold px-4 py-2.5 rounded-full transition-colors"
+              style={{ background: '#C9466A', color: '#FFFFFF' }}
+            >
               {vt('tailoredProposal')} →
             </a>
           </div>

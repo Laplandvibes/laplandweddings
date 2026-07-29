@@ -13,7 +13,7 @@ import { ui } from '../data/uiStrings';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
 import GoogleRatingRow from '../components/GoogleRatingRow';
 import EditorsPickChip from '../components/EditorsPickChip';
-import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
+import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
 const P: Record<'titleSuffix' | 'suitableVenues', Localized<string>> = {
@@ -135,7 +135,7 @@ export default function WeddingTypePage() {
         <FeaturedPartnerSlot placement="wedding_type_venues" locale={lang} />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {venues.map((v) => (
+          {pickFirst(venues, pick).map((v) => (
             // The rating row is an <a>, so it sits BESIDE the card link, not
             // inside it: nested anchors are invalid HTML.
             <div key={v.slug} className="group flex flex-col bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all">
