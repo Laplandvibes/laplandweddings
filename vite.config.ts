@@ -22,12 +22,22 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        // "b2" cache-generation segment: 2026-07-11 a truncated LangContext chunk got
-        // stuck in visitor browser caches under max-age=31536000,immutable → permanent
-        // white page. A new URL path is the only way past an immutable-cached asset.
-        entryFileNames: 'assets/[name]-b2-[hash].js',
-        chunkFileNames: 'assets/[name]-b2-[hash].js',
-        assetFileNames: 'assets/[name]-b2-[hash][extname]',
+        // Cache-generation segment. Bump it whenever visitors get stuck on a bad
+        // asset: a new URL path is the only way past an immutable-cached one.
+        //   b2  2026-07-11  truncated LangContext chunk cached under
+        //                   max-age=31536000,immutable → permanent white page.
+        //   b3  2026-07-28  same failure mode after a deploy: HTML cached under a
+        //                   .js URL, so every dynamic import threw "Failed to fetch
+        //                   dynamically imported module" and the page stayed blank
+        //                   with no console error. Reproduced by Vesa in incognito,
+        //                   while curl and the *.pages.dev preview served correct
+        //                   bytes the whole time, so the origin looked healthy.
+        //                   `immutable` was dropped from _headers in the same
+        //                   change so a reload can heal it instead of the visitor
+        //                   being stuck for a year.
+        entryFileNames: 'assets/[name]-b3-[hash].js',
+        chunkFileNames: 'assets/[name]-b3-[hash].js',
+        assetFileNames: 'assets/[name]-b3-[hash][extname]',
         manualChunks(id: string) {
           if (id.includes('node_modules')) {
             if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|scheduler)[\\/]/.test(id)) return 'react-vendor'

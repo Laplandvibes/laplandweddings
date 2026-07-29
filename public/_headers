@@ -15,7 +15,13 @@
   X-XSS-Protection: 1; mode=block
 
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  # `immutable` removed 2026-07-28. Filenames are content-hashed, so a year of
+  # caching is still correct, but `immutable` also tells the browser not to
+  # revalidate even on an explicit reload. Twice now (2026-07-11, 2026-07-28) a
+  # bad response got cached under an asset URL and left visitors on a permanently
+  # blank page that refreshing could not fix. Without `immutable` the same
+  # accident heals on the next reload.
+  Cache-Control: public, max-age=31536000
 
 /sitemap.xml
   Content-Type: application/xml
