@@ -5,79 +5,217 @@ import LeadForm from '../components/LeadForm';
 import { useLang } from '../i18n/LangContext';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
+/**
+ * What the parts cost, 2026-07-29.
+ *
+ * Every figure below is read off the operator's OWN published price page, and
+ * every row carries the link so a reader can check it. Prices were verified on
+ * 2026-07-29; operators change them, so re-check before quoting them elsewhere.
+ *
+ * The previous version of this table was eight invented ranges. They were
+ * removed rather than adjusted, because a plausible-looking invented price is
+ * indistinguishable from a real one and there is no way for a reader to tell.
+ *
+ * Note what is NOT here: the wedding-planner fee, the venue's own ceremony fee,
+ * flowers and catering. Nobody in Lapland publishes those. Arctic SnowHotel,
+ * for example, answers "we will be happy to give you a quotation for your
+ * wedding" and prints no number at all. Those four are listed separately below
+ * as quotation-only, which is itself useful: it tells a couple which parts they
+ * have to ask about instead of budgeting from a web page.
+ */
+const PRICE_VERIFIED = '2026-07-29';
 
-const breakdown: Array<{ title: Localized<string>; range: Localized<string> }> = [
+type CostRow = {
+  title: Localized<string>;
+  range: Localized<string>;
+  note?: Localized<string>;
+  source: { name: string; url: string };
+};
+
+const breakdown: CostRow[] = [
   {
     title: {
-      en: 'Wedding planner fee', fi: 'Hääsuunnittelijan palkkio', de: 'Honorar des Hochzeitsplaners',
-      ja: 'ウェディングプランナー料金', es: 'Honorarios del organizador', 'pt-BR': 'Honorários do organizador',
-      'zh-CN': '婚礼策划师费用', ko: '웨딩 플래너 비용', fr: 'Honoraires du wedding planner',
-      it: 'Onorario del wedding planner', nl: 'Honorarium trouwplanner', sv: 'Arvode till bröllopsplanerare',
+      en: 'Officiant, civil ceremony', fi: 'Vihkijä, siviilivihkiminen', de: 'Trauredner, standesamtlich',
+      ja: '司式者（民事婚）', es: 'Oficiante, ceremonia civil', 'pt-BR': 'Celebrante, cerimônia civil',
+      'zh-CN': '主婚人（民事仪式）', ko: '주례, 민사 예식', fr: 'Officiant, mariage civil',
+      it: 'Celebrante, rito civile', nl: 'Voltrekker, burgerlijke ceremonie', sv: 'Vigselförrättare, borgerlig vigsel',
     },
-    range: { en: '€1 600 – €5 000', fi: '1 600 – 5 000 €', de: '1 600 – 5 000 €', ja: '1,600〜5,000ユーロ', es: '1 600 – 5 000 €', 'pt-BR': '€ 1.600 – € 5.000', 'zh-CN': '1,600 – 5,000 欧元', ko: '1,600 – 5,000유로', fr: '1 600 – 5 000 €', it: '1 600 – 5 000 €', nl: '€ 1.600 – € 5.000' , sv: '€1 600 – €5 000'},
+    range: {
+      en: '€0 – €250', fi: '0 – 250 €', de: '0 – 250 €', ja: '0〜250ユーロ', es: '0 – 250 €',
+      'pt-BR': '€ 0 – € 250', 'zh-CN': '0 – 250 欧元', ko: '0 – 250유로', fr: '0 – 250 €',
+      it: '0 – 250 €', nl: '€ 0 – € 250', sv: '0 – 250 €',
+    },
+    note: {
+      en: 'Free at a DVV office on weekdays 9.00–16.15. Outside those hours it is €250 plus the officiant’s travel to the venue.',
+      fi: 'Maksuton DVV:n toimipisteessä arkisin klo 9.00–16.15. Sen ulkopuolella 250 € ja lisäksi vihkijän matkakulut vihkipaikalle.',
+      de: 'Kostenlos in einer DVV-Geschäftsstelle werktags 9.00–16.15 Uhr. Außerhalb dieser Zeiten 250 € zuzüglich der Anfahrt des Trauredners.',
+      ja: 'DVVの窓口で平日9:00〜16:15は無料。時間外は250ユーロに加え、司式者の会場までの交通費が必要です。',
+      es: 'Gratis en una oficina del DVV de lunes a viernes de 9.00 a 16.15. Fuera de ese horario son 250 € más el desplazamiento del oficiante.',
+      'pt-BR': 'Gratuito em um posto do DVV nos dias úteis das 9h às 16h15. Fora desse horário são € 250 mais o deslocamento do celebrante.',
+      'zh-CN': '工作日 9:00–16:15 在 DVV 办事处办理免费。此时间之外为 250 欧元，另需支付主婚人前往场地的交通费。',
+      ko: '평일 9:00~16:15에 DVV 사무소에서 진행하면 무료입니다. 그 외 시간에는 250유로와 주례의 이동 비용이 추가됩니다.',
+      fr: 'Gratuit dans un bureau du DVV en semaine de 9h00 à 16h15. En dehors de ces heures, 250 € plus le déplacement de l’officiant.',
+      it: 'Gratuito presso un ufficio DVV nei giorni feriali dalle 9.00 alle 16.15. Fuori da quell’orario 250 € più la trasferta del celebrante.',
+      nl: 'Gratis op een DVV-kantoor op werkdagen van 9.00 tot 16.15 uur. Daarbuiten € 250 plus de reiskosten van de voltrekker.',
+      sv: 'Gratis på ett DVV-kontor vardagar 9.00–16.15. Utanför den tiden 250 € plus vigselförrättarens resa till platsen.',
+    },
+    source: { name: 'dvv.fi', url: 'https://dvv.fi/vihkiminen' },
   },
   {
     title: {
-      en: 'DVV paperwork & officiant', fi: 'DVV-paperit ja vihkijä', de: 'DVV-Unterlagen & Trauredner',
-      ja: 'DVV書類＆司式者', es: 'Trámites DVV y oficiante', 'pt-BR': 'Documentação DVV e celebrante',
-      'zh-CN': 'DVV 文件与主婚人', ko: 'DVV 서류 & 주례', fr: 'Formalités DVV & officiant',
-      it: 'Documenti DVV e celebrante', nl: 'DVV-papierwerk & voltrekker', sv: 'DVV-papper & vigselförrättare',
+      en: 'Photography', fi: 'Valokuvaus', de: 'Fotografie', ja: '写真撮影', es: 'Fotografía',
+      'pt-BR': 'Fotografia', 'zh-CN': '摄影', ko: '사진 촬영', fr: 'Photographie',
+      it: 'Fotografia', nl: 'Fotografie', sv: 'Fotografering',
     },
-    range: { en: '€350 – €600', fi: '350 – 600 €', de: '350 – 600 €', ja: '350〜600ユーロ', es: '350 – 600 €', 'pt-BR': '€ 350 – € 600', 'zh-CN': '350 – 600 欧元', ko: '350 – 600유로', fr: '350 – 600 €', it: '350 – 600 €', nl: '€ 350 – € 600' , sv: '€350 – €600'},
+    range: {
+      en: '€450 – €2 600', fi: '450 – 2 600 €', de: '450 – 2 600 €', ja: '450〜2,600ユーロ',
+      es: '450 – 2 600 €', 'pt-BR': '€ 450 – € 2.600', 'zh-CN': '450 – 2,600 欧元',
+      ko: '450 – 2,600유로', fr: '450 – 2 600 €', it: '450 – 2 600 €',
+      nl: '€ 450 – € 2.600', sv: '450 – 2 600 €',
+    },
+    note: {
+      en: 'Ceremony only €450, portraits €680, a documented full day €1 960–€2 600. Add 20% over Christmas and €0.60/km outside Rovaniemi.',
+      fi: 'Pelkkä vihkimys 450 €, muotokuvat 680 €, dokumentoitu koko päivä 1 960–2 600 €. Jouluun +20 % ja 0,60 €/km Rovaniemen ulkopuolella.',
+      de: 'Nur die Trauung 450 €, Porträts 680 €, ein dokumentierter ganzer Tag 1 960–2 600 €. Zu Weihnachten +20 % und 0,60 €/km außerhalb Rovaniemis.',
+      ja: '挙式のみ450ユーロ、ポートレート680ユーロ、一日密着1,960〜2,600ユーロ。クリスマス期は+20%、ロヴァニエミ外は1kmあたり0.60ユーロ。',
+      es: 'Solo la ceremonia 450 €, retratos 680 €, un día completo documentado 1 960–2 600 €. +20 % en Navidad y 0,60 €/km fuera de Rovaniemi.',
+      'pt-BR': 'Só a cerimônia € 450, retratos € 680, um dia inteiro documentado € 1.960–€ 2.600. +20% no Natal e € 0,60/km fora de Rovaniemi.',
+      'zh-CN': '仅仪式 450 欧元，人像 680 欧元，全天纪实 1,960–2,600 欧元。圣诞season加收 20%，罗瓦涅米以外每公里 0.60 欧元。',
+      ko: '예식만 450유로, 포트레이트 680유로, 하루 종일 다큐멘터리 1,960~2,600유로. 크리스마스 시즌 +20%, 로바니에미 외 지역은 km당 0.60유로.',
+      fr: 'Cérémonie seule 450 €, portraits 680 €, journée complète documentée 1 960–2 600 €. +20 % à Noël et 0,60 €/km hors de Rovaniemi.',
+      it: 'Solo cerimonia 450 €, ritratti 680 €, intera giornata documentata 1 960–2 600 €. +20% a Natale e 0,60 €/km fuori Rovaniemi.',
+      nl: 'Alleen de ceremonie € 450, portretten € 680, een volledig gedocumenteerde dag € 1.960–€ 2.600. +20% rond kerst en € 0,60/km buiten Rovaniemi.',
+      sv: 'Enbart vigseln 450 €, porträtt 680 €, en dokumenterad heldag 1 960–2 600 €. +20 % vid jul och 0,60 €/km utanför Rovaniemi.',
+    },
+    source: { name: 'laplandphotographer.com', url: 'https://laplandphotographer.com/photo-shoot-prices' },
   },
   {
     title: {
-      en: 'Photography (2h to full day + video)', fi: 'Valokuvaus (2 h – koko päivä + video)', de: 'Fotografie (2 Std. bis ganzer Tag + Video)',
-      ja: '写真撮影（2時間〜終日＋動画）', es: 'Fotografía (2 h a día completo + vídeo)', 'pt-BR': 'Fotografia (2 h ao dia inteiro + vídeo)',
-      'zh-CN': '摄影（2 小时至全天 + 视频）', ko: '사진 촬영(2시간~종일 + 영상)', fr: 'Photographie (2 h à journée complète + vidéo)',
-      it: 'Fotografia (da 2 h all’intera giornata + video)', nl: 'Fotografie (2 u tot hele dag + video)', sv: 'Fotografering (2 h till heldag + video)',
+      en: 'Glass igloo / cabin (per night)', fi: 'Lasi-iglu / cabin (per yö)',
+      de: 'Glasiglu / Cabin (pro Nacht)', ja: 'ガラスイグルー／キャビン（1泊）',
+      es: 'Iglú de cristal / cabaña (por noche)', 'pt-BR': 'Iglu de vidro / cabana (por noite)',
+      'zh-CN': '玻璃冰屋／木屋（每晚）', ko: '글라스 이글루 / 캐빈 (1박)',
+      fr: 'Igloo de verre / cabine (par nuit)', it: 'Igloo di vetro / cabina (a notte)',
+      nl: 'Glazen iglo / cabin (per nacht)', sv: 'Glasigloo / stuga (per natt)',
     },
-    range: { en: '€590 – €4 200', fi: '590 – 4 200 €', de: '590 – 4 200 €', ja: '590〜4,200ユーロ', es: '590 – 4 200 €', 'pt-BR': '€ 590 – € 4.200', 'zh-CN': '590 – 4,200 欧元', ko: '590 – 4,200유로', fr: '590 – 4 200 €', it: '590 – 4 200 €', nl: '€ 590 – € 4.200' , sv: '€590 – €4 200'},
+    range: {
+      en: 'from €239', fi: 'alkaen 239 €', de: 'ab 239 €', ja: '239ユーロ〜', es: 'desde 239 €',
+      'pt-BR': 'a partir de € 239', 'zh-CN': '239 欧元起', ko: '239유로부터',
+      fr: 'à partir de 239 €', it: 'da 239 €', nl: 'vanaf € 239', sv: 'från 239 €',
+    },
+    note: {
+      en: 'An Aurora Cabin at Northern Lights Village Levi. Rates climb steeply over Christmas and New Year.',
+      fi: 'Aurora Cabin Northern Lights Village Levillä. Hinnat nousevat jyrkästi jouluksi ja uudeksivuodeksi.',
+      de: 'Eine Aurora Cabin im Northern Lights Village Levi. Über Weihnachten und Neujahr steigen die Preise stark.',
+      ja: 'ノーザンライツ・ヴィレッジ・レヴィのオーロラキャビン。クリスマスと年末年始は料金が大きく上がります。',
+      es: 'Una Aurora Cabin en Northern Lights Village Levi. Las tarifas suben mucho en Navidad y Año Nuevo.',
+      'pt-BR': 'Uma Aurora Cabin no Northern Lights Village Levi. As tarifas sobem bastante no Natal e no Ano-Novo.',
+      'zh-CN': '莱维 Northern Lights Village 的 Aurora Cabin。圣诞与新年期间价格大幅上涨。',
+      ko: 'Northern Lights Village Levi의 오로라 캐빈 기준. 크리스마스와 연말연시에는 요금이 크게 오릅니다.',
+      fr: 'Une Aurora Cabin au Northern Lights Village Levi. Les tarifs grimpent fortement à Noël et au Nouvel An.',
+      it: 'Una Aurora Cabin al Northern Lights Village Levi. Le tariffe salgono molto a Natale e Capodanno.',
+      nl: 'Een Aurora Cabin in Northern Lights Village Levi. Rond kerst en oud en nieuw lopen de tarieven flink op.',
+      sv: 'En Aurora Cabin på Northern Lights Village Levi. Priserna stiger kraftigt kring jul och nyår.',
+    },
+    source: { name: 'levi.northernlightsvillage.com', url: 'https://levi.northernlightsvillage.com/cabins-and-suites/aurora-cabin' },
   },
   {
     title: {
-      en: 'Snow / ice / glass chapel ceremony', fi: 'Lumi-/jää-/lasikappelivihkimys', de: 'Schnee-/Eis-/Glaskapellen-Zeremonie',
-      ja: 'スノー／アイス／ガラスチャペル挙式', es: 'Ceremonia en capilla de nieve / hielo / cristal', 'pt-BR': 'Cerimônia em capela de neve / gelo / vidro',
-      'zh-CN': '雪 / 冰 / 玻璃教堂仪式', ko: '스노우 / 아이스 / 글라스 채플 예식', fr: 'Cérémonie en chapelle de neige / glace / verre',
-      it: 'Cerimonia in cappella di neve / ghiaccio / vetro', nl: 'Ceremonie in sneeuw-/ijs-/glaskapel', sv: 'Vigsel i snö-, is- eller glaskapell',
+      en: 'Husky arrival (per person)', fi: 'Husky-saapuminen (per hlö)',
+      de: 'Ankunft mit Huskys (pro Person)', ja: 'ハスキーで登場（1名あたり）',
+      es: 'Llegada en trineo de huskies (por persona)', 'pt-BR': 'Chegada de trenó de huskies (por pessoa)',
+      'zh-CN': '哈士奇雪橇登场（每人）', ko: '허스키 썰매 입장 (1인)',
+      fr: 'Arrivée en traîneau à huskies (par personne)', it: 'Arrivo con gli husky (a persona)',
+      nl: 'Aankomst per huskyslee (per persoon)', sv: 'Ankomst med husky (per person)',
     },
-    range: { en: '€800 – €4 000', fi: '800 – 4 000 €', de: '800 – 4 000 €', ja: '800〜4,000ユーロ', es: '800 – 4 000 €', 'pt-BR': '€ 800 – € 4.000', 'zh-CN': '800 – 4,000 欧元', ko: '800 – 4,000유로', fr: '800 – 4 000 €', it: '800 – 4 000 €', nl: '€ 800 – € 4.000' , sv: '€800 – €4 000'},
+    range: {
+      en: '€196 – €201', fi: '196 – 201 €', de: '196 – 201 €', ja: '196〜201ユーロ',
+      es: '196 – 201 €', 'pt-BR': '€ 196 – € 201', 'zh-CN': '196 – 201 欧元',
+      ko: '196 – 201유로', fr: '196 – 201 €', it: '196 – 201 €',
+      nl: '€ 196 – € 201', sv: '196 – 201 €',
+    },
+    note: {
+      en: 'A 2.5-hour tour with 45 minutes driving your own sled, adult rate. Children pay less.',
+      fi: '2,5 tunnin retki, josta 45 min omaa rekeä ajaen, aikuisen hinta. Lapsilta vähemmän.',
+      de: 'Eine 2,5-stündige Tour, davon 45 Minuten selbst am Schlitten, Erwachsenenpreis. Kinder zahlen weniger.',
+      ja: '2.5時間のツアーで、うち45分は自分でそりを操作します。大人料金で、子どもは割安です。',
+      es: 'Una excursión de 2,5 horas, con 45 minutos conduciendo tu propio trineo, precio de adulto. Los niños pagan menos.',
+      'pt-BR': 'Um passeio de 2,5 horas, com 45 minutos conduzindo o próprio trenó, preço de adulto. Crianças pagam menos.',
+      'zh-CN': '2.5 小时行程，其中 45 分钟自行驾驶雪橇，为成人价格。儿童价格更低。',
+      ko: '2.5시간 투어로 그중 45분은 직접 썰매를 몹니다. 성인 요금이며 어린이는 더 저렴합니다.',
+      fr: 'Une sortie de 2h30, dont 45 minutes à conduire son propre traîneau, tarif adulte. Les enfants paient moins.',
+      it: 'Un’escursione di 2,5 ore, di cui 45 minuti alla guida della propria slitta, tariffa adulti. I bambini pagano meno.',
+      nl: 'Een tocht van 2,5 uur, waarvan 45 minuten je eigen slee besturen, volwassenentarief. Kinderen betalen minder.',
+      sv: 'En 2,5 timmars tur, varav 45 minuter med egen släde, vuxenpris. Barn betalar mindre.',
+    },
+    source: { name: 'bearhillhusky.com', url: 'https://bearhillhusky.com/winter-tours/the-happy-trail-tour/' },
   },
   {
     title: {
-      en: 'Florist + bouquet', fi: 'Kukat + kimppu', de: 'Florist + Brautstrauß',
-      ja: 'フローリスト＋ブーケ', es: 'Floristería + ramo', 'pt-BR': 'Floricultura + buquê',
-      'zh-CN': '花艺 + 捧花', ko: '플로리스트 + 부케', fr: 'Fleuriste + bouquet',
-      it: 'Fiorista + bouquet', nl: 'Bloemist + boeket', sv: 'Florist + brudbukett',
+      en: 'Reindeer arrival (per person)', fi: 'Poro-saapuminen (per hlö)',
+      de: 'Ankunft mit Rentieren (pro Person)', ja: 'トナカイで登場（1名あたり）',
+      es: 'Llegada en trineo de renos (por persona)', 'pt-BR': 'Chegada de trenó de renas (por pessoa)',
+      'zh-CN': '驯鹿雪橇登场（每人）', ko: '순록 썰매 입장 (1인)',
+      fr: 'Arrivée en traîneau à rennes (par personne)', it: 'Arrivo con le renne (a persona)',
+      nl: 'Aankomst per rendierslee (per persoon)', sv: 'Ankomst med ren (per person)',
     },
-    range: { en: '€240 – €1 800', fi: '240 – 1 800 €', de: '240 – 1 800 €', ja: '240〜1,800ユーロ', es: '240 – 1 800 €', 'pt-BR': '€ 240 – € 1.800', 'zh-CN': '240 – 1,800 欧元', ko: '240 – 1,800유로', fr: '240 – 1 800 €', it: '240 – 1 800 €', nl: '€ 240 – € 1.800' , sv: '€240 – €1 800'},
+    range: {
+      en: '€105 – €129', fi: '105 – 129 €', de: '105 – 129 €', ja: '105〜129ユーロ',
+      es: '105 – 129 €', 'pt-BR': '€ 105 – € 129', 'zh-CN': '105 – 129 欧元',
+      ko: '105 – 129유로', fr: '105 – 129 €', it: '105 – 129 €',
+      nl: '€ 105 – € 129', sv: '105 – 129 €',
+    },
+    note: {
+      en: 'A reindeer farm visit with a sled ride, adult rate; children €99.',
+      fi: 'Porotilavierailu ja rekiajelu, aikuisen hinta; lapset 99 €.',
+      de: 'Besuch einer Rentierfarm mit Schlittenfahrt, Erwachsenenpreis; Kinder 99 €.',
+      ja: 'トナカイ牧場の見学とそり体験、大人料金。子どもは99ユーロ。',
+      es: 'Visita a una granja de renos con paseo en trineo, precio de adulto; niños 99 €.',
+      'pt-BR': 'Visita a uma fazenda de renas com passeio de trenó, preço de adulto; crianças € 99.',
+      'zh-CN': '驯鹿农场参观加雪橇体验，为成人价格；儿童 99 欧元。',
+      ko: '순록 농장 방문과 썰매 체험, 성인 요금이며 어린이는 99유로입니다.',
+      fr: 'Visite d’une ferme de rennes avec balade en traîneau, tarif adulte ; enfants 99 €.',
+      it: 'Visita a una fattoria di renne con giro in slitta, tariffa adulti; bambini 99 €.',
+      nl: 'Bezoek aan een rendierboerderij met sleerit, volwassenentarief; kinderen € 99.',
+      sv: 'Besök på en rengård med slädtur, vuxenpris; barn 99 €.',
+    },
+    source: { name: 'wildaboutlapland.com', url: 'https://wildaboutlapland.com/authentic-reindeer-farm-visit/' },
+  },
+];
+
+/**
+ * The parts nobody in Lapland puts a number on. Kept visible on purpose: a
+ * couple budgeting from this page needs to know which lines they cannot look up
+ * and have to request. Checked 2026-07-29 — Arctic SnowHotel's wedding page,
+ * for instance, states only "We will be happy to give you a quotation for your
+ * wedding".
+ */
+const quotationOnly: Array<Localized<string>> = [
+  {
+    en: 'Wedding planner fee', fi: 'Hääsuunnittelijan palkkio', de: 'Honorar des Hochzeitsplaners',
+    ja: 'ウェディングプランナー費用', es: 'Honorarios del organizador', 'pt-BR': 'Honorários do organizador',
+    'zh-CN': '婚礼策划费用', ko: '웨딩 플래너 비용', fr: 'Honoraires du wedding planner',
+    it: 'Onorario del wedding planner', nl: 'Honorarium weddingplanner', sv: 'Bröllopsplanerarens arvode',
   },
   {
-    title: {
-      en: 'Catering (per guest)', fi: 'Catering (per vieras)', de: 'Catering (pro Gast)',
-      ja: 'ケータリング（1人あたり）', es: 'Catering (por invitado)', 'pt-BR': 'Buffet (por convidado)',
-      'zh-CN': '餐饮（每位宾客）', ko: '케이터링(인당)', fr: 'Traiteur (par invité)',
-      it: 'Catering (per ospite)', nl: 'Catering (per gast)', sv: 'Catering (per gäst)',
-    },
-    range: { en: '€80 – €280', fi: '80 – 280 €', de: '80 – 280 €', ja: '80〜280ユーロ', es: '80 – 280 €', 'pt-BR': '€ 80 – € 280', 'zh-CN': '80 – 280 欧元', ko: '80 – 280유로', fr: '80 – 280 €', it: '80 – 280 €', nl: '€ 80 – € 280' , sv: '€80 – €280'},
+    en: 'The venue’s own ceremony fee', fi: 'Hääpaikan oma vihkitilamaksu',
+    de: 'Raumgebühr der Location', ja: '会場の挙式使用料', es: 'Tarifa de la ceremonia del lugar',
+    'pt-BR': 'Taxa de cerimônia do local', 'zh-CN': '场地的仪式使用费',
+    ko: '장소의 예식 이용료', fr: 'Frais de cérémonie du lieu',
+    it: 'Costo della cerimonia della location', nl: 'Ceremoniekosten van de locatie',
+    sv: 'Platsens egen vigselavgift',
   },
   {
-    title: {
-      en: 'Glass igloo / cabin (per night)', fi: 'Lasi-iglu / cabin (per yö)', de: 'Glasiglu / Hütte (pro Nacht)',
-      ja: 'ガラスイグルー／キャビン（1泊）', es: 'Iglú de cristal / cabaña (por noche)', 'pt-BR': 'Iglu de vidro / cabana (por noite)',
-      'zh-CN': '玻璃冰屋 / 小屋（每晚）', ko: '글라스 이글루 / 캐빈(1박)', fr: 'Igloo de verre / cabane (par nuit)',
-      it: 'Igloo di vetro / cabina (a notte)', nl: 'Glazen iglo / cabin (per nacht)', sv: 'Glasiglo / stuga (per natt)',
-    },
-    range: { en: '€280 – €1 200', fi: '280 – 1 200 €', de: '280 – 1 200 €', ja: '280〜1,200ユーロ', es: '280 – 1 200 €', 'pt-BR': '€ 280 – € 1.200', 'zh-CN': '280 – 1,200 欧元', ko: '280 – 1,200유로', fr: '280 – 1 200 €', it: '280 – 1 200 €', nl: '€ 280 – € 1.200' , sv: '€280 – €1 200'},
+    en: 'Flowers and bouquet', fi: 'Kukat ja kimppu', de: 'Blumen und Brautstrauß',
+    ja: '装花とブーケ', es: 'Flores y ramo', 'pt-BR': 'Flores e buquê',
+    'zh-CN': '花艺与捧花', ko: '꽃 장식과 부케', fr: 'Fleurs et bouquet',
+    it: 'Fiori e bouquet', nl: 'Bloemen en boeket', sv: 'Blommor och brudbukett',
   },
   {
-    title: {
-      en: 'Husky / reindeer arrival', fi: 'Husky- / poro-saapuminen', de: 'Ankunft per Husky / Rentier',
-      ja: 'ハスキー／トナカイでの登場', es: 'Llegada en huskies / renos', 'pt-BR': 'Chegada de huskies / renas',
-      'zh-CN': '哈士奇 / 驯鹿登场', ko: '허스키 / 순록 도착', fr: 'Arrivée en husky / renne',
-      it: 'Arrivo in husky / renna', nl: 'Aankomst per husky / rendier', sv: 'Ankomst med husky eller ren',
-    },
-    range: { en: '€600 – €2 400', fi: '600 – 2 400 €', de: '600 – 2 400 €', ja: '600〜2,400ユーロ', es: '600 – 2 400 €', 'pt-BR': '€ 600 – € 2.400', 'zh-CN': '600 – 2,400 欧元', ko: '600 – 2,400유로', fr: '600 – 2 400 €', it: '600 – 2 400 €', nl: '€ 600 – € 2.400' , sv: '€600 – €2 400'},
+    en: 'Catering per guest', fi: 'Catering per vieras', de: 'Catering pro Gast',
+    ja: 'ゲスト1名あたりのケータリング', es: 'Catering por invitado', 'pt-BR': 'Buffet por convidado',
+    'zh-CN': '每位宾客的餐饮', ko: '하객 1인당 케이터링', fr: 'Traiteur par invité',
+    it: 'Catering per ospite', nl: 'Catering per gast', sv: 'Catering per gäst',
   },
 ];
 
@@ -86,12 +224,17 @@ type PKey =
   | 's1Eyebrow' | 's1Title' | 'exampleDisclaimer'
   | 'floorNote'
   | 'd1Title' | 'd1Body' | 'd2Title' | 'd2Body' | 'd3Title' | 'd3Body'
+  | 'pricesChecked' | 'quoteOnlyTitle' | 'quoteOnlyBody'
   | 'whereMoneyGoes' | 'getQuoteLike'
   | 's2Eyebrow' | 's2Title' | 's2Subtitle'
   | 'ctaEyebrow' | 'ctaTitle' | 'ctaBody' | 'ctaButton'
   | 's4Eyebrow' | 's4Title' | 's4Subtitle';
 
 const P: Record<PKey, Localized<string>> = {
+  pricesChecked: { en: 'Every price above is read from the operator’s own page, checked {d}. Operators change them, so check the link before you budget on it.', fi: 'Jokainen yllä oleva hinta on luettu toimijan omalta sivulta, tarkistettu {d}. Toimijat muuttavat hintojaan, joten tarkista linkki ennen kuin laskette sen varaan.', de: 'Jeder Preis oben stammt von der eigenen Seite des Anbieters, geprüft am {d}. Anbieter ändern ihre Preise, prüfen Sie also den Link, bevor Sie damit kalkulieren.', ja: '上記の価格はいずれも事業者自身のページから確認したもので、確認日は{d}です。価格は変更されるため、予算に組み込む前にリンク先をご確認ください。', es: 'Cada precio de arriba está tomado de la propia página del proveedor, comprobado el {d}. Los proveedores los cambian, así que revisad el enlace antes de contar con él.', 'pt-BR': 'Cada preço acima foi lido na própria página do operador, verificado em {d}. Os operadores mudam os valores, então confiram o link antes de contar com ele.', 'zh-CN': '以上每个价格均取自经营者自己的页面，核对日期为 {d}。价格会变动，请在据此做预算前先点开链接确认。', ko: '위의 모든 가격은 사업자의 자체 페이지에서 확인한 것이며 확인일은 {d}입니다. 가격은 바뀌므로 예산에 반영하기 전에 링크를 확인해 주세요.', fr: 'Chaque prix ci-dessus est relevé sur la page de l’opérateur lui-même, vérifié le {d}. Les tarifs changent : vérifiez le lien avant de bâtir un budget dessus.', it: 'Ogni prezzo qui sopra è letto dalla pagina dell’operatore stesso, verificato il {d}. Gli operatori li cambiano, quindi controllate il link prima di farci un budget.', nl: 'Elke prijs hierboven komt van de eigen pagina van de aanbieder, gecontroleerd op {d}. Aanbieders wijzigen ze, dus check de link voordat u erop begroot.', sv: 'Varje pris ovan är hämtat från operatörens egen sida, kontrollerat {d}. Operatörer ändrar dem, så kolla länken innan ni budgeterar utifrån det.' },
+  quoteOnlyTitle: { en: 'Nobody publishes these', fi: 'Näistä ei löydy julkista hintaa', de: 'Dafür veröffentlicht niemand Preise', ja: 'これらは価格が公開されていません', es: 'Nadie publica estos precios', 'pt-BR': 'Ninguém publica estes preços', 'zh-CN': '这些没有公开价格', ko: '이 항목들은 공개 가격이 없습니다', fr: 'Personne ne publie ces prix', it: 'Per questi nessuno pubblica un prezzo', nl: 'Hiervoor publiceert niemand prijzen', sv: 'Dessa publicerar ingen' },
+  quoteOnlyBody: { en: 'We looked. In Lapland these four are quoted on request only, so we would rather leave them blank than invent a figure. Ask for them by name when you contact a planner.', fi: 'Etsimme. Lapissa nämä neljä annetaan vain tarjouksena, joten jätämme ne mieluummin tyhjiksi kuin keksimme luvun. Kysykää ne nimeltä kun otatte yhteyttä suunnittelijaan.', de: 'Wir haben gesucht. In Lappland gibt es diese vier nur auf Anfrage, deshalb lassen wir sie lieber leer, als eine Zahl zu erfinden. Fragen Sie beim Planer ausdrücklich danach.', ja: '調べましたが、ラップランドではこの4項目は見積もりでのみ提示されます。数字を作るより空欄のままにしておきます。プランナーに問い合わせる際は、この4つを名指しでお尋ねください。', es: 'Lo buscamos. En Laponia estos cuatro se dan solo por presupuesto, así que preferimos dejarlos en blanco antes que inventar una cifra. Preguntadlos por su nombre al contactar con un organizador.', 'pt-BR': 'Procuramos. Na Lapônia esses quatro só saem por orçamento, então preferimos deixá-los em branco a inventar um número. Perguntem por eles nominalmente ao falar com um organizador.', 'zh-CN': '我们查过了。在拉普兰，这四项只按需报价，因此我们宁可留空也不编造数字。联系策划师时，请逐项点名询问。', ko: '찾아보았습니다. 라플란드에서 이 네 가지는 견적으로만 제시되므로, 숫자를 지어내기보다 비워 둡니다. 플래너에게 연락하실 때 이 항목들을 콕 집어 물어보세요.', fr: 'Nous avons cherché. En Laponie, ces quatre postes ne sont donnés que sur devis ; nous préférons les laisser vides plutôt qu’inventer un chiffre. Demandez-les nommément au wedding planner.', it: 'Abbiamo cercato. In Lapponia queste quattro voci si danno solo su preventivo, quindi preferiamo lasciarle vuote piuttosto che inventare una cifra. Chiedetele per nome quando contattate un planner.', nl: 'We hebben gezocht. In Lapland komen deze vier alleen op aanvraag, dus laten we ze liever leeg dan een bedrag te verzinnen. Vraag er expliciet naar bij een weddingplanner.', sv: 'Vi letade. I Lappland lämnas de här fyra bara som offert, så vi låter dem hellre vara tomma än hittar på en siffra. Fråga efter dem vid namn när ni kontaktar en planerare.' },
+
   floorNote: { en: 'What moves the number', fi: 'Mikä summaa liikuttaa', de: 'Was die Summe bewegt', ja: '費用を左右する要素', es: 'Qué mueve la cifra', 'pt-BR': 'O que move o valor', 'zh-CN': '哪些因素影响金额', ko: '금액을 좌우하는 요소', fr: 'Ce qui fait bouger le chiffre', it: 'Cosa muove la cifra', nl: 'Wat het bedrag beweegt', sv: 'Vad som rör summan' },
   d1Title: { en: 'Number of guests', fi: 'Vieraiden määrä', de: 'Zahl der Gäste', ja: 'ゲストの人数', es: 'Número de invitados', 'pt-BR': 'Número de convidados', 'zh-CN': '宾客人数', ko: '하객 수', fr: 'Nombre d’invités', it: 'Numero di ospiti', nl: 'Aantal gasten', sv: 'Antal gäster' },
   d1Body: { en: 'Every guest adds a meal, a transfer and a bed. Going from two to thirty multiplies the total more than any other single choice.', fi: 'Jokainen vieras tuo ruoan, kuljetuksen ja vuoteen. Kahdesta kolmeenkymmeneen siirtyminen moninkertaistaa summan enemmän kuin mikään muu yksittäinen valinta.', de: 'Jeder Gast bedeutet ein Essen, einen Transfer und ein Bett. Der Sprung von zwei auf dreißig vervielfacht die Summe stärker als jede andere einzelne Entscheidung.', ja: 'ゲストが一人増えるごとに、食事、送迎、宿泊が加わります。2名から30名への変化は、ほかのどの選択よりも総額を大きく押し上げます。', es: 'Cada invitado suma una comida, un traslado y una cama. Pasar de dos a treinta multiplica el total más que ninguna otra decisión.', 'pt-BR': 'Cada convidado acrescenta uma refeição, um traslado e uma cama. Passar de dois para trinta multiplica o total mais do que qualquer outra escolha.', 'zh-CN': '每多一位宾客，就多一份餐食、一趟接送和一张床位。从两人增加到三十人，对总额的影响超过任何其他单项选择。', ko: '하객 한 명마다 식사와 이동, 잠자리가 더해집니다. 두 명에서 서른 명으로 늘리는 것이 다른 어떤 선택보다 총액을 크게 올립니다.', fr: 'Chaque invité ajoute un repas, un transfert et un lit. Passer de deux à trente multiplie le total plus que tout autre choix.', it: 'Ogni ospite aggiunge un pasto, un transfer e un letto. Passare da due a trenta moltiplica il totale più di qualsiasi altra scelta.', nl: 'Elke gast betekent een maaltijd, een transfer en een bed. Van twee naar dertig gaan vermenigvuldigt het totaal sterker dan welke andere keuze ook.', sv: 'Varje gäst innebär en måltid, en transfer och en säng. Att gå från två till trettio mångdubblar summan mer än något annat enskilt val.' },
@@ -169,19 +312,7 @@ const P: Record<PKey, Localized<string>> = {
     fr: 'Ce qui compose le prix', it: 'Cosa compone il prezzo',
     nl: 'Waaruit de prijs bestaat', sv: 'Vad som ingår i priset',
   },
-  s2Subtitle: {
-    en: 'Market estimates as of early 2026. Individual planners and venues set their own pricing.',
-    fi: 'Hinnat ovat markkinaestimaatteja vuoden 2026 alusta. Yksittäiset suunnittelijat ja venuet hinnoittelevat itsenäisesti.',
-    de: 'Marktschätzungen Stand Anfang 2026. Einzelne Planer und Locations legen ihre Preise selbst fest.',
-    ja: '2026年初頭時点の市場推定。各プランナーや会場が独自に価格を設定します。',
-    es: 'Estimaciones de mercado a principios de 2026: cada organizador y lugar fija sus propios precios.',
-    'pt-BR': 'Estimativas de mercado no início de 2026. Cada organizador e local define os próprios preços.',
-    'zh-CN': '截至 2026 年初的市场估算，各策划师和场地自行定价。',
-    ko: '2026년 초 기준 시장 추정치. 개별 플래너와 웨딩 장소가 자체적으로 가격을 책정합니다.',
-    fr: 'Estimations du marché début 2026. Chaque planner et lieu fixe ses propres tarifs.',
-    it: 'Stime di mercato a inizio 2026. Singoli planner e location fissano i propri prezzi.',
-    nl: 'Marktschattingen begin 2026. Afzonderlijke planners en locaties bepalen hun eigen prijzen.', sv: 'Marknadsuppskattningar från början av 2026. Enskilda planerare och platser sätter sina egna priser.',
-  },
+  s2Subtitle: { en: 'Each line below is a real published price from a Lapland operator, with the link to the page it came from. Prices are per the operator, not per us.', fi: 'Jokainen alla oleva rivi on lappilaisen toimijan oikea julkaistu hinta, ja mukana on linkki sivulle josta se on luettu. Hinnat ovat toimijan, eivät meidän.', de: 'Jede Zeile unten ist ein tatsächlich veröffentlichter Preis eines lappländischen Anbieters, mit Link auf die Seite, von der er stammt. Die Preise sind die des Anbieters, nicht unsere.', ja: '以下の各項目は、ラップランドの事業者が実際に公開している価格で、出典ページへのリンクを添えています。価格は各事業者のものであり、当サイトのものではありません。', es: 'Cada línea de abajo es un precio realmente publicado por un proveedor de Laponia, con el enlace a la página de la que procede. Los precios son del proveedor, no nuestros.', 'pt-BR': 'Cada linha abaixo é um preço realmente publicado por um operador da Lapônia, com o link para a página de onde veio. Os preços são do operador, não nossos.', 'zh-CN': '下面每一行都是拉普兰经营者实际公开的价格，并附有来源页面链接。价格属于各经营者，而非本站。', ko: '아래 각 항목은 라플란드 사업자가 실제로 공개한 가격이며, 출처 페이지 링크를 함께 표시했습니다. 가격은 해당 사업자의 것이며 저희의 가격이 아닙니다.', fr: 'Chaque ligne ci-dessous est un prix réellement publié par un prestataire lapon, avec le lien vers la page dont il provient. Les prix sont ceux du prestataire, pas les nôtres.', it: 'Ogni riga qui sotto è un prezzo davvero pubblicato da un operatore della Lapponia, con il link alla pagina da cui proviene. I prezzi sono dell’operatore, non nostri.', nl: 'Elke regel hieronder is een echt gepubliceerde prijs van een Laplandse aanbieder, met de link naar de pagina waar hij vandaan komt. De prijzen zijn van de aanbieder, niet van ons.', sv: 'Varje rad nedan är ett faktiskt publicerat pris från en lappländsk aktör, med länk till sidan det kommer från. Priserna är aktörens, inte våra.' },
   ctaEyebrow: {
     en: 'When you know your budget', fi: 'Kun budjetti on selvillä',
     de: 'Wenn Sie Ihr Budget kennen', ja: '予算が決まったら',
@@ -300,18 +431,52 @@ export default function Pricing() {
       >
         <div className="max-w-3xl mx-auto bg-night-light/60 border border-white/5 rounded-2xl overflow-hidden">
           {breakdown.map((b, i) => (
-            <div
-              key={b.title.en}
-              className={`flex items-center justify-between px-5 sm:px-7 py-4 ${
-                i !== 0 ? 'border-t border-white/5' : ''
-              }`}
-            >
-              <p className="text-[15px] text-gray-200 min-w-0 pr-3">{pickLocalized(b.title, lang)}</p>
-              <p className="font-heading tracking-wide text-rose text-base sm:text-lg whitespace-nowrap shrink-0">
-                {pickLocalized(b.range, lang)}
-              </p>
+            <div key={b.title.en} className={`px-5 sm:px-7 py-5 ${i !== 0 ? 'border-t border-white/5' : ''}`}>
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="text-[15px] font-semibold text-gray-200 min-w-0">{pickLocalized(b.title, lang)}</p>
+                <p className="font-heading tracking-wide text-rose text-base sm:text-lg whitespace-nowrap shrink-0">
+                  {pickLocalized(b.range, lang)}
+                </p>
+              </div>
+              {b.note && (
+                <p className="text-[13px] text-gray-300 leading-[1.65] mt-1.5">{pickLocalized(b.note, lang)}</p>
+              )}
+              {/* The source is the point. A price with no link back to the page
+                  it came from is indistinguishable from one we made up, which is
+                  exactly what this table used to be. */}
+              <a
+                href={b.source.url}
+                target="_blank"
+                rel="noopener"
+                className="inline-block text-[12px] mt-2 underline underline-offset-2"
+                style={{ color: 'var(--color-rose-ink)' }}
+              >
+                {b.source.name} ↗
+              </a>
             </div>
           ))}
+        </div>
+
+        <p className="max-w-3xl mx-auto text-center text-xs text-gray-400 mt-4">
+          {p('pricesChecked').replace('{d}', PRICE_VERIFIED)}
+        </p>
+
+        {/* Deliberately visible: which lines a couple cannot look up anywhere. */}
+        <div className="max-w-3xl mx-auto mt-10">
+          <p className="text-xs uppercase tracking-[0.2em] text-aurora-pink font-semibold mb-3 text-center">
+            {p('quoteOnlyTitle')}
+          </p>
+          <p className="text-sm text-gray-300 leading-[1.7] text-center mb-5">{p('quoteOnlyBody')}</p>
+          <ul className="flex flex-wrap justify-center gap-2">
+            {quotationOnly.map((q) => (
+              <li
+                key={q.en}
+                className="text-[13px] px-3.5 py-1.5 rounded-full bg-night-light/60 border border-white/10 text-gray-200"
+              >
+                {pickLocalized(q, lang)}
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 
