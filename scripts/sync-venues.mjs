@@ -122,7 +122,19 @@ const TARGETS = {
     rejectNames: ['east village', 'west village'],
   },
   'arctic-snowhotel': { queryCity: 'Rovaniemi, Lapland, Finland', locality: ['rovaniemi', 'lehtojarvi', 'sinetta'] },
-  'snow-village-lainio': { queryCity: 'Lainio, Kittilä, Lapland, Finland', locality: ['lainio', 'kittila', 'yllas', 'yllasjarvi', 'levi', 'sirkka'] },
+  'snow-village-lainio': {
+    queryCity: 'Lainio, Kittilä, Lapland, Finland',
+    locality: ['lainio', 'kittila', 'yllas', 'yllasjarvi', 'levi', 'sirkka'],
+    /* Google publishes it as "Lapland Hotels Snow Village", without the word
+       "Lainio" that the head-token gate requires. Verified 2026-07-29 by
+       address and official site: Lainiotie 566, 99120 Kittilä, and
+       laplandhotels.com/fi/hotellit-ja-kohteet/yllas/lapland-hotels-snowvillage
+       — the venue's own page. 4.6 / 3832 reviews. */
+    verifiedPlaceId: 'ChIJs_wfHquk00URBhpcKb7gJbQ',
+    /* Rebuilt every winter, melts every spring, so Google flags it
+       CLOSED_TEMPORARILY out of season. */
+    allowSeasonalClosure: true,
+  },
   'northern-lights-ranch': { queryCity: 'Köngäs, Kittilä, Lapland, Finland', locality: ['kongas', 'levi', 'sirkka', 'kittila'] },
   'levi-ice-castle': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila'] },
   'levin-iglut': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila', 'utsuvaara'] },
@@ -133,10 +145,32 @@ const TARGETS = {
   'wilderness-hotel-juutua': { queryCity: 'Inari, Lapland, Finland', locality: ['inari', 'juutua'] },
   'northern-lights-village-saariselka': { queryCity: 'Saariselkä, Lapland, Finland', locality: ['saariselka', 'inari', 'ivalo'] },
   'northern-lights-village-levi': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila', 'kongas'] },
-  'hotelli-hullu-poro': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila'] },
+  'hotelli-hullu-poro': {
+    queryCity: 'Levi, Kittilä, Lapland, Finland',
+    locality: ['levi', 'sirkka', 'kittila'],
+    /* Google publishes the hotel as "Hullu Poro (Hotel Crazy Reindeer)", which
+       scores Dice 0.60 against "Hotelli Hullu Poro" and misses the 0.72 gate.
+       Verified 2026-07-29: Rakkavaarantie 3, 99130 Sirkka + hulluporo.fi, the
+       company's own domain. 4.2 / 575 reviews.
+       The same search also returns three OTHER Hullu Poro listings, which is
+       precisely why this is pinned to one ID rather than the threshold being
+       lowered: "Hullu Poro Areena" (the events arena), "Hostel Hullu Poro" (the
+       hostel) and a near-empty duplicate "Hotelli Hullu Poro" with 3 reviews
+       and no website. A looser name gate would have accepted any of them. */
+    verifiedPlaceId: 'ChIJ_fCzh1pN0kURg7QFCDKsDdA',
+    rejectNames: ['areena', 'hostel'],
+  },
   'levi-panorama': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila'] },
   'lapland-hotels-saaga': { queryCity: 'Ylläs, Kolari, Lapland, Finland', locality: ['yllas', 'yllasjarvi', 'akaslompolo', 'kolari'] },
-  'tundrea-kilpisjarvi': { queryCity: 'Kilpisjärvi, Enontekiö, Lapland, Finland', locality: ['kilpisjarvi', 'enontekio'] },
+  'tundrea-kilpisjarvi': {
+    queryCity: 'Kilpisjärvi, Enontekiö, Lapland, Finland',
+    locality: ['kilpisjarvi', 'enontekio'],
+    /* Google publishes it as "Tundrea Holiday Resort & Restaurant", so the
+       head-token gate cannot find "Kilpisjärvi" in the name. Verified
+       2026-07-29: Kilpisjärventie 6, 99490 Kilpisjärvi + tundrea.com, and it is
+       the only Tundrea listing the search returns. 4.4 / 1003 reviews. */
+    verifiedPlaceId: 'ChIJVxB7Dyqo2kURlq7-3LmLbAc',
+  },
   // Both sit in the Luosto log village, NOT in Pyhä: the registry called them
   // "Hotel Aurora Pyhä" and "Lapland Hotels Pyhä" until 2026-07-26, when the
   // shared (404) website URL was traced back to two different real properties
@@ -384,20 +418,37 @@ async function main() {
 
     for (const p of places) {
       const candName = p.displayName?.text || '';
-      const n = nameGate(venue.name, candName);
-      if (!n.ok) {
-        rejected.push(`"${candName}" name mismatch (${n.how})`);
-        continue;
-      }
-      const g = genericNameGate(candName, target.locality);
-      if (!g.ok) {
-        rejected.push(g.why);
-        continue;
-      }
-      const h = headTokenGate(venue.name, candName);
-      if (!h.ok) {
-        rejected.push(h.why);
-        continue;
+
+      /* A hand-verified Place ID. The three NAME-family gates exist because a
+         name is the only evidence the script has on its own; when a human has
+         checked the listing against its address and its official website, that
+         evidence is strictly better, so those three gates are skipped for this
+         one ID. Everything that can still catch a mistake stays on: locality,
+         bounding box, rating-present, business status and the cross-venue
+         unique-Place-ID pass. See the evidence recorded per venue in TARGETS. */
+      const pinned = target.verifiedPlaceId && p.id === target.verifiedPlaceId;
+
+      let n = { ok: true, how: 'pinned Place ID (hand-verified)' };
+      if (!pinned) {
+        n = nameGate(venue.name, candName);
+        if (!n.ok) {
+          rejected.push(`"${candName}" name mismatch (${n.how})`);
+          continue;
+        }
+        const g = genericNameGate(candName, target.locality);
+        if (!g.ok) {
+          rejected.push(g.why);
+          continue;
+        }
+        const h = headTokenGate(venue.name, candName);
+        if (!h.ok) {
+          rejected.push(h.why);
+          continue;
+        }
+      } else if (target.verifiedPlaceId) {
+        // A pin that never matches is a silent regression: the listing may have
+        // been merged or removed. Make it visible in the run output.
+        console.log(`       · pinned Place ID matched for ${venue.key}: "${candName}"`);
       }
       const rj = rejectListGate(candName, target.rejectNames);
       if (!rj.ok) {
@@ -420,7 +471,15 @@ async function main() {
         rejected.push(`"${candName}" matched but Google returned no rating`);
         continue;
       }
-      if (p.businessStatus && p.businessStatus !== 'OPERATIONAL') {
+      /* Seasonal venues. An ice hotel that is rebuilt every winter and melts
+         every spring is marked CLOSED_TEMPORARILY by Google for half the year,
+         which is exactly the half when couples plan the following winter. The
+         opt-in below admits ONLY that status, and only for a venue whose own
+         published season says so. CLOSED_PERMANENTLY is never admitted, flag or
+         no flag: that is the status that really means the business is gone. */
+      const seasonalOk =
+        target.allowSeasonalClosure && p.businessStatus === 'CLOSED_TEMPORARILY';
+      if (p.businessStatus && p.businessStatus !== 'OPERATIONAL' && !seasonalOk) {
         rejected.push(`"${candName}" businessStatus=${p.businessStatus}`);
         continue;
       }
