@@ -35,9 +35,31 @@ export default defineConfig({
         //                   `immutable` was dropped from _headers in the same
         //                   change so a reload can heal it instead of the visitor
         //                   being stuck for a year.
-        entryFileNames: 'assets/[name]-b3-[hash].js',
-        chunkFileNames: 'assets/[name]-b3-[hash].js',
-        assetFileNames: 'assets/[name]-b3-[hash][extname]',
+        //   b4  2026-08-02  THIRD occurrence, same signature, this time on the
+        //                   venue pages: `Failed to fetch dynamically imported
+        //                   module: /assets/VenuePage-b3-9cmIYnTx.js`, #root
+        //                   empty, no other console error. Everything server-side
+        //                   checked out and was ruled out one at a time — the apex
+        //                   and the *.pages.dev URL of the SAME deployment served
+        //                   byte-identical HTML (12 254 b) and byte-identical JS
+        //                   (24 620 b), `cf-cache-status: HIT` with
+        //                   `Content-Type: application/javascript`, all 12 of the
+        //                   chunk's imports fetched as valid JS, and the response
+        //                   did not change when replayed with the module loader's
+        //                   own `Sec-Fetch-Dest: script` + Origin + Referer.
+        //                   pages.dev rendered; the apex did not, in TWO separate
+        //                   browser profiles. Dropping `immutable` (b3) was not
+        //                   enough to heal it: `fetch(url, {cache:'reload'})`
+        //                   returned good JS and the very next dynamic import of
+        //                   the same URL still failed.
+        //   🔴 Lesson worth keeping: the poisoning happens when someone loads a
+        //   route inside the ~20-40 s window in which a just-deployed chunk still
+        //   answers with the SPA fallback. Verify a deploy on the deployment URL
+        //   first and leave the apex alone until it has settled — checking early
+        //   is what CREATES this.
+        entryFileNames: 'assets/[name]-b4-[hash].js',
+        chunkFileNames: 'assets/[name]-b4-[hash].js',
+        assetFileNames: 'assets/[name]-b4-[hash][extname]',
         manualChunks(id: string) {
           if (id.includes('node_modules')) {
             if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|scheduler)[\\/]/.test(id)) return 'react-vendor'
