@@ -162,6 +162,10 @@ export default function Home() {
           </p>
         </div>
       </PageHero>
+      {/* App launch block, directly under the site's own opening. At the foot
+          of the page it measured 81 % down a 33 000 px front page, and an
+          announcement nobody scrolls to is not an announcement. */}
+      <AppPromoHero />
 
       {/* Why Lapland */}
       <Section title={tr.home.whyTitle}>
@@ -640,9 +644,6 @@ export default function Home() {
       <Section className="bg-night-light/20">
         <NewsletterSignup />
       </Section>
-    {/* App launch block. Bottom of the page on purpose: the site's own hero is
-        what the search result promised, and this does not get to interrupt it. */}
-    <AppPromoHero />
     </>
   );
 }
