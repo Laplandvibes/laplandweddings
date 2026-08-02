@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import CookieBanner from '../../shared/CookieBanner';
 import { LangProvider, useLang } from './i18n/LangContext';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
+import { AppPromoNudge } from './components/AppPromo';
 const Home = lazy(() => import('./pages/Home'))
 const Locations = lazy(() => import('./pages/Locations'))
 const LocationPage = lazy(() => import('./pages/LocationPage'))
@@ -83,6 +84,7 @@ export default function App() {
         <Footer />
         <LocalisedCookieBanner />
       </div>
+      <AppPromoNudge />
     </LangProvider>
   );
 }

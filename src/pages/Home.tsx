@@ -18,6 +18,7 @@ import EditorsPickChip from '../components/EditorsPickChip';
 import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 import { pickLocalized } from '../data/localized';
+import { AppPromoHero } from '../components/AppPromo';
 
 // Per-locale string picker — every visible string lists fi/en/de/ja/ko/fr/it/nl.
 // es / pt-BR / zh-CN fall back to en until we add native copy.
@@ -639,6 +640,9 @@ export default function Home() {
       <Section className="bg-night-light/20">
         <NewsletterSignup />
       </Section>
+    {/* App launch block. Bottom of the page on purpose: the site's own hero is
+        what the search result promised, and this does not get to interrupt it. */}
+    <AppPromoHero />
     </>
   );
 }
