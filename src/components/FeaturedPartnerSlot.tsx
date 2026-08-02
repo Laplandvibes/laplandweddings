@@ -30,6 +30,13 @@ import PartnerSlot from '../../../shared/PartnerSlot';
 import { adLocaleEnabled } from '../../../shared/adSlotsCopy';
 import { AD_SLOTS, FEATURED_CONTEXT, FEATURED_PARTNERS, type FeaturedPlacement } from '../data/adSlots';
 
+/**
+ * Surfaces on which an UNSOLD placement may still render its "advertise here"
+ * notice. Empty on purpose — see the comment at the return below. A SOLD
+ * placement is unaffected and renders on every surface.
+ */
+const HOUSE_AD_SURFACES = new Set<FeaturedPlacement>();
+
 /** fi/en/sv mainosmerkinnän copy. Ei 12-kielisissä tiedostoissa: paikka on gatettu. */
 function markerCopy(locale: string) {
   const l = (locale || 'en').toLowerCase();
@@ -89,6 +96,24 @@ export default function FeaturedPartnerSlot({
       </div>
     );
   }
+
+  // 🔴 EMPTY SLOT ≠ SOLD SLOT (Vesa 2026-08-02, on the sibling luxury site:
+  // "aika paljon noita haluatko mainoksesi tähän osioita, tulee sellainen olo
+  // että ei hyvä"). This component carried two different products down one
+  // branch. A SOLD placement is content and still renders on all five surfaces
+  // above — no inventory is lost. An EMPTY placement is a vacancy notice, and
+  // repeating it on every surface reads as a half-empty billboard wall on a
+  // page selling five-figure weddings.
+  //
+  // Counted on this site: five FeaturedPartnerSlot surfaces (home, /venues,
+  // /venues/:slug ×21, /locations/:slug ×8, /wedding-types/:slug ×6) with
+  // FEATURED_PARTNERS empty on every one, so home → venues → venue → location
+  // met "MAINOSPAIKKA VAPAANA" four times in one journey.
+  //
+  // The house ad keeps exactly one home: the /partner-with-us page plus the
+  // dedicated HomeAdSlots row, which is where someone shopping for ad space is
+  // actually looking. Restoring a surface = add its placement to this set.
+  if (!HOUSE_AD_SURFACES.has(placement)) return null;
 
   return (
     <div className={wrap} data-featured-partner={placement}>

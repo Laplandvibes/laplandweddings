@@ -6,6 +6,7 @@ const t_sv = {
     locations: 'Regioner',
     types: 'Bröllopstyper',
     venues: 'Bröllopsplatser',
+    photographers: 'Fotografer',
     planners: 'Bröllopsplanerare',
     practical: 'Praktisk guide',
     pricing: 'Priser',
@@ -174,6 +175,8 @@ const t_sv = {
       controllerLabel: 'Personuppgiftsansvarig',
       paragraphs: [
         'Vi använder uppgifterna från kontaktformuläret enbart för att behandla din förfrågan och vidarebefordra den till bröllopsplanerare.',
+        'Formuläret samlar in ditt och din partners namn, din e-postadress och valfritt telefonnummer, ditt land samt de bröllopsuppgifter du beskriver: önskat datum och flexibilitet, antal gäster, region, önskad plats, typ av ceremoni, boendeönskemål, budgetspann och ditt fritextmeddelande.',
+        'Den rättsliga grunden är de åtgärder som vidtas på din begäran innan avtal ingås. Förfrågningar levereras via e-post genom Resend och webbplatsen levereras av Cloudflare; båda agerar som personuppgiftsbiträden för vår räkning. Vi säljer inte dina uppgifter och använder dem inte för annonsering.',
         'Vi sparar uppgifterna i högst 24 månader. Du kan begära radering av dina uppgifter genom att skriva till info@laplandvibes.com.',
         'Enligt GDPR har du rätt att få tillgång till, rätta, radera, begränsa och flytta dina personuppgifter samt att invända mot behandlingen av dem. Kontakta info@laplandvibes.com för att utöva dessa rättigheter.',
         'Vi använder Google Analytics 4 i anonymiserad form för besökaruppskattningar.',

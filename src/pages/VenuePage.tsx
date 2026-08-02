@@ -5,7 +5,8 @@ import LeadForm from '../components/LeadForm';
 import PriceTierBadge from '../components/PriceTierBadge';
 import { getVenueBySlug, venues } from '../data/venues';
 import { useLang } from '../i18n/LangContext';
-import { hotelsLink, AFFILIATE_REL } from '../lib/affiliate';
+import { venueLodgingLink, AFFILIATE_REL } from '../lib/affiliate';
+import { VENUE_BOOKING, venueIsBookable, venueTown } from '../data/venueBooking';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import NotFound from './NotFound';
 import L from '../components/L';
@@ -18,7 +19,7 @@ import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
 type VKey =
-  | 'getQuoteVenue' | 'checkPrices'
+  | 'getQuoteVenue' | 'checkPrices' | 'seeStaysIn'
   | 'affordable' | 'midRange' | 'premium'
   | 'open' | 'yearRound' | 'seasonal' | 'open12' | 'winterSeason'
   | 'suitsWeddings' | 'weddingTypesCount' | 'tailoredProposal'
@@ -43,6 +44,22 @@ const V: Record<VKey, Localized<string>> = {
     'zh-CN': '查看价格并预订', ko: '가격 확인 & 예약',
     fr: 'Voir prix & réserver', it: 'Vedi prezzi e prenota',
     nl: 'Bekijk prijzen & boek', sv: 'Se priser & boka',
+  },
+  /**
+   * Degraded label for the two venues no partner sells (Levi Ice Castle,
+   * Santa's Hotel Santamus). "Check rates & book" would promise this venue's own
+   * booking page; the link can only offer the town. 🔴 The place name is a
+   * separate {town} slot and never baked into the sentence — Finnish needs
+   * "Levillä / Rovaniemellä", German "in Levi". Same apposition trap Vesa
+   * flagged in the destination copy.
+   */
+  seeStaysIn: {
+    en: 'See stays in {town}', fi: 'Katso majoitus: {town}',
+    de: 'Unterkünfte ansehen: {town}', ja: '{town}の宿泊先を見る',
+    es: 'Ver alojamientos: {town}', 'pt-BR': 'Ver hospedagens: {town}',
+    'zh-CN': '查看住宿：{town}', ko: '숙소 보기: {town}',
+    fr: 'Voir les hébergements : {town}', it: 'Vedi alloggi: {town}',
+    nl: 'Bekijk overnachtingen: {town}', sv: 'Se boenden: {town}',
   },
   affordable: {
     en: 'Affordable', fi: 'Edullinen', de: 'Günstig', ja: 'お手頃',
@@ -308,14 +325,23 @@ export default function VenuePage() {
               >
                 {vt('getQuoteVenue')} →
               </a>
+              {/* Property-level deep link. Before 2026-08-02 this passed the
+                  venue NAME as ?ss= and reached a property page 0 times out of
+                  38; ", Finland" on a hotel name empties Sembo's autosuggest and
+                  drops the visitor on the partner front page. Now the town goes
+                  in ?ss= and the venue is addressed by its verified partner id.
+                  Where no partner sells the venue we do NOT invent an id — the
+                  label degrades so the button never promises more than it has. */}
               <a
-                href={hotelsLink(v.name, `venue_hero_${v.slug}`)}
+                href={venueLodgingLink({ slug: v.slug, ...VENUE_BOOKING[v.slug], town: venueTown(v.slug) }, lang)}
                 target="_blank"
                 rel={AFFILIATE_REL}
                 className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full transition-colors"
                 style={{ color: '#FFFFFF', background: 'rgba(255,255,255,0.10)', border: '2px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)' }}
               >
-                {vt('checkPrices')} →
+                {venueIsBookable(v.slug, lang)
+                  ? vt('checkPrices')
+                  : vt('seeStaysIn').replace('{town}', venueTown(v.slug))} →
               </a>
             </div>
           </div>

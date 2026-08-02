@@ -6,6 +6,7 @@ const t_nl = {
     locations: 'Regio’s',
     types: 'Bruiloftstypes',
     venues: 'Locaties',
+    photographers: 'Fotografen',
     planners: 'Weddingplanners',
     practical: 'Praktische gids',
     pricing: 'Prijzen',
@@ -174,6 +175,8 @@ const t_nl = {
       controllerLabel: 'Verwerkingsverantwoordelijke',
       paragraphs: [
         'Wij gebruiken de gegevens uit het contactformulier uitsluitend om uw aanvraag te verwerken en door te sturen naar bruiloftsplanners.',
+        'Het formulier verzamelt uw naam en die van uw partner, uw e-mailadres en optioneel uw telefoonnummer, uw land en de bruiloftsgegevens die u beschrijft: gewenste datum en flexibiliteit, aantal gasten, regio, gewenste locatie, type ceremonie, overnachtingsvoorkeur, budgetrange en uw vrije bericht.',
+        'De rechtsgrond zijn de precontractuele stappen die op uw verzoek worden gezet. Aanvragen worden per e-mail bezorgd via Resend en de site wordt geleverd door Cloudflare; beide treden op als verwerker namens ons. Wij verkopen uw gegevens niet en gebruiken ze niet voor advertenties.',
         'Wij bewaren de gegevens maximaal 24 maanden. U kunt verwijdering van uw gegevens aanvragen door te schrijven naar info@laplandvibes.com.',
         'Op grond van de AVG heeft u het recht op inzage, rectificatie, wissing, beperking en overdraagbaarheid van uw persoonsgegevens, en het recht om bezwaar te maken tegen de verwerking ervan. Neem voor het uitoefenen van deze rechten contact op via info@laplandvibes.com.',
         'Wij gebruiken Google Analytics 4 in geanonimiseerde vorm voor bezoekersschattingen.',

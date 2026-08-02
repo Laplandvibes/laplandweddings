@@ -6,6 +6,7 @@ const t_de = {
     locations: 'Regionen',
     types: 'Hochzeitsarten',
     venues: 'Hochzeitslocations',
+    photographers: 'Fotografen',
     planners: 'Hochzeitsplaner',
     practical: 'Praktischer Leitfaden',
     pricing: 'Preisrahmen',
@@ -174,6 +175,8 @@ const t_de = {
       controllerLabel: 'Verantwortlicher',
       paragraphs: [
         'Wir verwenden die Daten aus dem Kontaktformular ausschließlich, um Ihre Anfrage zu bearbeiten und an Hochzeitsplaner weiterzuleiten.',
+        'Das Formular erfasst Ihren Namen und den Ihres Partners bzw. Ihrer Partnerin, Ihre E-Mail-Adresse und optional Ihre Telefonnummer, Ihr Land sowie die von Ihnen beschriebenen Hochzeitsdetails: Wunschtermin und Flexibilität, Gästezahl, Region, Wunschlocation, Zeremonieart, Unterkunftswunsch, Budgetrahmen und Ihre Freitextnachricht.',
+        'Rechtsgrundlage sind die auf Ihre Anfrage hin erfolgenden vorvertraglichen Maßnahmen. Anfragen werden per E-Mail über Resend zugestellt, die Website wird von Cloudflare ausgeliefert; beide handeln als Auftragsverarbeiter für uns. Wir verkaufen Ihre Daten nicht und nutzen sie nicht für Werbung.',
         'Wir speichern die Daten für höchstens 24 Monate. Sie können die Löschung Ihrer Daten beantragen, indem Sie an info@laplandvibes.com schreiben.',
         'Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Übertragbarkeit Ihrer personenbezogenen Daten sowie das Recht, deren Verarbeitung zu widersprechen. Zur Ausübung dieser Rechte wenden Sie sich an info@laplandvibes.com.',
         'Wir nutzen Google Analytics 4 in anonymisierter Form für Besucherschätzungen.',

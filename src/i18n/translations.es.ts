@@ -6,6 +6,7 @@ const t_es = {
     locations: 'Ubicaciones',
     types: 'Tipos de boda',
     venues: 'Lugares',
+    photographers: 'Fotógrafos',
     planners: 'Planificadores',
     practical: 'Guía práctica',
     pricing: 'Precios',
@@ -172,6 +173,8 @@ const t_es = {
       controllerLabel: 'Responsable del tratamiento',
       paragraphs: [
         'Utilizamos los datos del formulario de contacto únicamente para tramitar su consulta y remitirla a organizadores de bodas.',
+        'El formulario recoge su nombre y el de su pareja, su dirección de correo electrónico y, opcionalmente, su teléfono, su país y los detalles de la boda que describe: fecha preferida y flexibilidad, número de invitados, región, lugar deseado, tipo de ceremonia, preferencia de alojamiento, franja de presupuesto y su mensaje libre.',
+        'La base jurídica son las gestiones precontractuales realizadas a petición suya. Las consultas se entregan por correo electrónico mediante Resend y el sitio se sirve a través de Cloudflare; ambos actúan como encargados del tratamiento por cuenta nuestra. No vendemos sus datos ni los utilizamos con fines publicitarios.',
         'Conservamos los datos durante un máximo de 24 meses. Puede solicitar la eliminación de sus datos escribiendo a info@laplandvibes.com.',
         'Conforme al RGPD, tiene derecho a acceder, rectificar, suprimir, limitar y portar sus datos personales, así como a oponerse a su tratamiento. Para ejercer estos derechos, escriba a info@laplandvibes.com.',
         'Utilizamos Google Analytics 4 de forma anonimizada para estimar las visitas.',

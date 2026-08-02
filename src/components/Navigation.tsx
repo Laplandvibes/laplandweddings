@@ -71,6 +71,10 @@ export default function Navigation() {
     { to: '/locations', label: tr.nav.locations },
     { to: '/wedding-types', label: tr.nav.types },
     { to: '/venues', label: tr.nav.venues },
+    // /photographers was in the sitemap in 9 locales with ZERO internal links
+    // anywhere on the site (measured 2026-08-02) — a real page listing six named
+    // photographers that no visitor could reach by navigating.
+    { to: '/photographers', label: tr.nav.photographers },
     { to: '/practical-guide', label: tr.nav.practical },
     { to: '/pricing', label: tr.nav.pricing },
   ];

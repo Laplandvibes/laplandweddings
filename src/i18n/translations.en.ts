@@ -6,6 +6,7 @@ const t_en = {
     locations: 'Locations',
     types: 'Wedding Types',
     venues: 'Venues',
+    photographers: 'Photographers',
     planners: 'Planners',
     practical: 'Practical Guide',
     pricing: 'Pricing',
@@ -174,6 +175,8 @@ const t_en = {
       controllerLabel: 'Controller',
       paragraphs: [
         'We use the contact form data only to process your enquiry and forward it to wedding planners.',
+        'The form collects the names of you and your partner, your email address and optional phone number, your country, and the details of the wedding you describe: preferred date and flexibility, guest count, region, venue wish, ceremony type, accommodation preference, budget range and your free-text message.',
+        'The legal basis is the steps taken at your request before entering into a contract. Enquiries are delivered by email through Resend and the site is served by Cloudflare; both act as processors on our behalf. We do not sell your data or use it for advertising.',
         'We retain data for up to 24 months. You may request deletion of your data by writing to info@laplandvibes.com.',
         'Under the GDPR you have the right to access, rectify, erase, restrict and port your personal data, and to object to its processing. To exercise these rights, contact info@laplandvibes.com.',
         'We use Google Analytics 4 anonymised for visitor estimates.',

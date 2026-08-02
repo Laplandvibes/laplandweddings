@@ -58,6 +58,41 @@ export function hotelsLink(query: string, sid = 'venue', lang: Lang = 'en'): str
   return u.toString();
 }
 
+/**
+ * Lodging link for a NAMED venue — resolves to that property's own booking page.
+ *
+ * 🔴 `?ss=` is the TOWN, never the venue name. `anchorFinland()` is correct for a
+ * town and breaks a hotel name: Sembo's autosuggest returns [] for multi-word
+ * hotel terms, so the Worker gets no destination and serves the partner's FRONT
+ * PAGE. Measured 2026-08-02 — 18 of 38 venue CTAs landed there. The property is
+ * addressed by id instead (`sembo_hotel`+`sembo_poly` for fi, `trip_hotel`+
+ * `trip_city` otherwise), which the Worker has accepted since 2026-07-27.
+ *
+ * 🔴 Keep `sid` short. The Worker truncates `<domain>_<sid>` at 50 chars and
+ * `laplandweddings_online_` is already 23, leaving 27. The old `venue_hero_`
+ * prefix clipped 13 of 21 slugs — and clipped three Wilderness hotels and three
+ * Northern Lights properties into the SAME sub-id, merging their reporting.
+ * `v_` leaves 25 chars, enough for every slug on this site.
+ */
+export function venueLodgingLink(
+  opts: { slug: string; town: string; semboHotel?: string; semboPoly?: string; tripHotel?: string; tripCity?: string },
+  lang: Lang = 'en',
+): string {
+  const u = new URL('https://go.laplandvibes.com/go/hotels');
+  u.searchParams.set('sid', `v_${opts.slug}`);
+  u.searchParams.set('ss', anchorFinland(opts.town));
+  u.searchParams.set('locale', HOTELS_LOCALE[lang]);
+  if (opts.semboHotel && opts.semboPoly) {
+    u.searchParams.set('sembo_hotel', opts.semboHotel);
+    u.searchParams.set('sembo_poly', opts.semboPoly);
+  }
+  if (opts.tripHotel) {
+    u.searchParams.set('trip_hotel', opts.tripHotel);
+    if (opts.tripCity) u.searchParams.set('trip_city', opts.tripCity);
+  }
+  return u.toString();
+}
+
 /** Hotels.com seasonal — for top-pick / featured destinations. */
 export function hotelsSeasonalLink(query: string, sid = 'seasonal', lang: Lang = 'en'): string {
   const u = new URL('https://go.laplandvibes.com/go/hotels-seasonal');

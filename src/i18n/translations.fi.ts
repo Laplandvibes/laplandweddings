@@ -6,6 +6,7 @@ const t_fi = {
     locations: 'Paikkakunnat',
     types: 'Häätyypit',
     venues: 'Hääpaikat',
+    photographers: 'Valokuvaajat',
     planners: 'Suunnittelijat',
     practical: 'Käytännön opas',
     pricing: 'Hinta-arviot',
@@ -174,6 +175,8 @@ const t_fi = {
       controllerLabel: 'Rekisterinpitäjä',
       paragraphs: [
         'Käytämme yhteydenottolomakkeen tietoja vain sinun tiedustelusi käsittelyyn ja sen välittämiseen hääsuunnittelijoille.',
+        'Lomakkeella kerätään sinun ja kumppanisi nimi, sähköpostiosoite ja halutessasi puhelinnumero, maa sekä kuvaamasi häiden tiedot: toivepäivä ja sen joustavuus, vieraiden määrä, alue, hääpaikkatoive, seremonian tyyppi, majoitustoive, budjettihaarukka ja vapaa viestisi.',
+        'Käsittelyn oikeusperuste on pyynnöstäsi toteutettavat toimet ennen sopimuksen tekemistä. Tiedustelut toimitetaan sähköpostitse Resendin kautta ja sivustoa palvelee Cloudflare; molemmat toimivat käsittelijöinä lukuumme. Emme myy tietojasi emmekä käytä niitä mainontaan.',
         'Säilytämme tietoja enintään 24 kuukautta. Voit pyytää tietojesi poistamista kirjoittamalla osoitteeseen info@laplandvibes.com.',
         'GDPR:n nojalla sinulla on oikeus saada pääsy henkilötietoihisi, oikaista ja poistaa ne, rajoittaa ja siirtää niitä sekä vastustaa niiden käsittelyä. Voit käyttää näitä oikeuksia ottamalla yhteyttä osoitteeseen info@laplandvibes.com.',
         'Käytämme Google Analytics 4:ää anonymisoituna kävijämääräarvioille.',

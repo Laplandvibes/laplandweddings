@@ -6,6 +6,7 @@ const t_fr = {
     locations: 'Régions',
     types: 'Types de mariage',
     venues: 'Lieux',
+    photographers: 'Photographes',
     planners: 'Organisateurs',
     practical: 'Guide pratique',
     pricing: 'Tarifs',
@@ -174,6 +175,8 @@ const t_fr = {
       controllerLabel: 'Responsable du traitement',
       paragraphs: [
         'Nous utilisons les données du formulaire de contact uniquement pour traiter votre demande et la transmettre à des organisateurs de mariage.',
+        'Le formulaire recueille vos deux prénoms et noms, votre adresse e-mail et, facultativement, votre téléphone, votre pays ainsi que les éléments du mariage que vous décrivez : date souhaitée et souplesse, nombre d’invités, région, lieu souhaité, type de cérémonie, préférence d’hébergement, fourchette de budget et votre message libre.',
+        'La base légale correspond aux mesures précontractuelles prises à votre demande. Les demandes sont acheminées par e-mail via Resend et le site est servi par Cloudflare ; tous deux agissent comme sous-traitants pour notre compte. Nous ne vendons pas vos données et ne les utilisons pas à des fins publicitaires.',
         'Nous conservons les données pendant 24 mois au maximum. Vous pouvez demander la suppression de vos données en écrivant à info@laplandvibes.com.',
         'Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation et de portabilité de vos données personnelles, ainsi que du droit de vous opposer à leur traitement. Pour exercer ces droits, écrivez à info@laplandvibes.com.',
         'Nous utilisons Google Analytics 4 de manière anonymisée pour estimer la fréquentation.',
