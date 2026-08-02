@@ -70,9 +70,16 @@ export function hotelsLink(query: string, sid = 'venue', lang: Lang = 'en'): str
  *
  * 🔴 Keep `sid` short. The Worker truncates `<domain>_<sid>` at 50 chars and
  * `laplandweddings_online_` is already 23, leaving 27. The old `venue_hero_`
- * prefix clipped 13 of 21 slugs — and clipped three Wilderness hotels and three
- * Northern Lights properties into the SAME sub-id, merging their reporting.
- * `v_` leaves 25 chars, enough for every slug on this site.
+ * prefix clipped 13 of 21 slugs — and, worse, clipped the three Wilderness
+ * hotels into one identical sub-id and the three Northern Lights properties
+ * into another, so their reporting was merged rather than merely shortened.
+ *
+ * `v_` leaves 25 characters. Measured, not assumed: three slugs are still
+ * longer than that (northern-lights-village-saariselka, -levi and
+ * lapland-hotels-luostotunturi) and still arrive truncated — but all 21
+ * truncated sub-ids remain DISTINCT, which is the property that actually
+ * matters for attribution. Re-check that uniqueness before adding a venue whose
+ * slug shares its first 25 characters with an existing one.
  */
 export function venueLodgingLink(
   opts: { slug: string; town: string; semboHotel?: string; semboPoly?: string; tripHotel?: string; tripCity?: string },
