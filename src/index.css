@@ -4,6 +4,11 @@
 @source "../../shared/**/*.{ts,tsx}";
 
 @theme {
+  /* LV ecosystem tokens required by shared/ components (added 2026-08-04:
+     without them Tailwind v4 silently drops e.g. bg-vibe-pink from the build). */
+  --color-deep-night: #0F172A;
+  --color-snow: #F9FAFB;
+  --color-arctic-cyan: #06B6D4;
   /* Network rule (Vesa 2026-07-24): the #LAPLAND* wordmark renders in Bebas Neue
      on every site, variant fonts stay for headings/body. */
   --font-logo: 'Bebas Neue', 'Arial Narrow', sans-serif;
