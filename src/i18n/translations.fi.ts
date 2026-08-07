@@ -15,7 +15,7 @@ const t_fi = {
   },
   cta: {
     getQuote: 'Pyydä tarjous',
-    getThreeQuotes: 'Pyydä 3 räätälöityä tarjousta',
+    getThreeQuotes: 'Pyydä 1–3 räätälöityä tarjousta',
     getThreeQuotesShort: 'Pyydä tarjous',
     planYourWedding: 'Suunnittele häät',
     seeVenues: 'Katso hääpaikat',
@@ -40,7 +40,7 @@ const t_fi = {
     typesTitle: 'Mistä häistä unelmoitte',
     locationsTitle: 'Mihin Lappiin',
     plannersTitle: 'Lapin kokeneimmat hääsuunnittelijat',
-    plannersIntro: 'Olemme tutkineet Lapin häämarkkinaa ja koonneet 7 vakiintuneinta suunnittelijaa yhdelle sivulle. Pyydä lomakkeella 3 räätälöityä tarjousta, me hoidamme välityksen.',
+    plannersIntro: 'Olemme tutkineet Lapin häämarkkinaa ja koonneet 7 vakiintuneinta suunnittelijaa yhdelle sivulle. Pyydä lomakkeella 1–3 räätälöityä tarjousta, me hoidamme välityksen.',
     newsletterTitle: 'Saat sähköpostiisi Lapin hääaiheisia oppaita',
     newsletterSub: 'Kuukausittainen kirje: avoimet venuet, sesonkivinkit ja PDF-opas DVV-papereista. Voit perua koska tahansa.',
     newsletterEmail: 'sähköpostiosoite@example.com',
@@ -87,9 +87,9 @@ const t_fi = {
   },
   planners: {
     indexTitle: 'Lapin hääsuunnittelijat',
-    indexIntro: 'Olemme keränneet seitsemän vakiintuneinta hääsuunnittelijaa Lapissa ja Suomessa. Lähetä yksi lomake → me toimitamme 3 räätälöityä tarjousta.',
-    threeQuotesTitle: 'Pyydä 3 tarjousta yhdellä lomakkeella',
-    threeQuotesP: 'Tarvitset vain 5 minuuttia. Saat 1–7 päivän sisällä 3 hääsuunnittelijan tarjoukset, vertaile ja valitse. Maksuton ja sitoumukseton.',
+    indexIntro: 'Olemme keränneet seitsemän vakiintuneinta hääsuunnittelijaa Lapissa ja Suomessa. Lähetä yksi lomake → me toimitamme 1–3 räätälöityä tarjousta.',
+    threeQuotesTitle: 'Pyydä 1–3 tarjousta yhdellä lomakkeella',
+    threeQuotesP: 'Tarvitset vain 5 minuuttia. Saat 1–7 päivän sisällä tarjoukset 1–3 hääsuunnittelijalta, vertaile ja valitse. Maksuton ja sitoumukseton.',
   },
   practical: {
     title: 'Häät Lapissa , käytännön opas',
@@ -102,7 +102,7 @@ const t_fi = {
   contact: {
     title: 'Ota yhteyttä',
     subtitle: 'Vastaamme 1–2 työpäivän sisällä. Kuvaa lyhyesti unelmasi, välitämme sen sopiville suunnittelijoille.',
-    formTitle: 'Pyydä 3 tarjousta',
+    formTitle: 'Pyydä 1–3 tarjousta',
     formSub: 'Maksuton ja sitoumukseton. Vastaus 1–7 päivän sisällä.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_fi = {
     attachmentsTooBig: 'Tiedosto liian iso (max 5 MB kuva / 25 MB video).',
     attachmentsTotalTooBig: 'Tiedostojen yhteenlaskettu koko ylittää 38 MB.',
     attachmentsBadType: 'Vain kuvat (JPG/PNG/WebP/HEIC) ja videot (MP4/MOV/WebM) ovat sallittuja.',
-    submit: 'Lähetä, saat 3 tarjousta',
+    submit: 'Lähetä, saat 1–3 tarjousta',
     submitting: 'Lähetetään…',
     success: 'Kiitos! Enintään kolme teille sopivaa Lapin hääsuunnittelijaa ottaa teihin yhteyttä suoraan 1–7 päivän sisällä.',
     error: 'Lähetys ei mennyt läpi. Kokeile vielä kerran tai laita sähköposti suoraan info@laplandvibes.com.',

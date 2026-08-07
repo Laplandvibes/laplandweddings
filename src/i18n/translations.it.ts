@@ -15,7 +15,7 @@ const t_it = {
   },
   cta: {
     getQuote: 'Richiedi preventivo',
-    getThreeQuotes: 'Gratis: 3 preventivi di wedding planner',
+    getThreeQuotes: 'Gratis: 1–3 preventivi di wedding planner',
     getThreeQuotesShort: 'Preventivo',
     planYourWedding: 'Pianifica il matrimonio',
     seeVenues: 'Vedi le location',
@@ -40,7 +40,7 @@ const t_it = {
     typesTitle: 'Che tipo di matrimonio stai sognando',
     locationsTitle: 'Scegli la tua zona della Lapponia',
     plannersTitle: 'I wedding planner più esperti della Lapponia',
-    plannersIntro: 'Abbiamo studiato il mercato dei matrimoni in Lapponia e selezionato i 7 planner più affermati. Invia il modulo e ti consegneremo 3 preventivi personalizzati, senza costi per te.',
+    plannersIntro: 'Abbiamo studiato il mercato dei matrimoni in Lapponia e selezionato i 7 planner più affermati. Invia il modulo e ti consegneremo 1–3 preventivi personalizzati, senza costi per te.',
     newsletterTitle: 'Guide per matrimoni in Lapponia nella tua casella',
     newsletterSub: 'Una nota mensile: location disponibili, consigli stagionali e una guida PDF al DVV. Disiscriviti quando vuoi.',
     newsletterEmail: 'your-email@example.com',
@@ -87,9 +87,9 @@ const t_it = {
   },
   planners: {
     indexTitle: 'Wedding planner in Lapponia',
-    indexIntro: 'Abbiamo raccolto i sette wedding planner più affermati della Lapponia. Un modulo → 3 preventivi personalizzati.',
-    threeQuotesTitle: '3 preventivi con un solo modulo',
-    threeQuotesP: 'Bastano cinque minuti. Entro 1–7 giorni ricevi 3 preventivi di wedding planner, confronta e scegli. Gratis e senza impegno.',
+    indexIntro: 'Abbiamo raccolto i sette wedding planner più affermati della Lapponia. Un modulo → 1–3 preventivi personalizzati.',
+    threeQuotesTitle: '1–3 preventivi con un solo modulo',
+    threeQuotesP: 'Bastano cinque minuti. Entro 1–7 giorni ricevi 1–3 preventivi di wedding planner, confronta e scegli. Gratis e senza impegno.',
   },
   practical: {
     title: 'Sposarsi in Lapponia, guida pratica',
@@ -102,7 +102,7 @@ const t_it = {
   contact: {
     title: 'Contattaci',
     subtitle: 'Rispondiamo entro 1–2 giorni lavorativi. Raccontaci brevemente il tuo sogno, lo indirizziamo ai planner giusti.',
-    formTitle: 'Ricevi 3 preventivi',
+    formTitle: 'Ricevi 1–3 preventivi',
     formSub: 'Gratis e senza impegno. Risposta entro 1–7 giorni.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_it = {
     attachmentsTooBig: 'File troppo grande (max 5 MB immagine / 25 MB video).',
     attachmentsTotalTooBig: 'Allegati totali oltre 38 MB.',
     attachmentsBadType: 'Solo immagini (JPG/PNG/WebP/HEIC) e video (MP4/MOV/WebM) sono ammessi.',
-    submit: 'Invia, ricevi 3 preventivi',
+    submit: 'Invia, ricevi 1–3 preventivi',
     submitting: 'Invio in corso…',
     success: 'Grazie! Fino a tre wedding planner della Lapponia selezionati per voi vi contatteranno direttamente entro 1–7 giorni.',
     error: 'Invio non riuscito. Riprova o scrivi direttamente a info@laplandvibes.com.',

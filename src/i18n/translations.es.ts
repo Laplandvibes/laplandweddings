@@ -15,7 +15,7 @@ const t_es = {
   },
   cta: {
     getQuote: 'Solicite un presupuesto',
-    getThreeQuotes: 'Gratis: 3 presupuestos de planificadores de boda',
+    getThreeQuotes: 'Gratis: 1–3 presupuestos de planificadores de boda',
     getThreeQuotesShort: 'Pedir presupuesto',
     planYourWedding: 'Planifique su boda',
     seeVenues: 'Ver lugares',
@@ -38,7 +38,7 @@ const t_es = {
     typesTitle: '¿Qué tipo de boda sueña?',
     locationsTitle: 'Elija su rincón de Laponia',
     plannersTitle: 'Los planificadores más experimentados de Laponia',
-    plannersIntro: 'Hemos investigado el mercado de bodas en Laponia y seleccionado 7 de los planificadores más consolidados. Envíe el formulario y le entregamos 3 presupuestos personalizados, sin coste.',
+    plannersIntro: 'Hemos investigado el mercado de bodas en Laponia y seleccionado 7 de los planificadores más consolidados. Envíe el formulario y le entregamos 1–3 presupuestos personalizados, sin coste.',
     newsletterTitle: 'Reciba guías de bodas de Laponia en su correo',
     newsletterSub: 'Una nota mensual: lugares disponibles, consejos de temporada y una guía en PDF sobre la documentación DVV. Puede darse de baja en cualquier momento.',
     newsletterEmail: 'su-correo@example.com',
@@ -85,9 +85,9 @@ const t_es = {
   },
   planners: {
     indexTitle: 'Planificadores de bodas en Laponia',
-    indexIntro: 'Hemos reunido los siete planificadores de bodas de Laponia más consolidados. Envíe un solo formulario → le entregamos 3 presupuestos personalizados.',
-    threeQuotesTitle: 'Reciba 3 presupuestos con un único formulario',
-    threeQuotesP: 'Cinco minutos es lo que necesita. En 1 a 7 días recibirá 3 presupuestos de planificadores de boda, compare y elija. Gratis y sin compromiso.',
+    indexIntro: 'Hemos reunido los siete planificadores de bodas de Laponia más consolidados. Envíe un solo formulario → le entregamos 1–3 presupuestos personalizados.',
+    threeQuotesTitle: 'Reciba 1–3 presupuestos con un único formulario',
+    threeQuotesP: 'Cinco minutos es lo que necesita. En 1 a 7 días recibirá 1–3 presupuestos de planificadores de boda, compare y elija. Gratis y sin compromiso.',
   },
   practical: {
     title: 'Casarse en Laponia, guía práctica',
@@ -100,7 +100,7 @@ const t_es = {
   contact: {
     title: 'Contáctenos',
     subtitle: 'Respondemos en 1 a 2 días laborables. Cuéntenos brevemente su sueño, lo enviamos a los planificadores adecuados.',
-    formTitle: 'Reciba 3 presupuestos',
+    formTitle: 'Reciba 1–3 presupuestos',
     formSub: 'Gratis y sin compromiso. Respuesta en 1 a 7 días.',
   },
   form: {
@@ -150,7 +150,7 @@ const t_es = {
     attachmentsTooBig: 'Archivo demasiado grande (máx. 5 MB imagen / 25 MB vídeo).',
     attachmentsTotalTooBig: 'Los adjuntos combinados superan los 38 MB.',
     attachmentsBadType: 'Solo se permiten imágenes (JPG/PNG/WebP/HEIC) y vídeos (MP4/MOV/WebM).',
-    submit: 'Enviar, recibir 3 presupuestos',
+    submit: 'Enviar, recibir 1–3 presupuestos',
     submitting: 'Enviando…',
     success: '¡Gracias! Hasta tres organizadores de bodas en Laponia, seleccionados para vosotros, os contactarán directamente en 1 a 7 días.',
     error: 'El envío ha fallado. Inténtelo de nuevo o escriba directamente a info@laplandvibes.com.',

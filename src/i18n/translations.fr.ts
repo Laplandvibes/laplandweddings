@@ -15,7 +15,7 @@ const t_fr = {
   },
   cta: {
     getQuote: 'Demander un devis',
-    getThreeQuotes: 'Gratuit : 3 devis d’organisateurs',
+    getThreeQuotes: 'Gratuit : 1 à 3 devis d’organisateurs',
     getThreeQuotesShort: 'Devis',
     planYourWedding: 'Planifier votre mariage',
     seeVenues: 'Voir les lieux',
@@ -40,7 +40,7 @@ const t_fr = {
     typesTitle: 'De quel type de mariage rêvez-vous',
     locationsTitle: 'Choisissez votre coin de Laponie',
     plannersTitle: 'Les organisateurs les plus expérimentés de Laponie',
-    plannersIntro: 'Nous avons étudié le marché du mariage en Laponie et sélectionné les 7 organisateurs les plus établis. Envoyez le formulaire et nous vous livrerons 3 devis personnalisés, sans frais pour vous.',
+    plannersIntro: 'Nous avons étudié le marché du mariage en Laponie et sélectionné les 7 organisateurs les plus établis. Envoyez le formulaire et nous vous livrerons 1 à 3 devis personnalisés, sans frais pour vous.',
     newsletterTitle: 'Recevez les guides mariage Laponie par e-mail',
     newsletterSub: 'Une note mensuelle : lieux disponibles, conseils saisonniers et un guide PDF sur le DVV. Désabonnement à tout moment.',
     newsletterEmail: 'your-email@example.com',
@@ -87,9 +87,9 @@ const t_fr = {
   },
   planners: {
     indexTitle: 'Organisateurs de mariage en Laponie',
-    indexIntro: 'Nous avons rassemblé les sept organisateurs de mariage en Laponie les plus établis. Un formulaire → 3 devis personnalisés.',
-    threeQuotesTitle: '3 devis avec un seul formulaire',
-    threeQuotesP: 'Cinq minutes suffisent. En 1 à 7 jours vous recevez 3 devis d’organisateurs, comparez et choisissez. Gratuit, sans engagement.',
+    indexIntro: 'Nous avons rassemblé les sept organisateurs de mariage en Laponie les plus établis. Un formulaire → 1 à 3 devis personnalisés.',
+    threeQuotesTitle: '1 à 3 devis avec un seul formulaire',
+    threeQuotesP: 'Cinq minutes suffisent. En 1 à 7 jours vous recevez 1 à 3 devis d’organisateurs, comparez et choisissez. Gratuit, sans engagement.',
   },
   practical: {
     title: 'Se marier en Laponie, guide pratique',
@@ -102,7 +102,7 @@ const t_fr = {
   contact: {
     title: 'Contactez-nous',
     subtitle: 'Nous répondons sous 1 à 2 jours ouvrés. Décrivez-nous brièvement votre rêve, nous l’orientons vers les bons organisateurs.',
-    formTitle: 'Obtenir 3 devis',
+    formTitle: 'Obtenir 1 à 3 devis',
     formSub: 'Gratuit, sans engagement. Réponse sous 1–7 jours.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_fr = {
     attachmentsTooBig: 'Fichier trop volumineux (max 5 Mo image / 25 Mo vidéo).',
     attachmentsTotalTooBig: 'Les pièces jointes combinées dépassent 38 Mo.',
     attachmentsBadType: 'Seules les images (JPG/PNG/WebP/HEIC) et vidéos (MP4/MOV/WebM) sont autorisées.',
-    submit: 'Envoyer, obtenir 3 devis',
+    submit: 'Envoyer, obtenir 1 à 3 devis',
     submitting: 'Envoi en cours…',
     success: 'Merci ! Jusqu’à trois wedding planners de Laponie sélectionnés pour vous vous contacteront directement sous 1 à 7 jours.',
     error: 'Envoi échoué. Réessayez ou écrivez directement à info@laplandvibes.com.',

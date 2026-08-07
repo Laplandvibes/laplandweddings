@@ -1251,7 +1251,7 @@ const venueRegistry: Venue[] = [
     name: 'Lapland Hotels Saaga',
     locationSlug: 'yllas',
     region: {
-      fi: 'Ylläsjärvi · Pallas-Yllästunturin kpalla',
+      fi: 'Ylläsjärvi · Pallas-Yllästunturin kupeella',
       en: 'Ylläsjärvi · at Pallas-Yllästunturi NP',
       de: 'Ylläsjärvi · am Pallas-Yllästunturi-NP',
       ja: 'ウッラスヤルヴィ · パッラス-ウッラス国立公園',
@@ -1362,7 +1362,7 @@ const venueRegistry: Venue[] = [
       sv: 'Finlands nordligaste glasigloresort, vid en sjöstrand omgiven av fjäll. Läget i Kilpisjärvi ger Lapplands bästa norrskensvy, 480 m över havet. Bäst för äventyrliga par som vill ha ett smygbröllop.',
     },
     features: {
-      fi: ['Suomen pohjoisin lasi-iglu', '480 m mph', 'Kolmen valtakunnan rajapyykki lähellä'],
+      fi: ['Suomen pohjoisin lasi-iglu', '480 m mpy', 'Kolmen valtakunnan rajapyykki lähellä'],
       en: ['Finland’s northernmost glass igloo', '480 m above sea level', 'Three-country border nearby'],
       de: ['Finnlands nördlichstes Glasiglu', '480 m über dem Meeresspiegel', 'Dreiländereck in der Nähe'],
       ja: ['フィンランド最北のガラスイグルー', '標高480m', '三国国境標が近い'],
@@ -1591,7 +1591,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 80 },
     description: {
-      fi: 'Joulupukin pajakylän ainut häihin suunniteltu hotelli. Sijainti tukee pareja jotka haluavat joulupukin paikalle. Häämatkaila-pakettit yhdistyvät reindeer-ride ja husky-kokemuksiin.',
+      fi: 'Joulupukin pajakylän ainut häihin suunniteltu hotelli. Sijainti tukee pareja jotka haluavat joulupukin paikalle. Hääpaketit yhdistävät porosafarit ja husky-elämykset.',
       en: 'The only Santa Claus Village hotel designed for weddings. Location supports couples wanting Santa Claus to attend. Wedding packages combine reindeer rides and husky experiences.',
       de: 'Das einzige für Hochzeiten konzipierte Hotel im Weihnachtsmanndorf. Die Lage ist ideal für Paare, die den Weihnachtsmann dabei haben möchten. Hochzeitspakete verbinden Rentierfahrten und Husky-Erlebnisse.',
       ja: 'サンタクロース村で唯一の結婚式向けホテル。サンタクロースに参列してほしいカップルにぴったりの立地です。ウェディングパッケージはトナカイライドやハスキー体験と組み合わせられます。',
@@ -1605,7 +1605,7 @@ const venueRegistry: Venue[] = [
       sv: 'Det enda hotellet i Julgubbens by som är byggt för bröllop. Läget passar par som vill ha Julgubben på plats. Bröllopspaketen kombinerar renkörning och huskyupplevelser.',
     },
     features: {
-      fi: ['Joulupukin pajakylässä', 'Häämatkapaketti', 'Reindeer + husky'],
+      fi: ['Joulupukin pajakylässä', 'Häämatkapaketti', 'Poro + husky'],
       en: ['In Santa Claus Village', 'Honeymoon package', 'Reindeer + husky'],
       de: ['Im Weihnachtsmanndorf', 'Flitterwochen-Paket', 'Rentier + Husky'],
       ja: ['サンタクロース村内', 'ハネムーンパッケージ', 'トナカイ＋ハスキー'],

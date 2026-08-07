@@ -15,7 +15,7 @@ const t_ptBR = {
   },
   cta: {
     getQuote: 'Solicitar orçamento',
-    getThreeQuotes: 'Grátis: 3 orçamentos de organizadores de casamento',
+    getThreeQuotes: 'Grátis: 1–3 orçamentos de organizadores de casamento',
     getThreeQuotesShort: 'Pedir orçamento',
     planYourWedding: 'Planeje seu casamento',
     seeVenues: 'Ver locais',
@@ -38,7 +38,7 @@ const t_ptBR = {
     typesTitle: 'Que tipo de casamento vocês sonham?',
     locationsTitle: 'Escolha seu canto da Lapônia',
     plannersTitle: 'Os organizadores mais experientes da Lapônia',
-    plannersIntro: 'Pesquisamos o mercado de casamentos da Lapônia e selecionamos 7 dos organizadores mais consolidados. Envie o formulário e entregamos 3 orçamentos personalizados, sem custo.',
+    plannersIntro: 'Pesquisamos o mercado de casamentos da Lapônia e selecionamos 7 dos organizadores mais consolidados. Envie o formulário e entregamos 1–3 orçamentos personalizados, sem custo.',
     newsletterTitle: 'Receba guias de casamento da Lapônia no seu e-mail',
     newsletterSub: 'Uma nota mensal: locais disponíveis, dicas de temporada e um guia em PDF sobre a documentação do DVV. Cancele a qualquer momento.',
     newsletterEmail: 'seu-email@example.com',
@@ -85,9 +85,9 @@ const t_ptBR = {
   },
   planners: {
     indexTitle: 'Organizadores de casamento na Lapônia',
-    indexIntro: 'Reunimos os sete organizadores de casamento mais consolidados da Lapônia. Envie um formulário → entregamos 3 orçamentos personalizados.',
-    threeQuotesTitle: 'Receba 3 orçamentos com um único formulário',
-    threeQuotesP: 'Cinco minutos é o básico. Em 1 a 7 dias receberá 3 orçamentos de organizadores de casamento, compare e escolha. Grátis e sem compromisso.',
+    indexIntro: 'Reunimos os sete organizadores de casamento mais consolidados da Lapônia. Envie um formulário → entregamos 1–3 orçamentos personalizados.',
+    threeQuotesTitle: 'Receba 1–3 orçamentos com um único formulário',
+    threeQuotesP: 'Cinco minutos é o básico. Em 1 a 7 dias receberá 1–3 orçamentos de organizadores de casamento, compare e escolha. Grátis e sem compromisso.',
   },
   practical: {
     title: 'Casar na Lapônia, guia prático',
@@ -100,7 +100,7 @@ const t_ptBR = {
   contact: {
     title: 'Entre em contato',
     subtitle: 'Respondemos em 1 a 2 dias úteis. Conte-nos brevemente seu sonho, encaminhamos aos organizadores certos.',
-    formTitle: 'Receba 3 orçamentos',
+    formTitle: 'Receba 1–3 orçamentos',
     formSub: 'Grátis e sem compromisso. Resposta em 1 a 7 dias.',
   },
   form: {
@@ -150,7 +150,7 @@ const t_ptBR = {
     attachmentsTooBig: 'Arquivo grande demais (máx. 5 MB imagem / 25 MB vídeo).',
     attachmentsTotalTooBig: 'Os anexos combinados ultrapassam 38 MB.',
     attachmentsBadType: 'Apenas imagens (JPG/PNG/WebP/HEIC) e vídeos (MP4/MOV/WebM) são permitidos.',
-    submit: 'Enviar, receber 3 orçamentos',
+    submit: 'Enviar, receber 1–3 orçamentos',
     submitting: 'Enviando…',
     success: 'Obrigado! Até três organizadores de casamento na Lapônia, selecionados para vocês, entrarão em contato diretamente em 1 a 7 dias.',
     error: 'O envio falhou. Tente novamente ou escreva diretamente para info@laplandvibes.com.',

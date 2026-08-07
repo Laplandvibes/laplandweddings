@@ -15,7 +15,7 @@ const t_de = {
   },
   cta: {
     getQuote: 'Angebot anfordern',
-    getThreeQuotes: 'Kostenlos: 3 Angebote von Hochzeitsplanern',
+    getThreeQuotes: 'Kostenlos: 1–3 Angebote von Hochzeitsplanern',
     getThreeQuotesShort: 'Angebot anfordern',
     planYourWedding: 'Hochzeit planen',
     seeVenues: 'Locations ansehen',
@@ -28,9 +28,9 @@ const t_de = {
   },
   home: {
     heroTitle: 'Heiraten im Lappland-Schnee.',
-    heroSubtitle: 'Glasiglus · Schneekapellen · Polarlichter · Mitternachtssonne. Lapplands erfahrenste Hochzeitsplaner, fordern Sie 3 maßgeschneiderte Angebote mit einem Formular an.',
+    heroSubtitle: 'Glasiglus · Schneekapellen · Polarlichter · Mitternachtssonne. Lapplands erfahrenste Hochzeitsplaner, fordern Sie 1–3 maßgeschneiderte Angebote mit einem Formular an.',
     heroTitleSummer: 'Heiraten unter der Mitternachtssonne.',
-    heroSubtitleSummer: 'Trauung am Seeufer · Bogen am Fuß des Fjälls · helle Nächte ohne Dunkelheit. Lapplands erfahrenste Hochzeitsplaner, fordern Sie 3 maßgeschneiderte Angebote mit einem Formular an.',
+    heroSubtitleSummer: 'Trauung am Seeufer · Bogen am Fuß des Fjälls · helle Nächte ohne Dunkelheit. Lapplands erfahrenste Hochzeitsplaner, fordern Sie 1–3 maßgeschneiderte Angebote mit einem Formular an.',
     heroReassure: 'Kostenlos & unverbindlich · Antwort in 1–7 Tagen',
     whyTitle: 'Warum Lappland für Ihre Hochzeit',
     whyP: 'In Lappland wird in Glasiglus, Schneekapellen und auf Fjellgipfeln geheiratet, und meistens ist die Zeremonie symbolisch. Diese Seite sammelt die Orte, die Jahreszeiten und die tatsächlichen Kosten. Wir richten keine Hochzeiten aus und vertreten keine Location: Sie nennen uns Ihren Wunsch, wir geben ihn an Hochzeitsplaner in Lappland weiter.',
@@ -40,7 +40,7 @@ const t_de = {
     typesTitle: 'Wovon träumen Sie für Ihre Hochzeit',
     locationsTitle: 'Wählen Sie Ihre Lappland-Region',
     plannersTitle: 'Lapplands erfahrenste Hochzeitsplaner',
-    plannersIntro: 'Wir haben den Hochzeitsmarkt Lapplands untersucht und 7 etablierte Hochzeitsplaner auf einer Seite zusammengestellt. Senden Sie das Formular ab, Sie erhalten 3 maßgeschneiderte Angebote, kostenfrei und unverbindlich.',
+    plannersIntro: 'Wir haben den Hochzeitsmarkt Lapplands untersucht und 7 etablierte Hochzeitsplaner auf einer Seite zusammengestellt. Senden Sie das Formular ab, Sie erhalten 1–3 maßgeschneiderte Angebote, kostenfrei und unverbindlich.',
     newsletterTitle: 'Lappland-Hochzeitsguides direkt in Ihr Postfach',
     newsletterSub: 'Monatliche Nachricht: freie Termine, Saisontipps und ein PDF-Leitfaden zu den DVV-Unterlagen. Abmeldung jederzeit möglich.',
     newsletterEmail: 'ihre-email@beispiel.de',
@@ -87,9 +87,9 @@ const t_de = {
   },
   planners: {
     indexTitle: 'Hochzeitsplaner in Lappland',
-    indexIntro: 'Wir haben die sieben etabliertesten Hochzeitsplaner Lapplands zusammengestellt. Ein Formular → wir liefern 3 maßgeschneiderte Angebote.',
-    threeQuotesTitle: 'Drei Angebote mit einem einzigen Formular',
-    threeQuotesP: 'Nur fünf Minuten genügen. Innerhalb von 1–7 Tagen erhalten Sie 3 Angebote von Hochzeitsplanern, vergleichen und wählen. Kostenfrei und unverbindlich.',
+    indexIntro: 'Wir haben die sieben etabliertesten Hochzeitsplaner Lapplands zusammengestellt. Ein Formular → wir liefern 1–3 maßgeschneiderte Angebote.',
+    threeQuotesTitle: '1–3 Angebote mit einem einzigen Formular',
+    threeQuotesP: 'Nur fünf Minuten genügen. Innerhalb von 1–7 Tagen erhalten Sie 1–3 Angebote von Hochzeitsplanern, vergleichen und wählen. Kostenfrei und unverbindlich.',
   },
   practical: {
     title: 'Heiraten in Lappland, praktischer Leitfaden',
@@ -102,7 +102,7 @@ const t_de = {
   contact: {
     title: 'Kontakt aufnehmen',
     subtitle: 'Wir antworten innerhalb von 1–2 Werktagen. Beschreiben Sie kurz Ihren Traum, wir leiten ihn an die passenden Hochzeitsplaner weiter.',
-    formTitle: '3 Angebote anfordern',
+    formTitle: '1–3 Angebote anfordern',
     formSub: 'Kostenfrei und unverbindlich. Antwort innerhalb von 1–7 Tagen.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_de = {
     attachmentsTooBig: 'Datei zu groß (max. 5 MB Bild / 25 MB Video).',
     attachmentsTotalTooBig: 'Gesamtgröße der Anhänge überschreitet 38 MB.',
     attachmentsBadType: 'Nur Bilder (JPG/PNG/WebP/HEIC) und Videos (MP4/MOV/WebM) sind zulässig.',
-    submit: 'Absenden, 3 Angebote erhalten',
+    submit: 'Absenden, 1–3 Angebote erhalten',
     submitting: 'Wird gesendet…',
     success: 'Vielen Dank! Bis zu drei passende Lappland-Hochzeitsplaner melden sich innerhalb von 1–7 Tagen direkt bei Ihnen.',
     error: 'Übermittlung fehlgeschlagen. Bitte erneut versuchen oder direkt an info@laplandvibes.com schreiben.',

@@ -15,7 +15,7 @@ const t_ja = {
   },
   cta: {
     getQuote: '見積もりを依頼',
-    getThreeQuotes: '無料：ウェディングプランナー3社の見積もり',
+    getThreeQuotes: '無料：ウェディングプランナー1〜3社の見積もり',
     getThreeQuotesShort: '見積もり依頼',
     planYourWedding: '結婚式を計画する',
     seeVenues: '会場を見る',
@@ -40,7 +40,7 @@ const t_ja = {
     typesTitle: 'どのような結婚式をお考えですか',
     locationsTitle: 'ラップランドのどのエリアで',
     plannersTitle: 'ラップランドで最も経験豊富なプランナー',
-    plannersIntro: 'ラップランドのウェディング市場を調査し、最も実績のある7名のプランナーを一つのページにまとめました。フォームをお送りいただければ、3社の個別見積もりを無料でお届けします。',
+    plannersIntro: 'ラップランドのウェディング市場を調査し、最も実績のある7名のプランナーを一つのページにまとめました。フォームをお送りいただければ、1〜3社の個別見積もりを無料でお届けします。',
     newsletterTitle: 'ラップランド結婚式のガイドをメールでお届け',
     newsletterSub: '月1回のお便り：空きのある会場、シーズンのヒント、DVV書類のPDFガイド。いつでも解除可能。',
     newsletterEmail: 'your-email@example.com',
@@ -87,9 +87,9 @@ const t_ja = {
   },
   planners: {
     indexTitle: 'ラップランドのウェディングプランナー',
-    indexIntro: 'ラップランドで最も実績のある7名のプランナーをまとめました。一つのフォームをお送りください → 3社の個別見積もりをお届けします。',
-    threeQuotesTitle: '一つのフォームで3社の見積もり',
-    threeQuotesP: '所要時間はわずか5分。1〜7日以内にウェディングプランナー3社の見積もりが届きます、比較してお選びください。無料で、契約義務はありません。',
+    indexIntro: 'ラップランドで最も実績のある7名のプランナーをまとめました。一つのフォームをお送りください → 1〜3社の個別見積もりをお届けします。',
+    threeQuotesTitle: '一つのフォームで1〜3社の見積もり',
+    threeQuotesP: '所要時間はわずか5分。1〜7日以内にウェディングプランナー1〜3社の見積もりが届きます、比較してお選びください。無料で、契約義務はありません。',
   },
   practical: {
     title: 'ラップランドで結婚式、実用ガイド',
@@ -102,7 +102,7 @@ const t_ja = {
   contact: {
     title: 'お問い合わせ',
     subtitle: '1〜2営業日以内にご返信します。あなたの理想を簡単にお聞かせください、適切なプランナーへお繋ぎします。',
-    formTitle: '3社の見積もりを依頼',
+    formTitle: '1〜3社の見積もりを依頼',
     formSub: '無料で契約義務なし。1〜7日以内にご返信します。',
   },
   form: {
@@ -152,7 +152,7 @@ const t_ja = {
     attachmentsTooBig: 'ファイルが大きすぎます（画像最大5MB／動画最大25MB）。',
     attachmentsTotalTooBig: '添付ファイルの合計が38MBを超えています。',
     attachmentsBadType: '画像（JPG/PNG/WebP/HEIC）と動画（MP4/MOV/WebM）のみ対応しています。',
-    submit: '送信、3社の見積もりを受け取る',
+    submit: '送信、1〜3社の見積もりを受け取る',
     submitting: '送信中…',
     success: 'ありがとうございます。お二人に合うラップランドのウェディングプランナー（最大3名）が、1〜7日以内に直接ご連絡いたします。',
     error: '送信に失敗しました。もう一度お試しいただくか、info@laplandvibes.com まで直接ご連絡ください。',

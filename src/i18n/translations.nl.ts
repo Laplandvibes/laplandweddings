@@ -15,7 +15,7 @@ const t_nl = {
   },
   cta: {
     getQuote: 'Vraag een offerte',
-    getThreeQuotes: 'Gratis: 3 offertes van weddingplanners',
+    getThreeQuotes: 'Gratis: 1–3 offertes van weddingplanners',
     getThreeQuotesShort: 'Offerte',
     planYourWedding: 'Plan uw bruiloft',
     seeVenues: 'Bekijk locaties',
@@ -40,7 +40,7 @@ const t_nl = {
     typesTitle: 'Wat voor bruiloft droomt u',
     locationsTitle: 'Kies uw deel van Lapland',
     plannersTitle: 'De meest ervaren planners van Lapland',
-    plannersIntro: 'We onderzochten de Lapland-bruiloftsmarkt en selecteerden 7 van de meest gevestigde planners. Stuur het formulier en wij leveren 3 persoonlijke offertes, gratis.',
+    plannersIntro: 'We onderzochten de Lapland-bruiloftsmarkt en selecteerden 7 van de meest gevestigde planners. Stuur het formulier en wij leveren 1–3 persoonlijke offertes, gratis.',
     newsletterTitle: 'Lapland-bruiloftsgidsen in uw inbox',
     newsletterSub: 'Een maandelijkse update: beschikbare locaties, seizoenstips en een pdf-gids over DVV-papierwerk. Altijd uitschrijven mogelijk.',
     newsletterEmail: 'your-email@example.com',
@@ -87,9 +87,9 @@ const t_nl = {
   },
   planners: {
     indexTitle: 'Weddingplanners in Lapland',
-    indexIntro: 'We verzamelden de zeven meest gevestigde Lapland-weddingplanners. Eén formulier → 3 persoonlijke offertes.',
-    threeQuotesTitle: '3 offertes met één formulier',
-    threeQuotesP: 'Vijf minuten is genoeg. Binnen 1–7 dagen ontvangt u 3 offertes van weddingplanners, vergelijk en kies. Gratis en vrijblijvend.',
+    indexIntro: 'We verzamelden de zeven meest gevestigde Lapland-weddingplanners. Eén formulier → 1–3 persoonlijke offertes.',
+    threeQuotesTitle: '1–3 offertes met één formulier',
+    threeQuotesP: 'Vijf minuten is genoeg. Binnen 1–7 dagen ontvangt u 1–3 offertes van weddingplanners, vergelijk en kies. Gratis en vrijblijvend.',
   },
   practical: {
     title: 'Trouwen in Lapland, praktische gids',
@@ -102,7 +102,7 @@ const t_nl = {
   contact: {
     title: 'Neem contact op',
     subtitle: 'We reageren binnen 1–2 werkdagen. Vertel kort over uw droom, wij sturen het door naar de juiste planners.',
-    formTitle: '3 offertes ontvangen',
+    formTitle: '1–3 offertes ontvangen',
     formSub: 'Gratis en vrijblijvend. Reactie binnen 1–7 dagen.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_nl = {
     attachmentsTooBig: 'Bestand te groot (max 5 MB beeld / 25 MB video).',
     attachmentsTotalTooBig: 'Totaal aan bijlagen overschrijdt 38 MB.',
     attachmentsBadType: 'Alleen beelden (JPG/PNG/WebP/HEIC) en video’s (MP4/MOV/WebM) zijn toegestaan.',
-    submit: 'Versturen, 3 offertes ontvangen',
+    submit: 'Versturen, 1–3 offertes ontvangen',
     submitting: 'Bezig met verzenden…',
     success: 'Bedankt! Maximaal drie bij jullie passende Lapland-weddingplanners nemen binnen 1–7 dagen rechtstreeks contact met jullie op.',
     error: 'Verzenden mislukt. Probeer opnieuw of mail rechtstreeks naar info@laplandvibes.com.',

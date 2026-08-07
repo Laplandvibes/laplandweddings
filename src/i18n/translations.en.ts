@@ -15,7 +15,7 @@ const t_en = {
   },
   cta: {
     getQuote: 'Request a quote',
-    getThreeQuotes: 'Free: 3 wedding-planner quotes',
+    getThreeQuotes: 'Free: 1–3 wedding-planner quotes',
     getThreeQuotesShort: 'Get a quote',
     planYourWedding: 'Plan your wedding',
     seeVenues: 'See venues',
@@ -40,7 +40,7 @@ const t_en = {
     typesTitle: 'What kind of wedding are you dreaming of',
     locationsTitle: 'Pick your part of Lapland',
     plannersTitle: 'Lapland’s most experienced planners',
-    plannersIntro: 'We have researched Lapland’s wedding market and curated 7 of the most established planners. Send the form and we will deliver 3 personalised quotes, at no cost to you.',
+    plannersIntro: 'We have researched Lapland’s wedding market and curated 7 of the most established planners. Send the form and we will deliver 1–3 personalised quotes, at no cost to you.',
     newsletterTitle: 'Get Lapland wedding guides in your inbox',
     newsletterSub: 'A monthly note: open venues, season tips, and a PDF guide on DVV paperwork. Unsubscribe anytime.',
     newsletterEmail: 'your-email@example.com',
@@ -87,9 +87,9 @@ const t_en = {
   },
   planners: {
     indexTitle: 'Lapland wedding planners',
-    indexIntro: 'We have collected the seven most established Lapland wedding planners. Send one form → we deliver 3 personalised quotes.',
-    threeQuotesTitle: 'Get 3 quotes with a single form',
-    threeQuotesP: 'Five minutes is all it takes. Within 1–7 days you receive 3 wedding planner quotes, compare and choose. Free and no commitment.',
+    indexIntro: 'We have collected the seven most established Lapland wedding planners. Send one form → we deliver 1–3 personalised quotes.',
+    threeQuotesTitle: 'Get 1–3 quotes with a single form',
+    threeQuotesP: 'Five minutes is all it takes. Within 1–7 days you receive 1–3 wedding planner quotes, compare and choose. Free and no commitment.',
   },
   practical: {
     title: 'Getting married in Lapland , practical guide',
@@ -102,7 +102,7 @@ const t_en = {
   contact: {
     title: 'Get in touch',
     subtitle: 'We respond within 1–2 business days. Tell us briefly about your dream, we route it to the right planners.',
-    formTitle: 'Get 3 quotes',
+    formTitle: 'Get 1–3 quotes',
     formSub: 'Free and with no commitment. Reply within 1–7 days.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_en = {
     attachmentsTooBig: 'File too large (max 5 MB image / 25 MB video).',
     attachmentsTotalTooBig: 'Combined attachments exceed 38 MB.',
     attachmentsBadType: 'Only images (JPG/PNG/WebP/HEIC) and videos (MP4/MOV/WebM) are allowed.',
-    submit: 'Send, get 3 quotes',
+    submit: 'Send, get 1–3 quotes',
     submitting: 'Sending…',
     success: 'Thank you! Up to three matched Lapland wedding specialists will contact you directly within 1–7 days.',
     error: 'Submission failed. Try again or email info@laplandvibes.com directly.',

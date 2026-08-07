@@ -15,7 +15,7 @@ const t_zhCN = {
   },
   cta: {
     getQuote: '获取报价',
-    getThreeQuotes: '免费:3 位婚礼策划师报价',
+    getThreeQuotes: '免费:1–3 位婚礼策划师报价',
     getThreeQuotesShort: '获取报价',
     planYourWedding: '规划您的婚礼',
     seeVenues: '查看场地',
@@ -38,7 +38,7 @@ const t_zhCN = {
     typesTitle: '您梦想中的是什么样的婚礼?',
     locationsTitle: '选择您的拉普兰目的地',
     plannersTitle: '拉普兰最资深的婚礼策划师',
-    plannersIntro: '我们研究了拉普兰婚礼市场,精选了 7 家最成熟的策划师。提交表格,我们将提供 3 份定制报价，完全免费。',
+    plannersIntro: '我们研究了拉普兰婚礼市场,精选了 7 家最成熟的策划师。提交表格,我们将提供 1–3 份定制报价，完全免费。',
     newsletterTitle: '将拉普兰婚礼指南发送到您的邮箱',
     newsletterSub: '每月一封:可用场地、季节建议,以及一份 DVV 文件 PDF 指南。随时可退订。',
     newsletterEmail: 'your-email@example.com',
@@ -85,9 +85,9 @@ const t_zhCN = {
   },
   planners: {
     indexTitle: '拉普兰婚礼策划师',
-    indexIntro: '我们汇集了拉普兰七家最成熟的婚礼策划师。提交一份表格 → 我们将提供 3 份定制报价。',
-    threeQuotesTitle: '一份表格获取 3 份报价',
-    threeQuotesP: '只需 5 分钟。1–7 天内您将收到 3 份婚礼策划师的报价，比较并选择。免费且无承诺。',
+    indexIntro: '我们汇集了拉普兰七家最成熟的婚礼策划师。提交一份表格 → 我们将提供 1–3 份定制报价。',
+    threeQuotesTitle: '一份表格获取 1–3 份报价',
+    threeQuotesP: '只需 5 分钟。1–7 天内您将收到 1–3 份婚礼策划师的报价，比较并选择。免费且无承诺。',
   },
   practical: {
     title: '在拉普兰结婚，实用指南',
@@ -100,7 +100,7 @@ const t_zhCN = {
   contact: {
     title: '联系我们',
     subtitle: '我们将在 1–2 个工作日内回复。简单告诉我们您的梦想，我们会转发给合适的策划师。',
-    formTitle: '获取 3 份报价',
+    formTitle: '获取 1–3 份报价',
     formSub: '免费且无承诺。1–7 天内回复。',
   },
   form: {
@@ -150,7 +150,7 @@ const t_zhCN = {
     attachmentsTooBig: '文件过大(图片最多 5 MB / 视频最多 25 MB)。',
     attachmentsTotalTooBig: '附件总计超过 38 MB。',
     attachmentsBadType: '仅允许图片 (JPG/PNG/WebP/HEIC) 和视频 (MP4/MOV/WebM)。',
-    submit: '发送，获取 3 份报价',
+    submit: '发送，获取 1–3 份报价',
     submitting: '发送中…',
     success: '感谢您！我们将为您匹配最多 3 位拉普兰婚礼策划师，他们会在 1–7 天内直接与您联系。',
     error: '提交失败。请重试或直接发送邮件至 info@laplandvibes.com。',

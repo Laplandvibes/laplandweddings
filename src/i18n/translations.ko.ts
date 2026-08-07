@@ -15,7 +15,7 @@ const t_ko = {
   },
   cta: {
     getQuote: '견적 요청',
-    getThreeQuotes: '무료: 웨딩 플래너 3곳 견적',
+    getThreeQuotes: '무료: 웨딩 플래너 1–3곳 견적',
     getThreeQuotesShort: '견적 받기',
     planYourWedding: '결혼식 계획',
     seeVenues: '예식장 보기',
@@ -40,7 +40,7 @@ const t_ko = {
     typesTitle: '어떤 결혼식을 꿈꾸시나요',
     locationsTitle: '라플란드의 어디에서 결혼할까요',
     plannersTitle: '라플란드의 가장 경험 많은 플래너',
-    plannersIntro: '저희가 라플란드 결혼 시장을 조사하여 7곳의 가장 확립된 플래너를 엄선했습니다. 양식을 보내시면 무료로 3곳의 맞춤 견적을 받아보실 수 있습니다.',
+    plannersIntro: '저희가 라플란드 결혼 시장을 조사하여 7곳의 가장 확립된 플래너를 엄선했습니다. 양식을 보내시면 무료로 1–3곳의 맞춤 견적을 받아보실 수 있습니다.',
     newsletterTitle: '라플란드 결혼 가이드를 이메일로',
     newsletterSub: '월간 안내: 예약 가능한 예식장, 시즌 팁, DVV 서류 PDF 가이드. 언제든 구독 해지 가능.',
     newsletterEmail: 'your-email@example.com',
@@ -87,9 +87,9 @@ const t_ko = {
   },
   planners: {
     indexTitle: '라플란드 웨딩 플래너',
-    indexIntro: '저희는 라플란드의 가장 확립된 웨딩 플래너 7곳을 수집했습니다. 한 양식 → 3곳의 맞춤 견적.',
-    threeQuotesTitle: '한 양식으로 3곳 견적 받기',
-    threeQuotesP: '5분이면 충분합니다. 1–7일 내에 3곳의 웨딩 플래너 견적을 받으세요, 비교 후 선택. 무료이며 부담 없음.',
+    indexIntro: '저희는 라플란드의 가장 확립된 웨딩 플래너 7곳을 수집했습니다. 한 양식 → 1–3곳의 맞춤 견적.',
+    threeQuotesTitle: '한 양식으로 1–3곳 견적 받기',
+    threeQuotesP: '5분이면 충분합니다. 1–7일 내에 1–3곳의 웨딩 플래너 견적을 받으세요, 비교 후 선택. 무료이며 부담 없음.',
   },
   practical: {
     title: '라플란드에서 결혼하기, 실용 가이드',
@@ -102,7 +102,7 @@ const t_ko = {
   contact: {
     title: '문의하기',
     subtitle: '1–2 영업일 내에 답변드립니다. 꿈에 대해 간단히 알려주세요, 적합한 플래너에게 연결해 드립니다.',
-    formTitle: '3곳 견적 받기',
+    formTitle: '1–3곳 견적 받기',
     formSub: '무료, 부담 없음. 1–7일 내 답변.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_ko = {
     attachmentsTooBig: '파일이 너무 큽니다 (이미지 최대 5 MB / 영상 최대 25 MB).',
     attachmentsTotalTooBig: '첨부 합계가 38 MB를 초과합니다.',
     attachmentsBadType: '이미지 (JPG/PNG/WebP/HEIC)와 영상 (MP4/MOV/WebM)만 허용됩니다.',
-    submit: '보내기, 3곳 견적 받기',
+    submit: '보내기, 1–3곳 견적 받기',
     submitting: '전송 중…',
     success: '감사합니다! 두 분께 맞는 라플란드 웨딩 플래너(최대 3곳)가 1–7일 이내에 직접 연락드립니다.',
     error: '전송 실패. 다시 시도하거나 info@laplandvibes.com으로 직접 이메일을 보내주세요.',

@@ -4,6 +4,7 @@ import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
 import PriceTierBadge from '../components/PriceTierBadge';
 import { getVenueBySlug, venues } from '../data/venues';
+import { weddingTypes } from '../data/weddingTypes';
 import { useLang } from '../i18n/LangContext';
 import { venueLodgingLink, AFFILIATE_REL } from '../lib/affiliate';
 import { VENUE_BOOKING, venueIsBookable, venueTown } from '../data/venueBooking';
@@ -453,16 +454,19 @@ export default function VenuePage() {
             {vt('stylesItFits').replace('{name}', v.name)}
           </h3>
           <div className="flex flex-wrap gap-2 justify-center">
-            {v.weddingTypeSlugs.map((wt) => (
-              <L
-                key={wt}
-                to={`/wedding-types/${wt}`}
-                className="text-sm px-4 py-2 rounded-full font-medium transition-all hover:scale-105"
-                style={{ background: '#FBF6F0', color: '#1F1612', border: '1px solid #DCCEC0' }}
-              >
-                {wt.replace(/-/g, ' ')}
-              </L>
-            ))}
+            {v.weddingTypeSlugs.map((wt) => {
+              const type = weddingTypes.find((w) => w.slug === wt);
+              return (
+                <L
+                  key={wt}
+                  to={`/wedding-types/${wt}`}
+                  className="text-sm px-4 py-2 rounded-full font-medium transition-all hover:scale-105"
+                  style={{ background: '#FBF6F0', color: '#1F1612', border: '1px solid #DCCEC0' }}
+                >
+                  {type ? type.name[dataLang] : wt.replace(/-/g, ' ')}
+                </L>
+              );
+            })}
           </div>
         </div>
       </Section>

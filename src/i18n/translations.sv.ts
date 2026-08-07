@@ -15,7 +15,7 @@ const t_sv = {
   },
   cta: {
     getQuote: 'Begär offert',
-    getThreeQuotes: 'Gratis: 3 offerter från bröllopsplanerare',
+    getThreeQuotes: 'Gratis: 1–3 offerter från bröllopsplanerare',
     getThreeQuotesShort: 'Begär offert',
     planYourWedding: 'Planera ditt bröllop',
     seeVenues: 'Se bröllopsplatser',
@@ -40,7 +40,7 @@ const t_sv = {
     typesTitle: 'Vad för slags bröllop drömmer du om',
     locationsTitle: 'Välj din del av Lappland',
     plannersTitle: 'Lapplands mest erfarna planerare',
-    plannersIntro: 'Vi har kartlagt Lapplands bröllopsmarknad och valt ut 7 av de mest etablerade planerarna. Skicka formuläret så levererar vi 3 personliga offerter, utan kostnad för dig.',
+    plannersIntro: 'Vi har kartlagt Lapplands bröllopsmarknad och valt ut 7 av de mest etablerade planerarna. Skicka formuläret så levererar vi 1–3 personliga offerter, utan kostnad för dig.',
     newsletterTitle: 'Få Lapplands bröllopsguider i din inkorg',
     newsletterSub: 'Ett månadsbrev: lediga platser, säsongstips och en PDF-guide om DVV-pappersarbetet. Avsluta när du vill.',
     newsletterEmail: 'din-epost@exempel.se',
@@ -87,9 +87,9 @@ const t_sv = {
   },
   planners: {
     indexTitle: 'Bröllopsplanerare i Lappland',
-    indexIntro: 'Vi har samlat de sju mest etablerade bröllopsplanerarna i Lappland. Skicka ett formulär → vi levererar 3 personliga offerter.',
-    threeQuotesTitle: '3 offerter med ett enda formulär',
-    threeQuotesP: 'Fem minuter räcker. Inom 1–7 dagar får du 3 offerter från bröllopsplanerare, jämför och välj. Gratis och utan förbindelse.',
+    indexIntro: 'Vi har samlat de sju mest etablerade bröllopsplanerarna i Lappland. Skicka ett formulär → vi levererar 1–3 personliga offerter.',
+    threeQuotesTitle: '1–3 offerter med ett enda formulär',
+    threeQuotesP: 'Fem minuter räcker. Inom 1–7 dagar får du 1–3 offerter från bröllopsplanerare, jämför och välj. Gratis och utan förbindelse.',
   },
   practical: {
     title: 'Gifta sig i Lappland, praktisk guide',
@@ -102,7 +102,7 @@ const t_sv = {
   contact: {
     title: 'Hör av dig',
     subtitle: 'Vi svarar inom 1–2 arbetsdagar. Berätta kort om er dröm, så skickar vi den vidare till rätt planerare.',
-    formTitle: 'Få 3 offerter',
+    formTitle: 'Få 1–3 offerter',
     formSub: 'Gratis och utan förbindelse. Svar inom 1–7 dagar.',
   },
   form: {
@@ -152,7 +152,7 @@ const t_sv = {
     attachmentsTooBig: 'Filen är för stor (högst 5 MB bild / 25 MB video).',
     attachmentsTotalTooBig: 'Bilagorna överstiger tillsammans 38 MB.',
     attachmentsBadType: 'Endast bilder (JPG/PNG/WebP/HEIC) och videor (MP4/MOV/WebM) tillåts.',
-    submit: 'Skicka, få 3 offerter',
+    submit: 'Skicka, få 1–3 offerter',
     submitting: 'Skickar…',
     success: 'Tack! Upp till tre matchande bröllopsspecialister i Lappland kontaktar er direkt inom 1–7 dagar.',
     error: 'Det gick inte att skicka. Försök igen eller mejla info@laplandvibes.com direkt.',
