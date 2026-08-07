@@ -21,7 +21,15 @@
   # bad response got cached under an asset URL and left visitors on a permanently
   # blank page that refreshing could not fix. Without `immutable` the same
   # accident heals on the next reload.
-  Cache-Control: public, max-age=31536000
+  #
+  # `s-maxage=600` added 2026-08-07 (4th poisoning, see vite.config.ts b5).
+  # Dropping `immutable` only lets the BROWSER heal on reload; it does nothing
+  # for Cloudflare's own copy, which kept serving the fallback HTML under the
+  # .js URL. s-maxage expires the CDN copy in 10 minutes while the browser may
+  # still keep the content-hashed file for a year. Measured recovery elsewhere
+  # in the network: 520 s. Without this line a poisoned edge entry can persist
+  # for the full year, which is why this site kept relapsing.
+  Cache-Control: public, max-age=31536000, s-maxage=600
 
 /sitemap.xml
   Content-Type: application/xml

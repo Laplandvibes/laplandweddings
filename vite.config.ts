@@ -57,9 +57,26 @@ export default defineConfig({
         //   answers with the SPA fallback. Verify a deploy on the deployment URL
         //   first and leave the apex alone until it has settled — checking early
         //   is what CREATES this.
-        entryFileNames: 'assets/[name]-b4-[hash].js',
-        chunkFileNames: 'assets/[name]-b4-[hash].js',
-        assetFileNames: 'assets/[name]-b4-[hash][extname]',
+        //   b5  2026-08-07  FOURTH occurrence, and this time the whole apex was
+        //                   down, not just /venues/: every route rendered an empty
+        //                   #root, including the home page. Console gave the one
+        //                   honest signal — "Expected a JavaScript-or-Wasm module
+        //                   script but the server responded with a MIME type of
+        //                   text/html" — while curl returned 200 +
+        //                   application/javascript for the same URL, including a
+        //                   replay with Sec-Fetch-Dest: script + Origin + Referer.
+        //                   Two independent browser engines agreed the page was
+        //                   blank, so it was not a probe artefact.
+        //   🔴 Why it kept coming back: dropping `immutable` (b3) only lets the
+        //   BROWSER heal on reload. Cloudflare's own copy was never given an
+        //   expiry, so the edge kept serving fallback HTML under the .js URL with
+        //   no way to overwrite it (Pages has no purge). b5 abandons the poisoned
+        //   URLs, and _headers now sets `s-maxage=600` so the next accident heals
+        //   itself in ~10 minutes instead of persisting. Bumping the generation
+        //   alone would only have reset the clock on the same trap.
+        entryFileNames: 'assets/[name]-b5-[hash].js',
+        chunkFileNames: 'assets/[name]-b5-[hash].js',
+        assetFileNames: 'assets/[name]-b5-[hash][extname]',
         manualChunks(id: string) {
           if (id.includes('node_modules')) {
             if (/[\\/]node_modules[\\/](react|react-dom|react-router|react-router-dom|scheduler)[\\/]/.test(id)) return 'react-vendor'
