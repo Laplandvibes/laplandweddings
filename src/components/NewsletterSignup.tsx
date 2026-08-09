@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
+import FounderByline from '../../../shared/FounderByline';
 
 const NEWSLETTER_ENDPOINT = (import.meta as unknown as { env: Record<string, string | undefined> }).env.VITE_NEWSLETTER_ENDPOINT
   || 'https://laplandvibes-newsletter.vercel.app/api/subscribe';
@@ -69,6 +70,7 @@ export default function NewsletterSignup() {
         {status === 'ok' ? (
           <p className="text-aurora-green font-semibold">{pickLocalized(L11.thanks, lang)}</p>
         ) : (
+          <FounderByline tone="pink" />
           <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-3 max-w-xl mx-auto">
             <input
               type="email"
