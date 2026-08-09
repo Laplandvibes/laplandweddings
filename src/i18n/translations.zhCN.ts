@@ -40,9 +40,9 @@ const t_zhCN = {
     plannersTitle: '拉普兰最资深的婚礼策划师',
     plannersIntro: '我们研究了拉普兰婚礼市场,精选了 7 家最成熟的策划师。提交表格,我们将提供 1–3 份定制报价，完全免费。',
     newsletterTitle: '将拉普兰婚礼指南发送到您的邮箱',
-    newsletterSub: '每月一封:可用场地、季节建议,以及一份 DVV 文件 PDF 指南。随时可退订。',
+    newsletterSub: '信中内容：可预订场地、季节建议，以及 DVV 文件的 PDF 指南。只在有值得分享的内容时才会写信。可随时退订。',
     newsletterEmail: 'your-email@example.com',
-    newsletterCta: '订阅',
+    newsletterCta: '订阅婚礼灵感',
   },
   sections: {
     bestFor: '最适合',

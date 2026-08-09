@@ -40,9 +40,9 @@ const t_es = {
     plannersTitle: 'Los planificadores más experimentados de Laponia',
     plannersIntro: 'Hemos investigado el mercado de bodas en Laponia y seleccionado 7 de los planificadores más consolidados. Envíe el formulario y le entregamos 1–3 presupuestos personalizados, sin coste.',
     newsletterTitle: 'Reciba guías de bodas de Laponia en su correo',
-    newsletterSub: 'Una nota mensual: lugares disponibles, consejos de temporada y una guía en PDF sobre la documentación DVV. Puede darse de baja en cualquier momento.',
+    newsletterSub: 'En la carta: espacios disponibles, consejos de temporada y una guía PDF del papeleo DVV. Escribimos solo cuando hay algo que contar. Cancela cuando quieras.',
     newsletterEmail: 'su-correo@example.com',
-    newsletterCta: 'Suscribirse',
+    newsletterCta: 'Recibir consejos de boda',
   },
   sections: {
     bestFor: 'Ideal para',

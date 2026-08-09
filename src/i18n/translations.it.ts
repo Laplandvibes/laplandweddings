@@ -42,9 +42,9 @@ const t_it = {
     plannersTitle: 'I wedding planner più esperti della Lapponia',
     plannersIntro: 'Abbiamo studiato il mercato dei matrimoni in Lapponia e selezionato i 7 planner più affermati. Invia il modulo e ti consegneremo 1–3 preventivi personalizzati, senza costi per te.',
     newsletterTitle: 'Guide per matrimoni in Lapponia nella tua casella',
-    newsletterSub: 'Una nota mensile: location disponibili, consigli stagionali e una guida PDF al DVV. Disiscriviti quando vuoi.',
+    newsletterSub: 'Nella lettera: venue disponibili, consigli stagionali e una guida PDF alle pratiche DVV. Scriviamo solo quando c\'è qualcosa da raccontare. Disiscriviti quando vuoi.',
     newsletterEmail: 'your-email@example.com',
-    newsletterCta: 'Iscriviti',
+    newsletterCta: 'Ricevi i consigli per le nozze',
   },
   sections: {
     bestFor: 'Ideale per',

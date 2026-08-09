@@ -40,9 +40,9 @@ const t_ptBR = {
     plannersTitle: 'Os organizadores mais experientes da Lapônia',
     plannersIntro: 'Pesquisamos o mercado de casamentos da Lapônia e selecionamos 7 dos organizadores mais consolidados. Envie o formulário e entregamos 1–3 orçamentos personalizados, sem custo.',
     newsletterTitle: 'Receba guias de casamento da Lapônia no seu e-mail',
-    newsletterSub: 'Uma nota mensal: locais disponíveis, dicas de temporada e um guia em PDF sobre a documentação do DVV. Cancele a qualquer momento.',
+    newsletterSub: 'Na carta: locais disponíveis, dicas de estação e um guia em PDF da papelada do DVV. Escrevemos só quando há algo para contar. Cancele quando quiser.',
     newsletterEmail: 'seu-email@example.com',
-    newsletterCta: 'Inscrever-se',
+    newsletterCta: 'Receber dicas de casamento',
   },
   sections: {
     bestFor: 'Ideal para',

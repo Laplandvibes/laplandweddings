@@ -42,9 +42,9 @@ const t_en = {
     plannersTitle: 'Lapland’s most experienced planners',
     plannersIntro: 'We have researched Lapland’s wedding market and curated 7 of the most established planners. Send the form and we will deliver 1–3 personalised quotes, at no cost to you.',
     newsletterTitle: 'Get Lapland wedding guides in your inbox',
-    newsletterSub: 'A monthly note: open venues, season tips, and a PDF guide on DVV paperwork. Unsubscribe anytime.',
+    newsletterSub: 'In the letter: open venues, seasonal tips and a PDF guide to the DVV paperwork. We write only when there\'s something worth telling. Unsubscribe any time.',
     newsletterEmail: 'your-email@example.com',
-    newsletterCta: 'Subscribe',
+    newsletterCta: 'Get wedding tips',
   },
   sections: {
     bestFor: 'Best for',

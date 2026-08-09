@@ -42,9 +42,9 @@ const t_sv = {
     plannersTitle: 'Lapplands mest erfarna planerare',
     plannersIntro: 'Vi har kartlagt Lapplands bröllopsmarknad och valt ut 7 av de mest etablerade planerarna. Skicka formuläret så levererar vi 1–3 personliga offerter, utan kostnad för dig.',
     newsletterTitle: 'Få Lapplands bröllopsguider i din inkorg',
-    newsletterSub: 'Ett månadsbrev: lediga platser, säsongstips och en PDF-guide om DVV-pappersarbetet. Avsluta när du vill.',
+    newsletterSub: 'I brevet: lediga lokaler, säsongstips och en PDF-guide till DVV-pappren. Vi skriver bara när det finns något att berätta. Avsluta när du vill.',
     newsletterEmail: 'din-epost@exempel.se',
-    newsletterCta: 'Prenumerera',
+    newsletterCta: 'Få bröllopstips',
   },
   sections: {
     bestFor: 'Passar bäst för',

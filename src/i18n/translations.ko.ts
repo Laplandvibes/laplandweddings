@@ -42,9 +42,9 @@ const t_ko = {
     plannersTitle: '라플란드의 가장 경험 많은 플래너',
     plannersIntro: '저희가 라플란드 결혼 시장을 조사하여 7곳의 가장 확립된 플래너를 엄선했습니다. 양식을 보내시면 무료로 1–3곳의 맞춤 견적을 받아보실 수 있습니다.',
     newsletterTitle: '라플란드 결혼 가이드를 이메일로',
-    newsletterSub: '월간 안내: 예약 가능한 예식장, 시즌 팁, DVV 서류 PDF 가이드. 언제든 구독 해지 가능.',
+    newsletterSub: '레터에는 예약 가능한 베뉴, 시즌 팁, DVV 서류 PDF 가이드가 담깁니다. 전할 소식이 있을 때만 씁니다. 언제든 해지할 수 있습니다.',
     newsletterEmail: 'your-email@example.com',
-    newsletterCta: '구독',
+    newsletterCta: '웨딩 팁 받기',
   },
   sections: {
     bestFor: '추천',

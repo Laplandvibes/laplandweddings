@@ -42,9 +42,9 @@ const t_ja = {
     plannersTitle: 'ラップランドで最も経験豊富なプランナー',
     plannersIntro: 'ラップランドのウェディング市場を調査し、最も実績のある7名のプランナーを一つのページにまとめました。フォームをお送りいただければ、1〜3社の個別見積もりを無料でお届けします。',
     newsletterTitle: 'ラップランド結婚式のガイドをメールでお届け',
-    newsletterSub: '月1回のお便り：空きのある会場、シーズンのヒント、DVV書類のPDFガイド。いつでも解除可能。',
+    newsletterSub: 'レターの内容：空きのある会場、季節のヒント、DVV書類のPDFガイド。お伝えすべきことがあるときだけお送りします。いつでも解除できます。',
     newsletterEmail: 'your-email@example.com',
-    newsletterCta: '登録する',
+    newsletterCta: 'ウェディングのヒントを受け取る',
   },
   sections: {
     bestFor: 'おすすめ',

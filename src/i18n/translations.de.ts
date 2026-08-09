@@ -42,9 +42,9 @@ const t_de = {
     plannersTitle: 'Lapplands erfahrenste Hochzeitsplaner',
     plannersIntro: 'Wir haben den Hochzeitsmarkt Lapplands untersucht und 7 etablierte Hochzeitsplaner auf einer Seite zusammengestellt. Senden Sie das Formular ab, Sie erhalten 1–3 maßgeschneiderte Angebote, kostenfrei und unverbindlich.',
     newsletterTitle: 'Lappland-Hochzeitsguides direkt in Ihr Postfach',
-    newsletterSub: 'Monatliche Nachricht: freie Termine, Saisontipps und ein PDF-Leitfaden zu den DVV-Unterlagen. Abmeldung jederzeit möglich.',
+    newsletterSub: 'Im Brief: freie Venues, Saisontipps und ein PDF-Leitfaden zu den DVV-Papieren. Wir schreiben nur, wenn es etwas zu erzählen gibt. Jederzeit kündbar.',
     newsletterEmail: 'ihre-email@beispiel.de',
-    newsletterCta: 'Abonnieren',
+    newsletterCta: 'Hochzeitstipps erhalten',
   },
   sections: {
     bestFor: 'Am besten geeignet für',

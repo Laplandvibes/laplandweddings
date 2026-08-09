@@ -42,9 +42,9 @@ const t_nl = {
     plannersTitle: 'De meest ervaren planners van Lapland',
     plannersIntro: 'We onderzochten de Lapland-bruiloftsmarkt en selecteerden 7 van de meest gevestigde planners. Stuur het formulier en wij leveren 1–3 persoonlijke offertes, gratis.',
     newsletterTitle: 'Lapland-bruiloftsgidsen in uw inbox',
-    newsletterSub: 'Een maandelijkse update: beschikbare locaties, seizoenstips en een pdf-gids over DVV-papierwerk. Altijd uitschrijven mogelijk.',
+    newsletterSub: 'In de brief: beschikbare venues, seizoenstips en een pdf-gids voor de DVV-papieren. We schrijven alleen als er iets te vertellen valt. Op elk moment opzegbaar.',
     newsletterEmail: 'your-email@example.com',
-    newsletterCta: 'Inschrijven',
+    newsletterCta: 'Ontvang trouwtips',
   },
   sections: {
     bestFor: 'Geschikt voor',

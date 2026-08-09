@@ -42,9 +42,9 @@ const t_fr = {
     plannersTitle: 'Les organisateurs les plus expérimentés de Laponie',
     plannersIntro: 'Nous avons étudié le marché du mariage en Laponie et sélectionné les 7 organisateurs les plus établis. Envoyez le formulaire et nous vous livrerons 1 à 3 devis personnalisés, sans frais pour vous.',
     newsletterTitle: 'Recevez les guides mariage Laponie par e-mail',
-    newsletterSub: 'Une note mensuelle : lieux disponibles, conseils saisonniers et un guide PDF sur le DVV. Désabonnement à tout moment.',
+    newsletterSub: 'Dans la lettre : lieux disponibles, conseils de saison et un guide PDF des démarches DVV. Nous écrivons seulement quand il y a quelque chose à raconter. Désinscription à tout moment.',
     newsletterEmail: 'your-email@example.com',
-    newsletterCta: 'S’abonner',
+    newsletterCta: 'Recevoir les conseils mariage',
   },
   sections: {
     bestFor: 'Idéal pour',

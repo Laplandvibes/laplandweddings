@@ -42,9 +42,9 @@ const t_fi = {
     plannersTitle: 'Lapin kokeneimmat hääsuunnittelijat',
     plannersIntro: 'Olemme tutkineet Lapin häämarkkinaa ja koonneet 7 vakiintuneinta suunnittelijaa yhdelle sivulle. Pyydä lomakkeella 1–3 räätälöityä tarjousta, me hoidamme välityksen.',
     newsletterTitle: 'Saat sähköpostiisi Lapin hääaiheisia oppaita',
-    newsletterSub: 'Kuukausittainen kirje: avoimet venuet, sesonkivinkit ja PDF-opas DVV-papereista. Voit perua koska tahansa.',
+    newsletterSub: 'Kirjeessä: avoimet venuet, sesonkivinkit ja PDF-opas DVV-papereista. Kirjoitamme vain, kun on kerrottavaa. Voit perua koska tahansa.',
     newsletterEmail: 'sähköpostiosoite@example.com',
-    newsletterCta: 'Tilaa kuukausiposti',
+    newsletterCta: 'Tilaa häävinkit',
   },
   sections: {
     bestFor: 'Parhaiten sopii',
