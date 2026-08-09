@@ -70,7 +70,7 @@ export default function NewsletterSignup() {
         {status === 'ok' ? (
           <p className="text-aurora-green font-semibold">{pickLocalized(L11.thanks, lang)}</p>
         ) : (
-          <FounderByline tone="pink" />
+          <><FounderByline tone="pink" />
           <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2 sm:gap-3 max-w-xl mx-auto">
             <input
               type="email"
@@ -87,7 +87,7 @@ export default function NewsletterSignup() {
             >
               {status === 'loading' ? '…' : tr.home.newsletterCta}
             </button>
-          </form>
+          </form></>
         )}
         {status === 'error' && (
           <p className="text-rose text-sm mt-3">{pickLocalized(L11.failed, lang)}</p>
