@@ -1,0 +1,1832 @@
+{
+  "de": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "Rovaniemi",
+        "desc": "Die Hauptstadt Lapplands, am einfachsten über internationale Flüge zu erreichen. Hochzeitslocations von der Eiskapelle bis zu Glasiglus nahe dem Santa Claus Village."
+      },
+      {
+        "slug": "saariselka",
+        "name": "Saariselkä & Inari",
+        "desc": "Das Herz Nordlapplands: Polarlichter im Schnitt jede zweite Nacht (FMI) und die Glass-Teepee-Kapelle von Kakslauttanen."
+      },
+      {
+        "slug": "levi",
+        "name": "Levi & Kittilä",
+        "desc": "Finnlands größtes Fjellresort: Lainio Snow Village, die Snow Chapel der Northern Lights Ranch, Direktflüge aus London."
+      },
+      {
+        "slug": "yllas",
+        "name": "Ylläs",
+        "desc": "Ruhiger als Levi: die sauberste Luft Lapplands, das hochzeitstaugliche Spa-Hotel Saaga, kurzer Weg zum Lainio Snow Village."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "Pyhä-Luosto",
+        "desc": "Die ruhigere Seite Ostlapplands: zwei Hotels im Blockhausdorf Luosto am Rand des Nationalparks Pyhä-Luosto."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "Kilpisjärvi",
+        "desc": "Finnlands nördlichster und höchster Punkt: die Glasiglus von Tundrea und die Trauung am Dreiländereck."
+      },
+      {
+        "slug": "oulu",
+        "name": "Oulu",
+        "desc": "Die Großstadt-Option auf dem Weg nach Lappland, Finnlands fünftgrößte Stadt an der Küste der Bottenwiek. Städtische Hochzeitsabende mit Restaurants und Nachtleben, Direktflüge aus Helsinki in etwa einer Stunde."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "Kemijärvi",
+        "desc": "Finnlands nördlichste Stadt, in Ostlappland: ein vom See umschlossenes Zentrum, 7.029 Einwohner und eine direkte Zugverbindung aus Helsinki. Fünf Fjells in Fahrdistanz."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "Polarlicht-Hochzeit",
+        "desc": "Das Jawort unter den Polarlichtern: In Nordlappland sind Polarlichter im Schnitt jede zweite Nacht zu sehen (FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "Schneekapellen-Hochzeit",
+        "desc": "Trauung in einer aus reinem Schnee und Eis geschnittenen Kapelle: Lainio, Northern Lights Ranch, Arctic SnowHotel und Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "Glasiglu-Hochzeit",
+        "desc": "Hochzeitsnacht unter den Nordlichtern in einer beheizten Glaskuppel: Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "Mitternachtssonnen-Hochzeit",
+        "desc": "Trauung, wenn die Sonne nicht untergeht: 23. Mai bis 24. Juli, warmes Wetter, keine Schneekleidung nötig."
+      },
+      {
+        "slug": "elopement",
+        "name": "Elopement / Hochzeit zu zweit",
+        "desc": "Nur Sie beide, die Trauperson und ein Fotograf. Schlüsselfertige Pakete ab 1 600 €."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "Erneuerung des Eheversprechens",
+        "desc": "Erneuern Sie Ihr Eheversprechen im Schnee Lapplands: keine Formalitäten, vollständig individuelle Zeremonie."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "Saariselkä",
+        "desc": "Finnlands bekanntestes Glasiglu-Resort. Glass-Teepee-Kapelle, Eiskapelle, Blockhauskapelle und das Celebration House für 250 Gäste."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "Lehtojärvi · 35 km von Rovaniemi",
+        "desc": "Snow Hotel mit Eiskapelle für 30 Gäste, Eisrestaurant und Glasiglus mit 360°-Blick auf die Nordlichter."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "Lainio, Kittilä · zwischen Ylläs und Levi",
+        "desc": "Weltbekanntes Snow Village, jeden Winter mit neuem Kunstthema neu gebaut. Eiskapelle, Holzkapelle, Snow Suites."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "Köngäs · 15 Min. von Levi",
+        "desc": "Premium-Luxusresort mit verglasten Hütten und einer Snow Chapel für 60 Gäste."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "Levi · 7 km vom Zentrum",
+        "desc": "Levis eigenes Eisschloss mit Kapelle, Bar und Eissuiten. Wände und Sitze aus kristallklarem Eis."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "Levi · auf dem Gipfel des Fjells",
+        "desc": "Glasiglus auf dem Gipfel des Levi-Fjells: der beste Blickwinkel auf die Nordlichter in Lappland, Suite-Iglus für Paare."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "Apukka · 15 Min. vom Weihnachtsmanndorf",
+        "desc": "Resort am Apukka-See mit Aurora Cabins, zweistöckigem Kammi-Iglu und den Restaurants Aitta und Kota."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · 2 km vom Flughafen",
+        "desc": "Moderne Baumwipfelhütten mit Glaswänden: die beste Logistik Lapplands, 2 km vom Flughafen Rovaniemi."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "Muotka · am Rand des UKK-Nationalparks",
+        "desc": "Keine Lichtverschmutzung: einer der besten Nordlichtorte Lapplands. Aurora Cabins und Kammi-Hütte."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "Am Ufer des Inarisees",
+        "desc": "Am Ufer des Inarisees, im Herzen der samischen Kultur. Aurora-Hütten mit direktem Blick auf den Seehorizont."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "Inari · im Zentrum",
+        "desc": "Das neueste Haus von Wilderness Hotels (2022). Restaurant Aanaar im Zentrum von Inari, zu Fuß zum See."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "Zentrum von Saariselkä",
+        "desc": "80 Aurora Cabins und 20 Polar Sky Suites mit Glasdach im Zentrum von Saariselkä."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "Sirkka, Levi",
+        "desc": "NLV-Stil nahe den Services von Levi: Aurora Cabins, 5 min bis ins Zentrum von Levi."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "Zentrum von Levi",
+        "desc": "Zentraler Hotel- und Restaurantkomplex in Levi mit Festsaal für 200 Gäste und 4 Restaurants."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "Auf dem Gipfel des Levi-Fjells",
+        "desc": "Flaggschiff von Lapland Hotels auf dem Gipfel des Levi-Fjells. Panoramafenster, Zugang mit der Gondelbahn."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "Ylläsjärvi · am Pallas-Yllästunturi-NP",
+        "desc": "Auf TripAdvisor beliebtes Hochzeitshotel in Ylläs. Spa, drei Restaurants, Hot Tubs."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "Kilpisjärvi",
+        "desc": "Finnlands nördlichstes Glasiglu-Resort, 480 m über dem Meer: der beste Nordlichtblick Lapplands."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "Luosto, Sodankylä",
+        "desc": "Boutiquehotel im Zentrum von Luosto: eigene Sauna in jedem Zimmer, Glasiglus, direkt am Nationalpark Pyhä-Luosto."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotel im Blockhausdorf Luosto: Amethyst Spa, 500 m zu den Pisten, neben dem Nationalpark Pyhä-Luosto."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "Weihnachtsmanndorf",
+        "desc": "Das einzige für Hochzeiten konzipierte Hotel im Santa Claus Village. Rentier- und Husky-Pakete inklusive."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "Weihnachtsmanndorf",
+        "desc": "Kompaktes, modernes Boutiquehotel im Santa Claus Village."
+      }
+    ]
+  },
+  "ja": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "ロヴァニエミ",
+        "desc": "ラップランドの州都で、国際線でもっとも行きやすい町。Santa Claus Village周辺には、氷のチャペルからガラスイグルーまでの挙式会場があります。"
+      },
+      {
+        "slug": "saariselka",
+        "name": "サーリセルカ＆イナリ",
+        "desc": "北ラップランドの中心：オーロラは平均して2晩に1晩（FMI）、そしてKakslauttanenのGlass Teepeeチャペル。"
+      },
+      {
+        "slug": "levi",
+        "name": "レヴィ＆キッティラ",
+        "desc": "フィンランド最大のフェルリゾート：Lainio Snow Village、Northern Lights RanchのSnow Chapel、ロンドンからの直行便。"
+      },
+      {
+        "slug": "yllas",
+        "name": "ウッラス",
+        "desc": "Leviより静かなエリア：ラップランドでもっとも澄んだ空気、挙式に向くSaagaのスパホテル、Lainio Snow Villageまでも近い距離。"
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "ピュハ-ルオスト",
+        "desc": "東ラップランドの静かな側：Pyhä-Luosto国立公園の縁にあるLuostoのログハウス村に、ホテルが2軒。"
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "キルピスヤルヴィ",
+        "desc": "フィンランド最北かつ最高地点：Tundreaのガラスイグルーと、3か国の国境での挙式。"
+      },
+      {
+        "slug": "oulu",
+        "name": "オウル",
+        "desc": "ラップランドへ向かう途中の都市型の選択肢。Perämeri沿岸にある、フィンランドで5番目に大きい都市です。レストランとナイトライフのある都会的なウェディングの夜、Helsinkiから直行便で約1時間。"
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "ケミヤルヴィ",
+        "desc": "東ラップランドにあるフィンランド最北の市：湖に囲まれた中心街、7,029人の住民、そしてHelsinkiからの直通列車。車で行ける距離に5つのフェル。"
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "オーロラウェディング",
+        "desc": "オーロラの下で誓いを交わす：北ラップランドではオーロラが平均して2晩に1晩見られます（FMI）。"
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "スノーチャペルウェディング",
+        "desc": "純粋な雪と氷から削り出したチャペルで挙式：Lainio、Northern Lights Ranch、Arctic SnowHotel、Levi Ice Castle。"
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "ガラスイグルーウェディング",
+        "desc": "オーロラの下、暖房の効いたガラスドームで過ごす結婚初夜：Kakslauttanen、Levin Iglut、Apukka。"
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "白夜のウェディング",
+        "desc": "太陽が沈まない季節に挙式：5月23日〜7月24日、暖かい気候で、防寒装備は不要。"
+      },
+      {
+        "slug": "elopement",
+        "name": "エロープメント / 二人だけの結婚式",
+        "desc": "あなたたち二人と、司式者、そしてフォトグラファーだけ。ターンキーのパッケージは€1 600から。"
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "誓いの更新",
+        "desc": "ラップランドの雪の中で誓いを新たに：書類手続きは不要、完全オーダーメイドのセレモニー。"
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "サーリセルカ",
+        "desc": "フィンランドでもっとも有名なガラスイグルーリゾート。Glass Teepeeチャペル、氷のチャペル、ログハウスのチャペル、250名収容のCelebration House。"
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "レフトヤルヴィ · ロヴァニエミから35km",
+        "desc": "30名収容の氷のチャペルを備えたSnow Hotel、氷のレストラン、そして360°のオーロラビューをもつガラスイグルー。"
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "ライニオ、キッティラ · ウッラスとレヴィの間",
+        "desc": "毎冬、新しいアートテーマで建て直される世界的に有名なSnow Village。氷のチャペル、木のチャペル、スノースイート。"
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "ケンガス · レヴィから15分",
+        "desc": "ガラス壁のキャビンと60名収容のSnow Chapelを備えたプレミアムなラグジュアリーリゾート。"
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "レヴィ · 中心部から7km",
+        "desc": "チャペル、バー、アイススイートを備えたLevi自慢の氷の城。壁も座席も透きとおった氷でできています。"
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "レヴィ · フェル（丘陵）の頂上",
+        "desc": "Leviフェルの頂上に建つガラスイグルー：ラップランドで最良のオーロラ観賞角度、二人向けのSuiteイグルー。"
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "アプッカ · サンタクロース村から15分",
+        "desc": "Apukka湖のほとりのリゾート。Aurora Cabins、2階建てのKammiイグルー、AittaとKotaのレストラン。"
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · 空港から2km",
+        "desc": "ガラス壁のモダンなツリートップキャビン：ラップランドで最良のアクセス、Rovaniemi空港から2 km。"
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "ムオトカ · UKK国立公園の端",
+        "desc": "光害ゼロ：ラップランド有数のオーロラスポット。Aurora CabinsとKammiキャビン。"
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "イナリ湖のほとり",
+        "desc": "サーミ文化の中心にあるInari湖畔。オーロラキャビンからは湖の地平線がまっすぐ見渡せます。"
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "イナリ · 中心部",
+        "desc": "Wilderness Hotelsでもっとも新しい施設（2022年）。Inari中心部のAanaarレストラン、湖までは徒歩圏。"
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "サーリセルカ中心部",
+        "desc": "Saariselkä中心部にある、ガラス屋根の80棟のAurora Cabinsと20室のPolar Sky Suites。"
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "シルッカ、レヴィ",
+        "desc": "Leviのサービスの近くで味わうNLVスタイル：Aurora Cabins、Levi中心部まで5分。"
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "レヴィ中心部",
+        "desc": "200名収容の宴会場と4つのレストランをもつ、Levi中心部のホテル・レストラン複合施設。"
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "レヴィのフェル頂上",
+        "desc": "Leviフェルの山頂に建つLapland Hotelsの旗艦ホテル。パノラマウィンドウ、ゴンドラでアクセス。"
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "ウッラスヤルヴィ · パッラス-ウッラス国立公園",
+        "desc": "TripAdvisorで人気のYlläsの結婚式向けホテル。スパ、3つのレストラン、ホットタブ。"
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "キルピスヤルヴィ",
+        "desc": "標高480 mにあるフィンランド最北のガラスイグルーリゾート：ラップランドで最高のオーロラビュー。"
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "ルオスト、ソダンキュラ",
+        "desc": "Luosto中心部のブティックホテル：全室に専用サウナ、ガラスイグルー、Pyhä-Luosto国立公園のすぐ隣。"
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "ルオスト、ソダンキュラ",
+        "desc": "Luostoのログハウス村にあるホテル：Amethyst Spa、ゲレンデまで500 m、Pyhä-Luosto国立公園の隣。"
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "サンタクロース村",
+        "desc": "Santa Claus Villageで唯一、結婚式のために設計されたホテル。トナカイとハスキーのパッケージ込み。"
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "サンタクロース村",
+        "desc": "Santa Claus Villageにある、コンパクトでモダンなブティックホテル。"
+      }
+    ]
+  },
+  "es": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "Rovaniemi",
+        "desc": "La capital de Laponia, la más fácil de alcanzar con vuelos internacionales. Lugares para bodas desde una capilla de hielo hasta iglús de cristal cerca de Santa Claus Village."
+      },
+      {
+        "slug": "saariselka",
+        "name": "Saariselkä e Inari",
+        "desc": "El corazón del norte de Laponia: auroras boreales de media una de cada dos noches (FMI) y la capilla Glass Teepee de Kakslauttanen."
+      },
+      {
+        "slug": "levi",
+        "name": "Levi y Kittilä",
+        "desc": "El mayor centro turístico de montaña de Finlandia: Lainio Snow Village, la Snow Chapel de Northern Lights Ranch y vuelos directos desde Londres."
+      },
+      {
+        "slug": "yllas",
+        "name": "Ylläs",
+        "desc": "Más tranquilo que Levi: el aire más limpio de Laponia, el hotel spa de Saaga apto para bodas y un trayecto corto hasta Lainio Snow Village."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "Pyhä-Luosto",
+        "desc": "El lado más tranquilo del este de Laponia: dos hoteles en el pueblo de troncos de Luosto, al borde del Parque Nacional Pyhä-Luosto."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "Kilpisjärvi",
+        "desc": "El punto más septentrional y más alto de Finlandia: los iglús de cristal de Tundrea y la ceremonia en la frontera de los tres países."
+      },
+      {
+        "slug": "oulu",
+        "name": "Oulu",
+        "desc": "La opción de gran ciudad camino de Laponia, la quinta ciudad más grande de Finlandia, en la costa de la bahía de Botnia. Noches de boda urbanas con restaurantes y vida nocturna, vuelos directos desde Helsinki en aproximadamente una hora."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "Kemijärvi",
+        "desc": "La ciudad más septentrional de Finlandia, en el este de Laponia: un centro rodeado por el lago, 7029 habitantes y un tren directo desde Helsinki. Cinco montañas a poca distancia en coche."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "Boda bajo la aurora boreal",
+        "desc": "Dar el sí bajo la aurora boreal: en el norte de Laponia se ven auroras de media una de cada dos noches (FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "Boda en capilla de nieve",
+        "desc": "Casarse en una capilla tallada en nieve y hielo puros: Lainio, Northern Lights Ranch, Arctic SnowHotel y Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "Boda en iglú de cristal",
+        "desc": "Noche de bodas bajo la aurora boreal en una cúpula de cristal climatizada: Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "Boda bajo el sol de medianoche",
+        "desc": "Casarse cuando el sol no se pone: del 23 de mayo al 24 de julio, tiempo cálido, sin necesidad de equipo de nieve."
+      },
+      {
+        "slug": "elopement",
+        "name": "Elopement / Boda para dos",
+        "desc": "Solo los dos, el oficiante y un fotógrafo. Paquetes llave en mano desde 1 600 €."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "Renovación de votos",
+        "desc": "Renovar los votos en la nieve de Laponia: sin trámites, ceremonia totalmente a medida."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "Saariselkä",
+        "desc": "El resort de iglús de cristal más famoso de Finlandia. Capilla Glass Teepee, capilla de hielo, capilla de troncos y la Celebration House para 250 invitados."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "Lehtojärvi · a 35 km de Rovaniemi",
+        "desc": "Snow Hotel con capilla de hielo para 30 invitados, restaurante de hielo e iglús de cristal con vistas de 360° a la aurora boreal."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "Lainio, Kittilä · entre Ylläs y Levi",
+        "desc": "El mundialmente conocido Snow Village, reconstruido cada invierno con un nuevo tema artístico. Capilla de hielo, capilla de madera y snow suites."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "Köngäs · a 15 min de Levi",
+        "desc": "Resort de lujo premium con cabañas de paredes de cristal y una Snow Chapel para 60 invitados."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "Levi · a 7 km del centro",
+        "desc": "El castillo de hielo propio de Levi, con capilla, bar y suites de hielo. Paredes y asientos de hielo cristalino."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "Levi · en la cima del fell",
+        "desc": "Iglús de cristal en la cima del monte Levi: el mejor ángulo de Laponia para ver la aurora boreal, iglús Suite para parejas."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "Apukka · a 15 min de la Aldea de Papá Noel",
+        "desc": "Resort a orillas del lago Apukka con Aurora Cabins, iglú Kammi de dos plantas y los restaurantes Aitta y Kota."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · a 2 km del aeropuerto",
+        "desc": "Cabañas modernas en las copas de los árboles con paredes de cristal: la mejor logística de Laponia, a 2 km del aeropuerto de Rovaniemi."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "Muotka · en el borde del Parque Nacional UKK",
+        "desc": "Cero contaminación lumínica: uno de los mejores lugares de Laponia para ver la aurora boreal. Aurora Cabins y cabaña Kammi."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "A orillas del lago Inari",
+        "desc": "A orillas del lago Inari, en el corazón de la cultura sami. Cabañas Aurora con vistas directas al horizonte del lago."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "Inari · en el centro",
+        "desc": "El establecimiento más nuevo de Wilderness Hotels (2022). Restaurante Aanaar en el centro de Inari, a poca distancia a pie del lago."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "Centro de Saariselkä",
+        "desc": "80 Aurora Cabins y 20 Polar Sky Suites con techo de cristal en el centro de Saariselkä."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "Sirkka, Levi",
+        "desc": "El estilo NLV cerca de los servicios de Levi: Aurora Cabins, a 5 min del centro de Levi."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "Centro de Levi",
+        "desc": "El complejo hotelero y de restaurantes céntrico de Levi, con salón de banquetes para 200 invitados y 4 restaurantes."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "En la cima del fell de Levi",
+        "desc": "Buque insignia de Lapland Hotels en la cima del monte Levi. Ventanales panorámicos, acceso en góndola."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "Ylläsjärvi · en el P. N. Pallas-Yllästunturi",
+        "desc": "Hotel de bodas favorito en TripAdvisor en Ylläs. Spa, tres restaurantes y bañeras de hidromasaje."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "Kilpisjärvi",
+        "desc": "El resort de iglús de cristal más septentrional de Finlandia, a 480 m sobre el nivel del mar: la mejor vista de la aurora boreal de Laponia."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotel boutique en el centro de Luosto: sauna privada en cada habitación, iglús de cristal y el Parque Nacional Pyhä-Luosto al lado."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotel en el pueblo de troncos de Luosto: Amethyst Spa, a 500 m de las pistas, junto al Parque Nacional Pyhä-Luosto."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "Aldea de Papá Noel",
+        "desc": "El único hotel de Santa Claus Village diseñado para bodas. Incluye paquetes de renos y huskies."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "Aldea de Papá Noel",
+        "desc": "Hotel boutique compacto y moderno en Santa Claus Village."
+      }
+    ]
+  },
+  "pt-BR": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "Rovaniemi",
+        "desc": "A capital da Lapônia, a mais fácil de alcançar com voos internacionais. Locais de casamento da capela de gelo aos iglus de vidro perto da Santa Claus Village."
+      },
+      {
+        "slug": "saariselka",
+        "name": "Saariselkä e Inari",
+        "desc": "O coração do norte da Lapônia: aurora em média a cada duas noites (FMI) e a capela Glass Teepee de Kakslauttanen."
+      },
+      {
+        "slug": "levi",
+        "name": "Levi e Kittilä",
+        "desc": "O maior centro turístico de fjell da Finlândia: Lainio Snow Village, a Snow Chapel do Northern Lights Ranch, voos diretos de Londres."
+      },
+      {
+        "slug": "yllas",
+        "name": "Ylläs",
+        "desc": "Mais tranquilo que Levi: o ar mais puro da Lapônia, o spa-hotel do Saaga preparado para casamentos, fácil acesso ao Lainio Snow Village."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "Pyhä-Luosto",
+        "desc": "O lado mais tranquilo do leste da Lapônia: dois hotéis na vila de casas de troncos de Luosto, na borda do Parque Nacional Pyhä-Luosto."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "Kilpisjärvi",
+        "desc": "O ponto mais setentrional e mais alto da Finlândia: os iglus de vidro do Tundrea e a cerimônia no marco das três fronteiras."
+      },
+      {
+        "slug": "oulu",
+        "name": "Oulu",
+        "desc": "A opção de cidade grande no caminho para a Lapônia, a quinta maior cidade da Finlândia, no litoral da Baía de Bótnia. Noites de casamento urbanas com restaurantes e vida noturna, voos diretos de Helsinque em cerca de uma hora."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "Kemijärvi",
+        "desc": "A cidade mais setentrional da Finlândia, no leste da Lapônia: um centro cercado pelo lago, 7.029 habitantes e um trem direto de Helsinque. Cinco fjells a distância de carro."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "Casamento sob a aurora boreal",
+        "desc": "Troquem os votos sob a aurora boreal: no norte da Lapônia a aurora aparece em média a cada duas noites (FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "Casamento em capela de neve",
+        "desc": "Casem-se em uma capela esculpida em neve e gelo puros: Lainio, Northern Lights Ranch, Arctic SnowHotel e Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "Casamento em iglu de vidro",
+        "desc": "Noite de núpcias sob a aurora boreal em uma cúpula de vidro aquecida: Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "Casamento sob o sol da meia-noite",
+        "desc": "Casem-se quando o sol não se põe: de 23 de maio a 24 de julho, clima ameno, sem roupas de neve."
+      },
+      {
+        "slug": "elopement",
+        "name": "Elopement / Casamento a dois",
+        "desc": "Só vocês dois, o celebrante e um fotógrafo. Pacotes prontos a partir de € 1 600."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "Renovação de votos",
+        "desc": "Renovem seus votos na neve da Lapônia: sem papelada, cerimônia totalmente sob medida."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "Saariselkä",
+        "desc": "O resort de iglus de vidro mais conhecido da Finlândia. Capela Glass Teepee, capela de gelo, capela de troncos e a Celebration House para 250 convidados."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "Lehtojärvi · a 35 km de Rovaniemi",
+        "desc": "Snow Hotel com capela de gelo para 30 convidados, restaurante de gelo e iglus de vidro com vista de 360° para a aurora."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "Lainio, Kittilä · entre Ylläs e Levi",
+        "desc": "A mundialmente conhecida Snow Village, reconstruída a cada inverno com um novo tema artístico. Capela de gelo, capela de madeira, suítes de neve."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "Köngäs · a 15 min de Levi",
+        "desc": "Resort de luxo premium com cabanas de paredes de vidro e uma Snow Chapel para 60 convidados."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "Levi · a 7 km do centro",
+        "desc": "O castelo de gelo de Levi, com capela, bar e suítes de gelo. Paredes e assentos de gelo cristalino."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "Levi · no topo do fell",
+        "desc": "Iglus de vidro no alto do fjell de Levi: o melhor ângulo para ver a aurora na Lapônia, iglus Suite para casais."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "Apukka · a 15 min da Vila do Papai Noel",
+        "desc": "Resort à beira do lago Apukka com Aurora Cabins, iglu Kammi de dois andares e os restaurantes Aitta e Kota."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · a 2 km do aeroporto",
+        "desc": "Cabanas modernas no alto das árvores, com paredes de vidro: a melhor logística da Lapônia, a 2 km do aeroporto de Rovaniemi."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "Muotka · na borda do Parque Nacional UKK",
+        "desc": "Zero poluição luminosa: um dos melhores lugares para ver a aurora na Lapônia. Aurora Cabins e cabana Kammi."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "Às margens do lago Inari",
+        "desc": "À beira do lago Inari, no coração da cultura sámi. Cabanas Aurora com vista direta para o horizonte do lago."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "Inari · no centro",
+        "desc": "O endereço mais novo da Wilderness Hotels (2022). Restaurante Aanaar no centro de Inari, a poucos passos do lago."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "Centro de Saariselkä",
+        "desc": "80 Aurora Cabins e 20 Polar Sky Suites com teto de vidro no centro de Saariselkä."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "Sirkka, Levi",
+        "desc": "O estilo NLV perto dos serviços de Levi: Aurora Cabins, 5 min do centro de Levi."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "Centro de Levi",
+        "desc": "O complexo central de hotel e restaurantes de Levi, com salão de festas para 200 convidados e 4 restaurantes."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "No topo do fell de Levi",
+        "desc": "O carro-chefe da Lapland Hotels no cume do fjell de Levi. Janelas panorâmicas, acesso por gôndola."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "Ylläsjärvi · no P. N. Pallas-Yllästunturi",
+        "desc": "Hotel de casamentos favorito do TripAdvisor em Ylläs. Spa, três restaurantes, ofurôs ao ar livre."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "Kilpisjärvi",
+        "desc": "O resort de iglus de vidro mais setentrional da Finlândia, a 480 m acima do nível do mar: a melhor vista da aurora na Lapônia."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotel boutique no centro de Luosto: sauna privativa em cada quarto, iglus de vidro, ao lado do Parque Nacional Pyhä-Luosto."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotel na vila de casas de troncos de Luosto: Amethyst Spa, 500 m das pistas, ao lado do Parque Nacional Pyhä-Luosto."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "Vila do Papai Noel",
+        "desc": "O único hotel da Santa Claus Village projetado para casamentos. Pacotes de renas e huskies incluídos."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "Vila do Papai Noel",
+        "desc": "Hotel boutique compacto e moderno na Santa Claus Village."
+      }
+    ]
+  },
+  "zh-CN": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "罗瓦涅米",
+        "desc": "拉普兰的首府，乘国际航班最容易抵达。婚礼场地从冰教堂到圣诞老人村附近的玻璃冰屋。"
+      },
+      {
+        "slug": "saariselka",
+        "name": "萨利色尔卡与伊纳里",
+        "desc": "北拉普兰的核心：平均每隔一晚就有极光（FMI），以及 Kakslauttanen 的玻璃帐篷教堂。"
+      },
+      {
+        "slug": "levi",
+        "name": "莱维与基蒂莱",
+        "desc": "芬兰最大的丘陵度假中心：Lainio Snow Village、Northern Lights Ranch 的 Snow Chapel，以及从伦敦出发的直飞航班。"
+      },
+      {
+        "slug": "yllas",
+        "name": "于拉斯",
+        "desc": "比 Levi 更安静：拉普兰最洁净的空气、Saaga 适合婚礼的水疗酒店，前往 Lainio Snow Village 也很方便。"
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "皮哈-卢奥斯托",
+        "desc": "东拉普兰更安静的一侧：Pyhä-Luosto 国家公园边缘、Luosto 木屋村中的两家酒店。"
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "基尔皮斯湖",
+        "desc": "芬兰最北、海拔最高的地点：Tundrea 的玻璃冰屋，以及三国交界处的婚礼仪式。"
+      },
+      {
+        "slug": "oulu",
+        "name": "奥卢",
+        "desc": "前往拉普兰途中的大城市选择，芬兰第五大城市，位于波的尼亚湾沿岸。有餐厅与夜生活的都市婚礼之夜，从赫尔辛基直飞约一小时。"
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "凯米耶尔维",
+        "desc": "芬兰最北的城市，位于东拉普兰：被湖水环抱的市中心、7,029 名居民，以及从赫尔辛基出发的直达火车。驾车可达范围内有五座丘陵。"
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "极光婚礼",
+        "desc": "在北极光下交换誓言：北拉普兰平均每隔一晚就能看到极光（FMI）。"
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "雪礼拜堂婚礼",
+        "desc": "在由纯净冰雪雕成的教堂里结婚：Lainio、Northern Lights Ranch、Arctic SnowHotel 和 Levi Ice Castle。"
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "玻璃穹顶婚礼",
+        "desc": "在带暖气的玻璃穹顶里、于北极光下度过新婚之夜：Kakslauttanen、Levin Iglut、Apukka。"
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "午夜阳光婚礼",
+        "desc": "在太阳不落的季节结婚：5 月 23 日至 7 月 24 日，天气温暖，无需雪地装备。"
+      },
+      {
+        "slug": "elopement",
+        "name": "私奔婚礼 / 二人婚礼",
+        "desc": "只有你们两人、主婚人和一位摄影师。一站式套餐 1 600 欧元起。"
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "重申誓言",
+        "desc": "在拉普兰的雪中重申你们的誓言：无需办理文件手续，仪式完全定制。"
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "萨利色尔卡",
+        "desc": "芬兰最著名的玻璃冰屋度假村。Glass Teepee 教堂、冰教堂、木屋教堂，以及可容纳 250 位宾客的 Celebration House。"
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "莱赫托湖 · 距罗瓦涅米35公里",
+        "desc": "Snow Hotel 内设可容纳 30 位宾客的冰教堂、冰餐厅，以及拥有 360° 极光视野的玻璃冰屋。"
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "莱尼奥，基蒂莱 · 于拉斯与莱维之间",
+        "desc": "世界闻名的 Snow Village，每年冬天以全新的艺术主题重建。冰教堂、木教堂、雪屋套房。"
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "科恩盖斯 · 距莱维15分钟",
+        "desc": "配有玻璃幕墙小屋的高端奢华度假村，设有可容纳 60 位宾客的 Snow Chapel。"
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "莱维 · 距中心7公里",
+        "desc": "Levi 自己的冰城堡，设有教堂、酒吧和冰屋套房。墙体与座椅均由清澈透明的冰打造。"
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "莱维 · 山丘之巅",
+        "desc": "位于 Levi 丘陵顶部的玻璃冰屋：拉普兰最佳的极光观赏角度，为情侣准备的 Suite 冰屋。"
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "阿普卡 · 距圣诞老人村15分钟",
+        "desc": "位于 Apukka 湖畔的度假村，设有 Aurora Cabins、两层的 Kammi 冰屋，以及 Aitta 和 Kota 餐厅。"
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · 距机场2公里",
+        "desc": "带玻璃墙的现代树顶小屋：拉普兰最便利的交通位置，距 Rovaniemi 机场 2 km。"
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "穆奥特卡 · UKK国家公园边缘",
+        "desc": "没有光污染：拉普兰最好的极光地点之一。Aurora Cabins 和 Kammi 小屋。"
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "伊纳里湖畔",
+        "desc": "坐落在 Inari 湖畔、萨米文化的核心地带。Aurora 小屋可直接望向湖面的地平线。"
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "伊纳里 · 中心区",
+        "desc": "Wilderness Hotels 最新的一处场地（2022 年）。Aanaar 餐厅位于 Inari 中心，步行即可到湖边。"
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "萨利色尔卡中心",
+        "desc": "位于 Saariselkä 中心的 80 间 Aurora Cabins 和 20 间玻璃屋顶的 Polar Sky Suites。"
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "锡尔卡，莱维",
+        "desc": "靠近 Levi 各项服务的 NLV 风格：Aurora Cabins，距 Levi 中心 5 min。"
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "莱维中心",
+        "desc": "Levi 市中心的酒店与餐厅综合体，设有可容纳 200 位宾客的宴会厅和 4 家餐厅。"
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "莱维山丘之巅",
+        "desc": "Lapland Hotels 位于 Levi 丘陵顶峰的旗舰酒店。全景窗户，可乘缆车抵达。"
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "于拉斯湖 · 帕拉斯-于拉斯通图里国家公园",
+        "desc": "Ylläs 上深受 TripAdvisor 用户喜爱的婚礼酒店。水疗中心、三家餐厅、热浴桶。"
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "基尔皮斯湖",
+        "desc": "芬兰最北的玻璃冰屋度假村，海拔 480 m：拉普兰最佳的极光视野。"
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "卢奥斯托，索丹屈莱",
+        "desc": "位于 Luosto 中心的精品酒店：每间客房都有私人桑拿，玻璃冰屋，紧邻 Pyhä-Luosto 国家公园。"
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "卢奥斯托，索丹屈莱",
+        "desc": "位于 Luosto 木屋村的酒店：Amethyst Spa，距雪道 500 m，紧邻 Pyhä-Luosto 国家公园。"
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "圣诞老人村",
+        "desc": "圣诞老人村中唯一为婚礼而设计的酒店。含驯鹿和哈士奇套餐。"
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "圣诞老人村",
+        "desc": "位于圣诞老人村的小巧现代精品酒店。"
+      }
+    ]
+  },
+  "ko": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "로바니에미",
+        "desc": "라플란드의 주도이자 국제선으로 가장 쉽게 닿는 도시. 산타클로스 마을 인근에 얼음 예배당부터 글라스 이글루까지 결혼식 장소가 모여 있습니다."
+      },
+      {
+        "slug": "saariselka",
+        "name": "사리셀카 & 이나리",
+        "desc": "북부 라플란드의 중심. 평균 이틀에 하루꼴로 오로라가 나타나며(FMI), Kakslauttanen의 Glass Teepee 예배당이 있습니다."
+      },
+      {
+        "slug": "levi",
+        "name": "레비 & 키틸레",
+        "desc": "핀란드 최대의 펠 리조트. Lainio Snow Village, Northern Lights Ranch의 Snow Chapel, 런던 직항편."
+      },
+      {
+        "slug": "yllas",
+        "name": "윌래스",
+        "desc": "Levi보다 조용한 곳. 라플란드에서 가장 깨끗한 공기, 결혼식에 어울리는 Saaga의 스파 호텔, Lainio Snow Village까지 짧은 이동."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "피해-루오스토",
+        "desc": "동부 라플란드의 조용한 쪽. Pyhä-Luosto 국립공원 가장자리, Luosto 통나무 마을에 호텔 두 곳이 있습니다."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "킬피스예르비",
+        "desc": "핀란드에서 가장 북쪽이자 가장 높은 지점. Tundrea의 글라스 이글루와 3국 국경에서 올리는 예식."
+      },
+      {
+        "slug": "oulu",
+        "name": "오울루",
+        "desc": "라플란드로 가는 길목의 대도시 선택지로, Perämeri 연안에 자리한 핀란드에서 다섯 번째로 큰 도시. 레스토랑과 밤 문화가 어우러진 도시형 결혼식 밤, Helsinki에서 직항으로 약 1시간."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "케미예르비",
+        "desc": "동부 라플란드에 있는 핀란드 최북단 도시. 호수가 감싸는 도심, 인구 7,029명, Helsinki에서 오는 직통 열차. 차로 갈 수 있는 거리에 펠 다섯 곳이 있습니다."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "오로라 웨딩",
+        "desc": "오로라 아래에서 나누는 혼인 서약. 북부 라플란드에서는 평균 이틀에 하루꼴로 오로라가 나타납니다(FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "스노우 채플 웨딩",
+        "desc": "순수한 눈과 얼음을 깎아 만든 예배당에서 올리는 결혼식. Lainio, Northern Lights Ranch, Arctic SnowHotel, Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "글라스 이글루 웨딩",
+        "desc": "난방되는 유리 돔에서 오로라 아래 보내는 신혼 첫날밤. Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "백야 웨딩",
+        "desc": "해가 지지 않는 시기에 올리는 결혼식. 5월 23일부터 7월 24일까지, 따뜻한 날씨, 방한복은 필요 없습니다."
+      },
+      {
+        "slug": "elopement",
+        "name": "엘로프먼트 / 단둘만의 결혼식",
+        "desc": "두 사람과 주례자, 사진작가만 함께합니다. 턴키 패키지는 1,600유로부터."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "서약 갱신",
+        "desc": "라플란드의 눈 속에서 서약을 다시 나누세요. 서류 절차 없이, 전부 맞춤으로 구성하는 예식."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "사리셀카",
+        "desc": "핀란드에서 가장 유명한 글라스 이글루 리조트. Glass Teepee 예배당, 얼음 예배당, 통나무 예배당, 그리고 250명 규모의 Celebration House."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "레흐토예르비 · 로바니에미에서 35km",
+        "desc": "30명 규모의 얼음 예배당을 갖춘 Snow Hotel, 얼음 레스토랑, 360° 오로라 전망의 글라스 이글루."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "라이니오, 키틸레 · 윌래스와 레비 사이",
+        "desc": "겨울마다 새로운 예술 테마로 다시 짓는 세계적으로 유명한 Snow Village. 얼음 예배당, 목조 예배당, 스노우 스위트."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "쾽개스 · 레비에서 15분",
+        "desc": "유리벽 캐빈과 60명 규모의 Snow Chapel을 갖춘 프리미엄 럭셔리 리조트."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "레비 · 중심부에서 7km",
+        "desc": "예배당과 바, 얼음 스위트를 갖춘 Levi의 얼음 성. 벽과 좌석은 수정처럼 맑은 얼음으로 만듭니다."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "레비 · 펠(구릉) 정상",
+        "desc": "Levi 펠 정상의 글라스 이글루. 라플란드에서 오로라를 보기에 가장 좋은 각도, 커플을 위한 Suite 이글루."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "아푸카 · 산타클로스 마을에서 15분",
+        "desc": "Apukka 호숫가의 리조트. Aurora Cabins, 2층 구조의 Kammi 이글루, Aitta와 Kota 레스토랑."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · 공항에서 2km",
+        "desc": "유리벽을 두른 현대적인 나무 위 캐빈. 라플란드에서 이동이 가장 편하고, Rovaniemi 공항에서 2 km."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "무오트카 · UKK 국립공원 경계",
+        "desc": "빛 공해가 전혀 없어 라플란드에서 오로라를 보기 가장 좋은 장소 중 하나. Aurora Cabins와 Kammi 캐빈."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "이나리 호숫가",
+        "desc": "사미 문화의 중심에 있는 Inari 호숫가. 호수 수평선이 바로 보이는 Aurora 캐빈."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "이나리 · 중심부",
+        "desc": "Wilderness Hotels의 가장 새로운 곳(2022년). Inari 중심가의 Aanaar 레스토랑, 호수까지 걸어갈 수 있는 거리."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "사리셀카 중심부",
+        "desc": "Saariselkä 중심가에 유리 지붕을 얹은 Aurora Cabins 80채와 Polar Sky Suites 20채."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "시르카, 레비",
+        "desc": "Levi의 편의시설 가까이에서 누리는 NLV 스타일. Aurora Cabins, Levi 중심가까지 5분."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "레비 중심부",
+        "desc": "Levi 중심의 호텔·레스토랑 복합시설. 200명 규모의 연회장과 레스토랑 4곳."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "레비 펠 정상",
+        "desc": "Levi 펠 정상에 있는 Lapland Hotels의 대표 호텔. 파노라마 창, 곤돌라로 이동."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "윌래스예르비 · 팔라스-윌래스툰투리 국립공원",
+        "desc": "TripAdvisor에서 인기 있는 Ylläs의 웨딩 호텔. 스파, 레스토랑 세 곳, 핫텁."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "킬피스예르비",
+        "desc": "해발 480 m에 자리한 핀란드 최북단의 글라스 이글루 리조트. 라플란드에서 가장 좋은 오로라 전망."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "루오스토, 소단퀼래",
+        "desc": "Luosto 중심가의 부티크 호텔. 전 객실에 전용 사우나, 글라스 이글루, Pyhä-Luosto 국립공원 바로 옆."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "루오스토, 소단퀼래",
+        "desc": "Luosto 통나무 마을에 있는 호텔. Amethyst Spa, 슬로프까지 500 m, Pyhä-Luosto 국립공원 옆."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "산타클로스 마을",
+        "desc": "산타클로스 마을에서 유일하게 결혼식을 위해 설계된 호텔. 순록·허스키 패키지 포함."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "산타클로스 마을",
+        "desc": "산타클로스 마을에 있는 아담하고 현대적인 부티크 호텔."
+      }
+    ]
+  },
+  "fr": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "Rovaniemi",
+        "desc": "La capitale de la Laponie, la plus facile à rejoindre en vol international. Des lieux de mariage allant de la chapelle de glace aux igloos de verre près du village du Père Noël."
+      },
+      {
+        "slug": "saariselka",
+        "name": "Saariselkä et Inari",
+        "desc": "Le cœur de la Laponie du Nord : des aurores en moyenne une nuit sur deux (FMI) et la chapelle Glass Teepee de Kakslauttanen."
+      },
+      {
+        "slug": "levi",
+        "name": "Levi et Kittilä",
+        "desc": "La plus grande station de fjeld de Finlande : Lainio Snow Village, la Snow Chapel du Northern Lights Ranch, vols directs depuis Londres."
+      },
+      {
+        "slug": "yllas",
+        "name": "Ylläs",
+        "desc": "Plus calme que Levi : l’air le plus pur de Laponie, l’hôtel spa Saaga adapté aux mariages, Lainio Snow Village à courte distance."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "Pyhä-Luosto",
+        "desc": "Le versant plus calme de la Laponie orientale : deux hôtels dans le village de rondins de Luosto, en bordure du parc national de Pyhä-Luosto."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "Kilpisjärvi",
+        "desc": "Le point le plus septentrional et le plus élevé de Finlande : les igloos de verre de Tundrea et la cérémonie à la borne des trois pays."
+      },
+      {
+        "slug": "oulu",
+        "name": "Oulu",
+        "desc": "L’option grande ville sur la route de la Laponie, cinquième ville de Finlande, au bord de la baie de Botnie. Des soirées de mariage urbaines avec restaurants et vie nocturne, vols directs depuis Helsinki en une heure environ."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "Kemijärvi",
+        "desc": "La ville la plus septentrionale de Finlande, en Laponie orientale : un centre entouré par le lac, 7 029 habitants et un train direct depuis Helsinki. Cinq fjelds à distance de route."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "Mariage sous les aurores boréales",
+        "desc": "Échangez vos vœux sous les aurores boréales : en Laponie du Nord, on en observe en moyenne une nuit sur deux (FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "Mariage en chapelle de neige",
+        "desc": "Mariez-vous dans une chapelle sculptée dans la neige et la glace pures : Lainio, Northern Lights Ranch, Arctic SnowHotel et Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "Mariage en igloo de verre",
+        "desc": "Nuit de noces sous les aurores boréales dans un dôme de verre chauffé : Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "Mariage sous le soleil de minuit",
+        "desc": "Mariez-vous quand le soleil ne se couche jamais : du 23 mai au 24 juillet, temps doux, sans tenue de neige."
+      },
+      {
+        "slug": "elopement",
+        "name": "Elopement / Mariage à deux",
+        "desc": "Rien que vous deux, l’officiant et un photographe. Formules clés en main à partir de 1 600 €."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "Renouvellement des vœux",
+        "desc": "Renouvelez vos vœux dans la neige de Laponie : aucune formalité administrative, cérémonie entièrement sur mesure."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "Saariselkä",
+        "desc": "Le resort d’igloos de verre le plus connu de Finlande. Chapelle Glass Teepee, chapelle de glace, chapelle en rondins et Celebration House pour 250 personnes."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "Lehtojärvi · à 35 km de Rovaniemi",
+        "desc": "Snow Hotel avec chapelle de glace pour 30 personnes, restaurant de glace et igloos de verre avec vue à 360° sur les aurores."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "Lainio, Kittilä · entre Ylläs et Levi",
+        "desc": "Snow Village de renommée mondiale, reconstruit chaque hiver sur un nouveau thème artistique. Chapelle de glace, chapelle en bois, suites de neige."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "Köngäs · à 15 min de Levi",
+        "desc": "Resort de luxe premium avec chalets aux parois vitrées et une Snow Chapel pour 60 personnes."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "Levi · à 7 km du centre",
+        "desc": "Le château de glace de Levi, avec chapelle, bar et suites de glace. Murs et sièges taillés dans une glace cristalline."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "Levi · au sommet du fell",
+        "desc": "Igloos de verre au sommet du fjeld de Levi : le meilleur angle d’observation des aurores en Laponie, igloos Suite pour les couples."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "Apukka · à 15 min du Village du Père Noël",
+        "desc": "Resort au bord du lac Apukka avec les Aurora Cabins, l’igloo Kammi à deux étages et les restaurants Aitta et Kota."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · à 2 km de l’aéroport",
+        "desc": "Cabanes perchées modernes aux parois vitrées : la meilleure logistique de Laponie, à 2 km de l’aéroport de Rovaniemi."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "Muotka · en bordure du parc national UKK",
+        "desc": "Aucune pollution lumineuse : l’un des meilleurs sites à aurores de Laponie. Aurora Cabins et chalet Kammi."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "Au bord du lac Inari",
+        "desc": "Au bord du lac Inari, au cœur de la culture sami. Chalets Aurora avec vue directe sur l’horizon du lac."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "Inari · au centre",
+        "desc": "Le plus récent établissement Wilderness Hotels (2022). Restaurant Aanaar dans le centre d’Inari, lac accessible à pied."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "Centre de Saariselkä",
+        "desc": "80 Aurora Cabins et 20 Polar Sky Suites à toit vitré dans le centre de Saariselkä."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "Sirkka, Levi",
+        "desc": "Le style NLV près des services de Levi : Aurora Cabins, 5 min du centre de Levi."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "Centre de Levi",
+        "desc": "Le complexe hôtelier et gastronomique central de Levi : salle de banquet pour 200 personnes et 4 restaurants."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "Au sommet du fell de Levi",
+        "desc": "Le navire amiral de Lapland Hotels au sommet du fjeld de Levi. Fenêtres panoramiques, accès par télécabine."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "Ylläsjärvi · au P. N. Pallas-Yllästunturi",
+        "desc": "L’hôtel de mariage plébiscité sur TripAdvisor à Ylläs. Spa, trois restaurants, bains nordiques."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "Kilpisjärvi",
+        "desc": "Le resort d’igloos de verre le plus septentrional de Finlande, à 480 m d’altitude : la meilleure vue sur les aurores en Laponie."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hôtel boutique dans le centre de Luosto : un sauna privé dans chaque chambre, igloos de verre, à côté du parc national de Pyhä-Luosto."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hôtel dans le village de rondins de Luosto : Amethyst Spa, 500 m des pistes, à côté du parc national de Pyhä-Luosto."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "Village du Père Noël",
+        "desc": "Le seul hôtel du village du Père Noël conçu pour les mariages. Forfaits rennes et huskys inclus."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "Village du Père Noël",
+        "desc": "Hôtel boutique compact et moderne au village du Père Noël."
+      }
+    ]
+  },
+  "it": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "Rovaniemi",
+        "desc": "La capitale della Lapponia, la più facile da raggiungere con i voli internazionali. Location per matrimoni dalla cappella di ghiaccio agli igloo di vetro vicino al Santa Claus Village."
+      },
+      {
+        "slug": "saariselka",
+        "name": "Saariselkä e Inari",
+        "desc": "Il cuore della Lapponia settentrionale: aurora in media una notte su due (FMI) e la cappella Glass Teepee di Kakslauttanen."
+      },
+      {
+        "slug": "levi",
+        "name": "Levi e Kittilä",
+        "desc": "Il più grande centro turistico di montagna della Finlandia: Lainio Snow Village, la Snow Chapel di Northern Lights Ranch, voli diretti da Londra."
+      },
+      {
+        "slug": "yllas",
+        "name": "Ylläs",
+        "desc": "Più tranquilla di Levi: l'aria più pulita della Lapponia, lo spa hotel Saaga adatto ai matrimoni, Lainio Snow Village a breve distanza."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "Pyhä-Luosto",
+        "desc": "Il lato più tranquillo della Lapponia orientale: due hotel nel villaggio di case in legno di Luosto, ai margini del Parco Nazionale Pyhä-Luosto."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "Kilpisjärvi",
+        "desc": "Il punto più settentrionale e più alto della Finlandia: gli igloo di vetro di Tundrea e la cerimonia al confine dei tre Paesi."
+      },
+      {
+        "slug": "oulu",
+        "name": "Oulu",
+        "desc": "L'alternativa cittadina sulla strada per la Lapponia, la quinta città più grande della Finlandia sulla costa della Baia di Botnia. Serate di nozze urbane tra ristoranti e vita notturna, voli diretti da Helsinki in circa un'ora."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "Kemijärvi",
+        "desc": "La città più settentrionale della Finlandia, nella Lapponia orientale: un centro circondato dal lago, 7.029 abitanti e un treno diretto da Helsinki. Cinque montagne raggiungibili in auto."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "Matrimonio sotto l’aurora boreale",
+        "desc": "Scambiatevi le promesse sotto l'aurora boreale: nella Lapponia settentrionale l'aurora si vede in media una notte su due (FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "Matrimonio in cappella di neve",
+        "desc": "Sposatevi in una cappella scolpita nella neve e nel ghiaccio puri: Lainio, Northern Lights Ranch, Arctic SnowHotel e Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "Matrimonio in igloo di vetro",
+        "desc": "Prima notte di nozze sotto l'aurora boreale in una cupola di vetro riscaldata: Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "Matrimonio sotto il sole di mezzanotte",
+        "desc": "Sposatevi quando il sole non tramonta: dal 23 maggio al 24 luglio, clima mite, senza abbigliamento da neve."
+      },
+      {
+        "slug": "elopement",
+        "name": "Elopement / Matrimonio a due",
+        "desc": "Solo voi due, il celebrante e un fotografo. Pacchetti chiavi in mano da 1 600 €."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "Rinnovo delle promesse",
+        "desc": "Rinnovate le vostre promesse nella neve della Lapponia: nessuna pratica burocratica, cerimonia completamente su misura."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "Saariselkä",
+        "desc": "Il resort di igloo di vetro più famoso della Finlandia. Cappella Glass Teepee, cappella di ghiaccio, cappella in legno e Celebration House da 250 ospiti."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "Lehtojärvi · a 35 km da Rovaniemi",
+        "desc": "Snow Hotel con cappella di ghiaccio per 30 ospiti, ristorante di ghiaccio e igloo di vetro con vista a 360° sull'aurora."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "Lainio, Kittilä · tra Ylläs e Levi",
+        "desc": "Snow Village di fama mondiale, ricostruito ogni inverno con un nuovo tema artistico. Cappella di ghiaccio, cappella in legno, snow suite."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "Köngäs · a 15 min da Levi",
+        "desc": "Resort di lusso premium con chalet dalle pareti di vetro e una Snow Chapel per 60 ospiti."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "Levi · a 7 km dal centro",
+        "desc": "Il castello di ghiaccio di Levi con cappella, bar e suite di ghiaccio. Pareti e sedute in ghiaccio cristallino."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "Levi · in cima al fell",
+        "desc": "Igloo di vetro in cima al monte Levi: la migliore angolazione della Lapponia per osservare l'aurora, igloo Suite per le coppie."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "Apukka · a 15 min dal Villaggio di Babbo Natale",
+        "desc": "Resort sulle rive del lago Apukka con Aurora Cabins, igloo Kammi a due piani e i ristoranti Aitta e Kota."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · a 2 km dall’aeroporto",
+        "desc": "Moderne casette sugli alberi con pareti di vetro: la logistica migliore della Lapponia, a 2 km dall'aeroporto di Rovaniemi."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "Muotka · ai margini del Parco Nazionale UKK",
+        "desc": "Zero inquinamento luminoso: uno dei luoghi migliori della Lapponia per l'aurora. Aurora Cabins e capanna Kammi."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "Sulle rive del lago Inari",
+        "desc": "Sulle rive del lago Inari, nel cuore della cultura sámi. Cabine Aurora con vista diretta sull'orizzonte del lago."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "Inari · in centro",
+        "desc": "La struttura più recente di Wilderness Hotels (2022). Ristorante Aanaar nel centro di Inari, lago raggiungibile a piedi."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "Centro di Saariselkä",
+        "desc": "80 Aurora Cabins e 20 Polar Sky Suites con tetto di vetro nel centro di Saariselkä."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "Sirkka, Levi",
+        "desc": "Lo stile NLV vicino ai servizi di Levi: Aurora Cabins, 5 min dal centro di Levi."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "Centro di Levi",
+        "desc": "Il complesso di hotel e ristoranti nel cuore di Levi: sala per banchetti da 200 ospiti e 4 ristoranti."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "In cima al fell di Levi",
+        "desc": "L'ammiraglia di Lapland Hotels sulla cima del monte Levi. Vetrate panoramiche, accesso in cabinovia."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "Ylläsjärvi · al P. N. Pallas-Yllästunturi",
+        "desc": "Hotel per matrimoni prediletto su TripAdvisor a Ylläs. Spa, tre ristoranti, vasche idromassaggio."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "Kilpisjärvi",
+        "desc": "Il resort di igloo di vetro più settentrionale della Finlandia, a 480 m sul livello del mare: la vista sull'aurora migliore della Lapponia."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "Luosto, Sodankylä",
+        "desc": "Boutique hotel nel centro di Luosto: sauna privata in ogni camera, igloo di vetro, accanto al Parco Nazionale Pyhä-Luosto."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotel nel villaggio di case in legno di Luosto: Amethyst Spa, 500 m dalle piste, accanto al Parco Nazionale Pyhä-Luosto."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "Villaggio di Babbo Natale",
+        "desc": "L'unico hotel del Santa Claus Village progettato per i matrimoni. Pacchetti con renne e husky inclusi."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "Villaggio di Babbo Natale",
+        "desc": "Boutique hotel compatto e moderno nel Santa Claus Village."
+      }
+    ]
+  },
+  "nl": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "Rovaniemi",
+        "desc": "De hoofdstad van Lapland, het makkelijkst te bereiken met internationale vluchten. Trouwlocaties van ijskapel tot glazen iglo's vlak bij Santa Claus Village."
+      },
+      {
+        "slug": "saariselka",
+        "name": "Saariselkä & Inari",
+        "desc": "Het hart van Noord-Lapland: gemiddeld om de nacht noorderlicht (FMI) en de Glass Teepee-kapel van Kakslauttanen."
+      },
+      {
+        "slug": "levi",
+        "name": "Levi & Kittilä",
+        "desc": "Finlands grootste fjellresort: Lainio Snow Village, de Snow Chapel van Northern Lights Ranch, directe vluchten vanuit Londen."
+      },
+      {
+        "slug": "yllas",
+        "name": "Ylläs",
+        "desc": "Rustiger dan Levi: de schoonste lucht van Lapland, het bruiloftsvriendelijke spahotel Saaga, Lainio Snow Village binnen handbereik."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "Pyhä-Luosto",
+        "desc": "De rustigere kant van Oost-Lapland: twee hotels in het blokhutdorp Luosto aan de rand van Nationaal Park Pyhä-Luosto."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "Kilpisjärvi",
+        "desc": "Het noordelijkste en hoogste punt van Finland: de glazen iglo's van Tundrea en de huwelijksceremonie op het drielandenpunt."
+      },
+      {
+        "slug": "oulu",
+        "name": "Oulu",
+        "desc": "De grotestadsoptie op weg naar Lapland, de op vier na grootste stad van Finland aan de kust van de Bottenwijk. Stadse bruiloftsavonden met restaurants en nachtleven, directe vluchten vanuit Helsinki in ongeveer een uur."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "Kemijärvi",
+        "desc": "De noordelijkste stad van Finland, in Oost-Lapland: een centrum omsloten door het meer, 7.029 inwoners en een directe trein vanuit Helsinki. Vijf fjellen op rijafstand."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "Noorderlichtbruiloft",
+        "desc": "Jullie ja-woord onder het noorderlicht: in Noord-Lapland is het noorderlicht gemiddeld om de nacht te zien (FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "Sneeuwkapelbruiloft",
+        "desc": "Trouwen in een kapel uitgehouwen uit puur sneeuw en ijs: Lainio, Northern Lights Ranch, Arctic SnowHotel en Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "Glasiglobruiloft",
+        "desc": "Huwelijksnacht onder het noorderlicht in een verwarmde glazen koepel: Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "Middernachtzonbruiloft",
+        "desc": "Trouwen wanneer de zon niet ondergaat: 23 mei tot 24 juli, warm weer, geen sneeuwkleding nodig."
+      },
+      {
+        "slug": "elopement",
+        "name": "Elopement / Bruiloft met z’n tweeën",
+        "desc": "Alleen jullie twee, de huwelijksvoltrekker en een fotograaf. Kant-en-klare pakketten vanaf € 1 600."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "Hernieuwing van de geloften",
+        "desc": "Vernieuw jullie geloften in de sneeuw van Lapland: geen papierwerk, volledig op maat gemaakte ceremonie."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "Saariselkä",
+        "desc": "Het beroemdste resort met glazen iglo's van Finland. Glass Teepee-kapel, ijskapel, blokhutkapel en Celebration House voor 250 gasten."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "Lehtojärvi · 35 km van Rovaniemi",
+        "desc": "Snow Hotel met ijskapel voor 30 gasten, ijsrestaurant en glazen iglo's met 360°-zicht op het noorderlicht."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "Lainio, Kittilä · tussen Ylläs en Levi",
+        "desc": "Wereldberoemd Snow Village dat elke winter opnieuw wordt gebouwd met een nieuw kunstthema. IJskapel, houten kapel, snowsuites."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "Köngäs · 15 min van Levi",
+        "desc": "Premium luxeresort met hutten met glazen wanden en een Snow Chapel voor 60 gasten."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "Levi · 7 km van het centrum",
+        "desc": "Levi's eigen ijskasteel met kapel, bar en ijssuites. Wanden en zitplaatsen van kristalhelder ijs."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "Levi · op de top van de fell",
+        "desc": "Glazen iglo's op de top van de Levi-fjell: de beste kijkhoek op het noorderlicht in Lapland, Suite-iglo's voor stellen."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "Apukka · 15 min van het Kerstmandorp",
+        "desc": "Resort aan het Apukkameer met Aurora Cabins, een Kammi-iglo van twee verdiepingen en de restaurants Aitta en Kota."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · 2 km van de luchthaven",
+        "desc": "Moderne boomhutten met glazen wanden: de beste logistiek van Lapland, 2 km van de luchthaven van Rovaniemi."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "Muotka · aan de rand van Nationaal Park UKK",
+        "desc": "Geen lichtvervuiling: een van de beste noorderlichtplekken van Lapland. Aurora Cabins en de Kammi-hut."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "Aan de oever van het Inarimeer",
+        "desc": "Aan het Inarimeer, in het hart van de Samische cultuur. Aurora-hutten met direct zicht op de horizon van het meer."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "Inari · in het centrum",
+        "desc": "De nieuwste locatie van Wilderness Hotels (2022). Restaurant Aanaar in het centrum van Inari, op loopafstand van het meer."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "Centrum van Saariselkä",
+        "desc": "80 Aurora Cabins en 20 Polar Sky Suites met glazen daken in het centrum van Saariselkä."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "Sirkka, Levi",
+        "desc": "NLV-stijl vlak bij de voorzieningen van Levi: Aurora Cabins, 5 min naar het centrum van Levi."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "Centrum van Levi",
+        "desc": "Het centrale hotel- en restaurantcomplex van Levi met een feestzaal voor 200 gasten en 4 restaurants."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "Op de top van de fell van Levi",
+        "desc": "Het vlaggenschip van Lapland Hotels op de top van de Levi-fjell. Panoramaramen, bereikbaar met de gondelbaan."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "Ylläsjärvi · bij NP Pallas-Yllästunturi",
+        "desc": "Op TripAdvisor geliefd bruiloftshotel in Ylläs. Spa, drie restaurants, hottubs."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "Kilpisjärvi",
+        "desc": "Het noordelijkste resort met glazen iglo's van Finland, 480 m boven zeeniveau: het beste noorderlichtzicht van Lapland."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "Luosto, Sodankylä",
+        "desc": "Boetiekhotel in het centrum van Luosto: een eigen sauna in elke kamer, glazen iglo's, naast Nationaal Park Pyhä-Luosto."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotel in het blokhutdorp Luosto: Amethyst Spa, 500 m naar de pistes, naast Nationaal Park Pyhä-Luosto."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "Kerstmandorp",
+        "desc": "Het enige hotel in Santa Claus Village dat voor bruiloften is ontworpen. Rendier- en huskypakketten inbegrepen."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "Kerstmandorp",
+        "desc": "Compact, modern boetiekhotel in Santa Claus Village."
+      }
+    ]
+  },
+  "sv": {
+    "locations": [
+      {
+        "slug": "rovaniemi",
+        "name": "Rovaniemi",
+        "desc": "Lapplands huvudstad, enklast att nå med internationella flyg. Bröllopsplatser från iskapell till glasiglor nära Santa Claus Village."
+      },
+      {
+        "slug": "saariselka",
+        "name": "Saariselkä & Inari",
+        "desc": "Norra Lapplands hjärta: norrsken i genomsnitt varannan natt (FMI) och Kakslauttanens Glass Teepee-kapell."
+      },
+      {
+        "slug": "levi",
+        "name": "Levi & Kittilä",
+        "desc": "Finlands största fjällort: Lainio Snow Village, Northern Lights Ranch Snow Chapel, direktflyg från London."
+      },
+      {
+        "slug": "yllas",
+        "name": "Ylläs",
+        "desc": "Lugnare än Levi: Lapplands renaste luft, Saagas bröllopsvänliga spahotell, kort väg till Lainio Snow Village."
+      },
+      {
+        "slug": "pyha-luosto",
+        "name": "Pyhä-Luosto",
+        "desc": "Östra Lapplands lugnare sida: två hotell i Luostos timmerby vid kanten av Pyhä-Luosto nationalpark."
+      },
+      {
+        "slug": "kilpisjarvi",
+        "name": "Kilpisjärvi",
+        "desc": "Finlands nordligaste och högsta punkt: Tundreas glasiglor och vigsel vid treriksröset."
+      },
+      {
+        "slug": "oulu",
+        "name": "Oulu",
+        "desc": "Storstadsalternativet på vägen till Lappland, Finlands femte största stad vid Bottenvikens kust. Urban bröllopskväll med restauranger och nattliv, direktflyg från Helsingfors på cirka en timme."
+      },
+      {
+        "slug": "kemijarvi",
+        "name": "Kemijärvi",
+        "desc": "Finlands nordligaste stad, i östra Lappland: ett centrum omslutet av sjön, 7 029 invånare och direkttåg från Helsingfors. Fem fjäll inom bilavstånd."
+      }
+    ],
+    "types": [
+      {
+        "slug": "northern-lights",
+        "name": "Norrskensbröllop",
+        "desc": "Vigsel under norrskenet: i norra Lappland syns norrsken i genomsnitt varannan natt (FMI)."
+      },
+      {
+        "slug": "snow-chapel",
+        "name": "Snökapellsbröllop",
+        "desc": "Gift er i ett kapell format av ren snö och is: Lainio, Northern Lights Ranch, Arctic SnowHotel och Levi Ice Castle."
+      },
+      {
+        "slug": "glass-igloo",
+        "name": "Glasigloobröllop",
+        "desc": "Bröllopsnatt under norrskenet i en uppvärmd glaskupol: Kakslauttanen, Levin Iglut, Apukka."
+      },
+      {
+        "slug": "midnight-sun",
+        "name": "Midnattssolsbröllop",
+        "desc": "Gift er när solen aldrig går ner: 23 maj–24 juli, varmt väder, inga snökläder behövs."
+      },
+      {
+        "slug": "elopement",
+        "name": "Rymningsbröllop / bröllop för två",
+        "desc": "Bara ni två, vigselförrättaren och en fotograf. Nyckelfärdiga paket från 1 600 €."
+      },
+      {
+        "slug": "vow-renewal",
+        "name": "Förnyade löften",
+        "desc": "Förnya era löften i Lapplands snö: inga papper, en helt skräddarsydd ceremoni."
+      }
+    ],
+    "venues": [
+      {
+        "slug": "kakslauttanen",
+        "region": "Saariselkä",
+        "desc": "Finlands mest kända glasigloresort. Glass Teepee-kapell, iskapell, timmerkapell och Celebration House för 250 gäster."
+      },
+      {
+        "slug": "arctic-snowhotel",
+        "region": "Lehtojärvi · 35 km från Rovaniemi",
+        "desc": "Snow Hotel med iskapell för 30 gäster, isrestaurang och glasiglor med 360° norrskensvy."
+      },
+      {
+        "slug": "snow-village-lainio",
+        "region": "Lainio, Kittilä · mellan Ylläs och Levi",
+        "desc": "Världsberömda Snow Village byggs om varje vinter med ett nytt konstnärligt tema. Iskapell, träkapell, snösviter."
+      },
+      {
+        "slug": "northern-lights-ranch",
+        "region": "Köngäs · 15 min från Levi",
+        "desc": "Premiumresort i lyxklass med stugor med glasväggar och ett Snow Chapel för 60 gäster."
+      },
+      {
+        "slug": "levi-ice-castle",
+        "region": "Levi · 7 km från centrum",
+        "desc": "Levis eget isslott med kapell, bar och issviter. Väggar och sittplatser av kristallklar is."
+      },
+      {
+        "slug": "levin-iglut",
+        "region": "Levi · uppe på fjället",
+        "desc": "Glasiglor på toppen av Levifjället: Lapplands bästa vinkel för norrsken, Suite-iglor för par."
+      },
+      {
+        "slug": "apukka-resort",
+        "region": "Apukka · 15 min från Julgubbens by",
+        "desc": "Resort vid sjön Apukka med Aurora Cabins, Kammi-iglo i två våningar samt restaurangerna Aitta och Kota."
+      },
+      {
+        "slug": "arctic-treehouse",
+        "region": "SantaPark · 2 km från flygplatsen",
+        "desc": "Moderna trädtoppsstugor med glasväggar: bästa logistiken i Lappland, 2 km från Rovaniemi flygplats."
+      },
+      {
+        "slug": "wilderness-hotel-muotka",
+        "region": "Muotka · vid kanten av UKK-nationalparken",
+        "desc": "Noll ljusföroreningar: en av Lapplands bästa norrskensplatser. Aurora Cabins och Kammi-stuga."
+      },
+      {
+        "slug": "wilderness-hotel-inari",
+        "region": "Vid Enaresjöns strand",
+        "desc": "Vid Enaresjöns strand, mitt i den samiska kulturen. Aurora-stugor med fri sikt mot sjöhorisonten."
+      },
+      {
+        "slug": "wilderness-hotel-juutua",
+        "region": "Inari · i centrum",
+        "desc": "Wilderness Hotels nyaste anläggning (2022). Restaurang Aanaar i centrala Inari, gångavstånd till sjön."
+      },
+      {
+        "slug": "northern-lights-village-saariselka",
+        "region": "Centrala Saariselkä",
+        "desc": "80 Aurora Cabins och 20 Polar Sky Suites med glastak i centrala Saariselkä."
+      },
+      {
+        "slug": "northern-lights-village-levi",
+        "region": "Sirkka, Levi",
+        "desc": "NLV-stil nära Levis service: Aurora Cabins, 5 min till Levis centrum."
+      },
+      {
+        "slug": "hotelli-hullu-poro",
+        "region": "Centrala Levi",
+        "desc": "Levis centrala hotell- och restaurangkomplex med festsal för 200 gäster och 4 restauranger."
+      },
+      {
+        "slug": "levi-panorama",
+        "region": "Uppe på Levifjällets topp",
+        "desc": "Lapland Hotels flaggskepp på Levifjällets topp. Panoramafönster, gondolförbindelse."
+      },
+      {
+        "slug": "lapland-hotels-saaga",
+        "region": "Ylläsjärvi · vid Pallas-Yllästunturi nationalpark",
+        "desc": "TripAdvisor-favorit bland bröllopshotell i Ylläs. Spa, tre restauranger, bubbelbad."
+      },
+      {
+        "slug": "tundrea-kilpisjarvi",
+        "region": "Kilpisjärvi",
+        "desc": "Finlands nordligaste glasigloresort, 480 m över havet: Lapplands bästa norrskensvy."
+      },
+      {
+        "slug": "santas-hotel-aurora",
+        "region": "Luosto, Sodankylä",
+        "desc": "Boutiquehotell i Luostos centrum: egen bastu i varje rum, glasiglor, intill Pyhä-Luosto nationalpark."
+      },
+      {
+        "slug": "lapland-hotels-luostotunturi",
+        "region": "Luosto, Sodankylä",
+        "desc": "Hotell i Luostos timmerby: Amethyst Spa, 500 m till backarna, intill Pyhä-Luosto nationalpark."
+      },
+      {
+        "slug": "santas-hotel-santamus",
+        "region": "Julgubbens by",
+        "desc": "Det enda hotellet i Santa Claus Village som är utformat för bröllop. Ren- och huskypaket ingår."
+      },
+      {
+        "slug": "nova-skyland",
+        "region": "Julgubbens by",
+        "desc": "Kompakt, modernt boutiquehotell i Santa Claus Village."
+      }
+    ]
+  }
+}

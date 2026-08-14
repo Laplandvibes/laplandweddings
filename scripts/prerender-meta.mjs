@@ -30,7 +30,53 @@ if (!existsSync(resolve(DIST, 'index.html'))) {
   process.exit(1);
 }
 
-const SHELL = readFileSync(resolve(DIST, 'index.html'), 'utf-8');
+let CB = null;
+try {
+  CB = await import('../../_prerender_crawlable_body.mjs');
+} catch {
+  console.warn('[prerender] NOTE: _prerender_crawlable_body.mjs ei loydy — crawlable body pois kaytosta');
+}
+
+// __dirname-pohjainen juuri, EI process.cwd(): moduuli osuu weddingsilla vasta
+// kolmanteen kandidaattiin (<siteroot>/../shared/Footer.tsx), joten vaarasta
+// hakemistosta ajettu build sammuttaisi ominaisuuden aanettomasti.
+const SITE_ROOT = resolve(__dirname, '..');
+const NETWORK = CB ? CB.readFooterNetwork(SITE_ROOT) : null;
+if (CB && !NETWORK) {
+  console.warn('[prerender] WARN: shared/Footer.tsx linkkeja/labeleita ei voitu lukea — body-injektio ohitetaan');
+}
+
+const RAW_SHELL = readFileSync(resolve(DIST, 'index.html'), 'utf-8');
+// Riisunta on PAKOLLINEN: tama skripti lukee kuorensa samasta dist/index.html:sta
+// jonka se itse ylikirjoittaa EN-etusivulla (pathToFile('/')). Ilman tata
+// toinen ajo antaisi jokaiselle 552 reitille ETUSIVUN h1:n, kuvauksen ja navin.
+const SHELL = CB ? CB.stripCrawlableBody(RAW_SHELL) : RAW_SHELL;
+
+// Kaannokset locations/types/venues-riveille kielille joita EI ole taulukoissa
+// inline (nailla on vain en ja fi). Muoto:
+//   { <lang>: { locations: [{slug,name,desc}], types: [...],
+//               venues: [{slug,region,desc}] } }
+// Puuttuva tiedosto EI kaada buildia — silloin kaikki muut kielet putoavat
+// englantiin kuten ennenkin.
+let ROUTE_I18N = {};
+try {
+  ROUTE_I18N = JSON.parse(readFileSync(resolve(__dirname, 'route-i18n.json'), 'utf-8'));
+} catch (e) {
+  ROUTE_I18N = {};
+  console.warn(`[prerender] WARN: route-i18n.json ei latautunut (${e.message}) — locations/types/venues jaavat englanniksi kaikilla ei-fi-kielilla`);
+}
+
+// Kaannos jos on, muuten fi jos lokaali on fi, muuten en.
+// `entry` on taulukon oma rivi, jolla on aina .en ja .fi.
+// HUOM: venueilla kentta on `region`, ei `name`.
+function i18n(group, slug, lang, field, entry) {
+  const row = ROUTE_I18N[lang]?.[group]?.find((r) => r.slug === slug);
+  if (row && row[field]) return row[field];
+  return (lang === 'fi') ? entry.fi[field] : entry.en[field];
+}
+
+// Taytetaan esikierroksella ennen ensimmaista kirjoitusta.
+const INTERNAL_BY_LANG = {};
 
 // Locale config: lang code, url prefix, og locale, hreflang.
 const LOCALES = [
@@ -359,7 +405,19 @@ const venues = [
   { slug: 'nova-skyland', name: 'Nova Skyland Hotel', en: { region: 'Santa Claus Village', desc: 'Compact, modern boutique hotel in Santa Claus Village.' }, fi: { region: 'Joulupukin pajakylä', desc: 'Kompakti, moderni boutique-hotelli Joulupukin pajakylässä.' }, img: '/images/venues/nova-skyland.jpg' },
 ];
 
-// Per-locale "X — Weddings | LaplandWeddings" title pattern for locations
+// Per-locale "X: Weddings | LaplandWeddings" title pattern for locations.
+//
+// 🔴 The suffix carries its OWN leading separator and is concatenated with no
+// space (`${name}${suffix}`). It used to be joined with a space, which produced
+// "Rovaniemi : Hochzeit | LaplandWeddings" — a spaced colon in the <title>, i.e.
+// in the line Google prints in the result. Live 2026-08-14 on every locations
+// and wedding-types route × 12 languages.
+//
+// Three different typographic rules live in this one table — do NOT normalise it:
+//   • fr  — French puts a space BEFORE a colon. " : Mariages" is correct and must stay.
+//   • ja / zh-CN — full-width "：" already contains its own spacing, so a preceding
+//     space is wrong. These use the full-width character and no space.
+//   • everything else — plain ": " with no space before.
 const LOC_TITLE_SUFFIX = {
   en: ': Weddings | LaplandWeddings',
   fi: ': Häät | LaplandWeddings',
@@ -369,13 +427,14 @@ const LOC_TITLE_SUFFIX = {
   'pt-BR': ': Casamentos | LaplandWeddings',
   'zh-CN': '：婚礼 | LaplandWeddings',
   ko: ': 결혼식 | LaplandWeddings',
-  fr: ': Mariages | LaplandWeddings',
+  fr: ' : Mariages | LaplandWeddings',
   it: ': Matrimoni | LaplandWeddings',
   nl: ': Bruiloften | LaplandWeddings',
   sv: ': Bröllop | LaplandWeddings',
 };
 
-// Per-locale "X — Lapland Weddings | LaplandWeddings" pattern for types
+// Per-locale "X: Lapland Weddings | LaplandWeddings" pattern for types.
+// Same separator contract as LOC_TITLE_SUFFIX above — read that comment first.
 const TYPE_TITLE_SUFFIX = {
   en: ': Lapland Weddings | LaplandWeddings',
   fi: ': Häät Lapissa | LaplandWeddings',
@@ -385,7 +444,7 @@ const TYPE_TITLE_SUFFIX = {
   'pt-BR': ': Casamentos na Lapônia | LaplandWeddings',
   'zh-CN': '：拉普兰婚礼 | LaplandWeddings',
   ko: ': 라플란드 결혼식 | LaplandWeddings',
-  fr: ': Mariages en Laponie | LaplandWeddings',
+  fr: ' : Mariages en Laponie | LaplandWeddings',
   it: ': Matrimoni in Lapponia | LaplandWeddings',
   nl: ': Bruiloften in Lapland | LaplandWeddings',
   sv: ': Bröllop i Lappland | LaplandWeddings',
@@ -446,6 +505,25 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr }) 
   ].map((l) => '    ' + l).join('\n');
 
   out = out.replace(/<\/head>/, `${extra}\n  </head>`);
+
+  // Pre-hydration crawlable body. Koskee VAIN tyhjaa #rootia; React (createRoot,
+  // ei hydrateRoot — src/main.tsx:7) korvaa lapset ensirenderissa, joten
+  // hydraatiokonfliktia ei voi syntya.
+  if (NETWORK) {
+    out = CB.injectCrawlableBody(
+      out,
+      CB.buildCrawlableBody(NETWORK, {
+        title,
+        description,
+        lang,
+        siteOrigin: SITE,
+        siteName: 'LaplandWeddings',
+        internalLinks: INTERNAL_BY_LANG[lang],
+        selfUrl: currentUrl,
+      })
+    );
+  }
+
   return out;
 }
 
@@ -477,55 +555,136 @@ function writeAll(canonical, byLang, image) {
   }
 }
 
+const ROUTES = [];
+
 // Top-level: pass per-lang meta map directly
 for (const [path, meta] of Object.entries(top)) {
   const byLang = {};
   for (const L of LOCALES) {
     byLang[L.lang] = meta[L.lang] || meta.en;
   }
-  writeAll(path, byLang, meta.image);
+  ROUTES.push({ canonical: path, byLang, image: meta.image });
+}
+
+/**
+ * Join a route name to its section suffix.
+ *
+ * The suffix carries its own leading separator (": Weddings | LaplandWeddings",
+ * fr " : Mariages …", ja/zh full-width "：…"), so the default is a bare
+ * concatenation.
+ *
+ * 🔴 Exception: some names already contain a colon of their own. `elopement` is
+ * written as a name+subtitle pair in 7 locales — fi "Elopement Lapissa:
+ * kahdestaan vihille", de "Elopement in Lappland: zu zweit zur Trauung", fr
+ * "Elopement en Laponie : se marier à deux". Appending the section suffix to
+ * those produced a THREE-part search-result line with two colons:
+ *   "Elopement en Laponie : se marier à deux : Mariages en Laponie | LaplandWeddings"
+ * A name that already carries its own subtitle does not need the section word —
+ * it is more specific than the section. So drop the suffix and keep only the
+ * brand. Detects the full-width "：" too, or ja/zh would keep the double.
+ */
+function joinTitle(name, suffix) {
+  if (/[:：]/.test(name)) return `${name} | LaplandWeddings`;
+  return `${name}${suffix}`;
 }
 
 // Locations: generate per-locale title from suffix table, desc falls back to EN
 for (const l of locations) {
   const byLang = {};
   for (const L of LOCALES) {
-    const nameSrc = (L.lang === 'fi') ? l.fi.name : l.en.name;
-    const descSrc = (L.lang === 'fi') ? l.fi.desc : l.en.desc;
+    const nameSrc = i18n('locations', l.slug, L.lang, 'name', l);
+    const descSrc = i18n('locations', l.slug, L.lang, 'desc', l);
     byLang[L.lang] = {
-      title: `${nameSrc} ${LOC_TITLE_SUFFIX[L.lang]}`,
+      title: joinTitle(nameSrc, LOC_TITLE_SUFFIX[L.lang]),
       description: descSrc,
     };
   }
-  writeAll(`/locations/${l.slug}`, byLang, l.img);
+  ROUTES.push({ canonical: `/locations/${l.slug}`, byLang, image: l.img });
 }
 
 // Wedding types
 for (const t of types) {
   const byLang = {};
   for (const L of LOCALES) {
-    const nameSrc = (L.lang === 'fi') ? t.fi.name : t.en.name;
-    const descSrc = (L.lang === 'fi') ? t.fi.desc : t.en.desc;
+    const nameSrc = i18n('types', t.slug, L.lang, 'name', t);
+    const descSrc = i18n('types', t.slug, L.lang, 'desc', t);
     byLang[L.lang] = {
-      title: `${nameSrc} ${TYPE_TITLE_SUFFIX[L.lang]}`,
+      title: joinTitle(nameSrc, TYPE_TITLE_SUFFIX[L.lang]),
       description: descSrc,
     };
   }
-  writeAll(`/wedding-types/${t.slug}`, byLang, t.img);
+  ROUTES.push({ canonical: `/wedding-types/${t.slug}`, byLang, image: t.img });
 }
 
 // Venues
 for (const v of venues) {
   const byLang = {};
   for (const L of LOCALES) {
-    const region = (L.lang === 'fi') ? v.fi.region : v.en.region;
-    const desc = (L.lang === 'fi') ? v.fi.desc : v.en.desc;
+    const region = i18n('venues', v.slug, L.lang, 'region', v);
+    const desc = i18n('venues', v.slug, L.lang, 'desc', v);
     byLang[L.lang] = {
       title: `${v.name}: ${region} | LaplandWeddings`,
       description: desc,
     };
   }
-  writeAll(`/venues/${v.slug}`, byLang, v.img);
+  ROUTES.push({ canonical: `/venues/${v.slug}`, byLang, image: v.img });
 }
 
+// Esikierros: sivuston OMAT sivut per lokaali. Jokainen sivu linkittaa kaikkiin
+// sisariinsa, joten koko lista on oltava valmis ennen ensimmaista kirjoitusta.
+// Ilman naita raakahtml:ssa on 0 SISAISTA linkkia ja jokainen sivu on orpo
+// ei-JS-crawlerille, vaikka ulospain menevia olisi 27 (mitattu 8 sivustolla
+// 2026-08-13: no-outgoing-links 100 → 0 mutta orphan-page jai 99/100).
+if (NETWORK) {
+  for (const r of ROUTES) {
+    for (const L of LOCALES) {
+      const meta = r.byLang[L.lang] || r.byLang.en;
+      // Brandihanta pois: sama merkkijono 46 kertaa yhdessa listassa on kohinaa.
+      const text = String(meta.title || '').split(/\s[|—]\s/)[0].trim();
+      if (!text) continue;
+      (INTERNAL_BY_LANG[L.lang] = INTERNAL_BY_LANG[L.lang] || []).push({
+        url: urlFor(L.prefix, r.canonical),
+        text,
+      });
+    }
+  }
+  console.log(
+    '[prerender] crawlable internal links per locale — ' +
+      Object.entries(INTERNAL_BY_LANG).map(([l, a]) => `${l}:${a.length}`).join(' ')
+  );
+}
+
+for (const r of ROUTES) writeAll(r.canonical, r.byLang, r.image);
+
 console.log(`Prerendered ${count} routes across ${LOCALES.length} locales (${count / LOCALES.length} routes × ${LOCALES.length} languages)`);
+
+// ── SMOKE GATE ───────────────────────────────────────────────────────────────
+// The crawlable-body feature is deliberately fail-open: a missing
+// `_prerender_crawlable_body.mjs` or an unparseable shared Footer only produces
+// a console.warn, because a standalone checkout must still be able to build.
+//
+// 🔴 That means it can also switch itself off in production without anything
+// going red — build-all.sh reads exit 0 as success and the warning scrolls past.
+// The network has been bitten by exactly this shape before (wrangler pin,
+// 2026-08-11: every build green, the failure visible only in the deploy log).
+//
+// So assert the finished artefact, not the intent: read back what was actually
+// written and fail the build if the block is gone. Checks the LAST file written
+// rather than a fixed path, so it cannot pass on a stale dist.
+if (NETWORK) {
+  const probe = pathToFile('/');
+  const html = readFileSync(probe, 'utf-8');
+  const problems = [];
+  if (!html.includes('id="lv-prerender"')) problems.push('crawlable body block missing');
+  if (!/<div id="root"><div/.test(html)) problems.push('block is not inside #root');
+  const networkLinks = (html.match(/<a\s+href="https:\/\/(?!laplandweddings\.)/g) || []).length;
+  if (networkLinks < 27) problems.push(`only ${networkLinks} outbound network links, expected >= 27`);
+
+  if (problems.length) {
+    console.error(`\n[prerender] SMOKE GATE FAILED on ${probe}:`);
+    for (const p of problems) console.error(`  - ${p}`);
+    console.error('Refusing to exit 0 — a green build here would ship pages with no crawlable content.\n');
+    process.exit(1);
+  }
+  console.log(`[prerender] smoke gate OK — block present, inside #root, ${networkLinks} network links`);
+}

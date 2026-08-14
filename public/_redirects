@@ -1,3 +1,24 @@
+# 🔴🔴 MITATTU 2026-08-13: TÄMÄ SÄÄNTÖMUOTO EI TOIMI CLOUDFLARE PAGESISSA.
+#
+# Cloudflare Pagesin _redirects täsmää VAIN POLKUUN. Host-osaa ei katsota, joten
+# rivi "https://www.esimerkki.fi/* ..." ei osu koskaan mihinkään — se ei ohjaa
+# eikä anna virhettä. Se vain ei tee mitään.
+#
+# Todiste, samasta tiedostosta samalla deployllä (laplandvibes.com):
+#   /bear-kuusamo -> /blog/bear-kuusamo/   POLKU  => 301 ✅
+#   https://www.laplandvibes.com/* -> apex HOST   => 200 ❌
+# Hubilla tämä sääntö on ollut paikallaan 2026-05-22 alkaen eikä ole koskaan
+# ohjannut mitään. Älä kopioi tätä kuviota — se näyttää oikealta.
+#
+# OIKEA KORJAUS on Cloudflare-tason **Redirect Rule** (Rules -> Redirect Rules)
+# per zone, ei _redirects-tiedosto. Ks. muisti seo_gsc_prerender_ctr_fix_20260711.
+# www → apex 301. MITATTU 2026-08-13 (GSC URL Inspection):
+# www.laplandweddings.online ei palauta canonicalia lainkaan (ei userCanonicalia
+# eikä googleCanonicalia) ja on tilassa "Crawled - currently not indexed". Ilman
+# ohjausta se on oma irrallinen hostinsa. Sääntö on tiedoston ALUSSA, koska CF
+# Pages käsittelee rivit järjestyksessä ja tiedoston lopun /* nielaisisi tämän.
+#
+
 # Venue slug corrections, 2026-07-26.
 # "Hotel Aurora Pyha" and "Lapland Hotels Pyha" never existed: the two registry
 # entries shared one (404) laplandhotels.com URL and turned out to be two
