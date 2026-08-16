@@ -12,6 +12,7 @@
 
 import type { HomeAdSlotsConfig } from '../../../shared/HomeAdSlots';
 import type { Partner } from '../../../shared/PartnerSlot';
+import type { AdLocale } from '../../../shared/adSlotsCopy';
 import { DEFAULT_PREMIUM_SPOTS } from '../../../shared/PremiumSpotGrid';
 
 export const AD_SLOTS: HomeAdSlotsConfig = {
@@ -38,8 +39,11 @@ export const AD_SLOTS: HomeAdSlotsConfig = {
  *    nostoa jollekin venuelle — ilmainen iso pinta on juuri se mikä korjattiin.
  *  - Maksettu paikka on merkittävä mainokseksi (KKV) — merkintä tehdään
  *    `FeaturedPartnerSlot`issa, ei täällä.
- *  - Paikat näkyvät vain fi/en/sv (`adLocaleEnabled`). Muilla 9 kielellä paikka
- *    jää pois kokonaan ja toimituksellinen venue-kortisto renderöityy
+ *  - MYYTY paikka näkyy KAIKILLA 12 kielellä (Vesa 2026-07-30: kumppani maksoi
+ *    näkyvyydestä — täydet käännökset, ei `adLocaleEnabled`-porttia). Vain
+ *    TYHJÄN paikan house-ad on fi/en/sv-portin takana (Vesa 2026-07-13:
+ *    mainostilan ostajat asioivat näillä kielillä). Muilla 9 kielellä tyhjä
+ *    paikka jää pois kokonaan ja toimituksellinen venue-kortisto renderöityy
  *    ennallaan — pintaan ei jää aukkoa.
  *  - Myydyn kumppanin linkki EI ole affiliate-muotoinen: maksettu esittely
  *    noudattaa bear-precedenttia ("maksettu esittely, ei komissiolinkki").
@@ -58,15 +62,43 @@ export type FeaturedPlacement =
 
 /**
  * Paikan konteksti mainosmerkinnässä ("Esittelykumppani · Hääpaikat").
- * Vain fi/en/sv, koska paikka itse on `adLocaleEnabled`-rajattu — nämä eivät
- * kuulu 12-kielisiin copy-tiedostoihin eivätkä vuoda muille kielille.
+ * 12 kielellä (avain = normalizeAdLocale-koodi), koska MYYTY kortti renderöityy
+ * kaikilla kielillä — merkintäketju ei saa pudota englantiin keskellä muuten
+ * käännettyä sivua. House-ad käyttää näistä vain fi/en/sv-rivejä (portti).
  */
-export const FEATURED_CONTEXT: Record<FeaturedPlacement, { fi: string; en: string; sv: string }> = {
-  home_featured: { fi: 'Suositellut hääpaikat', en: 'Featured venues', sv: 'Utvalda bröllopsplatser' },
-  venues_index: { fi: 'Hääpaikat', en: 'Wedding venues', sv: 'Bröllopsplatser' },
-  venue_related: { fi: 'Saman alueen hääpaikat', en: 'Venues in the same region', sv: 'Platser i samma region' },
-  location_venues: { fi: 'Alueen hääpaikat', en: 'Venues in this region', sv: 'Regionens bröllopsplatser' },
-  wedding_type_venues: { fi: 'Sopivat hääpaikat', en: 'Suitable venues', sv: 'Passande platser' },
+export const FEATURED_CONTEXT: Record<FeaturedPlacement, Record<AdLocale, string>> = {
+  home_featured: {
+    fi: 'Suositellut hääpaikat', en: 'Featured venues', sv: 'Utvalda bröllopsplatser',
+    de: 'Ausgewählte Hochzeitslocations', fr: 'Lieux de mariage sélectionnés',
+    it: 'Location selezionate', es: 'Lugares de boda destacados',
+    pt: 'Locais de casamento em destaque', nl: 'Uitgelichte trouwlocaties',
+    ja: 'おすすめのウェディング会場', ko: '추천 웨딩 장소', zh: '精选婚礼场地',
+  },
+  venues_index: {
+    fi: 'Hääpaikat', en: 'Wedding venues', sv: 'Bröllopsplatser',
+    de: 'Hochzeitslocations', fr: 'Lieux de mariage', it: 'Location per matrimoni',
+    es: 'Lugares de boda', pt: 'Locais de casamento', nl: 'Trouwlocaties',
+    ja: 'ウェディング会場', ko: '웨딩 장소', zh: '婚礼场地',
+  },
+  venue_related: {
+    fi: 'Saman alueen hääpaikat', en: 'Venues in the same region', sv: 'Platser i samma region',
+    de: 'Locations in derselben Region', fr: 'Lieux de la même région',
+    it: 'Location nella stessa regione', es: 'Lugares de la misma región',
+    pt: 'Locais na mesma região', nl: 'Locaties in dezelfde regio',
+    ja: '同じ地域の会場', ko: '같은 지역의 장소', zh: '同一地区的场地',
+  },
+  location_venues: {
+    fi: 'Alueen hääpaikat', en: 'Venues in this region', sv: 'Regionens bröllopsplatser',
+    de: 'Locations der Region', fr: 'Lieux de la région', it: 'Location della regione',
+    es: 'Lugares de la región', pt: 'Locais da região', nl: 'Locaties in de regio',
+    ja: 'この地域の会場', ko: '이 지역의 장소', zh: '该地区的场地',
+  },
+  wedding_type_venues: {
+    fi: 'Sopivat hääpaikat', en: 'Suitable venues', sv: 'Passande platser',
+    de: 'Passende Locations', fr: 'Lieux adaptés', it: 'Location adatte',
+    es: 'Lugares adecuados', pt: 'Locais adequados', nl: 'Passende locaties',
+    ja: 'ぴったりの会場', ko: '어울리는 장소', zh: '合适的场地',
+  },
 };
 
 /** Myydyt Esittelykumppani-paikat. null = house-ad (paikka vapaana). */

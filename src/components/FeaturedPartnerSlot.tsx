@@ -21,13 +21,17 @@
  * (bg #F9FAFB, dashed-pinkki reunus, pinkki pilleri-CTA; hehku inline-tyylinä
  * koska arbitrary `shadow-[…]` ei emitoidu kaikissa repoissa).
  *
- * Lokaalirajaus: `adLocaleEnabled` (fi/en/sv) on PAKOLLINEN — ilman sitä
- * fi/en/sv-copy vuotaisi 9 muulle kielelle. Muilla kielillä komponentti ei
- * renderöi mitään, eikä pintaan jää aukkoa: toimituksellinen venue-kortisto on
- * erillään tästä ja renderöityy kaikilla 12 kielellä ennallaan.
+ * Lokaalirajaus (Vesa 2026-07-30, kaksijakoinen sääntö): MYYTY kortti
+ * renderöityy KAIKILLA 12 kielellä — kumppani maksoi näkyvyydestä, joten
+ * `adLocaleEnabled`-porttia EI käytetä sen ympärillä ja merkintäcopy on
+ * käännetty 12 kielelle (MARKER + FEATURED_CONTEXT, fallback EN). Vain TYHJÄN
+ * paikan house-ad on fi/en/sv-portin takana (mainostilan ostajat asioivat
+ * näillä kielillä). Muilla kielillä tyhjä paikka ei renderöi mitään, eikä
+ * pintaan jää aukkoa: toimituksellinen venue-kortisto on erillään tästä ja
+ * renderöityy kaikilla 12 kielellä ennallaan.
  */
 import PartnerSlot from '../../../shared/PartnerSlot';
-import { adLocaleEnabled } from '../../../shared/adSlotsCopy';
+import { adLocaleEnabled, normalizeAdLocale, type AdLocale } from '../../../shared/adSlotsCopy';
 import { AD_SLOTS, FEATURED_CONTEXT, FEATURED_PARTNERS, type FeaturedPlacement } from '../data/adSlots';
 
 /**
@@ -37,20 +41,31 @@ import { AD_SLOTS, FEATURED_CONTEXT, FEATURED_PARTNERS, type FeaturedPlacement }
  */
 const HOUSE_AD_SURFACES = new Set<FeaturedPlacement>();
 
-/** fi/en/sv mainosmerkinnän copy. Ei 12-kielisissä tiedostoissa: paikka on gatettu. */
+/** Mainosmerkinnän copy 12 kielellä (avain = normalizeAdLocale-koodi) — myyty
+ *  kortti renderöityy kaikilla kielillä, joten merkintä ei saa pudota
+ *  englantiin. Mainossana on sama kuin verkoston AD_LABEL-vakiossa. */
+const MARKER: Record<AdLocale, { ad: string; featured: string }> = {
+  en: { ad: 'Advertisement', featured: 'Featured partner' },
+  fi: { ad: 'Mainos', featured: 'Esittelykumppani' },
+  sv: { ad: 'Annons', featured: 'Utvald partner' },
+  de: { ad: 'Anzeige', featured: 'Vorgestellter Partner' },
+  fr: { ad: 'Annonce', featured: 'Partenaire à la une' },
+  it: { ad: 'Annuncio', featured: 'Partner in evidenza' },
+  es: { ad: 'Anuncio', featured: 'Partner destacado' },
+  pt: { ad: 'Anúncio', featured: 'Parceiro em destaque' },
+  nl: { ad: 'Advertentie', featured: 'Uitgelichte partner' },
+  ja: { ad: '広告', featured: '注目パートナー' },
+  ko: { ad: '광고', featured: '추천 파트너' },
+  zh: { ad: '广告', featured: '精选合作伙伴' },
+};
+
 function markerCopy(locale: string) {
-  const l = (locale || 'en').toLowerCase();
-  if (l.startsWith('fi')) return { ad: 'Mainos', featured: 'Esittelykumppani' };
-  if (l.startsWith('sv')) return { ad: 'Annons', featured: 'Utvald partner' };
-  return { ad: 'Advertisement', featured: 'Featured partner' };
+  return MARKER[normalizeAdLocale(locale)] ?? MARKER.en;
 }
 
 function contextLabel(placement: FeaturedPlacement, locale: string): string {
-  const l = (locale || 'en').toLowerCase();
   const c = FEATURED_CONTEXT[placement];
-  if (l.startsWith('fi')) return c.fi;
-  if (l.startsWith('sv')) return c.sv;
-  return c.en;
+  return c[normalizeAdLocale(locale)] ?? c.en;
 }
 
 export default function FeaturedPartnerSlot({
@@ -62,8 +77,6 @@ export default function FeaturedPartnerSlot({
   locale: string;
   className?: string;
 }) {
-  if (!adLocaleEnabled(locale)) return null;
-
   const m = markerCopy(locale);
   const context = contextLabel(placement, locale);
   const partner = FEATURED_PARTNERS[placement];
@@ -113,6 +126,10 @@ export default function FeaturedPartnerSlot({
   // The house ad keeps exactly one home: the /partner-with-us page plus the
   // dedicated HomeAdSlots row, which is where someone shopping for ad space is
   // actually looking. Restoring a surface = add its placement to this set.
+  //
+  // fi/en/sv-portti koskee VAIN tätä house-ad-haaraa (Vesa 2026-07-13) — myyty
+  // kortti yllä renderöityy kaikilla 12 kielellä (Vesa 2026-07-30).
+  if (!adLocaleEnabled(locale)) return null;
   if (!HOUSE_AD_SURFACES.has(placement)) return null;
 
   return (
