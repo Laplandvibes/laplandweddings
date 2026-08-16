@@ -153,7 +153,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '라플란드 웨딩 관련 안내를 받는 데 동의합니다. 언제든 구독을 취소할 수 있습니다.',
     fr: 'J’accepte d’être contacté·e au sujet des mariages en Laponie. Je peux me désinscrire à tout moment.',
     it: 'Acconsento a essere contattato su temi legati ai matrimoni in Lapponia. Posso annullare l’iscrizione in qualsiasi momento.',
-    nl: 'Ik ga ermee akkoord benaderd te worden over onderwerpen rond trouwen in Lapland. Ik kan me altijd uitschrijven.', sv: 'I agree that I may be contacted about Lapland-wedding topics. I can unsubscribe anytime.',
+    nl: 'Ik ga ermee akkoord benaderd te worden over onderwerpen rond trouwen in Lapland. Ik kan me altijd uitschrijven.', sv: 'Jag godkänner att jag kontaktas om ämnen som rör bröllop i Lappland. Jag kan avsluta prenumerationen när som helst.',
   },
   submit: {
     en: 'Open the checklist →',

@@ -285,7 +285,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: 'LaplandVibes 팀이 파트너십에 관해 연락하는 데 동의합니다. 언제든 철회할 수 있습니다.',
     fr: 'J’accepte que l’équipe LaplandVibes me contacte au sujet du partenariat. Je peux me retirer à tout moment.',
     it: 'Acconsento che il team LaplandVibes mi contatti per la partnership. Posso ritirarmi in qualsiasi momento.',
-    nl: 'Ik ga ermee akkoord dat het LaplandVibes-team contact met me opneemt over partnerschap. Ik kan me altijd terugtrekken.', sv: 'I agree that the LaplandVibes team may contact me about partnership. I can withdraw anytime.',
+    nl: 'Ik ga ermee akkoord dat het LaplandVibes-team contact met me opneemt over partnerschap. Ik kan me altijd terugtrekken.', sv: 'Jag godkänner att LaplandVibes-teamet kontaktar mig om partnerskap. Jag kan återkalla mitt samtycke när som helst.',
   },
   submit: {
     en: 'Send application', fi: 'Lähetä hakemus', de: 'Bewerbung senden', ja: '申し込みを送信',
