@@ -1,9 +1,20 @@
-import { useRef, useState, type ChangeEvent, type DragEvent, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type ChangeEvent, type DragEvent, type FormEvent } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import { weddingTypes } from '../data/weddingTypes';
 import { locations } from '../data/locations';
 import { pickLocalized, type Localized } from '../data/localized';
+
+/**
+ * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
+ * ei jaettua importtia (vendoroitu sync on refresh-only). Ei saa koskaan
+ * rikkoa lomaketta. Standardi: memory _procedural/lv_form_funnel_events.md.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
 
 const L11: Record<'countryPlaceholder' | 'datePlaceholder' | 'venueWish' | 'venueWishPlaceholder' | 'venueWishHelp', Localized<string>> = {
   venueWish: {
@@ -114,6 +125,30 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
   const [files, setFiles] = useState<AttachedFile[]>([]);
   const [dragOver, setDragOver] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  // [LV-FUNNEL] view = lomake vieritetty näkyviin (kerran), start = 1. fokus,
+  // blocked kerran per submit-yritys (natiivi invalid laukeaa per kenttä).
+  const funnelData = { lang };
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const startTracked = useRef(false);
+  const blockedTracked = useRef(false);
+  useEffect(() => {
+    const el = formRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) {
+        track('quote_view', funnelData);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const trackStart = () => {
+    if (startTracked.current) return;
+    startTracked.current = true;
+    track('quote_start', funnelData);
+  };
 
   function addFiles(newFiles: FileList | File[]) {
     setError(null);
@@ -176,16 +211,19 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
     for (const f of files) data.append('files', f.file, f.file.name);
     data.set('lang', lang);
 
+    track('quote_submit', funnelData);
     try {
       const res = await fetch(ENDPOINT, { method: 'POST', body: data });
       if (!res.ok) throw new Error('failed');
       const json = (await res.json()) as { ok?: boolean; error?: string };
       if (!json.ok) throw new Error(json.error || 'failed');
       setSubmitted(true);
+      track('quote_success', funnelData);
       // Cleanup blob URLs
       files.forEach((f) => URL.revokeObjectURL(f.url));
       setFiles([]);
     } catch {
+      track('quote_error', funnelData);
       // Fallback: open user's mail client without attachments
       const payload: Record<string, string> = {};
       data.forEach((v, k) => {
@@ -249,7 +287,20 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
   );
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-night-light/60 border border-white/10 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      // [LV-FUNNEL] required-kentät estävät submitin natiivisti ennen
+      // handleSubmitia — invalid-capture kertoo MIKÄ kenttä pysäytti.
+      onInvalidCapture={(e) => {
+        if (blockedTracked.current) return;
+        blockedTracked.current = true;
+        window.setTimeout(() => { blockedTracked.current = false; }, 400);
+        const t = e.target as HTMLInputElement;
+        track('quote_blocked', { ...funnelData, reason: t.name || t.id || 'field' });
+      }}
+      className="max-w-3xl mx-auto bg-night-light/60 border border-white/10 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5"
+    >
       {/* Honeypot — bots fill this, humans do not. Renamed from "company":
           browser/password-manager autofill fills "company" even when hidden,
           which silently dropped real couples' enquiries. */}
@@ -268,22 +319,22 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="yourName" className={t1}>{tr.form.yourName} *</label>
-          <input id="yourName" name="yourName" required className={t2} />
+          <input id="yourName" name="yourName" required onFocus={trackStart} className={t2} />
         </div>
         <div>
           <label htmlFor="partnerName" className={t1}>{tr.form.partnerName}</label>
-          <input id="partnerName" name="partnerName" className={t2} />
+          <input id="partnerName" name="partnerName" onFocus={trackStart} className={t2} />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="email" className={t1}>{tr.form.email} *</label>
-          <input id="email" name="email" type="email" required className={t2} />
+          <input id="email" name="email" type="email" required onFocus={trackStart} className={t2} />
         </div>
         <div>
           <label htmlFor="phone" className={t1}>{tr.form.phone}</label>
-          <input id="phone" name="phone" type="tel" className={t2} />
+          <input id="phone" name="phone" type="tel" onFocus={trackStart} className={t2} />
           <p className="text-xs text-gray-500 mt-1">{tr.form.phoneHelp}</p>
         </div>
       </div>
@@ -291,11 +342,11 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="country" className={t1}>{tr.form.country}</label>
-          <input id="country" name="country" placeholder={pickLocalized(L11.countryPlaceholder, lang)} className={t2} />
+          <input id="country" name="country" placeholder={pickLocalized(L11.countryPlaceholder, lang)} onFocus={trackStart} className={t2} />
         </div>
         <div>
           <label htmlFor="guests" className={t1}>{tr.form.guests}</label>
-          <input id="guests" name="guests" type="number" min="0" max="500" placeholder="0" className={t2} />
+          <input id="guests" name="guests" type="number" min="0" max="500" placeholder="0" onFocus={trackStart} className={t2} />
           <p className="text-xs text-gray-500 mt-1">{tr.form.guestsHelp}</p>
         </div>
       </div>
@@ -303,13 +354,13 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="preferredDate" className={t1}>{tr.form.preferredDate}</label>
-          <input id="preferredDate" name="preferredDate" placeholder={pickLocalized(L11.datePlaceholder, lang)} className={t2} />
+          <input id="preferredDate" name="preferredDate" placeholder={pickLocalized(L11.datePlaceholder, lang)} onFocus={trackStart} className={t2} />
           <p className="text-xs text-gray-500 mt-1">{tr.form.preferredDateHelp}</p>
         </div>
         <div>
           <label htmlFor="flexibility" className={t1}>{tr.form.flexibility}</label>
           <div className="relative">
-            <select id="flexibility" name="flexibility" className={t2select} defaultValue="flexMonth">
+            <select id="flexibility" name="flexibility" onFocus={trackStart} className={t2select} defaultValue="flexMonth">
               <option value="flexFixed">{tr.form.flexFixed}</option>
               <option value="flexWeek">{tr.form.flexWeek}</option>
               <option value="flexMonth">{tr.form.flexMonth}</option>
@@ -324,7 +375,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         <div>
           <label htmlFor="weddingType" className={t1}>{tr.form.weddingType}</label>
           <div className="relative">
-            <select id="weddingType" name="weddingType" className={t2select} defaultValue={presetWeddingType || ''}>
+            <select id="weddingType" name="weddingType" onFocus={trackStart} className={t2select} defaultValue={presetWeddingType || ''}>
               <option value="">{tr.form.noPreference}</option>
               {weddingTypes.map((w) => (
                 <option key={w.slug} value={w.slug}>{w.name[dataLang]}</option>
@@ -336,7 +387,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         <div>
           <label htmlFor="location" className={t1}>{tr.form.location}</label>
           <div className="relative">
-            <select id="location" name="location" className={t2select} defaultValue={presetLocation || ''}>
+            <select id="location" name="location" onFocus={trackStart} className={t2select} defaultValue={presetLocation || ''}>
               <option value="">{tr.form.noPreference}</option>
               {locations.map((l) => (
                 <option key={l.slug} value={l.slug}>{l.name[dataLang]}</option>
@@ -361,6 +412,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
           name="venue"
           defaultValue={presetVenue || ''}
           placeholder={pickLocalized(L11.venueWishPlaceholder, lang)}
+          onFocus={trackStart}
           className={t2}
         />
         <p className="text-xs text-gray-500 mt-1">{pickLocalized(L11.venueWishHelp, lang)}</p>
@@ -370,7 +422,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         <div>
           <label htmlFor="ceremonyType" className={t1}>{tr.form.ceremonyType}</label>
           <div className="relative">
-            <select id="ceremonyType" name="ceremonyType" className={t2select} defaultValue="">
+            <select id="ceremonyType" name="ceremonyType" onFocus={trackStart} className={t2select} defaultValue="">
               <option value="">{tr.form.noPreference}</option>
               <option value="legal">{tr.form.ceremonyLegal}</option>
               <option value="symbolic">{tr.form.ceremonySymbolic}</option>
@@ -383,7 +435,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
         <div>
           <label htmlFor="accommodation" className={t1}>{tr.form.accommodation}</label>
           <div className="relative">
-            <select id="accommodation" name="accommodation" className={t2select} defaultValue="">
+            <select id="accommodation" name="accommodation" onFocus={trackStart} className={t2select} defaultValue="">
               <option value="">{tr.form.noPreference}</option>
               <option value="include">{tr.form.accInclude}</option>
               <option value="separate">{tr.form.accSeparate}</option>
@@ -398,7 +450,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       <div>
         <label htmlFor="budget" className={t1}>{tr.form.budget}</label>
         <div className="relative">
-          <select id="budget" name="budget" className={t2select} defaultValue="budget2">
+          <select id="budget" name="budget" onFocus={trackStart} className={t2select} defaultValue="budget2">
             <option value="budget1">{tr.form.budget1}</option>
             <option value="budget2">{tr.form.budget2}</option>
             <option value="budget3">{tr.form.budget3}</option>
@@ -415,6 +467,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
           id="message"
           name="message"
           rows={5}
+          onFocus={trackStart}
           className={t2}
           placeholder={tr.form.messagePlaceholder}
         />
@@ -479,7 +532,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
       </div>
 
       <label className="flex items-start gap-3 text-sm" style={{ color: '#1F1612' }}>
-        <input type="checkbox" name="consent" required className="mt-1 w-4 h-4 rounded text-rose focus:ring-rose" style={{ accentColor: '#C9466A' }} />
+        <input type="checkbox" name="consent" required onFocus={trackStart} className="mt-1 w-4 h-4 rounded text-rose focus:ring-rose" style={{ accentColor: '#C9466A' }} />
         <span>{tr.form.consent}</span>
       </label>
 

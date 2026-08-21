@@ -1,6 +1,17 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
+
+/**
+ * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
+ * ei jaettua importtia (vendoroitu sync on refresh-only). Ei saa koskaan
+ * rikkoa lomaketta. Standardi: memory _procedural/lv_form_funnel_events.md.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
 
 /**
  * Partner-network application form. Localized across all 11 site locales (B2B).
@@ -344,6 +355,30 @@ export default function PartnerForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // [LV-FUNNEL] view = lomake vieritetty näkyviin (kerran), start = 1. fokus,
+  // blocked kerran per submit-yritys (natiivi invalid laukeaa per kenttä).
+  const funnelData = { lang };
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const startTracked = useRef(false);
+  const blockedTracked = useRef(false);
+  useEffect(() => {
+    const el = formRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) {
+        track('partner_view', funnelData);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const trackStart = () => {
+    if (startTracked.current) return;
+    startTracked.current = true;
+    track('partner_start', funnelData);
+  };
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -368,6 +403,7 @@ export default function PartnerForm() {
       lang,
     };
 
+    track('partner_submit', funnelData);
     try {
       const res = await fetch('/api/partner', {
         method: 'POST',
@@ -377,6 +413,7 @@ export default function PartnerForm() {
       const json = (await res.json()) as { ok?: boolean; error?: string };
       if (!res.ok || !json.ok) throw new Error(json.error || 'failed');
       setSubmitted(true);
+      track('partner_success', funnelData);
       // The form shrinks to the thank-you message; bring it into view so the
       // page doesn't stay scrolled past it (was landing on the footer).
       requestAnimationFrame(() => {
@@ -384,6 +421,7 @@ export default function PartnerForm() {
       });
     } catch {
       setError(tr('error'));
+      track('partner_error', funnelData);
     } finally {
       setSubmitting(false);
     }
@@ -406,7 +444,20 @@ export default function PartnerForm() {
   const inp = 'w-full min-h-[48px] rounded-lg bg-night border border-white/10 focus:border-rose focus:ring-1 focus:ring-rose px-3.5 py-2.5 text-base text-white placeholder-gray-500 outline-none transition-colors';
 
   return (
-    <form onSubmit={handleSubmit} className="partner-form bg-night-light border border-white/10 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      // [LV-FUNNEL] required-kentät estävät submitin natiivisti ennen
+      // handleSubmitia — invalid-capture kertoo MIKÄ kenttä pysäytti.
+      onInvalidCapture={(e) => {
+        if (blockedTracked.current) return;
+        blockedTracked.current = true;
+        window.setTimeout(() => { blockedTracked.current = false; }, 400);
+        const t = e.target as HTMLInputElement;
+        track('partner_blocked', { ...funnelData, reason: t.name || t.id || 'field' });
+      }}
+      className="partner-form bg-night-light border border-white/10 rounded-2xl p-5 sm:p-8 space-y-4 sm:space-y-5"
+    >
       {/* Honeypot — must stay empty. Renamed from "company" because browser /
           password-manager autofill fills "company" even when hidden, which
           silently dropped real human submissions. Non-standard name + ignore
@@ -418,22 +469,22 @@ export default function PartnerForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="businessName" className={lbl}>{tr('businessName')} *</label>
-          <input id="businessName" name="businessName" required className={inp} />
+          <input id="businessName" name="businessName" required onFocus={trackStart} className={inp} />
         </div>
         <div>
           <label htmlFor="contactName" className={lbl}>{tr('contactName')} *</label>
-          <input id="contactName" name="contactName" required className={inp} />
+          <input id="contactName" name="contactName" required onFocus={trackStart} className={inp} />
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="email" className={lbl}>{tr('email')} *</label>
-          <input id="email" name="email" type="email" required className={inp} />
+          <input id="email" name="email" type="email" required onFocus={trackStart} className={inp} />
         </div>
         <div>
           <label htmlFor="phone" className={lbl}>{tr('phone')}</label>
-          <input id="phone" name="phone" type="tel" className={inp} />
+          <input id="phone" name="phone" type="tel" onFocus={trackStart} className={inp} />
           <p className="text-xs text-gray-500 mt-1">{tr('phoneHelp')}</p>
         </div>
       </div>
@@ -441,17 +492,17 @@ export default function PartnerForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="regions" className={lbl}>{tr('regions')}</label>
-          <input id="regions" name="regions" className={inp} placeholder={tr('regionsPlaceholder')} />
+          <input id="regions" name="regions" onFocus={trackStart} className={inp} placeholder={tr('regionsPlaceholder')} />
         </div>
         <div>
           <label htmlFor="website" className={lbl}>{tr('website')}</label>
-          <input id="website" name="website" className={inp} placeholder="laplandromance.fi · @handle" />
+          <input id="website" name="website" onFocus={trackStart} className={inp} placeholder="laplandromance.fi · @handle" />
         </div>
       </div>
 
       <div>
         <label htmlFor="years" className={lbl}>{tr('years')}</label>
-        <input id="years" name="years" className={inp} placeholder={tr('yearsPlaceholder')} />
+        <input id="years" name="years" onFocus={trackStart} className={inp} placeholder={tr('yearsPlaceholder')} />
       </div>
 
       <div>
@@ -461,7 +512,7 @@ export default function PartnerForm() {
           {SERVICE_KEYS.map((key) => (
             <label key={key} className="flex items-center gap-2.5 text-sm rounded-lg px-3 py-2.5 cursor-pointer transition-colors"
               style={{ background: '#FFFFFF', border: '1px solid #B0997F', color: '#1F1612' }}>
-              <input type="checkbox" name="services" value={key} className="w-4 h-4 rounded shrink-0" style={{ accentColor: '#C9466A' }} />
+              <input type="checkbox" name="services" value={key} onFocus={trackStart} className="w-4 h-4 rounded shrink-0" style={{ accentColor: '#C9466A' }} />
               <span>{pickLocalized(SERVICE_LABELS[key], lang)}</span>
             </label>
           ))}
@@ -470,12 +521,12 @@ export default function PartnerForm() {
 
       <div>
         <label htmlFor="message" className={lbl}>{tr('message')}</label>
-        <textarea id="message" name="message" rows={4} className={inp}
+        <textarea id="message" name="message" rows={4} onFocus={trackStart} className={inp}
           placeholder={tr('messagePlaceholder')} />
       </div>
 
       <label className="flex items-start gap-3 text-sm text-gray-300">
-        <input type="checkbox" name="consent" required className="mt-1 w-4 h-4 rounded shrink-0" style={{ accentColor: '#C9466A' }} />
+        <input type="checkbox" name="consent" required onFocus={trackStart} className="mt-1 w-4 h-4 rounded shrink-0" style={{ accentColor: '#C9466A' }} />
         <span>{tr('consent')}</span>
       </label>
 

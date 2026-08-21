@@ -1,7 +1,18 @@
-import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
 import { Lock, Mail, CheckCircle2 } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
+
+/**
+ * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
+ * ei jaettua importtia (vendoroitu sync on refresh-only). Ei saa koskaan
+ * rikkoa lomaketta. Standardi: memory _procedural/lv_form_funnel_events.md.
+ */
+function track(event: string, data?: Record<string, unknown>) {
+  try {
+    (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
+  } catch { /* ignore */ }
+}
 
 const STORAGE_KEY = 'laplandweddings_checklist_unlocked';
 
@@ -235,10 +246,37 @@ export default function ChecklistGate({ children }: Props) {
     }
   }, []);
 
+  // [LV-FUNNEL] view = portti vieritetty näkyviin (kerran; IO ei ehdi laueta
+  // jos localStorage avaa portin heti mountissa), start = 1. fokus, blocked
+  // kerran per submit-yritys (natiivi invalid laukeaa per kenttä).
+  const funnelData = { lang };
+  const gateRef = useRef<HTMLDivElement | null>(null);
+  const startTracked = useRef(false);
+  const blockedTracked = useRef(false);
+  useEffect(() => {
+    const el = gateRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((en) => en.isIntersecting)) {
+        track('checklist_view', funnelData);
+        io.disconnect();
+      }
+    }, { threshold: 0.4 });
+    io.observe(el);
+    return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [unlocked]);
+  const trackStart = () => {
+    if (startTracked.current) return;
+    startTracked.current = true;
+    track('checklist_start', funnelData);
+  };
+
   async function submit(e: FormEvent) {
     e.preventDefault();
     setSubmitting(true);
     setError(null);
+    track('checklist_submit', funnelData);
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
@@ -251,8 +289,10 @@ export default function ChecklistGate({ children }: Props) {
       }
       window.localStorage.setItem(STORAGE_KEY, 'true');
       setUnlocked(true);
+      track('checklist_success', funnelData);
     } catch {
       setError(pickLocalized(GATE_ERROR, lang));
+      track('checklist_error', funnelData);
     } finally {
       setSubmitting(false);
     }
@@ -266,7 +306,7 @@ export default function ChecklistGate({ children }: Props) {
 
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 py-12">
-      <div className="max-w-xl w-full bg-night-light/70 border border-white/10 rounded-3xl p-7 sm:p-10 shadow-2xl">
+      <div ref={gateRef} className="max-w-xl w-full bg-night-light/70 border border-white/10 rounded-3xl p-7 sm:p-10 shadow-2xl">
         <div className="flex items-center gap-3 text-rose mb-5">
           <Lock className="w-5 h-5" />
           <p className="uppercase tracking-[0.25em] text-[11px] font-semibold">{t.eyebrow}</p>
@@ -283,13 +323,26 @@ export default function ChecklistGate({ children }: Props) {
           ))}
         </ul>
 
-        <form onSubmit={submit} className="space-y-4">
+        <form
+          onSubmit={submit}
+          // [LV-FUNNEL] required-kentät estävät submitin natiivisti ennen
+          // submit-handleria — invalid-capture kertoo MIKÄ kenttä pysäytti.
+          onInvalidCapture={(e) => {
+            if (blockedTracked.current) return;
+            blockedTracked.current = true;
+            window.setTimeout(() => { blockedTracked.current = false; }, 400);
+            const t = e.target as HTMLInputElement;
+            track('checklist_blocked', { ...funnelData, reason: t.type === 'checkbox' ? 'consent' : 'email' });
+          }}
+          className="space-y-4"
+        >
           <div>
             <label htmlFor="firstName" className="block text-xs font-medium text-gray-300 mb-1.5">{t.firstNameLabel}</label>
             <input
               id="firstName"
               type="text"
               value={firstName}
+              onFocus={trackStart}
               onChange={(e) => setFirstName(e.target.value)}
               className="w-full min-h-[48px] rounded-lg bg-night border border-white/10 focus:border-rose focus:ring-1 focus:ring-rose px-3.5 py-2.5 text-base text-white placeholder-gray-500 outline-none transition-colors"
             />
@@ -303,6 +356,7 @@ export default function ChecklistGate({ children }: Props) {
                 type="email"
                 required
                 value={email}
+                onFocus={trackStart}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t.emailPlaceholder}
                 className="w-full min-h-[48px] rounded-lg bg-night border border-white/10 focus:border-rose focus:ring-1 focus:ring-rose pl-10 pr-3.5 py-2.5 text-base text-white placeholder-gray-500 outline-none transition-colors"
@@ -314,6 +368,7 @@ export default function ChecklistGate({ children }: Props) {
               type="checkbox"
               required
               checked={consent}
+              onFocus={trackStart}
               onChange={(e) => setConsent(e.target.checked)}
               className="mt-0.5 w-4 h-4 rounded border-white/20 bg-night-light text-rose focus:ring-rose"
             />
