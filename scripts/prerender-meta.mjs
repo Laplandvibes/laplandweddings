@@ -473,6 +473,15 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr }) 
   let out = SHELL;
 
   out = out.replace(/<html\s+lang="[^"]*">/, `<html lang="${lang}">`);
+  // [LV-TITLE-LEN 2026-08-21] Google truncates past ~60 characters, and measured
+  // that day this site had 169 titles over it — 131 of them venue pages, whose
+  // title is `<Venue>: <Region> | LaplandWeddings` where the first half is already
+  // two proper nouns. Dropping OUR OWN brand suffix loses nothing (the site name
+  // still ships in og:site_name and the breadcrumb), while keeping the venue and
+  // region visible in the SERP. Only the suffix goes: a title that is still long
+  // without it is content, and content stays. Same rule as the shared
+  // _prerender_routes.mjs shortenTitle().
+  title = shortenTitle(title);
   out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);
   out = out.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/, `<meta name="description" content="${escapeAttr(description)}" />`);
 
@@ -583,6 +592,13 @@ for (const [path, meta] of Object.entries(top)) {
  * it is more specific than the section. So drop the suffix and keep only the
  * brand. Detects the full-width "：" too, or ja/zh would keep the double.
  */
+const TITLE_SUFFIX_RE = /\s*[|—–·]\s*LaplandWeddings(?:\.online)?\s*$/i;
+function shortenTitle(t) {
+  if (!t || t.length <= 60) return t;
+  const short = String(t).replace(TITLE_SUFFIX_RE, '').trim();
+  return short.length >= 25 && short.length < t.length ? short : t;
+}
+
 function joinTitle(name, suffix) {
   if (/[:：]/.test(name)) return `${name} | LaplandWeddings`;
   return `${name}${suffix}`;
