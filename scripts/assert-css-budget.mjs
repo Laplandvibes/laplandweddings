@@ -26,9 +26,15 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIR = 'dist/assets';
-// Nykyinen koko ~107 kt. Raja on 15 % alle sen, mutta selvasti yli
-// alaskannatun buildin (~81 kt), jotta normaali vaihtelu ei laukaise tata.
-const MIN_BYTES = 91_000;
+// Nykyinen koko 90 117 t (mitattu 2026-08-21). Aiempi ~107 kt oli INFLAATIOTA:
+// @source osoitti monorepon shared/:aan, joten Tailwind skannasi kymmenia
+// komponentteja joita tama sivusto ei renderoi, ja niiden luokat paatyivat
+// CSS:aan kuolleena painona. Vendoroinnin jalkeen skannataan vain src/ +
+// src/shared/, ja 90 117 t on se OIKEA koko — ei regressio.
+// Raja on ~6 % alle mitatun, mutta yha selvasti yli alaskannatun buildin
+// (~81 kt), joka on se tila jonka tama portti on olemassa nappaamaan.
+// Tarkempi vahti on REQUIRED-merkkiluokat alla; tama on karkea varmistus.
+const MIN_BYTES = 85_000;
 // Luokat jotka tulevat VAIN taman sivuston src/:sta -- ei shared/:sta.
 const REQUIRED = ['text-cream-text', 'font-logo', 'rounded-3xl'];
 
