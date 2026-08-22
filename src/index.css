@@ -59,7 +59,7 @@
 }
 @import "tailwindcss";
 
-@source "../../shared/**/*.{ts,tsx}";
+@source "./shared/**/*.{ts,tsx}";
 
 @theme {
   /* LV ecosystem tokens required by shared/ components (added 2026-08-04:

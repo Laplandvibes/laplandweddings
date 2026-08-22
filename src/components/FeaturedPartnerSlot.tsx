@@ -30,8 +30,8 @@
  * pintaan jää aukkoa: toimituksellinen venue-kortisto on erillään tästä ja
  * renderöityy kaikilla 12 kielellä ennallaan.
  */
-import PartnerSlot from '../../../shared/PartnerSlot';
-import { adLocaleEnabled, normalizeAdLocale, type AdLocale } from '../../../shared/adSlotsCopy';
+import PartnerSlot from '../shared/PartnerSlot';
+import { adLocaleEnabled, normalizeAdLocale, type AdLocale } from '../shared/adSlotsCopy';
 import { AD_SLOTS, FEATURED_CONTEXT, FEATURED_PARTNERS, type FeaturedPlacement } from '../data/adSlots';
 
 /**

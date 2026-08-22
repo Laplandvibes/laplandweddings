@@ -4,7 +4,7 @@ import L, { NL } from './L';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import type { Lang } from '../i18n/translations';
-import EcosystemMenu from '../../../shared/EcosystemMenu';
+import EcosystemMenu from '../shared/EcosystemMenu';
 
 const ALL_LANGS: { code: Lang; label: string; native: string }[] = [
   { code: 'en', label: 'EN', native: 'English' },

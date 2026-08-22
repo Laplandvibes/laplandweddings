@@ -10,7 +10,7 @@ import { locations } from '../data/locations';
 import { weddingTypes } from '../data/weddingTypes';
 import { venues } from '../data/venues';
 import L from '../components/L';
-import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
 import GoogleRatingRow from '../components/GoogleRatingRow';

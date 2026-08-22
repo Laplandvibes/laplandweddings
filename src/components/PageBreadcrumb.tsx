@@ -1,4 +1,4 @@
-import Breadcrumbs from '../../../shared/Breadcrumbs';
+import Breadcrumbs from '../shared/Breadcrumbs';
 import { useLang } from '../i18n/LangContext';
 import { ui } from '../data/uiStrings';
 

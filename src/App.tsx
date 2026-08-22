@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
-import CookieBanner from '../../shared/CookieBanner';
+import CookieBanner from './shared/CookieBanner';
 import { LangProvider, useLang } from './i18n/LangContext';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import { AppPromoNudge } from './components/AppPromo';

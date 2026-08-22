@@ -10,10 +10,10 @@
  * linkittää LV Media -portaaliin.
  */
 
-import type { HomeAdSlotsConfig } from '../../../shared/HomeAdSlots';
-import type { Partner } from '../../../shared/PartnerSlot';
-import type { AdLocale } from '../../../shared/adSlotsCopy';
-import { DEFAULT_PREMIUM_SPOTS } from '../../../shared/PremiumSpotGrid';
+import type { HomeAdSlotsConfig } from '../shared/HomeAdSlots';
+import type { Partner } from '../shared/PartnerSlot';
+import type { AdLocale } from '../shared/adSlotsCopy';
+import { DEFAULT_PREMIUM_SPOTS } from '../shared/PremiumSpotGrid';
 
 export const AD_SLOTS: HomeAdSlotsConfig = {
   siteSlug: 'laplandweddings',

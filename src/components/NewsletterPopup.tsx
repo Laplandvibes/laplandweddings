@@ -1,4 +1,4 @@
-import SharedNewsletterPopup from '../../../shared/NewsletterPopup';
+import SharedNewsletterPopup from '../shared/NewsletterPopup';
 import { useLang } from '../i18n/LangContext';
 
 // Shared network creds (public anon key) — this site has no .env, same

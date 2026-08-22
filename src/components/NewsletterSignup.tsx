@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
 import L from './L';
-import FounderByline from '../../../shared/FounderByline';
+import FounderByline from '../shared/FounderByline';
 
 /**
  * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,

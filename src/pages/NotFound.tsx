@@ -1,4 +1,4 @@
-import SharedNotFound from '../../../shared/NotFound';
+import SharedNotFound from '../shared/NotFound';
 import { useLang } from '../i18n/LangContext';
 
 // LaplandWeddings uses its own romantic "rose" accent (index.css --color-rose-deep
