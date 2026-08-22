@@ -1,45 +1,33 @@
 name: Deploy to Cloudflare Pages
 
 # =============================================================================
-# STATUS: MANUAL DISPATCH ONLY -- the `push` trigger is disabled ON PURPOSE.
+# Plain checkout. No cross-repo token, no nesting, no symlink.
 #
-# WHY THIS COULD NEVER WORK AS A PLAIN CHECKOUT
-#   This site's src/ imports `../../../shared/*`. Those files do NOT live in
-#   this repo -- they live in the PRIVATE parent monorepo Laplandvibes/lv-ops.
-#   A workflow that only checks out this repo therefore always dies in the
-#   build step with:
-#       error TS2307: Cannot find module '../../../shared/Footer'
-#   Reading lv-ops from here needs a CROSS-REPO token. secrets.GITHUB_TOKEN is
-#   scoped to this repository alone and is NOT sufficient.
+# HISTORY (why this file used to be 100 lines of scaffolding):
+#   src/ imported `../../../shared/*` from the PRIVATE parent monorepo
+#   (Laplandvibes/lv-ops). A plain checkout could never build it —
+#   `error TS2307: Cannot find module '../../../shared/Footer'` — so the
+#   workflow checked out lv-ops alongside with a PAT (LV_MONOREPO_TOKEN),
+#   nested the site one level down so ../../../shared resolved, and symlinked
+#   parent/node_modules at the site install to avoid bundling two React copies
+#   (that bug took laplandweddings.online down on 2026-05-22).
+#   The PAT was never created, so `on: push` was commented out and every
+#   deploy was manual from a working tree.
 #
-#   Until the LV_MONOREPO_TOKEN secret exists, `on: push` stays commented out
-#   so this workflow cannot keep producing red runs that falsely imply
-#   "push to main deploys the site". It does not. Deploy is manual:
+#   2026-08-21: the shared components are now VENDORED into src/shared/ and
+#   read from git, so a plain checkout builds. Verified by cloning this repo
+#   outside the monorepo and running npm ci && npm run build — green, and
+#   byte-identical CSS to the local build (index-b5-4zeEEAWP.css, 90 117 t).
+#   The LV_MONOREPO_TOKEN secret is no longer needed by this workflow.
 #
-#     cd laplandweddings-new && npm run build \
-#       && npx wrangler pages deploy dist --project-name=laplandweddings \
-#            --branch=main --commit-dirty=true
-#
-# HOW TO ENABLE PUSH-TO-DEPLOY  (Vesa only -- creating secrets is not
-# something an agent may do)
-#   1. Create a fine-grained PAT, READ-ONLY "Contents" on Laplandvibes/lv-ops:
-#        https://github.com/settings/personal-access-tokens/new
-#      NOTE: `Laplandvibes` is a User account, not an organisation, so there
-#      are no org-level secrets -- the secret must be set per repo.
-#   2. gh secret set LV_MONOREPO_TOKEN \
-#        --repo Laplandvibes/laplandweddings --body "<the-pat>"
-#   3. Uncomment the `push:` block below and commit.
-#
-# The build steps below are NOT guesswork: the parent/shared + parent/site
-# layout was reproduced locally on 2026-07-26 and produced a green
-# `npm run build` with a single React instance and shared/ Tailwind classes
-# present in the emitted CSS.
+#   Keep src/shared/ in sync with the monorepo via `npm run sync:shared`
+#   where that script exists; never hand-edit files under src/shared/.
 # =============================================================================
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
-  # push:
-  #   branches: [main]
 
 jobs:
   deploy:
@@ -48,53 +36,20 @@ jobs:
       contents: read
       deployments: write
     steps:
-      # 1) Parent monorepo -- shared/ only. Needs the cross-repo PAT.
-      - name: Checkout parent monorepo (shared/ only)
-        uses: actions/checkout@v4
-        with:
-          repository: Laplandvibes/lv-ops
-          ref: main
-          token: ${{ secrets.LV_MONOREPO_TOKEN }}
-          path: parent
-          sparse-checkout: shared
+      - uses: actions/checkout@v4
 
-      # 2) This site, nested exactly ONE level under parent/ so that
-      #    src/<dir>/<file> -> ../../../shared resolves to parent/shared.
-      - name: Checkout site
-        uses: actions/checkout@v4
-        with:
-          path: parent/site
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: parent/site/package-lock.json
 
-      - name: Install dependencies
-        run: npm ci
-        working-directory: parent/site
+      - run: npm ci
 
-      # 3) parent/shared/*.tsx import bare `react` / `react-router-dom` /
-      #    `lucide-react`. Node resolves those by walking UP from
-      #    parent/shared/, i.e. to parent/node_modules -- which does not exist
-      #    in CI, because the monorepo root package.json is untracked. Point it
-      #    at the site's own install so exactly ONE React copy is bundled.
-      #    Two React copies break useContext across the ecosystem
-      #    (laplandweddings.online prod outage 2026-05-22).
-      - name: Link parent/node_modules -> site install
-        run: ln -s site/node_modules node_modules
-        working-directory: parent
-
-      - name: Build
-        run: npm run build
-        working-directory: parent/site
+      - run: npm run build
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: parent/site
           command: pages deploy dist --project-name=laplandweddings --branch=main
