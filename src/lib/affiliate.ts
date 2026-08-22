@@ -14,7 +14,6 @@
  * (NEVER add noreferrer — it kills CJ attribution).
  */
 
-const TRIP_ALLIANCE_ID = '8175308';
 const TRIP_SID = '309472136';
 const SITE_TAG = 'laplandweddings.online';
 
@@ -119,21 +118,27 @@ export function carsLink(pickup: 'RVN' | 'KTT' | 'IVL' = 'RVN', sid = 'cars', la
 }
 
 /**
- * Trip.com flights — direct (do NOT route through Worker).
+ * Trip.com flights — go.laplandvibes.com-Workerin kautta (muutos 2026-08-22,
+ * Vesan paatos). Tassa luki aiemmin "direct (do NOT route through Worker)":
+ * se piti paikkansa vain niin kauan kuin Worker osasi pelkkaa CJ:ta, ja jai
+ * ohjeeksi joka esti klikkien kirjautumisen D1-lokiin.
+ *
+ * Kohde-URL on sama kuin ennen; Worker asettaa Allianceidin, SIDin ja
+ * trip_sub-kentat, joten ne eivat voi pudota linkista huomaamatta.
  * @param from IATA origin (lowercase, e.g. lhr, hel, fra)
  * @param to   IATA destination (rvn, ktt, ivl)
  */
 export function tripFlightsLink(from: string, to: 'rvn' | 'ktt' | 'ivl', sid = 'flights', lang: Lang = 'en'): string {
-  const u = new URL('https://www.trip.com/flights/showfarefirst');
+  const u = new URL('https://go.laplandvibes.com/go/flights');
   u.searchParams.set('dcity', from.toLowerCase());
   u.searchParams.set('acity', to.toLowerCase());
   u.searchParams.set('locale', TRIP_LOCALE[lang]);
-  u.searchParams.set('Allianceid', TRIP_ALLIANCE_ID);
-  u.searchParams.set('SID', TRIP_SID);
-  u.searchParams.set('trip_sub1', SITE_TAG);
-  u.searchParams.set('trip_sub2', sid);
+  u.searchParams.set('sid', sid);
+  u.searchParams.set('w', SITE_TAG);
+  u.searchParams.set('trip_sid', TRIP_SID);
   return u.toString();
 }
+
 
 /** Convenience wrapper — flights to a Lapland airport from a known UK/EU origin. */
 export function tripToLapland(from: string, airport: 'RVN' | 'KTT' | 'IVL', sid = 'flights', lang: Lang = 'en'): string {
