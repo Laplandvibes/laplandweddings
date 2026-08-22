@@ -172,6 +172,15 @@ const t_nl = {
     privacy: {
       metaTitle: 'Privacy | LaplandWeddings',
       title: 'Privacybeleid',
+      // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
+      // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
+      // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
+      // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
+      // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
+      // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
+      newsletterBefore: 'Als u zich abonneert op onze nieuwsbrief, wordt uw e-mailadres veilig opgeslagen via Resend en Supabase. U kunt zich op elk moment afmelden via de link in elke e-mail of via onze ',
+      unsubLabel: 'afmeldpagina',
+      newsletterAfter: '.',
       controllerLabel: 'Verwerkingsverantwoordelijke',
       paragraphs: [
         'Wij gebruiken de gegevens uit het contactformulier uitsluitend om uw aanvraag te verwerken en door te sturen naar bruiloftsplanners.',

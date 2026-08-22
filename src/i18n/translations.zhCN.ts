@@ -170,6 +170,15 @@ const t_zhCN = {
     privacy: {
       metaTitle: '隐私 | LaplandWeddings',
       title: '隐私政策',
+      // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
+      // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
+      // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
+      // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
+      // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
+      // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
+      newsletterBefore: '如果您订阅了我们的电子简报,您的电子邮件地址将通过 Resend 和 Supabase 安全存储。您可以随时通过每封邮件中的链接或通过我们的',
+      unsubLabel: '取消订阅页面',
+      newsletterAfter: '取消订阅。',
       controllerLabel: '数据控制者',
       paragraphs: [
         '我们仅将联系表单中的数据用于处理您的咨询，并将其转交给婚礼策划师。',

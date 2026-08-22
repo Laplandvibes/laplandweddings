@@ -172,6 +172,15 @@ const t_sv = {
     privacy: {
       metaTitle: 'Integritet | LaplandWeddings',
       title: 'Integritetspolicy',
+      // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
+      // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
+      // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
+      // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
+      // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
+      // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
+      newsletterBefore: 'Om du prenumererar på vårt nyhetsbrev lagras din e-postadress säkert via Resend och Supabase. Du kan avregistrera dig när som helst med länken i varje e-postmeddelande eller via vår ',
+      unsubLabel: 'avregistreringssida',
+      newsletterAfter: '.',
       controllerLabel: 'Personuppgiftsansvarig',
       paragraphs: [
         'Vi använder uppgifterna från kontaktformuläret enbart för att behandla din förfrågan och vidarebefordra den till bröllopsplanerare.',

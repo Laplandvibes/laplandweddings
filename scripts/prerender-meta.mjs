@@ -50,7 +50,23 @@ const RAW_SHELL = readFileSync(resolve(DIST, 'index.html'), 'utf-8');
 // Riisunta on PAKOLLINEN: tama skripti lukee kuorensa samasta dist/index.html:sta
 // jonka se itse ylikirjoittaa EN-etusivulla (pathToFile('/')). Ilman tata
 // toinen ajo antaisi jokaiselle 552 reitille ETUSIVUN h1:n, kuvauksen ja navin.
-const SHELL = CB ? CB.stripCrawlableBody(RAW_SHELL) : RAW_SHELL;
+// 🔴 Head-tagit riisutaan samasta syysta kuin crawlable body — ja se puuttui
+// 22.8.2026 asti. Riisunta koski vain bodya, joten skriptin ajaminen KAHDESTI
+// samaa distia vasten (ilman valissa ajettua `vite build`ia) tuotti jokaiselle
+// sivulle KAKSI robots-metaa perakkain seka etusivun canonicalin ja 13
+// hreflangia paalle. Se on tasmalleen se sekasignaali jota vastaan alla oleva
+// noindex-haara on olemassa, ja se syntyi hiljaa: build ei kaadu, ja vika
+// nakyy vain valmiista HTML:sta. Loytyi kattavuusportin itsetestissa.
+const HEAD_META_RE = [
+  /^[^\S\r\n]*<meta\s+name="robots"[^>]*>\r?\n?/gim,
+  /^[^\S\r\n]*<link\s+rel="canonical"[^>]*>\r?\n?/gim,
+  /^[^\S\r\n]*<link\s+rel="alternate"\s+hreflang="[^"]*"[^>]*>\r?\n?/gim,
+  /^[^\S\r\n]*<meta\s+property="og:[^"]*"[^>]*>\r?\n?/gim,
+  /^[^\S\r\n]*<meta\s+name="twitter:[^"]*"[^>]*>\r?\n?/gim,
+];
+const stripHeadMeta = (html) => HEAD_META_RE.reduce((acc, re) => acc.replace(re, ''), html);
+
+const SHELL = stripHeadMeta(CB ? CB.stripCrawlableBody(RAW_SHELL) : RAW_SHELL);
 
 // Kaannokset locations/types/venues-riveille kielille joita EI ole taulukoissa
 // inline (nailla on vain en ja fi). Muoto:
@@ -460,7 +476,7 @@ function urlFor(prefix, canonical) {
   return (SITE + prefix + canonical).replace(/\/?$/, '/');
 }
 
-function patchHtml({ lang, title, description, image, canonical, ogLocaleStr }) {
+function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, noindex }) {
   // Build all alternate URLs
   const alternates = LOCALES.map((L) => ({
     hreflang: L.hreflang,
@@ -495,10 +511,15 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr }) 
   );
   hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${enUrl}" />`);
 
+  // 🔴 noindex-sivu EI saa hreflangeja eika self-canonicalia mainostamaan
+  // itseaan: ne ovat indeksointisignaaleja, ja pari "noindex + hreflang-joukko"
+  // on ristiriitainen. Kumppanisivu on tarkoituksella indeksoimaton (sen oma
+  // <SEO noindex>), joten staattisen kuoren on sanottava sama ENNEN JS:aa —
+  // muuten Googlebot nakee ensin "index,follow" ja vasta ajon jalkeen noindexin.
   const extra = [
-    `<meta name="robots" content="index,follow" />`,
-    `<link rel="canonical" href="${currentUrl}" />`,
-    ...hreflangTags,
+    `<meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow'}" />`,
+    ...(noindex ? [] : [`<link rel="canonical" href="${currentUrl}" />`]),
+    ...(noindex ? [] : hreflangTags),
     `<meta property="og:type" content="website" />`,
     `<meta property="og:site_name" content="LaplandWeddings" />`,
     `<meta property="og:url" content="${currentUrl}" />`,
@@ -545,7 +566,7 @@ function pathToFile(distPath) {
 
 let count = 0;
 
-function writeAll(canonical, byLang, image) {
+function writeAll(canonical, byLang, image, noindex) {
   // byLang: { en: {title,desc}, fi:{...}, ... } — EN is required
   const enMeta = byLang.en;
   for (const L of LOCALES) {
@@ -557,6 +578,7 @@ function writeAll(canonical, byLang, image) {
       image,
       canonical,
       ogLocaleStr: L.og,
+      noindex,
     });
     const distPath = canonical === '/' ? (L.prefix || '/') : (L.prefix + canonical);
     writeFileSync(pathToFile(distPath), out);
@@ -670,7 +692,75 @@ if (NETWORK) {
   );
 }
 
-for (const r of ROUTES) writeAll(r.canonical, r.byLang, r.image);
+const NLCH = String.fromCharCode(10);
+// ── /partner-with-us: OLEMASSA OLEVA sivu jota prerender ei kattanut ────────
+// 🔴🔴 Sivu on tarkoituksella `noindex` (src/pages/PartnerWithUs.tsx: <SEO
+// noindex …>), joten se ei ole sitemapissa — ja juuri siksi se jai huomaamatta.
+// Se oli livena 200:lla VAIN `_redirects`-catch-allin ansiosta. Kun catch-all
+// poistettiin 22.8.2026, prerenderoimaton polku alkaa antaa aidon 404:n — ja
+// tama on se sivu jolla kumppanit hankitaan.
+//
+// Metat LUETAAN sivun omasta lahdekoodista eika kirjoiteta tanne kasin: kasin
+// kopioitu kaannos ajautuu erilleen ensimmaisessa sisaltomuutoksessa, ja taman
+// verkoston kallein virheluokka on kohdekielinen teksti joka lukee aitona mutta
+// on vaarin. Jos luku epaonnistuu, build KAATUU — hiljainen paluu englantiin 12
+// kielella olisi huonompi kuin punainen build.
+const ESC = String.fromCharCode(92);
+function lueKumppanisivunMetat() {
+  const src = readFileSync(resolve(__dirname, '..', 'src', 'pages', 'PartnerWithUs.tsx'), 'utf-8');
+  const poimi = (avain) => {
+    const alku = src.indexOf(`${NLCH}  ${avain}: {`);
+    if (alku === -1) throw new Error(`PartnerWithUs.tsx: lohkoa "${avain}" ei loytynyt`);
+    const loppu = src.indexOf(`${NLCH}  },`, alku);
+    if (loppu === -1) throw new Error(`PartnerWithUs.tsx: lohko "${avain}" ei paattynyt`);
+    const lohko = src.slice(alku, loppu);
+    const ulos = {};
+    // Avain voi olla lainausmerkeissa ('pt-BR') tai ilman (en, fi). Arvo luetaan
+    // merkki kerrallaan eika regexilla, koska se voi sisaltaa suojatun
+    // heittomerkin — regex joka ei sita osaa katkaisisi tekstin puolivalista
+    // ILMAN virhetta, ja lopputulos olisi vaarin 12 kielella.
+    const avainRe = /(?:^|[\s,{])'?([A-Za-z]{2}(?:-[A-Za-z]{2})?)'?:\s*'/g;
+    let m;
+    while ((m = avainRe.exec(lohko))) {
+      let i = avainRe.lastIndex;
+      let arvo = '';
+      let suljettu = false;
+      while (i < lohko.length) {
+        const c = lohko[i];
+        if (c === ESC) { arvo += lohko[i + 1]; i += 2; continue; }
+        if (c === "'") { suljettu = true; break; }
+        arvo += c; i += 1;
+      }
+      if (!suljettu) throw new Error(`PartnerWithUs.tsx: ${avain}.${m[1]} ei paattynyt heittomerkkiin`);
+      ulos[m[1]] = arvo;
+      avainRe.lastIndex = i + 1;
+    }
+    return ulos;
+  };
+  const title = poimi('seoTitle');
+  const description = poimi('seoDesc');
+  const puuttuu = LOCALES.map((L) => L.lang).filter((l) => !title[l] || !description[l]);
+  if (puuttuu.length) throw new Error(`PartnerWithUs.tsx: seoTitle/seoDesc puuttuu kielilta ${puuttuu.join(', ')}`);
+  return { title, description };
+}
+try {
+  const kumppani = lueKumppanisivunMetat();
+  const byLang = {};
+  for (const L of LOCALES) {
+    byLang[L.lang] = { title: kumppani.title[L.lang], description: kumppani.description[L.lang] };
+  }
+  ROUTES.push({
+    canonical: '/partner-with-us',
+    byLang,
+    image: `${SITE}/images/heroes/aurora-elope-hero.webp`,
+    noindex: true,
+  });
+} catch (e) {
+  console.error(`${NLCH}[prerender] /partner-with-us metojen luku EPAONNISTUI: ${e.message}`);
+  console.error('Ilman prerenderia sivu antaa aidon 404:n (catch-all poistettu 22.8.). Build pysahtyy.');
+  process.exit(1);
+}
+for (const r of ROUTES) writeAll(r.canonical, r.byLang, r.image, r.noindex);
 
 console.log(`Prerendered ${count} routes across ${LOCALES.length} locales (${count / LOCALES.length} routes × ${LOCALES.length} languages)`);
 
@@ -703,4 +793,75 @@ if (NETWORK) {
     process.exit(1);
   }
   console.log(`[prerender] smoke gate OK — block present, inside #root, ${networkLinks} network links`);
+}
+
+// ── dist/404.html + KATTAVUUSPORTTI ─────────────────────────────────────────
+// Molemmat ovat catch-allin poiston (22.8.2026) ehtoja, eivat koristeita.
+//
+// 404.html: ilman sita Cloudflare Pages tarjoaa kuolleelle polulle oman
+// geneerisen sivunsa. Tama on sivuston oma 404, ja se on `noindex` JO
+// STAATTISESSA kuoressa — juuri se mita catch-all esti: aiemmin palvelin
+// vastasi 200 ja noindex tuli vasta JS:n jalkeen, joten Googlebot kirjasi
+// URLin olemassa olevaksi ja palasi crawlaamaan sita.
+//
+// Kattavuusportti: catch-all on turvallista poistaa VAIN jos jokainen reitti
+// jonka appi osaa renderoida on kirjoitettu levylle. Portti lukee reitit
+// src/App.tsx:n taulukosta — EI sitemapista, koska /partner-with-us on
+// tarkoituksella noindex eika siksi ole sitemapissa. Juuri sen kaltainen sivu
+// jai kiinni vain catch-alliin.
+{
+  const shell404 = patchHtml({
+    lang: 'en',
+    title: 'Page not found | LaplandWeddings',
+    description: 'This page does not exist. Browse Lapland wedding venues, locations and planning guides instead.',
+    image: `${SITE}/images/heroes/aurora-elope-hero.webp`,
+    canonical: '/',
+    ogLocaleStr: 'en_US',
+    noindex: true,
+  });
+  writeFileSync(resolve(DIST, '404.html'), shell404);
+
+  const ongelmat = [];
+  if (!/name="robots" content="noindex/.test(shell404)) ongelmat.push('404.html: noindex puuttuu');
+  if (/rel="canonical"/.test(shell404)) ongelmat.push('404.html: canonical lasna (ei saa olla)');
+  if ((shell404.match(/name="robots"/g) || []).length !== 1) ongelmat.push('404.html: robots-metoja != 1');
+
+  const appSrc = readFileSync(resolve(__dirname, '..', 'src', 'App.tsx'), 'utf-8');
+  const taulukkoAlku = appSrc.indexOf('const routes = [');
+  const taulukkoLoppu = appSrc.indexOf('\n];', taulukkoAlku);
+  if (taulukkoAlku === -1 || taulukkoLoppu === -1) {
+    ongelmat.push('App.tsx: reittitaulukkoa ei voitu lukea — porttia ei voi ajaa');
+  } else {
+    const taulukko = appSrc.slice(taulukkoAlku, taulukkoLoppu);
+    const appPolut = [...taulukko.matchAll(/path:\s*'([^']*)'/g)].map((m) => m[1]);
+    // Nama EIVAT tarvitse prerenderia: dynaamiset segmentit kirjoitetaan datasta
+    // omina reitteinaan, ja kaksi vanhaa polkua ohjataan palvelintasolla
+    // 301:lla (public/_redirects), joten React-reitti ei koskaan aktivoidu
+    // suoralla osumalla.
+    const eiTarvitse = new Set(['planners', 'contact']);
+    const puuttuvat = [];
+    for (const polku of appPolut) {
+      if (polku.includes(':') || eiTarvitse.has(polku)) continue;
+      for (const L of LOCALES) {
+        const kanoninen = polku === '' ? '/' : `/${polku}`;
+        const distPolku = kanoninen === '/' ? (L.prefix || '/') : (L.prefix + kanoninen);
+        if (!existsSync(pathToFile(distPolku))) puuttuvat.push(`${L.lang} ${distPolku}`);
+      }
+    }
+    if (puuttuvat.length) {
+      ongelmat.push(
+        `${puuttuvat.length} reittia joita appi renderoi mutta prerender ei kirjoittanut: ` +
+          puuttuvat.slice(0, 8).join(', ') + (puuttuvat.length > 8 ? ' …' : '')
+      );
+    }
+    console.log(`[prerender] kattavuusportti: ${appPolut.length} app-reittia, ${puuttuvat.length} kattamatta`);
+  }
+
+  if (ongelmat.length) {
+    console.error('\n[prerender] 404/KATTAVUUSPORTTI EPAONNISTUI:');
+    for (const o of ongelmat) console.error(`  - ${o}`);
+    console.error('public/_redirects ei sisalla catch-allia, joten kattamaton reitti on LIVENA 404.\n');
+    process.exit(1);
+  }
+  console.log('[prerender] wrote dist/404.html — 404 + kattavuusportti OK');
 }

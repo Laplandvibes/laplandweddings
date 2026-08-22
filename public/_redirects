@@ -35,4 +35,44 @@
 /:lang/venues/lapland-hotels-pyha /:lang/venues/lapland-hotels-luostotunturi 301
 /:lang/venues/lapland-hotels-pyha/ /:lang/venues/lapland-hotels-luostotunturi/ 301
 
-/* /index.html 200
+
+# 🔴🔴 CATCH-ALL POISTETTU 2026-08-22 — ÄLÄ PALAUTA ILMAN LUKEMISTA.
+#
+# Rivi oli:   /*    /index.html   200
+#
+# Se vastasi 200 OK:lla JOKAISEEN polkuun, myös olemattomaan. shared/NotFound
+# asettaa noindexin vasta JS:n ajon jälkeen, joten Googlebot näkee ensin
+# statuksen "tämä sivu on olemassa" ja vasta sitten noindexin — kirjaa URLin
+# "Noindex-tagin poissulkema" ja palaa crawlaamaan sitä uudestaan, koska 200
+# tarkoittaa että sivu on aito. Sama ilmoitus osui ~19 sivustolle kahden tunnin
+# sisällä 27.–28.7., ja korjaus tehtiin niille 16.8. — tämä sivusto oli
+# verkoston VIIMEINEN jolla catch-all oli yhä paikallaan (mitattu 22.8.:
+# /tata-sivua-ei-ole-12345/ palautti 200 kun kaikki muut antoivat 404:n).
+#
+# Nyt: dist/404.html (prerender-meta.mjs) + ei catch-allia
+#   => aito reitti  -> oma prerenderöity index.html, 200
+#   => kuollut polku -> 404.html, aito HTTP 404
+#
+# 🔴 TURVALLISTA VAIN KOSKA JOKAINEN APPIN REITTI ON PRERENDERÖITY.
+# scripts/prerender-meta.mjs ajaa kattavuusportin joka lukee src/App.tsx:n
+# reittitaulukon ja kaataa buildin jos yksikin reitti × 12 lokaalia puuttuu
+# dististä. Portti EI lue sitemapia: /partner-with-us on tarkoituksella
+# noindex eikä siksi ole sitemapissa — ja juuri se sivu eli pelkän catch-allin
+# varassa 22.8. asti.
+#
+# Jos lisäät reitin src/App.tsx:n taulukkoon, lisää sille myös prerender-
+# merkintä (prerender-meta.mjs `top`) TAI 301 alle. Muuten build kaatuu — se
+# on tarkoitus.
+
+# Kaksi vanhaa polkua joilla ei ole omaa sivua: React-reitit ovat
+# <Navigate to="/" replace />, eli ne ohjasivat etusivulle vasta JS:n jälkeen.
+# Ilman catch-allia suora osuma olisi 404. Palvelintason 301 on sekä nopeampi
+# että ainoa muoto jonka hakukone tulkitsee siirroksi.
+/planners          /          301
+/planners/         /          301
+/:lang/planners    /:lang/    301
+/:lang/planners/   /:lang/    301
+/contact           /          301
+/contact/          /          301
+/:lang/contact     /:lang/    301
+/:lang/contact/    /:lang/    301

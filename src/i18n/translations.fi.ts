@@ -172,6 +172,15 @@ const t_fi = {
     privacy: {
       metaTitle: 'Tietosuoja | LaplandWeddings',
       title: 'Tietosuojaseloste',
+      // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
+      // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
+      // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
+      // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
+      // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
+      // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
+      newsletterBefore: 'Kun tilaat uutiskirjeemme, sähköpostiosoitteesi tallennetaan turvallisesti Resendin ja Supabasen kautta. Voit perua tilauksesi milloin tahansa jokaisesta viestistä löytyvällä linkillä tai ',
+      unsubLabel: 'peruutussivulta',
+      newsletterAfter: '.',
       controllerLabel: 'Rekisterinpitäjä',
       paragraphs: [
         'Käytämme yhteydenottolomakkeen tietoja vain sinun tiedustelusi käsittelyyn ja sen välittämiseen hääsuunnittelijoille.',
