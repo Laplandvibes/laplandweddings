@@ -2,7 +2,7 @@
  * Centralised affiliate link builders for the LaplandVibes ecosystem.
  *
  * Active partners (only these — anything else is a leak):
- *   • Hotels.com via CJ — routed through `go.laplandvibes.com/go/hotels`
+ *   • lodging via CJ — routed through `go.laplandvibes.com/go/hotels`
  *   • EconomyBookings via CJ — routed through `go.laplandvibes.com/go/cars`
  *   • Trip.com (direct) — Allianceid 8175308, SID 309472136
  *   • laplandcarrental.com — internal LV site, not external affiliate
@@ -38,7 +38,7 @@ const TRIP_LOCALE: Record<Lang, string> = {
 
 /**
  * Anchor any hotels search to Finnish Lapland. A bare "Lapland"/venue name
- * makes Hotels.com geocode to *Lapland, Indiana, USA* (or a US town) — a real
+ * makes the lodging partner geocode to *Lapland, Indiana, USA* (or a US town) — a real
  * revenue/trust bug (Vesa 2026-07-08). Force ", Finland" onto every hotels
  * query that doesn't already name the country. Callers cannot regress.
  */
@@ -48,7 +48,7 @@ function anchorFinland(query: string): string {
     : `${query.replace(/[\s,]+$/, '')}, Finland`;
 }
 
-/** Hotels.com via the LV Worker (CJ tracking handled server-side). */
+/** lodging via the LV Worker (CJ tracking handled server-side). */
 export function hotelsLink(query: string, sid = 'venue', lang: Lang = 'en'): string {
   const u = new URL('https://go.laplandvibes.com/go/hotels');
   u.searchParams.set('sid', sid);
@@ -99,7 +99,7 @@ export function venueLodgingLink(
   return u.toString();
 }
 
-/** Hotels.com seasonal — for top-pick / featured destinations. */
+/** Lodging seasonal — for top-pick / featured destinations. */
 export function hotelsSeasonalLink(query: string, sid = 'seasonal', lang: Lang = 'en'): string {
   const u = new URL('https://go.laplandvibes.com/go/hotels-seasonal');
   u.searchParams.set('sid', sid);

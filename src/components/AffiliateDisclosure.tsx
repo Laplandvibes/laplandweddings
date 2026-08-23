@@ -2,7 +2,7 @@ import { useLang } from '../i18n/LangContext';
 
 /**
  * FTC / DSA-compliant affiliate disclosure. Render once on any page that
- * contains affiliate CTAs (venue cards with Hotels.com bookings, Trip.com
+ * contains affiliate CTAs (venue cards with lodging bookings, Trip.com
  * flights, etc.).
  */
 const TEXT: Record<string, string> = {

@@ -14,7 +14,7 @@
  * Three separate causes, all fixed here + in `lib/affiliate.ts`:
  *
  * 1. `anchorFinland()` glued ", Finland" onto the venue NAME. That guard is
- *    right for a TOWN (Hotels.com used to geocode a bare "Lapland" to Indiana)
+ *    right for a TOWN (the lodging partner used to geocode a bare "Lapland" to Indiana)
  *    and actively wrong for a hotel name: Sembo's autosuggest answers [] for
  *    multi-word hotel terms, the Worker then has no destination at all, and the
  *    visitor lands on sembo.fi's front page. `?ss=` is now always the TOWN and
