@@ -805,7 +805,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
 
   const networkLinks: Array<[string, string, string]> = [
     [isFi ? 'Majoitus' : 'Stays', 'https://laplandstays.com', isFi ? 'Lasi-iglut, hotellit, mökit vieraille' : 'Glass igloos, hotels, cabins for guests'],
-    [isFi ? 'Aktiviteetit' : 'Activities', 'https://laplandactivities.online', isFi ? 'Husky, poro, moottorikelkka, revontuliretket' : 'Husky, reindeer, snowmobile, aurora tours'],
+    [isFi ? 'Aktiviteetit' : 'Activities', 'https://laplandactivities.fi', isFi ? 'Husky, poro, moottorikelkka, revontuliretket' : 'Husky, reindeer, snowmobile, aurora tours'],
     [isFi ? 'Ravintolat' : 'Dining', 'https://laplanddining.com', isFi ? 'Lapin keittiö, fine dining, polttarit' : 'Lapland cuisine, fine dining, hen & stag nights'],
     [isFi ? 'Autovuokraus' : 'Car rental', 'https://laplandcarrental.com', isFi ? 'Suoraan lentokentältä' : 'Straight from the airport'],
   ];
