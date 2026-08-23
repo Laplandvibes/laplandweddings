@@ -802,7 +802,19 @@ console.log(`Prerendered ${count} routes across ${LOCALES.length} locales (${cou
   const html = readFileSync(probe, 'utf-8');
   const problems = [];
   if (!html.includes('id="lv-prerender"')) problems.push('crawlable body block missing');
-  if (!/<div id="root"><div/.test(html)) problems.push('block is not inside #root');
+  if (!/<div id="root"><!--LV-PRE-->/.test(html)) problems.push('block is not inside #root');
+
+  // Mirrors the shared prerenderer's gate (2026-08-23): the block is now hidden
+  // from JS browsers, and the two halves fail in OPPOSITE directions — a missing
+  // marker script paints the text at every page load, a hide rule that is not
+  // gated on that class hides it from the non-JS crawlers too and silently
+  // deletes the whole SEO purpose.
+  if (!html.includes("classList.add('lv-js')")) problems.push('lv-js marker script missing — the block would be painted');
+  if (!html.includes('.lv-js #lv-prerender{display:none}')) problems.push('class-scoped hide rule missing');
+  for (const m of html.matchAll(/([^{}]*)#lv-prerender\s*\{\s*display:\s*none/g)) {
+    if (!/\.lv-js\s+$/.test(m[1])) problems.push('hide rule is not class-scoped — non-JS crawlers would lose the block');
+  }
+  if (!html.includes('id="lv-splash"')) problems.push('branded splash missing');
   const networkLinks = (html.match(/<a\s+href="https:\/\/(?!laplandweddings\.)/g) || []).length;
   if (networkLinks < 27) problems.push(`only ${networkLinks} outbound network links, expected >= 27`);
 
