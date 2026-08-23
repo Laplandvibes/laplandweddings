@@ -52,8 +52,18 @@ if (!CB) {
 // hakemistosta ajettu build sammuttaisi ominaisuuden aanettomasti.
 const SITE_ROOT = resolve(__dirname, '..');
 const NETWORK = CB ? CB.readFooterNetwork(SITE_ROOT) : null;
-if (CB && !NETWORK) {
-  console.warn('[prerender] WARN: shared/Footer.tsx linkkeja/labeleita ei voitu lukea — body-injektio ohitetaan');
+if (!CB || !NETWORK) {
+  console.error('');
+  console.error('[prerender] CRAWLABLE-BODY -PORTTI: runkoa ei voi rakentaa.');
+  if (!CB) console.error('  - _prerender_crawlable_body.mjs ei latautunut (vendoroitu kopio puuttuu?)');
+  else console.error('  - shared/Footer.tsx linkkeja/labeleita ei voitu lukea');
+  console.error('  23.8.2026 asti tama oli console.warn JA alla oleva savuportti oli kaarittu');
+  console.error('  `if (NETWORK)`:iin — eli portti sammui tasan silloin kun sita olisi tarvittu.');
+  console.error('  Se paasti CI:n julkaisemaan 552 sivua joilla oli 8 sanaa runkoa: vihrea build,');
+  console.error('  yksi rivi lokissa. Moduuli on nyt vendoroitu, joten myos plain checkout loytaa');
+  console.error('  sen - jos ei loyda, se on aito vika eika ymparistoero.');
+  console.error('');
+  process.exit(1);
 }
 
 const RAW_SHELL = readFileSync(resolve(DIST, 'index.html'), 'utf-8');
@@ -787,7 +797,7 @@ console.log(`Prerendered ${count} routes across ${LOCALES.length} locales (${cou
 // So assert the finished artefact, not the intent: read back what was actually
 // written and fail the build if the block is gone. Checks the LAST file written
 // rather than a fixed path, so it cannot pass on a stale dist.
-if (NETWORK) {
+{
   const probe = pathToFile('/');
   const html = readFileSync(probe, 'utf-8');
   const problems = [];
