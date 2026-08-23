@@ -681,7 +681,16 @@ for (const v of venues) {
     const region = i18n('venues', v.slug, L.lang, 'region', v);
     const desc = i18n('venues', v.slug, L.lang, 'desc', v);
     byLang[L.lang] = {
-      title: `${v.name}: ${region} | LaplandWeddings`,
+      // [LV-TITLE-LEN 2026-08-23] Venue-nimi + koko aluekuvaus ylitti 60 merkkia
+      // kahdeksalla lokaalilla ("Lapland Hotels SnowVillage (Lainio): Lainio,
+      // Kittila · zwischen Yllas und Levi" = 78) ja katkesi hakutuloksessa.
+      // Aluekuvauksen `·`-hanta on suuntatietoa, joka toistaa jo mainitun
+      // paikkakunnan — pudotetaan VAIN kun otsikko ei muuten mahdu. Sivun oma
+      // sisalto nayttaa aluekuvauksen kokonaisena, tama koskee vain <title>:a.
+      title: (() => {
+        const full = `${v.name}: ${region}`;
+        return (full.length > 60 ? `${v.name}: ${region.split(' · ')[0]}` : full) + ' | LaplandWeddings';
+      })(),
       description: desc,
     };
   }
