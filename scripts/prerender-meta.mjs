@@ -30,10 +30,20 @@ if (!existsSync(resolve(DIST, 'index.html'))) {
   process.exit(1);
 }
 
+// Vendoroitu kopio ENSIN, monorepon juuri vasta varalle. 23.8.2026 asti tama
+// osui vain monorepoon, joten CI-build (plain checkout, `on: push`) sammutti
+// crawlable bodyn aanettomasti ja julkaisi 552 reittia joilla oli 8 sanaa
+// runkoa. Build vihrea, lokissa yksi NOTE-rivi. Sama muoto kuin laplandgifts f76797a.
 let CB = null;
-try {
-  CB = await import('../../_prerender_crawlable_body.mjs');
-} catch {
+for (const cand of ['./_prerender_crawlable_body.mjs', '../../_prerender_crawlable_body.mjs']) {
+  try {
+    CB = await import(cand);
+    break;
+  } catch {
+    /* kokeile seuraava kandidaatti */
+  }
+}
+if (!CB) {
   console.warn('[prerender] NOTE: _prerender_crawlable_body.mjs ei loydy — crawlable body pois kaytosta');
 }
 
