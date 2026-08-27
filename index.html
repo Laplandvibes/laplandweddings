@@ -98,6 +98,23 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      /* Consent Mode v2 — oletus DENIED kunnes CookieBanner hyvaksytaan.
+         Puuttui kokonaan 27.8.2026 asti: GA4 kirjoitti _ga-evasteen ennen
+         bannerin vastausta ja "Decline" ei kieltanyt mitaan. */
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+      /* 🔴 Palautus: jaettu CookieBanner kutsuu consent updatea VAIN accept-klikissa.
+         Ilman tata palaava, jo suostunut kavija jai ikuisesti denied-tilaan. */
+      try {
+        if (localStorage.getItem('laplandweddings_cookie_consent') === 'accepted') {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+      } catch (e) { /* privaattitila: pysy denied-tilassa */ }
       gtag('js', new Date());
       gtag('config', 'G-56L3JN54PG', {
         linker: {
