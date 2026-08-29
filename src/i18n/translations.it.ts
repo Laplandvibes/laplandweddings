@@ -170,7 +170,7 @@ const t_it = {
       ],
     },
     privacy: {
-      metaTitle: 'Privacy | LaplandWeddings',
+      metaTitle: 'Informativa sulla privacy | LaplandWeddings',
       title: 'Informativa sulla privacy',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
