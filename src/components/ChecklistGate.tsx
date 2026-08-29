@@ -24,7 +24,7 @@ type GateKey =
 
 const GATE: Record<GateKey, Localized<string>> = {
   eyebrow: {
-    en: 'Free lead magnet',
+    en: 'Free download',
     fi: 'Maksuton lead magnet',
     de: 'Kostenloser Lead-Magnet',
     ja: '無料の特典コンテンツ',
@@ -50,7 +50,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     nl: 'Ontgrendel de DVV-checklist: één e-mail, meer niet', sv: 'Lås upp DVV-checklistan: en e-postadress, inget mer',
   },
   sub: {
-    en: 'Get every step and link instantly, plus regular updates from inside Lapland’s wedding market: venues, season tips, offers. Unsubscribe anytime.',
+    en: 'Get every step and link instantly, plus regular updates from inside Lapland’s wedding market: venues, season tips, offers. Unsubscribe at any time.',
     fi: 'Saat heti kaikki vaiheet ja linkit, plus säännöllisiä uutiskirjeitä Lapin häämarkkinasta: venuet, sesonkivinkit ja tarjoukset. Voit perua koska tahansa.',
     de: 'Erhalten Sie sofort alle Schritte und Links sowie regelmäßige Updates aus dem Hochzeitsmarkt Lapplands: Locations, Saisontipps, Angebote. Jederzeit abbestellbar.',
     ja: 'すべての手順とリンクをすぐに入手でき、さらにラップランドのウェディング市場の最新情報（会場、シーズンのヒント、特典）を定期的にお届けします。いつでも配信停止可能です。',
@@ -154,7 +154,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     nl: 'jij@email.com', sv: 'du@epost.com',
   },
   consent: {
-    en: 'I agree that I may be contacted about Lapland-wedding topics. I can unsubscribe anytime.',
+    en: 'I agree that I may be contacted about Lapland-wedding topics. I can unsubscribe at any time.',
     fi: 'Hyväksyn että minuun voidaan ottaa yhteyttä Lapin häämarkkinaan liittyvistä asioista. Voin perua koska tahansa.',
     de: 'Ich bin damit einverstanden, zu Themen rund um Hochzeiten in Lappland kontaktiert zu werden. Ich kann mich jederzeit abmelden.',
     ja: 'ラップランドのウェディングに関する連絡を受け取ることに同意します。いつでも配信停止できます。',

@@ -74,7 +74,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     nl: 'Bruidspaar in winters Lapland', sv: 'Brudpar i vinterns Lappland',
   },
   sourceNote: {
-    en: 'Information sourced from public photographer websites. LaplandWeddings is not in a contractual relationship with all listed. Contact directly via their own sites.',
+    en: 'Information sourced from public photographer websites. LaplandWeddings does not have a contractual relationship with every photographer listed. Contact directly via their own sites.',
     fi: 'Tiedot kerätty valokuvaajien omilta julkisilta sivuilta. LaplandWeddings ei ole sopimussuhteessa kaikkiin listattuihin. Yhteyshenkilöt heidän omista sivustaan.',
     de: 'Angaben aus den öffentlichen Websites der Fotografen. LaplandWeddings steht nicht mit allen Gelisteten in einem Vertragsverhältnis. Wenden Sie sich direkt über deren eigene Seiten an sie.',
     ja: '情報は各フォトグラファーの公開ウェブサイトから収集しています。LaplandWeddingsは掲載者全員と契約関係にあるわけではありません。各自の公式サイトから直接ご連絡ください。',
@@ -84,7 +84,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     ko: '정보는 각 포토그래퍼의 공개 웹사이트에서 수집했습니다. LaplandWeddings는 게재된 모든 분과 계약 관계에 있지 않습니다. 각자의 사이트를 통해 직접 연락하세요.',
     fr: 'Informations issues des sites web publics des photographes. LaplandWeddings n’est pas lié par contrat à tous les photographes répertoriés. Contactez-les directement via leurs propres sites.',
     it: 'Informazioni tratte dai siti web pubblici dei fotografi. LaplandWeddings non ha un rapporto contrattuale con tutti gli elencati. Contattali direttamente tramite i loro siti.',
-    nl: 'Informatie afkomstig van de openbare websites van de fotografen. LaplandWeddings heeft geen contractuele relatie met alle vermelde fotografen. Neem rechtstreeks contact op via hun eigen sites.', sv: 'Information sourced from public photographer websites. LaplandWeddings is not in a contractual relationship with all listed. Contact directly via their own sites.',
+    nl: 'Informatie afkomstig van de openbare websites van de fotografen. LaplandWeddings heeft geen contractuele relatie met alle vermelde fotografen. Neem rechtstreeks contact op via hun eigen sites.', sv: 'Information sourced from public photographer websites. LaplandWeddings does not have a contractual relationship with every photographer listed. Contact directly via their own sites.',
   },
 };
 

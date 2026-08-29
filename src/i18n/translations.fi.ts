@@ -92,7 +92,7 @@ const t_fi = {
     threeQuotesP: 'Tarvitset vain 5 minuuttia. Saat 1–7 päivän sisällä tarjoukset 1–3 hääsuunnittelijalta, vertaile ja valitse. Maksuton ja sitoumukseton.',
   },
   practical: {
-    title: 'Häät Lapissa , käytännön opas',
+    title: 'Häät Lapissa, käytännön opas',
     subtitle: 'Avioliittolupa, paperit, sesongit, lentoyhteydet ja vieraiden majoitus.',
   },
   pricing: {

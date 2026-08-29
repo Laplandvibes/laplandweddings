@@ -27,13 +27,13 @@ const t_en = {
     bookStay: 'Book a stay',
   },
   home: {
-    heroTitle: 'Lapland Weddings , everything in one place',
+    heroTitle: 'Lapland Weddings: everything in one place',
     heroSubtitle: 'Glass igloos · Snow chapels · Northern Lights · Midnight Sun. In Finnish and English. Get matched with Lapland’s most experienced planners.',
     heroTitleSummer: 'Midnight Sun Weddings in Lapland',
     heroSubtitleSummer: 'Lakeside vows · Fell-top ceremonies · Glass roofs under the never-dark sky · Long luminous evenings. In Finnish and English. Get matched with Lapland’s most experienced planners.',
     heroReassure: 'Free & no commitment · reply within 1–7 days',
     whyTitle: 'Why Lapland for your wedding',
-    whyP: 'Weddings in Lapland happen in glass igloos, snow chapels and on fell tops, and most of the time the ceremony is symbolic. This site gathers the places, the seasons and what things actually cost. We do not organise weddings and we represent no venue: you tell us what you want, we pass it on to wedding planners in Lapland.',
+    whyP: 'Weddings in Lapland happen in glass igloos, snow chapels and on fell tops, and most of the time the ceremony is symbolic. This site gathers the places, the seasons and what things actually cost. We do not organise weddings and we represent no venue: you tell us what you want and we pass it on to wedding planners in Lapland.',
     audienceTitle: 'In Finnish for Finns, in English for international couples',
     audienceFi: 'A Finnish couple? Get Finnish-speaking planners and clear price ranges in your own language.',
     audienceEn: 'International couple? Get Finnish wedding planners experienced with foreign legal paperwork, DVV done for you.',
@@ -72,7 +72,7 @@ const t_en = {
   },
   types: {
     indexTitle: 'Lapland wedding types',
-    indexIntro: 'Glass igloo nights, snow chapels, Northern Lights, Midnight Sun, elopements and vow renewals, six main directions to choose from.',
+    indexIntro: 'Glass igloo nights, snow chapels, Northern Lights, Midnight Sun, elopements and vow renewals: six main directions to choose from.',
   },
   venues: {
     indexTitle: 'The most popular wedding venues in Lapland',
@@ -89,10 +89,10 @@ const t_en = {
     indexTitle: 'Lapland wedding planners',
     indexIntro: 'We have collected the seven most established Lapland wedding planners. Send one form → we deliver 1–3 personalised quotes.',
     threeQuotesTitle: 'Get 1–3 quotes with a single form',
-    threeQuotesP: 'Five minutes is all it takes. Within 1–7 days you receive 1–3 wedding planner quotes, compare and choose. Free and no commitment.',
+    threeQuotesP: 'Five minutes is all it takes. Within 1–7 days you receive 1–3 wedding planner quotes: compare them and choose. Free and no commitment.',
   },
   practical: {
-    title: 'Getting married in Lapland , practical guide',
+    title: 'Getting married in Lapland: a practical guide',
     subtitle: 'Marriage licence, paperwork, seasons, flights, and guest accommodation.',
   },
   pricing: {
@@ -101,7 +101,7 @@ const t_en = {
   },
   contact: {
     title: 'Get in touch',
-    subtitle: 'We respond within 1–2 business days. Tell us briefly about your dream, we route it to the right planners.',
+    subtitle: 'We respond within 1–2 business days. Tell us briefly about your dream and we route it to the right planners.',
     formTitle: 'Get 1–3 quotes',
     formSub: 'Free and with no commitment. Reply within 1–7 days.',
   },
@@ -142,7 +142,7 @@ const t_en = {
     budget5: 'Over €60 000',
     message: 'Tell us more about your dream',
     messagePlaceholder: 'E.g. Northern Lights ceremony, guests flying from the UK, want a husky safari included...',
-    consent: 'I agree that my details may be shared with 1–3 wedding planners and the LaplandVibes team. I can withdraw anytime.',
+    consent: 'I agree that my details may be shared with 1–3 wedding planners and the LaplandVibes team. I can withdraw at any time.',
     attachments: 'Inspiration photos and videos (optional)',
     attachmentsHelp: 'Drag files here or click to browse. Pinterest pins, mood boards, short videos. Max 5 files, images ≤ 5 MB, videos ≤ 25 MB.',
     attachmentsDrop: 'Drop files here',
@@ -157,14 +157,14 @@ const t_en = {
     success: 'Thank you! Up to three matched Lapland wedding specialists will contact you directly within 1–7 days.',
     error: 'Submission failed. Try again or email info@laplandvibes.com directly.',
   },
-  footerLine: 'Part of the LaplandVibes Network · We are not a planner, we compare the best for you.',
+  footerLine: 'Part of the LaplandVibes Network · We are not a planner; we compare the best for you.',
   legal: {
     terms: {
       metaTitle: 'Terms of Use | LaplandWeddings',
       title: 'Terms of Use',
       paragraphs: [
-        'LaplandWeddings.online is an information site operated by Lapeso Oy. We are not a wedding planning agency, we forward enquiries to wedding planners.',
-        'Information is sourced from public planner and venue pages. Prices and availability change, always confirm with the supplier.',
+        'LaplandWeddings.online is an information site operated by Lapeso Oy. We are not a wedding planning agency; we forward enquiries to wedding planners.',
+        'Information is sourced from public planner and venue pages. Prices and availability change, so always confirm with the supplier.',
         'LaplandWeddings is not responsible for the actions or contractual performance of third parties (planners, venues, photographers).',
         'Some links on this site are affiliate links. If you book through them we may earn a commission at no extra cost to you. This never affects the price you pay or which partners we recommend.',
       ],
@@ -197,7 +197,7 @@ const t_en = {
       paragraphs: [
         'We use strictly necessary cookies for site function (language preference, consent).',
         'With your consent we use Google Analytics 4 for visitor analytics.',
-        'We do not use advertising tracking, your consent is not required for ad targeting.',
+        'We do not use advertising tracking, so your consent is not required for ad targeting.',
       ],
     },
   },

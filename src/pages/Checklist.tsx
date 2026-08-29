@@ -44,7 +44,7 @@ const CONTENT: Localized<ChecklistContent> = {
   en: {
     seoTitle: 'DVV Wedding Checklist for Foreign Couples | LaplandWeddings',
     seoDesc: 'A one-page checklist for foreign couples planning to marry in Finnish Lapland. DVV paperwork, witnesses, officiant. Print as PDF.',
-    eyebrow: 'Lead magnet',
+    eyebrow: 'Free download',
     title: 'Marrying in Lapland: DVV checklist for foreign couples',
     subtitle: 'A one-page checklist covering every document and step required when a foreign couple wants to marry in Finnish Lapland. Print or save as PDF for your travel folder.',
     printBtn: 'Print or save as PDF',
@@ -66,7 +66,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Confirm the ceremony timing with the venue', why: 'Snow chapels operate at –3 to –7 °C. Keep ceremonies 15–30 min.' },
       { sec: 'D', do: 'Collect 2 official marriage certificates in English', why: 'Required for home-country registration. From DVV.' },
       { sec: 'D', do: 'Get an apostille from the DVV', why: 'Required for recognition in your home country.' },
-      { sec: 'D', do: 'Register the marriage in your home country', why: 'In EU countries usually within a month. After this the marriage is globally valid.' },
+      { sec: 'D', do: 'Register the marriage in your home country', why: 'In EU countries usually within a month. After this your marriage is on record at home as well as in Finland.' },
     ],
   },
   fi: {
@@ -94,7 +94,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Vahvista vihkimys-aikataulu venuelta', why: 'Lumikappelit ovat lämpötilassa -3…-7 °C. Seremoniat 15–30 min.' },
       { sec: 'D', do: 'Hae 2 virallista vihkimistodistusta englanniksi', why: 'Tarvitaan kotimaan rekisteröintiin. DVV:ltä.' },
       { sec: 'D', do: 'Apostille-leima DVV:llä', why: 'Tunnustaa avioliiton kotimaassasi.' },
-      { sec: 'D', do: 'Rekisteröi avioliitto kotimaassasi', why: 'EU-maissa yleensä kuukauden sisällä. Tämän jälkeen avioliitto pätee globaalisti.' },
+      { sec: 'D', do: 'Rekisteröi avioliitto kotimaassasi', why: 'EU-maissa yleensä kuukauden sisällä. Tämän jälkeen avioliitto on kirjattu sekä kotimaassasi että Suomessa.' },
     ],
   },
   de: {
@@ -122,7 +122,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Zeitplan der Zeremonie mit der Location bestätigen', why: 'Schneekapellen liegen bei –3 bis –7 °C. Halten Sie Zeremonien auf 15–30 Min.' },
       { sec: 'D', do: '2 offizielle Heiratsurkunden auf Englisch besorgen', why: 'Erforderlich für die Registrierung im Heimatland. Von der DVV.' },
       { sec: 'D', do: 'Apostille von der DVV einholen', why: 'Erforderlich für die Anerkennung in Ihrem Heimatland.' },
-      { sec: 'D', do: 'Die Ehe in Ihrem Heimatland registrieren', why: 'In EU-Ländern in der Regel innerhalb eines Monats. Danach ist die Ehe weltweit gültig.' },
+      { sec: 'D', do: 'Die Ehe in Ihrem Heimatland registrieren', why: 'In EU-Ländern in der Regel innerhalb eines Monats. Danach ist die Ehe zu Hause wie in Finnland eingetragen.' },
     ],
   },
   ja: {
@@ -150,7 +150,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: '会場と挙式のスケジュールを確認する', why: 'スノーチャペルは－3〜－7℃。挙式は15〜30分に。' },
       { sec: 'D', do: '英語の公式婚姻証明書を2通取得する', why: '母国での登録に必要です。DVVから。' },
       { sec: 'D', do: 'DVVでアポスティーユを取得する', why: '母国での承認に必要です。' },
-      { sec: 'D', do: '母国で婚姻を登録する', why: 'EU諸国では通常1か月以内。これ以降、婚姻は世界中で有効になります。' },
+      { sec: 'D', do: '母国で婚姻を登録する', why: 'EU諸国では通常1か月以内。これ以降、婚姻は母国とフィンランドの双方に記録されます。' },
     ],
   },
   es: {
@@ -178,7 +178,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Confirma el horario de la ceremonia con el lugar', why: 'Las capillas de nieve están a –3 a –7 °C: mantén las ceremonias en 15–30 min.' },
       { sec: 'D', do: 'Obtén 2 certificados de matrimonio oficiales en inglés', why: 'Necesarios para el registro en tu país de origen. Del DVV.' },
       { sec: 'D', do: 'Consigue una apostilla del DVV', why: 'Necesaria para el reconocimiento en tu país de origen.' },
-      { sec: 'D', do: 'Registra el matrimonio en tu país de origen', why: 'En los países de la UE, normalmente en un mes. Después, el matrimonio es válido en todo el mundo.' },
+      { sec: 'D', do: 'Registra el matrimonio en tu país de origen', why: 'En los países de la UE, normalmente en un mes. Después, el matrimonio queda inscrito en tu país y en Finlandia.' },
     ],
   },
   'pt-BR': {
@@ -206,7 +206,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Confirme o horário da cerimônia com o local', why: 'Capelas de neve ficam a –3 a –7 °C. Mantenha as cerimônias em 15–30 min.' },
       { sec: 'D', do: 'Obtenha 2 certidões de casamento oficiais em inglês', why: 'Necessárias para o registro no país de origem. Do DVV.' },
       { sec: 'D', do: 'Obtenha uma apostila do DVV', why: 'Necessária para o reconhecimento no seu país de origem.' },
-      { sec: 'D', do: 'Registre o casamento no seu país de origem', why: 'Em países da UE, geralmente em até um mês. Depois disso, o casamento é válido globalmente.' },
+      { sec: 'D', do: 'Registre o casamento no seu país de origem', why: 'Em países da UE, geralmente em até um mês. Depois disso, o casamento fica registrado no seu país e na Finlândia.' },
     ],
   },
   'zh-CN': {
@@ -234,7 +234,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: '与场地确认仪式时间', why: '雪教堂温度为 –3 至 –7 °C，仪式控制在 15–30 分钟。' },
       { sec: 'D', do: '领取 2 份英文官方结婚证书', why: '回国登记所需。由 DVV 出具。' },
       { sec: 'D', do: '在 DVV 办理海牙认证', why: '在你的祖国获得认可所需。' },
-      { sec: 'D', do: '在你的祖国登记婚姻', why: '欧盟国家通常一个月内完成。此后婚姻在全球有效。' },
+      { sec: 'D', do: '在你的祖国登记婚姻', why: '欧盟国家通常一个月内完成。此后婚姻在本国与芬兰均有登记。' },
     ],
   },
   ko: {
@@ -262,7 +262,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: '웨딩 장소와 예식 일정을 확인하세요', why: '스노우 채플은 –3~–7 °C입니다. 예식은 15~30분으로 유지하세요.' },
       { sec: 'D', do: '영문 공식 혼인증명서 2부를 받으세요', why: '본국 등록에 필요합니다. DVV에서.' },
       { sec: 'D', do: 'DVV에서 아포스티유를 받으세요', why: '본국에서 인정받는 데 필요합니다.' },
-      { sec: 'D', do: '본국에 혼인을 등록하세요', why: 'EU 국가에서는 보통 한 달 이내. 이후 혼인은 전 세계적으로 유효합니다.' },
+      { sec: 'D', do: '본국에 혼인을 등록하세요', why: 'EU 국가에서는 보통 한 달 이내. 이후 혼인은 본국과 핀란드 양쪽에 기록됩니다.' },
     ],
   },
   fr: {
@@ -290,7 +290,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Confirmez l’horaire de la cérémonie avec le lieu', why: 'Les chapelles de neige sont à –3 à –7 °C. Limitez les cérémonies à 15–30 min.' },
       { sec: 'D', do: 'Obtenez 2 actes de mariage officiels en anglais', why: 'Nécessaires pour l’enregistrement dans votre pays d’origine. Auprès du DVV.' },
       { sec: 'D', do: 'Obtenez une apostille du DVV', why: 'Nécessaire pour la reconnaissance dans votre pays d’origine.' },
-      { sec: 'D', do: 'Enregistrez le mariage dans votre pays d’origine', why: 'Dans les pays de l’UE, généralement sous un mois. Ensuite, le mariage est valable dans le monde entier.' },
+      { sec: 'D', do: 'Enregistrez le mariage dans votre pays d’origine', why: 'Dans les pays de l’UE, généralement sous un mois. Ensuite, le mariage est enregistré chez vous comme en Finlande.' },
     ],
   },
   it: {
@@ -318,7 +318,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Conferma l’orario della cerimonia con la location', why: 'Le cappelle di neve sono a –3 / –7 °C. Mantieni le cerimonie su 15–30 min.' },
       { sec: 'D', do: 'Ottieni 2 certificati di matrimonio ufficiali in inglese', why: 'Necessari per la registrazione nel Paese di origine. Dal DVV.' },
       { sec: 'D', do: 'Ottieni un’apostille dal DVV', why: 'Necessaria per il riconoscimento nel tuo Paese di origine.' },
-      { sec: 'D', do: 'Registra il matrimonio nel tuo Paese di origine', why: 'Nei Paesi UE di solito entro un mese. Dopodiché il matrimonio è valido a livello globale.' },
+      { sec: 'D', do: 'Registra il matrimonio nel tuo Paese di origine', why: 'Nei Paesi UE di solito entro un mese. Da quel momento il matrimonio è registrato nel tuo Paese e in Finlandia.' },
     ],
   },
   nl: {
@@ -346,12 +346,12 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Bevestig de timing van de ceremonie met de locatie', why: 'Sneeuwkapellen zijn –3 tot –7 °C. Houd ceremonies op 15–30 min.' },
       { sec: 'D', do: 'Haal 2 officiële huwelijksakten in het Engels op', why: 'Nodig voor registratie in je eigen land. Van de DVV.' },
       { sec: 'D', do: 'Vraag een apostille aan bij de DVV', why: 'Nodig voor erkenning in je eigen land.' },
-      { sec: 'D', do: 'Registreer het huwelijk in je eigen land', why: 'In EU-landen meestal binnen een maand. Daarna is het huwelijk wereldwijd geldig.' },
+      { sec: 'D', do: 'Registreer het huwelijk in je eigen land', why: 'In EU-landen meestal binnen een maand. Daarna is het huwelijk zowel thuis als in Finland geregistreerd.' },
     ],
   }, sv: {
     seoTitle: 'DVV Wedding Checklist for Foreign Couples | LaplandWeddings',
     seoDesc: 'A one-page checklist for foreign couples planning to marry in Finnish Lapland. DVV paperwork, witnesses, officiant. Print as PDF.',
-    eyebrow: 'Lead magnet',
+    eyebrow: 'Free download',
     title: 'Marrying in Lapland: DVV checklist for foreign couples',
     subtitle: 'A one-page checklist covering every document and step required when a foreign couple wants to marry in Finnish Lapland. Print or save as PDF for your travel folder.',
     printBtn: 'Print or save as PDF',
@@ -373,7 +373,7 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'C', do: 'Confirm the ceremony timing with the venue', why: 'Snow chapels operate at –3 to –7 °C. Keep ceremonies 15–30 min.' },
       { sec: 'D', do: 'Collect 2 official marriage certificates in English', why: 'Required for home-country registration. From DVV.' },
       { sec: 'D', do: 'Get an apostille from the DVV', why: 'Required for recognition in your home country.' },
-      { sec: 'D', do: 'Register the marriage in your home country', why: 'In EU countries usually within a month. After this the marriage is globally valid.' },
+      { sec: 'D', do: 'Register the marriage in your home country', why: 'In EU countries usually within a month. After this your marriage is on record at home as well as in Finland.' },
     ],
   },
 };

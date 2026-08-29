@@ -263,7 +263,7 @@ export default function Home() {
               }),
               body: pick(lang, {
                 fi: 'Lumi ja revontulet ovat silloin varmimmillaan. Kesällä aurinko ei laske lainkaan.',
-                en: 'Snow and the aurora are at their most reliable then. In summer the sun never sets.',
+                en: 'Snow and the aurora are at their most reliable then. Around midsummer the sun does not set at all.',
                 de: 'Schnee und Polarlichter sind dann am verlässlichsten. Im Sommer geht die Sonne nie unter.',
                 ja: '雪とオーロラがもっとも確実な時期です。夏は太陽が沈みません。',
                 ko: '눈과 오로라가 가장 확실한 시기입니다. 여름에는 해가 지지 않습니다.',
@@ -389,7 +389,7 @@ export default function Home() {
               }),
               body: pick(lang, {
                 fi: 'Pari saapuu vihkimykseen 8 huskyn vetämällä rekellä. Viraali hetki joka kerta.',
-                en: 'The couple arrives at the ceremony pulled by 8 huskies. A viral moment every time.',
+                en: 'The couple arrives at the ceremony pulled by 8 huskies. The arrival shot everyone photographs.',
                 de: 'Das Paar kommt zur Trauung mit einem Schlitten, gezogen von 8 Huskys. Jedes Mal ein viraler Moment.',
                 ja: '新郎新婦が8頭のハスキーが引くそりで挙式会場に到着。必ずバズる名場面です。',
                 ko: '신랑 신부가 허스키 8마리가 끄는 썰매를 타고 예식장에 등장합니다. 매번 화제가 되는 순간입니다.',
@@ -414,7 +414,7 @@ export default function Home() {
               }),
               body: pick(lang, {
                 fi: 'Inarinjärvellä iltahämärässä, koko jäätikkö ulottuu tunturille saakka.',
-                en: 'On Lake Inari at dusk, the entire ice sheet stretches to the fjeld.',
+                en: 'On Lake Inari at dusk, the entire ice sheet stretches to the fells.',
                 de: 'Auf dem Inarisee in der Dämmerung, die Eisfläche reicht bis zum Fjäll.',
                 ja: '夕暮れのイナリ湖、一面の氷原が山まで広がります。',
                 ko: '해 질 녘의 이나리 호수, 광활한 빙판이 산자락까지 펼쳐집니다.',

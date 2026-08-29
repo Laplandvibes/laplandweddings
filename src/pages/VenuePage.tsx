@@ -179,7 +179,7 @@ const V: Record<VKey, Localized<string>> = {
   // No delivery SLA and no quote count here: the planner network is real, but the
   // turnaround is not ours to promise (Vesa 2026-07-27). Planners reply directly.
   leadIntro: {
-    en: 'Fill in the form and the LaplandWeddings team will route your enquiry to this venue’s trusted wedding planners. They send you tailored quotes directly.',
+    en: 'Fill in the form and the LaplandWeddings team will route your enquiry to wedding planners who work in this region. They send you tailored quotes directly.',
     fi: 'Täytä lomake, niin LaplandWeddings-tiimi ohjaa kyselysi tämän venuen luotetuille hääsuunnittelijoille. He lähettävät räätälöidyt tarjoukset sinulle suoraan.',
     de: 'Füllen Sie das Formular aus, und das LaplandWeddings-Team leitet Ihre Anfrage an die vertrauenswürdigen Hochzeitsplaner dieser Location weiter. Ihre maßgeschneiderten Angebote erhalten Sie direkt von ihnen.',
     ja: 'フォームにご記入いただくと、LaplandWeddingsチームがこの会場の信頼できるウェディングプランナーへお問い合わせを取り次ぎます。オーダーメイドのお見積もりはプランナーから直接お届けします。',

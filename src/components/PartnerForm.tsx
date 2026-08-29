@@ -273,7 +273,7 @@ const T: Record<FormKey, Localized<string>> = {
     nl: 'Vertel ons kort over jezelf', sv: 'Berätta kort om er',
   },
   messagePlaceholder: {
-    en: 'Style, specialties, example weddings, what makes you a fit…',
+    en: 'Style, specialities, example weddings, what makes you a fit…',
     fi: 'Tyyli, erikoisalat, esimerkkihäät, mikä tekee teistä sopivan…',
     de: 'Stil, Spezialitäten, Beispielhochzeiten, warum Sie passen…',
     ja: 'スタイル、得意分野、過去の挙式例、貴社が適している理由など…',
@@ -286,7 +286,7 @@ const T: Record<FormKey, Localized<string>> = {
     nl: 'Stijl, specialiteiten, voorbeeldbruiloften, waarom je past…', sv: 'Stil, specialiteter, exempelbröllop, varför ni passar…',
   },
   consent: {
-    en: 'I agree that the LaplandVibes team may contact me about partnership. I can withdraw anytime.',
+    en: 'I agree that the LaplandVibes team may contact me about partnership. I can withdraw at any time.',
     fi: 'Hyväksyn, että LaplandVibes-tiimi voi olla minuun yhteydessä kumppanuudesta. Voin perua koska tahansa.',
     de: 'Ich bin damit einverstanden, dass das LaplandVibes-Team mich zur Partnerschaft kontaktiert. Ich kann jederzeit widerrufen.',
     ja: 'LaplandVibesチームがパートナーシップについて連絡することに同意します。いつでも撤回できます。',
