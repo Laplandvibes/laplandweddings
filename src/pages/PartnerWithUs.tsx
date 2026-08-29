@@ -51,7 +51,7 @@ const conceptStats: { icon: typeof Globe; data: Stat }[] = [
       label: {
         en: 'languages: couples from the UK, Asia and Central Europe find you',
         fi: 'kieltä: parit Britanniasta, Aasiasta ja Keski-Euroopasta löytävät teidät',
-        de: 'Sprachen: Paare aus Großbritannien, Asien und Mitteleuropa finden Sie',
+        de: 'Sprachen: So finden Paare aus Großbritannien, Asien und Mitteleuropa zu Ihnen',
         ja: 'の言語：イギリス、アジア、中央ヨーロッパのカップルがあなたを見つけます',
         es: 'idiomas: parejas del Reino Unido, Asia y Europa Central os encuentran',
         'pt-BR': 'idiomas: casais do Reino Unido, da Ásia e da Europa Central encontram você',
@@ -651,7 +651,7 @@ const C: Record<CKey, Localized<string>> = {
   termsSubtitle: {
     en: 'Clear ground rules from day one: you know exactly what you pay for, what you commit to, and how we handle the rare bad lead.',
     fi: 'Selkeät pelisäännöt alusta alkaen: tiedät tarkalleen mistä maksat, mihin sitoudut ja miten epäselvät tilanteet hoidetaan.',
-    de: 'Klare Grundregeln von Anfang an: Sie wissen genau, wofür Sie zahlen, was Sie eingehen und wie wir mit dem seltenen daneben liegenden Lead umgehen.',
+    de: 'Klare Grundregeln von Anfang an: Sie wissen genau, wofür Sie zahlen, welche Verpflichtungen Sie eingehen und wie wir mit dem seltenen ungültigen Lead umgehen.',
     ja: '初日から明確な基本ルール：何にお金を払い、何に同意し、まれにある不適切なリードをどう扱うかが正確に分かります。',
     es: 'Reglas claras desde el primer día: sabes exactamente por qué pagas, a qué te comprometes y cómo gestionamos el raro lead fallido.',
     'pt-BR': 'Regras claras desde o primeiro dia: você sabe exatamente pelo que paga, com o que se compromete e como lidamos com o raro lead inválido.',

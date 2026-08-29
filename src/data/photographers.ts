@@ -80,7 +80,7 @@ export const photographers: Photographer[] = [
     baseLocation: {
       fi: 'UK · destination Lappi',
       en: 'UK · destination Lapland',
-      de: 'UK · Destination Lappland',
+      de: 'Großbritannien · Destination Lappland',
       ja: '英国 · デスティネーション・ラップランド',
       es: 'Reino Unido · destino Laponia',
       'pt-BR': 'Reino Unido · destination Lapônia',
@@ -108,7 +108,7 @@ export const photographers: Photographer[] = [
     description: {
       fi: 'UK-pohjainen palkittu hääkuvaaja, joka matkustaa säännöllisesti Lappiin. Sopii UK-pareille, jotka haluavat saman valokuvaajan koko matkan ajaksi.',
       en: 'A UK-based award-winning wedding photographer who travels to Lapland regularly. Best for UK couples wanting the same photographer throughout the journey.',
-      de: 'Ein preisgekrönter Hochzeitsfotograf aus UK, der regelmäßig nach Lappland reist. Ideal für UK-Paare, die denselben Fotografen für die ganze Reise wünschen.',
+      de: 'Ein preisgekrönter Hochzeitsfotograf aus Großbritannien, der regelmäßig nach Lappland reist. Ideal für britische Paare, die denselben Fotografen für die ganze Reise wünschen.',
       ja: '英国を拠点とし、定期的にラップランドを訪れる受賞歴のあるウェディングフォトグラファー。旅の最初から最後まで同じ写真家に任せたい英国のカップルに最適。',
       es: 'Fotógrafo de bodas galardonado, con sede en el Reino Unido, que viaja regularmente a Laponia. Ideal para parejas británicas que quieren el mismo fotógrafo durante todo el viaje.',
       'pt-BR': 'Fotógrafo de casamentos premiado, sediado no Reino Unido, que viaja regularmente à Lapônia. Ideal para casais britânicos que querem o mesmo fotógrafo durante toda a viagem.',
@@ -292,7 +292,7 @@ export const photographers: Photographer[] = [
     description: {
       fi: 'Suomalainen valokuvaaja jonka oma "Lapland Intimate Wedding Guide" rankaa Googlessa. Sopii pareille jotka haluavat mainostekstin lisäksi paikallisia oppaita matkan suunnitteluun.',
       en: 'A Finnish photographer whose own “Lapland Intimate Wedding Guide” ranks on Google. Best for couples who want practical local guides alongside photography.',
-      de: 'Ein finnischer Fotograf, dessen eigener „Lapland Intimate Wedding Guide“ bei Google rankt. Ideal für Paare, die neben der Fotografie auch praktische lokale Leitfäden zur Reiseplanung wünschen.',
+      de: 'Ein finnischer Fotograf, dessen eigener „Lapland Intimate Wedding Guide“ bei Google weit oben steht. Ideal für Paare, die neben der Fotografie auch praktische lokale Leitfäden zur Reiseplanung wünschen.',
       ja: '自身の「Lapland Intimate Wedding Guide」がGoogleで上位表示されるフィンランド人フォトグラファー。撮影に加えて、旅の計画に役立つローカルなガイドを求めるカップルに最適。',
       es: 'Fotógrafo finlandés cuya propia "Lapland Intimate Wedding Guide" se posiciona en Google. Ideal para parejas que quieren guías locales prácticas además de la fotografía.',
       'pt-BR': 'Fotógrafo finlandês cujo próprio "Lapland Intimate Wedding Guide" aparece bem ranqueado no Google. Ideal para casais que querem guias locais práticos além da fotografia.',

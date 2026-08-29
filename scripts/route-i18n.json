@@ -4,7 +4,7 @@
       {
         "slug": "rovaniemi",
         "name": "Rovaniemi",
-        "desc": "Die Hauptstadt Lapplands, am einfachsten über internationale Flüge zu erreichen. Hochzeitslocations von der Eiskapelle bis zu Glasiglus nahe dem Santa Claus Village."
+        "desc": "Die Hauptstadt Lapplands, am einfachsten über internationale Flüge zu erreichen. Hochzeitslocations von der Eiskapelle bis zu Glasiglus nahe dem Weihnachtsmanndorf."
       },
       {
         "slug": "saariselka",
@@ -29,7 +29,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "Finnlands nördlichster und höchster Punkt: die Glasiglus von Tundrea und die Trauung am Dreiländereck."
+        "desc": "Finnlands höchstes Gelände in der äußersten Nordwestecke des Landes: die Glasiglus von Tundrea und die Trauung am Dreiländereck."
       },
       {
         "slug": "oulu",
@@ -51,12 +51,12 @@
       {
         "slug": "snow-chapel",
         "name": "Schneekapellen-Hochzeit",
-        "desc": "Trauung in einer aus reinem Schnee und Eis geschnittenen Kapelle: Lainio, Northern Lights Ranch, Arctic SnowHotel und Levi Ice Castle."
+        "desc": "Trauung in einer aus reinem Schnee und Eis gemeißelten Kapelle: Lainio, Northern Lights Ranch, Arctic SnowHotel und Levi Ice Castle."
       },
       {
         "slug": "glass-igloo",
         "name": "Glasiglu-Hochzeit",
-        "desc": "Hochzeitsnacht unter den Nordlichtern in einer beheizten Glaskuppel: Kakslauttanen, Levin Iglut, Apukka."
+        "desc": "Hochzeitsnacht unter den Polarlichtern in einer beheizten Glaskuppel: Kakslauttanen, Levin Iglut, Apukka."
       },
       {
         "slug": "midnight-sun",
@@ -66,7 +66,7 @@
       {
         "slug": "elopement",
         "name": "Elopement / Hochzeit zu zweit",
-        "desc": "Nur Sie beide, die Trauperson und ein Fotograf. Schlüsselfertige Pakete ab 1 600 €."
+        "desc": "Nur Sie beide, der Trauredner und ein Fotograf. Schlüsselfertige Pakete ab 1 600 €."
       },
       {
         "slug": "vow-renewal",
@@ -83,7 +83,7 @@
       {
         "slug": "arctic-snowhotel",
         "region": "Lehtojärvi · 35 km von Rovaniemi",
-        "desc": "Snow Hotel mit Eiskapelle für 30 Gäste, Eisrestaurant und Glasiglus mit 360°-Blick auf die Nordlichter."
+        "desc": "Snow Hotel mit Eiskapelle für 30 Gäste, Eisrestaurant und Glasiglus mit 360°-Blick auf die Polarlichter."
       },
       {
         "slug": "snow-village-lainio",
@@ -103,7 +103,7 @@
       {
         "slug": "levin-iglut",
         "region": "Levi · auf dem Gipfel des Fjells",
-        "desc": "Glasiglus auf dem Gipfel des Levi-Fjells: der beste Blickwinkel auf die Nordlichter in Lappland, Suite-Iglus für Paare."
+        "desc": "Glasiglus auf dem Gipfel des Levi-Fjells: der beste Blickwinkel auf die Polarlichter in Lappland, Suite-Iglus für Paare."
       },
       {
         "slug": "apukka-resort",
@@ -118,7 +118,7 @@
       {
         "slug": "wilderness-hotel-muotka",
         "region": "Muotka · am Rand des UKK-Nationalparks",
-        "desc": "Keine Lichtverschmutzung: einer der besten Nordlichtorte Lapplands. Aurora Cabins und Kammi-Hütte."
+        "desc": "Keine Lichtverschmutzung: einer der besten Polarlichtorte Lapplands. Aurora Cabins und Kammi-Hütte."
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -152,13 +152,13 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "Ylläsjärvi · am Pallas-Yllästunturi-NP",
+        "region": "Ylläsjärvi · am Pallas-Yllästunturi-Nationalpark",
         "desc": "Auf TripAdvisor beliebtes Hochzeitshotel in Ylläs. Spa, drei Restaurants, Hot Tubs."
       },
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Finnlands nördlichstes Glasiglu-Resort, 480 m über dem Meer: der beste Nordlichtblick Lapplands."
+        "desc": "Finnlands nördlichstes Glasiglu-Resort, 480 m über dem Meer: einer der besten Polarlichtblicke Lapplands."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -173,12 +173,12 @@
       {
         "slug": "santas-hotel-santamus",
         "region": "Weihnachtsmanndorf",
-        "desc": "Das einzige für Hochzeiten konzipierte Hotel im Santa Claus Village. Rentier- und Husky-Pakete inklusive."
+        "desc": "Das einzige für Hochzeiten konzipierte Hotel im Weihnachtsmanndorf. Rentier- und Husky-Pakete inklusive."
       },
       {
         "slug": "nova-skyland",
         "region": "Weihnachtsmanndorf",
-        "desc": "Kompaktes, modernes Boutiquehotel im Santa Claus Village."
+        "desc": "Kompaktes, modernes Boutiquehotel im Weihnachtsmanndorf."
       }
     ]
   },
@@ -212,7 +212,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "キルピスヤルヴィ",
-        "desc": "フィンランド最北かつ最高地点：Tundreaのガラスイグルーと、3か国の国境での挙式。"
+        "desc": "フィンランド最北西端にある同国の最高地：Tundreaのガラスイグルーと、3か国の国境での挙式。"
       },
       {
         "slug": "oulu",
@@ -335,7 +335,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "ウッラスヤルヴィ · パッラス-ウッラス国立公園",
+        "region": "ウッラスヤルヴィ · パッラス-ウッラス国立公園のふち",
         "desc": "TripAdvisorで人気のYlläsの結婚式向けホテル。スパ、3つのレストラン、ホットタブ。"
       },
       {
@@ -395,7 +395,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "El punto más septentrional y más alto de Finlandia: los iglús de cristal de Tundrea y la ceremonia en la frontera de los tres países."
+        "desc": "El terreno más alto de Finlandia, en su extremo noroccidental: los iglús de cristal de Tundrea y la ceremonia en la frontera de los tres países."
       },
       {
         "slug": "oulu",
@@ -518,7 +518,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "Ylläsjärvi · en el P. N. Pallas-Yllästunturi",
+        "region": "Ylläsjärvi · al borde del P. N. Pallas-Yllästunturi",
         "desc": "Hotel de bodas favorito en TripAdvisor en Ylläs. Spa, tres restaurantes y bañeras de hidromasaje."
       },
       {
@@ -578,7 +578,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "O ponto mais setentrional e mais alto da Finlândia: os iglus de vidro do Tundrea e a cerimônia no marco das três fronteiras."
+        "desc": "O terreno mais alto da Finlândia, no extremo noroeste do país: os iglus de vidro do Tundrea e a cerimônia no marco das três fronteiras."
       },
       {
         "slug": "oulu",
@@ -701,7 +701,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "Ylläsjärvi · no P. N. Pallas-Yllästunturi",
+        "region": "Ylläsjärvi · na borda do P. N. Pallas-Yllästunturi",
         "desc": "Hotel de casamentos favorito do TripAdvisor em Ylläs. Spa, três restaurantes, ofurôs ao ar livre."
       },
       {
@@ -761,7 +761,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "基尔皮斯湖",
-        "desc": "芬兰最北、海拔最高的地点：Tundrea 的玻璃冰屋，以及三国交界处的婚礼仪式。"
+        "desc": "芬兰海拔最高的地带，位于该国西北角：Tundrea 的玻璃冰屋，以及三国交界处的婚礼仪式。"
       },
       {
         "slug": "oulu",
@@ -884,7 +884,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "于拉斯湖 · 帕拉斯-于拉斯通图里国家公园",
+        "region": "于拉斯湖 · 帕拉斯-于拉斯通图里国家公园边缘",
         "desc": "Ylläs 上深受 TripAdvisor 用户喜爱的婚礼酒店。水疗中心、三家餐厅、热浴桶。"
       },
       {
@@ -944,7 +944,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "킬피스예르비",
-        "desc": "핀란드에서 가장 북쪽이자 가장 높은 지점. Tundrea의 글라스 이글루와 3국 국경에서 올리는 예식."
+        "desc": "핀란드 북서쪽 끝에 자리한 이 나라에서 가장 높은 지대. Tundrea의 글라스 이글루와 3국 국경에서 올리는 예식."
       },
       {
         "slug": "oulu",
@@ -1067,7 +1067,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "윌래스예르비 · 팔라스-윌래스툰투리 국립공원",
+        "region": "윌래스예르비 · 팔라스-윌래스툰투리 국립공원 가장자리",
         "desc": "TripAdvisor에서 인기 있는 Ylläs의 웨딩 호텔. 스파, 레스토랑 세 곳, 핫텁."
       },
       {
@@ -1127,7 +1127,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "Le point le plus septentrional et le plus élevé de Finlande : les igloos de verre de Tundrea et la cérémonie à la borne des trois pays."
+        "desc": "Le point le plus élevé de Finlande, dans son extrême nord-ouest : les igloos de verre de Tundrea et la cérémonie à la borne des trois pays."
       },
       {
         "slug": "oulu",
@@ -1250,7 +1250,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "Ylläsjärvi · au P. N. Pallas-Yllästunturi",
+        "region": "Ylläsjärvi · en bordure du P. N. Pallas-Yllästunturi",
         "desc": "L’hôtel de mariage plébiscité sur TripAdvisor à Ylläs. Spa, trois restaurants, bains nordiques."
       },
       {
@@ -1310,7 +1310,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "Il punto più settentrionale e più alto della Finlandia: gli igloo di vetro di Tundrea e la cerimonia al confine dei tre Paesi."
+        "desc": "Il terreno più alto della Finlandia, nell’estremo angolo nord-occidentale: gli igloo di vetro di Tundrea e la cerimonia al confine dei tre Paesi."
       },
       {
         "slug": "oulu",
@@ -1433,7 +1433,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "Ylläsjärvi · al P. N. Pallas-Yllästunturi",
+        "region": "Ylläsjärvi · ai margini del P. N. Pallas-Yllästunturi",
         "desc": "Hotel per matrimoni prediletto su TripAdvisor a Ylläs. Spa, tre ristoranti, vasche idromassaggio."
       },
       {
@@ -1493,7 +1493,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "Het noordelijkste en hoogste punt van Finland: de glazen iglo's van Tundrea en de huwelijksceremonie op het drielandenpunt."
+        "desc": "De hoogste grond van Finland, in de uiterste noordwesthoek: de glazen iglo’s van Tundrea en de huwelijksceremonie op het drielandenpunt."
       },
       {
         "slug": "oulu",
@@ -1622,7 +1622,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Het noordelijkste resort met glazen iglo's van Finland, 480 m boven zeeniveau: het beste noorderlichtzicht van Lapland."
+        "desc": "Het noordelijkste resort met glazen iglo's van Finland, 480 m boven zeeniveau: een van de beste noorderlichtzichten van Lapland."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -1676,7 +1676,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "Finlands nordligaste och högsta punkt: Tundreas glasiglor och vigsel vid treriksröset."
+        "desc": "Finlands högsta terräng, i landets nordvästligaste hörn: Tundreas glasiglor och vigsel vid treriksröset."
       },
       {
         "slug": "oulu",

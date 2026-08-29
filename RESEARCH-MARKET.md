@@ -416,7 +416,7 @@
 - Lähde: [LaLaWed destination wedding Finland guide 2026](https://www.lalawed.org/destination-wedding-in-finland/)
 
 ### 8.3 Sesongit
-- **Peak (95 % kysynnästä):** **Joulukuu – maaliskuu** — lumi, jää, revontulet
+- **Peak (valtaosa kysynnästä):** **Joulukuu – maaliskuu** — lumi, jää, revontulet. 🔴 Aiempi osuusluku oli lähteetön arvio ja ehti levitä sivuston sesonkikorttiin 11 kielelle; poistettu 30.8.2026, koska lähdettä ei ole.
 - **Shoulder:** Marraskuu (lumi alkaa) + huhtikuu (lumi sulaa)
 - **Off-season trendi:** **Kesä-elokuu** (kasvava — Midnight Sun, kesähäät) — jakaa ~5 % nykyhetkessä, mutta marketingilla potentiaalia kasvaa 15 % seuraavassa 5 vuodessa
 
