@@ -10,7 +10,7 @@ import { withReferral } from '../lib/affiliate';
 const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'sourceNote', Localized<string>> = {
   seoTitle: {
     en: 'Lapland Wedding Photographers: Maria Hedengren, Robin Goodlad et al. | LaplandWeddings',
-    fi: 'Lapin hääjvalokuvaajat | LaplandWeddings',
+    fi: 'Lapin häävalokuvaajat | LaplandWeddings',
     de: 'Hochzeitsfotografen in Lappland | LaplandWeddings',
     ja: 'ラップランドの写真家：Maria Hedengren、Robin Goodlad | LaplandWeddings',
     es: 'Fotógrafos de bodas en Laponia | LaplandWeddings',
@@ -36,7 +36,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
   },
   title: {
     en: 'Lapland wedding photographers',
-    fi: 'Lapin hääjvalokuvaajat',
+    fi: 'Lapin häävalokuvaajat',
     de: 'Hochzeitsfotografen in Lappland',
     ja: 'ラップランドのウェディングフォトグラファー',
     es: 'Fotógrafos de bodas en Laponia',

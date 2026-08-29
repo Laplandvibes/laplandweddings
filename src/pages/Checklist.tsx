@@ -71,7 +71,7 @@ const CONTENT: Localized<ChecklistContent> = {
   },
   fi: {
     seoTitle: 'DVV-tarkistuslista: vihille Lapissa | LaplandWeddings',
-    seoDesc: 'Yksisivuinen tarkistuslista ulkomaalaiselle pareille jotka aikovat vihille Suomen Lapissa. DVV-paperit, todistajat, vihkijä. Printtaa PDF:nä.',
+    seoDesc: 'Yksisivuinen tarkistuslista ulkomaalaisille pareille, jotka aikovat vihille Suomen Lapissa. DVV-paperit, todistajat, vihkijä. Printtaa PDF:nä.',
     eyebrow: 'Lead magnet',
     title: 'Vihille Lapissa: DVV-tarkistuslista ulkomaalaisille pareille',
     subtitle: 'Tämä yksisivuinen tarkistuslista käy läpi kaikki paperit ja askeleet, jotka tarvitaan kun ulkomaalainen pari haluaa vihille Suomen Lapissa. Printtaa tai tallenna PDF:nä matkalle.',

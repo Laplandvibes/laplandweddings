@@ -217,7 +217,7 @@ export const weddingTypes: WeddingType[] = [
       sv: 'Glasigloobröllop',
     },
     tagline: {
-      fi: 'Hääyö revontulien alla lämpöisessä lasikuvussa',
+      fi: 'Hääyö revontulien alla lämpimässä lasikuvussa',
       en: 'Wedding night beneath the lights in a heated glass dome',
       de: 'Hochzeitsnacht unter den Lichtern in einer beheizten Glaskuppel',
       ja: '暖かなガラスドームで、オーロラの下の初夜',

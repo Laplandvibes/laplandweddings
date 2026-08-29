@@ -537,7 +537,7 @@ const venueRegistry: Venue[] = [
     priceTier: '€€€',
     capacity: { min: 2, max: 80 },
     description: {
-      fi: 'Apukka-järven rannalla sijaitseva resort, jossa Aurora Cabineja, kaksikerroksinen Kammi Glass Igloo Suite ja Lakeview-suiteja. Kaksi ravintolaa: Aitta + Kota. Sopii pareille, jotka haluavat sekä joulupukin lähelle että luonnonrauhaa.',
+      fi: 'Apukkajärven rannalla sijaitseva resort, jossa Aurora Cabineja, kaksikerroksinen Kammi Glass Igloo Suite ja Lakeview-suiteja. Kaksi ravintolaa: Aitta + Kota. Sopii pareille, jotka haluavat sekä joulupukin lähelle että luonnonrauhaa.',
       en: 'A resort by Lake Apukka with Aurora Cabins, the two-storey Kammi Glass Igloo Suite, and Lakeview Suites. Two restaurants: Aitta + Kota. For couples who want both Santa proximity and wilderness peace.',
       de: 'Ein Resort am Apukka-See mit Aurora Cabins, der zweistöckigen Kammi Glass Igloo Suite und Lakeview Suites. Zwei Restaurants: Aitta + Kota. Für Paare, die Nähe zum Weihnachtsmann und Naturruhe zugleich suchen.',
       ja: 'アプッカ湖畔のリゾートで、Aurora Cabin、2階建てのKammi Glass Igloo Suite、Lakeview Suiteを備えています。レストランはAittaとKotaの2軒。サンタクロースの近さと自然の静けさの両方を求めるカップルに最適。',
@@ -565,7 +565,7 @@ const venueRegistry: Venue[] = [
       sv: ['Aurora Cabins (upp till 6)', 'Kammi-iglo i två våningar', 'Restaurangerna Aitta + Kota', 'Huskygård i närheten'],
     },
     weddingSpaces: {
-      fi: ['Aitta-ravintola', 'Kammi-igluterassi', 'Apukka-järven jää (talvi)'],
+      fi: ['Aitta-ravintola', 'Kammi-igluterassi', 'Apukkajärven jää (talvi)'],
       en: ['Aitta restaurant', 'Kammi igloo terrace', 'Lake Apukka ice (winter)'],
       de: ['Restaurant Aitta', 'Terrasse des Kammi-Iglus', 'Eisfläche des Apukka-Sees (Winter)'],
       ja: ['Aittaレストラン', 'Kammiイグルーテラス', 'アプッカ湖の氷上（冬季）'],

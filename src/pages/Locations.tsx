@@ -24,7 +24,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
   },
   seoDesc: {
     en: 'Seven Lapland wedding regions plus city-option Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Compare seasons, flights, and venues.',
-    fi: 'Seitsemän Lapin häämatkakohdetta ja kaupunkivaihtoehto Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Vertaile sesonkeja, lentoyhteyksiä ja venueita.',
+    fi: 'Seitsemän Lapin häämatkakohdetta ja kaupunkivaihtoehto Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Vertaile sesonkeja, lentoyhteyksiä ja hääpaikkoja.',
     de: 'Sieben Hochzeitsregionen in Lappland plus Großstadt-Option Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Saisons, Flugverbindungen und Locations im Vergleich.',
     ja: 'ラップランドのウェディング向け7地域＋都市の選択肢オウル：ロヴァニエミ、サーリセルカ、レヴィ、ウッラス、ピュハ＝ルオスト、キルピスヤルヴィ、オウル。シーズン、フライト、会場を比較。',
     es: 'Siete regiones para bodas en Laponia más la opción urbana de Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Compara temporadas, vuelos y lugares.',
