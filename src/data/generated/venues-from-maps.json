@@ -233,7 +233,7 @@
     {
       "key": "santas-hotel-santamus",
       "name": "Santa's Hotel Santamus",
-      "reason": "\"Piparina Day Cabins & Dining\" name mismatch (dice 0.00) | \"Santa's Hotel Santa Claus\" is missing the identifying word \"santamus\" — likely a sibling property of the same chain"
+      "reason": "\"Piparina Day Cabins & Dining\" name mismatch (dice 0.00) | \"Santa's Hotel Santa Claus\" is missing the identifying word \"santamus\": likely a sibling property of the same chain"
     }
   ]
 }
