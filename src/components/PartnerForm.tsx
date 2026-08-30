@@ -173,7 +173,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: 'WhatsApp도 가능합니다. 가장 빠르게 연락할 수 있는 방법입니다.',
     fr: 'WhatsApp convient, souvent le moyen le plus rapide de vous joindre.',
     it: 'Va bene anche WhatsApp: spesso è il modo più rapido per contattarLa.',
-    nl: 'WhatsApp kan ook, vaak de snelste manier om je te bereiken.', sv: 'WhatsApp fungerar bra, ofta det snabbaste sättet att nå dig.',
+    nl: 'WhatsApp kan ook, vaak de snelste manier om u te bereiken.', sv: 'WhatsApp fungerar bra, ofta det snabbaste sättet att nå dig.',
   },
   regions: {
     en: 'Regions you serve in Lapland',
@@ -186,7 +186,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '라플란드 내 서비스 지역',
     fr: 'Régions desservies en Laponie',
     it: 'Aree in cui opera in Lapponia',
-    nl: 'Regio’s die je bedient in Lapland', sv: 'Regioner du verkar i inom Lappland',
+    nl: 'Regio’s die u bedient in Lapland', sv: 'Regioner du verkar i inom Lappland',
   },
   regionsPlaceholder: {
     en: 'e.g. Rovaniemi, Levi, Saariselkä',
@@ -218,7 +218,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '라플란드 웨딩을 운영하신 지 얼마나 되셨나요?',
     fr: 'Depuis combien de temps organisez-vous des mariages en Laponie ?',
     it: 'Da quanto tempo organizza matrimoni in Lapponia?',
-    nl: 'Hoe lang organiseer je al bruiloften in Lapland?', sv: 'Hur länge har du arrangerat bröllop i Lappland?',
+    nl: 'Hoe lang organiseert u al bruiloften in Lapland?', sv: 'Hur länge har du arrangerat bröllop i Lappland?',
   },
   yearsPlaceholder: {
     en: 'e.g. 6 years, 40+ weddings',
@@ -244,7 +244,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '직접 또는 신뢰할 수 있는 파트너를 통해 제공하는 항목은?',
     fr: 'Que proposez-vous vous-même ou via des partenaires de confiance ?',
     it: 'Che cosa offre direttamente o tramite partner fidati?',
-    nl: 'Wat lever je zelf of via vertrouwde partners?', sv: 'Vad levererar du själv eller via betrodda partner?',
+    nl: 'Wat levert u zelf of via vertrouwde partners?', sv: 'Vad levererar du själv eller via betrodda partner?',
   },
   servicesHelp: {
     en: 'We look for operators who can deliver the whole wedding, in-house or through established relationships.',
@@ -283,7 +283,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '스타일, 전문 분야, 진행했던 웨딩 사례, 적합한 이유 등…',
     fr: 'Style, spécialités, exemples de mariages, pourquoi vous correspondez…',
     it: 'Stile, specialità, matrimoni d’esempio, perché è il partner giusto…',
-    nl: 'Stijl, specialiteiten, voorbeeldbruiloften, waarom je past…', sv: 'Stil, specialiteter, exempelbröllop, varför ni passar…',
+    nl: 'Stijl, specialiteiten, voorbeeldbruiloften, waarom u past…', sv: 'Stil, specialiteter, exempelbröllop, varför ni passar…',
   },
   consent: {
     en: 'I agree that the LaplandVibes team may contact me about partnership. I can withdraw at any time.',
@@ -332,7 +332,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '감사합니다. 신청서가 접수되었습니다.',
     fr: 'Merci. Votre candidature est bien arrivée.',
     it: 'Grazie. Abbiamo ricevuto la Sua candidatura.',
-    nl: 'Bedankt. Je aanmelding is binnen.', sv: 'Tack! Din ansökan är registrerad.',
+    nl: 'Bedankt. Uw aanmelding is binnen.', sv: 'Tack! Din ansökan är registrerad.',
   },
   successBody: {
     en: 'We will review it and get back to you within a few days. Approved partners receive their first lead free.',

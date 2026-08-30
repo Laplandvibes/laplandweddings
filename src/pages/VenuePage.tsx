@@ -189,7 +189,7 @@ const V: Record<VKey, Localized<string>> = {
     ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 웨딩 장소의 신뢰할 수 있는 웨딩 플래너에게 전달합니다. 맞춤 견적은 플래너가 직접 보내드립니다.',
     fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners de confiance de ce lieu. Ils vous envoient directement leurs devis sur mesure.',
     it: 'Compili il modulo e il team LaplandWeddings inoltrerà la Sua richiesta ai wedding planner di fiducia di questa location. Saranno loro a inviarLe direttamente i preventivi su misura.',
-    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt je aanvraag door naar de vertrouwde trouwplanners van deze locatie. Zij sturen jou rechtstreeks offertes op maat.',
+    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt uw aanvraag door naar de vertrouwde trouwplanners van deze locatie. Zij sturen u rechtstreeks offertes op maat.',
     sv: 'Fyll i formuläret så vidarebefordrar LaplandWeddings-teamet din förfrågan till de betrodda bröllopsplanerarna för den här platsen. De skickar sina skräddarsydda offerter direkt till dig.',
   },
   // Templates — {name} / {region} are substituted at render time.

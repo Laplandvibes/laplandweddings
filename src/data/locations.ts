@@ -164,7 +164,7 @@ export const locations: Location[] = [
       ko: '북부 라플란드의 심장부. 핀란드 기상청에 따르면 이 위도에서는 평균 이틀에 한 번 오로라가 관측됩니다. 칵슬라우타넨의 글라스 이글루와 아이스 채플은 이 지역에서 가장 유명한 웨딩 베뉴입니다. 이나리 호수가 결혼식에 역사와 사미 문화를 더합니다.',
       fr: 'Le cœur de la Laponie du Nord, à la latitude où l’Institut météorologique finlandais observe des aurores en moyenne une nuit sur deux. Les igloos de verre et la chapelle de glace de Kakslauttanen sont les lieux de mariage les plus célèbres de la région. Le lac Inari apporte histoire et culture samie à votre célébration.',
       it: 'Il cuore della Lapponia settentrionale, alla latitudine in cui l’Istituto meteorologico finlandese registra aurore in media una notte su due. Gli igloo di vetro e la cappella di ghiaccio di Kakslauttanen sono le location per matrimoni più famose della zona. Il lago Inari aggiunge storia e cultura sami alla Sua celebrazione.',
-      nl: 'Het hart van Noord-Lapland, op de breedtegraad waar het Fins meteorologisch instituut gemiddeld om de andere nacht noorderlicht registreert. De glasiglo’s en de ijskapel van Kakslauttanen zijn de bekendste trouwlocaties van de regio. Het Inarimeer voegt geschiedenis en Sámi-cultuur toe aan je viering.',
+      nl: 'Het hart van Noord-Lapland, op de breedtegraad waar het Fins meteorologisch instituut gemiddeld om de andere nacht noorderlicht registreert. De glasiglo’s en de ijskapel van Kakslauttanen zijn de bekendste trouwlocaties van de regio. Het Inarimeer voegt geschiedenis en Sámi-cultuur toe aan uw viering.',
       sv: 'Nordlapplands hjärta, på den breddgrad där Finlands meteorologiska institut i snitt ser norrsken varannan natt. Kakslauttanens glasigloor och iskapell är traktens mest kända bröllopsplatser. Enaresjön tillför historia och samisk kultur till er fest.',
     },
     highlight: {
@@ -269,7 +269,7 @@ export const locations: Location[] = [
       ko: '레비는 완비된 스키 리조트 인프라, 라이니오 Snow Village, 그리고 캐빈의 유리 벽 너머로 오로라를 바로 볼 수 있는 Northern Lights Ranch를 한데 모았습니다. 키틸레 공항은 런던에서 직항이 있어 레비가 영국인에게 인기인 이유입니다.',
       fr: 'Levi réunit toute l’infrastructure d’une station de ski, le Lainio Snow Village et le Northern Lights Ranch, où les aurores sont visibles directement à travers la paroi de verre de la cabine. L’aéroport de Kittilä propose des vols directs depuis Londres, ce qui explique pourquoi Levi est le préféré des Britanniques.',
       it: 'Levi riunisce l’intera infrastruttura di un comprensorio sciistico, il Lainio Snow Village e il Northern Lights Ranch, dove le aurore si vedono direttamente attraverso la parete di vetro della cabina. L’aeroporto di Kittilä ha voli diretti da Londra, ed è per questo che Levi è il preferito dei britannici.',
-      nl: 'Levi brengt een complete skiresort-infrastructuur, het Lainio Snow Village en Northern Lights Ranch samen, waar je het noorderlicht recht door de glazen wand van je cabin ziet. De luchthaven Kittilä heeft rechtstreekse vluchten vanuit Londen, en daarom is Levi de favoriet van de Britten.',
+      nl: 'Levi brengt een complete skiresort-infrastructuur, het Lainio Snow Village en Northern Lights Ranch samen, waar u het noorderlicht recht door de glazen wand van uw cabin ziet. De luchthaven Kittilä heeft rechtstreekse vluchten vanuit Londen, en daarom is Levi de favoriet van de Britten.',
       sv: 'Levi samlar en komplett skidortsinfrastruktur, Lainio Snow Village och Northern Lights Ranch där norrskenet syns rakt genom stugans glasvägg. Kittilä flygplats har direktflyg från London, vilket gör Levi till britternas favorit.',
     },
     highlight: {
@@ -598,7 +598,7 @@ export const locations: Location[] = [
       ko: '삼국 국경 예식: 서약을 하는 순간 핀란드, 노르웨이, 스웨덴에 동시에 서 있게 됩니다.',
       fr: 'Cérémonie à la frontière de trois pays: tenez-vous en Finlande, en Norvège et en Suède au moment même de vos vœux.',
       it: 'Cerimonia al confine di tre Paesi: si è in Finlandia, Norvegia e Svezia nello stesso istante in cui si pronunciano le promesse.',
-      nl: 'Ceremonie op het drielandenpunt: sta tegelijk in Finland, Noorwegen en Zweden op het moment van je jawoord.',
+      nl: 'Ceremonie op het drielandenpunt: sta tegelijk in Finland, Noorwegen en Zweden op het moment van uw jawoord.',
       sv: 'Vigsel vid trelandsgränsen: ni står i Finland, Norge och Sverige samtidigt när ni ger era löften.',
     },
     bestFor: {

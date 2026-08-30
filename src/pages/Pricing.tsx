@@ -145,7 +145,7 @@ const breakdown: CostRow[] = [
       ko: '2.5시간 투어로 그중 45분은 직접 썰매를 몹니다. 성인 요금이며 어린이는 더 저렴합니다.',
       fr: 'Une sortie de 2h30, dont 45 minutes à conduire son propre traîneau, tarif adulte. Les enfants paient moins.',
       it: 'Un’escursione di 2,5 ore, di cui 45 minuti alla guida della propria slitta, tariffa adulti. I bambini pagano meno.',
-      nl: 'Een tocht van 2,5 uur, waarvan 45 minuten je eigen slee besturen, volwassenentarief. Kinderen betalen minder.',
+      nl: 'Een tocht van 2,5 uur, waarvan 45 minuten uw eigen slee besturen, volwassenentarief. Kinderen betalen minder.',
       sv: 'En 2,5 timmars tur, varav 45 minuter med egen släde, vuxenpris. Barn betalar mindre.',
     },
     source: { name: 'bearhillhusky.com', url: 'https://bearhillhusky.com/winter-tours/the-happy-trail-tour/' },
@@ -319,7 +319,7 @@ const P: Record<PKey, Localized<string>> = {
     es: 'Cuando conoces tu presupuesto', 'pt-BR': 'Quando você já sabe seu orçamento',
     'zh-CN': '当你确定了预算', ko: '예산이 정해졌다면',
     fr: 'Quand vous connaissez votre budget', it: 'Quando conosce il Suo budget',
-    nl: 'Als je je budget kent', sv: 'När du vet din budget',
+    nl: 'Als u uw budget kent', sv: 'När du vet din budget',
   },
   ctaTitle: {
     en: 'Get 1–3 quotes, compare at your own pace',
@@ -332,7 +332,7 @@ const P: Record<PKey, Localized<string>> = {
     ko: '견적 1–3건 받기, 여유롭게 비교하세요',
     fr: 'Obtenez 1 à 3 devis, comparez à votre rythme',
     it: 'Ottenga 1–3 preventivi e confronti con calma',
-    nl: 'Ontvang 1–3 offertes, vergelijk op je eigen tempo', sv: 'Få 1–3 offerter och jämför i din egen takt',
+    nl: 'Ontvang 1–3 offertes, vergelijk op uw eigen tempo', sv: 'Få 1–3 offerter och jämför i din egen takt',
   },
   ctaBody: {
     en: 'One form, 1–7 days, 1–3 personalised proposals from Lapland’s most experienced planners. Free, no commitment. You decide who to continue with.',
@@ -345,7 +345,7 @@ const P: Record<PKey, Localized<string>> = {
     ko: '양식 하나, 1~7일, 라플란드에서 가장 경험 많은 플래너의 맞춤 제안 1–3건. 무료, 부담 없음. 누구와 진행할지는 당신이 결정합니다.',
     fr: 'Un formulaire, 1 à 7 jours, 1 à 3 propositions personnalisées des planners les plus expérimentés de Laponie. Gratuit, sans engagement. Vous décidez avec qui continuer.',
     it: 'Un modulo, 1–7 giorni, 1–3 proposte personalizzate dai planner più esperti della Lapponia. Gratis, senza impegno. Decide Lei con chi proseguire.',
-    nl: 'Eén formulier, 1–7 dagen, 1–3 persoonlijke voorstellen van de meest ervaren planners van Lapland. Gratis, vrijblijvend. Jij bepaalt met wie je verdergaat.', sv: 'Ett formulär, 1–7 dagar, 1–3 personliga offerter från Lapplands mest erfarna bröllopsplanerare. Gratis och utan förbindelse. Du bestämmer vem du går vidare med.',
+    nl: 'Eén formulier, 1–7 dagen, 1–3 persoonlijke voorstellen van de meest ervaren planners van Lapland. Gratis, vrijblijvend. U bepaalt met wie u verdergaat.', sv: 'Ett formulär, 1–7 dagar, 1–3 personliga offerter från Lapplands mest erfarna bröllopsplanerare. Gratis och utan förbindelse. Du bestämmer vem du går vidare med.',
   },
   ctaButton: {
     en: 'Start the 5-minute form', fi: 'Aloita 5 minuutin lomake',
@@ -380,7 +380,7 @@ const P: Record<PKey, Localized<string>> = {
     ko: '"예산" 항목을 입력하시면 적절한 가격대의 플래너와 연결해 드립니다.',
     fr: 'Renseignez le champ budget pour que nous puissions vous orienter vers des planners au bon niveau de prix.',
     it: 'Indichi il campo budget così possiamo abbinarLa a planner del giusto livello di prezzo.',
-    nl: 'Geef het budgetveld op, zodat we je kunnen koppelen aan planners in de juiste prijsklasse.', sv: 'Ange budgetfältet så kan vi matcha dig med planerare i rätt prisklass.',
+    nl: 'Geef het budgetveld op, zodat we u kunnen koppelen aan planners in de juiste prijsklasse.', sv: 'Ange budgetfältet så kan vi matcha dig med planerare i rätt prisklass.',
   },
 };
 

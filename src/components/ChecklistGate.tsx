@@ -60,7 +60,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '모든 단계와 링크를 즉시 받고, 라플란드 웨딩 시장의 소식(웨딩 장소, 시즌 팁, 혜택)도 정기적으로 받아보세요. 언제든 구독을 취소할 수 있습니다.',
     fr: 'Recevez instantanément toutes les étapes et les liens, ainsi que des nouvelles régulières du marché du mariage en Laponie : lieux, conseils de saison, offres. Désinscription à tout moment.',
     it: 'Riceve subito tutti i passaggi e i link, oltre ad aggiornamenti regolari dal mercato dei matrimoni in Lapponia: location, consigli stagionali, offerte. Si disiscriva quando vuole.',
-    nl: 'Ontvang direct elke stap en link, plus regelmatige updates uit de huwelijksmarkt van Lapland: locaties, seizoenstips, aanbiedingen. Schrijf je op elk moment uit.', sv: 'Get every step and link instantly, plus regular updates from inside Lapland’s wedding market: venues, season tips, offers. Unsubscribe anytime.',
+    nl: 'Ontvang direct elke stap en link, plus regelmatige updates uit de huwelijksmarkt van Lapland: locaties, seizoenstips, aanbiedingen. Schrijf u op elk moment uit.', sv: 'Get every step and link instantly, plus regular updates from inside Lapland’s wedding market: venues, season tips, offers. Unsubscribe anytime.',
   },
   bulletA: {
     en: 'One-page checklist: every document and witness',
@@ -151,7 +151,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: 'you@email.com',
     fr: 'vous@email.com',
     it: 'nome@esempio.com',
-    nl: 'jij@email.com', sv: 'du@epost.com',
+    nl: 'uw@email.com', sv: 'du@epost.com',
   },
   consent: {
     en: 'I agree that I may be contacted about Lapland-wedding topics. I can unsubscribe at any time.',
@@ -203,7 +203,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     ko: '귀하의 정보는 LaplandVibes 네트워크에서 안전하게 보호됩니다. 이메일을 제3자와 공유하지 않습니다.',
     fr: 'Vos données sont en sécurité au sein du réseau LaplandVibes. Nous ne partageons jamais votre e-mail avec des tiers.',
     it: 'I Suoi dati sono al sicuro nella rete LaplandVibes. Non condividiamo mai la Sua email con terze parti.',
-    nl: 'Je gegevens zijn veilig binnen het LaplandVibes-netwerk. We delen je e-mail nooit met derden.', sv: 'Dina uppgifter är trygga hos LaplandVibes-nätverket. Vi delar aldrig din e-postadress med tredje part.',
+    nl: 'Uw gegevens zijn veilig binnen het LaplandVibes-netwerk. We delen uw e-mail nooit met derden.', sv: 'Dina uppgifter är trygga hos LaplandVibes-nätverket. Vi delar aldrig din e-postadress med tredje part.',
   },
 };
 

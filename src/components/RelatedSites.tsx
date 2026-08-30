@@ -123,12 +123,12 @@ const COPY: Record<Lang, Block> = {
     ],
   },
   nl: {
-    eyebrow: 'Je bruiloft in Lapland plannen',
+    eyebrow: 'Uw bruiloft in Lapland plannen',
     title: 'Breng iedereen erheen, en een plek om te slapen',
-    subtitle: 'Een bruiloft in Lapland is ook een reis voor je gasten. Deze zustergidsen dekken de rest van de reis.',
+    subtitle: 'Een bruiloft in Lapland is ook een reis voor uw gasten. Deze zustergidsen dekken de rest van de reis.',
     cards: [
-      { href: 'https://laplandstays.com/property-types/', label: 'Waar het bruiloftsgezelschap verblijft', body: 'Hutten, glazen iglo’s en hotels met kamerblokken voor je gasten in heel Lapland.' },
-      { href: 'https://laplandvisit.com/itineraries/', label: 'Plan je hele reis door Lapland', body: 'Wat te zien en te doen voor en na de ceremonie: een complete reisgids voor Lapland.' },
+      { href: 'https://laplandstays.com/property-types/', label: 'Waar het bruiloftsgezelschap verblijft', body: 'Hutten, glazen iglo’s en hotels met kamerblokken voor uw gasten in heel Lapland.' },
+      { href: 'https://laplandvisit.com/itineraries/', label: 'Plan uw hele reis door Lapland', body: 'Wat te zien en te doen voor en na de ceremonie: een complete reisgids voor Lapland.' },
       { href: 'https://laplandtransport.com/lapland-guide/', label: 'Naar Lapland reizen', body: 'Vluchten, treinen en luchthaventransfers naar Rovaniemi, Kittilä en Ivalo voor het hele gezelschap.' },
     ],
   }, sv: {

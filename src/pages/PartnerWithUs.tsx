@@ -59,7 +59,7 @@ const conceptStats: { icon: typeof Globe; data: Stat }[] = [
         ko: '개 언어: 영국, 아시아, 중부 유럽의 커플이 여러분을 찾습니다',
         fr: 'langues: des couples du Royaume-Uni, d’Asie et d’Europe centrale vous trouvent',
         it: 'lingue: coppie da Regno Unito, Asia ed Europa centrale La trovano',
-        nl: 'talen: stellen uit het VK, Azië en Centraal-Europa vinden je', sv: 'språk: par från Storbritannien, Asien och Centraleuropa hittar dig',
+        nl: 'talen: stellen uit het VK, Azië en Centraal-Europa vinden u', sv: 'språk: par från Storbritannien, Asien och Centraleuropa hittar dig',
       },
     },
   },
@@ -111,7 +111,7 @@ const valueProps: { icon: typeof Inbox; data: Card }[] = [
         ko: '모든 리드에는 예산, 날짜, 하객 수, 예식 유형, 지역이 담겨 있으며, 종종 영감을 주는 사진도 포함됩니다. 여러분이 제공하는 것을 적극적으로 찾는 커플을 얻습니다.',
         fr: 'Chaque lead comporte le budget, les dates, le nombre d’invités, le type de cérémonie et la région, souvent aussi des photos d’inspiration. Vous obtenez un couple qui recherche activement ce que vous proposez.',
         it: 'Ogni lead riporta budget, date, numero di ospiti, tipo di cerimonia e regione, spesso anche foto di ispirazione. Ottiene una coppia che cerca attivamente ciò che offre.',
-        nl: 'Elke lead bevat het budget, de data, het aantal gasten, het ceremonietype en de regio, vaak ook inspiratiefoto’s. Je krijgt een stel dat actief op zoek is naar wat jij biedt.', sv: 'Every lead carries the budget, dates, guest count, ceremony type and region, often inspiration photos too. You get a couple actively looking for what you offer.',
+        nl: 'Elke lead bevat het budget, de data, het aantal gasten, het ceremonietype en de regio, vaak ook inspiratiefoto’s. U krijgt een stel dat actief op zoek is naar wat u biedt.', sv: 'Every lead carries the budget, dates, guest count, ceremony type and region, often inspiration photos too. You get a couple actively looking for what you offer.',
       },
     },
   },
@@ -137,7 +137,7 @@ const valueProps: { icon: typeof Inbox; data: Card }[] = [
         ko: 'LaplandVibes 네트워크와 SEO가 12개 언어로 커플을 하나의 양식으로 모읍니다. 여러분은 결혼식에 집중하세요. 노출 비용은 들지 않습니다.',
         fr: 'Le réseau LaplandVibes et le SEO amènent les couples vers un seul formulaire en 12 langues. Vous vous concentrez sur le mariage. La visibilité ne vous coûte rien.',
         it: 'La rete LaplandVibes e la SEO portano le coppie a un unico modulo in 12 lingue. Lei pensa al matrimonio. La visibilità non Le costa nulla.',
-        nl: 'Het LaplandVibes-netwerk en SEO brengen stellen naar één formulier in 12 talen. Jij richt je op de bruiloft. De zichtbaarheid kost je niets.', sv: 'The LaplandVibes network and SEO bring couples to one form in 12 languages. You focus on the wedding. The visibility costs you nothing.',
+        nl: 'Het LaplandVibes-netwerk en SEO brengen stellen naar één formulier in 12 talen. U richt zich op de bruiloft. De zichtbaarheid kost u niets.', sv: 'The LaplandVibes network and SEO bring couples to one form in 12 languages. You focus on the wedding. The visibility costs you nothing.',
       },
     },
   },
@@ -163,7 +163,7 @@ const valueProps: { icon: typeof Inbox; data: Card }[] = [
         ko: '첫 리드 무료, 월 요금 없음, 설정 비용 없음. 한 푼도 내기 전에 품질을 확인합니다.',
         fr: 'Premier lead gratuit, pas de frais mensuels, pas de frais de mise en route. Vous évaluez la qualité avant de payer un centime.',
         it: 'Primo lead gratis, nessun canone mensile, nessun costo di attivazione. Valuti la qualità prima di pagare un centesimo.',
-        nl: 'Eerste lead gratis, geen maandelijkse kosten, geen opstartkosten. Je ziet de kwaliteit voordat je een cent betaalt.', sv: 'First lead free, no monthly fee, no setup cost. You see the quality before you pay a cent.',
+        nl: 'Eerste lead gratis, geen maandelijkse kosten, geen opstartkosten. U ziet de kwaliteit voordat u een cent betaalt.', sv: 'First lead free, no monthly fee, no setup cost. You see the quality before you pay a cent.',
       },
     },
   },
@@ -176,7 +176,7 @@ const valueProps: { icon: typeof Inbox; data: Card }[] = [
         es: 'La relación es tuya', 'pt-BR': 'O relacionamento é seu',
         'zh-CN': '客户关系归你所有', ko: '고객 관계는 여러분의 것',
         fr: 'La relation client vous appartient', it: 'La relazione con il cliente è Sua',
-        nl: 'De klantrelatie is van jou', sv: 'Du äger kundrelationen',
+        nl: 'De klantrelatie is van u', sv: 'Du äger kundrelationen',
       },
       body: {
         en: 'We route the lead; you contact the couple directly, quote, and close. The couple is your client from first hello to last dance.',
@@ -189,7 +189,7 @@ const valueProps: { icon: typeof Inbox; data: Card }[] = [
         ko: '리드는 저희가 전달하고, 커플과의 연락·견적·계약은 여러분이 직접 진행합니다. 첫 인사부터 마지막 춤까지 커플은 여러분의 고객입니다.',
         fr: 'Nous transmettons le lead ; vous contactez le couple directement, faites le devis et concluez. Le couple est votre client du premier bonjour à la dernière danse.',
         it: 'Noi inoltriamo il lead; Lei contatta la coppia direttamente, fa il preventivo e chiude. La coppia è Suo cliente dal primo saluto all’ultimo ballo.',
-        nl: 'Wij sturen de lead door; jij neemt rechtstreeks contact op met het stel, offreert en sluit af. Het stel is jouw klant van de eerste begroeting tot de laatste dans.', sv: 'We route the lead; you contact the couple directly, quote, and close. The couple is your client from first hello to last dance.',
+        nl: 'Wij sturen de lead door; u neemt rechtstreeks contact op met het stel, offreert en sluit af. Het stel is uw klant van de eerste begroeting tot de laatste dans.', sv: 'We route the lead; you contact the couple directly, quote, and close. The couple is your client from first hello to last dance.',
       },
     },
   },
@@ -201,7 +201,7 @@ const steps: Step[] = [
     title: {
       en: 'Apply to join', fi: 'Hae mukaan', de: 'Bewerben Sie sich', ja: '参加申し込み',
       es: 'Solicita unirte', 'pt-BR': 'Candidate-se', 'zh-CN': '申请加入', ko: '가입 신청',
-      fr: 'Postulez pour rejoindre', it: 'Si candidi per entrare', nl: 'Meld je aan', sv: 'Ansök om att gå med',
+      fr: 'Postulez pour rejoindre', it: 'Si candidi per entrare', nl: 'Meld u aan', sv: 'Ansök om att gå med',
     },
     body: {
       en: 'Fill in the form below. We confirm you can deliver the whole wedding, in-house or through established partners.',
@@ -214,7 +214,7 @@ const steps: Step[] = [
       ko: '아래 양식을 작성하세요. 자체적으로 또는 확립된 파트너를 통해 결혼식 전체를 진행할 수 있는지 확인합니다.',
       fr: 'Remplissez le formulaire ci-dessous. Nous confirmons que vous pouvez assurer tout le mariage, en interne ou via des partenaires établis.',
       it: 'Compili il modulo qui sotto. Confermiamo che può gestire l’intero matrimonio, internamente o tramite partner consolidati.',
-      nl: 'Vul het formulier hieronder in. Wij bevestigen dat je de hele bruiloft kunt verzorgen, zelf of via gevestigde partners.', sv: 'Fill in the form below. We confirm you can deliver the whole wedding, in-house or through established partners.',
+      nl: 'Vul het formulier hieronder in. Wij bevestigen dat u de hele bruiloft kunt verzorgen, zelf of via gevestigde partners.', sv: 'Fill in the form below. We confirm you can deliver the whole wedding, in-house or through established partners.',
     },
   },
   {
@@ -243,7 +243,7 @@ const steps: Step[] = [
     title: {
       en: 'Win the couple', fi: 'Voita pari', de: 'Gewinnen Sie das Paar', ja: 'カップルを獲得',
       es: 'Gana a la pareja', 'pt-BR': 'Conquiste o casal', 'zh-CN': '赢得这对情侣', ko: '커플을 사로잡으세요',
-      fr: 'Conquérez le couple', it: 'Conquisti la coppia', nl: 'Win het stel voor je', sv: 'Vinn paret',
+      fr: 'Conquérez le couple', it: 'Conquisti la coppia', nl: 'Win het stel voor u', sv: 'Vinn paret',
     },
     body: {
       en: 'You contact the couple directly, quote, and close. You run the wedding from start to finish.',
@@ -256,7 +256,7 @@ const steps: Step[] = [
       ko: '커플과 직접 연락해 견적을 내고 계약합니다. 결혼식을 처음부터 끝까지 진행합니다.',
       fr: 'Vous contactez le couple directement, faites le devis et concluez. Vous gérez le mariage du début à la fin.',
       it: 'Lei contatta la coppia direttamente, fa il preventivo e chiude. È Lei a gestire il matrimonio dall’inizio alla fine.',
-      nl: 'Je neemt rechtstreeks contact op met het stel, offreert en sluit af. Jij runt de bruiloft van begin tot eind.', sv: 'You contact the couple directly, quote, and close. You run the wedding from start to finish.',
+      nl: 'U neemt rechtstreeks contact op met het stel, offreert en sluit af. U runt de bruiloft van begin tot eind.', sv: 'You contact the couple directly, quote, and close. You run the wedding from start to finish.',
     },
   },
 ];
@@ -279,7 +279,7 @@ const expectations: Card[] = [
       ko: '결혼식 전체를, 웨딩 장소, 예식, 케이터링, 사진, 숙박, 이동, 자체적으로 또는 신뢰할 수 있는 파트너를 통해 진행할 수 있다.',
       fr: 'Vous pouvez assurer tout le mariage, lieu, cérémonie, traiteur, photographie, hébergement, transferts, en interne ou via des partenaires de confiance.',
       it: 'Lei può gestire l’intero matrimonio, location, cerimonia, catering, fotografia, alloggio, transfer, internamente o tramite partner fidati.',
-      nl: 'Je kunt de hele bruiloft verzorgen, locatie, ceremonie, catering, fotografie, accommodatie, transfers, zelf of via vertrouwde partners.', sv: 'You can deliver the whole wedding: venue, ceremony, catering, photography, accommodation and transfers, in-house or through trusted partners.',
+      nl: 'U kunt de hele bruiloft verzorgen, locatie, ceremonie, catering, fotografie, accommodatie, transfers, zelf of via vertrouwde partners.', sv: 'You can deliver the whole wedding: venue, ceremony, catering, photography, accommodation and transfers, in-house or through trusted partners.',
     },
   },
   {
@@ -299,7 +299,7 @@ const expectations: Card[] = [
       ko: '핀란드 또는 영국에 기반을 둔, 실제 라플란드 웨딩 경험을 갖춘 자리 잡은 업체.',
       fr: 'Un prestataire établi basé en Finlande ou au Royaume-Uni, avec de vrais mariages en Laponie à votre actif.',
       it: 'Un operatore affermato con sede in Finlandia o nel Regno Unito e veri matrimoni in Lapponia alle spalle.',
-      nl: 'Een gevestigde aanbieder uit Finland of het VK met echte Laplandse bruiloften op je naam.', sv: 'En etablerad aktör i Finland eller Storbritannien med riktiga lappländska bröllop bakom sig.',
+      nl: 'Een gevestigde aanbieder uit Finland of het VK met echte Laplandse bruiloften op uw naam.', sv: 'En etablerad aktör i Finland eller Storbritannien med riktiga lappländska bröllop bakom sig.',
     },
   },
   {
@@ -319,7 +319,7 @@ const expectations: Card[] = [
       ko: '리드에 1~7일 내로 응답하고 DVV 서류를 포함해 커플을 처음부터 끝까지 책임진다.',
       fr: 'Vous répondez à un lead sous 1 à 7 jours et accompagnez le couple de bout en bout, formalités DVV comprises.',
       it: 'Lei risponde a un lead entro 1–7 giorni e segue la coppia dall’inizio alla fine, documenti DVV inclusi.',
-      nl: 'Je reageert binnen 1–7 dagen op een lead en begeleidt het stel van begin tot eind, inclusief DVV-papierwerk.', sv: 'You respond to a lead within 1–7 days and handle the couple end to end, DVV paperwork included.',
+      nl: 'U reageert binnen 1–7 dagen op een lead en begeleidt het stel van begin tot eind, inclusief DVV-papierwerk.', sv: 'You respond to a lead within 1–7 days and handle the couple end to end, DVV paperwork included.',
     },
   },
 ];
@@ -342,7 +342,7 @@ const terms: Card[] = [
       ko: '모든 파트너십은 첫 리드 전에 함께 검토하는 간단한 서면 계약에서 시작됩니다. 월 요금도, 약정도 없습니다. 양측 모두에게 공정한 조건만 있습니다.',
       fr: 'Chaque partenariat part d’un accord écrit simple que nous parcourons ensemble avant votre premier lead. Pas de frais mensuels, pas d’engagement: juste des conditions équitables des deux côtés.',
       it: 'Ogni collaborazione parte da un semplice accordo scritto che esaminiamo insieme prima del Suo primo lead. Nessun canone mensile, nessun vincolo: solo condizioni eque per entrambe le parti.',
-      nl: 'Elke samenwerking start vanuit een eenvoudige schriftelijke overeenkomst die we samen doornemen vóór je eerste lead. Geen maandelijkse kosten, geen vaste binding: alleen eerlijke voorwaarden aan beide kanten.', sv: 'Every partnership starts from a simple written agreement we walk through together before your first lead. No monthly fees, no lock-in: just fair terms on both sides.',
+      nl: 'Elke samenwerking start vanuit een eenvoudige schriftelijke overeenkomst die we samen doornemen vóór uw eerste lead. Geen maandelijkse kosten, geen vaste binding: alleen eerlijke voorwaarden aan beide kanten.', sv: 'Every partnership starts from a simple written agreement we walk through together before your first lead. No monthly fees, no lock-in: just fair terms on both sides.',
     },
   },
   {
@@ -362,7 +362,7 @@ const terms: Card[] = [
       ko: '리드 품질을 지속적으로 개선하지만, 정보는 커플이 직접 입력하므로 모든 리드를 보장할 수는 없습니다. 리드가 전달되면 커플 응대와 그 책임은 여러분에게 넘어갑니다. 관계는 처음부터 끝까지 여러분의 것입니다.',
       fr: 'Nous améliorons en continu la qualité des leads, mais les couples saisissent eux-mêmes leurs informations et nous ne pouvons garantir chaque lead. Une fois le lead transmis, le service au couple, et la responsabilité qui en découle, vous revient. La relation vous appartient de bout en bout.',
       it: 'Miglioriamo costantemente la qualità dei lead, ma sono le coppie a inserire i propri dati e non possiamo garantire ogni lead. Una volta consegnato il lead, la cura della coppia, e la relativa responsabilità, passa a Lei. La relazione è Sua dall’inizio alla fine.',
-      nl: 'We verbeteren de leadkwaliteit voortdurend, maar stellen vullen hun eigen gegevens in en we kunnen niet elke lead garanderen. Zodra een lead is geleverd, gaan de bediening van het stel, en de verantwoordelijkheid daarvoor, naar jou over. De relatie is van begin tot eind van jou.', sv: 'We improve lead quality continuously, but couples enter their own details and we cannot guarantee every lead. Once a lead is delivered, the couple is yours to serve and yours to answer for. You own the relationship end to end.',
+      nl: 'We verbeteren de leadkwaliteit voortdurend, maar stellen vullen hun eigen gegevens in en we kunnen niet elke lead garanderen. Zodra een lead is geleverd, gaan de bediening van het stel, en de verantwoordelijkheid daarvoor, naar u over. De relatie is van begin tot eind van u.', sv: 'We improve lead quality continuously, but couples enter their own details and we cannot guarantee every lead. Once a lead is delivered, the couple is yours to serve and yours to answer for. You own the relationship end to end.',
     },
   },
   {
@@ -382,7 +382,7 @@ const terms: Card[] = [
       ko: '리드가 명백히 잘못된 경우, 연락처 오류이거나 진짜 문의가 아닌 경우, 알려주시면 다음 리드에서 차감해 드립니다. 여러분은 오직 실제 커플에 대해서만 비용을 냅니다.',
       fr: 'Si un lead s’avère clairement invalide, coordonnées erronées ou demande non authentique, signalez-le-nous et nous le créditons sur votre prochain lead. Vous ne payez que pour de vrais couples.',
       it: 'Se un lead risulta chiaramente non valido, contatti errati o richiesta non autentica, ce lo segnali e lo accreditiamo sul Suo prossimo lead. Lei paga solo per coppie reali.',
-      nl: 'Blijkt een lead duidelijk ongeldig, verkeerde contactgegevens of geen echte aanvraag, laat het ons weten en we crediteren het op je volgende lead. Je betaalt alleen voor echte stellen.', sv: 'If a lead turns out to be clearly invalid (wrong contact details, or not a genuine enquiry), tell us and we credit it against your next lead. You only ever pay for real couples.',
+      nl: 'Blijkt een lead duidelijk ongeldig, verkeerde contactgegevens of geen echte aanvraag, laat het ons weten en we crediteren het op uw volgende lead. U betaalt alleen voor echte stellen.', sv: 'If a lead turns out to be clearly invalid (wrong contact details, or not a genuine enquiry), tell us and we credit it against your next lead. You only ever pay for real couples.',
     },
   },
 ];
@@ -450,7 +450,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: '검증된 라플란드 웨딩 리드를 받은 편지함으로 바로, 오로라부터 백야까지, 일 년 내내. 받은 리드만큼만 지불합니다.',
     fr: 'Des leads de mariage en Laponie qualifiés directement dans votre boîte de réception, des aurores boréales au soleil de minuit, toute l’année. Vous ne payez que les leads reçus.',
     it: 'Lead qualificati di matrimoni in Lapponia direttamente nella Sua casella, dall’aurora boreale al sole di mezzanotte, tutto l’anno. Lei paga solo i lead che riceve.',
-    nl: 'Gekwalificeerde Laplandse trouwleads rechtstreeks in je inbox, van noorderlicht tot middernachtzon, het hele jaar door. Je betaalt alleen voor ontvangen leads.', sv: 'Qualified Lapland wedding leads straight to your inbox, from Northern Lights to Midnight Sun, all year round. You pay only for the leads you receive.',
+    nl: 'Gekwalificeerde Laplandse trouwleads rechtstreeks in uw inbox, van noorderlicht tot middernachtzon, het hele jaar door. U betaalt alleen voor ontvangen leads.', sv: 'Qualified Lapland wedding leads straight to your inbox, from Northern Lights to Midnight Sun, all year round. You pay only for the leads you receive.',
   },
   heroImageAlt: {
     en: 'Wedding couple under the Northern Lights in Lapland',
@@ -468,7 +468,7 @@ const C: Record<CKey, Localized<string>> = {
   heroCta: {
     en: 'Apply to join the network', fi: 'Hae mukaan verkostoon', de: 'Dem Netzwerk beitreten', ja: 'ネットワークに参加申し込み',
     es: 'Solicita unirte a la red', 'pt-BR': 'Candidate-se à rede', 'zh-CN': '申请加入网络', ko: '네트워크 가입 신청',
-    fr: 'Postuler pour rejoindre le réseau', it: 'Si candidi per entrare nella rete', nl: 'Meld je aan voor het netwerk', sv: 'Ansök om att gå med i nätverket',
+    fr: 'Postuler pour rejoindre le réseau', it: 'Si candidi per entrare nella rete', nl: 'Meld u aan voor het netwerk', sv: 'Ansök om att gå med i nätverket',
   },
   conceptEyebrow: {
     en: 'What is LaplandVibes', fi: 'Mikä on LaplandVibes', de: 'Was ist LaplandVibes', ja: 'LaplandVibesとは',
@@ -499,7 +499,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: 'LaplandWeddings는 LaplandVibes 네트워크의 일부입니다. 여행자가 라플란드 여행, 숙박, 허스키 사파리, 저녁 식사, 항공편 을 계획할 때 우리 사이트에 도달합니다. 결혼을 꿈꾸는 이들은 하나의 양식으로 모이고, 그 양식이 여러분에게 전달됩니다.',
     fr: 'LaplandWeddings fait partie du réseau LaplandVibes. Lorsqu’un voyageur planifie un séjour en Laponie, hébergement, safari husky, dîner, vols, il arrive sur nos sites. Ceux qui rêvent d’un mariage sont orientés vers un seul formulaire, et ce formulaire vous parvient.',
     it: 'LaplandWeddings fa parte della rete LaplandVibes. Quando un viaggiatore pianifica un viaggio in Lapponia, alloggio, un husky-safari, cena, voli, approda sui nostri siti. Chi sogna un matrimonio viene indirizzato a un unico modulo, e quel modulo arriva a Lei.',
-    nl: 'LaplandWeddings maakt deel uit van het LaplandVibes-netwerk. Wanneer een reiziger een Laplandreis plant, verblijf, een husky-safari, diner, vluchten, belandt die op onze sites. Wie van een bruiloft droomt, wordt naar één formulier geleid, en dat formulier komt bij jou.', sv: 'LaplandWeddings is part of the LaplandVibes network. When a traveller plans a Lapland trip (lodging, a husky safari, dinner, flights), they land on our sites. Those dreaming of a wedding are funnelled to one form, and that form comes to you.',
+    nl: 'LaplandWeddings maakt deel uit van het LaplandVibes-netwerk. Wanneer een reiziger een Laplandreis plant, verblijf, een husky-safari, diner, vluchten, belandt die op onze sites. Wie van een bruiloft droomt, wordt naar één formulier geleid, en dat formulier komt bij u.', sv: 'LaplandWeddings is part of the LaplandVibes network. When a traveller plans a Lapland trip (lodging, a husky safari, dinner, flights), they land on our sites. Those dreaming of a wedding are funnelled to one form, and that form comes to you.',
   },
   conceptFooter: {
     en: 'The network draws a steady flow of travellers from around the world all year, and the Lapland wedding market grows every season.',
@@ -538,7 +538,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: '여러분은 가장 잘하는 일을 하세요. 커플은 저희가 문 앞까지 데려다드립니다.',
     fr: 'Vous faites ce que vous faites de mieux; nous amenons les couples jusqu’à votre porte.',
     it: 'Lei fa ciò che sa fare meglio; noi portiamo le coppie alla Sua porta.',
-    nl: 'Jij doet waar je het beste in bent; wij brengen de stellen naar je toe.', sv: 'Du gör det du är bäst på. Vi för paren till din dörr.',
+    nl: 'U doet waar u het beste in bent; wij brengen de stellen naar u toe.', sv: 'Du gör det du är bäst på. Vi för paren till din dörr.',
   },
   howEyebrow: {
     en: 'How it works', fi: 'Näin se toimii', de: 'So funktioniert es', ja: '仕組み',
@@ -561,7 +561,7 @@ const C: Record<CKey, Localized<string>> = {
     es: 'Tu primer lead es gratis', 'pt-BR': 'Seu primeiro lead é grátis',
     'zh-CN': '你的首条线索免费', ko: '첫 리드는 무료입니다',
     fr: 'Votre premier lead est gratuit', it: 'Il Suo primo lead è gratis',
-    nl: 'Je eerste lead is gratis', sv: 'Ditt första lead är gratis',
+    nl: 'Uw eerste lead is gratis', sv: 'Ditt första lead är gratis',
   },
   priceSubtitle: {
     en: 'No monthly fees, no setup cost. Pick the model that suits you.',
@@ -574,7 +574,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: '월 요금 없음, 설정 비용 없음. 여러분에게 맞는 모델을 선택하세요.',
     fr: 'Pas de frais mensuels, pas de frais de mise en route. Choisissez le modèle qui vous convient.',
     it: 'Nessun canone mensile, nessun costo di attivazione. Scelga il modello più adatto a Lei.',
-    nl: 'Geen maandelijkse kosten, geen opstartkosten. Kies het model dat bij je past.', sv: 'Inga månadsavgifter, ingen startkostnad. Välj den modell som passar dig.',
+    nl: 'Geen maandelijkse kosten, geen opstartkosten. Kies het model dat bij u past.', sv: 'Inga månadsavgifter, ingen startkostnad. Välj den modell som passar dig.',
   },
   sharedLead: {
     en: 'Shared lead', fi: 'Jaettu liidi', de: 'Geteilter Lead', ja: '共有リード',
@@ -602,7 +602,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: '받은 리드만큼만 지불합니다: 여러분이 제공하는 것을 적극적으로 찾는 실제 커플입니다. 각 리드는 최대 세 파트너와 공유되어 경쟁이 공정하게 유지됩니다. 첫 리드는 무료입니다.',
     fr: 'Vous ne payez que les leads reçus: de vrais couples qui recherchent activement ce que vous proposez. Chaque lead est partagé avec trois partenaires au maximum, la concurrence reste donc équitable. Votre premier lead est gratuit.',
     it: 'Lei paga solo i lead che riceve: coppie reali che cercano attivamente ciò che offre. Ogni lead è condiviso con al massimo tre partner, così la concorrenza resta equa. Il Suo primo lead è gratis.',
-    nl: 'Je betaalt alleen voor ontvangen leads: echte stellen die actief op zoek zijn naar wat jij biedt. Elke lead wordt met maximaal drie partners gedeeld, zodat de concurrentie eerlijk blijft. Je eerste lead is gratis.', sv: 'You pay only for the leads you receive: real couples actively looking for what you offer. Each lead is shared with at most three partners, so the competition stays fair. Your first lead is free.',
+    nl: 'U betaalt alleen voor ontvangen leads: echte stellen die actief op zoek zijn naar wat u biedt. Elke lead wordt met maximaal drie partners gedeeld, zodat de concurrentie eerlijk blijft. Uw eerste lead is gratis.', sv: 'You pay only for the leads you receive: real couples actively looking for what you offer. Each lead is shared with at most three partners, so the competition stays fair. Your first lead is free.',
   },
   fromPrice: {
     en: 'from €75', fi: 'alk. €75', de: 'ab 75 €', ja: '75ユーロ〜',
@@ -620,7 +620,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: '커플은 오직 여러분만의 것입니다. 같은 리드는 다른 누구에게도 가지 않습니다. 간단명료합니다: 지불 금액을 정확히 알고, 경쟁 없이 커플에게 온전히 집중할 수 있습니다.',
     fr: 'Le couple n’est qu’à vous; le même lead ne va à personne d’autre. Simple : vous savez exactement ce que vous payez et accordez au couple toute votre attention, sans concurrence.',
     it: 'La coppia è solo Sua; lo stesso lead non va a nessun altro. Semplice: sa esattamente quanto paga e dedica alla coppia la massima attenzione senza concorrenza.',
-    nl: 'Het stel is alleen van jou; dezelfde lead gaat naar niemand anders. Eenvoudig: je weet precies wat je betaalt en geeft het stel je volle aandacht zonder concurrentie.', sv: 'The couple is yours alone; the same lead goes to no one else. Straightforward: you know exactly what you pay, and you give the couple your full attention with no competition.',
+    nl: 'Het stel is alleen van u; dezelfde lead gaat naar niemand anders. Eenvoudig: u weet precies wat u betaalt en geeft het stel uw volle aandacht zonder concurrentie.', sv: 'The couple is yours alone; the same lead goes to no one else. Straightforward: you know exactly what you pay, and you give the couple your full attention with no competition.',
   },
   priceFooter: {
     en: 'Simple pricing: you always pay per lead, never per sale. No monthly fees, no percentage tracking, no lock-in. Cancel at any time.',
@@ -633,7 +633,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: '간단한 요금: 항상 리드 단위로 지불하며, 판매 단위로는 절대 아닙니다. 월 요금 없음, 비율 추적 없음, 약정 없음, 언제든 해지 가능.',
     fr: 'Tarifs simples : vous payez toujours au lead, jamais à la vente. Pas de frais mensuels, pas de suivi de pourcentage, pas d’engagement, annulable à tout moment.',
     it: 'Prezzi semplici: si paga sempre a lead, mai a vendita. Nessun canone mensile, nessun tracciamento percentuale, nessun vincolo. Disdica quando vuole.',
-    nl: 'Eenvoudige prijzen: je betaalt altijd per lead, nooit per verkoop. Geen maandelijkse kosten, geen percentagetracking, geen vaste binding, altijd opzegbaar.', sv: 'Simple pricing: you always pay per lead, never per sale. No monthly fees, no percentage tracking, no lock-in. Cancel at any time.',
+    nl: 'Eenvoudige prijzen: u betaalt altijd per lead, nooit per verkoop. Geen maandelijkse kosten, geen percentagetracking, geen vaste binding, altijd opzegbaar.', sv: 'Simple pricing: you always pay per lead, never per sale. No monthly fees, no percentage tracking, no lock-in. Cancel at any time.',
   },
   termsEyebrow: {
     en: 'How we work together', fi: 'Pelisäännöt', de: 'Wie wir zusammenarbeiten', ja: '協働の進め方',
@@ -659,7 +659,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: '첫날부터 명확한 기본 원칙: 무엇에 대해 지불하는지, 무엇을 약속하는지, 드물게 발생하는 잘못된 리드를 어떻게 처리하는지 정확히 알 수 있습니다.',
     fr: 'Des règles claires dès le premier jour: vous savez exactement ce que vous payez, ce à quoi vous vous engagez et comment nous gérons le rare lead invalide.',
     it: 'Regole chiare fin dal primo giorno: Lei sa esattamente per che cosa paga, a che cosa si impegna e come gestiamo il raro lead non valido.',
-    nl: 'Heldere basisregels vanaf dag één: je weet precies waarvoor je betaalt, waaraan je je verbindt en hoe we de zeldzame ongeldige lead afhandelen.', sv: 'Clear ground rules from day one: you know exactly what you pay for, what you commit to, and how we handle the rare bad lead.',
+    nl: 'Heldere basisregels vanaf dag één: u weet precies waarvoor u betaalt, waaraan u zich verbindt en hoe we de zeldzame ongeldige lead afhandelen.', sv: 'Clear ground rules from day one: you know exactly what you pay for, what you commit to, and how we handle the rare bad lead.',
   },
   criteriaEyebrow: {
     en: 'Who we partner with', fi: 'Kumppanikriteerit', de: 'Mit wem wir zusammenarbeiten', ja: 'パートナーの条件',

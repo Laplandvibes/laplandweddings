@@ -464,7 +464,7 @@ export const weddingTypes: WeddingType[] = [
       ko: '두 사람과 주례, 그리고 사진가뿐',
       fr: 'Juste vous deux, l’officiant et un photographe',
       it: 'Solo gli sposi, il celebrante e un fotografo',
-      nl: 'Alleen jullie tweeën, de voltrekker en een fotograaf',
+      nl: 'Alleen u tweeën, de voltrekker en een fotograaf',
       sv: 'Bara ni två, vigselförrättaren och en fotograf',
     },
     description: {
@@ -568,7 +568,7 @@ export const weddingTypes: WeddingType[] = [
       ko: '라플란드의 눈 속에서 서약을 새롭게 하세요',
       fr: 'Renouvelez vos vœux dans la neige de Laponie',
       it: 'Rinnovi le Sue promesse nella neve della Lapponia',
-      nl: 'Hernieuw je geloften in de sneeuw van Lapland',
+      nl: 'Hernieuw uw geloften in de sneeuw van Lapland',
       sv: 'Förnya era löften i Lapplands snö',
     },
     description: {

@@ -63,7 +63,7 @@ const STEPS: Step[] = [
       ko: '본국에서 혼인 무장애 증명서를 발급받으세요',
       fr: 'Obtenez un certificat de non-empêchement de votre pays d’origine',
       it: 'Si procuri un certificato di assenza di impedimenti dal Suo Paese',
-      nl: 'Haal een verklaring van geen huwelijksbeletsel uit je thuisland', sv: 'Skaffa ett intyg om att hinder saknas från ditt hemland',
+      nl: 'Haal een verklaring van geen huwelijksbeletsel uit uw thuisland', sv: 'Skaffa ett intyg om att hinder saknas från ditt hemland',
     },
     p: {
       fi: 'Pyydä se omasta maistraatistasi tai ulkoasiainministeriöstä ennen Suomeen tuloa. Useimmissa maissa apostille-leima ja valallinen käännös tarvitaan.',
@@ -76,7 +76,7 @@ const STEPS: Step[] = [
       ko: '핀란드 도착 전에 본국의 등록 기관이나 외교부에 신청하세요. 대부분의 국가에서 아포스티유와 선서 번역이 필요합니다.',
       fr: 'Demandez-le auprès de votre état civil ou de votre ministère des Affaires étrangères avant d’arriver en Finlande. La plupart des pays exigent une apostille et une traduction assermentée.',
       it: 'Lo richieda all’ufficio di stato civile o al ministero degli esteri del Suo Paese prima di arrivare in Finlandia. La maggior parte dei Paesi richiede apostille e traduzione giurata.',
-      nl: 'Vraag het aan bij je burgerlijke stand of ministerie van Buitenlandse Zaken voordat je in Finland aankomt. De meeste landen vereisen een apostille en een beëdigde vertaling.', sv: 'Request from your home registrar or foreign ministry before arriving in Finland. Most countries require an apostille stamp and a sworn translation.',
+      nl: 'Vraag het aan bij uw burgerlijke stand of ministerie van Buitenlandse Zaken voordat u in Finland aankomt. De meeste landen vereisen een apostille en een beëdigde vertaling.', sv: 'Request from your home registrar or foreign ministry before arriving in Finland. Most countries require an apostille stamp and a sworn translation.',
     },
     link: { url: 'https://dvv.fi/en/a-certificate-of-the-right-granted-by-the-finnish-legislation-to-enter-a-marriage-in-a-foreign-country', label: 'DVV: Certificate of right to marry' },
   },
@@ -93,7 +93,7 @@ const STEPS: Step[] = [
       ko: '주례를 선택하세요',
       fr: 'Choisissez votre officiant',
       it: 'Scelga il Suo celebrante',
-      nl: 'Kies je voltrekker', sv: 'Välj vigselförrättare',
+      nl: 'Kies uw voltrekker', sv: 'Välj vigselförrättare',
     },
     p: {
       fi: 'Siviilivihkimys on yleisin: DVV:n vihkijä Rovaniemellä, Inarissa, Kittilässä tai Sodankylässä. Englanninkielinen vihkijä järjestyy yleensä suunnittelijan kautta. Kirkollinen vihkimys vain rekisteröityyn uskonnolliseen yhdyskuntaan, kuten ev.lut. kirkkoon, kuuluville.',
@@ -106,7 +106,7 @@ const STEPS: Step[] = [
       ko: '민사 예식이 가장 일반적입니다: 로바니에미, 이나리, 키틸레, 소단퀼래의 DVV 등록관이 진행합니다. 영어가 가능한 주례는 보통 플래너가 섭외합니다. 종교 예식은 루터교회 등 등록된 종교 단체의 신자만 가능합니다.',
       fr: 'La cérémonie civile est la plus courante : un officier d’état civil du DVV à Rovaniemi, Inari, Kittilä ou Sodankylä. L’officiant anglophone est généralement organisé par votre organisateur. Cérémonie religieuse réservée aux membres d’une communauté religieuse enregistrée, comme l’Église luthérienne.',
       it: 'La cerimonia civile è la più comune: un ufficiale del DVV a Rovaniemi, Inari, Kittilä o Sodankylä. Il celebrante anglofono è di solito organizzato dal Suo planner. Cerimonia religiosa solo per i membri di una comunità religiosa registrata, come la Chiesa luterana.',
-      nl: 'De burgerlijke ceremonie is het meest gangbaar: een ambtenaar van de DVV in Rovaniemi, Inari, Kittilä of Sodankylä. Een Engelstalige voltrekker wordt meestal door je planner geregeld. Een kerkelijke ceremonie alleen voor leden van een geregistreerd kerkgenootschap, zoals de Lutherse Kerk.', sv: 'A civil ceremony is the most common: a DVV registrar in Rovaniemi, Inari, Kittilä or Sodankylä. An English-speaking officiant is usually arranged by your planner. A religious ceremony is open only to members of a registered religious community, such as the Lutheran Church.',
+      nl: 'De burgerlijke ceremonie is het meest gangbaar: een ambtenaar van de DVV in Rovaniemi, Inari, Kittilä of Sodankylä. Een Engelstalige voltrekker wordt meestal door uw planner geregeld. Een kerkelijke ceremonie alleen voor leden van een geregistreerd kerkgenootschap, zoals de Lutherse Kerk.', sv: 'A civil ceremony is the most common: a DVV registrar in Rovaniemi, Inari, Kittilä or Sodankylä. An English-speaking officiant is usually arranged by your planner. A religious ceremony is open only to members of a registered religious community, such as the Lutheran Church.',
     },
   },
   {
@@ -164,7 +164,7 @@ const STEPS: Step[] = [
       ko: '영어로 된 공식 혼인 증명서 2부를 받습니다. DVV를 통한 아포스티유는 신속하며, 대부분의 본국에서 요구됩니다.',
       fr: 'Vous recevez 2 actes de mariage officiels en anglais. L’apostille via le DVV est rapide, exigée par la plupart des pays d’origine.',
       it: 'Riceve 2 certificati di matrimonio ufficiali in inglese. L’apostille tramite il DVV è rapida ed è richiesta dalla maggior parte dei Paesi d’origine.',
-      nl: 'Je ontvangt 2 officiële huwelijksakten in het Engels. De apostille via het DVV gaat snel, vereist door de meeste thuislanden.', sv: 'You receive 2 official marriage certificates in English. An apostille from the DVV is quick to obtain and is required by most home countries.',
+      nl: 'U ontvangt 2 officiële huwelijksakten in het Engels. De apostille via het DVV gaat snel, vereist door de meeste thuislanden.', sv: 'You receive 2 official marriage certificates in English. An apostille from the DVV is quick to obtain and is required by most home countries.',
     },
     link: { url: 'https://um.fi/registration-of-marriage-in-the-population-information-system', label: 'Finnish MFA: Marriage registration' },
   },
@@ -181,7 +181,7 @@ const STEPS: Step[] = [
       ko: '본국에서 혼인을 등록하세요',
       fr: 'Enregistrez le mariage dans votre pays d’origine',
       it: 'Registri il matrimonio nel Suo Paese d’origine',
-      nl: 'Registreer het huwelijk in je thuisland', sv: 'Registrera vigseln i ditt hemland',
+      nl: 'Registreer het huwelijk in uw thuisland', sv: 'Registrera vigseln i ditt hemland',
     },
     p: {
       fi: 'Vie todistus apostille-leimalla kotimaasi rekisteriin. EU-maissa yleensä kuukauden sisällä. Tämän jälkeen avioliitto on kirjattu sekä kotimaassasi että Suomessa.',
@@ -194,7 +194,7 @@ const STEPS: Step[] = [
       ko: '아포스티유가 부착된 증명서를 본국 등록 기관에 제출하세요. EU 국가에서는 보통 한 달 이내에 처리됩니다. 이후 혼인은 본국과 핀란드 양쪽에 기록됩니다.',
       fr: 'Présentez l’acte apostillé au registre de votre pays d’origine. Dans les pays de l’UE, cela prend généralement moins d’un mois. Le mariage est alors enregistré dans votre pays comme en Finlande.',
       it: 'Porti il certificato con apostille all’anagrafe del Suo Paese d’origine. Nei Paesi UE di solito entro un mese. Da quel momento il matrimonio è registrato sia nel Suo Paese sia in Finlandia.',
-      nl: 'Lever de geapostilleerde akte in bij het register van je thuisland. In EU-landen meestal binnen een maand. Daarna is het huwelijk zowel in je eigen land als in Finland geregistreerd.', sv: 'Take the apostilled certificate to your home country’s registry. In EU countries this is usually within a month. Your marriage is then on record at home as well as in Finland.',
+      nl: 'Lever de geapostilleerde akte in bij het register van uw thuisland. In EU-landen meestal binnen een maand. Daarna is het huwelijk zowel in uw eigen land als in Finland geregistreerd.', sv: 'Take the apostilled certificate to your home country’s registry. In EU countries this is usually within a month. Your marriage is then on record at home as well as in Finland.',
     },
   },
 ];
@@ -339,7 +339,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '라플란드에서의 두 분의 결혼식: 실용 가이드',
     fr: 'Votre mariage en Laponie: guide pratique',
     it: 'Il Suo matrimonio in Lapponia: guida pratica',
-    nl: 'Jullie bruiloft in Lapland: praktische gids', sv: 'Ert bröllop i Lappland: praktisk guide',
+    nl: 'Uw bruiloft in Lapland: praktische gids', sv: 'Ert bröllop i Lappland: praktisk guide',
   },
   heroImageAlt: {
     fi: 'Vihkimisseremonia talvisessa metsässä',
@@ -391,7 +391,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '인쇄하거나 여행 폴더에 저장하세요: 결혼식 8주 전부터 식 이후까지 모든 단계.',
     fr: 'Imprimez-la ou enregistrez-la pour votre dossier de voyage: toutes les étapes, de 8 semaines avant jusqu’après le mariage.',
     it: 'La stampi o la salvi nella cartella di viaggio: tutti i passaggi, da 8 settimane prima fino a dopo le nozze.',
-    nl: 'Print of bewaar voor je reismap: elke stap, van 8 weken vooraf tot na de bruiloft.', sv: 'Skriv ut eller spara i resepärmen: varje steg från 8 veckor före till efter bröllopet.',
+    nl: 'Print of bewaar voor uw reismap: elke stap, van 8 weken vooraf tot na de bruiloft.', sv: 'Skriv ut eller spara i resepärmen: varje steg från 8 veckor före till efter bröllopet.',
   },
   downloadOpen: {
     fi: 'Avaa lista',
@@ -430,7 +430,7 @@ const UI: Record<string, Localized<string>> = {
     ko: '본국과 핀란드 양쪽에서 인정받는 결혼까지 남은 것은 여섯 단계의 서류 절차뿐, 대부분의 커플이 다른 준비와 병행해 4~8주 안에 마칩니다.',
     fr: 'Entre vous et un mariage reconnu chez vous comme en Finlande, il n’y a que six étapes administratives; la plupart des couples les bouclent en 4 à 8 semaines, en parallèle de tout le reste.',
     it: 'Tra Lei e un matrimonio riconosciuto sia nel Suo Paese sia in Finlandia ci sono sei passaggi burocratici; la maggior parte delle coppie li completa in 4-8 settimane, insieme a tutto il resto.',
-    nl: 'Tussen jullie en een huwelijk dat zowel thuis als in Finland erkend is staan zes stappen papierwerk; de meeste stellen ronden ze in 4-8 weken af, naast al het andere.', sv: 'Six steps of paperwork stand between you and a marriage recognised at home as well as in Finland; most couples clear them in 4–8 weeks alongside everything else.',
+    nl: 'Tussen u en een huwelijk dat zowel thuis als in Finland erkend is staan zes stappen papierwerk; de meeste stellen ronden ze in 4-8 weken af, naast al het andere.', sv: 'Six steps of paperwork stand between you and a marriage recognised at home as well as in Finland; most couples clear them in 4–8 weeks alongside everything else.',
   },
   guestsTitle: {
     fi: 'Vieraat, lennot ja kuka maksaa',
@@ -574,7 +574,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '플래너가 견적을 내는 것은 결혼식 그 자체입니다: 예식, 베뉴, 프로그램, 업체 섭외. 항공편과 호텔 객실은 별도로 예약하며, 보통 웨딩 플래닝이 시작되기 전에 이루어집니다. 이곳에서는 항공권을 판매하지 않습니다. 무엇을 언제 예약해야 하는지는 이 가이드가 알려드립니다.',
       fr: 'L’organisateur chiffre le mariage lui-même: cérémonie, lieu, programme, prestataires. Les vols et les chambres d’hôtel se réservent à part, souvent avant même le début de l’organisation du mariage. Personne ici ne vend de vols ; ce guide vous dit quoi réserver et quand.',
       it: 'Il planner quota il matrimonio in sé: cerimonia, location, programma, fornitori. Voli e camere d’albergo si prenotano a parte, di solito ancora prima che inizi l’organizzazione delle nozze. Qui nessuno vende voli: questa guida dice che cosa prenotare e quando.',
-      nl: 'De planner begroot de bruiloft zelf: ceremonie, locatie, programma, leveranciers. Vluchten en hotelkamers boek je apart, meestal nog voordat de bruiloftsplanning begint. Hier verkoopt niemand vluchten; deze gids vertelt je wat je wanneer moet boeken.', sv: 'The planner prices the wedding itself: ceremony, venue, programme, vendors. Flights and hotel rooms are booked separately, usually before wedding planning even starts. Nobody here sells flights; this guide tells you what to book and when.',
+      nl: 'De planner begroot de bruiloft zelf: ceremonie, locatie, programma, leveranciers. Vluchten en hotelkamers boekt u apart, meestal nog voordat de bruiloftsplanning begint. Hier verkoopt niemand vluchten; deze gids vertelt u wat u wanneer moet boeken.', sv: 'The planner prices the wedding itself: ceremony, venue, programme, vendors. Flights and hotel rooms are booked separately, usually before wedding planning even starts. Nobody here sells flights; this guide tells you what to book and when.',
     },
   },
   {
@@ -603,7 +603,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '데스티네이션 웨딩에서는 하객이 항공편과 숙박을 직접 부담하는 것이 일반적입니다. 청첩장에 이를 분명히 알리세요. 일부를 두 분이 부담하고 싶다면(예: 결혼식 당일 저녁 만찬과 액티비티 하나) 문의 시 알려 주시면, 플래너가 처음부터 예산에 반영합니다.',
       fr: 'Dans un mariage à l’étranger, les invités prennent normalement en charge leurs vols et leur hébergement. Dites-le clairement sur l’invitation. Si vous souhaitez en offrir une partie (par exemple le dîner du soir des noces et une activité), précisez-le dans votre demande et les organisateurs l’intégreront au budget dès le premier jour.',
       it: 'Nei matrimoni all’estero gli invitati coprono di norma voli e alloggio. Lo dica chiaramente già nell’invito. Se vuole offrirne una parte (ad esempio la cena di nozze e un’attività), lo indichi nella richiesta: i planner la inseriranno nel budget fin dal primo giorno.',
-      nl: 'Bij een bruiloft in het buitenland betalen gasten normaal gesproken hun eigen vluchten en verblijf. Zeg dat duidelijk in de uitnodiging. Wil je een deel aanbieden (bijvoorbeeld het bruiloftsdiner en één activiteit), vermeld dat dan in je aanvraag; de planners zetten het vanaf dag één in het budget.', sv: 'In destination weddings, guests normally cover their own flights and accommodation. Say this clearly on the invitation. If you want to host some of it (say, the wedding-night dinner and one activity), say so in the enquiry and the planners will price it in from day one.',
+      nl: 'Bij een bruiloft in het buitenland betalen gasten normaal gesproken hun eigen vluchten en verblijf. Zeg dat duidelijk in de uitnodiging. Wilt u een deel aanbieden (bijvoorbeeld het bruiloftsdiner en één activiteit), vermeld dat dan in uw aanvraag; de planners zetten het vanaf dag één in het budget.', sv: 'In destination weddings, guests normally cover their own flights and accommodation. Say this clearly on the invitation. If you want to host some of it (say, the wedding-night dinner and one activity), say so in the enquiry and the planners will price it in from day one.',
     },
   },
   {
@@ -619,7 +619,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '원하시면 테마와 연출까지',
       fr: 'Thème et ambiance, si vous le souhaitez',
       it: 'Tema e stile, se lo desidera',
-      nl: 'Thema en stijl, als je dat wilt', sv: 'Tema och stil, om ni vill',
+      nl: 'Thema en stijl, als u dat wilt', sv: 'Tema och stil, om ni vill',
     },
     p: {
       fi: 'Planneri voi suunnitella kanssanne myös teeman: värit, kukat, kattauksen ja ohjelman kaaren, niin että koko viikonloppu tuntuu yhdeltä tarinalta eikä varauslistalta.',
@@ -632,7 +632,7 @@ const GUEST_CARDS: GuestCard[] = [
       ko: '플래너가 테마 디자인도 함께할 수 있습니다: 색감, 꽃, 테이블 세팅, 프로그램의 흐름까지, 주말 전체가 예약 목록이 아니라 하나의 이야기처럼 느껴지도록.',
       fr: 'Un organisateur peut aussi concevoir le thème avec vous: couleurs, fleurs, art de la table et fil du programme, pour que tout le week-end ressemble à une seule histoire plutôt qu’à une liste de réservations.',
       it: 'Un planner può anche disegnare con Lei il tema: colori, fiori, mise en place e arco del programma, così l’intero weekend sembra un’unica storia e non un elenco di prenotazioni.',
-      nl: 'Een planner kan ook samen met jullie het thema ontwerpen: kleuren, bloemen, tafelstyling en de opbouw van het programma, zodat het hele weekend als één verhaal voelt in plaats van een lijst boekingen.', sv: 'A planner can also design the theme with you: colours, flowers, table setting and the arc of the programme, so the whole weekend feels like one story instead of a list of bookings.',
+      nl: 'Een planner kan ook samen met u het thema ontwerpen: kleuren, bloemen, tafelstyling en de opbouw van het programma, zodat het hele weekend als één verhaal voelt in plaats van een lijst boekingen.', sv: 'A planner can also design the theme with you: colours, flowers, table setting and the arc of the programme, so the whole weekend feels like one story instead of a list of bookings.',
     },
   },
 ];
@@ -878,7 +878,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '네. 영어로 된 공식 증명서 2부를 받습니다. 대부분의 본국에서 DVV 아포스티유를 요구하며, 발급은 빠릅니다.',
       fr: 'Oui. Vous recevez 2 actes officiels en anglais. L’apostille via le DVV est exigée par la plupart des pays d’origine, rapide à obtenir.',
       it: 'Sì. Riceve 2 certificati ufficiali in inglese. La maggior parte dei Paesi d’origine richiede l’apostille del DVV, veloce da ottenere.',
-      nl: 'Ja. Je ontvangt 2 officiële akten in het Engels. De meeste thuislanden vereisen een apostille via het DVV, snel te verkrijgen.', sv: 'Yes. You receive 2 official certificates in English. An apostille from the DVV is required by most home countries and is quick to obtain.',
+      nl: 'Ja. U ontvangt 2 officiële akten in het Engels. De meeste thuislanden vereisen een apostille via het DVV, snel te verkrijgen.', sv: 'Yes. You receive 2 official certificates in English. An apostille from the DVV is required by most home countries and is quick to obtain.',
     },
   },
   {

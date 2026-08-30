@@ -326,7 +326,7 @@ const CONTENT: Localized<ChecklistContent> = {
     seoDesc: 'Een checklist van één pagina voor buitenlandse stellen die in Fins Lapland willen trouwen. DVV-papierwerk, getuigen, voltrekker. Print als pdf.',
     eyebrow: 'Gratis weggever',
     title: 'Trouwen in Lapland: DVV-checklist voor buitenlandse stellen',
-    subtitle: 'Een checklist van één pagina met elk document en elke stap die nodig is wanneer een buitenlands stel in Fins Lapland wil trouwen. Print of bewaar als pdf voor je reismap.',
+    subtitle: 'Een checklist van één pagina met elk document en elke stap die nodig is wanneer een buitenlands stel in Fins Lapland wil trouwen. Print of bewaar als pdf voor uw reismap.',
     printBtn: 'Printen of opslaan als pdf',
     intro: 'Finland maakt trouwen voor buitenlanders eenvoudig. Het papierwerk duurt 3–5 weken via de DVV. Begin het proces minstens 2 maanden voor de bruiloft.',
     sectionA: 'A · 8 weken vooraf',

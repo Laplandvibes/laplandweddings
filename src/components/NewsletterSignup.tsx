@@ -30,7 +30,7 @@ const L11: Record<'thanks' | 'failed', Localized<string>> = {
     ko: '감사합니다! 목록에 등록되었습니다.',
     fr: 'Merci ! Vous êtes inscrit·e à la liste.',
     it: 'Grazie! Ora è nella lista.',
-    nl: 'Bedankt! Je staat op de lijst.',
+    nl: 'Bedankt! U staat op de lijst.',
     sv: 'Tack! Du är med på listan.',
   },
   failed: {
