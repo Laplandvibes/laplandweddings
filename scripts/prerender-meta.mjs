@@ -149,7 +149,7 @@ const top = {
           description: '一份独立的拉普兰婚礼指南。21 个场地、DVV文件、真实价格和实用指南。' },
     ko: { title: '라플란드 결혼식 2026: 베뉴와 혼인 서류',
           description: '라플란드 결혼식을 위한 독립적인 안내서입니다. 21곳의 예식장, DVV 서류, 실제 가격과 실용적인 가이드.' },
-    fr: { title: 'Mariage en Laponie 2026: lieux et démarches de mariage',
+    fr: { title: 'Mariage en Laponie 2026 : lieux, prix et démarches',
           description: 'Un guide indépendant pour se marier en Laponie. 21 lieux, démarches DVV, prix réels et guides pratiques.' },
     it: { title: 'Matrimonio in Lapponia 2026: location e pratiche di nozze',
           description: 'Una guida indipendente per sposarsi in Lapponia. 21 location, pratiche DVV, prezzi reali e guide pratiche.' },
@@ -357,7 +357,7 @@ const top = {
     'pt-BR': { title: 'Privacidade | LaplandWeddings', description: 'Política de privacidade de laplandweddings.online: como tratamos os dados de consulta e a analítica.' },
     'zh-CN': { title: '隐私政策 | LaplandWeddings', description: 'laplandweddings.online 的隐私政策：我们如何处理咨询数据和分析。' },
     ko: { title: '개인정보 처리방침 | LaplandWeddings', description: 'laplandweddings.online 개인정보 처리방침: 문의 데이터와 분석을 어떻게 다루는지 설명합니다.' },
-    fr: { title: 'Confidentialité | LaplandWeddings', description: 'Politique de confidentialité de laplandweddings.online: comment nous traitons les données de demande et l’analytique.' },
+    fr: { title: 'Confidentialité | LaplandWeddings', description: 'Politique de confidentialité de laplandweddings.online : comment nous traitons les données de demande et l’analytique.' },
     it: { title: 'Informativa sulla privacy | LaplandWeddings', description: 'Informativa sulla privacy di laplandweddings.online: come trattiamo i dati delle richieste e l’analitica.' },
     nl: { title: 'Privacyverklaring | LaplandWeddings', description: 'Privacybeleid voor laplandweddings.online: hoe wij omgaan met aanvraaggegevens en analyses.' },
     sv: { title: 'Integritetspolicy | LaplandWeddings', description: 'Integritetspolicy för laplandweddings.online: hur vi hanterar förfrågningsdata och analys.' },
@@ -688,8 +688,8 @@ for (const v of venues) {
       // paikkakunnan — pudotetaan VAIN kun otsikko ei muuten mahdu. Sivun oma
       // sisalto nayttaa aluekuvauksen kokonaisena, tama koskee vain <title>:a.
       title: (() => {
-        const full = `${v.name}: ${region}`;
-        return (full.length > 60 ? `${v.name}: ${region.split(' · ')[0]}` : full) + ' | LaplandWeddings';
+        const sep = L.lang === 'fr' ? ' : ' : ': '; const full = `${v.name}${sep}${region}`;
+        return (full.length > 60 ? `${v.name}${sep}${region.split(' · ')[0]}` : full) + ' | LaplandWeddings';
       })(),
       description: desc,
     };

@@ -1112,7 +1112,7 @@
       {
         "slug": "levi",
         "name": "Levi et Kittilä",
-        "desc": "La plus grande station de fjeld de Finlande : Lainio Snow Village, la Snow Chapel du Northern Lights Ranch, vols directs depuis Londres."
+        "desc": "La plus grande station de fjäll de Finlande : Lainio Snow Village, la Snow Chapel du Northern Lights Ranch, vols directs depuis Londres."
       },
       {
         "slug": "yllas",
@@ -1127,7 +1127,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "Le point le plus élevé de Finlande, dans son extrême nord-ouest : les igloos de verre de Tundrea et la cérémonie à la borne des trois pays."
+        "desc": "Les plus hautes terres de Finlande, dans l'extrême nord-ouest du pays : les igloos de verre de Tundrea et la cérémonie à la borne des trois pays."
       },
       {
         "slug": "oulu",
@@ -1137,7 +1137,7 @@
       {
         "slug": "kemijarvi",
         "name": "Kemijärvi",
-        "desc": "La ville la plus septentrionale de Finlande, en Laponie orientale : un centre entouré par le lac, 7 029 habitants et un train direct depuis Helsinki. Cinq fjelds à distance de route."
+        "desc": "La ville la plus septentrionale de Finlande, en Laponie orientale : un centre entouré par le lac, 7 029 habitants et un train direct depuis Helsinki. Cinq fjälls à distance de route."
       }
     ],
     "types": [
@@ -1200,8 +1200,8 @@
       },
       {
         "slug": "levin-iglut",
-        "region": "Levi · au sommet du fell",
-        "desc": "Igloos de verre au sommet du fjeld de Levi : le meilleur angle d’observation des aurores en Laponie, igloos Suite pour les couples."
+        "region": "Levi · au sommet du fjäll",
+        "desc": "Igloos de verre au sommet du fjäll de Levi : le meilleur angle d’observation des aurores en Laponie, igloos Suite pour les couples."
       },
       {
         "slug": "apukka-resort",
@@ -1245,8 +1245,8 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Au sommet du fell de Levi",
-        "desc": "Le navire amiral de Lapland Hotels au sommet du fjeld de Levi. Fenêtres panoramiques, accès par télécabine."
+        "region": "Au sommet du fjäll de Levi",
+        "desc": "Le navire amiral de Lapland Hotels au sommet du fjäll de Levi. Fenêtres panoramiques, accès par télécabine."
       },
       {
         "slug": "lapland-hotels-saaga",

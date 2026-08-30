@@ -54,7 +54,7 @@ export default function Home() {
     'pt-BR': 'Casamentos na Lapônia 2026: locais e documentação',
     'zh-CN': '拉普兰婚礼2026：婚礼场地与结婚手续',
     ko: '라플란드 결혼식 2026: 베뉴와 혼인 서류',
-    fr: 'Mariage en Laponie 2026: lieux et démarches de mariage',
+    fr: 'Mariage en Laponie 2026 : lieux, prix et démarches',
     it: 'Matrimonio in Lapponia 2026: location e pratiche di nozze',
     nl: 'Trouwen in Lapland 2026: locaties en huwelijkspapieren',
     sv: 'Bröllop i Lappland 2026: vigselplatser och äktenskapspapper',
