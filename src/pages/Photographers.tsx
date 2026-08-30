@@ -31,7 +31,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     'zh-CN': '拉普兰最出色的六位婚礼摄影师。北极光、雪教堂、玻璃冰屋，在严寒中久经考验。',
     ko: '라플란드 최고의 웨딩 포토그래퍼 6인. 오로라, 스노우 채플, 글라스 이글루. 혹한 속에서 검증됨.',
     fr: 'Six des meilleurs photographes de mariage de Laponie. Aurores boréales, chapelles de neige, igloos de verre. Éprouvés dans le froid.',
-    it: 'Sei tra i migliori fotografi di matrimonio della Lapponia. Aurora boreale, cappelle di neve, igloo di vetro. Collaudati nel gelo.',
+    it: 'Sei fotografi di matrimonio tra i migliori della Lapponia. Aurora boreale, cappelle di neve, igloo di vetro. Collaudati nel gelo.',
     nl: 'Zes van de beste trouwfotografen van Lapland. Noorderlicht, sneeuwkapellen, glazen iglo’s. Bewezen in de kou.', sv: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos. Proven in the cold.',
   },
   title: {
@@ -57,7 +57,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     'zh-CN': '拉普兰最具经验的六位婚礼摄影师。专为极光校准、雪教堂布光、玻璃冰屋构图，全部在零下环境中久经验证。',
     ko: '라플란드에서 가장 노련한 웨딩 포토그래퍼 6인. 오로라 맞춤 세팅, 스노우 채플 조명, 글라스 이글루 구도. 모두 영하의 환경에서 검증되었습니다.',
     fr: 'Six des photographes de mariage les plus expérimentés de Laponie. Réglages calibrés pour les aurores, éclairage en chapelle de neige, composition en igloo de verre. Le tout éprouvé par grand froid.',
-    it: 'Sei tra i fotografi di matrimonio più esperti della Lapponia. Tarati sull’aurora, illuminazione per cappelle di neve, composizione negli igloo di vetro. Tutto collaudato sotto zero.',
+    it: 'Sei fotografi di matrimonio tra i più esperti della Lapponia. Tarati sull’aurora, illuminazione per cappelle di neve, composizione negli igloo di vetro. Tutto collaudato sotto zero.',
     nl: 'Zes van de meest ervaren trouwfotografen van Lapland. Gekalibreerd op het noorderlicht, belichting in sneeuwkapellen, compositie in glazen iglo’s. Alles bewezen bij temperaturen onder nul.', sv: 'Six of the most experienced wedding photographers in Lapland. Aurora-calibrated, snow-chapel lighting, glass-igloo composition. All proven in sub-zero conditions.',
   },
   imageAlt: {
@@ -83,7 +83,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     'zh-CN': '信息来源于摄影师的公开网站。LaplandWeddings 并未与所有列出的摄影师建立合同关系，请通过他们各自的网站直接联系。',
     ko: '정보는 각 포토그래퍼의 공개 웹사이트에서 수집했습니다. LaplandWeddings는 게재된 모든 분과 계약 관계에 있지 않습니다. 각자의 사이트를 통해 직접 연락하세요.',
     fr: 'Informations issues des sites web publics des photographes. LaplandWeddings n’est pas lié par contrat à tous les photographes répertoriés. Contactez-les directement via leurs propres sites.',
-    it: 'Informazioni tratte dai siti web pubblici dei fotografi. LaplandWeddings non ha un rapporto contrattuale con tutti gli elencati. Contattali direttamente tramite i loro siti.',
+    it: 'Informazioni tratte dai siti web pubblici dei fotografi. LaplandWeddings non ha un rapporto contrattuale con tutti gli elencati. Li contatti direttamente tramite i loro siti.',
     nl: 'Informatie afkomstig van de openbare websites van de fotografen. LaplandWeddings heeft geen contractuele relatie met alle vermelde fotografen. Neem rechtstreeks contact op via hun eigen sites.', sv: 'Information sourced from public photographer websites. LaplandWeddings does not have a contractual relationship with every photographer listed. Contact directly via their own sites.',
   },
 };

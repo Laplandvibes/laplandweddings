@@ -113,11 +113,11 @@ const COPY: Record<Lang, Block> = {
     ],
   },
   it: {
-    eyebrow: 'Organizzare il vostro matrimonio in Lapponia',
-    title: 'Portate tutti, e dove alloggiare',
-    subtitle: 'Un matrimonio in Lapponia è anche un viaggio per i vostri ospiti. Queste guide sorelle coprono il resto del percorso.',
+    eyebrow: 'Organizzare il Suo matrimonio in Lapponia',
+    title: 'Porti tutti, e dove alloggiare',
+    subtitle: 'Un matrimonio in Lapponia è anche un viaggio per i Suoi ospiti. Queste guide sorelle coprono il resto del percorso.',
     cards: [
-      { href: 'https://laplandstays.com/property-types/', label: 'Dove alloggiare gli ospiti del matrimonio', body: 'Baite, igloo di vetro e hotel con blocchi di camere per i vostri ospiti in tutta la Lapponia.' },
+      { href: 'https://laplandstays.com/property-types/', label: 'Dove alloggiare gli ospiti del matrimonio', body: 'Baite, igloo di vetro e hotel con blocchi di camere per i Suoi ospiti in tutta la Lapponia.' },
       { href: 'https://laplandvisit.com/itineraries/', label: 'Pianificare l’intero viaggio in Lapponia', body: 'Cosa vedere e fare prima e dopo la cerimonia: una guida di viaggio completa della Lapponia.' },
       { href: 'https://laplandtransport.com/lapland-guide/', label: 'Come arrivare in Lapponia', body: 'Voli, treni e transfer aeroportuali per Rovaniemi, Kittilä e Ivalo per tutto il gruppo.' },
     ],

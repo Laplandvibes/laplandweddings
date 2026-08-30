@@ -35,7 +35,7 @@ const V: Record<VKey, Localized<string>> = {
     de: 'Angebot für diese Location anfordern', ja: 'この会場の見積もりを依頼',
     es: 'Solicita un presupuesto para este lugar', 'pt-BR': 'Peça um orçamento para este local',
     'zh-CN': '获取此场地的报价', ko: '이 웨딩 장소 견적 받기',
-    fr: 'Demander un devis pour ce lieu', it: 'Richiedi un preventivo per questa location',
+    fr: 'Demander un devis pour ce lieu', it: 'Richieda un preventivo per questa location',
     nl: 'Vraag een offerte aan voor deze locatie', sv: 'Begär offert för den här platsen',
   },
   checkPrices: {
@@ -43,7 +43,7 @@ const V: Record<VKey, Localized<string>> = {
     de: 'Preise prüfen & buchen', ja: '料金を確認して予約',
     es: 'Ver precios y reservar', 'pt-BR': 'Ver preços e reservar',
     'zh-CN': '查看价格并预订', ko: '가격 확인 & 예약',
-    fr: 'Voir prix & réserver', it: 'Vedi prezzi e prenota',
+    fr: 'Voir prix & réserver', it: 'Controlli i prezzi e prenoti',
     nl: 'Bekijk prijzen & boek', sv: 'Se priser & boka',
   },
   /**
@@ -59,7 +59,7 @@ const V: Record<VKey, Localized<string>> = {
     de: 'Unterkünfte ansehen: {town}', ja: '{town}の宿泊先を見る',
     es: 'Ver alojamientos: {town}', 'pt-BR': 'Ver hospedagens: {town}',
     'zh-CN': '查看住宿：{town}', ko: '숙소 보기: {town}',
-    fr: 'Voir les hébergements : {town}', it: 'Vedi alloggi: {town}',
+    fr: 'Voir les hébergements : {town}', it: 'Veda gli alloggi: {town}',
     nl: 'Bekijk overnachtingen: {town}', sv: 'Se boenden: {town}',
   },
   affordable: {
@@ -117,7 +117,7 @@ const V: Record<VKey, Localized<string>> = {
     de: 'Maßgeschneidertes Angebot anfordern', ja: 'オーダーメイドの提案を依頼',
     es: 'Recibe una propuesta a medida', 'pt-BR': 'Receba uma proposta sob medida',
     'zh-CN': '获取量身定制方案', ko: '맞춤 제안 받기',
-    fr: 'Recevoir une proposition sur mesure', it: 'Ricevi una proposta su misura',
+    fr: 'Recevoir une proposition sur mesure', it: 'Riceva una proposta su misura',
     nl: 'Ontvang een voorstel op maat', sv: 'Få ett skräddarsytt förslag',
   },
   atAGlance: {
@@ -165,7 +165,7 @@ const V: Record<VKey, Localized<string>> = {
     de: 'Alternativen in der Nähe vergleichen', ja: '近隣の選択肢を比較',
     es: 'Compara alternativas cercanas', 'pt-BR': 'Compare alternativas próximas',
     'zh-CN': '比较附近的选择', ko: '주변 대안 비교하기',
-    fr: 'Comparez les alternatives à proximité', it: 'Confronta le alternative vicine',
+    fr: 'Comparez les alternatives à proximité', it: 'Confronti le alternative vicine',
     nl: 'Vergelijk alternatieven in de buurt', sv: 'Jämför alternativ i närheten',
   },
   freeQuote: {
@@ -188,7 +188,7 @@ const V: Record<VKey, Localized<string>> = {
     'zh-CN': '填写表单，LaplandWeddings 团队会将你的咨询转给此场地信赖的婚礼策划师。量身定制的报价将由策划师直接发送给你。',
     ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 웨딩 장소의 신뢰할 수 있는 웨딩 플래너에게 전달합니다. 맞춤 견적은 플래너가 직접 보내드립니다.',
     fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners de confiance de ce lieu. Ils vous envoient directement leurs devis sur mesure.',
-    it: 'Compila il modulo e il team LaplandWeddings inoltrerà la tua richiesta ai wedding planner di fiducia di questa location. Saranno loro a inviarti direttamente i preventivi su misura.',
+    it: 'Compili il modulo e il team LaplandWeddings inoltrerà la Sua richiesta ai wedding planner di fiducia di questa location. Saranno loro a inviarLe direttamente i preventivi su misura.',
     nl: 'Vul het formulier in en het LaplandWeddings-team stuurt je aanvraag door naar de vertrouwde trouwplanners van deze locatie. Zij sturen jou rechtstreeks offertes op maat.',
     sv: 'Fyll i formuläret så vidarebefordrar LaplandWeddings-teamet din förfrågan till de betrodda bröllopsplanerarna för den här platsen. De skickar sina skräddarsydda offerter direkt till dig.',
   },
@@ -222,7 +222,7 @@ const V: Record<VKey, Localized<string>> = {
     de: 'Angebot anfordern: {name}', ja: '見積もりを依頼：{name}',
     es: 'Solicita un presupuesto: {name}', 'pt-BR': 'Peça um orçamento: {name}',
     'zh-CN': '获取报价：{name}', ko: '견적 받기: {name}',
-    fr: 'Demander un devis: {name}', it: 'Richiedi un preventivo: {name}',
+    fr: 'Demander un devis: {name}', it: 'Richieda un preventivo: {name}',
     nl: 'Vraag een offerte aan: {name}', sv: 'Begär offert: {name}',
   },
 };

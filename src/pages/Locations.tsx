@@ -32,7 +32,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     'zh-CN': '拉普兰七大婚礼地区外加城市之选奥卢：罗瓦涅米、萨利色尔卡、莱维、于拉斯、皮哈-卢奥斯托、基尔皮斯耶尔维、奥卢。比较季节、航班与场地。',
     ko: '라플란드의 웨딩 지역 7곳과 도시 옵션 오울루: 로바니에미, 사리셀캐, 레비, 윌래스, 퓌해-루오스토, 킬피스얘르비, 오울루. 시즌, 항공편, 웨딩 장소를 비교하세요.',
     fr: 'Sept régions de mariage en Laponie plus Oulu, l’option urbaine: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Comparez saisons, vols et lieux.',
-    it: 'Sette regioni per matrimoni in Lapponia più Oulu, l’opzione urbana: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Confronta stagioni, voli e location.',
+    it: 'Sette regioni per matrimoni in Lapponia più Oulu, l’opzione urbana: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Confronti stagioni, voli e location.',
     nl: 'Zeven trouwregio’s in Lapland plus stadsoptie Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Vergelijk seizoenen, vluchten en locaties.', sv: 'Sju bröllopsregioner i Lappland plus stadsalternativet Uleåborg: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Compare seasons, flights, and venues.',
   },
   imageAlt: {

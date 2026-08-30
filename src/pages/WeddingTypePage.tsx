@@ -91,7 +91,7 @@ export default function WeddingTypePage() {
           </div>
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-1">{tr.sections.capacity}</p>
-            <p className="text-base text-white">{wt.capacity}</p>
+            <p className="text-base text-white">{pickLocalized(wt.capacity, lang)}</p>
           </div>
           <L to="/pricing" className="bg-night-light/60 border border-white/5 hover:border-rose/40 rounded-2xl p-6 transition-colors">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-1">{tr.sections.priceRange}</p>

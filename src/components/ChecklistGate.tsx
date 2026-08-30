@@ -46,7 +46,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     'zh-CN': '解锁 DVV 清单：只需一个邮箱',
     ko: 'DVV 체크리스트 받기: 이메일 하나면 끝',
     fr: 'Débloquez la checklist DVV: un e-mail suffit',
-    it: 'Sblocca la checklist DVV: basta un’email',
+    it: 'Sblocchi la checklist DVV: basta un’email',
     nl: 'Ontgrendel de DVV-checklist: één e-mail, meer niet', sv: 'Lås upp DVV-checklistan: en e-postadress, inget mer',
   },
   sub: {
@@ -59,7 +59,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     'zh-CN': '立即获取每个步骤和链接，并定期收到拉普兰婚礼市场的资讯，场地、季节贴士与优惠。可随时退订。',
     ko: '모든 단계와 링크를 즉시 받고, 라플란드 웨딩 시장의 소식(웨딩 장소, 시즌 팁, 혜택)도 정기적으로 받아보세요. 언제든 구독을 취소할 수 있습니다.',
     fr: 'Recevez instantanément toutes les étapes et les liens, ainsi que des nouvelles régulières du marché du mariage en Laponie : lieux, conseils de saison, offres. Désinscription à tout moment.',
-    it: 'Ricevi subito tutti i passaggi e i link, oltre ad aggiornamenti regolari dal mercato dei matrimoni in Lapponia: location, consigli stagionali, offerte. Disiscriviti quando vuoi.',
+    it: 'Riceve subito tutti i passaggi e i link, oltre ad aggiornamenti regolari dal mercato dei matrimoni in Lapponia: location, consigli stagionali, offerte. Si disiscriva quando vuole.',
     nl: 'Ontvang direct elke stap en link, plus regelmatige updates uit de huwelijksmarkt van Lapland: locaties, seizoenstips, aanbiedingen. Schrijf je op elk moment uit.', sv: 'Get every step and link instantly, plus regular updates from inside Lapland’s wedding market: venues, season tips, offers. Unsubscribe anytime.',
   },
   bulletA: {
@@ -111,7 +111,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     'zh-CN': '可打印为 A4 或保存为 PDF',
     ko: 'A4로 인쇄하거나 PDF로 저장',
     fr: 'Imprimez en A4 ou enregistrez en PDF',
-    it: 'Stampa in A4 o salva come PDF',
+    it: 'Stampi in A4 o salvi come PDF',
     nl: 'Print op A4 of bewaar als pdf', sv: 'Skriv ut i A4 eller spara som PDF',
   },
   firstNameLabel: {
@@ -150,7 +150,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     'zh-CN': 'you@email.com',
     ko: 'you@email.com',
     fr: 'vous@email.com',
-    it: 'tu@email.com',
+    it: 'nome@esempio.com',
     nl: 'jij@email.com', sv: 'du@epost.com',
   },
   consent: {
@@ -176,7 +176,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     'zh-CN': '打开清单 →',
     ko: '체크리스트 열기 →',
     fr: 'Ouvrir la checklist →',
-    it: 'Apri la checklist →',
+    it: 'Apra la checklist →',
     nl: 'Open de checklist →', sv: 'Öppna checklistan →',
   },
   submitting: {
@@ -202,7 +202,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     'zh-CN': '您的信息在 LaplandVibes 网络中是安全的。我们绝不会与第三方分享您的邮箱。',
     ko: '귀하의 정보는 LaplandVibes 네트워크에서 안전하게 보호됩니다. 이메일을 제3자와 공유하지 않습니다.',
     fr: 'Vos données sont en sécurité au sein du réseau LaplandVibes. Nous ne partageons jamais votre e-mail avec des tiers.',
-    it: 'I tuoi dati sono al sicuro nella rete LaplandVibes. Non condividiamo mai la tua email con terze parti.',
+    it: 'I Suoi dati sono al sicuro nella rete LaplandVibes. Non condividiamo mai la Sua email con terze parti.',
     nl: 'Je gegevens zijn veilig binnen het LaplandVibes-netwerk. We delen je e-mail nooit met derden.', sv: 'Dina uppgifter är trygga hos LaplandVibes-nätverket. Vi delar aldrig din e-postadress med tredje part.',
   },
 };
@@ -217,7 +217,7 @@ const GATE_ERROR: Localized<string> = {
   'zh-CN': '提交失败，请重试。',
   ko: '전송에 실패했습니다. 다시 시도해 주세요.',
   fr: 'L’envoi a échoué. Veuillez réessayer.',
-  it: 'Invio non riuscito. Riprova.',
+  it: 'Invio non riuscito. Riprovi.',
   nl: 'Verzenden mislukt. Probeer het opnieuw.', sv: 'Det gick inte att skicka. Försök igen.',
 };
 

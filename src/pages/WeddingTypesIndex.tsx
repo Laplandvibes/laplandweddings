@@ -93,7 +93,7 @@ export default function WeddingTypesIndex() {
                 <p className="text-sm text-gray-400 line-clamp-3 mb-4 flex-1">{wt.description[dataLang]}</p>
                 <div className="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-white/5">
                   <span>{wt.bestSeason[dataLang]}</span>
-                  <span>{wt.capacity}</span>
+                  <span>{pickLocalized(wt.capacity, lang)}</span>
                 </div>
               </div>
             </L>

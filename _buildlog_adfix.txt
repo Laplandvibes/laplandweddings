@@ -1,0 +1,81 @@
+
+> laplandweddings-new@0.0.0 build
+> node scripts/generate-sitemap.mjs && node scripts/sync-route-i18n-names.mjs && tsc -b && vite build && node scripts/prerender-meta.mjs
+
+Wrote sitemap with 552 URLs (46 routes × 12 locales)
+[route-i18n] names synced from registries: 0 value(s) updated. Entries whose translation legitimately equals English (bare Finnish toponyms such as Saariselkä, Kilpisjärvi, "Lainio, Kittilä"): locations.name 48, types.name 0, venues.region 35.
+[36mvite v8.0.3 [32mbuilding client environment for production...[36m[39m
+[2Ktransforming...✓ 3525 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/affiliate-b5-V-g31pC2.js.br              0.68 kB
+dist/assets/uiStrings-b5-C8HsKp9y.js.br              1.15 kB
+dist/assets/SEO-b5-DtMVjmuG.js.br                    1.26 kB
+dist/assets/AffiliateDisclosure-b5--kFsodMv.js.br    1.79 kB
+dist/assets/WeddingTypePage-b5-Bv4iKJAF.js.br        1.83 kB
+dist/assets/PageHero-b5-LuqXk0oy.js.br               1.85 kB
+dist/assets/LocationPage-b5-Bk53ZVZ9.js.br           1.88 kB
+dist/assets/WeddingTypesIndex-b5-BHlzNKDW.js.br      2.18 kB
+dist/assets/NotFound-b5-VwjstImI.js.br               2.35 kB
+dist/assets/Locations-b5-Dgcp9J90.js.br              2.53 kB
+dist/index.html.br                                   2.87 kB
+dist/assets/ui-vendor-b5-CXd7AOO_.js.br              3.08 kB
+dist/assets/Venues-b5-Cjex-hyV.js.br                 4.57 kB
+dist/assets/LeadForm-b5-DAa5r1MQ.js.br               4.82 kB
+dist/assets/VenuePage-b5-AG5114LW.js.br              7.63 kB
+dist/assets/Photographers-b5-B9XzePox.js.br          9.52 kB
+dist/index.html                                     10.12 kB │ gzip:  3.52 kB
+dist/assets/index-b5-BowRi6HV.css.br                12.82 kB
+dist/assets/Home-b5-B0V8YuIi.js.br                  16.33 kB
+dist/assets/Checklist-b5-OP3mPb-a.js.br             16.46 kB
+dist/assets/Pricing-b5-BolrPO-L.js.br               19.16 kB
+dist/assets/locations-b5-CjifUFDr.js.br             26.42 kB
+dist/assets/weddingTypes-b5-CUTNYR61.js.br          27.59 kB
+dist/assets/PracticalGuide-b5-PsAh5ABF.js.br        28.37 kB
+dist/assets/PartnerWithUs-b5-ZCqrlbNO.js.br         30.46 kB
+dist/assets/LangContext-b5-CWN-7NHD.js.br           37.20 kB
+dist/assets/index-b5-Cr5SkERW.js.br                 44.09 kB
+dist/assets/EditorsPickChip-b5-b9MOOw2k.js.br       46.43 kB
+dist/assets/react-vendor-b5-CX1FsGtI.js.br          62.96 kB
+dist/assets/index-b5-BowRi6HV.css                  105.36 kB │ gzip: 16.39 kB
+dist/assets/localized-b5-Bmq-9bqG.js                 0.06 kB │ gzip:  0.08 kB
+dist/assets/rolldown-runtime-b5-B_DzuIK5.js          0.55 kB │ gzip:  0.35 kB
+dist/assets/Terms-b5-C7thRYcG.js                     0.56 kB │ gzip:  0.37 kB
+dist/assets/CookiePolicy-b5-D27sOOvh.js              0.57 kB │ gzip:  0.37 kB
+dist/assets/Privacy-b5-B9nxXC6k.js                   0.69 kB │ gzip:  0.43 kB
+dist/assets/Section-b5-B_fMTFut.js                   0.82 kB │ gzip:  0.44 kB
+dist/assets/affiliate-b5-V-g31pC2.js                 1.81 kB │ gzip:  0.78 kB
+dist/assets/uiStrings-b5-C8HsKp9y.js                 2.96 kB │ gzip:  1.36 kB
+dist/assets/SEO-b5-DtMVjmuG.js                       3.10 kB │ gzip:  1.44 kB
+dist/assets/AffiliateDisclosure-b5--kFsodMv.js       3.82 kB │ gzip:  2.16 kB
+dist/assets/PageHero-b5-LuqXk0oy.js                  4.75 kB │ gzip:  2.10 kB
+dist/assets/NotFound-b5-VwjstImI.js                  5.07 kB │ gzip:  2.78 kB
+dist/assets/LocationPage-b5-Bk53ZVZ9.js              5.19 kB │ gzip:  2.14 kB
+dist/assets/WeddingTypesIndex-b5-BHlzNKDW.js         5.34 kB │ gzip:  2.52 kB
+dist/assets/WeddingTypePage-b5-Bv4iKJAF.js           5.42 kB │ gzip:  2.06 kB
+dist/assets/Locations-b5-Dgcp9J90.js                 6.38 kB │ gzip:  2.98 kB
+dist/assets/ui-vendor-b5-CXd7AOO_.js                 9.62 kB │ gzip:  3.60 kB
+dist/assets/Venues-b5-Cjex-hyV.js                   12.37 kB │ gzip:  5.43 kB
+dist/assets/LeadForm-b5-DAa5r1MQ.js                 15.94 kB │ gzip:  5.66 kB
+dist/assets/VenuePage-b5-AG5114LW.js                24.71 kB │ gzip:  8.98 kB
+dist/assets/Photographers-b5-B9XzePox.js            30.54 kB │ gzip: 11.27 kB
+dist/assets/Home-b5-B0V8YuIi.js                     46.49 kB │ gzip: 19.33 kB
+dist/assets/Pricing-b5-BolrPO-L.js                  48.68 kB │ gzip: 22.50 kB
+dist/assets/Checklist-b5-OP3mPb-a.js                51.70 kB │ gzip: 19.99 kB
+dist/assets/weddingTypes-b5-CUTNYR61.js             71.67 kB │ gzip: 32.61 kB
+dist/assets/locations-b5-CjifUFDr.js                75.75 kB │ gzip: 31.33 kB
+dist/assets/PracticalGuide-b5-PsAh5ABF.js           82.65 kB │ gzip: 34.49 kB
+dist/assets/PartnerWithUs-b5-ZCqrlbNO.js            92.73 kB │ gzip: 37.91 kB
+dist/assets/LangContext-b5-CWN-7NHD.js             123.45 kB │ gzip: 44.51 kB
+dist/assets/index-b5-Cr5SkERW.js                   155.60 kB │ gzip: 56.52 kB
+dist/assets/EditorsPickChip-b5-b9MOOw2k.js         164.66 kB │ gzip: 56.68 kB
+dist/assets/react-vendor-b5-CX1FsGtI.js            230.45 kB │ gzip: 73.66 kB
+
+dist/icons.svg.br             1.89 kB
+dist/images/app-qr.svg.br     0.56 kB
+dist/sitemap.xml.br           4.21 kB
+[32m✓ built in 6.03s[39m
+
+[prerender] crawlable internal links per locale — en:46 fi:46 de:46 ja:46 es:46 pt-BR:46 zh-CN:46 ko:46 fr:46 it:46 nl:46 sv:46
+Prerendered 552 routes across 12 locales (46 routes × 12 languages)
+[prerender] smoke gate OK — block present, inside #root, 27 network links

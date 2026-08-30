@@ -1295,12 +1295,12 @@
       {
         "slug": "levi",
         "name": "Levi e Kittilä",
-        "desc": "Il più grande centro turistico di montagna della Finlandia: Lainio Snow Village, la Snow Chapel di Northern Lights Ranch, voli diretti da Londra."
+        "desc": "Il più grande centro turistico di fjäll della Finlandia: Lainio Snow Village, la Snow Chapel di Northern Lights Ranch, voli diretti da Londra."
       },
       {
         "slug": "yllas",
         "name": "Ylläs",
-        "desc": "Più tranquilla di Levi: l'aria più pulita della Lapponia, lo spa hotel Saaga adatto ai matrimoni, Lainio Snow Village a breve distanza."
+        "desc": "Più tranquilla di Levi: l’aria più pulita della Lapponia, lo spa hotel Saaga adatto ai matrimoni, Lainio Snow Village a breve distanza."
       },
       {
         "slug": "pyha-luosto",
@@ -1315,44 +1315,44 @@
       {
         "slug": "oulu",
         "name": "Oulu",
-        "desc": "L'alternativa cittadina sulla strada per la Lapponia, la quinta città più grande della Finlandia sulla costa della Baia di Botnia. Serate di nozze urbane tra ristoranti e vita notturna, voli diretti da Helsinki in circa un'ora."
+        "desc": "L’alternativa cittadina sulla strada per la Lapponia, la quinta città più grande della Finlandia sulla costa della Baia di Botnia. Serate di nozze urbane tra ristoranti e vita notturna, voli diretti da Helsinki in circa un’ora."
       },
       {
         "slug": "kemijarvi",
         "name": "Kemijärvi",
-        "desc": "La città più settentrionale della Finlandia, nella Lapponia orientale: un centro circondato dal lago, 7.029 abitanti e un treno diretto da Helsinki. Cinque montagne raggiungibili in auto."
+        "desc": "La città più settentrionale della Finlandia, nella Lapponia orientale: un centro circondato dal lago, 7.029 abitanti e un treno diretto da Helsinki. Cinque fjäll raggiungibili in auto."
       }
     ],
     "types": [
       {
         "slug": "northern-lights",
         "name": "Matrimonio sotto l’aurora boreale",
-        "desc": "Scambiatevi le promesse sotto l'aurora boreale: nella Lapponia settentrionale l'aurora si vede in media una notte su due (FMI)."
+        "desc": "Pronunci le promesse sotto l’aurora boreale: nella Lapponia settentrionale l’aurora si vede in media una notte su due (FMI)."
       },
       {
         "slug": "snow-chapel",
         "name": "Matrimonio in cappella di neve",
-        "desc": "Sposatevi in una cappella scolpita nella neve e nel ghiaccio puri: Lainio, Northern Lights Ranch, Arctic SnowHotel e Levi Ice Castle."
+        "desc": "Si sposi in una cappella scolpita nella neve e nel ghiaccio puri: Lainio, Northern Lights Ranch, Arctic SnowHotel e Levi Ice Castle."
       },
       {
         "slug": "glass-igloo",
         "name": "Matrimonio in igloo di vetro",
-        "desc": "Prima notte di nozze sotto l'aurora boreale in una cupola di vetro riscaldata: Kakslauttanen, Levin Iglut, Apukka."
+        "desc": "Prima notte di nozze sotto l’aurora boreale in una cupola di vetro riscaldata: Kakslauttanen, Levin Iglut, Apukka."
       },
       {
         "slug": "midnight-sun",
         "name": "Matrimonio sotto il sole di mezzanotte",
-        "desc": "Sposatevi quando il sole non tramonta: dal 23 maggio al 24 luglio, clima mite, senza abbigliamento da neve."
+        "desc": "Si sposi quando il sole non tramonta: dal 23 maggio al 24 luglio, clima mite, senza abbigliamento da neve."
       },
       {
         "slug": "elopement",
         "name": "Elopement / Matrimonio a due",
-        "desc": "Solo voi due, il celebrante e un fotografo. Pacchetti chiavi in mano da 1 600 €."
+        "desc": "Solo gli sposi, il celebrante e un fotografo. Pacchetti chiavi in mano da 1 600 €."
       },
       {
         "slug": "vow-renewal",
         "name": "Rinnovo delle promesse",
-        "desc": "Rinnovate le vostre promesse nella neve della Lapponia: nessuna pratica burocratica, cerimonia completamente su misura."
+        "desc": "Rinnovi le Sue promesse nella neve della Lapponia: nessuna pratica burocratica, cerimonia completamente su misura."
       }
     ],
     "venues": [
@@ -1364,7 +1364,7 @@
       {
         "slug": "arctic-snowhotel",
         "region": "Lehtojärvi · a 35 km da Rovaniemi",
-        "desc": "Snow Hotel con cappella di ghiaccio per 30 ospiti, ristorante di ghiaccio e igloo di vetro con vista a 360° sull'aurora."
+        "desc": "Snow Hotel con cappella di ghiaccio per 30 ospiti, ristorante di ghiaccio e igloo di vetro con vista a 360° sull’aurora."
       },
       {
         "slug": "snow-village-lainio",
@@ -1383,8 +1383,8 @@
       },
       {
         "slug": "levin-iglut",
-        "region": "Levi · in cima al fell",
-        "desc": "Igloo di vetro in cima al monte Levi: la migliore angolazione della Lapponia per osservare l'aurora, igloo Suite per le coppie."
+        "region": "Levi · in cima al fjäll",
+        "desc": "Igloo di vetro in cima al fjäll di Levi: la migliore angolazione della Lapponia per osservare l’aurora, igloo Suite per le coppie."
       },
       {
         "slug": "apukka-resort",
@@ -1394,17 +1394,17 @@
       {
         "slug": "arctic-treehouse",
         "region": "SantaPark · a 2 km dall’aeroporto",
-        "desc": "Moderne casette sugli alberi con pareti di vetro: la logistica migliore della Lapponia, a 2 km dall'aeroporto di Rovaniemi."
+        "desc": "Moderne casette sugli alberi con pareti di vetro: la logistica migliore della Lapponia, a 2 km dall’aeroporto di Rovaniemi."
       },
       {
         "slug": "wilderness-hotel-muotka",
         "region": "Muotka · ai margini del Parco Nazionale UKK",
-        "desc": "Zero inquinamento luminoso: uno dei luoghi migliori della Lapponia per l'aurora. Aurora Cabins e capanna Kammi."
+        "desc": "Zero inquinamento luminoso: uno dei luoghi migliori della Lapponia per l’aurora. Aurora Cabins e capanna Kammi."
       },
       {
         "slug": "wilderness-hotel-inari",
         "region": "Sulle rive del lago Inari",
-        "desc": "Sulle rive del lago Inari, nel cuore della cultura sámi. Cabine Aurora con vista diretta sull'orizzonte del lago."
+        "desc": "Sulle rive del lago Inari, nel cuore della cultura sámi. Cabine Aurora con vista diretta sull’orizzonte del lago."
       },
       {
         "slug": "wilderness-hotel-juutua",
@@ -1428,18 +1428,18 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "In cima al fell di Levi",
-        "desc": "L'ammiraglia di Lapland Hotels sulla cima del monte Levi. Vetrate panoramiche, accesso in cabinovia."
+        "region": "In cima al fjäll di Levi",
+        "desc": "L’ammiraglia di Lapland Hotels sulla cima del fjäll di Levi. Vetrate panoramiche, accesso in cabinovia."
       },
       {
         "slug": "lapland-hotels-saaga",
         "region": "Ylläsjärvi · ai margini del P. N. Pallas-Yllästunturi",
-        "desc": "Hotel per matrimoni prediletto su TripAdvisor a Ylläs. Spa, tre ristoranti, vasche idromassaggio."
+        "desc": "L’hotel per matrimoni preferito su TripAdvisor a Ylläs. Spa, tre ristoranti, vasche idromassaggio."
       },
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Il resort di igloo di vetro più settentrionale della Finlandia, a 480 m sul livello del mare: la vista sull'aurora migliore della Lapponia."
+        "desc": "Il resort di igloo di vetro più settentrionale della Finlandia, a 480 m sul livello del mare: la vista sull’aurora migliore della Lapponia."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -1454,7 +1454,7 @@
       {
         "slug": "santas-hotel-santamus",
         "region": "Villaggio di Babbo Natale",
-        "desc": "L'unico hotel del Santa Claus Village progettato per i matrimoni. Pacchetti con renne e husky inclusi."
+        "desc": "L’unico hotel del Santa Claus Village progettato per i matrimoni. Pacchetti con renne e husky inclusi."
       },
       {
         "slug": "nova-skyland",

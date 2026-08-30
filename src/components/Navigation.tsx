@@ -61,7 +61,7 @@ export default function Navigation() {
     'zh-CN': { switchLang: '切换语言',             language: '语言',     menu: '菜单' },
     ko:      { switchLang: '언어 변경',            language: '언어',     menu: '메뉴' },
     fr:      { switchLang: 'Changer de langue',   language: 'Langue',   menu: 'Menu' },
-    it:      { switchLang: 'Cambia lingua',       language: 'Lingua',   menu: 'Menu' },
+    it:      { switchLang: 'Cambiare lingua',       language: 'Lingua',   menu: 'Menu' },
     nl:      { switchLang: 'Taal wijzigen',       language: 'Taal',     menu: 'Menu' },
     sv:      { switchLang: 'Byt språk',           language: 'Språk',    menu: 'Meny' },
   };

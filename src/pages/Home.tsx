@@ -55,7 +55,7 @@ export default function Home() {
     'zh-CN': '拉普兰婚礼2026：婚礼场地与结婚手续',
     ko: '라플란드 결혼식 2026: 베뉴와 혼인 서류',
     fr: 'Mariage en Laponie 2026: lieux et démarches de mariage',
-    it: 'Matrimonio in Lapponia 2026: sedi e pratiche di nozze',
+    it: 'Matrimonio in Lapponia 2026: location e pratiche di nozze',
     nl: 'Trouwen in Lapland 2026: locaties en huwelijkspapieren',
     sv: 'Bröllop i Lappland 2026: vigselplatser och äktenskapspapper',
   };
@@ -332,7 +332,7 @@ export default function Home() {
                     quoting the cost of a whole wedding. Money now lives only on
                     the pricing page, where a number can be explained. */}
                 <div className="text-[10px] sm:text-xs text-gray-300">
-                  {wt.capacity}
+                  {pickLocalized(wt.capacity, lang)}
                 </div>
               </div>
             </L>
@@ -388,15 +388,15 @@ export default function Home() {
                 sv: 'Ankomst med husky',
               }),
               body: pick(lang, {
-                fi: 'Pari saapuu vihkimykseen 8 huskyn vetämällä rekellä. Viraali hetki joka kerta.',
+                fi: 'Pari saapuu vihkimykseen 8 huskyn vetämällä rekellä. Saapuminen on se hetki, jonka kaikki kuvaavat.',
                 en: 'The couple arrives at the ceremony pulled by 8 huskies. The arrival shot everyone photographs.',
-                de: 'Das Paar kommt zur Trauung mit einem Schlitten, gezogen von 8 Huskys. Jedes Mal ein viraler Moment.',
-                ja: '新郎新婦が8頭のハスキーが引くそりで挙式会場に到着。必ずバズる名場面です。',
-                ko: '신랑 신부가 허스키 8마리가 끄는 썰매를 타고 예식장에 등장합니다. 매번 화제가 되는 순간입니다.',
-                fr: 'Les mariés arrivent à la cérémonie en traîneau tiré par 8 huskies. Un moment qui devient viral à chaque fois.',
-                it: 'Gli sposi arrivano alla cerimonia su una slitta trainata da 8 husky. Un momento virale ogni volta.',
-                nl: 'Het bruidspaar arriveert bij de ceremonie achter 8 husky’s. Telkens een viraal moment.',
-                sv: 'Paret anländer till ceremonin draget av 8 huskyer. En viral stund varje gång.',
+                de: 'Das Paar kommt zur Trauung mit einem Schlitten, gezogen von 8 Huskys. Die Ankunft ist der Moment, den alle fotografieren.',
+                ja: '新郎新婦が8頭のハスキーが引くそりで挙式会場に到着。到着の瞬間は全員がカメラを向ける場面です。',
+                ko: '신랑 신부가 허스키 8마리가 끄는 썰매를 타고 예식장에 도착합니다. 도착하는 순간은 모두가 카메라를 드는 장면입니다.',
+                fr: 'Les mariés arrivent à la cérémonie en traîneau tiré par 8 huskies. L’arrivée est le moment que tout le monde photographie.',
+                it: 'Gli sposi arrivano alla cerimonia su una slitta trainata da 8 husky. L’arrivo è l’istante che tutti fotografano.',
+                nl: 'Het bruidspaar arriveert bij de ceremonie achter 8 husky’s. De aankomst is het moment dat iedereen fotografeert.',
+                sv: 'Paret anländer till ceremonin draget av 8 huskyer. Ankomsten är ögonblicket alla fotograferar.',
               }),
             },
             {
@@ -469,7 +469,7 @@ export default function Home() {
                 ja: 'ウェディング衣装のまま、シャンパン片手にアヴァント(氷の穴)へ。まさにインスタ映え。',
                 ko: '웨딩 의상을 입은 채 샴페인 잔을 들고 얼음 호수로, 인스타그램에 최적인 순간입니다.',
                 fr: 'En tenue de mariage, coupe de champagne à la main, plongée dans l’avanto. L’instant Instagram par excellence.',
-                it: 'In abito da sposi, calice di champagne in mano, dentro l’avanto. L’istante perfetto per Instagram.',
+                it: 'In abito da sposi, calice di champagne in mano, giù nell’acqua gelata. L’istante perfetto per Instagram.',
                 nl: 'In trouwkleding, champagneglas in de hand, het ijsbad in. Pure Instagram.',
                 sv: 'I bröllopskläder, champagne i handen, ner i vaken. Ren Instagram.',
               }),
@@ -584,7 +584,7 @@ export default function Home() {
             ja: 'ラップランドで結婚式が行われている、よく知られた場所を集めました。当サイトはこれらの会場の代理店ではなく、結婚式の運営も行いません。すでに希望の会場がある場合はフォームにご記入ください。ご希望はそのままの形でお伝えします。',
             ko: '라플란드에서 결혼식이 열리는 잘 알려진 장소들입니다. 저희는 이곳들을 대리하지 않으며 결혼식을 직접 주최하지도 않습니다. 이미 마음에 둔 장소가 있다면 양식에 적어 주세요. 그 희망은 그대로 전달됩니다.',
             fr: 'Voici les lieux les plus connus de Laponie où l’on célèbre des mariages. Nous ne les représentons pas et nous n’organisons pas de mariages. Si un lieu vous tient déjà à cœur, indiquez-le dans le formulaire : votre souhait sera transmis tel quel.',
-            it: 'Questi sono i luoghi più noti della Lapponia in cui si celebrano matrimoni. Non li rappresentiamo e non organizziamo matrimoni. Se avete già una location in mente, scrivetela nel modulo: il vostro desiderio viene trasmesso così com’è.',
+            it: 'Questi sono i luoghi più noti della Lapponia in cui si celebrano matrimoni. Non li rappresentiamo e non organizziamo matrimoni. Se ha già una location in mente, la scriva nel modulo: il Suo desiderio viene trasmesso così com’è.',
             nl: 'Dit zijn de bekendste plekken in Lapland waar bruiloften worden gevierd. Wij vertegenwoordigen ze niet en organiseren geen bruiloften. Heeft u al een locatie op het oog, zet die dan in het formulier: uw wens gaat ongewijzigd door.',
             sv: 'Det här är de mest kända platserna i Lappland där bröllop hålls. Vi företräder dem inte och vi arrangerar inga bröllop. Har ni redan en plats i tankarna, skriv in den i formuläret så förs önskemålet vidare precis som ni angav det.',
           })}

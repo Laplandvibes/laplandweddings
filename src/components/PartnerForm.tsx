@@ -172,7 +172,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '可用 WhatsApp，通常是联系您最快的方式。',
     ko: 'WhatsApp도 가능합니다. 가장 빠르게 연락할 수 있는 방법입니다.',
     fr: 'WhatsApp convient, souvent le moyen le plus rapide de vous joindre.',
-    it: 'Va bene anche WhatsApp: spesso è il modo più rapido per contattarti.',
+    it: 'Va bene anche WhatsApp: spesso è il modo più rapido per contattarLa.',
     nl: 'WhatsApp kan ook, vaak de snelste manier om je te bereiken.', sv: 'WhatsApp fungerar bra, ofta det snabbaste sättet att nå dig.',
   },
   regions: {
@@ -185,7 +185,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '您在拉普兰服务的地区',
     ko: '라플란드 내 서비스 지역',
     fr: 'Régions desservies en Laponie',
-    it: 'Aree in cui operi in Lapponia',
+    it: 'Aree in cui opera in Lapponia',
     nl: 'Regio’s die je bedient in Lapland', sv: 'Regioner du verkar i inom Lappland',
   },
   regionsPlaceholder: {
@@ -217,7 +217,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '您在拉普兰举办婚礼多久了？',
     ko: '라플란드 웨딩을 운영하신 지 얼마나 되셨나요?',
     fr: 'Depuis combien de temps organisez-vous des mariages en Laponie ?',
-    it: 'Da quanto tempo organizzi matrimoni in Lapponia?',
+    it: 'Da quanto tempo organizza matrimoni in Lapponia?',
     nl: 'Hoe lang organiseer je al bruiloften in Lapland?', sv: 'Hur länge har du arrangerat bröllop i Lappland?',
   },
   yearsPlaceholder: {
@@ -243,7 +243,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '您自身或通过可信合作伙伴能提供哪些服务？',
     ko: '직접 또는 신뢰할 수 있는 파트너를 통해 제공하는 항목은?',
     fr: 'Que proposez-vous vous-même ou via des partenaires de confiance ?',
-    it: 'Cosa offri direttamente o tramite partner fidati?',
+    it: 'Che cosa offre direttamente o tramite partner fidati?',
     nl: 'Wat lever je zelf of via vertrouwde partners?', sv: 'Vad levererar du själv eller via betrodda partner?',
   },
   servicesHelp: {
@@ -269,7 +269,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '请简要介绍一下你们',
     ko: '간단히 소개해 주세요',
     fr: 'Présentez-vous brièvement',
-    it: 'Raccontaci brevemente di voi',
+    it: 'Ci parli brevemente della Sua attività',
     nl: 'Vertel ons kort over jezelf', sv: 'Berätta kort om er',
   },
   messagePlaceholder: {
@@ -282,7 +282,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '风格、专长、婚礼案例、为何合适……',
     ko: '스타일, 전문 분야, 진행했던 웨딩 사례, 적합한 이유 등…',
     fr: 'Style, spécialités, exemples de mariages, pourquoi vous correspondez…',
-    it: 'Stile, specialità, matrimoni d’esempio, perché siete adatti…',
+    it: 'Stile, specialità, matrimoni d’esempio, perché è il partner giusto…',
     nl: 'Stijl, specialiteiten, voorbeeldbruiloften, waarom je past…', sv: 'Stil, specialiteter, exempelbröllop, varför ni passar…',
   },
   consent: {
@@ -301,7 +301,7 @@ const T: Record<FormKey, Localized<string>> = {
   submit: {
     en: 'Send application', fi: 'Lähetä hakemus', de: 'Bewerbung senden', ja: '申し込みを送信',
     es: 'Enviar solicitud', 'pt-BR': 'Enviar candidatura', 'zh-CN': '提交申请',
-    ko: '신청서 보내기', fr: 'Envoyer la candidature', it: 'Invia candidatura', nl: 'Aanmelding versturen', sv: 'Skicka ansökan',
+    ko: '신청서 보내기', fr: 'Envoyer la candidature', it: 'Invii la candidatura', nl: 'Aanmelding versturen', sv: 'Skicka ansökan',
   },
   submitting: {
     en: 'Sending…', fi: 'Lähetetään…', de: 'Wird gesendet…', ja: '送信中…',
@@ -318,7 +318,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '提交失败。请重试，或直接发送邮件至 info@laplandvibes.com。',
     ko: '전송에 실패했습니다. 다시 시도하거나 info@laplandvibes.com 으로 직접 메일을 보내주세요.',
     fr: 'L’envoi a échoué. Réessayez ou écrivez directement à info@laplandvibes.com.',
-    it: 'Invio non riuscito. Riprova o scrivi direttamente a info@laplandvibes.com.',
+    it: 'Invio non riuscito. Riprovi o scriva direttamente a info@laplandvibes.com.',
     nl: 'Verzenden mislukt. Probeer het opnieuw of mail direct naar info@laplandvibes.com.', sv: 'Det gick inte att skicka. Försök igen eller mejla info@laplandvibes.com direkt.',
   },
   successTitle: {
@@ -331,7 +331,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '谢谢，我们已收到您的申请。',
     ko: '감사합니다. 신청서가 접수되었습니다.',
     fr: 'Merci. Votre candidature est bien arrivée.',
-    it: 'Grazie. Abbiamo ricevuto la tua candidatura.',
+    it: 'Grazie. Abbiamo ricevuto la Sua candidatura.',
     nl: 'Bedankt. Je aanmelding is binnen.', sv: 'Tack! Din ansökan är registrerad.',
   },
   successBody: {
@@ -344,7 +344,7 @@ const T: Record<FormKey, Localized<string>> = {
     'zh-CN': '我们会进行审核并在几天内回复您。通过审核的合作伙伴将免费获得首个客户线索。',
     ko: '검토 후 며칠 내로 연락드리겠습니다. 승인된 파트너는 첫 번째 리드를 무료로 받습니다.',
     fr: 'Nous l’examinerons et reviendrons vers vous sous quelques jours. Les partenaires acceptés reçoivent leur premier lead gratuitement.',
-    it: 'La esamineremo e ti risponderemo entro pochi giorni. I partner approvati ricevono il primo lead gratis.',
+    it: 'La esamineremo e Le risponderemo entro pochi giorni. I partner approvati ricevono il primo lead gratis.',
     nl: 'We bekijken hem en nemen binnen enkele dagen contact op. Goedgekeurde partners ontvangen hun eerste lead gratis.', sv: 'We will review it and get back to you within a few days. Approved partners receive their first lead free.',
   },
 };
