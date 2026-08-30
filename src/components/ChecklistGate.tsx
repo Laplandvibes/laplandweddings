@@ -145,7 +145,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     fi: 'sinun@email.fi',
     de: 'name@email.de',
     ja: 'you@email.com',
-    es: 'tu@email.com',
+    es: 'sua@email.com',
     'pt-BR': 'voce@email.com',
     'zh-CN': 'you@email.com',
     ko: 'you@email.com',
