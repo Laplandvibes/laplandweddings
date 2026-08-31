@@ -135,7 +135,7 @@ const t_ja = {
     accSeparate: '別途自分で予約する',
     accUnsure: '未定',
     budget: '予算（€）',
-    budget1: '€5,000未満',
+    budget1: '€5,000未満（二人だけの挙式）',
     budget2: '€5,000 – €15,000',
     budget3: '€15,000 – €30,000',
     budget4: '€30,000 – €60,000',

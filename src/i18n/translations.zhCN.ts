@@ -133,7 +133,7 @@ const t_zhCN = {
     accSeparate: '我们另行预订',
     accUnsure: '不确定',
     budget: '预算 (€)',
-    budget1: '少于 5,000 欧元',
+    budget1: '少于 5,000 欧元（两人的仪式）',
     budget2: '5,000 – 15,000 欧元',
     budget3: '15,000 – 30,000 欧元',
     budget4: '30,000 – 60,000 欧元',

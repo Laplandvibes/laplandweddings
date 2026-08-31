@@ -135,7 +135,7 @@ const t_de = {
     accSeparate: 'Wir buchen sie separat',
     accUnsure: 'Unsicher',
     budget: 'Budget (€)',
-    budget1: 'Unter 5 000 €',
+    budget1: 'Unter 5 000 € (Trauung zu zweit)',
     budget2: '5 000 – 15 000 €',
     budget3: '15 000 – 30 000 €',
     budget4: '30 000 – 60 000 €',

@@ -135,7 +135,7 @@ const t_fi = {
     accSeparate: 'Varaamme sen erikseen',
     accUnsure: 'En ole varma',
     budget: 'Budjetti (€)',
-    budget1: 'alle 5 000 €',
+    budget1: 'alle 5 000 € (kahden hengen vihkiminen)',
     budget2: '5 000 – 15 000 €',
     budget3: '15 000 – 30 000 €',
     budget4: '30 000 – 60 000 €',

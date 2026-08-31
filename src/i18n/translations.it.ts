@@ -135,7 +135,7 @@ const t_it = {
     accSeparate: 'La prenoteremo a parte',
     accUnsure: 'Non so',
     budget: 'Budget (€)',
-    budget1: 'Sotto 5 000 €',
+    budget1: 'Sotto 5 000 € (cerimonia in due)',
     budget2: '€5 000 – €15 000',
     budget3: '€15 000 – €30 000',
     budget4: '€30 000 – €60 000',

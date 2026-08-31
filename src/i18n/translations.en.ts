@@ -135,7 +135,7 @@ const t_en = {
     accSeparate: 'We’ll book it separately',
     accUnsure: 'Not sure',
     budget: 'Budget (€)',
-    budget1: 'Under €5 000',
+    budget1: 'Under €5 000 (ceremony for two)',
     budget2: '€5 000 – €15 000',
     budget3: '€15 000 – €30 000',
     budget4: '€30 000 – €60 000',

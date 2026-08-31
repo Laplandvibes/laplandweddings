@@ -133,7 +133,7 @@ const t_es = {
     accSeparate: 'Lo reservaremos por separado',
     accUnsure: 'No estoy seguro',
     budget: 'Presupuesto (€)',
-    budget1: 'Menos de 5.000 €',
+    budget1: 'Menos de 5.000 € (ceremonia para dos)',
     budget2: '5.000 € – 15.000 €',
     budget3: '15.000 € – 30.000 €',
     budget4: '30.000 € – 60.000 €',
