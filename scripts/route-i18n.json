@@ -158,7 +158,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Finnlands nördlichstes Glasiglu-Resort, 480 m über dem Meer: einer der besten Polarlichtblicke Lapplands."
+        "desc": "Iglus mit Glasdach am Seeufer im äußersten Nordwesten Finnlands, 480 m über dem Meer: einer der besten Polarlichtblicke Lapplands."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -341,7 +341,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "キルピスヤルヴィ",
-        "desc": "標高480 mにあるフィンランド最北のガラスイグルーリゾート：ラップランドで最高のオーロラビュー。"
+        "desc": "フィンランド北西端、標高480 mの湖畔に建つガラス屋根のイグルー：ラップランドでも有数のオーロラビュー。"
       },
       {
         "slug": "santas-hotel-aurora",
@@ -524,7 +524,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "El resort de iglús de cristal más septentrional de Finlandia, a 480 m sobre el nivel del mar: la mejor vista de la aurora boreal de Laponia."
+        "desc": "Iglús con techo de cristal a orillas de un lago en el extremo noroeste de Finlandia, a 480 m sobre el nivel del mar: una de las mejores vistas de auroras de Laponia."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -707,7 +707,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "O resort de iglus de vidro mais setentrional da Finlândia, a 480 m acima do nível do mar: a melhor vista da aurora na Lapônia."
+        "desc": "Iglus com teto de vidro à beira de um lago no extremo noroeste da Finlândia, a 480 m acima do nível do mar: uma das melhores vistas de aurora da Lapônia."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -890,7 +890,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "基尔皮斯耶尔维",
-        "desc": "芬兰最北的玻璃冰屋度假村，海拔 480 m：拉普兰最佳的极光视野。"
+        "desc": "芬兰西北端湖畔的玻璃穹顶小屋，海拔 480 m：拉普兰观赏极光最好的地点之一。"
       },
       {
         "slug": "santas-hotel-aurora",
@@ -919,7 +919,7 @@
       {
         "slug": "rovaniemi",
         "name": "로바니에미",
-        "desc": "라플란드의 주도이자 국제선으로 가장 쉽게 닿는 도시. 산타클로스 마을 인근에 얼음 예배당부터 글라스 이글루까지 결혼식 장소가 모여 있습니다."
+        "desc": "라플란드의 주도이자 국제선으로 가장 쉽게 닿는 도시. 산타클로스 마을 인근에 얼음 예배당부터 글래스 이글루까지 결혼식 장소가 모여 있습니다."
       },
       {
         "slug": "saariselka",
@@ -928,7 +928,7 @@
       },
       {
         "slug": "levi",
-        "name": "레비 & 키틸레",
+        "name": "레비 & 키틸래",
         "desc": "핀란드 최대의 펠 리조트. Lainio Snow Village, Northern Lights Ranch의 Snow Chapel, 런던 직항편."
       },
       {
@@ -938,22 +938,22 @@
       },
       {
         "slug": "pyha-luosto",
-        "name": "피해-루오스토",
+        "name": "퓌해-루오스토",
         "desc": "동부 라플란드의 조용한 쪽. Pyhä-Luosto 국립공원 가장자리, Luosto 통나무 마을에 호텔 두 곳이 있습니다."
       },
       {
         "slug": "kilpisjarvi",
-        "name": "킬피스예르비",
-        "desc": "핀란드 북서쪽 끝에 자리한 이 나라에서 가장 높은 지대. Tundrea의 글라스 이글루와 3국 국경에서 올리는 예식."
+        "name": "킬피스야르비",
+        "desc": "핀란드 북서쪽 끝에 자리한 이 나라에서 가장 높은 지대. Tundrea의 글래스 이글루와 3국 국경에서 올리는 예식."
       },
       {
         "slug": "oulu",
         "name": "오울루",
-        "desc": "라플란드로 가는 길목의 대도시 선택지로, Perämeri 연안에 자리한 핀란드에서 다섯 번째로 큰 도시. 레스토랑과 밤 문화가 어우러진 도시형 결혼식 밤, Helsinki에서 직항으로 약 1시간."
+        "desc": "라플란드로 가는 길목의 대도시 선택지입니다. Perämeri 연안에 자리한 핀란드에서 다섯 번째로 큰 도시로, 레스토랑과 나이트라이프가 어우러진 도심 결혼식이 가능합니다. Helsinki에서 직항으로 약 1시간."
       },
       {
         "slug": "kemijarvi",
-        "name": "케미예르비",
+        "name": "케미야르비",
         "desc": "동부 라플란드에 있는 핀란드 최북단 도시. 호수가 감싸는 도심, 인구 7,029명, Helsinki에서 오는 직통 열차. 차로 갈 수 있는 거리에 펠 다섯 곳이 있습니다."
       }
     ],
@@ -970,7 +970,7 @@
       },
       {
         "slug": "glass-igloo",
-        "name": "글라스 이글루 웨딩",
+        "name": "글래스 이글루 웨딩",
         "desc": "난방되는 유리 돔에서 오로라 아래 보내는 신혼 첫날밤. Kakslauttanen, Levin Iglut, Apukka."
       },
       {
@@ -993,16 +993,16 @@
       {
         "slug": "kakslauttanen",
         "region": "사리셀카",
-        "desc": "핀란드에서 가장 유명한 글라스 이글루 리조트. Glass Teepee 예배당, 얼음 예배당, 통나무 예배당, 그리고 250명 규모의 Celebration House."
+        "desc": "핀란드에서 가장 유명한 글래스 이글루 리조트. Glass Teepee 예배당, 얼음 예배당, 통나무 예배당, 그리고 250명 규모의 Celebration House."
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "레흐토예르비 · 로바니에미에서 35km",
-        "desc": "30명 규모의 얼음 예배당을 갖춘 Snow Hotel, 얼음 레스토랑, 360° 오로라 전망의 글라스 이글루."
+        "region": "레흐토야르비 · 로바니에미에서 35km",
+        "desc": "30명 규모의 얼음 예배당을 갖춘 Snow Hotel, 얼음 레스토랑, 360° 오로라 전망의 글래스 이글루."
       },
       {
         "slug": "snow-village-lainio",
-        "region": "라이니오, 키틸레 · 윌래스와 레비 사이",
+        "region": "라이니오, 키틸래 · 윌래스와 레비 사이",
         "desc": "겨울마다 새로운 예술 테마로 다시 짓는 세계적으로 유명한 Snow Village. 얼음 예배당, 목조 예배당, 스노우 스위트."
       },
       {
@@ -1013,12 +1013,12 @@
       {
         "slug": "levi-ice-castle",
         "region": "레비 · 중심부에서 7km",
-        "desc": "예배당과 바, 얼음 스위트를 갖춘 Levi의 얼음 성. 벽과 좌석은 수정처럼 맑은 얼음으로 만듭니다."
+        "desc": "예배당과 바, 얼음 스위트를 갖춘 Levi의 얼음 성. 벽과 좌석은 수정처럼 맑은 얼음으로 만들어집니다."
       },
       {
         "slug": "levin-iglut",
         "region": "레비 · 펠(구릉) 정상",
-        "desc": "Levi 펠 정상의 글라스 이글루. 라플란드에서 오로라를 보기에 가장 좋은 각도, 커플을 위한 Suite 이글루."
+        "desc": "Levi 펠 정상의 글래스 이글루. 라플란드에서 오로라를 보기에 가장 좋은 각도, 커플을 위한 Suite 이글루."
       },
       {
         "slug": "apukka-resort",
@@ -1028,12 +1028,12 @@
       {
         "slug": "arctic-treehouse",
         "region": "SantaPark · 공항에서 2km",
-        "desc": "유리벽을 두른 현대적인 나무 위 캐빈. 라플란드에서 이동이 가장 편하고, Rovaniemi 공항에서 2 km."
+        "desc": "유리벽을 두른 현대적인 나무 위 캐빈. 라플란드에서 이동이 가장 편리하며, Rovaniemi 공항에서 2km 거리입니다."
       },
       {
         "slug": "wilderness-hotel-muotka",
         "region": "무오트카 · UKK 국립공원 경계",
-        "desc": "빛 공해가 전혀 없어 라플란드에서 오로라를 보기 가장 좋은 장소 중 하나. Aurora Cabins와 Kammi 캐빈."
+        "desc": "빛 공해가 전혀 없어 라플란드에서 오로라를 보기 가장 좋은 장소 중 하나. Aurora Cabins과 Kammi 캐빈."
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -1048,12 +1048,12 @@
       {
         "slug": "northern-lights-village-saariselka",
         "region": "사리셀카 중심부",
-        "desc": "Saariselkä 중심가에 유리 지붕을 얹은 Aurora Cabins 80채와 Polar Sky Suites 20채."
+        "desc": "사리셀카 중심가에 유리 지붕을 얹은 Aurora Cabins 80채와 Polar Sky Suites 20채."
       },
       {
         "slug": "northern-lights-village-levi",
         "region": "시르카, 레비",
-        "desc": "Levi의 편의시설 가까이에서 누리는 NLV 스타일. Aurora Cabins, Levi 중심가까지 5분."
+        "desc": "Levi의 편의시설 가까이에서 누리는 Northern Lights Village 특유의 분위기. Aurora Cabins, Levi 중심가까지 5분."
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -1062,23 +1062,23 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "레비 펠 정상",
+        "region": "레비 펠(구릉) 정상",
         "desc": "Levi 펠 정상에 있는 Lapland Hotels의 대표 호텔. 파노라마 창, 곤돌라로 이동."
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "윌래스예르비 · 팔라스-윌래스툰투리 국립공원 가장자리",
+        "region": "윌래스야르비 · 팔라스-윌래스툰투리 국립공원 가장자리",
         "desc": "TripAdvisor에서 인기 있는 Ylläs의 웨딩 호텔. 스파, 레스토랑 세 곳, 핫텁."
       },
       {
         "slug": "tundrea-kilpisjarvi",
-        "region": "킬피스예르비",
-        "desc": "해발 480 m에 자리한 핀란드 최북단의 글라스 이글루 리조트. 라플란드에서 가장 좋은 오로라 전망."
+        "region": "킬피스야르비",
+        "desc": "핀란드 북서쪽 끝, 해발 480 m 호숫가에 자리한 유리 지붕 이글루. 라플란드에서 손꼽히는 오로라 전망."
       },
       {
         "slug": "santas-hotel-aurora",
         "region": "루오스토, 소단퀼래",
-        "desc": "Luosto 중심가의 부티크 호텔. 전 객실에 전용 사우나, 글라스 이글루, Pyhä-Luosto 국립공원 바로 옆."
+        "desc": "Luosto 중심가의 부티크 호텔. 전 객실에 전용 사우나, 글래스 이글루, Pyhä-Luosto 국립공원 바로 옆."
       },
       {
         "slug": "lapland-hotels-luostotunturi",
@@ -1256,7 +1256,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Le resort d’igloos de verre le plus septentrional de Finlande, à 480 m d’altitude : la meilleure vue sur les aurores en Laponie."
+        "desc": "Des igloos à toit de verre au bord d’un lac à l’extrême nord-ouest de la Finlande, à 480 m d’altitude : l’une des plus belles vues sur les aurores de Laponie."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -1439,7 +1439,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Il resort di igloo di vetro più settentrionale della Finlandia, a 480 m sul livello del mare: la vista sull’aurora migliore della Lapponia."
+        "desc": "Igloo con tetto in vetro in riva a un lago all’estremo nord-ovest della Finlandia, a 480 m sul livello del mare: una delle migliori viste sull’aurora della Lapponia."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -1622,7 +1622,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Het noordelijkste resort met glazen iglo's van Finland, 480 m boven zeeniveau: een van de beste noorderlichtzichten van Lapland."
+        "desc": "Iglo's met glazen dak aan een meer in het uiterste noordwesten van Finland, 480 m boven zeeniveau: een van de beste noorderlichtzichten van Lapland."
       },
       {
         "slug": "santas-hotel-aurora",
@@ -1805,7 +1805,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "Kilpisjärvi",
-        "desc": "Finlands nordligaste glasigloresort, 480 m över havet: Lapplands bästa norrskensvy."
+        "desc": "Iglor med glastak vid en sjöstrand i Finlands nordvästligaste hörn, 480 m över havet: en av Lapplands bästa norrskensvyer."
       },
       {
         "slug": "santas-hotel-aurora",

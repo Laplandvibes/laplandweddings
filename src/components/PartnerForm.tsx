@@ -196,7 +196,7 @@ const T: Record<FormKey, Localized<string>> = {
     es: 'p. ej. Rovaniemi, Levi, Saariselkä',
     'pt-BR': 'ex.: Rovaniemi, Levi, Saariselkä',
     'zh-CN': '例如：罗瓦涅米、莱维、萨利色尔卡',
-    ko: '예: 로바니에미, 레비, 사리셀캐',
+    ko: '예: 로바니에미, 레비, 사리셀카',
     fr: 'p. ex. Rovaniemi, Levi, Saariselkä',
     it: 'es. Rovaniemi, Levi, Saariselkä',
     nl: 'bijv. Rovaniemi, Levi, Saariselkä', sv: 't.ex. Rovaniemi, Levi, Saariselkä',

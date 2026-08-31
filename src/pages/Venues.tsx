@@ -67,7 +67,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     es: 'Iglú de cristal bajo la aurora boreal en Kakslauttanen',
     'pt-BR': 'Iglu de vidro sob a aurora boreal em Kakslauttanen',
     'zh-CN': 'Kakslauttanen 北极光下的玻璃冰屋',
-    ko: '카크슬라우타넨의 오로라 아래 글라스 이글루',
+    ko: 'Kakslauttanen의 오로라 아래 글래스 이글루',
     fr: 'Igloo de verre sous les aurores boréales à Kakslauttanen',
     it: 'Igloo di vetro sotto l’aurora boreale a Kakslauttanen',
     nl: 'Glazen iglo onder het noorderlicht in Kakslauttanen', sv: 'Glasiglo under norrskenet på Kakslauttanen',

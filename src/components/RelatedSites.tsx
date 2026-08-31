@@ -99,7 +99,7 @@ const COPY: Record<Lang, Block> = {
     cards: [
       { href: 'https://laplandstays.com/property-types/', label: '하객이 머물 숙소', body: '라플란드 전역의 캐빈, 글래스 이글루, 객실을 단체로 잡을 수 있는 호텔까지.' },
       { href: 'https://laplandvisit.com/itineraries/', label: '라플란드 여행 전체 계획', body: '예식 전후로 보고 즐길 거리: 라플란드 종합 여행 가이드.' },
-      { href: 'https://laplandtransport.com/lapland-guide/', label: '라플란드 가는 법', body: '로바니에미, 키틸레, 이발로행 항공편·기차·공항 셔틀을 일행 모두를 위해.' },
+      { href: 'https://laplandtransport.com/lapland-guide/', label: '라플란드 가는 법', body: '로바니에미, 키틸래, 이발로행 항공편·기차·공항 셔틀을 일행 모두를 위해.' },
     ],
   },
   fr: {

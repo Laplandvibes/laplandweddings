@@ -109,7 +109,7 @@ const GATE: Record<GateKey, Localized<string>> = {
     es: 'Imprime en A4 o guarda como PDF',
     'pt-BR': 'Imprima em A4 ou salve como PDF',
     'zh-CN': '可打印为 A4 或保存为 PDF',
-    ko: 'A4로 인쇄하거나 PDF로 저장',
+    ko: 'A4로 인쇄하거나 PDF으로 저장',
     fr: 'Imprimez en A4 ou enregistrez en PDF',
     it: 'Stampi in A4 o salvi come PDF',
     nl: 'Print op A4 of bewaar als pdf', sv: 'Skriv ut i A4 eller spara som PDF',
