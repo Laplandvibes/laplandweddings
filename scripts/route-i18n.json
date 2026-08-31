@@ -201,7 +201,7 @@
       },
       {
         "slug": "yllas",
-        "name": "ウッラス",
+        "name": "ユッラス",
         "desc": "Leviより静かなエリア：ラップランドでもっとも澄んだ空気、挙式に向くSaagaのスパホテル、Lainio Snow Villageまでも近い距離。"
       },
       {
@@ -270,7 +270,7 @@
       },
       {
         "slug": "snow-village-lainio",
-        "region": "ライニオ、キッティラ · ウッラスとレヴィの間",
+        "region": "ライニオ、キッティラ · ユッラスとレヴィの間",
         "desc": "毎冬、新しいアートテーマで建て直される世界的に有名なSnow Village。氷のチャペル、木のチャペル、スノースイート。"
       },
       {
@@ -335,7 +335,7 @@
       },
       {
         "slug": "lapland-hotels-saaga",
-        "region": "ウッラスヤルヴィ · パッラス-ウッラス国立公園のふち",
+        "region": "ユッラスヤルヴィ · パッラス-ユッラス国立公園のふち",
         "desc": "TripAdvisorで人気のYlläsの結婚式向けホテル。スパ、3つのレストラン、ホットタブ。"
       },
       {
@@ -553,7 +553,7 @@
       {
         "slug": "rovaniemi",
         "name": "Rovaniemi",
-        "desc": "A capital da Lapônia, a mais fácil de alcançar com voos internacionais. Locais de casamento da capela de gelo aos iglus de vidro perto da Santa Claus Village."
+        "desc": "A capital da Lapônia, a mais fácil de alcançar com voos internacionais. Locais de casamento da capela de gelo aos iglus de vidro perto da Vila do Papai Noel."
       },
       {
         "slug": "saariselka",
@@ -563,7 +563,7 @@
       {
         "slug": "levi",
         "name": "Levi e Kittilä",
-        "desc": "O maior centro turístico de fjell da Finlândia: Lainio Snow Village, a Snow Chapel do Northern Lights Ranch, voos diretos de Londres."
+        "desc": "O maior centro turístico de monte da Finlândia: Lainio Snow Village, a Snow Chapel do Northern Lights Ranch, voos diretos de Londres."
       },
       {
         "slug": "yllas",
@@ -588,7 +588,7 @@
       {
         "slug": "kemijarvi",
         "name": "Kemijärvi",
-        "desc": "A cidade mais setentrional da Finlândia, no leste da Lapônia: um centro cercado pelo lago, 7.029 habitantes e um trem direto de Helsinque. Cinco fjells a distância de carro."
+        "desc": "A cidade mais setentrional da Finlândia, no leste da Lapônia: um centro cercado pelo lago, 7.029 habitantes e um trem direto de Helsinque. Cinco montes a distância de carro."
       }
     ],
     "types": [
@@ -651,8 +651,8 @@
       },
       {
         "slug": "levin-iglut",
-        "region": "Levi · no topo do fell",
-        "desc": "Iglus de vidro no alto do fjell de Levi: o melhor ângulo para ver a aurora na Lapônia, iglus Suite para casais."
+        "region": "Levi · no topo do monte",
+        "desc": "Iglus de vidro no alto do monte Levi: o melhor ângulo para ver a aurora na Lapônia, iglus Suite para casais."
       },
       {
         "slug": "apukka-resort",
@@ -696,8 +696,8 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "No topo do fell de Levi",
-        "desc": "O carro-chefe da Lapland Hotels no cume do fjell de Levi. Janelas panorâmicas, acesso por gôndola."
+        "region": "No topo do monte Levi",
+        "desc": "O carro-chefe da Lapland Hotels no cume do monte Levi. Janelas panorâmicas, acesso por gôndola."
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -722,12 +722,12 @@
       {
         "slug": "santas-hotel-santamus",
         "region": "Vila do Papai Noel",
-        "desc": "O único hotel da Santa Claus Village projetado para casamentos. Pacotes de renas e huskies incluídos."
+        "desc": "O único hotel da Vila do Papai Noel projetado para casamentos. Pacotes de renas e huskies incluídos."
       },
       {
         "slug": "nova-skyland",
         "region": "Vila do Papai Noel",
-        "desc": "Hotel boutique compacto e moderno na Santa Claus Village."
+        "desc": "Hotel boutique compacto e moderno na Vila do Papai Noel."
       }
     ]
   },
