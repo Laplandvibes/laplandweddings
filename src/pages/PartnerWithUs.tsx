@@ -232,7 +232,7 @@ const steps: Step[] = [
       es: 'Enviamos cada consulta a un máximo de tres socios, emparejados por región, estilo y nivel de precio.',
       'pt-BR': 'Enviamos cada solicitação para até três parceiros, combinados por região, estilo e faixa de preço.',
       'zh-CN': '我们将每条咨询发送给最多三位合作伙伴，按地区、风格和价格档位匹配。',
-      ko: '각 문의를 최대 세 파트너에게 보냅니다, 지역, 스타일, 가격대에 맞춰서.',
+      ko: '각 문의를 지역, 스타일, 가격대에 맞춰 최대 세 파트너에게 보냅니다.',
       fr: 'Nous envoyons chaque demande à un maximum de trois partenaires, selon la région, le style et la gamme de prix.',
       it: 'Inviamo ogni richiesta a un massimo di tre partner, abbinati per regione, stile e fascia di prezzo.',
       nl: 'We sturen elke aanvraag naar maximaal drie partners, afgestemd op regio, stijl en prijsklasse.', sv: 'Vi skickar varje förfrågan till upp till tre partner, matchade efter region, stil och prisklass.',

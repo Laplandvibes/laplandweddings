@@ -89,7 +89,7 @@ const t_ko = {
     indexTitle: '라플란드 웨딩 플래너',
     indexIntro: '저희는 라플란드의 가장 확립된 웨딩 플래너 7곳을 수집했습니다. 한 양식 → 1–3곳의 맞춤 견적.',
     threeQuotesTitle: '한 양식으로 1–3곳 견적 받기',
-    threeQuotesP: '5분이면 충분합니다. 1–7일 내에 1–3곳의 웨딩 플래너 견적을 받으세요, 비교 후 선택. 무료이며 부담 없음.',
+    threeQuotesP: '5분이면 충분합니다. 1–7일 내에 1–3곳의 웨딩 플래너 견적을 받아 비교한 뒤 선택하세요. 무료이며 부담 없음.',
   },
   practical: {
     title: '라플란드에서 결혼하기, 실용 가이드',
@@ -101,7 +101,7 @@ const t_ko = {
   },
   contact: {
     title: '문의하기',
-    subtitle: '1–2 영업일 내에 답변드립니다. 꿈에 대해 간단히 알려주세요, 적합한 플래너에게 연결해 드립니다.',
+    subtitle: '1–2 영업일 내에 답변드립니다. 꿈에 대해 간단히 알려주시면 적합한 플래너에게 연결해 드립니다.',
     formTitle: '1–3곳 견적 받기',
     formSub: '무료, 부담 없음. 1–7일 내 답변.',
   },
@@ -110,7 +110,7 @@ const t_ko = {
     partnerName: '파트너 성함',
     email: '이메일',
     phone: '전화 (선택)',
-    phoneHelp: 'WhatsApp이 편리합니다, 플래너가 가장 빠르게 연락할 수 있는 방법인 경우가 많습니다.',
+    phoneHelp: 'WhatsApp이 편리합니다. 플래너가 가장 빠르게 연락할 수 있는 방법인 경우가 많기 때문입니다.',
     country: '국가',
     guests: '하객 수',
     guestsHelp: '0 = 단둘이 (엘로프먼트)',
@@ -157,7 +157,7 @@ const t_ko = {
     success: '감사합니다! 두 분께 맞는 라플란드 웨딩 플래너(최대 3곳)가 1–7일 이내에 직접 연락드립니다.',
     error: '전송 실패. 다시 시도하거나 info@laplandvibes.com으로 직접 이메일을 보내주세요.',
   },
-  footerLine: 'LaplandVibes 네트워크의 일부 · 저희는 플래너가 아닙니다, 최고의 옵션을 비교해 드립니다.',
+  footerLine: 'LaplandVibes 네트워크의 일부 · 저희는 플래너가 아니라, 최고의 옵션을 비교해 드립니다.',
   legal: {
     terms: {
       metaTitle: '이용약관 | LaplandWeddings',
