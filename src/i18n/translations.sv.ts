@@ -163,7 +163,7 @@ const t_sv = {
       metaTitle: 'Användarvillkor | LaplandWeddings',
       title: 'Användarvillkor',
       paragraphs: [
-        'LaplandWeddings.online är en informationssajt som drivs av Lapeso Oy. Vi är inte en bröllopsbyrå, vi vidarebefordrar förfrågningar till bröllopsplanerare.',
+        'LaplandWeddings.online är en informationssajt som drivs av LaPeso Oy. Vi är inte en bröllopsbyrå, vi vidarebefordrar förfrågningar till bröllopsplanerare.',
         'Informationen hämtas från planerares och platsers offentliga sidor. Priser och tillgänglighet ändras, bekräfta alltid med leverantören.',
         'LaplandWeddings ansvarar inte för tredje parters agerande eller avtalsuppfyllelse (planerare, platser, fotografer).',
         'Vissa länkar på sajten är affiliatelänkar. Om du bokar via dem kan vi få en provision utan extra kostnad för dig. Det påverkar aldrig priset du betalar eller vilka partner vi rekommenderar.',

@@ -163,7 +163,7 @@ const t_de = {
       metaTitle: 'Nutzungsbedingungen | LaplandWeddings',
       title: 'Nutzungsbedingungen',
       paragraphs: [
-        'LaplandWeddings.online ist eine von Lapeso Oy betriebene Informationsseite. Wir sind keine Hochzeitsplanungsagentur, wir leiten Anfragen an Hochzeitsplaner weiter.',
+        'LaplandWeddings.online ist eine von LaPeso Oy betriebene Informationsseite. Wir sind keine Hochzeitsplanungsagentur, wir leiten Anfragen an Hochzeitsplaner weiter.',
         'Die Informationen stammen aus öffentlichen Seiten von Planern und Locations. Preise und Verfügbarkeit ändern sich, bitte lassen Sie sich diese stets vom Anbieter bestätigen.',
         'LaplandWeddings haftet nicht für das Handeln oder die vertragliche Leistung Dritter (Planer, Locations, Fotografen).',
         'Einige Links auf dieser Website sind Affiliate-Links. Wenn Sie darüber buchen, erhalten wir möglicherweise eine Provision, ohne Mehrkosten für Sie. Dies hat keinen Einfluss auf den von Ihnen gezahlten Preis oder darauf, welche Partner wir empfehlen.',

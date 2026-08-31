@@ -161,7 +161,7 @@ const t_ptBR = {
       metaTitle: 'Termos de Uso | LaplandWeddings',
       title: 'Termos de Uso',
       paragraphs: [
-        'LaplandWeddings.online é um site informativo operado pela Lapeso Oy. Não somos uma agência de organização de casamentos, encaminhamos as solicitações a organizadores de casamentos.',
+        'LaplandWeddings.online é um site informativo operado pela LaPeso Oy. Não somos uma agência de organização de casamentos, encaminhamos as solicitações a organizadores de casamentos.',
         'As informações são obtidas em páginas públicas de organizadores e locais de celebração. Preços e disponibilidade mudam, confirme sempre com o fornecedor.',
         'A LaplandWeddings não se responsabiliza pelas ações nem pelo cumprimento contratual de terceiros (organizadores, locais, fotógrafos).',
         'Alguns links deste site são links de afiliados. Se você reservar por meio deles, podemos receber uma comissão sem custo adicional para você. Isso nunca afeta o preço que você paga nem os parceiros que recomendamos.',

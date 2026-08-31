@@ -27,7 +27,7 @@ export default function Privacy() {
       <Section title={title}>
         <div className="prose prose-invert max-w-3xl mx-auto text-gray-300 space-y-4">
           <p>
-            {controllerLabel}: <strong>Lapeso Oy</strong>, info@laplandvibes.com.
+            {controllerLabel}: <strong>LaPeso Oy</strong>, info@laplandvibes.com.
           </p>
           {paragraphs.map((p, i) => (
             <p key={i}>{p}</p>

@@ -161,7 +161,7 @@ const t_es = {
       metaTitle: 'Condiciones de uso | LaplandWeddings',
       title: 'Condiciones de uso',
       paragraphs: [
-        'LaplandWeddings.online es un sitio informativo gestionado por Lapeso Oy. No somos una agencia de planificación de bodas: dirigimos las consultas a organizadores de bodas.',
+        'LaplandWeddings.online es un sitio informativo gestionado por LaPeso Oy. No somos una agencia de planificación de bodas: dirigimos las consultas a organizadores de bodas.',
         'La información procede de páginas públicas de planificadores y lugares de celebración. Los precios y la disponibilidad cambian: confirme siempre con el proveedor.',
         'LaplandWeddings no se responsabiliza de las acciones ni del cumplimiento contractual de terceros (planificadores, lugares de celebración, fotógrafos).',
         'Algunos enlaces de este sitio son enlaces de afiliados. Si reserva a través de ellos, podemos recibir una comisión sin coste adicional para usted. Esto nunca afecta al precio que paga ni a los socios que recomendamos.',

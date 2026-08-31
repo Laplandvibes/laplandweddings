@@ -163,7 +163,7 @@ const t_nl = {
       metaTitle: 'Gebruiksvoorwaarden | LaplandWeddings',
       title: 'Gebruiksvoorwaarden',
       paragraphs: [
-        'LaplandWeddings.online is een informatiesite die wordt beheerd door Lapeso Oy. Wij zijn geen bruiloftsplanningsbureau, wij sturen aanvragen door naar bruiloftsplanners.',
+        'LaplandWeddings.online is een informatiesite die wordt beheerd door LaPeso Oy. Wij zijn geen bruiloftsplanningsbureau, wij sturen aanvragen door naar bruiloftsplanners.',
         'De informatie is afkomstig van openbare pagina’s van planners en locaties. Prijzen en beschikbaarheid wijzigen, bevestig dit altijd bij de aanbieder.',
         'LaplandWeddings is niet verantwoordelijk voor het handelen of de contractuele prestaties van derden (planners, locaties, fotografen).',
         'Sommige links op deze site zijn affiliate-links. Als u via deze links boekt, ontvangen wij mogelijk een commissie zonder extra kosten voor u. Dit heeft nooit invloed op de prijs die u betaalt of op welke partners wij aanbevelen.',

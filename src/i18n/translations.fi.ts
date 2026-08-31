@@ -163,7 +163,7 @@ const t_fi = {
       metaTitle: 'Käyttöehdot | LaplandWeddings',
       title: 'Käyttöehdot',
       paragraphs: [
-        'LaplandWeddings.online on Lapeso Oy:n ylläpitämä infosivusto. Emme ole hääsuunnittelutoimisto, välitämme tiedustelut hääsuunnittelijoille.',
+        'LaplandWeddings.online on LaPeso Oy:n ylläpitämä infosivusto. Emme ole hääsuunnittelutoimisto, välitämme tiedustelut hääsuunnittelijoille.',
         'Sivuston tiedot on kerätty hääsuunnittelijoiden ja venuejen julkisilta sivuilta. Hinnat ja saatavuus vaihtelevat, pyydä aina vahvistus toimittajalta.',
         'LaplandWeddings ei ole vastuussa kolmansien osapuolten (suunnittelija, venue, valokuvaaja) toiminnasta tai sopimusten täyttymisestä.',
         'Osa sivuston linkeistä on affiliate-linkkejä. Jos varaat niiden kautta, voimme saada komission ilman lisäkustannusta sinulle. Tämä ei vaikuta maksamaasi hintaan eikä siihen, mitä kumppaneita suosittelemme.',

@@ -466,7 +466,7 @@ export default function Home() {
                 fi: 'Hääpuvuissa avantoon, samppanjalasi kädessä. Instagram-hetki.',
                 en: 'In wedding attire, champagne in hand, into the ice. Pure Instagram.',
                 de: 'Im Hochzeitsoutfit, Champagnerglas in der Hand, ins Eisloch. Instagram pur.',
-                ja: 'ウェディング衣装のまま、シャンパン片手にアヴァント(氷の穴)へ。まさにインスタ映え。',
+                ja: 'ウェディング衣装のまま、シャンパン片手にアヴァント（氷の穴）へ。まさにインスタ映え。',
                 ko: '웨딩 의상을 입은 채 샴페인 잔을 들고 얼음 호수로, 인스타그램에 최적인 순간입니다.',
                 fr: 'En tenue de mariage, coupe de champagne à la main, plongée dans l’avanto. L’instant Instagram par excellence.',
                 it: 'In abito da sposi, calice di champagne in mano, giù nell’acqua gelata. L’istante perfetto per Instagram.',

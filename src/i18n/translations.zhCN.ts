@@ -161,7 +161,7 @@ const t_zhCN = {
       metaTitle: '使用条款 | LaplandWeddings',
       title: '使用条款',
       paragraphs: [
-        'LaplandWeddings.online 是由 Lapeso Oy 运营的信息网站。我们不是婚礼策划机构，我们将咨询转交给婚礼策划师。',
+        'LaplandWeddings.online 是由 LaPeso Oy 运营的信息网站。我们不是婚礼策划机构，我们将咨询转交给婚礼策划师。',
         '相关信息来自策划师和场地的公开页面。价格和可用情况会发生变化，请务必向供应商确认。',
         'LaplandWeddings 不对第三方（策划师、场地、摄影师）的行为或合同履行承担责任。',
         '本网站的部分链接为联盟链接。如果您通过这些链接预订，我们可能会获得佣金，而您无需支付额外费用。这绝不会影响您支付的价格或我们推荐的合作伙伴。',

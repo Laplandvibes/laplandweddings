@@ -163,7 +163,7 @@ const t_it = {
       metaTitle: 'Condizioni d’uso | LaplandWeddings',
       title: 'Condizioni d’uso',
       paragraphs: [
-        'LaplandWeddings.online è un sito informativo gestito da Lapeso Oy. Non siamo un’agenzia di organizzazione di matrimoni, inoltriamo le richieste a wedding planner.',
+        'LaplandWeddings.online è un sito informativo gestito da LaPeso Oy. Non siamo un’agenzia di organizzazione di matrimoni, inoltriamo le richieste a wedding planner.',
         'Le informazioni provengono da pagine pubbliche di organizzatori e location. Prezzi e disponibilità variano, quindi verifichi sempre con il fornitore.',
         'LaplandWeddings non è responsabile delle azioni né dell’adempimento contrattuale di terzi (organizzatori, location, fotografi).',
         'Alcuni link presenti su questo sito sono link di affiliazione. Se prenota tramite essi, potremmo ricevere una commissione senza costi aggiuntivi per Lei. Ciò non influisce in alcun modo sul prezzo che paga né sui partner che consigliamo.',

@@ -163,7 +163,7 @@ const t_en = {
       metaTitle: 'Terms of Use | LaplandWeddings',
       title: 'Terms of Use',
       paragraphs: [
-        'LaplandWeddings.online is an information site operated by Lapeso Oy. We are not a wedding planning agency; we forward enquiries to wedding planners.',
+        'LaplandWeddings.online is an information site operated by LaPeso Oy. We are not a wedding planning agency; we forward enquiries to wedding planners.',
         'Information is sourced from public planner and venue pages. Prices and availability change, so always confirm with the supplier.',
         'LaplandWeddings is not responsible for the actions or contractual performance of third parties (planners, venues, photographers).',
         'Some links on this site are affiliate links. If you book through them we may earn a commission at no extra cost to you. This never affects the price you pay or which partners we recommend.',
