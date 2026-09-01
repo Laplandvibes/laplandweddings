@@ -63,12 +63,12 @@ const COPY: Record<Lang, Block> = {
     ],
   },
   es: {
-    eyebrow: 'Cómo planear tu boda en Laponia',
-    title: 'Lleva a todos, y dónde alojarse',
-    subtitle: 'Una boda en Laponia también es un viaje para tus invitados. Estas guías hermanas cubren el resto del trayecto.',
+    eyebrow: 'Cómo planear su boda en Laponia',
+    title: 'Lleve a todos, y dónde alojarse',
+    subtitle: 'Una boda en Laponia también es un viaje para sus invitados. Estas guías hermanas cubren el resto del trayecto.',
     cards: [
-      { href: 'https://laplandstays.com/property-types/', label: 'Dónde se alojará el grupo de la boda', body: 'Cabañas, iglús de cristal y hoteles con bloques de habitaciones para tus invitados por toda Laponia.' },
-      { href: 'https://laplandvisit.com/itineraries/', label: 'Planea todo tu viaje a Laponia', body: 'Qué ver y hacer antes y después de la ceremonia: una guía de viaje completa de Laponia.' },
+      { href: 'https://laplandstays.com/property-types/', label: 'Dónde se alojará el grupo de la boda', body: 'Cabañas, iglús de cristal y hoteles con bloques de habitaciones para sus invitados por toda Laponia.' },
+      { href: 'https://laplandvisit.com/itineraries/', label: 'Planee todo su viaje a Laponia', body: 'Qué ver y hacer antes y después de la ceremonia: una guía de viaje completa de Laponia.' },
       { href: 'https://laplandtransport.com/lapland-guide/', label: 'Cómo llegar a Laponia', body: 'Vuelos, trenes y traslados al aeropuerto de Rovaniemi, Kittilä e Ivalo para todo el grupo.' },
     ],
   },

@@ -33,7 +33,7 @@ const V: Record<VKey, Localized<string>> = {
   getQuoteVenue: {
     en: 'Get a quote for this venue', fi: 'Pyydä tarjous tähän venueen',
     de: 'Angebot für diese Location anfordern', ja: 'この会場の見積もりを依頼',
-    es: 'Solicita un presupuesto para este lugar', 'pt-BR': 'Peça um orçamento para este local',
+    es: 'Solicite un presupuesto para este lugar', 'pt-BR': 'Peça um orçamento para este local',
     'zh-CN': '获取此场地的报价', ko: '이 웨딩 장소 견적 받기',
     fr: 'Demander un devis pour ce lieu', it: 'Richieda un preventivo per questa location',
     nl: 'Vraag een offerte aan voor deze locatie', sv: 'Begär offert för den här platsen',
@@ -115,7 +115,7 @@ const V: Record<VKey, Localized<string>> = {
   tailoredProposal: {
     en: 'Get a tailored proposal', fi: 'Pyydä räätälöity ehdotus',
     de: 'Maßgeschneidertes Angebot anfordern', ja: 'オーダーメイドの提案を依頼',
-    es: 'Recibe una propuesta a medida', 'pt-BR': 'Receba uma proposta sob medida',
+    es: 'Reciba una propuesta a medida', 'pt-BR': 'Receba uma proposta sob medida',
     'zh-CN': '获取量身定制方案', ko: '맞춤 제안 받기',
     fr: 'Recevoir une proposition sur mesure', it: 'Riceva una proposta su misura',
     nl: 'Ontvang een voorstel op maat', sv: 'Få ett skräddarsytt förslag',
@@ -163,7 +163,7 @@ const V: Record<VKey, Localized<string>> = {
   compareNearby: {
     en: 'Compare nearby alternatives', fi: 'Vertaa lähialueen vaihtoehtoihin',
     de: 'Alternativen in der Nähe vergleichen', ja: '近隣の選択肢を比較',
-    es: 'Compara alternativas cercanas', 'pt-BR': 'Compare alternativas próximas',
+    es: 'Compare alternativas cercanas', 'pt-BR': 'Compare alternativas próximas',
     'zh-CN': '比较附近的选择', ko: '주변 대안 비교하기',
     fr: 'Comparez les alternatives à proximité', it: 'Confronti le alternative vicine',
     nl: 'Vergelijk alternatieven in de buurt', sv: 'Jämför alternativ i närheten',
@@ -180,17 +180,17 @@ const V: Record<VKey, Localized<string>> = {
   // turnaround is not ours to promise (Vesa 2026-07-27). Planners reply directly.
   leadIntro: {
     en: 'Fill in the form and the LaplandWeddings team will route your enquiry to wedding planners who work in this region. They send you tailored quotes directly.',
-    fi: 'Täytä lomake, niin LaplandWeddings-tiimi ohjaa kyselysi tämän venuen luotetuille hääsuunnittelijoille. He lähettävät räätälöidyt tarjoukset sinulle suoraan.',
-    de: 'Füllen Sie das Formular aus, und das LaplandWeddings-Team leitet Ihre Anfrage an die vertrauenswürdigen Hochzeitsplaner dieser Location weiter. Ihre maßgeschneiderten Angebote erhalten Sie direkt von ihnen.',
-    ja: 'フォームにご記入いただくと、LaplandWeddingsチームがこの会場の信頼できるウェディングプランナーへお問い合わせを取り次ぎます。オーダーメイドのお見積もりはプランナーから直接お届けします。',
-    es: 'Rellena el formulario y el equipo de LaplandWeddings dirigirá tu consulta a los organizadores de bodas de confianza de este lugar. Ellos te enviarán sus presupuestos a medida directamente.',
-    'pt-BR': 'Preencha o formulário e a equipe da LaplandWeddings encaminhará sua solicitação aos organizadores de casamento de confiança deste local. Eles enviam os orçamentos sob medida diretamente para você.',
-    'zh-CN': '填写表单，LaplandWeddings 团队会将你的咨询转给此场地信赖的婚礼策划师。量身定制的报价将由策划师直接发送给你。',
-    ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 웨딩 장소의 신뢰할 수 있는 웨딩 플래너에게 전달합니다. 맞춤 견적은 플래너가 직접 보내드립니다.',
-    fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners de confiance de ce lieu. Ils vous envoient directement leurs devis sur mesure.',
-    it: 'Compili il modulo e il team LaplandWeddings inoltrerà la Sua richiesta ai wedding planner di fiducia di questa location. Saranno loro a inviarLe direttamente i preventivi su misura.',
-    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt uw aanvraag door naar de vertrouwde trouwplanners van deze locatie. Zij sturen u rechtstreeks offertes op maat.',
-    sv: 'Fyll i formuläret så vidarebefordrar LaplandWeddings-teamet din förfrågan till de betrodda bröllopsplanerarna för den här platsen. De skickar sina skräddarsydda offerter direkt till dig.',
+    fi: 'Täytä lomake, niin LaplandWeddings-tiimi ohjaa kyselysi hääsuunnittelijoille, jotka työskentelevät tällä alueella. He lähettävät räätälöidyt tarjoukset sinulle suoraan.',
+    de: 'Füllen Sie das Formular aus, und das LaplandWeddings-Team leitet Ihre Anfrage an Hochzeitsplaner weiter, die in dieser Region arbeiten. Ihre maßgeschneiderten Angebote erhalten Sie direkt von ihnen.',
+    ja: 'フォームにご記入いただくと、LaplandWeddingsチームがこの地域で活動するウェディングプランナーへお問い合わせを取り次ぎます。オーダーメイドのお見積もりはプランナーから直接お届けします。',
+    es: 'Rellene el formulario y el equipo de LaplandWeddings dirigirá su consulta a organizadores de bodas que trabajan en esta región. Ellos le enviarán sus presupuestos a medida directamente.',
+    'pt-BR': 'Preencha o formulário e a equipe da LaplandWeddings encaminhará sua solicitação a organizadores de casamento que atuam nesta região. Eles enviam os orçamentos sob medida diretamente para você.',
+    'zh-CN': '填写表单，LaplandWeddings 团队会将你的咨询转给在该地区工作的婚礼策划师。量身定制的报价将由策划师直接发送给你。',
+    ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 지역에서 활동하는 웨딩 플래너에게 전달합니다. 맞춤 견적은 플래너가 직접 보내드립니다.',
+    fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners qui travaillent dans cette région. Ils vous envoient directement leurs devis sur mesure.',
+    it: 'Compili il modulo e il team LaplandWeddings inoltrerà la Sua richiesta ai wedding planner che lavorano in questa regione. Saranno loro a inviarLe direttamente i preventivi su misura.',
+    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt uw aanvraag door naar trouwplanners die in deze regio werken. Zij sturen u rechtstreeks offertes op maat.',
+    sv: 'Fyll i formuläret så vidarebefordrar LaplandWeddings-teamet din förfrågan till bröllopsplanerare som arbetar i den här regionen. De skickar sina skräddarsydda offerter direkt till dig.',
   },
   // Templates — {name} / {region} are substituted at render time.
   whatMakesSpecial: {
@@ -220,7 +220,7 @@ const V: Record<VKey, Localized<string>> = {
   getQuoteFor: {
     en: 'Get a quote: {name}', fi: 'Pyydä tarjous: {name}',
     de: 'Angebot anfordern: {name}', ja: '見積もりを依頼：{name}',
-    es: 'Solicita un presupuesto: {name}', 'pt-BR': 'Peça um orçamento: {name}',
+    es: 'Solicite un presupuesto: {name}', 'pt-BR': 'Peça um orçamento: {name}',
     'zh-CN': '获取报价：{name}', ko: '견적 받기: {name}',
     fr: 'Demander un devis: {name}', it: 'Richieda un preventivo: {name}',
     nl: 'Vraag een offerte aan: {name}', sv: 'Begär offert: {name}',

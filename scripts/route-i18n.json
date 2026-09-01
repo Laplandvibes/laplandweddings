@@ -88,7 +88,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "Lainio, Kittilä · zwischen Ylläs und Levi",
-        "desc": "Weltbekanntes Snow Village, jeden Winter mit neuem Kunstthema neu gebaut. Eiskapelle, Holzkapelle, Snow Suites."
+        "desc": "International bekanntes Snow Village, jeden Winter mit neuem Kunstthema neu gebaut. Eiskapelle, Holzkapelle, Snow Suites."
       },
       {
         "slug": "northern-lights-ranch",
@@ -271,7 +271,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "ライニオ、キッティラ · ユッラスとレヴィの間",
-        "desc": "毎冬、新しいアートテーマで建て直される世界的に有名なSnow Village。氷のチャペル、木のチャペル、スノースイート。"
+        "desc": "毎冬、新しいアートテーマで建て直される国際的に知られるSnow Village。氷のチャペル、木のチャペル、スノースイート。"
       },
       {
         "slug": "northern-lights-ranch",
@@ -370,7 +370,7 @@
       {
         "slug": "rovaniemi",
         "name": "Rovaniemi",
-        "desc": "La capital de Laponia, la más fácil de alcanzar con vuelos internacionales. Lugares para bodas desde una capilla de hielo hasta iglús de cristal cerca de Santa Claus Village."
+        "desc": "La capital de Laponia, la más fácil de alcanzar con vuelos internacionales. Lugares para bodas desde una capilla de hielo hasta iglús de cristal cerca del Pueblo de Papá Noel."
       },
       {
         "slug": "saariselka",
@@ -454,7 +454,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "Lainio, Kittilä · entre Ylläs y Levi",
-        "desc": "El mundialmente conocido Snow Village, reconstruido cada invierno con un nuevo tema artístico. Capilla de hielo, capilla de madera y snow suites."
+        "desc": "El Snow Village, conocido internacionalmente, reconstruido cada invierno con un nuevo tema artístico. Capilla de hielo, capilla de madera y snow suites."
       },
       {
         "slug": "northern-lights-ranch",
@@ -469,11 +469,11 @@
       {
         "slug": "levin-iglut",
         "region": "Levi · en la cima del fell",
-        "desc": "Iglús de cristal en la cima del monte Levi: el mejor ángulo de Laponia para ver la aurora boreal, iglús Suite para parejas."
+        "desc": "Iglús de cristal en la cima del fell de Levi: el mejor ángulo de Laponia para ver la aurora boreal, iglús Suite para parejas."
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · a 15 min de la Aldea de Papá Noel",
+        "region": "Apukka · a 15 min del Pueblo de Papá Noel",
         "desc": "Resort a orillas del lago Apukka con Aurora Cabins, iglú Kammi de dos plantas y los restaurantes Aitta y Kota."
       },
       {
@@ -514,7 +514,7 @@
       {
         "slug": "levi-panorama",
         "region": "En la cima del fell de Levi",
-        "desc": "Buque insignia de Lapland Hotels en la cima del monte Levi. Ventanales panorámicos, acceso en góndola."
+        "desc": "Buque insignia de Lapland Hotels en la cima del fell de Levi. Ventanales panorámicos, acceso en góndola."
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -538,13 +538,13 @@
       },
       {
         "slug": "santas-hotel-santamus",
-        "region": "Aldea de Papá Noel",
-        "desc": "El único hotel de Santa Claus Village diseñado para bodas. Incluye paquetes de renos y huskies."
+        "region": "Pueblo de Papá Noel",
+        "desc": "El único hotel del Pueblo de Papá Noel diseñado para bodas. Incluye paquetes de renos y huskies."
       },
       {
         "slug": "nova-skyland",
-        "region": "Aldea de Papá Noel",
-        "desc": "Hotel boutique compacto y moderno en Santa Claus Village."
+        "region": "Pueblo de Papá Noel",
+        "desc": "Hotel boutique compacto y moderno en el Pueblo de Papá Noel."
       }
     ]
   },
@@ -637,7 +637,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "Lainio, Kittilä · entre Ylläs e Levi",
-        "desc": "A mundialmente conhecida Snow Village, reconstruída a cada inverno com um novo tema artístico. Capela de gelo, capela de madeira, suítes de neve."
+        "desc": "A Snow Village, conhecida internacionalmente, reconstruída a cada inverno com um novo tema artístico. Capela de gelo, capela de madeira, suítes de neve."
       },
       {
         "slug": "northern-lights-ranch",
@@ -820,7 +820,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "莱尼奥，基蒂莱 · 于拉斯与莱维之间",
-        "desc": "世界闻名的 Snow Village，每年冬天以全新的艺术主题重建。冰教堂、木教堂、雪屋套房。"
+        "desc": "国际知名的 Snow Village，每年冬天以全新的艺术主题重建。冰教堂、木教堂、雪屋套房。"
       },
       {
         "slug": "northern-lights-ranch",
@@ -1003,7 +1003,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "라이니오, 키틸래 · 윌래스와 레비 사이",
-        "desc": "겨울마다 새로운 예술 테마로 다시 짓는 세계적으로 유명한 Snow Village. 얼음 예배당, 목조 예배당, 스노우 스위트."
+        "desc": "겨울마다 새로운 예술 테마로 다시 짓는 국제적으로 알려진 Snow Village. 얼음 예배당, 목조 예배당, 스노우 스위트."
       },
       {
         "slug": "northern-lights-ranch",
@@ -1186,7 +1186,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "Lainio, Kittilä · entre Ylläs et Levi",
-        "desc": "Snow Village de renommée mondiale, reconstruit chaque hiver sur un nouveau thème artistique. Chapelle de glace, chapelle en bois, suites de neige."
+        "desc": "Snow Village de renommée internationale, reconstruit chaque hiver sur un nouveau thème artistique. Chapelle de glace, chapelle en bois, suites de neige."
       },
       {
         "slug": "northern-lights-ranch",
@@ -1369,7 +1369,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "Lainio, Kittilä · tra Ylläs e Levi",
-        "desc": "Snow Village di fama mondiale, ricostruito ogni inverno con un nuovo tema artistico. Cappella di ghiaccio, cappella in legno, snow suite."
+        "desc": "Snow Village di fama internazionale, ricostruito ogni inverno con un nuovo tema artistico. Cappella di ghiaccio, cappella in legno, snow suite."
       },
       {
         "slug": "northern-lights-ranch",
@@ -1552,7 +1552,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "Lainio, Kittilä · tussen Ylläs en Levi",
-        "desc": "Wereldberoemd Snow Village dat elke winter opnieuw wordt gebouwd met een nieuw kunstthema. IJskapel, houten kapel, snowsuites."
+        "desc": "Internationaal bekend Snow Village dat elke winter opnieuw wordt gebouwd met een nieuw kunstthema. IJskapel, houten kapel, snowsuites."
       },
       {
         "slug": "northern-lights-ranch",
@@ -1735,7 +1735,7 @@
       {
         "slug": "snow-village-lainio",
         "region": "Lainio, Kittilä · mellan Ylläs och Levi",
-        "desc": "Världsberömda Snow Village byggs om varje vinter med ett nytt konstnärligt tema. Iskapell, träkapell, snösviter."
+        "desc": "Internationellt kända Snow Village byggs om varje vinter med ett nytt konstnärligt tema. Iskapell, träkapell, snösviter."
       },
       {
         "slug": "northern-lights-ranch",

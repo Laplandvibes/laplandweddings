@@ -78,7 +78,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     fi: 'Tiedot kerätty valokuvaajien omilta julkisilta sivuilta. LaplandWeddings ei ole sopimussuhteessa kaikkiin listattuihin. Yhteyshenkilöt heidän omista sivustaan.',
     de: 'Angaben aus den öffentlichen Websites der Fotografen. LaplandWeddings steht nicht mit allen Gelisteten in einem Vertragsverhältnis. Wenden Sie sich direkt über deren eigene Seiten an sie.',
     ja: '情報は各フォトグラファーの公開ウェブサイトから収集しています。LaplandWeddingsは掲載者全員と契約関係にあるわけではありません。各自の公式サイトから直接ご連絡ください。',
-    es: 'Información obtenida de los sitios web públicos de los fotógrafos. LaplandWeddings no mantiene una relación contractual con todos los listados: contacta directamente a través de sus propios sitios.',
+    es: 'Información obtenida de los sitios web públicos de los fotógrafos. LaplandWeddings no mantiene una relación contractual con todos los listados: contáctelos directamente a través de sus propios sitios.',
     'pt-BR': 'Informações obtidas dos sites públicos dos fotógrafos. A LaplandWeddings não tem relação contratual com todos os listados. Entre em contato diretamente pelos sites de cada um.',
     'zh-CN': '信息来源于摄影师的公开网站。LaplandWeddings 并未与所有列出的摄影师建立合同关系，请通过他们各自的网站直接联系。',
     ko: '정보는 각 포토그래퍼의 공개 웹사이트에서 수집했습니다. LaplandWeddings는 게재된 모든 분과 계약 관계에 있지 않습니다. 각자의 사이트를 통해 직접 연락하세요.',

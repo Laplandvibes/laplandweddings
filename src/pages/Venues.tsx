@@ -24,7 +24,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     en: 'These are the best-known places in Lapland where weddings are held. We do not represent them and we do not organise weddings. If you already have a venue in mind, write it in the form and your wish is passed on exactly as you gave it.',
     de: 'Das sind die bekanntesten Orte Lapplands, an denen Hochzeiten gefeiert werden. Wir vertreten sie nicht und richten keine Hochzeiten aus. Wenn Sie bereits einen Ort im Sinn haben, tragen Sie ihn ins Formular ein, Ihr Wunsch wird unverändert weitergegeben.',
     ja: 'ラップランドで結婚式が行われている、よく知られた場所を集めました。当サイトはこれらの会場の代理店ではなく、結婚式の運営も行いません。すでに希望の会場がある場合はフォームにご記入ください。ご希望はそのままの形でお伝えします。',
-    es: 'Estos son los lugares más conocidos de Laponia donde se celebran bodas. No los representamos ni organizamos bodas. Si ya tenéis un lugar en mente, escribidlo en el formulario y vuestro deseo se transmite tal cual.',
+    es: 'Estos son los lugares más conocidos de Laponia donde se celebran bodas. No los representamos ni organizamos bodas. Si ya tiene un lugar en mente, escríbalo en el formulario y su deseo se transmite tal cual.',
     'pt-BR': 'Estes são os lugares mais conhecidos da Lapônia onde se realizam casamentos. Não os representamos e não organizamos casamentos. Se vocês já têm um local em mente, escrevam no formulário e o pedido segue exatamente como foi informado.',
     'zh-CN': '这些是拉普兰最为人熟知的婚礼举办地。我们不代理这些场地，也不承办婚礼。如果您心中已有中意的场地，请写在表单里，您的意愿会原样转达。',
     ko: '라플란드에서 결혼식이 열리는 잘 알려진 장소들입니다. 저희는 이곳들을 대리하지 않으며 결혼식을 직접 주최하지도 않습니다. 이미 마음에 둔 장소가 있다면 양식에 적어 주세요. 그 희망은 그대로 전달됩니다.',

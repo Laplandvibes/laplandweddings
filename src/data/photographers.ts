@@ -294,7 +294,7 @@ export const photographers: Photographer[] = [
       en: 'A Finnish photographer whose own “Lapland Intimate Wedding Guide” ranks on Google. Best for couples who want practical local guides alongside photography.',
       de: 'Ein finnischer Fotograf, dessen eigener „Lapland Intimate Wedding Guide“ bei Google weit oben steht. Ideal für Paare, die neben der Fotografie auch praktische lokale Leitfäden zur Reiseplanung wünschen.',
       ja: '自身の「Lapland Intimate Wedding Guide」がGoogleで上位表示されるフィンランド人フォトグラファー。撮影に加えて、旅の計画に役立つローカルなガイドを求めるカップルに最適。',
-      es: 'Fotógrafo finlandés cuya propia "Lapland Intimate Wedding Guide" se posiciona en Google. Ideal para parejas que quieren guías locales prácticas además de la fotografía.',
+      es: 'Fotógrafo finlandés cuya propia «Lapland Intimate Wedding Guide» se posiciona en Google. Ideal para parejas que quieren guías locales prácticas además de la fotografía.',
       'pt-BR': 'Fotógrafo finlandês cujo próprio "Lapland Intimate Wedding Guide" aparece bem ranqueado no Google. Ideal para casais que querem guias locais práticos além da fotografia.',
       'zh-CN': '一位芬兰摄影师，其撰写的"Lapland Intimate Wedding Guide"在谷歌上排名靠前。最适合希望在摄影之外获得实用本地行程指南的新人。',
       ko: '자신의 "Lapland Intimate Wedding Guide"가 구글에서 상위에 노출되는 핀란드 사진가. 촬영과 함께 여행 계획에 도움이 되는 실용적인 현지 가이드를 원하는 커플에게 가장 적합합니다.',
