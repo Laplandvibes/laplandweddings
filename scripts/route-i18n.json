@@ -1478,7 +1478,7 @@
       {
         "slug": "levi",
         "name": "Levi & Kittilä",
-        "desc": "Finlands grootste fjellresort: Lainio Snow Village, de Snow Chapel van Northern Lights Ranch, directe vluchten vanuit Londen."
+        "desc": "Finlands grootste fjällresort: Lainio Snow Village, de Snow Chapel van Northern Lights Ranch, directe vluchten vanuit Londen."
       },
       {
         "slug": "yllas",
@@ -1503,14 +1503,14 @@
       {
         "slug": "kemijarvi",
         "name": "Kemijärvi",
-        "desc": "De noordelijkste stad van Finland, in Oost-Lapland: een centrum omsloten door het meer, 7.029 inwoners en een directe trein vanuit Helsinki. Vijf fjellen op rijafstand."
+        "desc": "De noordelijkste stad van Finland, in Oost-Lapland: een centrum omsloten door het meer, 7.029 inwoners en een directe trein vanuit Helsinki. Vijf fjälls op rijafstand."
       }
     ],
     "types": [
       {
         "slug": "northern-lights",
         "name": "Noorderlichtbruiloft",
-        "desc": "Jullie ja-woord onder het noorderlicht: in Noord-Lapland is het noorderlicht gemiddeld om de nacht te zien (FMI)."
+        "desc": "Uw ja-woord onder het noorderlicht: in Noord-Lapland is het noorderlicht gemiddeld om de nacht te zien (FMI)."
       },
       {
         "slug": "snow-chapel",
@@ -1530,12 +1530,12 @@
       {
         "slug": "elopement",
         "name": "Elopement / Bruiloft met z’n tweeën",
-        "desc": "Alleen jullie twee, de huwelijksvoltrekker en een fotograaf. Kant-en-klare pakketten vanaf € 1 600."
+        "desc": "Alleen u beiden, de huwelijksvoltrekker en een fotograaf. Kant-en-klare pakketten vanaf € 1.600."
       },
       {
         "slug": "vow-renewal",
         "name": "Hernieuwing van de geloften",
-        "desc": "Vernieuw jullie geloften in de sneeuw van Lapland: geen papierwerk, volledig op maat gemaakte ceremonie."
+        "desc": "Vernieuw uw geloften in de sneeuw van Lapland: geen papierwerk, volledig op maat gemaakte ceremonie."
       }
     ],
     "venues": [
@@ -1567,7 +1567,7 @@
       {
         "slug": "levin-iglut",
         "region": "Levi · op de top van de fell",
-        "desc": "Glazen iglo's op de top van de Levi-fjell: de beste kijkhoek op het noorderlicht in Lapland, Suite-iglo's voor stellen."
+        "desc": "Glazen iglo's op de top van de Levi-fjäll: de beste kijkhoek op het noorderlicht in Lapland, Suite-iglo's voor stellen."
       },
       {
         "slug": "apukka-resort",
@@ -1612,7 +1612,7 @@
       {
         "slug": "levi-panorama",
         "region": "Op de top van de fell van Levi",
-        "desc": "Het vlaggenschip van Lapland Hotels op de top van de Levi-fjell. Panoramaramen, bereikbaar met de gondelbaan."
+        "desc": "Het vlaggenschip van Lapland Hotels op de top van de Levi-fjäll. Panoramaramen, bereikbaar met de gondelbaan."
       },
       {
         "slug": "lapland-hotels-saaga",
