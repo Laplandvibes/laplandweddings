@@ -21,7 +21,7 @@
  * locale file disagreed with the registries in **126** of 210 venue regions, and
  * **23** of those were still bare English on a non-English page — including
  * "Santa Claus Village", which the registry translates for all 12 locales
- * (Weihnachtsmanndorf, Kerstmandorp, Julgubbens by, サンタクロース村 …) while the
+ * (Weihnachtsmanndorf, Kerstmandorp, Jultomtens by, サンタクロース村 …) while the
  * generated file kept English for de, es, it, ja, nl, pt-BR and sv.
  *
  * So: names come from the registry, descriptions stay hand-written per surface.

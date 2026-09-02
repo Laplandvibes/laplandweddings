@@ -1566,7 +1566,7 @@
       },
       {
         "slug": "levin-iglut",
-        "region": "Levi · op de top van de fell",
+        "region": "Levi · op de top van de fjäll",
         "desc": "Glazen iglo's op de top van de Levi-fjäll: de beste kijkhoek op het noorderlicht in Lapland, Suite-iglo's voor stellen."
       },
       {
@@ -1611,7 +1611,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Op de top van de fell van Levi",
+        "region": "Op de top van de fjäll van Levi",
         "desc": "Het vlaggenschip van Lapland Hotels op de top van de Levi-fjäll. Panoramaramen, bereikbaar met de gondelbaan."
       },
       {
@@ -1651,7 +1651,7 @@
       {
         "slug": "rovaniemi",
         "name": "Rovaniemi",
-        "desc": "Lapplands huvudstad, enklast att nå med internationella flyg. Bröllopsplatser från iskapell till glasiglor nära Santa Claus Village."
+        "desc": "Lapplands huvudstad, enklast att nå med internationella flyg. Bröllopsplatser från iskapell till glasigloor nära Santa Claus Village."
       },
       {
         "slug": "saariselka",
@@ -1676,7 +1676,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "Kilpisjärvi",
-        "desc": "Finlands högsta terräng, i landets nordvästligaste hörn: Tundreas glasiglor och vigsel vid treriksröset."
+        "desc": "Finlands högsta terräng, i landets nordvästligaste hörn: Tundreas glasigloor och vigsel vid treriksröset."
       },
       {
         "slug": "oulu",
@@ -1725,12 +1725,12 @@
       {
         "slug": "kakslauttanen",
         "region": "Saariselkä",
-        "desc": "Finlands mest kända glasigloresort. Glass Teepee-kapell, iskapell, timmerkapell och Celebration House för 250 gäster."
+        "desc": "Finlands mest kända glasiglooresort. Glass Teepee-kapell, iskapell, timmerkapell och Celebration House för 250 gäster."
       },
       {
         "slug": "arctic-snowhotel",
         "region": "Lehtojärvi · 35 km från Rovaniemi",
-        "desc": "Snow Hotel med iskapell för 30 gäster, isrestaurang och glasiglor med 360° norrskensvy."
+        "desc": "Snow Hotel med iskapell för 30 gäster, isrestaurang och glasigloor med 360° norrskensvy."
       },
       {
         "slug": "snow-village-lainio",
@@ -1750,11 +1750,11 @@
       {
         "slug": "levin-iglut",
         "region": "Levi · uppe på fjället",
-        "desc": "Glasiglor på toppen av Levifjället: Lapplands bästa vinkel för norrsken, Suite-iglor för par."
+        "desc": "Glasigloor på toppen av Levifjället: Lapplands bästa vinkel för norrsken, Suite-iglor för par."
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · 15 min från Julgubbens by",
+        "region": "Apukka · 15 min från Jultomtens by",
         "desc": "Resort vid sjön Apukka med Aurora Cabins, Kammi-iglo i två våningar samt restaurangerna Aitta och Kota."
       },
       {
@@ -1810,7 +1810,7 @@
       {
         "slug": "santas-hotel-aurora",
         "region": "Luosto, Sodankylä",
-        "desc": "Boutiquehotell i Luostos centrum: egen bastu i varje rum, glasiglor, intill Pyhä-Luosto nationalpark."
+        "desc": "Boutiquehotell i Luostos centrum: egen bastu i varje rum, glasigloor, intill Pyhä-Luosto nationalpark."
       },
       {
         "slug": "lapland-hotels-luostotunturi",
@@ -1819,12 +1819,12 @@
       },
       {
         "slug": "santas-hotel-santamus",
-        "region": "Julgubbens by",
+        "region": "Jultomtens by",
         "desc": "Det enda hotellet i Santa Claus Village som är utformat för bröllop. Ren- och huskypaket ingår."
       },
       {
         "slug": "nova-skyland",
-        "region": "Julgubbens by",
+        "region": "Jultomtens by",
         "desc": "Kompakt, modernt boutiquehotell i Santa Claus Village."
       }
     ]

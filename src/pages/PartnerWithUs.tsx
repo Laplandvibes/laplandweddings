@@ -424,7 +424,7 @@ const C: Record<CKey, Localized<string>> = {
     ko: 'LaplandWeddings 파트너가 되세요: 연중 검증된 라플란드 웨딩 리드, 받은 리드만큼만 지불, 월 요금 없음. 첫 리드 무료.',
     fr: 'Devenez partenaire LaplandWeddings : des leads de mariage en Laponie qualifiés toute l’année, payez uniquement les leads reçus, sans frais mensuels.',
     it: 'Diventi partner LaplandWeddings: lead qualificati di matrimoni in Lapponia tutto l’anno, paghi solo i lead che riceve, nessun canone mensile. Primo lead gratis.',
-    nl: 'Word LaplandWeddings-partner: gekwalificeerde Laplandse trouwleads het hele jaar, betaal alleen voor ontvangen leads, geen maandelijkse kosten.', sv: 'Become a LaplandWeddings partner: qualified Lapland wedding leads year-round, pay only for the leads you receive, no monthly fee. First lead free.',
+    nl: 'Word LaplandWeddings-partner: gekwalificeerde Laplandse trouwleads het hele jaar, betaal alleen voor ontvangen leads, geen maandelijkse kosten.', sv: 'Bli LaplandWeddings-partner: kvalificerade bröllopsleads från Lappland året runt, betala bara för de leads du får, ingen månadsavgift. Första leadet gratis.',
   },
   heroEyebrow: {
     en: 'For wedding professionals', fi: 'Kumppaneille', de: 'Für Hochzeitsprofis', ja: 'ウェディングのプロの方へ',
