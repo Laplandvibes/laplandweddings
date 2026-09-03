@@ -178,7 +178,7 @@ const t_ko = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: '뉴스레터를 구독하시면 귀하의 이메일 주소는 Resend와 Supabase를 통해 안전하게 보관됩니다. 각 이메일의 링크 또는 당사의 ',
+      newsletterBefore: '뉴스레터를 구독하시면 이메일 주소는 Resend와 Supabase를 통해 안전하게 보관됩니다. 각 이메일의 링크 또는 당사의 ',
       unsubLabel: '구독 해지 페이지',
       newsletterAfter: '을 통해 언제든지 구독을 해지하실 수 있습니다.',
       controllerLabel: '관리자',
