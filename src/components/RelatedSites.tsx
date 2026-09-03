@@ -57,7 +57,7 @@ const COPY: Record<Lang, Block> = {
     title: '全員を呼び、泊まる場所も用意',
     subtitle: 'ラップランドの結婚式は、ゲストにとっても旅です。姉妹ガイドが旅の残りをカバーします。',
     cards: [
-      { href: 'https://laplandstays.com/property-types/', label: '参列者の宿泊先を探す', body: 'コテージ、ガラスイグルー、客室を確保できるホテルまで、ラップランド各地のゲスト向け宿。' },
+      { href: 'https://laplandstays.com/property-types/', label: '参列者の宿泊先を探す', body: 'コテージ、グラスイグルー、客室を確保できるホテルまで、ラップランド各地のゲスト向け宿。' },
       { href: 'https://laplandvisit.com/itineraries/', label: 'ラップランド旅行全体を計画', body: '挙式の前後に見て・体験したいこと：ラップランドの総合トラベルガイド。' },
       { href: 'https://laplandtransport.com/lapland-guide/', label: 'ラップランドへの行き方', body: 'ロヴァニエミ、キッティラ、イヴァロへのフライト・列車・空港送迎を一行全員分。' },
     ],

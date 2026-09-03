@@ -147,7 +147,7 @@ const t_zhCN = {
     attachmentsBrowse: '或点击浏览',
     attachmentsRemove: '移除',
     attachmentsTooMany: '最多 5 个文件。',
-    attachmentsTooBig: '文件过大(图片最多 5 MB / 视频最多 25 MB)。',
+    attachmentsTooBig: '文件过大（图片最多 5 MB / 视频最多 25 MB）。',
     attachmentsTotalTooBig: '附件总计超过 38 MB。',
     attachmentsBadType: '仅允许图片 (JPG/PNG/WebP/HEIC) 和视频 (MP4/MOV/WebM)。',
     submit: '发送，获取 1–3 份报价',

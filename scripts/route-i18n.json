@@ -187,7 +187,7 @@
       {
         "slug": "rovaniemi",
         "name": "ロヴァニエミ",
-        "desc": "ラップランドの州都で、国際線でもっとも行きやすい町。Santa Claus Village周辺には、氷のチャペルからガラスイグルーまでの挙式会場があります。"
+        "desc": "ラップランドの州都で、国際線でもっとも行きやすい町。Santa Claus Village周辺には、氷のチャペルからグラスイグルーまでの挙式会場があります。"
       },
       {
         "slug": "saariselka",
@@ -212,7 +212,7 @@
       {
         "slug": "kilpisjarvi",
         "name": "キルピスヤルヴィ",
-        "desc": "フィンランド最北西端にある同国の最高地：Tundreaのガラスイグルーと、3か国の国境での挙式。"
+        "desc": "フィンランド最北西端にある同国の最高地：Tundreaのグラスイグルーと、3か国の国境での挙式。"
       },
       {
         "slug": "oulu",
@@ -238,7 +238,7 @@
       },
       {
         "slug": "glass-igloo",
-        "name": "ガラスイグルーウェディング",
+        "name": "グラスイグルーウェディング",
         "desc": "オーロラの下、暖房の効いたガラスドームで過ごす結婚初夜：Kakslauttanen、Levin Iglut、Apukka。"
       },
       {
@@ -261,12 +261,12 @@
       {
         "slug": "kakslauttanen",
         "region": "サーリセルカ",
-        "desc": "フィンランドでもっとも有名なガラスイグルーリゾート。Glass Teepeeチャペル、氷のチャペル、ログハウスのチャペル、250名収容のCelebration House。"
+        "desc": "フィンランドでもっとも有名なグラスイグルーリゾート。Glass Teepeeチャペル、氷のチャペル、ログハウスのチャペル、250名収容のCelebration House。"
       },
       {
         "slug": "arctic-snowhotel",
         "region": "レフトヤルヴィ · ロヴァニエミから35km",
-        "desc": "30名収容の氷のチャペルを備えたSnow Hotel、氷のレストラン、そして360°のオーロラビューをもつガラスイグルー。"
+        "desc": "30名収容の氷のチャペルを備えたSnow Hotel、氷のレストラン、そして360°のオーロラビューをもつグラスイグルー。"
       },
       {
         "slug": "snow-village-lainio",
@@ -286,7 +286,7 @@
       {
         "slug": "levin-iglut",
         "region": "レヴィ · フェル（丘陵）の頂上",
-        "desc": "Leviフェルの頂上に建つガラスイグルー：ラップランドで最良のオーロラ観賞角度、二人向けのSuiteイグルー。"
+        "desc": "Leviフェルの頂上に建つグラスイグルー：ラップランドで最良のオーロラ観賞角度、二人向けのSuiteイグルー。"
       },
       {
         "slug": "apukka-resort",
@@ -346,7 +346,7 @@
       {
         "slug": "santas-hotel-aurora",
         "region": "ルオスト、ソダンキュラ",
-        "desc": "Luosto中心部のブティックホテル：全室に専用サウナ、ガラスイグルー、Pyhä-Luosto国立公園のすぐ隣。"
+        "desc": "Luosto中心部のブティックホテル：全室に専用サウナ、グラスイグルー、Pyhä-Luosto国立公園のすぐ隣。"
       },
       {
         "slug": "lapland-hotels-luostotunturi",
@@ -890,7 +890,7 @@
       {
         "slug": "tundrea-kilpisjarvi",
         "region": "基尔皮斯耶尔维",
-        "desc": "芬兰西北端湖畔的玻璃穹顶小屋，海拔 480 m：拉普兰观赏极光最好的地点之一。"
+        "desc": "芬兰西北端湖畔的玻璃冰屋，海拔 480 m：拉普兰观赏极光最好的地点之一。"
       },
       {
         "slug": "santas-hotel-aurora",

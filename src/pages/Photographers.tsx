@@ -51,7 +51,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'so
     en: 'Six of the most experienced wedding photographers in Lapland. Aurora-calibrated, snow-chapel lighting, glass-igloo composition. All proven in sub-zero conditions.',
     fi: 'Tähän on koottu kuusi Lapin kokeneinta hääjvalokuvaajaa. Revontulikalibrointi, lumikappelivalaistus, lasi-iglu-kuvaus. Kaikki testattuja pakkasessa.',
     de: 'Sechs der erfahrensten Hochzeitsfotografen Lapplands. Auf Polarlichter kalibriert, Schneekapellen-Beleuchtung, Glasiglu-Komposition. Alles bei Minusgraden erprobt.',
-    ja: 'ラップランドで最も経験豊富なウェディングフォトグラファー6人。オーロラに最適化した設定、スノーチャペルのライティング、ガラスイグルーの構図。すべて氷点下で実証済み。',
+    ja: 'ラップランドで最も経験豊富なウェディングフォトグラファー6人。オーロラに最適化した設定、スノーチャペルのライティング、グラスイグルーの構図。すべて氷点下で実証済み。',
     es: 'Seis de los fotógrafos de bodas con más experiencia de Laponia. Calibrados para auroras, iluminación de capillas de nieve, composición en iglús de cristal: todo probado bajo cero.',
     'pt-BR': 'Seis dos fotógrafos de casamento mais experientes da Lapônia. Calibrados para a aurora, iluminação de capelas de neve, composição em iglus de vidro. Tudo testado abaixo de zero.',
     'zh-CN': '拉普兰最具经验的六位婚礼摄影师。专为极光校准、雪教堂布光、玻璃冰屋构图，全部在零下环境中久经验证。',
