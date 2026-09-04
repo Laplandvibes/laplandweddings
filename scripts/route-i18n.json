@@ -787,8 +787,8 @@
       },
       {
         "slug": "glass-igloo",
-        "name": "玻璃穹顶婚礼",
-        "desc": "在带暖气的玻璃穹顶里、于北极光下度过新婚之夜：Kakslauttanen、Levin Iglut、Apukka。"
+        "name": "玻璃冰屋婚礼",
+        "desc": "在带暖气的玻璃冰屋里、于北极光下度过新婚之夜：Kakslauttanen、Levin Iglut、Apukka。"
       },
       {
         "slug": "midnight-sun",
@@ -960,7 +960,7 @@
     "types": [
       {
         "slug": "northern-lights",
-        "name": "오로라 웨딩",
+        "name": "오로라 결혼식",
         "desc": "오로라 아래에서 나누는 혼인 서약. 북부 라플란드에서는 평균 이틀에 하루꼴로 오로라가 나타납니다(FMI)."
       },
       {
@@ -1351,7 +1351,7 @@
       },
       {
         "slug": "vow-renewal",
-        "name": "Rinnovo delle promesse",
+        "name": "Rinnovo dei voti",
         "desc": "Rinnovi le Sue promesse nella neve della Lapponia: nessuna pratica burocratica, cerimonia completamente su misura."
       }
     ],
@@ -1712,7 +1712,7 @@
       },
       {
         "slug": "elopement",
-        "name": "Rymningsbröllop / bröllop för två",
+        "name": "Elopement / bröllop för två",
         "desc": "Bara ni två, vigselförrättaren och en fotograf. Nyckelfärdiga paket från 1 600 €."
       },
       {

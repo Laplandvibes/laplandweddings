@@ -906,7 +906,7 @@ const FAQ: { q: Localized<string>; a: Localized<string> }[] = [
       ko: '엘로프먼트 1,600~5,000유로, 소규모 결혼식 4,500~15,000유로, 프리미엄 15,000~40,000유로, 럭셔리 최대 10만 유로.',
       fr: 'Elopement 1 600-5 000 €, petit mariage 4 500-15 000 €, premium 15 000-40 000 €, luxe jusqu’à 100 000 €.',
       it: 'Elopement 1 600-5 000 €, matrimonio piccolo 4 500-15 000 €, premium 15 000-40 000 €, lusso fino a 100 000 €.',
-      nl: 'Elopement € 1 600-5 000, kleine bruiloft € 4 500-15 000, premium € 15 000-40 000, luxe tot € 100 000.', sv: 'Rymningsbröllop för två 1 600–5 000 €, litet bröllop 4 500–15 000 €, premium 15 000–40 000 €, lyx upp till 100 000 €.',
+      nl: 'Elopement € 1 600-5 000, kleine bruiloft € 4 500-15 000, premium € 15 000-40 000, luxe tot € 100 000.', sv: 'Elopement för två 1 600–5 000 €, litet bröllop 4 500–15 000 €, premium 15 000–40 000 €, lyx upp till 100 000 €.',
     },
   },
   {

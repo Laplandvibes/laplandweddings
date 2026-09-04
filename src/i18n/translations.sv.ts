@@ -72,7 +72,7 @@ const t_sv = {
   },
   types: {
     indexTitle: 'Bröllopstyper i Lappland',
-    indexIntro: 'Nätter i glasigloo, snökapell, norrsken, midnattssol, rymningsbröllop och förnyade löften, sex huvudinriktningar att välja mellan.',
+    indexIntro: 'Nätter i glasigloo, snökapell, norrsken, midnattssol, elopement och förnyade löften, sex huvudinriktningar att välja mellan.',
   },
   venues: {
     indexTitle: 'Lapplands populäraste bröllopsplatser',
@@ -113,7 +113,7 @@ const t_sv = {
     phoneHelp: 'WhatsApp fungerar bra, ofta det snabbaste sättet för en planerare att nå dig.',
     country: 'Ditt land',
     guests: 'Antal gäster',
-    guestsHelp: '0 = bara ni två (rymningsbröllop)',
+    guestsHelp: '0 = bara ni två (elopement)',
     preferredDate: 'Önskat bröllopsdatum',
     preferredDateHelp: 'Månad eller år räcker',
     flexibility: 'Flexibilitet med datum',

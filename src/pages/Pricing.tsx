@@ -291,7 +291,7 @@ const P: Record<PKey, Localized<string>> = {
      "from EUR 1,600", and a reader met two contradictory promises with nothing
      tying them together. Each page now names the other. */
   elopementCrossRef: { en: 'This floor applies to a wedding with guests. A ceremony for two is a different product: published elopement packages start at about EUR 1,600.', fi: 'Alaraja koskee häitä joissa on vieraita. Kahden hengen vihkiminen on eri tuote: julkaistut elopement-paketit alkavat noin 1 600 eurosta.', de: 'Diese Untergrenze gilt für eine Hochzeit mit Gästen. Eine Trauung zu zweit ist ein anderes Produkt: veröffentlichte Elopement-Pakete beginnen bei rund 1 600 €.', ja: 'この下限はゲストを招く結婚式のものです。二人だけの挙式は別の商品で、公表されているエロープメント・パッケージは約1,600ユーロから。', es: 'Este mínimo se refiere a una boda con invitados. Una ceremonia para dos es otro producto: los paquetes de elopement publicados parten de unos 1 600 €.', 'pt-BR': 'Este piso vale para um casamento com convidados. Uma cerimônia a dois é outro produto: os pacotes de elopement publicados partem de cerca de € 1.600.', 'zh-CN': '这一下限适用于有宾客的婚礼。两人的仪式属于另一种产品：公开的私奔婚礼套餐约 1,600 欧元起。', ko: '이 하한은 하객이 있는 결혼식 기준입니다. 두 사람만의 예식은 다른 상품으로, 공개된 엘로프먼트 패키지는 약 1,600유로부터입니다.', fr: 'Ce plancher concerne un mariage avec invités. Une cérémonie à deux est un autre produit : les forfaits elopement publiés démarrent autour de 1 600 €.', it: 'Questa soglia riguarda un matrimonio con ospiti. Una cerimonia in due è un altro prodotto: i pacchetti elopement pubblicati partono da circa 1 600 €.', nl: 'Deze ondergrens geldt voor een bruiloft met gasten. Een ceremonie met z’n tweeën is een ander product: gepubliceerde elopementpakketten beginnen rond € 1.600.', sv: 'Den här nedre gränsen gäller ett bröllop med gäster. En vigsel för två är en annan produkt: publicerade rymningspaket börjar kring 1 600 €.' },
-  elopementCrossRefLink: { en: 'See the Elopement page', fi: 'Katso Elopement-sivu', de: 'Zur Elopement-Seite', ja: 'エロープメントのページへ', es: 'Ver la página de Elopement', 'pt-BR': 'Ver a página de Elopement', 'zh-CN': '查看私奔婚礼页面', ko: '엘로프먼트 페이지 보기', fr: 'Voir la page Elopement', it: 'Vai alla pagina Elopement', nl: 'Bekijk de Elopement-pagina', sv: 'Se sidan om rymningsbröllop' },
+  elopementCrossRefLink: { en: 'See the Elopement page', fi: 'Katso Elopement-sivu', de: 'Zur Elopement-Seite', ja: 'エロープメントのページへ', es: 'Ver la página de Elopement', 'pt-BR': 'Ver a página de Elopement', 'zh-CN': '查看私奔婚礼页面', ko: '엘로프먼트 페이지 보기', fr: 'Voir la page Elopement', it: 'Vai alla pagina Elopement', nl: 'Bekijk de Elopement-pagina', sv: 'Se sidan om elopement' },
   getQuoteLike: {
     en: 'Get a quote for a wedding like this',
     fi: 'Pyydä tarjous tällaisille häille',
@@ -307,7 +307,7 @@ const P: Record<PKey, Localized<string>> = {
   },
   s2Eyebrow: {
     en: 'Individual costs', fi: 'Yksittäiset kustannukset', de: 'Einzelkosten',
-    ja: '個別の費用', es: 'Costes individuales', 'pt-BR': 'Custos individuais',
+    ja: '個別の費用', es: 'Costos individuales', 'pt-BR': 'Custos individuais',
     'zh-CN': '单项费用', ko: '개별 비용', fr: 'Coûts individuels',
     it: 'Costi singoli', nl: 'Afzonderlijke kosten', sv: 'Enskilda kostnader',
   },

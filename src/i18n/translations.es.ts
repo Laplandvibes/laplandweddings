@@ -40,7 +40,7 @@ const t_es = {
     typesTitle: '¿Con qué tipo de boda sueña?',
     locationsTitle: 'Elija su rincón de Laponia',
     plannersTitle: 'Los organizadores más experimentados de Laponia',
-    plannersIntro: 'Hemos investigado el mercado de bodas en Laponia y seleccionado 7 de los organizadores más consolidados. Envíe el formulario y le entregamos 1–3 presupuestos personalizados, sin coste.',
+    plannersIntro: 'Hemos investigado el mercado de bodas en Laponia y seleccionado 7 de los organizadores más consolidados. Envíe el formulario y le entregamos 1–3 presupuestos personalizados, sin costo.',
     newsletterTitle: 'Reciba guías de bodas de Laponia en su correo',
     newsletterSub: 'En la carta: espacios disponibles, consejos de temporada y una guía PDF del papeleo DVV. Escribimos solo cuando hay algo que contar. Puede darse de baja cuando quiera.',
     newsletterEmail: 'su-correo@example.com',
@@ -166,7 +166,7 @@ const t_es = {
         'LaplandWeddings.online es un sitio informativo gestionado por LaPeso Oy. No somos una agencia de planificación de bodas: dirigimos las consultas a organizadores de bodas.',
         'La información procede de páginas públicas de organizadores y lugares de celebración. Los precios y la disponibilidad cambian: confirme siempre con el proveedor.',
         'LaplandWeddings no se responsabiliza de las acciones ni del cumplimiento contractual de terceros (organizadores, lugares de celebración, fotógrafos).',
-        'Algunos enlaces de este sitio son enlaces de afiliados. Si reserva a través de ellos, podemos recibir una comisión sin coste adicional para usted. Esto nunca afecta al precio que paga ni a los socios que recomendamos.',
+        'Algunos enlaces de este sitio son enlaces de afiliados. Si reserva a través de ellos, podemos recibir una comisión sin costo adicional para usted. Esto nunca afecta al precio que paga ni a los socios que recomendamos.',
       ],
     },
     privacy: {
