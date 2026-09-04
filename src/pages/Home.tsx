@@ -1,4 +1,7 @@
 
+import ProductRail, { type RailLang } from '../shared/ads/ProductRail'
+import nordicnestRail from '../shared/ads/rails/nordicnest'
+import nordicnestPicks from '../shared/ads/data/nordicnestPicks'
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
@@ -566,6 +569,10 @@ export default function Home() {
            Oli ennen Häätyyppien yläpuolella, eli lukija sai yhden sisältölohkon
            ja sitten kuusi mainospaikkaa. Nyt kolmen lohkon takana. ── */}
       <HomeAdSlots config={AD_SLOTS} locale={lang} />
+      {/* Oikea tuoterivi tyhjän house-ad-kortin tilalle (Vesa 4.9.). */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <ProductRail partner={nordicnestRail} snapshot={nordicnestPicks} lang={lang as RailLang} sid="home_wedding_gifts" variant="dark" />
+      </div>
 
       {/* Featured venues */}
       {/* "Vahvistettuja hääpaikkoja" implied we had vetted or partnered with
