@@ -19,7 +19,7 @@ const picks: PartnerSnapshot = {
   "products": [
     {
       "sku": "615781-01",
-      "name": "Marimekko Piccolo tyynynpäällinen 50x50 cm",
+      "name": "Marimekko Piccolo tyynynpäällinen 50x50 cm Black-cotton",
       "shelf": "home-garden-decor-throw-",
       "category": "Home & Garden - Decor - Throw Pillows",
       "brand": "Marimekko",
@@ -30,7 +30,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "594666-01",
-      "name": "Kosta Boda Kappa maljakko 98 mm",
+      "name": "Kosta Boda Kappa maljakko 98 mm Ruskea",
       "shelf": "home-garden-decor-vases",
       "category": "Home & Garden - Decor - Vases",
       "brand": "Kosta Boda",
@@ -52,7 +52,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "16876-04",
-      "name": "Iittala Taika lautanen 27 cm",
+      "name": "Iittala Taika lautanen 27 cm sininen",
       "shelf": "home-garden-kitchen-dini",
       "category": "Home & Garden - Kitchen & Dining - Tableware - Dinnerware - Plates",
       "brand": "Iittala",
@@ -63,7 +63,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "582241-01",
-      "name": "Orrefors Ice cube -kynttilälyhty 70 mm",
+      "name": "Orrefors Ice cube -kynttilälyhty 70 mm Kirkas",
       "shelf": "home-garden-decor-home-f",
       "category": "Home & Garden - Decor - Home Fragrance Accessories - Candle Holders",
       "brand": "Orrefors",
