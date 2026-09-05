@@ -1,0 +1,86 @@
+{
+  "version": "20260905",
+  "domain": "laplandweddings.online",
+  "brand": "WEDDINGS",
+  "tagline": "Arctic venues and marriage paperwork",
+  "generated": "2026-09-05T21:51:04.201Z",
+  "staticFallbackSeason": "summer",
+  "seasons": {
+    "summer": {
+      "heroUrl": "https://laplandweddings.online/images/heroes/reindeer-sleigh-hero-1200.avif",
+      "heroAlt": "Summer wedding setting by a calm Lapland lake at golden midnight-sun hour",
+      "heroSha": "71319a05f7a68a92",
+      "bytes": 202554,
+      "sha256": "c96eb25cba57722091d581078037ce5b37bfd48791ea19306a3e5880e54d9569",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 19772,
+      "inkBox": [
+        329,
+        493,
+        870,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 107.9,
+      "centerSq": 129.5,
+      "photoRegion": 133,
+      "photoRegionRef": 133,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 542,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    },
+    "winter": {
+      "heroUrl": "https://laplandweddings.online/images/heroes/reindeer-sleigh-hero-winter-1200.avif",
+      "heroAlt": "Summer wedding setting by a calm Lapland lake at golden midnight-sun hour",
+      "heroSha": "4897449a306ceab9",
+      "bytes": 153069,
+      "sha256": "3473582110462b6bccdd43af5ee5a755b60308c3cd36e8c7dbcbc690234e98f6",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 19772,
+      "inkBox": [
+        329,
+        493,
+        870,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 74.7,
+      "centerSq": 90,
+      "photoRegion": 87.7,
+      "photoRegionRef": 87.7,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 542,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    }
+  }
+}

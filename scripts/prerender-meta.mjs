@@ -157,7 +157,7 @@ const top = {
           description: 'Een onafhankelijke gids voor trouwen in Lapland. 21 locaties, DVV-papierwerk, echte prijzen en praktische gidsen.' },
     sv: { title: 'Bröllop i Lappland 2026: vigselplatser och äktenskapspapper',
           description: 'En oberoende guide till att gifta sig i Lappland. 21 vigselplatser, DVV-papper, verkliga priser och praktiska guider för ditt bröllop i Arktis.' },
-    image: '/images/heroes/home-cover.jpg',
+    image: '/og.jpg?v=20260905',
   },
   '/locations': {
     en: { title: 'Lapland Wedding Regions: Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings',
@@ -211,7 +211,7 @@ const top = {
           description: 'Zeven bruiloftstypes in Lapland: noorderlicht, sneeuwkapel, glaziglo, middernachtszon, eloperen en geloftehernieuwing.' },
     sv: { title: 'Bröllopstyper i Lappland | LaplandWeddings',
           description: 'Sex bröllopstyper i Lappland: norrsken, snökapell, glasigloo, midnattssol, rymningsbröllop och förnyade löften.' },
-    image: '/images/heroes/home-cover.jpg',
+    image: '/og.jpg?v=20260905',
   },
   '/venues': {
     en: { title: 'Lapland Wedding Venues: 21 venues | LaplandWeddings',
@@ -361,7 +361,7 @@ const top = {
     it: { title: 'Informativa sulla privacy | LaplandWeddings', description: 'Informativa sulla privacy di laplandweddings.online: come trattiamo i dati delle richieste e l’analitica.' },
     nl: { title: 'Privacyverklaring | LaplandWeddings', description: 'Privacybeleid voor laplandweddings.online: hoe wij omgaan met aanvraaggegevens en analyses.' },
     sv: { title: 'Integritetspolicy | LaplandWeddings', description: 'Integritetspolicy för laplandweddings.online: hur vi hanterar förfrågningsdata och analys.' },
-    image: '/images/heroes/home-cover.jpg',
+    image: '/og.jpg?v=20260905',
   },
   '/terms': {
     en: { title: 'Terms of Use | LaplandWeddings', description: 'Terms of use for laplandweddings.online.' },
@@ -376,7 +376,7 @@ const top = {
     it: { title: 'Condizioni d’uso | LaplandWeddings', description: 'Condizioni d’uso di laplandweddings.online.' },
     nl: { title: 'Gebruiksvoorwaarden | LaplandWeddings', description: 'Gebruiksvoorwaarden van laplandweddings.online.' },
     sv: { title: 'Användarvillkor | LaplandWeddings', description: 'Användarvillkor för laplandweddings.online.' },
-    image: '/images/heroes/home-cover.jpg',
+    image: '/og.jpg?v=20260905',
   },
   '/cookie-policy': {
     en: { title: 'Cookie Policy | LaplandWeddings', description: 'Cookie policy for laplandweddings.online.' },
@@ -391,7 +391,7 @@ const top = {
     it: { title: 'Informativa sui cookie | LaplandWeddings', description: 'Informativa sui cookie di laplandweddings.online.' },
     nl: { title: 'Cookiebeleid | LaplandWeddings', description: 'Cookiebeleid van laplandweddings.online.' },
     sv: { title: 'Cookiepolicy | LaplandWeddings', description: 'Cookiepolicy för laplandweddings.online.' },
-    image: '/images/heroes/home-cover.jpg',
+    image: '/og.jpg?v=20260905',
   },
 };
 
@@ -521,7 +521,7 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, no
   out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);
   out = out.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/, `<meta name="description" content="${escapeAttr(description)}" />`);
 
-  const og = image;
+  const og = /^https?:/.test(image) ? image : 'https://laplandweddings.online' + image;
   const altOgLocales = LOCALES
     .filter((L) => L.lang !== lang)
     .map((L) => `<meta property="og:locale:alternate" content="${L.og}" />`);
@@ -537,7 +537,7 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, no
   // <SEO noindex>), joten staattisen kuoren on sanottava sama ENNEN JS:aa —
   // muuten Googlebot nakee ensin "index,follow" ja vasta ajon jalkeen noindexin.
   const extra = [
-    `<meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow'}" />`,
+    `<meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'}" />`,
     ...(noindex ? [] : [`<link rel="canonical" href="${currentUrl}" />`]),
     ...(noindex ? [] : hreflangTags),
     `<meta property="og:type" content="website" />`,
