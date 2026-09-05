@@ -251,7 +251,7 @@ const BUILT_IN_SITE_LABELS: Record<string, Record<SiteLabelsKey, string>> = {
   'pt-BR': { hotelDeals:'Ofertas de hotel selecionadas',staysCabins:'Hospedagens e cabanas',whereToStay:'Iglus de vidro, cabanas, lodges',familyFriendly:'Resorts familiares + visitas ao Papai Noel',localFood:'Culinária sámi + coleta silvestre',fineDining:'Alta gastronomia',barsPubs:'Bares e pubs',activities:'Atividades árticas selecionadas',huskySafaris:'Safáris de huskies, operadores comparados',skiResorts:'Comparativo de estações de esqui',snowmobileTours:'Safáris de moto de neve e aluguel',spaWellness:'Saunas, spas e bem-estar sob a aurora',nightlife:'Vida noturna',natureParks:'Natureza e parques',travelGuide:'Guia de viagem',christmas:'Natal na Lapônia, Vila do Papai Noel, auroras',giftsSouvenirs:'Presentes e lembranças',travelBlog:'Blog de viagem',dealsOffers:'Ofertas',transport:'Transporte',carRental:'Aluguel de carros',workInLapland:'Trabalhar na Lapônia' },
   'zh-CN': { hotelDeals:'精选酒店特惠',staysCabins:'住宿与小木屋',whereToStay:'玻璃冰屋、小木屋、荒野旅舍',familyFriendly:'家庭度假村与圣诞老人探访',localFood:'萨米料理与野外采集食材',fineDining:'高级餐饮',barsPubs:'酒吧',activities:'精选北极活动',huskySafaris:'哈士奇雪橇之旅，运营商对比',skiResorts:'滑雪度假村对比',snowmobileTours:'雪地摩托之旅与租赁',spaWellness:'桑拿、水疗、极光养生',nightlife:'夜生活',natureParks:'自然与公园',travelGuide:'旅行指南',christmas:'拉普兰圣诞：圣诞老人村、极光',giftsSouvenirs:'礼品与纪念品',travelBlog:'旅行博客',dealsOffers:'优惠',transport:'交通',carRental:'租车',workInLapland:'在拉普兰工作' },
   ko: { hotelDeals:'엄선한 호텔 특가',staysCabins:'숙소 & 통나무집',whereToStay:'글래스 이글루, 통나무집, 로지',familyFriendly:'가족 리조트 + 산타클로스 만남',localFood:'사미 요리 + 채집',fineDining:'파인다이닝',barsPubs:'바 & 펍',activities:'엄선한 북극 액티비티',huskySafaris:'허스키 사파리, 업체 비교',skiResorts:'스키 리조트 비교',snowmobileTours:'스노모빌 사파리 & 렌털',spaWellness:'사우나, 스파, 오로라 웰니스',nightlife:'나이트라이프',natureParks:'자연 & 공원',travelGuide:'여행 가이드',christmas:'라플란드 크리스마스, 산타클로스 마을, 오로라',giftsSouvenirs:'선물 & 기념품',travelBlog:'여행 블로그',dealsOffers:'특가 정보',transport:'교통',carRental:'렌터카',workInLapland:'라플란드에서 일하기' },
-  fr: { hotelDeals:'Offres hôtelières sélectionnées',staysCabins:'Hébergements & chalets',whereToStay:'Igloos de verre, chalets, lodges',familyFriendly:'Resorts pour familles + visites au Père Noël',localFood:'Cuisine sami + cueillette',fineDining:'Gastronomie',barsPubs:'Bars & Pubs',activities:'Activités arctiques sélectionnées',huskySafaris:'Safaris huskies, opérateurs comparés',skiResorts:'Comparatif des stations de ski',snowmobileTours:'Safaris en motoneige & location',spaWellness:'Saunas, spas et bien-être sous les aurores',nightlife:'Vie nocturne',natureParks:'Nature & parcs',travelGuide:'Guide de voyage',christmas:'Noël en Laponie, Village du Père Noël, aurores',giftsSouvenirs:'Cadeaux & souvenirs',travelBlog:'Blog voyage',dealsOffers:'Offres',transport:'Transport',carRental:'Location de voiture',workInLapland:'Travailler en Laponie' },
+  fr: { hotelDeals:'Offres hôtelières sélectionnées',staysCabins:'Hébergements & chalets',whereToStay:'Igloos de verre, chalets, lodges',familyFriendly:'Resorts pour familles + visites au Père Noël',localFood:'Cuisine sami + cueillette',fineDining:'Gastronomie',barsPubs:'Bars & Pubs',activities:'Activités arctiques sélectionnées',huskySafaris:'Safaris en traîneau à chiens, opérateurs comparés',skiResorts:'Comparatif des stations de ski',snowmobileTours:'Safaris en motoneige & location',spaWellness:'Saunas, spas et bien-être sous les aurores',nightlife:'Vie nocturne',natureParks:'Nature & parcs',travelGuide:'Guide de voyage',christmas:'Noël en Laponie, Village du Père Noël, aurores',giftsSouvenirs:'Cadeaux & souvenirs',travelBlog:'Blog voyage',dealsOffers:'Offres',transport:'Transport',carRental:'Location de voiture',workInLapland:'Travailler en Laponie' },
   it: { hotelDeals:'Offerte hotel selezionate',staysCabins:'Alloggi e baite',whereToStay:'Igloo di vetro, baite, lodge',familyFriendly:'Resort per famiglie + visite a Babbo Natale',localFood:'Cucina sami + raccolta selvatica',fineDining:'Alta cucina',barsPubs:'Bar e pub',activities:'Attività artiche selezionate',huskySafaris:'Safari con gli husky, operatori a confronto',skiResorts:'Stazioni sciistiche a confronto',snowmobileTours:'Safari in motoslitta e noleggio',spaWellness:'Saune, spa e benessere sotto l’aurora',nightlife:'Vita notturna',natureParks:'Natura e parchi',travelGuide:'Guida di viaggio',christmas:'Natale in Lapponia, Villaggio di Babbo Natale, aurore',giftsSouvenirs:'Regali e souvenir',travelBlog:'Blog di viaggio',dealsOffers:'Offerte',transport:'Trasporti',carRental:'Noleggio auto',workInLapland:'Lavorare in Lapponia' },
   nl: { hotelDeals:'Zorgvuldig gekozen hotelaanbiedingen',staysCabins:'Verblijven & vakantiehuisjes',whereToStay:'Glazen iglo\'s, blokhutten, lodges',familyFriendly:'Gezinsresorts + bezoek aan de Kerstman',localFood:'Sami-keuken + wildplukken',fineDining:'Fine dining',barsPubs:'Bars & Pubs',activities:'Zorgvuldig gekozen arctische activiteiten',huskySafaris:"Husky-safari's, aanbieders vergeleken",skiResorts:'Skigebieden vergeleken',snowmobileTours:'Sneeuwscootersafari\'s & verhuur',spaWellness:'Sauna\'s, spa\'s, noorderlichtwellness',nightlife:'Nachtleven',natureParks:'Natuur & parken',travelGuide:'Reisgids',christmas:'Kerstmis in Lapland, Kerstmandorp, noorderlicht',giftsSouvenirs:'Cadeaus & souvenirs',travelBlog:'Reisblog',dealsOffers:'Aanbiedingen',transport:'Vervoer',carRental:'Autoverhuur',workInLapland:'Werken in Lapland' },
   sv: { hotelDeals:'Handplockade hotellerbjudanden',staysCabins:'Boende & stugor',whereToStay:'Glasigloor, stugor, vildmarkshotell',familyFriendly:'Familjeresorter + besök hos Jultomten',localFood:'Samisk mat & bärplockning',fineDining:'Fine dining',barsPubs:'Barer & pubar',activities:'Handplockade arktiska aktiviteter',huskySafaris:'Hundspannssafarier, arrangörer jämförda',skiResorts:'Skidorter jämförda',snowmobileTours:'Snöskotersafarier & uthyrning',spaWellness:'Bastur, spa och norrskensavkoppling',nightlife:'Nattliv',natureParks:'Natur & parker',travelGuide:'Reseguide',christmas:'Jul i Lappland, Jultomtens by, norrsken',giftsSouvenirs:'Presenter & souvenirer',travelBlog:'Reseblogg',dealsOffers:'Erbjudanden',transport:'Transport',carRental:'Biluthyrning',workInLapland:'Jobba i Lappland' },
@@ -414,7 +414,7 @@ const BUILT_IN_FULL_DICT: Record<string, Partial<typeof DEFAULT_DICT>> = {
     getApp: "Obtenir l'app",
     groups: { stay: 'Où dormir', eatDrink: 'Manger & boire', do: 'À faire', explore: 'Explorer', essentials: 'L\'essentiel' },
     travelGuideKicker: 'Guide de voyage Laponie',
-    pillars: { northernLights: 'Aurores boréales', huskySafaris: 'Safaris en husky', skiResorts: 'Stations de ski', whereToStay: 'Hébergement', thingsToDo: 'Activités', natureParks: 'Nature et parcs', destinations: 'Destinations', categories: 'Catégories', snowmobileTours: 'Excursions en motoneige', hotels: 'Hôtels', activities: 'Activités', flights: 'Vols', cars: 'Location de voitures', packages: 'Forfaits', summer: 'Été', findJobs: 'Trouver un emploi', seasonalWork: 'Travail saisonnier', employers: 'Employeurs', movingToFinland: 'S\'installer en Finlande', workingConditions: 'Conditions de travail', livingInLapland: 'Vivre en Laponie' },
+    pillars: { northernLights: 'Aurores boréales', huskySafaris: 'Safaris en traîneau à chiens', skiResorts: 'Stations de ski', whereToStay: 'Hébergement', thingsToDo: 'Activités', natureParks: 'Nature et parcs', destinations: 'Destinations', categories: 'Catégories', snowmobileTours: 'Excursions en motoneige', hotels: 'Hôtels', activities: 'Activités', flights: 'Vols', cars: 'Location de voitures', packages: 'Forfaits', summer: 'Été', findJobs: 'Trouver un emploi', seasonalWork: 'Travail saisonnier', employers: 'Employeurs', movingToFinland: 'S\'installer en Finlande', workingConditions: 'Conditions de travail', livingInLapland: 'Vivre en Laponie' },
     about: { eyebrow: 'À propos de LaplandVibes', body: 'Le guide de référence pour la Laponie finlandaise, des aurores boréales au soleil de minuit. Expériences sélectionnées, conseils locaux et tout pour préparer votre voyage en Arctique.', badge: 'Géré indépendamment · sources citées' },
     spottedError: { title: 'Repéré une erreur ?', body: 'Quelque chose à corriger ? Dites-le-nous, nous corrigeons immédiatement.', cta: 'Signaler une erreur →' },
     partner: { title: 'Devenir partenaire', body: 'Publicité ou collaboration sur 25+ sites Laponie.', cta: 'Nous contacter →' },
@@ -716,6 +716,22 @@ interface SharedFooterProps {
    */
   extraLegalLinks?: { to: string; label: string }[];
   /**
+   * Per-site slugs for the three canonical legal pages. Defaults are the
+   * network standard and 26/27 sites need nothing here.
+   *
+   * 🔴 laplandskiresorts serves its privacy policy at `/privacy-policy` — its
+   * canonical, sitemap and hreflang set have carried that slug since launch and
+   * `/privacy` has never existed there. The hardcoded `/privacy` link therefore
+   * pointed at a real 404 in the footer of every page on that site (found by
+   * e2e/check-links.mjs 2026-08-22). The same split already exists in
+   * shared/NewsletterPopup (`privacyHref`), which is why this is a prop and not
+   * a per-site fork of the Footer.
+   *
+   * Pass the slug WITHOUT locale prefix and WITHOUT trailing slash; the Footer
+   * adds both, so the link stays canonical and Cloudflare never answers 308.
+   */
+  legalPaths?: { privacy?: string; cookie?: string; terms?: string };
+  /**
    * Destination for the "Website by …" credit link. Defaults to yrityspaketit.fi;
    * pass e.g. "https://www.zatap.fi" on sites whose `websiteBy` label names Zatap,
    * so the label and the link target match.
@@ -730,7 +746,7 @@ interface SharedFooterProps {
 
 // In-page contact form modal. Replaces the old mailto: links (which opened the
 // OS "choose an app" dialog). Posts to the hub send-contact-email edge function.
-function ContactModal({ kind, title, c, onClose }: { kind: ContactKind; title: string; c: ContactFormCopy; onClose: () => void }) {
+function ContactModal({ kind, title, c, lang, onClose }: { kind: ContactKind; title: string; c: ContactFormCopy; lang: string; onClose: () => void }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState(c.subj[kind]);
@@ -781,6 +797,10 @@ function ContactModal({ kind, title, c, onClose }: { kind: ContactKind; title: s
           email: email.trim(),
           subject: subject.trim(),
           message: `${message.trim()}\n\n, sent from ${host}`,
+          // [LV 2026-08-22] Lukijan kieli => send-contact-email lahettaa
+          // automaattivastauksen samalla kielella. Ilman kenttaa funktio
+          // palaa entiseen FI+EN-muotoon, joten kentan puuttuminen ei riko.
+          lang,
           website, // honeypot
         }),
       });
@@ -859,7 +879,7 @@ function ContactModal({ kind, title, c, onClose }: { kind: ContactKind; title: s
   );
 }
 
-export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPillarClick, editorialNote, extraLegalLinks = [], dict, websiteByHref = 'https://yrityspaketit.fi' }: SharedFooterProps) {
+export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPillarClick, editorialNote, extraLegalLinks = [], legalPaths, dict, websiteByHref = 'https://yrityspaketit.fi' }: SharedFooterProps) {
   const d = mergeDict(dict);
   const siteGroups = buildSiteGroups(d);
   const [contactKind, setContactKind] = useState<ContactKind | null>(null);
@@ -1258,13 +1278,18 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
             className="pt-6 sm:pt-8 border-t flex flex-col gap-3"
             style={{ borderColor: 'rgba(0,47,108,0.18)' }}
           >
+            {/* 🔴 Vesa 5.9.2026 (gifts, mobiili): "footerin tekstit alhaalla on
+                ihan miten sattuu." editorialNote oli yksi keskitetty kappale,
+                jossa neljä eri asiaa oli ketjutettu " · "-erottimilla — 390 px
+                leveydellä kahdeksan riviä keskitettyä pientä tekstiä. Nyt
+                jokainen " · "-osa on oma rivinsä ja koko alaosa on tasattu
+                vasemmalle kuten muu footer. Sivuston oma teksti ei muutu. */}
             {editorialNote && (
-              <p
-                className="text-[12px] sm:text-[11px] leading-relaxed text-center md:text-left font-medium"
-                style={{ color: BLUE }}
-              >
-                {editorialNote}
-              </p>
+              <ul className="max-w-3xl space-y-1 text-[12px] sm:text-[11px] leading-relaxed text-left font-medium" style={{ color: BLUE }}>
+                {editorialNote.split(/\s+·\s+/).map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
             )}
             {/* 🔴 Kumppanuusmerkintä on lakisääteinen, ja tämä on koko verkoston
                 ainoa paikka jossa se näkyy joka sivulla — footer on kopioitu
@@ -1273,7 +1298,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                 teksti vaatii 4,5:1 — se jäi rikki hiuksenhienosti joka
                 sivustolla yhtä aikaa. 0,75 = 5,98:1 ja pysyy yhä selvästi
                 vaimeampana kuin yläpuolinen editorialNote. */}
-            <p className="text-[12px] sm:text-[11px] leading-relaxed text-center md:text-left" style={{ color: 'rgba(0,47,108,0.75)' }}>
+            <p className="max-w-3xl text-[12px] sm:text-[11px] leading-relaxed text-left" style={{ color: 'rgba(0,47,108,0.75)' }}>
               <span aria-hidden="true">ⓘ </span>
               {d.affiliate}
             </p>
@@ -1284,12 +1309,12 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                 dropped the 6th link to a lonely second line on wide screens
                 (Vesa 2026-07-03); full width + centre fits all six cleanly and
                 wraps evenly if it ever needs to. */}
-            <div className="flex flex-col items-center gap-3 text-xs font-normal">
-              <div className="flex flex-wrap justify-center items-center gap-x-5 gap-y-1">
+            <div className="flex flex-col items-start gap-3 text-xs font-normal sm:items-center">
+              <div className="grid w-full grid-cols-2 gap-x-4 gap-y-0 sm:flex sm:w-auto sm:flex-wrap sm:justify-center sm:items-center sm:gap-x-5 sm:gap-y-1">
                 {[
-                  { to: `${localePrefix}/privacy/`, label: d.legal.privacy },
-                  { to: `${localePrefix}/cookie-policy/`, label: d.legal.cookie },
-                  { to: `${localePrefix}/terms/`, label: d.legal.terms },
+                  { to: `${localePrefix}${legalPaths?.privacy ?? '/privacy'}/`, label: d.legal.privacy },
+                  { to: `${localePrefix}${legalPaths?.cookie ?? '/cookie-policy'}/`, label: d.legal.cookie },
+                  { to: `${localePrefix}${legalPaths?.terms ?? '/terms'}/`, label: d.legal.terms },
                   ...extraLegalLinks,
                 ].map(({ to, label }) => (
                   <Link
@@ -1299,7 +1324,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
                        locale label ("Tietoa") gave a 42px-wide hit box even
                        though the height was already 44. Same trap as the
                        ecosystem links above. */
-                    className="transition-colors duration-200 inline-flex items-center min-h-[44px] min-w-[44px] sm:min-w-0 justify-center px-1"
+                    className="transition-colors duration-200 inline-flex items-center min-h-[44px] min-w-[44px] sm:min-w-0 justify-start sm:justify-center px-1"
                     style={{ color: BLUE }}
                     onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = '#EC4899')}
                     onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = BLUE)}
@@ -1361,6 +1386,7 @@ export default function SharedFooter({ pillarLinks = defaultPillarLinks, onPilla
           kind={contactKind}
           title={contactTitle[contactKind]}
           c={contactCopy}
+          lang={lang}
           onClose={() => setContactKind(null)}
         />
       )}
