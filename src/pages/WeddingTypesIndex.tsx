@@ -10,7 +10,7 @@ import { ui } from '../data/uiStrings';
 
 const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
   seoTitle: {
-    en: 'Lapland Wedding Types: Northern Lights, Snow Chapel, Glass Igloo | LaplandWeddings',
+    en: 'Lapland Wedding Types: Aurora, Snow Chapel, Glass Igloo | LaplandWeddings',
     fi: 'Häätyypit Lapissa: revontulet | LaplandWeddings',
     de: 'Hochzeitsarten in Lappland | LaplandWeddings',
     ja: 'ラップランドのウェディングタイプ：オーロラ、スノーチャペル、ガラスのイグルー | LaplandWeddings',

@@ -20,6 +20,7 @@
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
+import { venueTitleBase } from '../src/lib/venueTitle.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, '..', 'dist');
@@ -187,7 +188,7 @@ const top = {
     image: '/images/venues/apukka-resort.jpeg',
   },
   '/wedding-types': {
-    en: { title: 'Lapland Wedding Types: Northern Lights, Snow Chapel, Glass Igloo | LaplandWeddings',
+    en: { title: 'Lapland Wedding Types: Aurora, Snow Chapel, Glass Igloo | LaplandWeddings',
           description: 'Six Lapland wedding types: Northern Lights, snow chapel, glass igloo, midnight sun, elopement, and vow renewal.' },
     fi: { title: 'Häätyypit Lapissa | LaplandWeddings',
           description: 'Kuusi häätyyppiä Lapissa: revontuli, lumikappeli, lasi-iglu, keskiyön aurinko, elopement ja lupausten uusiminen.' },
@@ -241,7 +242,7 @@ const top = {
     image: '/images/venues/kakslauttanen.jpg',
   },
   '/photographers': {
-    en: { title: 'Lapland Wedding Photographers: Maria Hedengren, Robin Goodlad et al. | LaplandWeddings',
+    en: { title: 'Lapland Wedding Photographers: Hedengren, Goodlad et al. | LaplandWeddings',
           description: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos. Proven in the cold.' },
     fi: { title: 'Lapin häävalokuvaajat | LaplandWeddings',
           description: 'Kuusi Lapin parasta häävalokuvaajaa. Revontulet, lumikappelit, lasi-iglut. Testattu pakkasessa.' },
@@ -268,7 +269,7 @@ const top = {
     image: '/images/types/elopement.jpg',
   },
   '/practical-guide': {
-    en: { title: 'Getting Married in Lapland: DVV paperwork, officiant, practical guide | LaplandWeddings',
+    en: { title: 'Getting Married in Lapland: DVV paperwork and officiants | LaplandWeddings',
           description: 'Practical guide for foreign couples: DVV paperwork, examination of impediments (3–5 weeks), witnesses, officiant, home-country registration.' },
     fi: { title: 'Häät Lapissa | LaplandWeddings',
           description: 'Käytännön opas ulkomaalaisille pareille: DVV-paperit, esteiden tutkinta (3–5 vk), todistajat, vihkijä, kotimaan rekisteröinti.' },
@@ -383,8 +384,8 @@ const top = {
     fi: { title: 'Evästekäytäntö | LaplandWeddings', description: 'Evästekäytäntö: laplandweddings.online.' },
     de: { title: 'Cookie-Richtlinie | LaplandWeddings', description: 'Cookie-Richtlinie für laplandweddings.online.' },
     ja: { title: 'クッキーポリシー | LaplandWeddings', description: 'laplandweddings.online のクッキーポリシー。' },
-    es: { title: 'Política de cookies | LaplandWeddings', description: 'Política de cookies de laplandweddings.online.' },
-    'pt-BR': { title: 'Política de cookies | LaplandWeddings', description: 'Política de cookies de laplandweddings.online.' },
+    es: { title: 'Política de cookies y consentimiento | LaplandWeddings', description: 'Qué cookies utiliza laplandweddings.online, para qué sirven, cuánto duran y cómo gestionar o retirar su consentimiento en cualquier momento.' },
+    'pt-BR': { title: 'Política de cookies | LaplandWeddings', description: 'Quais cookies o laplandweddings.online usa, para que servem, por quanto tempo ficam e como gerenciar ou retirar seu consentimento a qualquer momento.' },
     'zh-CN': { title: 'Cookie 政策 | LaplandWeddings', description: 'laplandweddings.online 的 Cookie 政策。' },
     ko: { title: '쿠키 정책 | LaplandWeddings', description: 'laplandweddings.online 쿠키 정책입니다.' },
     fr: { title: 'Politique relative aux cookies | LaplandWeddings', description: 'Politique relative aux cookies de laplandweddings.online.' },
@@ -519,6 +520,9 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, no
   // _prerender_routes.mjs shortenTitle().
   title = shortenTitle(title);
   out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`);
+  // [LV-DESC-CLAMP 2026-09-06] 31 pages shipped over 160 characters (locations, legal); Google
+  // cuts the rest. Cut at the last sentence end at or after 90 characters, else at a word.
+  description = clampDescription(description);
   out = out.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/, `<meta name="description" content="${escapeAttr(description)}" />`);
 
   const og = /^https?:/.test(image) ? image : 'https://laplandweddings.online' + image;
@@ -579,6 +583,15 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, no
   }
 
   return out;
+}
+
+function clampDescription(d, max = 160) {
+  const s = String(d || '').trim();
+  if (s.length <= max) return s;
+  const head = s.slice(0, max);
+  const lastEnd = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '), head.lastIndexOf('。'));
+  if (lastEnd >= 90) return head.slice(0, lastEnd + 1).trim();
+  return head.replace(/\s+\S*$/, '').replace(/[,;:\s]+$/, '');
 }
 
 function pathToFile(distPath) {
@@ -691,10 +704,9 @@ for (const v of venues) {
       // Aluekuvauksen `·`-hanta on suuntatietoa, joka toistaa jo mainitun
       // paikkakunnan — pudotetaan VAIN kun otsikko ei muuten mahdu. Sivun oma
       // sisalto nayttaa aluekuvauksen kokonaisena, tama koskee vain <title>:a.
-      title: (() => {
-        const sep = L.lang === 'fr' ? ' : ' : ': '; const full = `${v.name}${sep}${region}`;
-        return (full.length > 60 ? `${v.name}${sep}${region.split(' · ')[0]}` : full) + ' | LaplandWeddings';
-      })(),
+      // [LV-DUP 2026-09-06] localized descriptor, see src/lib/venueTitle.mjs (shortenTitle
+      // below still drops the brand suffix when the line does not fit).
+      title: venueTitleBase(v.name, region, L.lang) + ' | LaplandWeddings',
       description: desc,
     };
   }

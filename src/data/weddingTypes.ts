@@ -345,7 +345,7 @@ export const weddingTypes: WeddingType[] = [
       'zh-CN': '午夜阳光婚礼',
       ko: '백야 웨딩',
       fr: 'Mariage sous le soleil de minuit',
-      it: 'Matrimonio sotto il sole di mezzanotte',
+      it: 'Matrimonio al sole di mezzanotte',
       nl: 'Middernachtzonbruiloft',
       sv: 'Midnattssolsbröllop',
     },

@@ -192,7 +192,7 @@ const t_es = {
       ],
     },
     cookies: {
-      metaTitle: 'Política de cookies | LaplandWeddings',
+      metaTitle: 'Política de cookies y consentimiento | LaplandWeddings',
       title: 'Política de cookies',
       paragraphs: [
         'Utilizamos cookies estrictamente necesarias para el funcionamiento del sitio (preferencia de idioma, consentimiento).',

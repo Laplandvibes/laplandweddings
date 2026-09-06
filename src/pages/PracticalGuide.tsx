@@ -291,7 +291,7 @@ const UI: Record<string, Localized<string>> = {
   },
   seoTitle: {
     fi: 'Häät Lapissa: DVV-paperit ja vihkijä | LaplandWeddings',
-    en: 'Getting Married in Lapland: DVV paperwork, officiant, practical guide | LaplandWeddings',
+    en: 'Getting Married in Lapland: DVV paperwork and officiants | LaplandWeddings',
     de: 'Heiraten in Lappland: DVV & Trauredner | LaplandWeddings',
     ja: 'ラップランドで結婚：DVV書類、婚姻執行者、実践ガイド | LaplandWeddings',
     es: 'Casarse en Laponia: trámites DVV | LaplandWeddings',

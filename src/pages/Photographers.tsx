@@ -9,7 +9,7 @@ import { withReferral } from '../lib/affiliate';
 
 const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'sourceNote', Localized<string>> = {
   seoTitle: {
-    en: 'Lapland Wedding Photographers: Maria Hedengren, Robin Goodlad et al. | LaplandWeddings',
+    en: 'Lapland Wedding Photographers: Hedengren, Goodlad et al. | LaplandWeddings',
     fi: 'Lapin häävalokuvaajat | LaplandWeddings',
     de: 'Hochzeitsfotografen in Lappland | LaplandWeddings',
     ja: 'ラップランドの写真家：Maria Hedengren、Robin Goodlad | LaplandWeddings',
