@@ -131,6 +131,48 @@ const LOCALES = [
   { lang: 'sv', prefix: '/sv', og: 'sv_SE', hreflang: 'sv' },
 ];
 
+// [LV-DESC-MIN 2026-09-07] Static pages: the hand-written ja/zh/ko descriptions in the
+// STATIC map are 36–69 characters. Extend them with sentences from the SAME locale's
+// translations section that renders that page (src/i18n/translations.<ident>.ts).
+const STATIC_SECTION = { '/': 'home', '/venues': 'venues', '/wedding-types': 'types', '/practical-guide': 'practical', '/checklist/dvv-foreign-couples': 'practical', '/locations': 'locations' };
+const TRANS_IDENT = { 'pt-BR': 'ptBR', 'zh-CN': 'zhCN' };
+const TRANS_CACHE = {};
+function sectionStrings(lang, section) {
+  const key = lang + ':' + section;
+  if (TRANS_CACHE[key]) return TRANS_CACHE[key];
+  const file = resolve(__dirname, '..', 'src', 'i18n', `translations.${TRANS_IDENT[lang] || lang}.ts`);
+  let out = [];
+  if (existsSync(file)) {
+    const src = readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
+    const i = src.indexOf(`\n  ${section}: {`);
+    if (i >= 0) {
+      let depth = 0, j = src.indexOf('{', i), k = j;
+      for (; k < src.length; k++) { if (src[k] === '{') depth++; else if (src[k] === '}') { depth--; if (depth === 0) break; } }
+      const block = src.slice(j, k);
+      out = [...block.matchAll(/:\s*'((?:[^'\\]|\\.)*)'/g)].map((m) => m[1].replace(/\\'/g, "'")).filter((t) => t.length >= 12 && !/^[\/#]|https?:/.test(t) && !/·/.test(t) && /[.!?。！？]$/.test(t));
+    }
+  }
+  TRANS_CACHE[key] = out;
+  return out;
+}
+function extendFromTranslations(path, lang, current) {
+  let cur = String(current || '').trim();
+  const section = STATIC_SECTION[path];
+  if (cur.length >= 70 || !section) return cur;
+  const cjk = isCjk(lang);
+  const text = sectionStrings(lang, section).join(cjk ? '' : ' ');
+  const sentences = (cjk ? text.split(/(?<=[。！？])/) : text.split(/(?<=[.!?])\s+/)).map((x) => x.trim()).filter((x) => x.length > 3);
+  for (const sen of sentences) {
+    if (cur.includes(sen) || sen.includes(cur)) continue;
+    const joiner = /[.!?。！？]$/.test(cur) ? ' ' : (cjk ? '。' : '. ');
+    const next = cur + joiner + sen;
+    if (next.length > 160) { if (cur.length >= 70) break; continue; }
+    cur = next;
+    if (cur.length >= 70) break;
+  }
+  return clampDescription(cur);
+}
+
 // Top-level routes — { path: { <lang>: { title, description }, image } }
 const top = {
   '/': {
@@ -353,11 +395,11 @@ const top = {
     en: { title: 'Privacy | LaplandWeddings', description: 'Privacy policy for laplandweddings.online: how we handle enquiry data and analytics.' },
     fi: { title: 'Tietosuoja | LaplandWeddings', description: 'Tietosuojaseloste laplandweddings.online: miten käsittelemme tiedustelutietoja ja analytiikkaa.' },
     de: { title: 'Datenschutz | LaplandWeddings', description: 'Datenschutzerklärung für laplandweddings.online: wie wir Anfragedaten und Analytik handhaben.' },
-    ja: { title: 'プライバシー | LaplandWeddings', description: 'laplandweddings.online のプライバシーポリシー：お問い合わせデータと分析の取り扱いについて。' },
+    ja: { title: 'プライバシー | LaplandWeddings', description: 'laplandweddings.online のプライバシーポリシー：お問い合わせデータとアクセス解析の扱い、保存期間、そしてお客様の権利について説明します。' },
     es: { title: 'Privacidad | LaplandWeddings', description: 'Política de privacidad de laplandweddings.online: cómo tratamos los datos de consulta y la analítica.' },
     'pt-BR': { title: 'Privacidade | LaplandWeddings', description: 'Política de privacidade de laplandweddings.online: como tratamos os dados de consulta e a analítica.' },
-    'zh-CN': { title: '隐私政策 | LaplandWeddings', description: 'laplandweddings.online 的隐私政策：我们如何处理咨询数据和分析。' },
-    ko: { title: '개인정보 처리방침 | LaplandWeddings', description: 'laplandweddings.online 개인정보 처리방침: 문의 데이터와 분석을 어떻게 다루는지 설명합니다.' },
+    'zh-CN': { title: '隐私政策 | LaplandWeddings', description: 'laplandweddings.online 隐私政策：我们如何处理您的询价数据与网站分析信息、这些数据会保存多长时间，以及您享有哪些权利。' },
+    ko: { title: '개인정보 처리방침 | LaplandWeddings', description: 'laplandweddings.online 개인정보 처리방침: 문의 데이터와 분석 정보의 처리 방식, 보관 기간, 그리고 이용자의 권리를 설명합니다.' },
     fr: { title: 'Confidentialité | LaplandWeddings', description: 'Politique de confidentialité de laplandweddings.online : comment nous traitons les données de demande et l’analytique.' },
     it: { title: 'Informativa sulla privacy | LaplandWeddings', description: 'Informativa sulla privacy di laplandweddings.online: come trattiamo i dati delle richieste e l’analitica.' },
     nl: { title: 'Privacyverklaring | LaplandWeddings', description: 'Privacybeleid voor laplandweddings.online: hoe wij omgaan met aanvraaggegevens en analyses.' },
@@ -365,33 +407,33 @@ const top = {
     image: '/og.jpg?v=20260905',
   },
   '/terms': {
-    en: { title: 'Terms of Use | LaplandWeddings', description: 'Terms of use for laplandweddings.online.' },
-    fi: { title: 'Käyttöehdot | LaplandWeddings', description: 'Käyttöehdot: laplandweddings.online.' },
-    de: { title: 'Nutzungsbedingungen | LaplandWeddings', description: 'Nutzungsbedingungen für laplandweddings.online.' },
-    ja: { title: '利用規約 | LaplandWeddings', description: 'laplandweddings.online の利用規約。' },
-    es: { title: 'Términos de uso | LaplandWeddings', description: 'Términos de uso de laplandweddings.online.' },
-    'pt-BR': { title: 'Termos de uso | LaplandWeddings', description: 'Termos de uso de laplandweddings.online.' },
-    'zh-CN': { title: '使用条款 | LaplandWeddings', description: 'laplandweddings.online 的使用条款。' },
-    ko: { title: '이용약관 | LaplandWeddings', description: 'laplandweddings.online 이용약관입니다.' },
-    fr: { title: 'Conditions d’utilisation | LaplandWeddings', description: 'Conditions d’utilisation de laplandweddings.online.' },
-    it: { title: 'Condizioni d’uso | LaplandWeddings', description: 'Condizioni d’uso di laplandweddings.online.' },
-    nl: { title: 'Gebruiksvoorwaarden | LaplandWeddings', description: 'Gebruiksvoorwaarden van laplandweddings.online.' },
-    sv: { title: 'Användarvillkor | LaplandWeddings', description: 'Användarvillkor för laplandweddings.online.' },
+    en: { title: 'Terms of Use | LaplandWeddings', description: 'Terms of use for laplandweddings.online: what the guide is, how venue and price information is sourced, affiliate links, and the limits of our liability.' },
+    fi: { title: 'Käyttöehdot | LaplandWeddings', description: 'Käyttöehdot: mitä laplandweddings.online on, miten hääpaikka- ja hintatiedot on koottu, mitä kumppanilinkit ovat ja miten vastuu on rajattu.' },
+    de: { title: 'Nutzungsbedingungen | LaplandWeddings', description: 'Nutzungsbedingungen für laplandweddings.online: was der Guide ist, woher Location- und Preisangaben stammen, Affiliate-Links und Haftungsgrenzen.' },
+    ja: { title: '利用規約 | LaplandWeddings', description: 'laplandweddings.online の利用規約：本ガイドの内容、会場・料金情報の出典、アフィリエイトリンク、および責任の範囲について説明します。' },
+    es: { title: 'Términos de uso | LaplandWeddings', description: 'Términos de uso de laplandweddings.online: qué es la guía, de dónde salen los datos de lugares y precios, enlaces de afiliados y límites de responsabilidad.' },
+    'pt-BR': { title: 'Termos de uso | LaplandWeddings', description: 'Termos de uso de laplandweddings.online: o que é o guia, de onde vêm os dados de locais e preços, links de afiliados e limites de responsabilidade.' },
+    'zh-CN': { title: '使用条款 | LaplandWeddings', description: 'laplandweddings.online 使用条款：本指南的性质、场地与价格信息的来源、联盟链接的说明，以及我们承担责任的范围与相关限制。' },
+    ko: { title: '이용약관 | LaplandWeddings', description: 'laplandweddings.online 이용약관: 가이드의 성격, 웨딩 장소 및 가격 정보의 출처, 제휴 링크, 그리고 책임의 범위를 설명합니다.' },
+    fr: { title: 'Conditions d’utilisation | LaplandWeddings', description: 'Conditions d’utilisation : nature du guide laplandweddings.online, origine des données sur les lieux et les prix, liens affiliés et limites de responsabilité.' },
+    it: { title: 'Condizioni d’uso | LaplandWeddings', description: 'Condizioni d’uso di laplandweddings.online: cos’è la guida, da dove provengono i dati su location e prezzi, link di affiliazione e limiti di responsabilità.' },
+    nl: { title: 'Gebruiksvoorwaarden | LaplandWeddings', description: 'Gebruiksvoorwaarden van laplandweddings.online: wat de gids is, herkomst van locatie- en prijsinformatie, affiliate-links en onze aansprakelijkheidsgrenzen.' },
+    sv: { title: 'Användarvillkor | LaplandWeddings', description: 'Användarvillkor för laplandweddings.online: vad guiden är, varifrån uppgifter om vigselplatser och priser kommer, affiliatelänkar och ansvarsbegränsningar.' },
     image: '/og.jpg?v=20260905',
   },
   '/cookie-policy': {
-    en: { title: 'Cookie Policy | LaplandWeddings', description: 'Cookie policy for laplandweddings.online.' },
-    fi: { title: 'Evästekäytäntö | LaplandWeddings', description: 'Evästekäytäntö: laplandweddings.online.' },
-    de: { title: 'Cookie-Richtlinie | LaplandWeddings', description: 'Cookie-Richtlinie für laplandweddings.online.' },
-    ja: { title: 'クッキーポリシー | LaplandWeddings', description: 'laplandweddings.online のクッキーポリシー。' },
+    en: { title: 'Cookie Policy | LaplandWeddings', description: 'Which cookies laplandweddings.online sets, what they are for, how long they last and how to change or withdraw your consent at any time.' },
+    fi: { title: 'Evästekäytäntö | LaplandWeddings', description: 'Mitä evästeitä laplandweddings.online käyttää, mihin ne on tarkoitettu, kuinka kauan ne säilyvät ja miten suostumuksen voi muuttaa tai perua milloin tahansa.' },
+    de: { title: 'Cookie-Richtlinie | LaplandWeddings', description: 'Welche Cookies laplandweddings.online setzt, wozu sie dienen, wie lange sie gespeichert bleiben und wie Sie Ihre Einwilligung jederzeit ändern oder widerrufen.' },
+    ja: { title: 'クッキーポリシー | LaplandWeddings', description: 'laplandweddings.online が使用するクッキーの種類、その目的、保存期間、そして同意をいつでも変更・撤回する方法を説明します。' },
     es: { title: 'Política de cookies y consentimiento | LaplandWeddings', description: 'Qué cookies utiliza laplandweddings.online, para qué sirven, cuánto duran y cómo gestionar o retirar su consentimiento en cualquier momento.' },
     'pt-BR': { title: 'Política de cookies | LaplandWeddings', description: 'Quais cookies o laplandweddings.online usa, para que servem, por quanto tempo ficam e como gerenciar ou retirar seu consentimento a qualquer momento.' },
-    'zh-CN': { title: 'Cookie 政策 | LaplandWeddings', description: 'laplandweddings.online 的 Cookie 政策。' },
-    ko: { title: '쿠키 정책 | LaplandWeddings', description: 'laplandweddings.online 쿠키 정책입니다.' },
-    fr: { title: 'Politique relative aux cookies | LaplandWeddings', description: 'Politique relative aux cookies de laplandweddings.online.' },
-    it: { title: 'Informativa sui cookie | LaplandWeddings', description: 'Informativa sui cookie di laplandweddings.online.' },
-    nl: { title: 'Cookiebeleid | LaplandWeddings', description: 'Cookiebeleid van laplandweddings.online.' },
-    sv: { title: 'Cookiepolicy | LaplandWeddings', description: 'Cookiepolicy för laplandweddings.online.' },
+    'zh-CN': { title: 'Cookie 政策 | LaplandWeddings', description: 'laplandweddings.online 使用哪些 Cookie、各自的用途是什么、会保存多长时间，以及您如何随时更改或撤回自己的同意。' },
+    ko: { title: '쿠키 정책 | LaplandWeddings', description: 'laplandweddings.online 이 사용하는 쿠키의 종류와 목적, 보관 기간, 그리고 언제든지 동의를 변경하거나 철회하는 방법을 안내합니다.' },
+    fr: { title: 'Politique relative aux cookies | LaplandWeddings', description: 'Quels cookies laplandweddings.online utilise, à quoi ils servent, combien de temps ils sont conservés et comment modifier ou retirer votre consentement.' },
+    it: { title: 'Informativa sui cookie | LaplandWeddings', description: 'Quali cookie utilizza laplandweddings.online, a cosa servono, quanto durano e come modificare o revocare il consenso in qualsiasi momento.' },
+    nl: { title: 'Cookiebeleid | LaplandWeddings', description: 'Welke cookies laplandweddings.online plaatst, waarvoor ze dienen, hoe lang ze bewaard blijven en hoe u uw toestemming op elk moment kunt wijzigen of intrekken.' },
+    sv: { title: 'Cookiepolicy | LaplandWeddings', description: 'Vilka cookies laplandweddings.online använder, vad de är till för, hur länge de sparas och hur du när som helst ändrar eller återkallar ditt samtycke.' },
     image: '/og.jpg?v=20260905',
   },
 };
@@ -629,7 +671,9 @@ const ROUTES = [];
 for (const [path, meta] of Object.entries(top)) {
   const byLang = {};
   for (const L of LOCALES) {
-    byLang[L.lang] = meta[L.lang] || meta.en;
+    // [LV-DESC-MIN 2026-09-07] only a same-locale entry is extended (never the EN fallback).
+    const m = meta[L.lang] || meta.en;
+    byLang[L.lang] = meta[L.lang] ? { ...m, description: extendFromTranslations(path, L.lang, m.description) } : m;
   }
   ROUTES.push({ canonical: path, byLang, image: meta.image });
 }
@@ -663,6 +707,108 @@ function joinTitle(name, suffix) {
   return `${name}${suffix}`;
 }
 
+// [LV-DESC-MIN 2026-09-07] OpenSEO flagged 138 descriptions under 70 characters on this
+// site — mostly ja/ko/zh venue and type blurbs from route-i18n.json (28–67 chars), plus a
+// few fi/en ones. This prerenderer harvests no body text, but the page's own long
+// localized copy exists in src/data/*.ts (venues.description, weddingTypes.description,
+// locations.intro). Read it with a tolerant regex (Node 20 in CI cannot import .ts) and
+// use the SAME-LANGUAGE long text, clamped to 160, whenever the short one is under 70.
+const LONG_FIELDS = {
+  venues: ['src/data/venues.ts', 'description'],
+  types: ['src/data/weddingTypes.ts', 'description'],
+  locations: ['src/data/locations.ts', 'intro'],
+};
+const LONG_CACHE = {};
+function parseLocalizedField(rel, field) {
+  const file = resolve(__dirname, '..', rel);
+  if (!existsSync(file)) return {};
+  const src = readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
+  const out = {};
+  const slugRe = /^\s*slug:\s*'([^']+)'/gm;
+  let m;
+  while ((m = slugRe.exec(src))) {
+    const slug = m[1];
+    const fieldIdx = src.indexOf(`${field}: {`, m.index);
+    const nextSlug = src.indexOf("slug: '", m.index + m[0].length);
+    if (fieldIdx < 0 || (nextSlug > 0 && fieldIdx > nextSlug)) continue;
+    const close = src.indexOf('\n    },', fieldIdx);
+    const block = src.slice(fieldIdx, close > 0 ? close : fieldIdx + 6000);
+    const pairs = {};
+    const pairRe = /^\s*'?([\w-]+)'?\s*:\s*'((?:[^'\\]|\\.)*)'\s*,?\s*$/gm;
+    let p;
+    while ((p = pairRe.exec(block))) pairs[p[1]] = p[2].replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+    out[slug] = pairs;
+  }
+  return out;
+}
+const LIST_FIELDS = {
+  venues: ['src/data/venues.ts', ['features', 'weddingSpaces']],
+  locations: ['src/data/locations.ts', ['highlight', 'bestFor']],
+};
+const LIST_CACHE = {};
+// Localized ARRAY field: `features: { fi: ['a', 'b'], 'zh-CN': ['c'] }` → slug → lang → string[]
+// (a localized STRING field such as `highlight` is returned as a one-item array).
+function parseLocalizedList(rel, field) {
+  const file = resolve(__dirname, '..', rel);
+  if (!existsSync(file)) return {};
+  const src = readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
+  const out = {};
+  const slugRe = /^\s*slug:\s*'([^']+)'/gm;
+  let m;
+  while ((m = slugRe.exec(src))) {
+    const slug = m[1];
+    const fieldIdx = src.indexOf(`${field}: {`, m.index);
+    const nextSlug = src.indexOf("slug: '", m.index + m[0].length);
+    if (fieldIdx < 0 || (nextSlug > 0 && fieldIdx > nextSlug)) continue;
+    const close = src.indexOf('\n    },', fieldIdx);
+    const block = src.slice(fieldIdx, close > 0 ? close : fieldIdx + 8000);
+    const perLang = {};
+    const langRe = /^\s*'?([\w-]+)'?\s*:\s*(\[[^\]]*\]|'(?:[^'\\]|\\.)*')\s*,?\s*$/gm;
+    let p;
+    while ((p = langRe.exec(block))) {
+      const val = p[2];
+      const items = val.startsWith('[')
+        ? [...val.matchAll(/'((?:[^'\\]|\\.)*)'/g)].map((x) => x[1])
+        : [val.slice(1, -1)];
+      perLang[p[1]] = items.map((x) => x.replace(/\\'/g, "'").replace(/\\\\/g, '\\'));
+    }
+    out[slug] = perLang;
+  }
+  return out;
+}
+function isCjk(lang) { return /^(ja|ko|zh)/.test(String(lang || '')); }
+function longDesc(group, slug, lang, current) {
+  let cur = String(current || '').trim();
+  if (cur.length >= 70) return cur;
+  if (!LONG_CACHE[group]) { const [rel, field] = LONG_FIELDS[group]; LONG_CACHE[group] = parseLocalizedField(rel, field); }
+  const long = LONG_CACHE[group][slug] && LONG_CACHE[group][slug][lang];
+  if (long && long.length > cur.length) cur = clampDescription(long);
+  if (cur.length >= 70 || !LIST_FIELDS[group]) return cur;
+  // Still short: the page's own localized list fields (venue features, location highlight +
+  // "best for"), joined as one trailing sentence. Same locale only.
+  const [rel, fields] = LIST_FIELDS[group];
+  const cjk = isCjk(lang);
+  for (const field of fields) {
+    const key = group + ':' + field;
+    if (!LIST_CACHE[key]) LIST_CACHE[key] = parseLocalizedList(rel, field);
+    const items = (LIST_CACHE[key][slug] && LIST_CACHE[key][slug][lang]) || [];
+    const fresh = items.map((x) => x.trim()).filter((x) => x && !cur.includes(x));
+    if (!fresh.length) continue;
+    const sep = cjk ? '、' : ', ';
+    const joiner = /[.!?。！？]$/.test(cur) ? ' ' : (cjk ? '。' : '. ');
+    let tail = '';
+    for (const item of fresh) {
+      const next = tail ? tail + sep + item : item;
+      if ((cur + joiner + next).length > 158) break;
+      tail = next;
+      if ((cur + joiner + tail).length >= 70) break;
+    }
+    if (tail) cur = (cur + joiner + tail + (cjk ? '。' : '.')).replace(/\s+/g, ' ');
+    if (cur.length >= 70) break;
+  }
+  return clampDescription(cur);
+}
+
 // Locations: generate per-locale title from suffix table, desc falls back to EN
 for (const l of locations) {
   const byLang = {};
@@ -671,7 +817,7 @@ for (const l of locations) {
     const descSrc = i18n('locations', l.slug, L.lang, 'desc', l);
     byLang[L.lang] = {
       title: joinTitle(nameSrc, LOC_TITLE_SUFFIX[L.lang]),
-      description: descSrc,
+      description: longDesc('locations', l.slug, L.lang, descSrc),
     };
   }
   ROUTES.push({ canonical: `/locations/${l.slug}`, byLang, image: l.img });
@@ -685,7 +831,7 @@ for (const t of types) {
     const descSrc = i18n('types', t.slug, L.lang, 'desc', t);
     byLang[L.lang] = {
       title: joinTitle(nameSrc, TYPE_TITLE_SUFFIX[L.lang]),
-      description: descSrc,
+      description: longDesc('types', t.slug, L.lang, descSrc),
     };
   }
   ROUTES.push({ canonical: `/wedding-types/${t.slug}`, byLang, image: t.img });
@@ -707,7 +853,7 @@ for (const v of venues) {
       // [LV-DUP 2026-09-06] localized descriptor, see src/lib/venueTitle.mjs (shortenTitle
       // below still drops the brand suffix when the line does not fit).
       title: venueTitleBase(v.name, region, L.lang) + ' | LaplandWeddings',
-      description: desc,
+      description: longDesc('venues', v.slug, L.lang, desc),
     };
   }
   ROUTES.push({ canonical: `/venues/${v.slug}`, byLang, image: v.img });
