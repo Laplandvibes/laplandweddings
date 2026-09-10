@@ -89,7 +89,7 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
         </h1>
         {subtitle && (
           <p
-            className="hero-text-light text-[15px] sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed [text-wrap:pretty]"
+            className="hero-text-light text-[15px] sm:text-lg md:text-xl xl:text-2xl max-w-3xl xl:max-w-5xl mx-auto leading-relaxed [text-wrap:pretty]"
             style={{ color: '#FBF6F0', textShadow: '0 1px 12px rgba(0,0,0,0.5)' }}
           >
             {subtitle}
