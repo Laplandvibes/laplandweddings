@@ -1,54 +1,19 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState} from 'react';
 import L, { NL } from './L';
 
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X} from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import type { Lang } from '../i18n/translations';
 import EcosystemMenu from '../shared/EcosystemMenu';
+import LanguageSwitcher from '../i18n/LanguageSwitcher';
 
-const ALL_LANGS: { code: Lang; label: string; native: string }[] = [
-  { code: 'en', label: 'EN', native: 'English' },
-  { code: 'fi', label: 'FI', native: 'Suomi' },
-  { code: 'de', label: 'DE', native: 'Deutsch' },
-  { code: 'ja', label: 'JA', native: '日本語' },
-  { code: 'es', label: 'ES', native: 'Español' },
-  { code: 'pt-BR', label: 'BR', native: 'Português' },
-  { code: 'zh-CN', label: 'CN', native: '简体中文' },
-  { code: 'ko', label: 'KR', native: '한국어' },
-  { code: 'fr', label: 'FR', native: 'Français' },
-  { code: 'it', label: 'IT', native: 'Italiano' },
-  { code: 'nl', label: 'NL', native: 'Nederlands' },
-  { code: 'sv', label: 'SV', native: 'Svenska' },
-];
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-  const langWrapRef = useRef<HTMLDivElement>(null);
-  const { lang, setLang, tr } = useLang();
+  const { lang, tr } = useLang();
 
-  useEffect(() => {
-    if (!langOpen) return;
-    const onClick = (e: MouseEvent) => {
-      if (!langWrapRef.current?.contains(e.target as Node)) setLangOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setLangOpen(false); };
-    document.addEventListener('mousedown', onClick);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onClick);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, [langOpen]);
 
-  const setLangAndStore = (code: Lang) => {
-    if (typeof window !== 'undefined' && window.localStorage) {
-      try { window.localStorage.setItem('lv_locale_choice', code); } catch { /* noop */ }
-    }
-    setLang(code);
-  };
 
-  const currentLangLabel = ALL_LANGS.find((l) => l.code === lang)?.label ?? 'EN';
 
   // Accessibility aria translations (KO/FR/IT/NL screen-reader leaks fix).
   const ARIA: Record<Lang, { switchLang: string; language: string; menu: string }> = {
@@ -109,48 +74,8 @@ export default function Navigation() {
 
         <div className="flex items-center gap-2">
           {/* Desktop dropdown */}
-          <div className="hidden lg:block relative" ref={langWrapRef}>
-            <button
-              type="button"
-              onClick={() => setLangOpen((o) => !o)}
-              aria-haspopup="listbox"
-              aria-expanded={langOpen}
-              aria-label={aria.switchLang}
-              className="bg-slate-900/85 backdrop-blur-sm flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-full bg-white/5 border border-white/40 text-white/90 hover:text-white transition-colors"
-            >
-              <Globe className="w-3.5 h-3.5" />
-              {currentLangLabel}
-              <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
-            </button>
-            {langOpen && (
-              <ul
-                role="listbox"
-                aria-label={aria.language}
-                className="absolute right-0 top-full mt-2 min-w-[180px] py-1 rounded-lg shadow-xl z-50 max-h-[80vh] overflow-y-auto border border-white/15"
-                style={{ background: 'rgba(31,22,18,0.97)', backdropFilter: 'blur(12px)' }}
-              >
-                {ALL_LANGS.map((item) => {
-                  const isActive = item.code === lang;
-                  return (
-                    <li key={item.code} role="option" aria-selected={isActive}>
-                      <button
-                        type="button"
-                        onClick={() => { setLangAndStore(item.code); setLangOpen(false); }}
-                        aria-current={isActive ? 'page' : undefined}
-                        className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors ${
-                          isActive
-                            ? 'bg-rose/20 text-rose font-semibold'
-                            : 'text-white/85 hover:bg-white/5 hover:text-white'
-                        }`}
-                      >
-                        <span className="w-8 font-semibold text-xs tracking-wider">{item.label}</span>
-                        <span>{item.native}</span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
+          <div className="hidden lg:block relative">
+            <LanguageSwitcher tone={'dark'} />
           </div>
 
           {/* Mobile language switcher, next to the hamburger — the network pattern
@@ -162,19 +87,7 @@ export default function Navigation() {
               horizontal overflow at 375px. */}
           <div className="lg:hidden flex items-center gap-1.5 shrink-0">
             <div className="relative inline-block">
-              <select
-                value={lang}
-                onChange={(e) => setLangAndStore(e.target.value as Lang)}
-                aria-label={aria.language}
-                className="appearance-none max-w-[5.5rem] bg-transparent border border-white/40 rounded pl-2 pr-5 py-1 text-xs font-semibold text-white/90"
-              >
-                {ALL_LANGS.map((l) => (
-                  <option key={l.code} value={l.code} className="bg-night text-white">
-                    {l.label}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 w-3 h-3 text-white/80" />
+              <LanguageSwitcher tone={'dark'} />
             </div>
 
             <button
