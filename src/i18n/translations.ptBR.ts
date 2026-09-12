@@ -28,6 +28,7 @@ const t_ptBR = {
   },
   home: {
     heroTitle: 'Casamentos na Lapônia, tudo em um só lugar',
+    heroTitleSummer: 'Casamentos sob o sol da meia-noite na Lapônia',
     heroSubtitle: 'Iglus de vidro · Capelas de neve · Aurora boreal · Sol da meia-noite. Em finlandês e inglês. Conectamos você com os organizadores de casamento mais experientes da Lapônia.',
     heroReassure: 'Grátis e sem compromisso · resposta em 1–7 dias',
     whyTitle: 'Por que a Lapônia para seu casamento',

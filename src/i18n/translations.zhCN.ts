@@ -28,6 +28,7 @@ const t_zhCN = {
   },
   home: {
     heroTitle: '拉普兰婚礼，一站式平台',
+    heroTitleSummer: '午夜阳光下的拉普兰婚礼',
     heroSubtitle: '玻璃冰屋 · 雪教堂 · 北极光 · 午夜阳光。芬兰语和英语服务。为您匹配拉普兰最资深的婚礼策划师。',
     heroReassure: '免费 · 无需承诺 · 1–7 天内回复',
     whyTitle: '为什么选择拉普兰举办婚礼',
