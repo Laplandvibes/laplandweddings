@@ -82,7 +82,7 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
           </p>
         )}
         <h1
-          className="hero-text-light font-heading text-[40px] leading-[1.05] sm:text-6xl md:text-7xl mb-3 sm:mb-6 tracking-wide [text-wrap:balance]"
+          className="hero-text-light font-heading text-[40px] leading-[1.05] sm:text-6xl md:text-7xl mb-3 sm:mb-6 tracking-wide [text-wrap:balance] xl:text-[clamp(72px,1.125vw_+_57.6px,86.4px)]"
           style={{ color: '#FFFFFF', textShadow: '0 2px 16px rgba(0,0,0,0.7), 0 1px 5px rgba(0,0,0,0.55)' }}
         >
           {title}
