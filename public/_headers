@@ -13,10 +13,10 @@ https://laplandweddings.pages.dev/*
 
 # >>> LV-LINK-PRELOAD (managed by apply_link_preload_headers.py)
 /
-  Link: </images/heroes/reindeer-sleigh-hero.jpg>; rel=preload; as=image; fetchpriority=high
+  Link: </images/heroes/midnight-sun-hero.jpg>; rel=preload; as=image; fetchpriority=high
 
 /index.html
-  Link: </images/heroes/reindeer-sleigh-hero.jpg>; rel=preload; as=image; fetchpriority=high
+  Link: </images/heroes/midnight-sun-hero.jpg>; rel=preload; as=image; fetchpriority=high
 # <<< LV-LINK-PRELOAD
 
 /*

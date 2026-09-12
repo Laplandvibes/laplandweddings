@@ -133,10 +133,10 @@ export default function Home() {
       <PageHero
         title={heroTitle}
         subtitle={heroSubtitle}
-        image={summer ? '/images/heroes/reindeer-sleigh-hero.jpg' : '/images/heroes/reindeer-sleigh-hero-winter.webp'}
+        image={summer ? '/images/heroes/midnight-sun-hero.jpg' : '/images/heroes/reindeer-sleigh-hero-winter.webp'}
         objectPosition="64% 50%"
-        avifSrcSet={summer ? '/images/heroes/reindeer-sleigh-hero-800.avif 800w, /images/heroes/reindeer-sleigh-hero-1200.avif 1200w' : '/images/heroes/reindeer-sleigh-hero-winter-800.avif 800w, /images/heroes/reindeer-sleigh-hero-winter-1200.avif 1200w'}
-        webpSrcSet={summer ? '/images/heroes/reindeer-sleigh-hero-800.webp 800w, /images/heroes/reindeer-sleigh-hero-1200.webp 1200w' : '/images/heroes/reindeer-sleigh-hero-winter-800.webp 800w, /images/heroes/reindeer-sleigh-hero-winter-1200.webp 1200w'}
+        avifSrcSet={summer ? '/images/heroes/midnight-sun-hero-800.avif 800w, /images/heroes/midnight-sun-hero-1200.avif 1200w' : '/images/heroes/reindeer-sleigh-hero-winter-800.avif 800w, /images/heroes/reindeer-sleigh-hero-winter-1200.avif 1200w'}
+        webpSrcSet={summer ? '/images/heroes/midnight-sun-hero-800.webp 800w, /images/heroes/midnight-sun-hero-1200.webp 1200w' : '/images/heroes/reindeer-sleigh-hero-winter-800.webp 800w, /images/heroes/reindeer-sleigh-hero-winter-1200.webp 1200w'}
         sizes="100vw"
         imageAlt={pick(lang, {
           fi: 'Kesähäiden koristekaari ja kattaus tyynen lappilaisen järven rannalla yöttömän auringon kultaisella hetkellä',

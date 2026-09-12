@@ -3,11 +3,11 @@
   "domain": "laplandweddings.online",
   "brand": "WEDDINGS",
   "tagline": "Arctic venues and marriage paperwork",
-  "generated": "2026-09-05T21:51:04.201Z",
+  "generated": "2026-09-05T22:17:09.601Z",
   "staticFallbackSeason": "summer",
   "seasons": {
     "summer": {
-      "heroUrl": "https://laplandweddings.online/images/heroes/reindeer-sleigh-hero-1200.avif",
+      "heroUrl": "https://laplandweddings.online/images/heroes/midnight-sun-hero-1200.avif",
       "heroAlt": "Summer wedding setting by a calm Lapland lake at golden midnight-sun hour",
       "heroSha": "71319a05f7a68a92",
       "bytes": 202554,
