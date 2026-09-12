@@ -30,6 +30,7 @@ const t_ptBR = {
     heroTitle: 'Casamentos na Lapônia, tudo em um só lugar',
     heroTitleSummer: 'Casamentos sob o sol da meia-noite na Lapônia',
     heroSubtitle: 'Iglus de vidro · Capelas de neve · Aurora boreal · Sol da meia-noite. Em finlandês e inglês. Conectamos você com os organizadores de casamento mais experientes da Lapônia.',
+    heroSubtitleSummer: 'Votos à beira do lago · Cerimônias no alto da colina · Tetos de vidro sob o céu que nunca escurece · Longas noites luminosas. Em finlandês e inglês. Conectamos você aos organizadores mais experientes da Lapônia.',
     heroReassure: 'Grátis e sem compromisso · resposta em 1–7 dias',
     whyTitle: 'Por que a Lapônia para seu casamento',
     whyP: 'Na Lapônia os casamentos acontecem em iglus de vidro, capelas de neve e no alto dos fells, e na maioria das vezes a cerimônia é simbólica. Este site reúne os locais, as estações e quanto as coisas custam de verdade. Não organizamos casamentos nem representamos nenhum local: vocês nos contam o que desejam e nós repassamos a organizadores de casamento na Lapônia.',
