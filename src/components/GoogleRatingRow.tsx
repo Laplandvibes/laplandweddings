@@ -78,7 +78,7 @@ export default function GoogleRatingRow({
         // `relative` anchors the sr-only absolute to this pill instead of a
         // higher positioned ancestor (Lomarengas lesson, 2026-07-25).
         'relative inline-flex items-center gap-1.5 self-start rounded-full no-underline',
-        'border px-2.5 py-1 text-[11px] font-semibold transition-colors',
+        'border px-3 py-2 min-h-10 text-[11px] font-semibold transition-colors',
         tone === 'dark'
           ? 'border-gold/40 bg-gold/10 text-cream-text hover:border-gold/70'
           : 'border-gold/50 bg-gold/15 text-charcoal hover:border-gold',
