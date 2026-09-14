@@ -49,7 +49,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3">
         <div className="flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
-          <L to="/" className="font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap" onClick={() => setOpen(false)}>
+          <L to="/" className="font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap inline-flex items-center min-h-11" onClick={() => setOpen(false)}>
             <span style={{ color: '#F472B6' }}>#</span>
             <span style={{ color: '#FFFFFF' }}>LAPLAND</span>
             <span style={{ color: '#F472B6' }}>WEDDINGS</span>
@@ -91,7 +91,7 @@ export default function Navigation() {
             </div>
 
             <button
-              className="p-2 -mr-2 text-white/80 hover:text-white"
+              className="p-2 -mr-2 text-white/80 hover:text-white inline-flex items-center justify-center min-h-11 min-w-11"
               onClick={() => setOpen(!open)}
               aria-label={aria.menu}
             >

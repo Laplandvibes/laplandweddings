@@ -1111,21 +1111,21 @@ export default function PracticalGuide() {
                 <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{pl(f.a)}</p>
                 {faqIndex === 0 && (
                   <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
-                    <L to="/checklist/dvv-foreign-couples" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-aurora-pink hover:text-white transition-colors">
+                    <L to="/checklist/dvv-foreign-couples" className="lv-tap inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-aurora-pink hover:text-white transition-colors">
                       {pl(UI.downloadTitle)} →
                     </L>
                   </div>
                 )}
                 {faqIndex === 3 && (
                   <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
-                    <L to="/pricing" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-aurora-pink hover:text-white transition-colors">
+                    <L to="/pricing" className="lv-tap inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-aurora-pink hover:text-white transition-colors">
                       {tr.nav.pricing} →
                     </L>
                   </div>
                 )}
                 {faqIndex === 4 && (
                   <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
-                    <L to="/wedding-types" className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-aurora-pink hover:text-white transition-colors">
+                    <L to="/wedding-types" className="lv-tap inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-aurora-pink hover:text-white transition-colors">
                       {tr.nav.types} →
                     </L>
                   </div>
