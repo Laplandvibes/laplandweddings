@@ -60,18 +60,18 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     nl: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 21 trouwlocaties verspreid over Lapland. Wij vertegenwoordigen er geen enkele.', sv: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. 21 bröllopsplatser runt om i Lappland. Vi företräder ingen av dem.',
   },
   imageAlt: {
-    en: 'Green aurora curtain over Levi fell',
-    fi: 'Vihreä revontuliverho Levitunturin yllä',
-    de: 'Grüner Polarlichtvorhang über dem Levi-Fjäll',
-    ja: 'レヴィ山の上空にかかる緑のオーロラのカーテン',
-    es: 'Cortina verde de auroras boreales sobre el fjäll de Levi',
-    'pt-BR': 'Cortina verde de aurora boreal sobre o monte Levi',
-    'zh-CN': '莱维山上空绿色的极光帷幕',
-    ko: '레비 산 위로 드리운 초록빛 오로라 커튼',
-    fr: 'Rideau d’aurores boréales vertes au-dessus du fjäll de Levi',
-    it: 'Cortina verde di aurora boreale sopra il fjäll di Levi',
-    nl: 'Groen noorderlichtgordijn boven de Levi-fjäll',
-    sv: 'Grön norrskensridå över Levifjället',
+    en: 'Snow walls and arches of the Lainio Snow Village from outside',
+    fi: 'Lainion lumikylän lumiseinät ja kaaret ulkoa',
+    de: 'Schneewände und Bögen des Snow Village in Lainio von außen',
+    ja: 'ライニオのスノービレッジの雪の壁とアーチ（外観）',
+    es: 'Muros y arcos de nieve del Snow Village de Lainio desde fuera',
+    'pt-BR': 'Paredes e arcos de neve do Snow Village de Lainio vistos de fora',
+    'zh-CN': '莱尼奥雪村外观的雪墙与拱门',
+    ko: '라이니오 스노 빌리지의 눈 벽과 아치, 바깥에서 본 모습',
+    fr: 'Murs et arches de neige du Snow Village de Lainio vus de l’extérieur',
+    it: 'Muri e archi di neve dello Snow Village di Lainio visti dall’esterno',
+    nl: 'Sneeuwmuren en bogen van het Snow Village in Lainio van buiten',
+    sv: 'Snöväggar och valv i Lainios snöby utifrån',
   },
   affordable: {
     en: 'affordable', fi: 'edullinen', de: 'günstig', ja: 'お手頃',
@@ -138,8 +138,21 @@ export default function Venues() {
         eyebrow={ui('eyebrowVenues', lang)}
         title={tr.venues.indexTitle}
         subtitle={tr.venues.indexIntro}
-        image="/images/heroes/aurora-levi-curtain2-rasanen.jpg"
-        credit={{ name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Green_aurora_curtain_over_Levi,_Kittil%C3%A4,_Lapland,_Finland,_2023_September_-_2.jpg' }}
+        image="/images/heroes/lainio-snow-village-estormiz.jpg"
+        credit={{ name: 'Estormiz', license: 'CC0 1.0', url: 'https://commons.wikimedia.org/wiki/File:Lainio_Snow_Village_Kittil%C3%A4_20190417_02.jpg', caption: {
+        en: 'Pictured: Lainio Snow Village',
+        fi: 'Kuvassa Lainion Snow Village',
+        de: 'Im Bild: Snow Village Lainio',
+        ja: '写真：ライニオのスノービレッジ',
+        es: 'En la imagen: Snow Village de Lainio',
+        'pt-BR': 'Na foto: Snow Village de Lainio',
+        'zh-CN': '图为莱尼奥雪村',
+        ko: '사진: 라이니오 스노 빌리지',
+        fr: 'Sur la photo : Snow Village de Lainio',
+        it: 'Nella foto: Snow Village di Lainio',
+        nl: 'Op de foto: Snow Village Lainio',
+        sv: 'På bilden: Lainios snöby',
+      } }}
         lang={lang}
         imageAlt={pickLocalized(P.imageAlt, lang)}
       />

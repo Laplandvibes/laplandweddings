@@ -161,7 +161,7 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
           </div>
         )}
       </div>
-      {credit && <ImgCredit credit={credit} lang={lang || 'en'} className="bottom-2 right-2 sm:bottom-3 sm:right-3" />}
+      {credit && <ImgCredit credit={credit} lang={lang || 'en'} className="bottom-0.5 right-1" />}
     </section>
     <PageBreadcrumb />
     </>

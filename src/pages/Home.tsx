@@ -246,7 +246,7 @@ export default function Home() {
                   {pickLocalized(wt.capacity, lang)}
                 </div>
               </div>
-              <ImgCredit credit={wt.heroCredit} lang={lang} className="top-2 right-2" />
+              <ImgCredit credit={wt.heroCredit} lang={lang} plain />
               <div className="hidden">
               </div>
             </L>
@@ -408,7 +408,7 @@ export default function Home() {
             },
           ].map((exp) => (
             <div key={exp.title} className="on-image group relative aspect-[3/4] overflow-hidden rounded-2xl bg-night-light">
-              <ImgCredit credit={exp.credit} lang={lang} className="top-2 right-2" />
+              <ImgCredit credit={exp.credit} lang={lang} />
               <img
                 src={exp.img}
                 alt={exp.title}
@@ -467,7 +467,7 @@ export default function Home() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
-                <ImgCredit credit={loc.heroCredit} lang={lang} className="top-2 right-2" />
+                <ImgCredit credit={loc.heroCredit} lang={lang} plain />
                 <h3 className="font-heading text-2xl text-white tracking-wide">{loc.name[dataLang]}</h3>
               </div>
             </L>
@@ -477,6 +477,28 @@ export default function Home() {
 
       {/* ── PÄÄKUMPPANI-banneri. 19.9.2026: kahden sisältölohkon (häätyypit, paikkakunnat) takana,
            koska etusivun kärki kuuluu sille mitä lukija haki (sääntö 18.9.), ei mainospaikan myynnille. ── */}
+      {/* Quote band high on the page (Vesa 19.9.2026: the form must be easier to find;
+          very few leads). Copy is the existing planners/contact strings. */}
+      <section className="py-8 sm:py-12">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
+          <div className="max-w-4xl mx-auto bg-night-light/70 border border-rose/30 rounded-3xl p-7 sm:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div className="flex-1 text-center md:text-left">
+              <p className="uppercase tracking-[0.25em] text-[11px] sm:text-xs text-aurora-pink font-semibold mb-2">{tr.contact.formSub}</p>
+              <h2 className="font-heading text-2xl sm:text-3xl text-white tracking-wide mb-2 leading-tight">{tr.planners.threeQuotesTitle}</h2>
+              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{tr.planners.threeQuotesP}</p>
+            </div>
+            <L
+              to="/contact"
+              data-umami-event="cta_quote_home"
+              className="inline-flex items-center justify-center px-7 py-3.5 font-semibold rounded-full shadow-lg shadow-rose/30 hover:bg-pink transition-colors whitespace-nowrap"
+              style={{ color: '#FFFFFF', background: '#C9466A' }}
+            >
+              {tr.cta.getThreeQuotesShort} →
+            </L>
+          </div>
+        </div>
+      </section>
+
       <MainPartnerBanner config={AD_SLOTS} locale={lang} />
 
       {/* Why Lapland */}
@@ -495,6 +517,20 @@ export default function Home() {
                never need, because a symbolic ceremony requires none). Replaced
                with three claims that are checkable on this site. */
             {
+              to: '/venues',
+              cta: pick(lang, {
+                fi: 'Katso hääpaikat',
+                en: 'See the venues',
+                de: 'Locations ansehen',
+                ja: '会場を見る',
+                es: 'Ver los lugares',
+                'pt-BR': 'Ver os locais',
+                ko: '예식장 보기',
+                fr: 'Voir les lieux',
+                it: 'Vedi le location',
+                nl: 'Bekijk de locaties',
+                sv: 'Se vigselplatserna',
+              }),
               stat: '20',
               label: pick(lang, {
                 fi: 'hääpaikkaa kartoitettu',
@@ -524,6 +560,20 @@ export default function Home() {
               }),
             },
             {
+              to: '/practical-guide',
+              cta: pick(lang, {
+                fi: 'Symbolinen vai juridinen: lue opas',
+                en: 'Symbolic or legal: read the guide',
+                de: 'Frei oder standesamtlich: zum Leitfaden',
+                ja: 'シンボリックか法的か：ガイドを読む',
+                es: 'Simbólica o legal: lea la guía',
+                'pt-BR': 'Simbólica ou legal: leia o guia',
+                ko: '상징 예식과 법적 혼인: 안내 보기',
+                fr: 'Symbolique ou civil : lire le guide',
+                it: 'Simbolico o legale: leggi la guida',
+                nl: 'Symbolisch of wettelijk: lees de gids',
+                sv: 'Symbolisk eller juridisk: läs guiden',
+              }),
               stat: '0',
               label: pick(lang, {
                 fi: 'lupaa tai papereita',
@@ -557,6 +607,20 @@ export default function Home() {
                  lines even on desktop, which pushed this card's label and body
                  out of line with the other two (Vesa 2026-07-29). The months
                  moved into the label, where they fit on one line. */
+              to: '/wedding-types',
+              cta: pick(lang, {
+                fi: 'Katso häätyypit ja kaudet',
+                en: 'See wedding types and seasons',
+                de: 'Hochzeitsarten und Saisons ansehen',
+                ja: '結婚式のタイプと季節を見る',
+                es: 'Ver tipos de boda y temporadas',
+                'pt-BR': 'Ver tipos de casamento e estações',
+                ko: '결혼식 유형과 시즌 보기',
+                fr: 'Voir les types de mariage et les saisons',
+                it: 'Vedi i tipi di matrimonio e le stagioni',
+                nl: 'Bekijk soorten bruiloft en seizoenen',
+                sv: 'Se bröllopstyper och säsonger',
+              }),
               stat: pick(lang, {
                 fi: 'Talvi',
                 en: 'Winter',
@@ -601,7 +665,7 @@ export default function Home() {
             /* The display token sits in a fixed-height box so the labels and
                body copy start on the same line in all three cards regardless of
                how tall the token renders in a given language. */
-            <div key={stat.label} className="bg-night-light p-7 sm:p-8 lg:p-9 flex flex-col">
+            <L key={stat.label} to={stat.to} className="group bg-night-light hover:bg-night-light/70 p-7 sm:p-8 lg:p-9 flex flex-col transition-colors">
               <p className="font-heading text-[44px] sm:text-5xl lg:text-[52px] leading-none text-rose tracking-wide min-h-[52px] sm:min-h-[48px] lg:min-h-[52px] flex items-end">
                 {stat.stat}
               </p>
@@ -609,7 +673,8 @@ export default function Home() {
                 {stat.label}
               </p>
               <p className="text-sm text-gray-300 leading-[1.7] max-w-[34ch]">{stat.body}</p>
-            </div>
+              <p className="mt-5 text-sm font-semibold underline underline-offset-4 group-hover:opacity-80 transition-opacity" style={{ color: 'var(--color-rose-ink)' }}>{stat.cta} →</p>
+            </L>
           ))}
         </div>
         <p className="text-center text-gray-400 mt-10 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">{tr.home.whyP}</p>

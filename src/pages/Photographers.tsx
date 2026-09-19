@@ -95,18 +95,18 @@ const P: Record<
     sv: 'Vad det kostar, vad du bör fråga innan du bokar och när vinterdatumen tar slut. Berätta vad du tänker dig, så för vi förfrågan vidare till bröllopsföretag i Lappland, gratis och utan förbindelse.',
   },
   imageAlt: {
-    en: 'Bright bands of northern lights over Levi fell',
-    fi: 'Kirkkaat revontulinauhat Levitunturin yllä',
-    de: 'Helle Polarlichtbänder über dem Levi-Fjäll',
-    ja: 'レヴィ山の上空に広がる明るいオーロラの帯',
-    es: 'Bandas brillantes de auroras boreales sobre el fjäll de Levi',
-    'pt-BR': 'Faixas brilhantes de aurora boreal sobre o monte Levi',
-    'zh-CN': '莱维山上空明亮的极光带',
-    ko: '레비 산 위로 펼쳐진 밝은 오로라 띠',
-    fr: 'Bandes lumineuses d’aurores boréales au-dessus du fjäll de Levi',
-    it: 'Bande luminose di aurora boreale sopra il fjäll di Levi',
-    nl: 'Heldere noorderlichtbanden boven de Levi-fjäll',
-    sv: 'Ljusa norrskensband över Levifjället',
+    en: 'People in silhouette on a jetty in the midnight sun at Lake Inari',
+    fi: 'Ihmisiä siluetteina laiturilla keskiyön auringossa Inarijärvellä',
+    de: 'Menschen als Silhouetten auf einem Steg in der Mitternachtssonne am Inarisee',
+    ja: 'イナリ湖の桟橋、真夜中の太陽を背にした人々のシルエット',
+    es: 'Siluetas de personas en un embarcadero bajo el sol de medianoche en el lago Inari',
+    'pt-BR': 'Silhuetas de pessoas num píer sob o sol da meia-noite no lago Inari',
+    'zh-CN': '伊纳里湖码头上午夜太阳下的人物剪影',
+    ko: '이나리 호수 선착장, 백야의 태양을 등진 사람들의 실루엣',
+    fr: 'Silhouettes de personnes sur un ponton sous le soleil de minuit au lac Inari',
+    it: 'Sagome di persone su un pontile nel sole di mezzanotte al lago Inari',
+    nl: 'Silhouetten van mensen op een steiger in de middernachtzon bij het Inarimeer',
+    sv: 'Människor i siluett på en brygga i midnattssolen vid Enare träsk',
   },
   costTitle: {
     en: 'What wedding photography costs in Lapland',
@@ -274,20 +274,20 @@ export default function Photographers() {
         title={t('seoTitle')}
         description={t('seoDesc')}
         path="/photographers"
-        image="/images/heroes/aurora-levi-bands-rasanen.jpg"
+        image="/images/heroes/inari-midnight-sun-pier-teker.jpg"
       />
       <PageHero
         compact
         eyebrow={ui('eyebrowPhotographers', lang)}
         title={t('title')}
         subtitle={t('subtitle')}
-        image="/images/heroes/aurora-levi-bands-rasanen.jpg"
-        avifSrcSet="/images/heroes/aurora-levi-bands-rasanen-800.avif 800w, /images/heroes/aurora-levi-bands-rasanen-1200.avif 1200w"
-        webpSrcSet="/images/heroes/aurora-levi-bands-rasanen-800.webp 800w, /images/heroes/aurora-levi-bands-rasanen-1200.webp 1200w"
-        credit={{ name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Aurora_curtain_and_bands_over_Levi,_Kittil%C3%A4,_Lapland,_Finland,_2023_September.jpg' }}
-        lang={lang}
+        image="/images/heroes/inari-midnight-sun-pier-teker.jpg"
+        avifSrcSet="/images/heroes/inari-midnight-sun-pier-teker-800.avif 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.avif 1200w"
+        webpSrcSet="/images/heroes/inari-midnight-sun-pier-teker-800.webp 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.webp 1200w"
         sizes="100vw"
-        objectPosition="50% 45%"
+        objectPosition="50% 55%"
+        credit={{ name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(4).jpg' }}
+        lang={lang}
         imageAlt={t('imageAlt')}
       />
 

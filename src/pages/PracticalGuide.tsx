@@ -5,6 +5,8 @@ import { useLang } from '../i18n/LangContext';
 import type { Lang } from '../i18n/translations';
 import { tripToLapland, carRentalLink, AFFILIATE_REL } from '../lib/affiliate';
 import AffiliateDisclosure from '../components/AffiliateDisclosure';
+import RouteFork from '../components/RouteFork';
+import SeasonBand from '../components/SeasonBand';
 import L from '../components/L';
 import { Download, Package, Users, Palette } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -342,18 +344,18 @@ const UI: Record<string, Localized<string>> = {
     nl: 'Uw bruiloft in Lapland: praktische gids', sv: 'Ert bröllop i Lappland: praktisk guide',
   },
   heroImageAlt: {
-    en: 'The Jätkänkynttilä bridge in Rovaniemi in autumn colours',
-    fi: 'Jätkänkynttilä-silta Rovaniemellä ruska-aikaan',
-    de: 'Die Jätkänkynttilä-Brücke in Rovaniemi im Herbstlaub',
-    ja: '秋の紅葉に彩られたロヴァニエミのヤトカンキュンッティラ橋',
-    es: 'El puente Jätkänkynttilä de Rovaniemi con los colores del otoño',
-    'pt-BR': 'A ponte Jätkänkynttilä em Rovaniemi nas cores do outono',
-    'zh-CN': '秋色中的罗瓦涅米耶特坎金蒂莱桥',
-    ko: '가을빛 속 로바니에미의 얘트캉퀸틸래 다리',
-    fr: 'Le pont Jätkänkynttilä à Rovaniemi aux couleurs de l’automne',
-    it: 'Il ponte Jätkänkynttilä a Rovaniemi nei colori dell’autunno',
-    nl: 'De Jätkänkynttilä-brug in Rovaniemi in herfstkleuren',
-    sv: 'Bron Jätkänkynttilä i Rovaniemi i höstfärger',
+    en: 'A couple walking hand in hand along a snowy trail between snow-laden trees',
+    fi: 'Pari kävelee käsi kädessä lumisella polulla lumen painamien puiden välissä',
+    de: 'Ein Paar geht Hand in Hand auf einem verschneiten Pfad zwischen schneebedeckten Bäumen',
+    ja: '雪をかぶった木々の間の雪道を手をつないで歩くカップル',
+    es: 'Una pareja camina de la mano por un sendero nevado entre árboles cargados de nieve',
+    'pt-BR': 'Um casal caminha de mãos dadas por uma trilha de neve entre árvores cobertas de neve',
+    'zh-CN': '一对情侣手牵手走在积雪压枝的树林间的雪径上',
+    ko: '눈 덮인 나무 사이 눈길을 손잡고 걷는 커플',
+    fr: 'Un couple marche main dans la main sur un sentier enneigé entre des arbres chargés de neige',
+    it: 'Una coppia cammina mano nella mano lungo un sentiero innevato tra alberi carichi di neve',
+    nl: 'Een stel loopt hand in hand over een besneeuwd pad tussen met sneeuw beladen bomen',
+    sv: 'Ett par går hand i hand längs en snöig stig mellan snötyngda träd',
   },
   downloadEyebrow: {
     fi: 'Lataa tarkistuslista',
@@ -974,8 +976,12 @@ export default function PracticalGuide() {
         eyebrow={pl(UI.eyebrow)}
         title={tr.practical.title}
         subtitle={tr.practical.subtitle}
-        image="/images/heroes/rovaniemi-jatkankynttila-kallerna.jpg"
-        credit={{ name: 'kallerna', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:J%C3%A4tk%C3%A4nkynttil%C3%A4_Bridge_5.jpg' }}
+        image="/images/heroes/couple-snow-trail-px19478687.jpg"
+        avifSrcSet="/images/heroes/couple-snow-trail-px19478687-800.avif 800w, /images/heroes/couple-snow-trail-px19478687-1200.avif 1200w"
+        webpSrcSet="/images/heroes/couple-snow-trail-px19478687-800.webp 800w, /images/heroes/couple-snow-trail-px19478687-1200.webp 1200w"
+        sizes="100vw"
+        objectPosition="50% 45%"
+        credit={{ name: 'Elina Volkova', license: 'Pexels', url: 'https://www.pexels.com/photo/19478687/' }}
         lang={lang}
         imageAlt={pl(UI.heroImageAlt)}
       />
@@ -984,6 +990,7 @@ export default function PracticalGuide() {
           "marrying in Lapland means weeks of Finnish paperwork", which is only
           true for the minority who want the marriage to be legally Finnish. */}
       <Section title={pl(UI.routesTitle)} subtitle={pl(UI.routesIntro)}>
+        <RouteFork lang={lang} symbolicTitle={pl(UI.symbolicTitle)} legalTitle={pl(UI.legalTitle)} seeVenues={tr.cta.seeVenues} />
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           <div className="bg-night-light/60 border border-rose/30 rounded-2xl p-6 sm:p-7">
             <p className="text-xs uppercase tracking-[0.25em] text-aurora-pink font-semibold mb-2">
@@ -1018,7 +1025,7 @@ export default function PracticalGuide() {
         </div>
       </Section>
 
-      <Section title={pl(UI.stepsTitle)} subtitle={pl(UI.stepsIntro)}>
+      <Section id="steps" title={pl(UI.stepsTitle)} subtitle={pl(UI.stepsIntro)}>
         <div className="space-y-4 max-w-4xl mx-auto">
           {STEPS.map((s) => (
             <div key={s.n} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 flex gap-5">
@@ -1061,6 +1068,15 @@ export default function PracticalGuide() {
       </Section>
 
       <Section className="bg-night-light/20" title={pl(UI.seasonsTitle)}>
+        <SeasonBand
+          lang={lang}
+          className="max-w-3xl mx-auto mb-8"
+          segments={[
+            { months: [11, 0, 1, 2], color: '#B8915C', label: pl(SEASONS[0].period) },
+            { months: [4, 5, 6], color: '#D4A574', label: pl(SEASONS[1].period) },
+            { months: [8, 9], color: '#DD6E86', label: pl(SEASONS[2].period) },
+          ]}
+        />
         <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {SEASONS.map((s) => (
             <div key={s.colorClass} className="bg-night-light/60 border border-white/5 rounded-2xl p-6">

@@ -5,6 +5,9 @@ import LeadForm from '../components/LeadForm';
 import { useLang } from '../i18n/LangContext';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
+import CostRangeChart, { type CostRangeRow } from '../components/CostRangeChart';
+import { GuestScale, PriceSeasonBand, NightsSplit } from '../components/PriceDrivers';
+import { DIAG } from '../data/diagramText';
 /**
  * What the parts cost, 2026-07-29.
  *
@@ -190,6 +193,13 @@ const breakdown: CostRow[] = [
  * for instance, states only "We will be happy to give you a quotation for your
  * wedding".
  */
+/** The range chart reads the same rows: "€0 – €250" → 0…250, "from €239" → open-ended. */
+function parseRange(en: string): { min: number; max: number | null } | null {
+  const nums = en.match(/\d[\d,\s]*/g)?.map((n) => Number(n.replace(/[^\d]/g, ''))) ?? [];
+  if (!nums.length) return null;
+  return /^from/i.test(en.trim()) ? { min: nums[0], max: null } : { min: nums[0], max: nums[1] ?? nums[0] };
+}
+
 const quotationOnly: Array<Localized<string>> = [
   {
     en: 'Wedding planner fee', fi: 'Hääsuunnittelijan palkkio', de: 'Honorar des Hochzeitsplaners',
@@ -431,6 +441,13 @@ export default function Pricing() {
             ),
           )}
         </div>
+        {/* Vesa 19.9.2026: "eikö tähän voisi tehdä ihan havainnekuvia, jotain mikä
+            selkeyttäisi?" — one diagram per driver, each drawn from the card above it. */}
+        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto mt-5">
+          <div className="bg-night-light/20 border border-white/5 rounded-2xl p-5"><GuestScale lang={lang} /></div>
+          <div className="bg-night-light/20 border border-white/5 rounded-2xl p-5"><PriceSeasonBand lang={lang} /></div>
+          <div className="bg-night-light/20 border border-white/5 rounded-2xl p-5"><NightsSplit lang={lang} /></div>
+        </div>
         <p className="text-sm text-gray-400 leading-[1.7] max-w-3xl mx-auto mt-8 text-center">
           {p('elopementCrossRef')}{' '}
           <L to="/wedding-types/elopement" className="text-rose underline underline-offset-4">
@@ -477,6 +494,14 @@ export default function Pricing() {
           {p('pricesChecked').replace('{d}', PRICE_VERIFIED)}
         </p>
 
+        <CostRangeChart
+          title={pickLocalized(DIAG.rangeTitle, lang)}
+          rows={breakdown.flatMap((b): CostRangeRow[] => {
+            const r = parseRange(b.range.en);
+            return r ? [{ label: pickLocalized(b.title, lang), min: r.min, max: r.max, rangeText: pickLocalized(b.range, lang) }] : [];
+          })}
+        />
+
         {/* Deliberately visible: which lines a couple cannot look up anywhere. */}
         <div className="max-w-3xl mx-auto mt-10">
           <p className="text-xs uppercase tracking-[0.2em] text-aurora-pink font-semibold mb-3 text-center">
@@ -487,7 +512,7 @@ export default function Pricing() {
             {quotationOnly.map((q) => (
               <li
                 key={q.en}
-                className="text-[13px] px-3.5 py-1.5 rounded-full bg-night-light/60 border border-white/10 text-gray-200"
+                className="text-[13px] font-medium px-3.5 py-1.5 rounded-full bg-night-light border border-rose/30 text-night"
               >
                 {pickLocalized(q, lang)}
               </li>
@@ -507,16 +532,18 @@ export default function Pricing() {
           <p className="text-base text-gray-300 leading-relaxed mb-6 max-w-xl mx-auto">
             {p('ctaBody')}
           </p>
-          <L
-            to="/contact"
+          <a
+            href="#quote"
+            data-umami-event="cta_quote_pricing"
             className="inline-flex items-center px-7 py-3.5 bg-rose hover:bg-pink text-white font-semibold rounded-full shadow-lg shadow-rose/30 transition-colors"
           >
-            {p('ctaButton')} →
-          </L>
+            {p('ctaButton')} ↓
+          </a>
         </div>
       </Section>
 
       <Section
+        id="quote"
         eyebrow={p('s4Eyebrow')}
         title={p('s4Title')}
         subtitle={p('s4Subtitle')}

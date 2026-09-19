@@ -2,7 +2,8 @@ import type { Localized } from '../data/localized';
 
 /**
  * Photo credit for a licensed stock image (Wikimedia Commons CC BY / CC BY-SA, Pexels).
- * Rendered as a small link in the corner of the image it belongs to, so the attribution
+ * Rendered as a very small link on the bottom edge of the image (Vesa 19.9.2026: not big, not
+ * floating mid-image), so the attribution
  * travels with the picture on every surface (card, hero, OG preview aside). Own
  * photographs and partner-supplied photos carry no credit object and render nothing.
  * Receipts for every file: public/images/KUVALAHTEET.json.
@@ -23,21 +24,28 @@ interface Props {
   lang: keyof Localized<string>;
   /** Corner placement; defaults to bottom-right. */
   className?: string;
+  /** Inside a card that is itself a link: an <a> may not nest in an <a> (hydration
+      error, measured 19.9.2026), so render the same text as a <span>. The source link
+      is shown wherever the image appears outside a link (page heroes). */
+  plain?: boolean;
 }
 
-export default function ImgCredit({ credit, lang, className }: Props) {
+export default function ImgCredit({ credit, lang, className, plain }: Props) {
   if (!credit) return null;
   const caption = credit.caption ? credit.caption[lang] || credit.caption.en : '';
+  const text = `${caption ? `${caption} · ` : ''}${credit.name} · ${credit.license}`;
+  const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-white/60 bg-black/30 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
+  if (plain) return <span className={cls}>{text}</span>;
   return (
     <a
       href={credit.url}
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => e.stopPropagation()}
-      className={`absolute z-10 rounded px-1.5 py-0.5 text-[10px] leading-tight text-white/85 bg-black/45 hover:bg-black/65 hover:text-white no-underline ${className || 'bottom-2 right-2'}`}
+      className={`${cls} hover:text-white hover:bg-black/60`}
       aria-label={`${caption ? caption + '. ' : ''}${credit.name}, ${credit.license}`}
     >
-      {caption ? `${caption} · ` : ''}{credit.name} · {credit.license}
+      {text}
     </a>
   );
 }

@@ -56,7 +56,7 @@ export default function Navigation() {
           </L>
         </div>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {items.map((it) => (
             <NL
               key={it.to}
@@ -70,11 +70,21 @@ export default function Navigation() {
               {it.label}
             </NL>
           ))}
+          {/* Vesa 19.9.2026: "lomake pitäisi olla paremmin löydettävissä, liidejä tullut
+              tosi vähän" — the quote form gets a button in the bar on every page. */}
+          <L
+            to="/contact"
+            data-umami-event="cta_quote_nav"
+            className="ml-2 inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap shadow-md shadow-rose/30 hover:bg-pink transition-colors"
+            style={{ color: '#FFFFFF', background: '#C9466A' }}
+          >
+            {tr.cta.getThreeQuotesShort}
+          </L>
         </nav>
 
         <div className="flex items-center gap-2">
           {/* Desktop dropdown */}
-          <div className="hidden lg:block relative">
+          <div className="hidden xl:block relative">
             <LanguageSwitcher tone={'dark'} />
           </div>
 
@@ -85,7 +95,7 @@ export default function Navigation() {
               wordmark + ecosystem button already crowd this bar, so it shows `label`
               (FR) rather than `native` (Français) and is width-capped. Verified: no
               horizontal overflow at 375px. */}
-          <div className="lg:hidden flex items-center gap-1.5 shrink-0">
+          <div className="xl:hidden flex items-center gap-1.5 shrink-0">
             <div className="relative inline-block">
               <LanguageSwitcher tone={'dark'} />
             </div>
@@ -102,8 +112,17 @@ export default function Navigation() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-white/10 bg-night-light">
+        <div className="xl:hidden border-t border-white/10 bg-night-light">
           <nav className="px-4 py-3 flex flex-col gap-1">
+            <L
+              to="/contact"
+              onClick={() => setOpen(false)}
+              data-umami-event="cta_quote_nav"
+              className="mb-1 inline-flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold"
+              style={{ color: '#FFFFFF', background: '#C9466A' }}
+            >
+              {tr.cta.getThreeQuotes}
+            </L>
             {items.map((it) => (
               <NL
                 key={it.to}

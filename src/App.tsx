@@ -19,6 +19,7 @@ const Photographers = lazy(() => import('./pages/Photographers'))
 const Checklist = lazy(() => import('./pages/Checklist'))
 const PracticalGuide = lazy(() => import('./pages/PracticalGuide'))
 const Pricing = lazy(() => import('./pages/Pricing'))
+const Contact = lazy(() => import('./pages/Contact'))
 const PartnerWithUs = lazy(() => import('./pages/PartnerWithUs'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 const Privacy = lazy(() => import('./pages/legal/Privacy'))
@@ -38,7 +39,7 @@ const routes = [
   { path: 'practical-guide', element: <PracticalGuide /> },
   { path: 'pricing', element: <Pricing /> },
   { path: 'partner-with-us', element: <PartnerWithUs /> },
-  { path: 'contact', element: <Navigate to="/" replace /> },
+  { path: 'contact', element: <Contact /> },
   { path: 'privacy', element: <Privacy /> },
   { path: 'terms', element: <Terms /> },
   { path: 'cookie-policy', element: <CookiePolicy /> },

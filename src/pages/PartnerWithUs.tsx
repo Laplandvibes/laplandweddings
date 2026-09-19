@@ -453,18 +453,18 @@ const C: Record<CKey, Localized<string>> = {
     nl: 'Gekwalificeerde Laplandse trouwleads rechtstreeks in uw inbox, van noorderlicht tot middernachtzon, het hele jaar door. U betaalt alleen voor ontvangen leads.', sv: 'Kvalificerade bröllopsleads från Lappland direkt till din inkorg, från norrsken till midnattssol, året runt. Du betalar bara för de leads du får.',
   },
   heroImageAlt: {
-    en: 'Northern lights and stars over Lake Inari',
-    fi: 'Revontulet ja tähtitaivas Inarijärven yllä',
-    de: 'Polarlichter und Sterne über dem Inarisee',
-    ja: 'イナリ湖の上空のオーロラと星空',
-    es: 'Auroras boreales y estrellas sobre el lago Inari',
-    'pt-BR': 'Aurora boreal e estrelas sobre o lago Inari',
-    'zh-CN': '伊纳里湖上空的极光与星空',
-    ko: '이나리 호수 위의 오로라와 별하늘',
-    fr: 'Aurores boréales et étoiles au-dessus du lac Inari',
-    it: 'Aurora boreale e stelle sopra il lago Inari',
-    nl: 'Noorderlicht en sterren boven het Inarimeer',
-    sv: 'Norrsken och stjärnor över Enare träsk',
+    en: 'Hikers on the top of Kaunispää in autumn colours, Saariselkä',
+    fi: 'Vaeltajia Kaunispään laella ruska-aikaan Saariselällä',
+    de: 'Wanderer auf dem Kaunispää im Herbstlaub, Saariselkä',
+    ja: '秋の紅葉の中、サーリセルカのカウニスパー山頂を歩くハイカーたち',
+    es: 'Senderistas en la cima del Kaunispää con los colores del otoño, Saariselkä',
+    'pt-BR': 'Caminhantes no topo do Kaunispää nas cores do outono, Saariselkä',
+    'zh-CN': '秋色中萨里塞尔卡考尼斯帕山顶的徒步者',
+    ko: '가을빛 속 사리셀카 카우니스패 정상의 하이커들',
+    fr: 'Randonneurs au sommet du Kaunispää aux couleurs de l’automne, Saariselkä',
+    it: 'Escursionisti in cima al Kaunispää nei colori dell’autunno, Saariselkä',
+    nl: 'Wandelaars op de top van de Kaunispää in herfstkleuren, Saariselkä',
+    sv: 'Vandrare på toppen av Kaunispää i höstfärger, Saariselkä',
   },
   heroCta: {
     en: 'Apply to join the network', fi: 'Hae mukaan verkostoon', de: 'Dem Netzwerk beitreten', ja: 'ネットワークに参加申し込み',
@@ -747,8 +747,8 @@ export default function PartnerWithUs() {
         eyebrow={c('heroEyebrow')}
         title={c('heroTitle')}
         subtitle={c('heroSubtitle')}
-        image="/images/heroes/aurora-inari-ababamov.jpg"
-        credit={{ name: 'Ababamov', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Aurora_Borealis_and_the_stars.jpg' }}
+        image="/images/heroes/saariselka-kaunispaa-hikers-rasanen.jpg"
+        credit={{ name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Hikers_on_Kaunisp%C3%A4%C3%A4_in_Saariselk%C3%A4,_Inari,_Lapland,_Finland,_2021_September.jpg' }}
         lang={lang}
         imageAlt={c('heroImageAlt')}
       >

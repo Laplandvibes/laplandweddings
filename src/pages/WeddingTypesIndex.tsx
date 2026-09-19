@@ -93,7 +93,7 @@ export default function WeddingTypesIndex() {
               className="group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all flex flex-col"
             >
               <div className="aspect-[16/10] overflow-hidden relative">
-                <ImgCredit credit={wt.heroCredit} lang={lang} className="top-2 right-2" />
+                <ImgCredit credit={wt.heroCredit} lang={lang} plain />
                 <img
                   src={wt.heroImage}
                   alt={wt.name[dataLang]}
