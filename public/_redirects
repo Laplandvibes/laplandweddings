@@ -78,7 +78,4 @@
 /planners/         /          301
 /:lang/planners    /:lang/    301
 /:lang/planners/   /:lang/    301
-/contact           /          301
-/contact/          /          301
-/:lang/contact     /:lang/    301
-/:lang/contact/    /:lang/    301
+# /contact on taas oikea sivu 19.9.2026 (lomake ensin) — 301-säännöt poistettu.
