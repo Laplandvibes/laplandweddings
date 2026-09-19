@@ -2,6 +2,7 @@ import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
+import SeasonBand from '../components/SeasonBand';
 import L from '../components/L';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
@@ -34,7 +35,8 @@ const P: Record<
   | 'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt'
   | 'costTitle' | 'costBody' | 'costLink'
   | 'askTitle' | 'ask1' | 'ask2' | 'ask3' | 'ask4'
-  | 'whenTitle' | 'whenBody'
+  | 'whenTitle' | 'whenBody' | 'whenPeak' | 'whenOff'
+  | 'formTitle' | 'formSub' | 'formPreset'
   | 'note',
   Bag
 > = {
@@ -248,6 +250,76 @@ const P: Record<
     nl: 'De fotografen die in Lapland werken zijn schaars, en de weekenden tussen december en maart gaan het eerst. Een symbolische ceremonie kan worden afgestemd op de agenda van de fotograaf en op het weer; dat is het praktische voordeel van niet vastzitten aan een tijdslot bij de burgerlijke stand.',
     sv: 'Fotograferna som arbetar i Lappland är få, och helgerna mellan december och mars går först. En symbolisk ceremoni kan läggas efter fotografens kalender och efter vädret; det är den praktiska fördelen med att inte vara bunden till en tid hos vigselförrättaren.',
   },
+  whenPeak: {
+    en: 'The photographers’ most requested weekends',
+    fi: 'Kuvaajien kysytyimmät viikonloput',
+    de: 'Die gefragtesten Wochenenden der Fotografen',
+    ja: 'フォトグラファーの予約が最も集中する週末',
+    es: 'Los fines de semana más solicitados a los fotógrafos',
+    'pt-BR': 'Os fins de semana mais disputados dos fotógrafos',
+    'zh-CN': '摄影师最抢手的周末',
+    ko: '사진작가 예약이 가장 몰리는 주말',
+    fr: 'Les week-ends les plus demandés aux photographes',
+    it: 'I fine settimana più richiesti ai fotografi',
+    nl: 'De meest gevraagde weekends van de fotografen',
+    sv: 'Fotografernas mest efterfrågade helger',
+  },
+  whenOff: {
+    en: 'More room in the calendar',
+    fi: 'Väljempää kalenterissa',
+    de: 'Mehr Luft im Kalender',
+    ja: 'カレンダーに余裕あり',
+    es: 'Más hueco en la agenda',
+    'pt-BR': 'Mais folga na agenda',
+    'zh-CN': '档期更宽松',
+    ko: '일정에 여유 있음',
+    fr: 'Plus de place dans l’agenda',
+    it: 'Più spazio in agenda',
+    nl: 'Meer ruimte in de agenda',
+    sv: 'Mer luft i kalendern',
+  },
+  formTitle: {
+    en: 'Request a wedding photography quote',
+    fi: 'Pyydä tarjous hääkuvauksesta',
+    de: 'Angebot für Hochzeitsfotografie anfragen',
+    ja: 'ウェディングフォトの見積もりを依頼',
+    es: 'Pida un presupuesto de fotografía de boda',
+    'pt-BR': 'Peça um orçamento de fotografia de casamento',
+    'zh-CN': '索取婚礼摄影报价',
+    ko: '웨딩 촬영 견적 요청',
+    fr: 'Demandez un devis pour la photographie de mariage',
+    it: 'Richiedete un preventivo per il servizio fotografico',
+    nl: 'Vraag een offerte voor bruiloftsfotografie aan',
+    sv: 'Begär offert på bröllopsfotografering',
+  },
+  formSub: {
+    en: 'The same form as elsewhere on the site. The photography request is already in the message; add your date and place and it goes to planners and photographers exactly as written.',
+    fi: 'Sama lomake kuin muuallakin sivustolla. Kuvaustoive on valmiiksi viestissä; lisätkää päivä ja paikka, niin se kulkee suunnittelijoille ja kuvaajille sellaisenaan.',
+    de: 'Dasselbe Formular wie überall auf der Seite. Der Fotowunsch steht bereits in der Nachricht; ergänzen Sie Datum und Ort, und er geht unverändert an Planer und Fotografen.',
+    ja: 'サイトの他のページと同じフォームです。撮影のご希望はメッセージ欄にあらかじめ入っています。日付と場所を加えていただければ、そのままプランナーとフォトグラファーに届きます。',
+    es: 'El mismo formulario que en el resto del sitio. La petición de fotografía ya está en el mensaje; añada la fecha y el lugar y llegará tal cual a organizadores y fotógrafos.',
+    'pt-BR': 'O mesmo formulário do restante do site. O pedido de fotografia já está na mensagem; acrescentem data e local e ele segue como está para organizadores e fotógrafos.',
+    'zh-CN': '与网站其他页面相同的表单。摄影需求已预填在留言中；补充日期和地点后，它会原样转达给策划师和摄影师。',
+    ko: '사이트의 다른 페이지와 같은 양식입니다. 촬영 요청은 메시지에 미리 적혀 있으니 날짜와 장소만 더해 주시면 플래너와 사진작가에게 그대로 전달됩니다.',
+    fr: 'Le même formulaire que sur le reste du site. La demande de photographie figure déjà dans le message ; ajoutez la date et le lieu, et elle part telle quelle aux organisateurs et aux photographes.',
+    it: 'Lo stesso modulo del resto del sito. La richiesta fotografica è già nel messaggio; aggiungete data e luogo e arriverà così com’è a planner e fotografi.',
+    nl: 'Hetzelfde formulier als elders op de site. De fotografiewens staat al in het bericht; vul datum en plaats aan en hij gaat ongewijzigd naar planners en fotografen.',
+    sv: 'Samma formulär som på resten av sajten. Fotoönskemålet finns redan i meddelandet; lägg till datum och plats så går det vidare oförändrat till planerare och fotografer.',
+  },
+  formPreset: {
+    en: 'We would like a quote for wedding photography. Date and place: ',
+    fi: 'Haluamme tarjouksen hääkuvauksesta. Päivä ja paikka: ',
+    de: 'Wir möchten ein Angebot für Hochzeitsfotografie. Datum und Ort: ',
+    ja: 'ウェディングフォトの見積もりを希望します。日付と場所：',
+    es: 'Queremos un presupuesto de fotografía de boda. Fecha y lugar: ',
+    'pt-BR': 'Queremos um orçamento de fotografia de casamento. Data e local: ',
+    'zh-CN': '我们想索取婚礼摄影报价。日期和地点：',
+    ko: '웨딩 촬영 견적을 원합니다. 날짜와 장소: ',
+    fr: 'Nous souhaitons un devis pour la photographie de mariage. Date et lieu : ',
+    it: 'Vorremmo un preventivo per il servizio fotografico di matrimonio. Data e luogo: ',
+    nl: 'Wij willen graag een offerte voor bruiloftsfotografie. Datum en plaats: ',
+    sv: 'Vi vill ha en offert på bröllopsfotografering. Datum och plats: ',
+  },
   note: {
     en: 'We represent no photographer and take no commission from any of them. Your request goes out with your details only when you send the form.',
     fi: 'Emme edusta yhtäkään kuvaajaa emmekä saa heiltä provisiota. Pyyntösi lähtee tietoinesi vain, kun lähetät lomakkeen.',
@@ -265,7 +337,7 @@ const P: Record<
 };
 
 export default function Photographers() {
-  const { lang, tr } = useLang();
+  const { lang } = useLang();
   const t = (k: keyof typeof P) => pickLocalized(P[k], lang);
   const questions = [t('ask1'), t('ask2'), t('ask3'), t('ask4')];
   return (
@@ -321,11 +393,23 @@ export default function Photographers() {
       <Section title={t('whenTitle')}>
         <div className="max-w-3xl mx-auto">
           <p className="text-gray-300 leading-relaxed text-base sm:text-lg">{t('whenBody')}</p>
+          {/* Vesa 19.9. (ilta): "milloin varata -osio vaatii myös jotain extraa" — the paragraph's
+              own claim (December–March weekends go first) as a twelve-month strip. */}
+          <SeasonBand
+            lang={lang}
+            className="mt-8"
+            segments={[
+              { months: [11, 0, 1, 2], color: '#DD6E86', label: t('whenPeak') },
+              { months: [3, 4, 5, 6, 7, 8, 9, 10], color: 'rgba(245,235,224,0.28)', label: t('whenOff') },
+            ]}
+          />
         </div>
       </Section>
 
-      <Section className="bg-night-light/30" title={tr.contact.formTitle} subtitle={tr.contact.formSub}>
-        <LeadForm />
+      {/* Vesa 19.9. (ilta): a generic "request 1–3 quotes" block made no sense on a photography
+          page. Same form, but framed and pre-filled as a photography request. */}
+      <Section className="bg-night-light/30" title={t('formTitle')} subtitle={t('formSub')}>
+        <LeadForm presetMessage={t('formPreset')} />
         <p className="text-center text-xs text-gray-500 mt-8 max-w-2xl mx-auto">{t('note')}</p>
       </Section>
     </>

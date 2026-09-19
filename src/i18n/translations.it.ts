@@ -27,8 +27,8 @@ const t_it = {
     bookStay: 'Prenoti un soggiorno',
   },
   home: {
-    heroTitle: 'Matrimoni in Lapponia, tutto in un solo posto',
-    heroSubtitle: 'Igloo di vetro · Cappelle di neve · Aurora boreale · Sole di mezzanotte. Trasmettiamo la Sua richiesta a wedding planner e location della Lapponia, gratis e senza impegno.',
+    heroTitle: 'Sì, sotto l’aurora boreale.',
+    heroSubtitle: 'L’aurora boreale sopra il tetto di vetro, candele nella cappella di neve, una renna che aspetta nel cortile. Trasmettiamo i Suoi desideri a wedding planner e location della Lapponia, gratis e senza impegno.',
     heroTitleSummer: 'Matrimoni sotto il sole di mezzanotte in Lapponia',
     heroSubtitleSummer: 'Promesse in riva al lago · Cerimonie in cima ai fjäll · Tetti di vetro sotto un cielo che non si fa mai buio · Lunghe sere luminose. Trasmettiamo la Sua richiesta a wedding planner e location della Lapponia, gratis e senza impegno.',
     heroReassure: 'Gratis e senza impegno · risposta in 1–7 giorni',

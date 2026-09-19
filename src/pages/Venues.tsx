@@ -60,18 +60,18 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     nl: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 21 trouwlocaties verspreid over Lapland. Wij vertegenwoordigen er geen enkele.', sv: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. 21 bröllopsplatser runt om i Lappland. Vi företräder ingen av dem.',
   },
   imageAlt: {
-    en: 'Snow walls and arches of the Lainio Snow Village from outside',
-    fi: 'Lainion lumikylän lumiseinät ja kaaret ulkoa',
-    de: 'Schneewände und Bögen des Snow Village in Lainio von außen',
-    ja: 'ライニオのスノービレッジの雪の壁とアーチ（外観）',
-    es: 'Muros y arcos de nieve del Snow Village de Lainio desde fuera',
-    'pt-BR': 'Paredes e arcos de neve do Snow Village de Lainio vistos de fora',
-    'zh-CN': '莱尼奥雪村外观的雪墙与拱门',
-    ko: '라이니오 스노 빌리지의 눈 벽과 아치, 바깥에서 본 모습',
-    fr: 'Murs et arches de neige du Snow Village de Lainio vus de l’extérieur',
-    it: 'Muri e archi di neve dello Snow Village di Lainio visti dall’esterno',
-    nl: 'Sneeuwmuren en bogen van het Snow Village in Lainio van buiten',
-    sv: 'Snöväggar och valv i Lainios snöby utifrån',
+    en: 'The purple-lit snow corridor and ice stairs inside Levi Ice Castle',
+    fi: 'Levi Ice Castlen violetiksi valaistu lumikäytävä ja jääportaat',
+    de: 'Der violett beleuchtete Schneegang und die Eistreppe im Levi Ice Castle',
+    ja: 'レヴィ・アイスキャッスル内、紫色にライトアップされた雪の回廊と氷の階段',
+    es: 'El pasillo de nieve iluminado en violeta y las escaleras de hielo dentro de Levi Ice Castle',
+    'pt-BR': 'O corredor de neve iluminado em violeta e a escada de gelo dentro do Levi Ice Castle',
+    'zh-CN': '莱维冰堡内紫色灯光下的雪廊与冰阶',
+    ko: '레비 아이스 캐슬 내부, 보랏빛 조명의 눈 복도와 얼음 계단',
+    fr: 'Le couloir de neige éclairé en violet et l’escalier de glace du Levi Ice Castle',
+    it: 'Il corridoio di neve illuminato di viola e la scala di ghiaccio del Levi Ice Castle',
+    nl: 'De paars verlichte sneeuwgang en ijstrap in het Levi Ice Castle',
+    sv: 'Den violettbelysta snögången och istrappan i Levi Ice Castle',
   },
   affordable: {
     en: 'affordable', fi: 'edullinen', de: 'günstig', ja: 'お手頃',
@@ -138,20 +138,23 @@ export default function Venues() {
         eyebrow={ui('eyebrowVenues', lang)}
         title={tr.venues.indexTitle}
         subtitle={tr.venues.indexIntro}
-        image="/images/heroes/lainio-snow-village-estormiz.jpg"
-        credit={{ name: 'Estormiz', license: 'CC0 1.0', url: 'https://commons.wikimedia.org/wiki/File:Lainio_Snow_Village_Kittil%C3%A4_20190417_02.jpg', caption: {
-        en: 'Pictured: Lainio Snow Village',
-        fi: 'Kuvassa Lainion Snow Village',
-        de: 'Im Bild: Snow Village Lainio',
-        ja: '写真：ライニオのスノービレッジ',
-        es: 'En la imagen: Snow Village de Lainio',
-        'pt-BR': 'Na foto: Snow Village de Lainio',
-        'zh-CN': '图为莱尼奥雪村',
-        ko: '사진: 라이니오 스노 빌리지',
-        fr: 'Sur la photo : Snow Village de Lainio',
-        it: 'Nella foto: Snow Village di Lainio',
-        nl: 'Op de foto: Snow Village Lainio',
-        sv: 'På bilden: Lainios snöby',
+        image="/images/heroes/levi-ice-castle-corridor.jpg"
+        avifSrcSet="/images/heroes/levi-ice-castle-corridor-800.avif 800w, /images/heroes/levi-ice-castle-corridor-1200.avif 1200w"
+        webpSrcSet="/images/heroes/levi-ice-castle-corridor-800.webp 800w, /images/heroes/levi-ice-castle-corridor-1200.webp 1200w"
+        sizes="100vw"
+        credit={{ name: '', license: '', url: 'https://www.levi.fi/en/info/general/groups/weddings/', caption: {
+        en: 'Pictured: Levi Ice Castle',
+        fi: 'Kuvassa Levi Ice Castle',
+        de: 'Im Bild: Levi Ice Castle',
+        ja: '写真：レヴィ・アイスキャッスル',
+        es: 'En la imagen: Levi Ice Castle',
+        'pt-BR': 'Na foto: Levi Ice Castle',
+        'zh-CN': '图为莱维冰堡（Levi Ice Castle）',
+        ko: '사진: 레비 아이스 캐슬',
+        fr: 'Sur la photo : Levi Ice Castle',
+        it: 'Nella foto: Levi Ice Castle',
+        nl: 'Op de foto: Levi Ice Castle',
+        sv: 'På bilden: Levi Ice Castle',
       } }}
         lang={lang}
         imageAlt={pickLocalized(P.imageAlt, lang)}

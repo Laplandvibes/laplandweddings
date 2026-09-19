@@ -27,8 +27,8 @@ const t_en = {
     bookStay: 'Book a stay',
   },
   home: {
-    heroTitle: 'Lapland Weddings: venues and marriage paperwork',
-    heroSubtitle: 'Glass igloos · Snow chapels · Northern Lights · Midnight Sun. In Finnish and English. We forward your request to wedding planners and venues in Lapland, free and without commitment.',
+    heroTitle: 'I do, under the northern lights.',
+    heroSubtitle: 'Northern lights above a glass roof, candles in a snow chapel, a reindeer waiting in the yard. We forward your wishes to wedding planners and venues in Lapland, free and without commitment.',
     heroTitleSummer: 'Midnight Sun Weddings in Lapland',
     heroSubtitleSummer: 'Lakeside vows · Fell-top ceremonies · Glass roofs under the never-dark sky · Long luminous evenings. In Finnish and English. We forward your request to wedding planners and venues in Lapland, free and without commitment.',
     heroReassure: 'Free & no commitment · reply within 1–7 days',

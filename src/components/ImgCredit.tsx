@@ -33,7 +33,7 @@ interface Props {
 export default function ImgCredit({ credit, lang, className, plain }: Props) {
   if (!credit) return null;
   const caption = credit.caption ? credit.caption[lang] || credit.caption.en : '';
-  const text = `${caption ? `${caption} · ` : ''}${credit.name} · ${credit.license}`;
+  const text = [caption, credit.name, credit.license].filter(Boolean).join(' · ');
   const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-white/60 bg-black/30 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
   if (plain) return <span className={cls}>{text}</span>;
   return (
@@ -43,7 +43,7 @@ export default function ImgCredit({ credit, lang, className, plain }: Props) {
       rel="noopener noreferrer"
       onClick={(e) => e.stopPropagation()}
       className={`${cls} hover:text-white hover:bg-black/60`}
-      aria-label={`${caption ? caption + '. ' : ''}${credit.name}, ${credit.license}`}
+      aria-label={[caption, credit.name, credit.license].filter(Boolean).join(', ')}
     >
       {text}
     </a>

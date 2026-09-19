@@ -430,23 +430,23 @@ export default function Pricing() {
         subtitle={p('exampleDisclaimer')}
       >
         <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-          {([['d1Title', 'd1Body'], ['d2Title', 'd2Body'], ['d3Title', 'd3Body']] as const).map(
-            ([tk, bk]) => (
-              <div key={tk} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 sm:p-7">
+          {/* Vesa 19.9.2026: "eikö tähän voisi tehdä ihan havainnekuvia, jotain mikä selkeyttäisi?"
+              — and, an hour later, that the separate dark boxes were hard to read. Each card now
+              ends with a diagram drawn from its own sentence, on the same ivory, so text and
+              picture read as one unit. */}
+          {([['d1Title', 'd1Body', GuestScale], ['d2Title', 'd2Body', PriceSeasonBand], ['d3Title', 'd3Body', NightsSplit]] as const).map(
+            ([tk, bk, Diagram]) => (
+              <div key={tk} className="bg-night-light/60 border border-white/5 rounded-2xl p-6 sm:p-7 flex flex-col">
                 <p className="text-xs uppercase tracking-[0.2em] text-aurora-pink font-semibold mb-2.5">
                   {p(tk)}
                 </p>
                 <p className="text-sm text-gray-300 leading-[1.7]">{p(bk)}</p>
+                <div className="mt-5 pt-5 border-t" style={{ borderColor: 'rgba(31,22,18,0.12)' }}>
+                  <Diagram lang={lang} />
+                </div>
               </div>
             ),
           )}
-        </div>
-        {/* Vesa 19.9.2026: "eikö tähän voisi tehdä ihan havainnekuvia, jotain mikä
-            selkeyttäisi?" — one diagram per driver, each drawn from the card above it. */}
-        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto mt-5">
-          <div className="bg-night-light/20 border border-white/5 rounded-2xl p-5"><GuestScale lang={lang} /></div>
-          <div className="bg-night-light/20 border border-white/5 rounded-2xl p-5"><PriceSeasonBand lang={lang} /></div>
-          <div className="bg-night-light/20 border border-white/5 rounded-2xl p-5"><NightsSplit lang={lang} /></div>
         </div>
         <p className="text-sm text-gray-400 leading-[1.7] max-w-3xl mx-auto mt-8 text-center">
           {p('elopementCrossRef')}{' '}

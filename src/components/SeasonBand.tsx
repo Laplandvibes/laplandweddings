@@ -17,7 +17,7 @@ const INTL: Record<string, string> = {
   'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE',
 };
 
-export default function SeasonBand({ lang, segments, className = '' }: { lang: keyof Localized<string>; segments: SeasonSegment[]; className?: string }) {
+export default function SeasonBand({ lang, segments, className = '', emptyColor = 'rgba(245,235,224,0.12)' }: { lang: keyof Localized<string>; segments: SeasonSegment[]; className?: string; /** Colour of months outside every segment; pass an espresso tint on ivory. */ emptyColor?: string }) {
   const numeric = Array.from({ length: 12 }, (_, i) => String(i + 1));
   let months = numeric;
   try {
@@ -34,12 +34,12 @@ export default function SeasonBand({ lang, segments, className = '' }: { lang: k
       <div className="grid grid-cols-12 gap-0.5" role="img" aria-label={segments.map((s) => s.label).join('; ')}>
         {months.map((name, i) => (
           <div key={i} className="flex flex-col items-center gap-1.5 min-w-0">
-            <div className="h-3 w-full rounded-sm" style={{ background: colorOf(i) || 'rgba(245,235,224,0.12)' }} />
+            <div className="h-3 w-full rounded-sm" style={{ background: colorOf(i) || emptyColor }} />
             <span className="text-[10px] sm:text-[11px] text-gray-400 leading-none truncate max-w-full">{name}</span>
           </div>
         ))}
       </div>
-      <figcaption className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-gray-300">
+      <figcaption className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-[13px] text-gray-300">
         {segments.map((s) => (
           <span key={s.label} className="inline-flex items-center gap-1.5">
             <span aria-hidden="true" className="w-2.5 h-2.5 rounded-sm shrink-0" style={{ background: s.color }} />

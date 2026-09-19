@@ -27,8 +27,8 @@ const t_nl = {
     bookStay: 'Boek een verblijf',
   },
   home: {
-    heroTitle: 'Bruiloften in Lapland, alles op één plek',
-    heroSubtitle: 'Glazen iglo’s · Sneeuwkapellen · Noorderlicht · Middernachtzon. Wij geven uw aanvraag gratis en vrijblijvend door aan weddingplanners en locaties in Lapland.',
+    heroTitle: 'Ja, onder het noorderlicht.',
+    heroSubtitle: 'Noorderlicht boven het glazen dak, kaarsen in de sneeuwkapel, een rendier dat op het erf wacht. Wij geven uw wensen gratis en vrijblijvend door aan weddingplanners en locaties in Lapland.',
     heroTitleSummer: 'Trouwen onder de middernachtzon in Lapland',
     heroSubtitleSummer: 'Geloften aan het meer · Ceremonies op de fjäll · Glazen daken onder een hemel die nooit donker wordt · Lange lichte avonden. Wij geven uw aanvraag gratis en vrijblijvend door aan weddingplanners en locaties in Lapland.',
     heroReassure: 'Gratis & vrijblijvend · antwoord binnen 1–7 dagen',

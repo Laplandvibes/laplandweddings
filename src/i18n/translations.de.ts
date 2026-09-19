@@ -27,8 +27,8 @@ const t_de = {
     bookStay: 'Übernachtung buchen',
   },
   home: {
-    heroTitle: 'Heiraten im Lappland-Schnee.',
-    heroSubtitle: 'Glasiglus · Schneekapellen · Polarlichter · Mitternachtssonne. Wir leiten Ihre Anfrage kostenlos und unverbindlich an Hochzeitsplaner und Locations in Lappland weiter.',
+    heroTitle: 'Ja, unter dem Polarlicht.',
+    heroSubtitle: 'Polarlichter über dem Glasdach, Kerzen in der Schneekapelle, ein Rentier wartet vor der Tür. Wir leiten Ihre Wünsche kostenlos und unverbindlich an Hochzeitsplaner und Locations in Lappland weiter.',
     heroTitleSummer: 'Heiraten unter der Mitternachtssonne.',
     heroSubtitleSummer: 'Trauung am Seeufer · Bogen am Fuß des Fjälls · helle Nächte ohne Dunkelheit. Wir leiten Ihre Anfrage kostenlos und unverbindlich an Hochzeitsplaner und Locations in Lappland weiter.',
     heroReassure: 'Kostenlos & unverbindlich · Antwort in 1–7 Tagen',

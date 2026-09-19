@@ -281,7 +281,7 @@ const top = {
           description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 21 bruiloftslocaties in heel Lapland.' },
     sv: { title: 'Bröllopsplatser i Lappland | LaplandWeddings',
           description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. 21 bröllopsplatser i hela Lappland.' },
-    image: '/images/venues/kakslauttanen.jpg',
+    image: '/images/heroes/levi-ice-castle-corridor.jpg',
   },
   '/photographers': {
     // 19.9.2026: the named-photographer directory was retired (no agreements, free referrals);

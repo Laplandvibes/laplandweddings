@@ -479,13 +479,16 @@ export default function Home() {
            koska etusivun kärki kuuluu sille mitä lukija haki (sääntö 18.9.), ei mainospaikan myynnille. ── */}
       {/* Quote band high on the page (Vesa 19.9.2026: the form must be easier to find;
           very few leads). Copy is the existing planners/contact strings. */}
-      <section className="py-8 sm:py-12">
+      {/* Vesa 19.9. (ilta): the ivory band drowned between the ivory ad slot and the ivory
+          stat cards — "vaatisi jonkinlaisen kolmannen korostusvärin taustalle". The site's third
+          colour is the warm gold of the aurora tokens; nothing else on the page uses it as a ground. */}
+      <section className="py-10 sm:py-14" style={{ background: 'linear-gradient(135deg, #D4A574 0%, #C99B66 100%)' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
-          <div className="max-w-4xl mx-auto bg-night-light/70 border border-rose/30 rounded-3xl p-7 sm:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
             <div className="flex-1 text-center md:text-left">
-              <p className="uppercase tracking-[0.25em] text-[11px] sm:text-xs text-aurora-pink font-semibold mb-2">{tr.contact.formSub}</p>
-              <h2 className="font-heading text-2xl sm:text-3xl text-white tracking-wide mb-2 leading-tight">{tr.planners.threeQuotesTitle}</h2>
-              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{tr.planners.threeQuotesP}</p>
+              <p className="uppercase tracking-[0.25em] text-[11px] sm:text-xs font-semibold mb-2" style={{ color: 'rgba(31,22,18,0.72)' }}>{tr.contact.formSub}</p>
+              <h2 className="font-heading text-2xl sm:text-3xl tracking-wide mb-2 leading-tight" style={{ color: '#1F1612' }}>{tr.planners.threeQuotesTitle}</h2>
+              <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#2A1F18' }}>{tr.planners.threeQuotesP}</p>
             </div>
             <L
               to="/contact"
@@ -777,8 +780,19 @@ export default function Home() {
                   <p className="text-sm text-gray-400 line-clamp-3 mb-1">{v.description[dataLang]}</p>
                 </div>
               </L>
-              <div className="px-5 pt-3 pb-5 mt-auto">
+              {/* Vesa 19.9. (ilta): "mikä näiden funktio on?" — the card's job is to send a couple to
+                  the venue page and its quote form, so every card ends with the same button. The
+                  rating stays where Google has one (16/21; the rest have no certain Google match). */}
+              <div className="px-5 pt-3 pb-5 mt-auto flex items-center justify-between gap-3 flex-wrap">
                 <GoogleRatingRow venue={v} />
+                <L
+                  to={`/venues/${v.slug}#quote`}
+                  data-umami-event="cta_quote_venue_card"
+                  className="ml-auto inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap hover:bg-pink transition-colors"
+                  style={{ color: '#FFFFFF', background: '#C9466A' }}
+                >
+                  {tr.cta.getQuote} →
+                </L>
               </div>
             </div>
           ))}

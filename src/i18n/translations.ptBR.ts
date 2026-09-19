@@ -27,9 +27,9 @@ const t_ptBR = {
     bookStay: 'Reservar hospedagem',
   },
   home: {
-    heroTitle: 'Casamentos na Lapônia, tudo em um só lugar',
+    heroTitle: 'Sim, sob a aurora boreal.',
     heroTitleSummer: 'Casamentos sob o sol da meia-noite na Lapônia',
-    heroSubtitle: 'Iglus de vidro · Capelas de neve · Aurora boreal · Sol da meia-noite. Em finlandês e inglês. Encaminhamos seu pedido a organizadores de casamento e locais da Lapônia, grátis e sem compromisso.',
+    heroSubtitle: 'Aurora boreal acima do teto de vidro, velas na capela de neve, uma rena esperando no pátio. Encaminhamos seus desejos a organizadores de casamento e locais da Lapônia, grátis e sem compromisso.',
     heroSubtitleSummer: 'Votos à beira do lago · Cerimônias no topo do monte · Tetos de vidro sob o céu que nunca escurece · Longas noites luminosas. Em finlandês e inglês. Encaminhamos seu pedido a organizadores de casamento e locais da Lapônia, grátis e sem compromisso.',
     heroReassure: 'Grátis e sem compromisso · resposta em 1–7 dias',
     whyTitle: 'Por que a Lapônia para seu casamento',

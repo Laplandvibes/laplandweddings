@@ -19,6 +19,53 @@ import Section from './Section';
  * All 12 locales carry native copy (matches the project's i18n bar).
  */
 type Card = { href: string; label: string; body: string };
+
+/** One own photograph per card (Vesa 19.9.: "jättää tosi kylmäksi … kuvat voisivat nostaa tämän arvoa").
+    July 2026 road trip, masters in D:\_puhelin_staging\kuvat; receipts in public/images/KUVALAHTEET.json. */
+const IMAGES: Array<{ src: string; alt: Record<Lang, string> }> = [
+  { src: '/images/own/kemijarvi-lake-terrace-summer.webp', alt: {
+    en: 'A lakeside terrace with a jetty among birches on Lake Kemijärvi in summer',
+    fi: 'Järviterassi ja laituri koivujen keskellä Kemijärven rannalla kesällä',
+    de: 'Eine Seeterrasse mit Steg zwischen Birken am Kemijärvi im Sommer',
+    ja: '夏のケミヤルヴィ湖畔、白樺に囲まれた桟橋付きのテラス',
+    es: 'Una terraza junto al lago con embarcadero entre abedules en el lago Kemijärvi en verano',
+    'pt-BR': 'Um terraço à beira do lago com píer entre bétulas no lago Kemijärvi no verão',
+    'zh-CN': '夏日凯米耶尔维湖畔白桦间带码头的湖景露台',
+    ko: '여름 케미얘르비 호숫가, 자작나무 사이 선착장이 있는 테라스',
+    fr: 'Une terrasse au bord du lac avec un ponton parmi les bouleaux, lac Kemijärvi en été',
+    it: 'Una terrazza sul lago con pontile tra le betulle sul lago Kemijärvi d’estate',
+    nl: 'Een terras aan het meer met een steiger tussen berken aan het Kemijärvi-meer in de zomer',
+    sv: 'En sjöterrass med brygga bland björkar vid Kemijärvi på sommaren',
+  } },
+  { src: '/images/own/road-to-the-fells-kittila-pyha.webp', alt: {
+    en: 'A straight summer road towards the fells between Kittilä and Pyhä',
+    fi: 'Suora kesäinen tie kohti tuntureita Kittilän ja Pyhän välillä',
+    de: 'Eine gerade Sommerstraße Richtung Fjells zwischen Kittilä und Pyhä',
+    ja: 'キッティラとピュハの間、山々へまっすぐ続く夏の道',
+    es: 'Una carretera recta de verano hacia las colinas entre Kittilä y Pyhä',
+    'pt-BR': 'Uma estrada reta de verão rumo às montanhas entre Kittilä e Pyhä',
+    'zh-CN': '基蒂莱与皮哈之间笔直通向群山的夏日公路',
+    ko: '키틸래와 퓌해 사이, 산으로 곧게 뻗은 여름 도로',
+    fr: 'Une route d’été rectiligne vers les fells entre Kittilä et Pyhä',
+    it: 'Una strada estiva dritta verso i rilievi tra Kittilä e Pyhä',
+    nl: 'Een rechte zomerweg richting de fjells tussen Kittilä en Pyhä',
+    sv: 'En rak sommarväg mot fjällen mellan Kittilä och Pyhä',
+  } },
+  { src: '/images/own/kittila-airport-terminal-summer.webp', alt: {
+    en: 'The terminal building and car park of Kittilä Airport on a summer day',
+    fi: 'Kittilän lentoaseman terminaali ja pysäköintialue kesäpäivänä',
+    de: 'Terminal und Parkplatz des Flughafens Kittilä an einem Sommertag',
+    ja: '夏の日のキッティラ空港ターミナルと駐車場',
+    es: 'La terminal y el aparcamiento del aeropuerto de Kittilä un día de verano',
+    'pt-BR': 'O terminal e o estacionamento do aeroporto de Kittilä em um dia de verão',
+    'zh-CN': '夏日的基蒂莱机场航站楼与停车场',
+    ko: '여름날 키틸래 공항 터미널과 주차장',
+    fr: 'L’aérogare et le parking de l’aéroport de Kittilä par une journée d’été',
+    it: 'Il terminal e il parcheggio dell’aeroporto di Kittilä in un giorno d’estate',
+    nl: 'Het terminalgebouw en de parkeerplaats van Kittilä Airport op een zomerdag',
+    sv: 'Terminalbyggnaden och parkeringen vid Kittilä flygplats en sommardag',
+  } },
+];
 type Block = { eyebrow: string; title: string; subtitle: string; cards: Card[] };
 
 const COPY: Record<Lang, Block> = {
@@ -150,19 +197,36 @@ export default function RelatedSites() {
   return (
     <Section eyebrow={t.eyebrow} title={t.title} subtitle={t.subtitle} className="bg-night-light/30">
       <div className="grid sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
-        {t.cards.map((card) => (
+        {t.cards.map((card, i) => (
           <a
             key={card.href}
             href={card.href}
             target="_blank"
             rel="noopener"
-            className="on-card group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl p-6 flex flex-col transition-all"
+            className="on-card group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden flex flex-col transition-all"
           >
+            {IMAGES[i] && (
+              <div className="aspect-[16/10] overflow-hidden">
+                <img
+                  src={IMAGES[i].src}
+                  srcSet={`${IMAGES[i].src.replace('.webp', '-600.webp')} 600w, ${IMAGES[i].src} 1200w`}
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  alt={IMAGES[i].alt[lang] ?? IMAGES[i].alt.en}
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="750"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            )}
+            <div className="p-6 flex flex-col flex-1">
             <h3 className="font-heading text-xl text-charcoal tracking-wide leading-snug mb-2 flex items-start gap-1.5 group-hover:text-rose-deep transition-colors">
               {card.label}
               <ArrowUpRight className="w-4 h-4 mt-1 shrink-0 text-rose-deep transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </h3>
             <p className="text-sm text-stone leading-relaxed">{card.body}</p>
+            </div>
           </a>
         ))}
       </div>

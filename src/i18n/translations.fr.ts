@@ -27,8 +27,8 @@ const t_fr = {
     bookStay: 'Réserver un séjour',
   },
   home: {
-    heroTitle: 'Mariages en Laponie, tout en un seul endroit',
-    heroSubtitle: 'Igloos de verre · Chapelles de neige · Aurore boréale · Soleil de minuit. Nous transmettons votre demande aux organisateurs de mariage et aux lieux de Laponie, gratuitement et sans engagement.',
+    heroTitle: 'Oui, sous les aurores boréales.',
+    heroSubtitle: 'Des aurores boréales au-dessus du toit de verre, des bougies dans la chapelle de neige, un renne qui attend dans la cour. Nous transmettons vos souhaits aux organisateurs de mariage et aux lieux de Laponie, gratuitement et sans engagement.',
     heroTitleSummer: 'Mariages sous le soleil de minuit en Laponie',
     heroSubtitleSummer: 'Vœux au bord du lac · Cérémonies au sommet des fjälls · Toits de verre sous un ciel qui ne s’assombrit jamais · Longues soirées lumineuses. Nous transmettons votre demande aux organisateurs de mariage et aux lieux de Laponie, gratuitement et sans engagement.',
     heroReassure: 'Gratuit et sans engagement · réponse sous 1–7 jours',

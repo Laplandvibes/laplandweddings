@@ -411,6 +411,59 @@
       "note": "Pari takaa lumisella uralla, lumen painamat puut. Vaakakuva, sopii leveään korttiin.",
       "used_on": "/practical-guide hero + /contact OG",
       "fetched": "2026-09-19"
+    },
+    {
+      "file": "heroes/levi-ice-castle-corridor.webp",
+      "kind": "venue-own",
+      "source": "public/images/venues/levi-ice-castle.jpg (kohteen oma kuva, alkuperä venues_provenance_20260919)",
+      "author": "Levi Ice Castle",
+      "license": "kohteen oma kuva, käytössä kohteen esittelyyn",
+      "original": "2400x1600",
+      "crop": "cover-centre",
+      "ours": "2400x1350 (+800/1200 srcset)",
+      "used_on": "/venues hero + OG",
+      "caption": "Kuvassa Levi Ice Castle (12 kieltä)",
+      "note": "Vesa 19.9. ilta: Lainion lumikylä oli liian valkoinen heroksi; tumma jäälinnan käytävä kantaa valkoisen tekstin.",
+      "fetched": "2026-09-19"
+    },
+    {
+      "file": "own/kemijarvi-lake-terrace-summer.webp",
+      "kind": "own",
+      "source": "D:/_puhelin_staging/kuvat/20260719_091036.jpg",
+      "author": "LaplandVibes (Vesa Pesola)",
+      "license": "oma",
+      "original": "4000x3000",
+      "crop": "left 0, top 660, 3680x2340 (sormi oikeassa yläkulmassa rajattu pois)",
+      "ours": "1200x750 (+600 srcset)",
+      "used_on": "etusivun sisarsivustokortti: majoitus",
+      "location": "Kemijärvi, Uitonniemen aittakylä 19.7.2026 klo 09:10",
+      "fetched": "2026-09-19"
+    },
+    {
+      "file": "own/road-to-the-fells-kittila-pyha.webp",
+      "kind": "own",
+      "source": "D:/_puhelin_staging/kuvat/20260719_135927.jpg",
+      "author": "LaplandVibes (Vesa Pesola)",
+      "license": "oma",
+      "original": "3000x4000 (pysty, EXIF-kierto)",
+      "crop": "top 480, 3000x3200",
+      "ours": "1200x750 (+600 srcset)",
+      "used_on": "etusivun sisarsivustokortti: matka",
+      "location": "Kittilä–Pyhä-tie 19.7.2026 klo 13:59 (eri ruutu kuin 135909 työ/tours ja 135929 transport)",
+      "fetched": "2026-09-19"
+    },
+    {
+      "file": "own/kittila-airport-terminal-summer.webp",
+      "kind": "own",
+      "source": "D:/_puhelin_staging/kuvat/20260721_105626.jpg",
+      "author": "LaplandVibes (Vesa Pesola)",
+      "license": "oma",
+      "original": "4000x3000",
+      "crop": "top 540, 4000x1860",
+      "ours": "1200x750 (+600 srcset)",
+      "used_on": "etusivun sisarsivustokortti: perille pääsy",
+      "location": "Kittilän lentoasema 21.7.2026 klo 10:56 (eri ruutu kuin 105609/105617/105631)",
+      "fetched": "2026-09-19"
     }
   ],
   "ai_remaining_20260919": [

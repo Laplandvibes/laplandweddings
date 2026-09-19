@@ -91,6 +91,8 @@ interface LeadFormProps {
   presetWeddingType?: string;
   presetLocation?: string;
   presetVenue?: string;
+  /** Pre-filled message, e.g. the photographers page's "we would like a quote for photography". */
+  presetMessage?: string;
 }
 
 const LEAD_INBOX = 'info@laplandvibes.com';
@@ -117,7 +119,7 @@ function formatBytes(bytes: number): string {
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
 }
 
-export default function LeadForm({ presetWeddingType, presetLocation, presetVenue }: LeadFormProps) {
+export default function LeadForm({ presetWeddingType, presetLocation, presetVenue, presetMessage }: LeadFormProps) {
   const { lang, dataLang, tr } = useLang();
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -470,6 +472,7 @@ export default function LeadForm({ presetWeddingType, presetLocation, presetVenu
           onFocus={trackStart}
           className={t2}
           placeholder={tr.form.messagePlaceholder}
+          defaultValue={presetMessage}
         />
       </div>
 
