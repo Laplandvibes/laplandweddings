@@ -51,7 +51,7 @@ const MARKER: Record<AdLocale, { ad: string; featured: string }> = {
   de: { ad: 'Anzeige', featured: 'Vorgestellter Partner' },
   fr: { ad: 'Annonce', featured: 'Partenaire à la une' },
   it: { ad: 'Annuncio', featured: 'Partner in evidenza' },
-  es: { ad: 'Anuncio', featured: 'Partner destacado' },
+  es: { ad: 'Anuncio', featured: 'Socio destacado' },
   pt: { ad: 'Anúncio', featured: 'Parceiro em destaque' },
   nl: { ad: 'Advertentie', featured: 'Uitgelichte partner' },
   ja: { ad: '広告', featured: '注目パートナー' },

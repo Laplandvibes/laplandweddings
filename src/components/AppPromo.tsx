@@ -205,7 +205,7 @@ const COPY: Record<string, Copy> = {
       'Emergencias y farmacia',
     ],
     cta: 'Consiga la app gratis',
-    scan: 'Escanee para abrirla en su móvil',
+    scan: 'Escanee para abrirla en su teléfono',
     free: 'No hace falta cuenta para explorar',
     dismiss: 'Cerrar',
   },

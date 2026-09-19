@@ -72,13 +72,13 @@ export const FEATURED_CONTEXT: Record<FeaturedPlacement, Record<AdLocale, string
     de: 'Ausgewählte Hochzeitslocations', fr: 'Lieux de mariage sélectionnés',
     it: 'Location selezionate', es: 'Lugares de boda destacados',
     pt: 'Locais de casamento em destaque', nl: 'Uitgelichte trouwlocaties',
-    ja: 'おすすめのウェディング会場', ko: '추천 웨딩 장소', zh: '精选婚礼场地',
+    ja: 'おすすめの結婚式会場', ko: '추천 웨딩 장소', zh: '精选婚礼场地',
   },
   venues_index: {
     fi: 'Hääpaikat', en: 'Wedding venues', sv: 'Bröllopsplatser',
     de: 'Hochzeitslocations', fr: 'Lieux de mariage', it: 'Location per matrimoni',
     es: 'Lugares de boda', pt: 'Locais de casamento', nl: 'Trouwlocaties',
-    ja: 'ウェディング会場', ko: '웨딩 장소', zh: '婚礼场地',
+    ja: '結婚式会場', ko: '웨딩 장소', zh: '婚礼场地',
   },
   venue_related: {
     fi: 'Saman alueen hääpaikat', en: 'Venues in the same region', sv: 'Platser i samma region',

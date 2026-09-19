@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import { AURORA_VIDEO } from '../data/heroVideo';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
@@ -66,7 +67,7 @@ export default function WeddingTypePage() {
   return (
     <>
       <SEO
-        title={`${wt.name[dataLang]}: ${pickLocalized(P.titleSuffix, lang)} | LaplandWeddings`}
+        title={`${wt.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.titleSuffix, lang)} | LaplandWeddings`}
         description={wt.tagline[dataLang] + ': ' + wt.description[dataLang].slice(0, 140)}
         path={`/wedding-types/${wt.slug}`}
         image={wt.heroImage}
@@ -78,6 +79,9 @@ export default function WeddingTypePage() {
         subtitle={wt.tagline[dataLang]}
         image={wt.heroImage}
         imageAlt={wt.name[dataLang]}
+        video={wt.slug === 'northern-lights' ? AURORA_VIDEO : undefined}
+        credit={wt.heroCredit}
+        lang={lang}
       />
 
       <Section>

@@ -1,5 +1,14 @@
-import type { ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import PageBreadcrumb from './PageBreadcrumb';
+import ImgCredit, { type ImageCredit } from './ImgCredit';
+import type { Localized } from '../data/localized';
+
+export interface HeroVideo {
+  /** VP9 webm, no audio, ≤ 2 MB, loops. */
+  webm: string;
+  /** H.264 mp4 fallback for Safari. */
+  mp4: string;
+}
 
 interface PageHeroProps {
   eyebrow?: string;
@@ -19,9 +28,43 @@ interface PageHeroProps {
    * subject survives the portrait crop instead of showing only background.
    */
   objectPosition?: string;
+  /**
+   * Optional ambient video played over the still (Vesa 19.9.2026: "prexel saisi
+   * videoitakin revontulista upotettua, saisi tunnelmaa"). The still stays the
+   * LCP element and the only thing phones ever download: the video is fetched
+   * and shown only on viewports of 1024 px and wider, never under
+   * prefers-reduced-motion or Save-Data, and it fades in only once the browser
+   * reports it can play. Brand rule 8 forbids auto-playing backgrounds on mobile
+   * for exactly the data-cost reason this gate honours.
+   */
+  video?: HeroVideo;
+  /** Attribution for a licensed stock still (Commons / Pexels); own photos pass nothing. */
+  credit?: ImageCredit;
+  lang?: keyof Localized<string>;
 }
 
-export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, avifSrcSet, webpSrcSet, sizes, children, compact, objectPosition }: PageHeroProps) {
+function useAmbientVideoAllowed(enabled: boolean): boolean {
+  const [ok, setOk] = useState(false);
+  useEffect(() => {
+    if (!enabled || typeof window === 'undefined') return;
+    const wide = window.matchMedia('(min-width: 1024px)');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const nav = navigator as Navigator & { connection?: { saveData?: boolean } };
+    const decide = () => setOk(wide.matches && !reduced.matches && !nav.connection?.saveData);
+    decide();
+    wide.addEventListener('change', decide);
+    reduced.addEventListener('change', decide);
+    return () => {
+      wide.removeEventListener('change', decide);
+      reduced.removeEventListener('change', decide);
+    };
+  }, [enabled]);
+  return ok;
+}
+
+export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, avifSrcSet, webpSrcSet, sizes, children, compact, objectPosition, video, credit, lang }: PageHeroProps) {
+  const videoAllowed = useAmbientVideoAllowed(!!video);
+  const [videoOn, setVideoOn] = useState(false);
   return (
     <>
     <section
@@ -29,10 +72,10 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
     >
       <div className="absolute inset-0">
         {!image ? (
-          /* No photo yet for this page. Stock imagery is banned and borrowing
-             another location's picture would misrepresent it, so render the
-             house gradient instead of a broken <img>. The vignette below still
-             applies, so hero text stays readable. */
+          /* No photo yet for this page. Borrowing another location's picture
+             would misrepresent it, so render the house gradient instead of a
+             broken <img>. The vignette below still applies, so hero text stays
+             readable. */
           <div role="img" aria-label={imageAlt} className="w-full h-full bg-gradient-to-br from-[#3A2A24] via-[#1F1612] to-[#2A1F18]" />
         ) : avifSrcSet || webpSrcSet ? (
           <picture>
@@ -42,6 +85,23 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
           </picture>
         ) : (
           <img src={image} alt={imageAlt} className="w-full h-full object-cover" style={objectPosition ? { objectPosition } : undefined} loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" />
+        )}
+        {video && videoAllowed && (
+          <video
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-out motion-reduce:hidden"
+            style={{ opacity: videoOn ? 1 : 0, objectPosition: objectPosition || 'center' }}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            tabIndex={-1}
+            onCanPlay={() => setVideoOn(true)}
+          >
+            <source src={video.webm} type="video/webm" />
+            <source src={video.mp4} type="video/mp4" />
+          </video>
         )}
         {/* Base gradient. Kept light across the picture itself and only heavy at
             the very bottom, where the CTA row and the reassurance line sit. The
@@ -101,6 +161,7 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
           </div>
         )}
       </div>
+      {credit && <ImgCredit credit={credit} lang={lang || 'en'} className="bottom-2 right-2 sm:bottom-3 sm:right-3" />}
     </section>
     <PageBreadcrumb />
     </>

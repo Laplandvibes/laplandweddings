@@ -16,8 +16,7 @@ interface SEOProps {
 }
 
 const SITE = 'https://laplandweddings.online';
-const DEFAULT_IMAGE =
-  'https://mariahedengren.com/wp-content/uploads/2019/12/00-cover-lapland-wedding-kaksalauttanen-resort.jpg';
+const DEFAULT_IMAGE = 'https://laplandweddings.online/og.jpg?v=20260905'; // was a hotlink to a third-party photographer's site (19.9.2026)
 
 const SUPPORTED: Lang[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 const URL_PREFIX_OF: Record<Lang, string> = {

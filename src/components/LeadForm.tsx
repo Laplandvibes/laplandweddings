@@ -54,7 +54,7 @@ const L11: Record<'countryPlaceholder' | 'datePlaceholder' | 'venueWish' | 'venu
     es: 'Si indica un lugar, llega a los organizadores tal y como lo escribió. Nadie le intentará convencer de otro sitio.',
     'pt-BR': 'Se indicarem um local, ele chega aos organizadores exatamente como foi escrito. Ninguém vai tentar convencê-los de outro lugar.',
     'zh-CN': '若您写下场地名称，它会原样转达给策划师。不会有人劝您改选别处。',
-    fr: 'Si vous nommez un lieu, il est transmis aux wedding planners tel que vous l’avez écrit. Personne ne tentera de vous en proposer un autre.',
+    fr: 'Si vous nommez un lieu, il est transmis aux organisateurs tel que vous l’avez écrit. Personne ne tentera de vous en proposer un autre.',
     it: 'Se indica una location, arriva ai wedding planner esattamente come l’ha scritta. Nessuno proverà a dirottarLa altrove.',
     nl: 'Noemt u een locatie, dan gaat die precies zo naar de weddingplanners als u hem opschreef. Niemand praat u een andere plek aan.',
     sv: 'Om ni namnger en plats går den vidare till bröllopsplanerarna precis som ni skrev den. Ingen försöker övertala er till något annat.',

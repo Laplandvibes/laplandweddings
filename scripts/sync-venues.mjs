@@ -178,7 +178,6 @@ const TARGETS = {
   // hotels (Hotel Pyhätunturi, SKI-INN Kultakero) from being matched here again.
   'santas-hotel-aurora': { queryCity: 'Luosto, Sodankylä, Lapland, Finland', locality: ['luosto', 'sodankyla'] },
   'lapland-hotels-luostotunturi': { queryCity: 'Luosto, Sodankylä, Lapland, Finland', locality: ['luosto', 'sodankyla'] },
-  'santas-hotel-santamus': { queryCity: 'Rovaniemi, Lapland, Finland', locality: ['rovaniemi'] },
   'nova-skyland': { queryCity: 'Rovaniemi, Lapland, Finland', locality: ['rovaniemi'] },
 };
 

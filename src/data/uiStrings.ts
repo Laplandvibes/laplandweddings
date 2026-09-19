@@ -29,7 +29,7 @@ const STRINGS = {
   eyebrowPlanners: {
     en: 'Wedding planners', fi: 'Hääsuunnittelijat', de: 'Hochzeitsplaner', ja: 'ウェディングプランナー',
     es: 'Organizadores de bodas', 'pt-BR': 'Organizadores de casamento', 'zh-CN': '婚礼策划师', ko: '웨딩 플래너',
-    fr: 'Wedding planners', it: 'Wedding planner', nl: 'Trouwplanners', sv: 'Bröllopsplanerare',
+    fr: 'Organisateurs', it: 'Wedding planner', nl: 'Weddingplanners', sv: 'Bröllopsplanerare',
   },
   eyebrowPhotographers: {
     en: 'Photographers', fi: 'Valokuvaajat', de: 'Fotografen', ja: 'フォトグラファー',

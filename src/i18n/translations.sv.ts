@@ -28,9 +28,9 @@ const t_sv = {
   },
   home: {
     heroTitle: 'Bröllop i Lappland, allt på ett ställe',
-    heroSubtitle: 'Glasigloor · Snökapell · Norrsken · Midnattssol. På finska och engelska. Vi matchar dig med Lapplands mest erfarna bröllopsplanerare.',
+    heroSubtitle: 'Glasigloor · Snökapell · Norrsken · Midnattssol. På finska och engelska. Vi för din förfrågan vidare till bröllopsplanerare och vigselplatser i Lappland, gratis och utan förbindelse.',
     heroTitleSummer: 'Midnattssolsbröllop i Lappland',
-    heroSubtitleSummer: 'Löften vid sjön · Ceremonier på fjälltoppen · Glastak under en himmel som aldrig mörknar · Långa ljusa kvällar. På finska och engelska. Vi matchar dig med Lapplands mest erfarna bröllopsplanerare.',
+    heroSubtitleSummer: 'Löften vid sjön · Ceremonier på fjälltoppen · Glastak under en himmel som aldrig mörknar · Långa ljusa kvällar. På finska och engelska. Vi för din förfrågan vidare till bröllopsplanerare och vigselplatser i Lappland, gratis och utan förbindelse.',
     heroReassure: 'Gratis och utan förbindelse · svar inom 1–7 dagar',
     whyTitle: 'Varför gifta sig i Lappland',
     whyP: 'I Lappland hålls bröllop i glasigloor, snökapell och på fjälltoppar, och för det mesta är ceremonin symbolisk. Den här sajten samlar platserna, årstiderna och vad saker faktiskt kostar. Vi arrangerar inga bröllop och företräder ingen plats: ni berättar vad ni önskar, vi för det vidare till bröllopsplanerare i Lappland.',
@@ -76,7 +76,7 @@ const t_sv = {
   },
   venues: {
     indexTitle: 'Lapplands populäraste bröllopsplatser',
-    indexIntro: '21 platser där bröllop hålls i Lappland. Uppgifterna kommer från varje plats egna källor. Filtrera efter region, bröllopstyp eller prisklass.',
+    indexIntro: '20 platser där bröllop hålls i Lappland. Uppgifterna kommer från varje plats egna källor. Filtrera efter region, bröllopstyp eller prisklass.',
     filterByLocation: 'Filtrera efter region',
     filterByType: 'Filtrera efter bröllopstyp',
     filterByPrice: 'Filtrera efter prisklass',

@@ -64,6 +64,12 @@
 # merkintä (prerender-meta.mjs `top`) TAI 301 alle. Muuten build kaatuu — se
 # on tarkoitus.
 
+# 19.9.2026: "Santa's Hotel Santamus" ei ole olemassa (registeristä poistettu) → hääpaikkalista.
+/venues/santas-hotel-santamus          /venues/          301
+/venues/santas-hotel-santamus/         /venues/          301
+/:lang/venues/santas-hotel-santamus    /:lang/venues/    301
+/:lang/venues/santas-hotel-santamus/   /:lang/venues/    301
+
 # Kaksi vanhaa polkua joilla ei ole omaa sivua: React-reitit ovat
 # <Navigate to="/" replace />, eli ne ohjasivat etusivulle vasta JS:n jälkeen.
 # Ilman catch-allia suora osuma olisi 404. Palvelintason 301 on sekä nopeampi

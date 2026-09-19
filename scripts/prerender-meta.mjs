@@ -177,29 +177,29 @@ function extendFromTranslations(path, lang, current) {
 const top = {
   '/': {
     en: { title: 'Lapland Weddings 2026: Arctic Venues & Marriage Paperwork',
-          description: 'An independent guide to getting married in Lapland. 21 venues, DVV marriage paperwork, real prices and practical guides for your Arctic wedding.' },
+          description: 'An independent guide to getting married in Lapland: 20 venues, 8 regions, symbolic and legal ceremonies, real costs. We represent none of the venues.' },
     fi: { title: 'Häät Lapissa 2026: hääpaikat ja DVV-paperit',
-          description: 'Riippumaton opas häihin Lapissa. 21 hääpaikkaa, DVV-paperit, oikeat hinnat ja käytännön oppaat Lapin häihisi.' },
+          description: 'Riippumaton opas häihin Lapissa. 20 hääpaikkaa, DVV-paperit, oikeat hinnat ja käytännön oppaat Lapin häihisi.' },
     de: { title: 'Hochzeit in Lappland 2026: Locations & Heiratspapiere',
-          description: 'Unabhängiger Leitfaden zum Heiraten in Lappland. 21 Hochzeitslocations, DVV-Unterlagen, echte Preise und praktische Leitfäden.' },
+          description: 'Unabhängiger Leitfaden zum Heiraten in Lappland. 20 Hochzeitslocations, DVV-Unterlagen, echte Preise und praktische Leitfäden.' },
     ja: { title: 'ラップランドの結婚式2026：会場と婚姻手続き',
-          description: 'ラップランドでの結婚式を中立の立場でまとめたガイド。21か所の会場、DVV書類、実際の価格、実用的なガイド。' },
+          description: 'ラップランドでの結婚式を独立した立場でまとめたガイド。20か所の会場、DVV書類、実際の価格、実用的なガイド。' },
     es: { title: 'Bodas en Laponia 2026: lugares y trámites de boda',
-          description: 'Una guía independiente para casarse en Laponia. 21 lugares, trámites DVV, precios reales y guías prácticas.' },
+          description: 'Una guía independiente para casarse en Laponia. 20 lugares, trámites DVV, precios reales y guías prácticas.' },
     'pt-BR': { title: 'Casamentos na Lapônia 2026: locais e documentação',
-          description: 'Um guia independente para casar na Lapônia. 21 locais, documentação DVV, preços reais e guias práticos.' },
+          description: 'Um guia independente para casar na Lapônia. 20 locais, documentação DVV, preços reais e guias práticos.' },
     'zh-CN': { title: '拉普兰婚礼2026：婚礼场地与结婚手续',
-          description: '一份独立的拉普兰婚礼指南。21 个场地、DVV文件、真实价格和实用指南。' },
-    ko: { title: '라플란드 결혼식 2026: 베뉴와 혼인 서류',
-          description: '라플란드 결혼식을 위한 독립적인 안내서입니다. 21곳의 예식장, DVV 서류, 실제 가격과 실용적인 가이드.' },
+          description: '一份独立的拉普兰婚礼指南。20 个场地、DVV文件、真实价格和实用指南。' },
+    ko: { title: '라플란드 결혼식 2026: 예식장과 혼인 서류',
+          description: '라플란드 결혼식을 위한 독립적인 안내서입니다. 20곳의 예식장, DVV 서류, 실제 가격과 실용적인 가이드.' },
     fr: { title: 'Mariage en Laponie 2026 : lieux, prix et démarches',
-          description: 'Un guide indépendant pour se marier en Laponie. 21 lieux, démarches DVV, prix réels et guides pratiques.' },
+          description: 'Un guide indépendant pour se marier en Laponie. 20 lieux, démarches DVV, prix réels et guides pratiques.' },
     it: { title: 'Matrimonio in Lapponia 2026: location e pratiche di nozze',
-          description: 'Una guida indipendente per sposarsi in Lapponia. 21 location, pratiche DVV, prezzi reali e guide pratiche.' },
+          description: 'Una guida indipendente per sposarsi in Lapponia. 20 location, pratiche DVV, prezzi reali e guide pratiche.' },
     nl: { title: 'Trouwen in Lapland 2026: locaties en huwelijkspapieren',
-          description: 'Een onafhankelijke gids voor trouwen in Lapland. 21 locaties, DVV-papierwerk, echte prijzen en praktische gidsen.' },
+          description: 'Een onafhankelijke gids voor trouwen in Lapland. 20 locaties, DVV-papierwerk, echte prijzen en praktische gidsen.' },
     sv: { title: 'Bröllop i Lappland 2026: vigselplatser och äktenskapspapper',
-          description: 'En oberoende guide till att gifta sig i Lappland. 21 vigselplatser, DVV-papper, verkliga priser och praktiska guider för ditt bröllop i Arktis.' },
+          description: 'En oberoende guide till att gifta sig i Lappland. 20 vigselplatser, DVV-papper, verkliga priser och praktiska guider för ditt bröllop i Arktis.' },
     image: '/og.jpg?v=20260905',
   },
   '/locations': {
@@ -227,7 +227,7 @@ const top = {
           description: 'Zeven bruiloftsregio’s in Lapland plus stadsoptie Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Vergelijk seizoenen, vluchten en locaties.' },
     sv: { title: 'Bröllopsregioner i Lappland | LaplandWeddings',
           description: 'Sju bröllopsregioner i Lappland plus stadsalternativet Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Jämför säsonger, flyg och vigselplatser.' },
-    image: '/images/venues/apukka-resort.jpeg',
+    image: '/images/heroes/aurora-saana-wikilucas00.jpg',
   },
   '/wedding-types': {
     en: { title: 'Lapland Wedding Types: Aurora, Snow Chapel, Glass Igloo | LaplandWeddings',
@@ -237,7 +237,7 @@ const top = {
     de: { title: 'Hochzeitsarten in Lappland | LaplandWeddings',
           description: 'Sechs Hochzeitsarten in Lappland: Polarlicht-Hochzeit, Schneekapelle, Glasiglu, Mitternachtssonne, Elopement und Erneuerung des Eheversprechens.' },
     ja: { title: 'ラップランドの結婚式タイプ：オーロラ、雪の礼拝堂、グラスイグルー | LaplandWeddings',
-          description: 'ラップランドの6つの結婚式タイプ:オーロラ、雪の礼拝堂、グラスイグルー、白夜、エロープメント、誓いの更新。' },
+          description: 'ラップランドの6つの結婚式タイプ：オーロラ、雪の礼拝堂、グラスイグルー、白夜、エロープメント、誓いの更新。' },
     es: { title: 'Tipos de boda en Laponia | LaplandWeddings',
           description: 'Seis tipos de boda en Laponia: auroras boreales, capilla de nieve, iglú de cristal, sol de medianoche, fuga y renovación de votos.' },
     'pt-BR': { title: 'Tipos de casamento na Lapônia | LaplandWeddings',
@@ -253,30 +253,30 @@ const top = {
     nl: { title: 'Bruiloftstypes in Lapland | LaplandWeddings',
           description: 'Zeven bruiloftstypes in Lapland: noorderlicht, sneeuwkapel, glaziglo, middernachtszon, eloperen en geloftehernieuwing.' },
     sv: { title: 'Bröllopstyper i Lappland | LaplandWeddings',
-          description: 'Sex bröllopstyper i Lappland: norrsken, snökapell, glasigloo, midnattssol, rymningsbröllop och förnyade löften.' },
+          description: 'Sex bröllopstyper i Lappland: norrsken, snökapell, glasigloo, midnattssol, elopement och förnyade löften.' },
     image: '/og.jpg?v=20260905',
   },
   '/venues': {
-    en: { title: 'Lapland Wedding Venues: 21 venues | LaplandWeddings',
+    en: { title: 'Lapland Wedding Venues: 20 venues | LaplandWeddings',
           description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village and more. 21 Lapland wedding venues across the regions.' },
     fi: { title: 'Hääpaikat Lapissa | LaplandWeddings',
-          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village ja muita. 21 hääpaikkaa Lapin paikkakunnilla.' },
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village ja muita. 20 hääpaikkaa Lapin paikkakunnilla.' },
     de: { title: 'Hochzeitslocations in Lappland | LaplandWeddings',
-          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village und viele mehr. 21 Hochzeitslocations in Lappland.' },
-    ja: { title: 'ラップランドの結婚式会場：21か所 | LaplandWeddings',
-          description: 'カクスラウッタネン、ノーザンライツランチ、アークティックスノーホテル、スノービレッジなど。地域を横断する21か所の結婚式会場。' },
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village und viele mehr. 20 Hochzeitslocations in Lappland.' },
+    ja: { title: 'ラップランドの結婚式会場：20か所 | LaplandWeddings',
+          description: 'Kakslauttanen、Northern Lights Ranch、Arctic SnowHotel、Snow Villageなど。地域を横断する20か所の結婚式会場。' },
     es: { title: 'Lugares para bodas en Laponia | LaplandWeddings',
-          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village y muchos más. 21 lugares de boda en las regiones de Laponia.' },
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village y muchos más. 20 lugares de boda en las regiones de Laponia.' },
     'pt-BR': { title: 'Locais para casamento na Lapônia | LaplandWeddings',
-          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e muitos outros. 21 locais de casamento nas regiões da Lapônia.' },
-    'zh-CN': { title: '拉普兰婚礼场地：21 个场地 | LaplandWeddings',
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e muitos outros. 20 locais de casamento nas regiões da Lapônia.' },
+    'zh-CN': { title: '拉普兰婚礼场地：20 个场地 | LaplandWeddings',
           description: '卡克斯劳塔宁、北极光牧场、北极雪酒店、雪村等。覆盖各地区的21 个拉普兰婚礼场地。' },
-    ko: { title: '라플란드 예식장 21곳 | LaplandWeddings',
-          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village 외. 라플란드 전역에 걸친 21곳의 예식장입니다.' },
+    ko: { title: '라플란드 예식장 20곳 | LaplandWeddings',
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village 외. 라플란드 전역에 걸친 20곳의 예식장입니다.' },
     fr: { title: 'Lieux de mariage en Laponie | LaplandWeddings',
-          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village et bien d’autres. 21 lieux de mariage dans toute la Laponie.' },
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village et bien d’autres. 20 lieux de mariage dans toute la Laponie.' },
     it: { title: 'Location di matrimonio in Lapponia | LaplandWeddings',
-          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e molte altre. 21 location di matrimonio nelle regioni della Lapponia.' },
+          description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e molte altre. 20 location di matrimonio nelle regioni della Lapponia.' },
     nl: { title: 'Bruiloftslocaties in Lapland | LaplandWeddings',
           description: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 21 bruiloftslocaties in heel Lapland.' },
     sv: { title: 'Bröllopsplatser i Lappland | LaplandWeddings',
@@ -284,31 +284,33 @@ const top = {
     image: '/images/venues/kakslauttanen.jpg',
   },
   '/photographers': {
-    en: { title: 'Lapland Wedding Photographers: Hedengren, Goodlad et al. | LaplandWeddings',
-          description: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos. Proven in the cold.' },
-    fi: { title: 'Lapin häävalokuvaajat | LaplandWeddings',
-          description: 'Kuusi Lapin parasta häävalokuvaajaa. Revontulet, lumikappelit, lasi-iglut. Testattu pakkasessa.' },
-    de: { title: 'Hochzeitsfotografen in Lappland | LaplandWeddings',
-          description: 'Sechs der besten Hochzeitsfotografen Lapplands. Polarlichter, Schneekapellen, Glasiglus. Erprobt in der Kälte.' },
-    ja: { title: 'ラップランドの写真家：Maria Hedengren、Robin Goodlad | LaplandWeddings',
-          description: 'ラップランドで活躍する6名のウェディングフォトグラファー。オーロラ、雪の礼拝堂、グラスイグルー。極寒の地で実績あり。' },
-    es: { title: 'Fotógrafos de bodas en Laponia | LaplandWeddings',
-          description: 'Seis de los mejores fotógrafos de bodas en Laponia. Auroras boreales, capillas de nieve, iglús de cristal. Probados en el frío.' },
-    'pt-BR': { title: 'Fotógrafos de casamento na Lapônia | LaplandWeddings',
-          description: 'Seis dos melhores fotógrafos de casamento da Lapônia. Aurora boreal, capelas de neve, iglus de vidro. Testados no frio.' },
-    'zh-CN': { title: '拉普兰婚礼摄影师：Maria Hedengren、Robin Goodlad 等 | LaplandWeddings',
-          description: '拉普兰最佳婚礼摄影师中的六位。北极光、雪教堂、玻璃冰屋。在严寒中久经考验。' },
-    ko: { title: '라플란드 사진작가: Maria Hedengren, Robin Goodlad | LaplandWeddings',
-          description: '라플란드 최고의 웨딩 사진작가 6인. 오로라, 스노우 채플, 글래스 이글루. 혹한 속에서 검증되었습니다.' },
-    fr: { title: 'Photographes de mariage en Laponie | LaplandWeddings',
-          description: 'Six des meilleurs photographes de mariage en Laponie. Aurores boréales, chapelles de neige, igloos de verre. Éprouvés par le froid.' },
-    it: { title: 'Fotografi di matrimonio in Lapponia | LaplandWeddings',
-          description: 'Sei fotografi di matrimonio tra i migliori della Lapponia. Aurora boreale, cappelle di neve, igloo di vetro. Collaudati nel freddo.' },
-    nl: { title: 'Bruiloftsfotografen in Lapland | LaplandWeddings',
-          description: 'Zes van de beste bruiloftsfotografen in Lapland. Noorderlicht, sneeuwkapellen, glaziglo’s. Beproefd in de kou.' },
-    sv: { title: 'Bröllopsfotografer i Lappland | LaplandWeddings',
-          description: 'Sex av de bästa bröllopsfotograferna i Lappland. Norrsken, snökapell, glasigloor. Beprövade i kylan.' },
-    image: '/images/types/elopement.jpg',
+    // 19.9.2026: the named-photographer directory was retired (no agreements, free referrals);
+    // the page is now a guide. Same strings as src/pages/Photographers.tsx P.seoTitle/seoDesc.
+    en: { title: 'Wedding Photography in Lapland: Costs, Questions, Timing | LaplandWeddings',
+          description: 'What a wedding photographer costs in Lapland, four questions to ask before booking, and when the winter dates fill up. Independent guide, no photographer represented.' },
+    fi: { title: 'Hääkuvaus Lapissa: hinnat, kysymykset ja ajoitus | LaplandWeddings',
+          description: 'Mitä hääkuvaaja maksaa Lapissa, neljä kysymystä ennen varausta ja milloin talven päivät täyttyvät. Riippumaton opas, emme edusta yhtäkään kuvaajaa.' },
+    de: { title: 'Hochzeitsfotografie in Lappland: Kosten, Fragen, Zeitplan | LaplandWeddings',
+          description: 'Was ein Hochzeitsfotograf in Lappland kostet, vier Fragen vor der Buchung und wann die Wintertermine voll sind. Unabhängiger Leitfaden, wir vertreten keinen Fotografen.' },
+    ja: { title: 'フィンランド・ラップランドでフォトウェディング：費用と準備 | LaplandWeddings',
+          description: 'ラップランドの結婚式撮影の費用、予約前に確認したい4つの質問、冬の日程が埋まる時期。独立した立場のガイドで、特定のフォトグラファーを代理していません。' },
+    es: { title: 'Fotografía de boda en Laponia: costos, preguntas y fechas | LaplandWeddings',
+          description: 'Cuánto cuesta un fotógrafo de boda en Laponia, cuatro preguntas antes de reservar y cuándo se agotan las fechas de invierno. Guía independiente, no representamos a ningún fotógrafo.' },
+    'pt-BR': { title: 'Fotografia de casamento na Lapônia: custos, perguntas e datas | LaplandWeddings',
+          description: 'Quanto custa um fotógrafo de casamento na Lapônia, quatro perguntas antes de reservar e quando as datas de inverno esgotam. Guia independente, não representamos nenhum fotógrafo.' },
+    'zh-CN': { title: '拉普兰婚礼摄影：费用、问题与时间 | LaplandWeddings',
+          description: '拉普兰婚礼摄影师的费用、预订前要问的四个问题，以及冬季档期何时订满。独立指南，不代理任何摄影师。' },
+    ko: { title: '라플란드 웨딩 촬영: 비용, 질문, 예약 시기 | LaplandWeddings',
+          description: '라플란드 웨딩 촬영 비용, 예약 전 확인할 네 가지 질문, 겨울 날짜가 마감되는 시기. 독립적인 안내서이며 어떤 포토그래퍼도 대리하지 않습니다.' },
+    fr: { title: 'Photographe de mariage en Laponie : tarifs, questions, calendrier | LaplandWeddings',
+          description: 'Ce que coûte un photographe de mariage en Laponie, quatre questions à poser avant de réserver et quand les dates d’hiver se remplissent. Guide indépendant, aucun photographe représenté.' },
+    it: { title: 'Fotografo di matrimonio in Lapponia: costi, domande, tempi | LaplandWeddings',
+          description: 'Quanto costa un fotografo di matrimonio in Lapponia, quattro domande da fare prima di prenotare e quando si esauriscono le date invernali. Guida indipendente, nessun fotografo rappresentato.' },
+    nl: { title: 'Trouwfotografie in Lapland: kosten, vragen, timing | LaplandWeddings',
+          description: 'Wat een trouwfotograaf in Lapland kost, vier vragen om te stellen voor u boekt en wanneer de winterdata vol raken. Onafhankelijke gids, wij vertegenwoordigen geen fotograaf.' },
+    sv: { title: 'Bröllopsfotograf i Lappland: kostnad, frågor, tidpunkt | LaplandWeddings',
+          description: 'Vad en bröllopsfotograf kostar i Lappland, fyra frågor att ställa innan du bokar och när vinterdatumen tar slut. Oberoende guide, vi företräder ingen fotograf.' },
+    image: '/images/heroes/aurora-levi-bands-rasanen.jpg',
   },
   '/practical-guide': {
     en: { title: 'Getting Married in Lapland: DVV paperwork and officiants | LaplandWeddings',
@@ -317,8 +319,8 @@ const top = {
           description: 'Käytännön opas ulkomaalaisille pareille: DVV-paperit, esteiden tutkinta (3–5 vk), todistajat, vihkijä, kotimaan rekisteröinti.' },
     de: { title: 'Heiraten in Lappland | LaplandWeddings',
           description: 'Praktischer Leitfaden für ausländische Paare: DVV-Unterlagen, Ehefähigkeitsprüfung (3–5 Wochen), Trauzeugen, Trauredner, Registrierung im Heimatland.' },
-    ja: { title: 'ラップランドで結婚：DVV書類、立会人、実用ガイド | LaplandWeddings',
-          description: '外国人カップル向け実用ガイド:DVV書類、婚姻障害審査(3〜5週間)、証人、立会人、母国での登録。' },
+    ja: { title: 'ラップランドで結婚：DVV書類、婚姻執行者、実用ガイド | LaplandWeddings',
+          description: '外国人カップル向け実用ガイド：DVV書類、婚姻障害審査（3〜5週間）、証人、婚姻執行者、母国での登録。' },
     es: { title: 'Casarse en Laponia | LaplandWeddings',
           description: 'Guía práctica para parejas extranjeras: trámites DVV, examen de impedimentos (3–5 semanas), testigos, oficiante, registro en el país de origen.' },
     'pt-BR': { title: 'Casamento na Lapônia | LaplandWeddings',
@@ -342,11 +344,11 @@ const top = {
           description: 'What does a wedding in Lapland cost? Our smallest budget is EUR 5,000. What that covers, what pushes the number up, and price ranges for each part of the day.' },
     fi: { title: 'Häiden hinta Lapissa: alkaen 5 000 € | LaplandWeddings',
           description: 'Mitä häät Lapissa maksavat? Pienin realistinen budjetti on 5 000 €. Mitä se kattaa, mikä summaa nostaa ja hintahaarukat päivän jokaiselle osalle.' },
-    de: { title: 'Hochzeitskosten in Lappland: ab 5 000 € | LaplandWeddings',
-          description: 'Was kostet eine Hochzeit in Lappland? Unser kleinstes Budget sind 5 000 €. Was darin enthalten ist, was die Summe erhöht, und Preisspannen pro Posten.' },
+    de: { title: 'Hochzeitskosten in Lappland: ab 5.000 € | LaplandWeddings',
+          description: 'Was kostet eine Hochzeit in Lappland? Unser kleinstes Budget sind 5.000 €. Was darin enthalten ist, was die Summe erhöht, und Preisspannen pro Posten.' },
     ja: { title: 'ラップランドの結婚式費用：5,000ユーロから | LaplandWeddings',
           description: 'ラップランドの結婚式はいくら？当サイトが承る最小のご予算は5,000ユーロです。その内訳、費用が上がる要因、そして各項目の価格帯をご紹介します。' },
-    es: { title: 'Coste de una boda en Laponia: desde 5 000 € | LaplandWeddings',
+    es: { title: 'Costo de una boda en Laponia: desde 5 000 € | LaplandWeddings',
           description: '¿Cuánto cuesta una boda en Laponia? Nuestro presupuesto mínimo son 5 000 €. Qué incluye, qué eleva la cifra y rangos de precio para cada parte del día.' },
     'pt-BR': { title: 'Custo de casamento na Lapônia: a partir de € 5.000 | LaplandWeddings',
           description: 'Quanto custa um casamento na Lapônia? Nosso orçamento mínimo é de € 5.000. O que ele cobre, o que aumenta o valor e faixas de preço para cada parte do dia.' },
@@ -355,9 +357,9 @@ const top = {
     ko: { title: '라플란드 결혼식 비용: 5,000유로부터 | LaplandWeddings',
           description: '라플란드 결혼식 비용은 얼마일까요? 저희가 확인한 현실적인 최소 예산은 5,000유로입니다. 그 안에 무엇이 포함되는지, 무엇이 금액을 높이는지, 그리고 항목별 가격대를 정리했습니다.' },
     fr: { title: 'Coût d’un mariage en Laponie : à partir de 5 000 € | LaplandWeddings',
-          description: 'Combien coûte un mariage en Laponie ? Notre budget minimum est de 5 000 €. Ce qu’il couvre, ce qui fait grimper le chiffre, et les fourchettes de prix pour chaque poste.' },
-    it: { title: 'Costi matrimonio in Lapponia: da 5 000 € | LaplandWeddings',
-          description: 'Quanto costa un matrimonio in Lapponia? Il nostro budget minimo è di 5 000 €. Cosa comprende, cosa fa salire la cifra e le fasce di prezzo per ogni voce.' },
+          description: 'Combien coûte un mariage en Laponie ? Budget minimum : 5 000 €. Ce qui est inclus, ce qui fait grimper le prix, et les fourchettes par poste.' },
+    it: { title: 'Costi matrimonio in Lapponia: da 5.000 € | LaplandWeddings',
+          description: 'Quanto costa un matrimonio in Lapponia? Il nostro budget minimo è di 5.000 €. Cosa comprende, cosa fa salire la cifra e le fasce di prezzo per ogni voce.' },
     nl: { title: 'Bruiloftskosten in Lapland: vanaf € 5.000 | LaplandWeddings',
           description: 'Wat kost een bruiloft in Lapland? Ons kleinste budget is € 5.000. Wat dat dekt, wat het bedrag omhoog duwt en prijsranges voor elk onderdeel van de dag.' },
     sv: { title: 'Bröllopskostnader i Lappland: från 5 000 € | LaplandWeddings',
@@ -371,7 +373,7 @@ const top = {
           description: 'Yksisivuinen DVV-tarkistuslista ulkomaalaisille pareille, jotka aikovat vihille Suomen Lapissa. Printtaa tai tallenna PDF:nä.' },
     de: { title: 'DVV-Checkliste für ausländische Paare | LaplandWeddings',
           description: 'Einseitige DVV-Checkliste zur Heiratserlaubnis für ausländische Paare, die in Finnisch-Lappland heiraten. Drucken oder als PDF speichern.' },
-    ja: { title: '外国人カップル向けDVV結婚式チェックリスト(印刷可PDF) | LaplandWeddings',
+    ja: { title: '外国人カップル向けDVV結婚式チェックリスト（印刷可PDF） | LaplandWeddings',
           description: 'フィンランドのラップランドで結婚を計画する外国人カップルのための1ページDVV婚姻許可チェックリスト。印刷またはPDF保存。' },
     es: { title: 'Lista DVV para parejas extranjeras | LaplandWeddings',
           description: 'Lista de comprobación DVV de una página para parejas extranjeras que planifican su boda en la Laponia finlandesa. Imprima o guarde en PDF.' },
@@ -379,7 +381,7 @@ const top = {
           description: 'Checklist DVV de uma página para casais estrangeiros que planejam o casamento na Lapônia finlandesa. Imprima ou salve em PDF.' },
     'zh-CN': { title: '外国情侣DVV婚礼清单(可打印PDF) | LaplandWeddings',
           description: '为计划在芬兰拉普兰举行婚礼的外国情侣准备的一页式DVV结婚证清单。可打印或另存为PDF。' },
-    ko: { title: '외국인 커플을 위한 DVV 결혼식 체크리스트 (인쇄용 PDF) | LaplandWeddings',
+    ko: { title: '외국인 커플을 위한 DVV 결혼식 체크리스트(인쇄용 PDF) | LaplandWeddings',
           description: '핀란드 라플란드에서 결혼식을 계획하는 외국인 커플을 위한 한 페이지 분량의 DVV 혼인 허가 체크리스트. 인쇄하거나 PDF으로 저장하실 수 있습니다.' },
     fr: { title: 'Liste DVV pour couples étrangers | LaplandWeddings',
           description: 'Liste de contrôle DVV d’une page pour les couples étrangers qui planifient un mariage en Laponie finlandaise. Imprimez ou enregistrez en PDF.' },
@@ -429,7 +431,7 @@ const top = {
     es: { title: 'Política de cookies y consentimiento | LaplandWeddings', description: 'Qué cookies utiliza laplandweddings.online, para qué sirven, cuánto duran y cómo gestionar o retirar su consentimiento en cualquier momento.' },
     'pt-BR': { title: 'Política de cookies | LaplandWeddings', description: 'Quais cookies o laplandweddings.online usa, para que servem, por quanto tempo ficam e como gerenciar ou retirar seu consentimento a qualquer momento.' },
     'zh-CN': { title: 'Cookie 政策 | LaplandWeddings', description: 'laplandweddings.online 使用哪些 Cookie、各自的用途是什么、会保存多长时间，以及您如何随时更改或撤回自己的同意。' },
-    ko: { title: '쿠키 정책 | LaplandWeddings', description: 'laplandweddings.online 이 사용하는 쿠키의 종류와 목적, 보관 기간, 그리고 언제든지 동의를 변경하거나 철회하는 방법을 안내합니다.' },
+    ko: { title: '쿠키 정책 | LaplandWeddings', description: 'laplandweddings.online이 사용하는 쿠키의 종류와 목적, 보관 기간, 그리고 언제든지 동의를 변경하거나 철회하는 방법을 안내합니다.' },
     fr: { title: 'Politique relative aux cookies | LaplandWeddings', description: 'Quels cookies laplandweddings.online utilise, à quoi ils servent, combien de temps ils sont conservés et comment modifier ou retirer votre consentement.' },
     it: { title: 'Informativa sui cookie | LaplandWeddings', description: 'Quali cookie utilizza laplandweddings.online, a cosa servono, quanto durano e come modificare o revocare il consenso in qualsiasi momento.' },
     nl: { title: 'Cookiebeleid | LaplandWeddings', description: 'Welke cookies laplandweddings.online plaatst, waarvoor ze dienen, hoe lang ze bewaard blijven en hoe u uw toestemming op elk moment kunt wijzigen of intrekken.' },
@@ -439,32 +441,30 @@ const top = {
 };
 
 const locations = [
-  { slug: 'rovaniemi', en: { name: 'Rovaniemi', desc: 'The capital of Lapland, easiest to reach via international flights. Wedding venues from ice chapel to glass igloos near Santa Claus Village.' }, fi: { name: 'Rovaniemi', desc: 'Lapin pääkaupunki, helpoin saavuttaa kansainvälisen lennon kautta. Hääpaikkoja jääkappelista lasi-igluihin Joulupukin pajakylän tuntumassa.' }, img: '/images/venues/arctic-treehouse.jpg' },
-  { slug: 'saariselka', en: { name: 'Saariselkä & Inari', desc: 'The heart of Northern Lapland: aurora on average every other night (FMI) and Kakslauttanen’s glass teepee chapel.' }, fi: { name: 'Saariselkä & Inari', desc: 'Pohjois-Lapin sydän: revontulia keskimäärin joka toisena yönä (IL) ja Kakslauttasen lasi-teepee-kappeli.' }, img: '/images/venues/kakslauttanen.jpg' },
-  { slug: 'levi', en: { name: 'Levi & Kittilä', desc: 'Finland’s largest fell resort: Lainio Snow Village, Northern Lights Ranch Snow Chapel, direct flights from London.' }, fi: { name: 'Levi & Kittilä', desc: 'Suomen suurin tunturikeskus: Lainion lumikylä, Northern Lights Ranchin lumikappeli, suorat lennot Lontoosta.' }, img: '/images/venues/northern-lights-ranch.webp' },
-  { slug: 'yllas', en: { name: 'Ylläs', desc: 'Quieter than Levi: Lapland’s cleanest air, Saaga’s wedding-friendly spa hotel, easy reach to Lainio Snow Village.' }, fi: { name: 'Ylläs', desc: 'Levin hiljaisempi naapuri: Lapin puhtainta ilmaa, Saagan häihin sopiva spa-hotelli, lyhyt matka Lainion lumikylään.' }, img: '/images/venues/lapland-hotels-saaga.jpg' },
-  { slug: 'pyha-luosto', en: { name: 'Pyhä-Luosto', desc: 'The quieter side of eastern Lapland: two hotels in the Luosto log village on the edge of Pyhä-Luosto National Park.' }, fi: { name: 'Pyhä-Luosto', desc: 'Itä-Lapin hiljaisempi puoli: kaksi hotellia Luoston hirsikylässä Pyhä-Luoston kansallispuiston laidalla.' }, img: '/images/locations/pyha-luosto.jpg' },
-  { slug: 'kilpisjarvi', en: { name: 'Kilpisjärvi', desc: 'Finland’s highest ground, in its far north-western corner: Tundrea’s glass igloos and the three-country border ceremony.' }, fi: { name: 'Kilpisjärvi', desc: 'Suomen korkeimmat maastot maan luoteiskolkassa: Tundrean lasi-iglut ja kolmen valtakunnan rajavihkiminen.' }, img: '/images/venues/tundrea-kilpisjarvi.jpg' },
-  { slug: 'oulu', en: { name: 'Oulu', desc: 'The big-city option on the way to Lapland, Finland’s fifth-largest city on the Bothnian Bay coast. City wedding nights with restaurants and nightlife, direct flights from Helsinki in about an hour.' }, fi: { name: 'Oulu', desc: 'Kaupunkivaihtoehto matkalla Lappiin, Suomen viidenneksi suurin kaupunki Perämeren rannalla. Kaupunkimainen hääilta ravintoloineen ja yöelämineen, suorat lennot Helsingistä noin tunnissa.' }, img: '/images/locations/oulu.jpg' },
-  // No `img`: Kemijärvi has no photo of its own yet, and the site falls back to
-  // the default OG image rather than borrowing another region's picture.
-  { slug: 'kemijarvi', en: { name: 'Kemijärvi', desc: 'Finland’s northernmost town, in eastern Lapland: a centre wrapped in lake, 7,029 residents, and a direct train from Helsinki. Five fells within driving distance.' }, fi: { name: 'Kemijärvi', desc: 'Suomen pohjoisin kaupunki Itä-Lapissa: järven ympäröimä keskusta, 7 029 asukasta ja suora junayhteys Helsingistä. Viisi tunturia ajomatkan päässä.' } },
+  { slug: 'rovaniemi', en: { name: 'Rovaniemi', desc: 'The capital of Lapland, easiest to reach via international flights. Wedding venues from ice chapel to glass igloos near Santa Claus Village.' }, fi: { name: 'Rovaniemi', desc: 'Lapin pääkaupunki, helpoin saavuttaa kansainvälisen lennon kautta. Hääpaikkoja jääkappelista lasi-igluihin Joulupukin pajakylän tuntumassa.' }, img: '/images/own/rovaniemi-santa-claus-village-summer.webp' },
+  { slug: 'saariselka', en: { name: 'Saariselkä & Inari', desc: 'The heart of Northern Lapland: aurora on average every other night (FMI) and Kakslauttanen’s glass teepee chapel.' }, fi: { name: 'Saariselkä & Inari', desc: 'Pohjois-Lapin sydän: revontulia keskimäärin joka toisena yönä (Ilmatieteen laitos) ja Kakslauttasen lasi-teepee-kappeli.' }, img: '/images/stock/loc-saariselka-kaunispaa-rasanen.webp' },
+  { slug: 'levi', en: { name: 'Levi & Kittilä', desc: 'Finland’s largest fell resort: Lainio Snow Village, Northern Lights Ranch Snow Chapel, direct flights from London.' }, fi: { name: 'Levi & Kittilä', desc: 'Suomen suurin tunturikeskus: Lainion lumikylä, Northern Lights Ranchin lumikappeli, suorat lennot Lontoosta.' }, img: '/images/own/levi-slopes-summer.webp' },
+  { slug: 'yllas', en: { name: 'Ylläs', desc: 'Quieter than Levi: Lapland’s cleanest air, Saaga’s wedding-friendly spa hotel, easy reach to Lainio Snow Village.' }, fi: { name: 'Ylläs', desc: 'Levin hiljaisempi naapuri: Lapin puhtainta ilmaa, Saagan häihin sopiva spa-hotelli, lyhyt matka Lainion lumikylään.' }, img: '/images/own/yllas-reindeer-akaslompolo-summer.webp' },
+  { slug: 'pyha-luosto', en: { name: 'Pyhä-Luosto', desc: 'The quieter side of eastern Lapland: two hotels in the Luosto log village on the edge of Pyhä-Luosto National Park.' }, fi: { name: 'Pyhä-Luosto', desc: 'Itä-Lapin hiljaisempi puoli: kaksi hotellia Luoston hirsikylässä Pyhä-Luoston kansallispuiston laidalla.' }, img: '/images/own/pyha-chairlift-panorama-summer.webp' },
+  { slug: 'kilpisjarvi', en: { name: 'Kilpisjärvi', desc: 'Finland’s highest ground, in its far north-western corner: Tundrea’s glass igloos and the three-country border ceremony.' }, fi: { name: 'Kilpisjärvi', desc: 'Suomen korkeimmat maastot maan luoteiskolkassa: Tundrean lasi-iglut ja kolmen valtakunnan rajavihkiminen.' }, img: '/images/stock/loc-kilpisjarvi-saana-rasanen.webp' },
+  { slug: 'oulu', en: { name: 'Oulu', desc: 'The big-city option on the way to Lapland, Finland’s fifth-largest city on the Bothnian Bay coast. City wedding nights with restaurants and nightlife, direct flights from Helsinki in about an hour.' }, fi: { name: 'Oulu', desc: 'Kaupunkivaihtoehto matkalla Lappiin, Suomen viidenneksi suurin kaupunki Perämeren rannalla. Kaupunkimainen hääilta ravintoloineen ja yöelämineen, suorat lennot Helsingistä noin tunnissa.' }, img: '/images/stock/loc-oulu-hupisaaret-estormiz.webp' },
+  { slug: 'kemijarvi', en: { name: 'Kemijärvi', desc: 'Finland’s northernmost town, in eastern Lapland: a centre wrapped in lake, 7,029 residents, and a direct train from Helsinki. Five fells within driving distance.' }, fi: { name: 'Kemijärvi', desc: 'Suomen pohjoisin kaupunki Itä-Lapissa: järven ympäröimä keskusta, 7 029 asukasta ja suora junayhteys Helsingistä. Viisi tunturia ajomatkan päässä.' }, img: '/images/own/kemijarvi-mirror-lake-evening.webp' },
 ];
 
 const types = [
-  { slug: 'northern-lights', en: { name: 'Northern Lights Wedding', desc: 'Exchange vows under the aurora borealis: Northern Lapland sees aurora on average every other night (FMI).' }, fi: { name: 'Revontulihäät', desc: 'Vihkiminen revontulien alla: Pohjois-Lapissa revontulia nähdään keskimäärin joka toisena yönä (IL).' }, img: '/images/types/northern-lights.jpg' },
-  { slug: 'snow-chapel', en: { name: 'Snow Chapel Wedding', desc: 'Marry in a chapel carved from pure snow and ice: Lainio, Northern Lights Ranch, Arctic SnowHotel and Levi Ice Castle.' }, fi: { name: 'Lumikappelihäät', desc: 'Vihille puhtaaksi veistetyssä lumi- tai jääkappelissa: Lainio, Northern Lights Ranch, Arctic SnowHotel ja Levin jäälinna.' }, img: '/images/types/snow-chapel.jpg' },
+  { slug: 'northern-lights', en: { name: 'Northern Lights Wedding', desc: 'Exchange vows under the aurora borealis: Northern Lapland sees aurora on average every other night (FMI).' }, fi: { name: 'Revontulihäät', desc: 'Vihkiminen revontulien alla: Pohjois-Lapissa revontulia nähdään keskimäärin joka toisena yönä (Ilmatieteen laitos).' }, img: '/images/stock/type-northern-lights-inari-rasanen.webp' },
+  { slug: 'snow-chapel', en: { name: 'Snow Chapel Wedding', desc: 'Marry in a chapel carved from pure snow and ice: Lainio, Northern Lights Ranch, Arctic SnowHotel and Levi Ice Castle.' }, fi: { name: 'Lumikappelihäät', desc: 'Vihille puhtaaksi veistetyssä lumi- tai jääkappelissa: Lainio, Northern Lights Ranch, Arctic SnowHotel ja Levin jäälinna.' }, img: '/images/stock/type-snow-chapel-kemi-lumilinna.webp' },
   { slug: 'glass-igloo', en: { name: 'Glass Igloo Wedding', desc: 'Wedding night beneath the Northern Lights in a heated glass dome: Kakslauttanen, Levin Iglut, Apukka.' }, fi: { name: 'Lasi-iglu-häät', desc: 'Hääyö revontulien alla lämpimässä lasikuvussa: Kakslauttanen, Levin Iglut, Apukka.' }, img: '/images/venues/kakslauttanen.jpg' },
-  { slug: 'midnight-sun', en: { name: 'Midnight Sun Wedding', desc: 'Marry when the sun never sets: May 23 to July 24, warm weather, no snow gear needed.' }, fi: { name: 'Keskiyön auringon häät', desc: 'Vihille kun aurinko ei laske: 23.5.–24.7., lämmin sää, ei lumipukuja.' }, img: '/images/types/midnight-sun.jpg' },
-  { slug: 'elopement', en: { name: 'Lapland Elopement', desc: 'Just the two of you, the officiant and a photographer. Turnkey packages from €1 600.' }, fi: { name: 'Elopement Lapissa: kahdestaan vihille', desc: 'Pelkästään te kaksi, vihkijä ja valokuvaaja. Avaimet käteen -paketit alkaen 1 600 €.' }, img: '/images/types/elopement.jpg' },
-  { slug: 'vow-renewal', en: { name: 'Vow Renewal in Lapland', desc: 'Renew your vows in the Lapland snow: no paperwork, fully bespoke ceremony.' }, fi: { name: 'Lupausten uusiminen Lapissa', desc: 'Uudistakaa lupauksenne Lapin lumessa: ei papereita, täysin räätälöity seremonia.' }, img: '/images/types/vow-renewal.jpg' },
+  { slug: 'midnight-sun', en: { name: 'Midnight Sun Wedding', desc: 'Marry when the sun never sets: May 23 to July 24, warm weather, no snow gear needed.' }, fi: { name: 'Keskiyön auringon häät', desc: 'Vihille kun aurinko ei laske: 23.5.–24.7., lämmin sää, ei lumipukuja.' }, img: '/images/stock/type-midnight-sun-utsjoki-maasaak.webp' },
+  { slug: 'elopement', en: { name: 'Lapland Elopement', desc: 'Just the two of you, the officiant and a photographer. Turnkey packages from €1 600.' }, fi: { name: 'Elopement Lapissa: kahdestaan vihille', desc: 'Pelkästään te kaksi, vihkijä ja valokuvaaja. Avaimet käteen -paketit alkaen 1 600 €.' }, img: '/images/stock/type-elopement-px10757612.webp' },
+  { slug: 'vow-renewal', en: { name: 'Vow Renewal in Lapland', desc: 'Renew your vows in the Lapland snow: no paperwork, fully bespoke ceremony.' }, fi: { name: 'Lupausten uusiminen Lapissa', desc: 'Uudistakaa lupauksenne Lapin lumessa: ei papereita, täysin räätälöity seremonia.' }, img: '/images/stock/type-vow-renewal-px5215946.webp' },
 ];
 
 const venues = [
   { slug: 'kakslauttanen', name: 'Kakslauttanen Arctic Resort', en: { region: 'Saariselkä', desc: 'Finland’s most famous glass igloo resort. Glass Teepee chapel, ice chapel, log chapel, and 250-guest Celebration House.' }, fi: { region: 'Saariselkä', desc: 'Suomen kuuluisin lasi-iglu-resortti. Glass Teepee -kappeli, jääkappeli, hirsikappeli ja 250 hengen Celebration House.' }, img: '/images/venues/kakslauttanen.jpg' },
   { slug: 'arctic-snowhotel', name: 'Arctic SnowHotel & Glass Igloos', en: { region: 'Lehtojärvi · 35 km from Rovaniemi', desc: 'Snow Hotel with ice chapel for 30 guests, ice restaurant, and glass igloos with 360° aurora view.' }, fi: { region: 'Lehtojärvi · 35 km Rovaniemestä', desc: 'Snow Hotel jossa jääkappeli 30 vieraalle, jääravintola ja lasi-iglut 360°-revontulinäkymällä.' }, img: '/images/venues/arctic-snowhotel.jpg' },
   { slug: 'snow-village-lainio', name: 'Lapland Hotels SnowVillage (Lainio)', en: { region: 'Lainio, Kittilä', desc: 'An internationally known Snow Village, rebuilt every winter with a new artistic theme. Ice chapel, wooden chapel, snow suites.' }, fi: { region: 'Lainio, Kittilä', desc: 'Maailmankuulu Snow Village, uusi taideteema joka talvi. Jääkappeli, puukappeli, lumisviittejä.' }, img: '/images/venues/snow-village-lainio.jpg' },
-  { slug: 'northern-lights-ranch', name: 'Northern Lights Ranch', en: { region: 'Köngäs · 15 min from Levi', desc: 'Premium luxury resort with glass-walled cabins and a Snow Chapel for 60 guests.' }, fi: { region: 'Köngäs · 15 min Levistä', desc: 'Luksustason resort lasiseinämökeillä ja 60 hengen lumikappelilla.' }, img: '/images/venues/northern-lights-ranch.webp' },
+  { slug: 'northern-lights-ranch', name: 'Northern Lights Ranch', en: { region: 'Köngäs · 15 min from Levi', desc: 'Premium luxury resort with glass-walled cabins and a Snow Chapel for 60 guests.' }, fi: { region: 'Köngäs · 15 min Levistä', desc: 'Premium-tason resortti Köngäksessä: lasiseinämökit ja 60 hengen lumikappeli.' }, img: '/images/venues/northern-lights-ranch.webp' },
   { slug: 'levi-ice-castle', name: 'Levi Ice Castle', en: { region: 'Levi · 7 km from centre', desc: 'Levi’s own ice castle with chapel, bar and ice suites. Walls and seats from crystal-clear ice.' }, fi: { region: 'Levi · 7 km keskustasta', desc: 'Levin oma jäälinna kappelin, baarin ja jääsviittien kanssa. Seinät ja istuimet kristallinkirkkaasta jäästä.' }, img: '/images/venues/levi-ice-castle.jpg' },
   { slug: 'levin-iglut', name: 'Levin Iglut · Golden Crown', en: { region: 'Levi · on top of the fell', desc: 'Glass igloos on top of the Levi fell: an unobstructed aurora viewing angle, Suite igloos for couples.' }, fi: { region: 'Levi · tunturin huipulla', desc: 'Lasi-iglut Levitunturin huipulla: Lapin paras revontulinkulma, Suite-iglut pareille.' }, img: '/images/venues/levin-iglut.jpg' },
   { slug: 'apukka-resort', name: 'Apukka Resort', en: { region: 'Apukka · 15 min from Santa Claus Village', desc: 'Resort by Lake Apukka with Aurora Cabins, two-storey Kammi igloo, Aitta and Kota restaurants.' }, fi: { region: 'Apukka · 15 min Joulupukin pajakylästä', desc: 'Resort Apukkajärven rannalla: Aurora Cabins, kaksikerroksinen Kammi-iglu, Aitta- ja Kota-ravintolat.' }, img: '/images/venues/apukka-resort.jpeg' },
@@ -480,7 +480,6 @@ const venues = [
   { slug: 'tundrea-kilpisjarvi', name: 'Tundrea Kilpisjärvi', en: { region: 'Kilpisjärvi', desc: 'Glass-roof igloos on a lakeshore in Finland’s far north-western corner, 480 m above sea level: one of the best aurora views in Lapland.' }, fi: { region: 'Kilpisjärvi', desc: 'Lasikattoiset iglut järvenrannalla Suomen luoteisimmassa kolkassa, 480 m mpy: yksi Lapin parhaista revontulinäkymistä.' }, img: '/images/venues/tundrea-kilpisjarvi.jpg' },
   { slug: 'santas-hotel-aurora', name: "Santa's Hotel Aurora", en: { region: 'Luosto, Sodankylä', desc: 'Boutique hotel in the centre of Luosto: a private sauna in every room, glass igloos, beside Pyhä-Luosto National Park.' }, fi: { region: 'Luosto, Sodankylä', desc: 'Butiikkihotelli Luoston keskustassa: oma sauna joka huoneessa, lasi-iglut, Pyhä-Luoston kansallispuiston vieressä.' }, img: '/images/venues/santas-hotel-aurora.webp' },
   { slug: 'lapland-hotels-luostotunturi', name: 'Lapland Hotels Luostotunturi', en: { region: 'Luosto, Sodankylä', desc: 'Hotel in the Luosto log village: Amethyst Spa, 500 m to the slopes, next to Pyhä-Luosto National Park.' }, fi: { region: 'Luosto, Sodankylä', desc: 'Hotelli Luoston hirsikylässä: Amethyst Spa, 500 m rinteille, Pyhä-Luoston kansallispuiston vieressä.' }, img: '/images/venues/lapland-hotels-luostotunturi.jpg' },
-  { slug: 'santas-hotel-santamus', name: "Santa's Hotel Santamus", en: { region: 'Santa Claus Village', desc: 'The only Santa Claus Village hotel designed for weddings. Reindeer and husky packages included.' }, fi: { region: 'Joulupukin pajakylä', desc: 'Joulupukin pajakylän ainoa häihin suunniteltu hotelli. Poro- ja husky-paketit mukana.' }, img: '/images/venues/santas-hotel-santamus.png' },
   { slug: 'nova-skyland', name: 'Nova Skyland Hotel', en: { region: 'Santa Claus Village', desc: 'Compact, modern boutique hotel in Santa Claus Village.' }, fi: { region: 'Joulupukin pajakylä', desc: 'Kompakti, moderni boutique-hotelli Joulupukin pajakylässä.' }, img: '/images/venues/nova-skyland.jpg' },
 ];
 
@@ -539,7 +538,7 @@ function urlFor(prefix, canonical) {
   return (SITE + prefix + canonical).replace(/\/?$/, '/');
 }
 
-function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, noindex }) {
+function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, noindex, schema }) {
   // Build all alternate URLs
   const alternates = LOCALES.map((L) => ({
     hreflang: L.hreflang,
@@ -604,7 +603,16 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, no
     `<meta name="twitter:image" content="${og}" />`,
   ].map((l) => '    ' + l).join('\n');
 
-  out = out.replace(/<\/head>/, `${extra}\n  </head>`);
+  // [LV-LD 2026-09-19] Static JSON-LD per route (BreadcrumbList everywhere but home, FAQPage on
+  // the practical guide, LodgingBusiness / TouristDestination / Article on the three registries).
+  // The React SEO component renders the same kind of schema client-side, but this prerenderer is
+  // head-only and AI crawlers do not run JS: measured 19.9.2026, every static page carried only
+  // the shell's Organization + WebSite. `</` is escaped so a value can never close the script.
+  const ld = (schema || [])
+    .filter(Boolean)
+    .map((o) => `    <script type="application/ld+json">${JSON.stringify(o).replace(/<\//g, '<\\/')}</script>`)
+    .join('\n');
+  out = out.replace(/<\/head>/, `${extra}\n${ld ? ld + '\n' : ''}  </head>`);
 
   // Pre-hydration crawlable body. Koskee VAIN tyhjaa #rootia; React (createRoot,
   // ei hydrateRoot — src/main.tsx:7) korvaa lapset ensirenderissa, joten
@@ -645,7 +653,67 @@ function pathToFile(distPath) {
 
 let count = 0;
 
-function writeAll(canonical, byLang, image, noindex) {
+// ── JSON-LD builders (19.9.2026) ─────────────────────────────────────────────
+const SITE_ORG = { '@type': 'Organization', name: 'LaplandVibes', url: 'https://laplandvibes.com' };
+function stripBrand(t) { return String(t || '').split(/\s[|—]\s/)[0].trim(); }
+function absImg(img) { return img ? (/^https?:/.test(img) ? img : SITE + String(img).split('?')[0]) : undefined; }
+function breadcrumb(L, canonical, pageName) {
+  const items = [{ name: 'LaplandWeddings', url: urlFor(L.prefix, '/') }];
+  const parent = canonical.split('/').slice(0, -1).join('/');
+  if (parent && top[parent]) items.push({ name: stripBrand((top[parent][L.lang] || top[parent].en).title), url: urlFor(L.prefix, parent) });
+  items.push({ name: pageName, url: urlFor(L.prefix, canonical) });
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, item: it.url })),
+  };
+}
+// Venue websites, read from the registry (website: '…' follows slug: '…' inside each entry).
+const VENUE_SITES = (() => {
+  const src = readFileSync(resolve(__dirname, '..', 'src', 'data', 'venues.ts'), 'utf8');
+  const out = {};
+  const re = /slug: '([^']+)'[\s\S]*?website: '([^']+)'/g;
+  let m;
+  while ((m = re.exec(src))) out[m[1]] = m[2];
+  return out;
+})();
+// FAQ of the practical guide: q/a pairs × 12 locales, parsed from the TSX source the same way
+// longDesc() reads the registries (Node in CI cannot import .ts).
+const FAQ_ITEMS = (() => {
+  const src = readFileSync(resolve(__dirname, '..', 'src', 'pages', 'PracticalGuide.tsx'), 'utf8').replace(/\r\n/g, '\n');
+  const start = src.indexOf('const FAQ:');
+  const end = src.indexOf('\n];', start);
+  if (start < 0 || end < 0) return [];
+  const block = src.slice(start, end);
+  const pairs = (b) => {
+    const o = {};
+    const pairRe = /^\s*'?([\w-]+)'?\s*:\s*'((?:[^'\\]|\\.)*)'\s*,?\s*$/gm;
+    let p;
+    while ((p = pairRe.exec(b))) o[p[1]] = p[2].replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+    return o;
+  };
+  const items = [];
+  const itemRe = /q:\s*\{([\s\S]*?)\n\s*\},\s*a:\s*\{([\s\S]*?)\n\s*\},/g;
+  let m;
+  while ((m = itemRe.exec(block))) items.push({ q: pairs(m[1]), a: pairs(m[2]) });
+  return items.filter((it) => it.q.en && it.a.en);
+})();
+console.log(`[prerender] JSON-LD: ${Object.keys(VENUE_SITES).length} venue websites, ${FAQ_ITEMS.length} FAQ items`);
+function faqPage(L) {
+  if (FAQ_ITEMS.length < 3) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: L.hreflang,
+    mainEntity: FAQ_ITEMS.map((it) => ({
+      '@type': 'Question',
+      name: it.q[L.lang] || it.q.en,
+      acceptedAnswer: { '@type': 'Answer', text: it.a[L.lang] || it.a.en },
+    })),
+  };
+}
+
+function writeAll(canonical, byLang, image, noindex, schemaFor) {
   // byLang: { en: {title,desc}, fi:{...}, ... } — EN is required
   const enMeta = byLang.en;
   for (const L of LOCALES) {
@@ -658,6 +726,7 @@ function writeAll(canonical, byLang, image, noindex) {
       canonical,
       ogLocaleStr: L.og,
       noindex,
+      schema: noindex ? undefined : (schemaFor ? schemaFor(L, meta) : undefined),
     });
     const distPath = canonical === '/' ? (L.prefix || '/') : (L.prefix + canonical);
     writeFileSync(pathToFile(distPath), out);
@@ -675,7 +744,15 @@ for (const [path, meta] of Object.entries(top)) {
     const m = meta[L.lang] || meta.en;
     byLang[L.lang] = meta[L.lang] ? { ...m, description: extendFromTranslations(path, L.lang, m.description) } : m;
   }
-  ROUTES.push({ canonical: path, byLang, image: meta.image });
+  ROUTES.push({
+    canonical: path,
+    byLang,
+    image: meta.image,
+    schemaFor: path === '/' ? undefined : (L, m) => [
+      breadcrumb(L, path, stripBrand(m.title)),
+      path === '/practical-guide' ? faqPage(L) : null,
+    ],
+  });
 }
 
 /**
@@ -820,7 +897,22 @@ for (const l of locations) {
       description: longDesc('locations', l.slug, L.lang, descSrc),
     };
   }
-  ROUTES.push({ canonical: `/locations/${l.slug}`, byLang, image: l.img });
+  ROUTES.push({
+    canonical: `/locations/${l.slug}`, byLang, image: l.img,
+    schemaFor: (L, m) => [
+      breadcrumb(L, `/locations/${l.slug}`, i18n('locations', l.slug, L.lang, 'name', l)),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'TouristDestination',
+        name: i18n('locations', l.slug, L.lang, 'name', l),
+        description: m.description,
+        url: urlFor(L.prefix, `/locations/${l.slug}`),
+        image: absImg(l.img),
+        inLanguage: L.hreflang,
+        containedInPlace: { '@type': 'Country', name: 'Finland' },
+      },
+    ],
+  });
 }
 
 // Wedding types
@@ -834,7 +926,23 @@ for (const t of types) {
       description: longDesc('types', t.slug, L.lang, descSrc),
     };
   }
-  ROUTES.push({ canonical: `/wedding-types/${t.slug}`, byLang, image: t.img });
+  ROUTES.push({
+    canonical: `/wedding-types/${t.slug}`, byLang, image: t.img,
+    schemaFor: (L, m) => [
+      breadcrumb(L, `/wedding-types/${t.slug}`, i18n('types', t.slug, L.lang, 'name', t)),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: stripBrand(m.title),
+        description: m.description,
+        image: absImg(t.img),
+        inLanguage: L.hreflang,
+        mainEntityOfPage: urlFor(L.prefix, `/wedding-types/${t.slug}`),
+        author: SITE_ORG,
+        publisher: SITE_ORG,
+      },
+    ],
+  });
 }
 
 // Venues
@@ -856,7 +964,27 @@ for (const v of venues) {
       description: longDesc('venues', v.slug, L.lang, desc),
     };
   }
-  ROUTES.push({ canonical: `/venues/${v.slug}`, byLang, image: v.img });
+  ROUTES.push({
+    canonical: `/venues/${v.slug}`, byLang, image: v.img,
+    schemaFor: (L, m) => [
+      breadcrumb(L, `/venues/${v.slug}`, v.name),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'LodgingBusiness',
+        name: v.name,
+        url: VENUE_SITES[v.slug] || undefined,
+        image: absImg(v.img),
+        description: m.description,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: String(i18n('venues', v.slug, L.lang, 'region', v)).split('·')[0].trim(),
+          addressRegion: 'Lapland',
+          addressCountry: 'FI',
+        },
+        mainEntityOfPage: urlFor(L.prefix, `/venues/${v.slug}`),
+      },
+    ],
+  });
 }
 
 // Esikierros: sivuston OMAT sivut per lokaali. Jokainen sivu linkittaa kaikkiin
@@ -943,7 +1071,7 @@ try {
   ROUTES.push({
     canonical: '/partner-with-us',
     byLang,
-    image: `${SITE}/images/heroes/aurora-elope-hero.webp`,
+    image: `${SITE}/images/heroes/aurora-inari-ababamov.jpg`,
     noindex: true,
   });
 } catch (e) {
@@ -951,7 +1079,7 @@ try {
   console.error('Ilman prerenderia sivu antaa aidon 404:n (catch-all poistettu 22.8.). Build pysahtyy.');
   process.exit(1);
 }
-for (const r of ROUTES) writeAll(r.canonical, r.byLang, r.image, r.noindex);
+for (const r of ROUTES) writeAll(r.canonical, r.byLang, r.image, r.noindex, r.schemaFor);
 
 console.log(`Prerendered ${count} routes across ${LOCALES.length} locales (${count / LOCALES.length} routes × ${LOCALES.length} languages)`);
 
@@ -1017,7 +1145,7 @@ console.log(`Prerendered ${count} routes across ${LOCALES.length} locales (${cou
     lang: 'en',
     title: 'Page not found | LaplandWeddings',
     description: 'This page does not exist. Browse Lapland wedding venues, locations and planning guides instead.',
-    image: `${SITE}/images/heroes/aurora-elope-hero.webp`,
+    image: `${SITE}/images/heroes/aurora-inari-ababamov.jpg`,
     canonical: '/',
     ogLocaleStr: 'en_US',
     noindex: true,

@@ -26,7 +26,7 @@ const WORD = {
   it: 'location per matrimoni',
   nl: 'trouwlocatie',
   'pt-BR': 'local de casamento',
-  ja: 'ウェディング会場',
+  ja: '結婚式会場',
   ko: '웨딩 장소',
   'zh-CN': '婚礼场地',
 };

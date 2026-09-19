@@ -257,7 +257,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '결혼식 전체를, 자체적으로 또는 확립된 협력 관계를 통해, 진행할 수 있는 업체를 찾습니다.',
     fr: 'Nous recherchons des prestataires capables d’assurer tout le mariage, en interne ou via des partenariats établis.',
     it: 'Cerchiamo operatori in grado di gestire l’intero matrimonio, internamente o tramite collaborazioni consolidate.',
-    nl: 'We zoeken aanbieders die de hele bruiloft kunnen verzorgen, zelf of via gevestigde samenwerkingen.', sv: 'We look for operators who can deliver the whole wedding, in-house or through established relationships.',
+    nl: 'We zoeken aanbieders die de hele bruiloft kunnen verzorgen, zelf of via gevestigde samenwerkingen.', sv: 'Vi söker aktörer som kan leverera hela bröllopet, i egen regi eller via etablerade relationer.',
   },
   message: {
     en: 'Tell us briefly about yourselves',
@@ -316,7 +316,7 @@ const T: Record<FormKey, Localized<string>> = {
     es: 'El envío falló. Inténtelo de nuevo o escriba directamente a info@laplandvibes.com.',
     'pt-BR': 'Falha no envio. Tente novamente ou escreva diretamente para info@laplandvibes.com.',
     'zh-CN': '提交失败。请重试，或直接发送邮件至 info@laplandvibes.com。',
-    ko: '전송에 실패했습니다. 다시 시도하거나 info@laplandvibes.com 으로 직접 메일을 보내주세요.',
+    ko: '전송에 실패했습니다. 다시 시도하거나 info@laplandvibes.com으로 직접 메일을 보내주세요.',
     fr: 'L’envoi a échoué. Réessayez ou écrivez directement à info@laplandvibes.com.',
     it: 'Invio non riuscito. Riprovi o scriva direttamente a info@laplandvibes.com.',
     nl: 'Verzenden mislukt. Probeer het opnieuw of mail direct naar info@laplandvibes.com.', sv: 'Det gick inte att skicka. Försök igen eller mejla info@laplandvibes.com direkt.',
@@ -345,7 +345,7 @@ const T: Record<FormKey, Localized<string>> = {
     ko: '검토 후 며칠 내로 연락드리겠습니다. 승인된 파트너는 첫 번째 리드를 무료로 받습니다.',
     fr: 'Nous l’examinerons et reviendrons vers vous sous quelques jours. Les partenaires acceptés reçoivent leur premier lead gratuitement.',
     it: 'La esamineremo e Le risponderemo entro pochi giorni. I partner approvati ricevono il primo lead gratis.',
-    nl: 'We bekijken hem en nemen binnen enkele dagen contact op. Goedgekeurde partners ontvangen hun eerste lead gratis.', sv: 'We will review it and get back to you within a few days. Approved partners receive their first lead free.',
+    nl: 'We bekijken hem en nemen binnen enkele dagen contact op. Goedgekeurde partners ontvangen hun eerste lead gratis.', sv: 'Vi granskar den och återkommer inom några dagar. Godkända partner får sitt första lead gratis.',
   },
 };
 

@@ -34,7 +34,7 @@ const P: Record<'weddings' | 'venuesInRegion', Localized<string>> = {
     en: 'Wedding venues in this region',
     fi: 'Hääpaikat tällä alueella',
     de: 'Hochzeitslocations in dieser Region',
-    ja: 'この地域のウェディング会場',
+    ja: 'この地域の結婚式会場',
     es: 'Lugares para bodas en esta región',
     'pt-BR': 'Locais para casamento nesta região',
     'zh-CN': '该地区的婚礼场地',
@@ -66,7 +66,7 @@ export default function LocationPage() {
   return (
     <>
       <SEO
-        title={`${loc.name[dataLang]}: ${pickLocalized(P.weddings, lang)} | LaplandWeddings`}
+        title={`${loc.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.weddings, lang)} | LaplandWeddings`}
         description={loc.intro[dataLang].slice(0, 160)}
         path={`/locations/${loc.slug}`}
         image={loc.heroImage}
@@ -86,6 +86,8 @@ export default function LocationPage() {
         subtitle={loc.intro[dataLang]}
         image={loc.heroImage}
         imageAlt={loc.heroAlt[dataLang]}
+        credit={loc.heroCredit}
+        lang={lang}
       />
 
       <Section>

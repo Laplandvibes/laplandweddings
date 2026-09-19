@@ -188,7 +188,7 @@ const V: Record<VKey, Localized<string>> = {
     'pt-BR': 'Preencha o formulário e a equipe da LaplandWeddings encaminhará sua solicitação a organizadores de casamento que atuam nesta região. Eles enviam os orçamentos sob medida diretamente para você.',
     'zh-CN': '填写表单，LaplandWeddings 团队会将你的咨询转给在该地区工作的婚礼策划师。量身定制的报价将由策划师直接发送给你。',
     ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 지역에서 활동하는 웨딩 플래너에게 전달합니다. 맞춤 견적은 플래너가 직접 보내드립니다.',
-    fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux wedding planners qui travaillent dans cette région. Ils vous envoient directement leurs devis sur mesure.',
+    fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux organisateurs de mariage qui travaillent dans cette région. Ils vous envoient directement leurs devis sur mesure.',
     it: 'Compili il modulo e il team LaplandWeddings inoltrerà la Sua richiesta ai wedding planner che lavorano in questa regione. Saranno loro a inviarLe direttamente i preventivi su misura.',
     nl: 'Vul het formulier in en het LaplandWeddings-team stuurt uw aanvraag door naar trouwplanners die in deze regio werken. Zij sturen u rechtstreeks offertes op maat.',
     sv: 'Fyll i formuläret så vidarebefordrar LaplandWeddings-teamet din förfrågan till bröllopsplanerare som arbetar i den här regionen. De skickar sina skräddarsydda offerter direkt till dig.',
@@ -223,7 +223,7 @@ const V: Record<VKey, Localized<string>> = {
     de: 'Angebot anfordern: {name}', ja: '見積もりを依頼：{name}',
     es: 'Solicite un presupuesto: {name}', 'pt-BR': 'Peça um orçamento: {name}',
     'zh-CN': '获取报价：{name}', ko: '견적 받기: {name}',
-    fr: 'Demander un devis: {name}', it: 'Richieda un preventivo: {name}',
+    fr: 'Demander un devis : {name}', it: 'Richieda un preventivo: {name}',
     nl: 'Vraag een offerte aan: {name}', sv: 'Begär offert: {name}',
   },
 };

@@ -1,145 +1,332 @@
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import LeadForm from '../components/LeadForm';
+import L from '../components/L';
 import { useLang } from '../i18n/LangContext';
-import { photographers } from '../data/photographers';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
-import { withReferral } from '../lib/affiliate';
 
-const P: Record<'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt' | 'sourceNote', Localized<string>> = {
+/**
+ * /photographers, rewritten 19.9.2026 as an editorial guide.
+ *
+ * Until today this page was a directory of six named photographers with texts
+ * copied from their own sites (awards, magazine features), free outbound links
+ * and no agreement with any of them. Vesa, looking at it live: "pitääkö nämä
+ * paikkansa ja millä funktiolla me näitä yhteystietoja edes jaamme täällä?"
+ * The same class of surface was hidden on 4.7.2026 (planner directory, memory
+ * weddings_planners_hidden_no_consent) and the 11.9.2026 rule says no free
+ * referrals ("ei me nyt ohjata minnekään ilman että siitä saadaan rahaa").
+ *
+ * The page now answers what a couple actually searches for (ja: フォトウェディング,
+ * fi: hääkuvaaja, de: Hochzeitsfotograf) without naming or linking any business,
+ * and ends in our own form. `src/data/photographers.ts` stays in the repo,
+ * unrendered, for the day a photographer signs a partnership.
+ *
+ * The price figures below are the ones already published on /pricing with their
+ * source (a Rovaniemi photographer's public price list, laplandphotographer.com);
+ * no number here is new to the site.
+ */
+
+type Bag = Localized<string>;
+
+const P: Record<
+  | 'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt'
+  | 'costTitle' | 'costBody' | 'costLink'
+  | 'askTitle' | 'ask1' | 'ask2' | 'ask3' | 'ask4'
+  | 'whenTitle' | 'whenBody'
+  | 'note',
+  Bag
+> = {
   seoTitle: {
-    en: 'Lapland Wedding Photographers: Hedengren, Goodlad et al. | LaplandWeddings',
-    fi: 'Lapin häävalokuvaajat | LaplandWeddings',
-    de: 'Hochzeitsfotografen in Lappland | LaplandWeddings',
-    ja: 'ラップランドの写真家：Maria Hedengren、Robin Goodlad | LaplandWeddings',
-    es: 'Fotógrafos de bodas en Laponia | LaplandWeddings',
-    'pt-BR': 'Fotógrafos de casamento na Lapônia | LaplandWeddings',
-    'zh-CN': '拉普兰婚礼摄影师：Maria Hedengren、Robin Goodlad 等 | LaplandWeddings',
-    ko: '라플란드 사진가: Maria Hedengren, Robin Goodlad | LaplandWeddings',
-    fr: 'Photographes de mariage en Laponie | LaplandWeddings',
-    it: 'Fotografi di matrimonio in Lapponia | LaplandWeddings',
-    nl: 'Trouwfotografen in Lapland | LaplandWeddings', sv: 'Bröllopsfotografer i Lappland: Maria Hedengren, Robin Goodlad m.fl. | LaplandWeddings',
+    en: 'Wedding Photography in Lapland: Costs, Questions, Timing | LaplandWeddings',
+    fi: 'Hääkuvaus Lapissa: hinnat, kysymykset ja ajoitus | LaplandWeddings',
+    de: 'Hochzeitsfotografie in Lappland: Kosten, Fragen, Zeitplan | LaplandWeddings',
+    ja: 'フィンランド・ラップランドでフォトウェディング：費用と準備 | LaplandWeddings',
+    es: 'Fotografía de boda en Laponia: costos, preguntas y fechas | LaplandWeddings',
+    'pt-BR': 'Fotografia de casamento na Lapônia: custos, perguntas e datas | LaplandWeddings',
+    'zh-CN': '拉普兰婚礼摄影：费用、问题与时间 | LaplandWeddings',
+    ko: '라플란드 웨딩 촬영: 비용, 질문, 예약 시기 | LaplandWeddings',
+    fr: 'Photographe de mariage en Laponie : tarifs, questions, calendrier | LaplandWeddings',
+    it: 'Fotografo di matrimonio in Lapponia: costi, domande, tempi | LaplandWeddings',
+    nl: 'Trouwfotografie in Lapland: kosten, vragen, timing | LaplandWeddings',
+    sv: 'Bröllopsfotograf i Lappland: kostnad, frågor, tidpunkt | LaplandWeddings',
   },
   seoDesc: {
-    en: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos. Proven in the cold.',
-    fi: 'Kuusi Lapin parasta hääjvalokuvaajaa. Revontulet, lumikappelit, lasi-iglut. Testattu pakkasessa.',
-    de: 'Sechs der besten Hochzeitsfotografen Lapplands. Polarlichter, Schneekapellen, Glasiglus. Im Frost erprobt.',
-    ja: 'ラップランド屈指のウェディングフォトグラファー6人。オーロラ、スノーチャペル、ガラスのイグルー。極寒で実証済み。',
-    es: 'Seis de los mejores fotógrafos de bodas de Laponia. Auroras boreales, capillas de nieve, iglús de cristal: probados en el frío.',
-    'pt-BR': 'Seis dos melhores fotógrafos de casamento da Lapônia. Aurora boreal, capelas de neve, iglus de vidro. Testados no frio.',
-    'zh-CN': '拉普兰最出色的六位婚礼摄影师。北极光、雪教堂、玻璃冰屋，在严寒中久经考验。',
-    ko: '라플란드 최고의 웨딩 포토그래퍼 6인. 오로라, 스노우 채플, 글래스 이글루. 혹한 속에서 검증됨.',
-    fr: 'Six des meilleurs photographes de mariage de Laponie. Aurores boréales, chapelles de neige, igloos de verre. Éprouvés dans le froid.',
-    it: 'Sei fotografi di matrimonio tra i migliori della Lapponia. Aurora boreale, cappelle di neve, igloo di vetro. Collaudati nel gelo.',
-    nl: 'Zes van de beste trouwfotografen van Lapland. Noorderlicht, sneeuwkapellen, glazen iglo’s. Bewezen in de kou.', sv: 'Six of the best Lapland wedding photographers. Northern Lights, snow chapels, glass igloos. Proven in the cold.',
+    en: 'What a wedding photographer costs in Lapland, four questions to ask before booking, and when the winter dates fill up. Independent guide, no photographer represented.',
+    fi: 'Mitä hääkuvaaja maksaa Lapissa, neljä kysymystä ennen varausta ja milloin talven päivät täyttyvät. Riippumaton opas, emme edusta yhtäkään kuvaajaa.',
+    de: 'Was ein Hochzeitsfotograf in Lappland kostet, vier Fragen vor der Buchung und wann die Wintertermine voll sind. Unabhängiger Leitfaden, wir vertreten keinen Fotografen.',
+    ja: 'ラップランドの結婚式撮影の費用、予約前に確認したい4つの質問、冬の日程が埋まる時期。独立した立場のガイドで、特定のフォトグラファーを代理していません。',
+    es: 'Cuánto cuesta un fotógrafo de boda en Laponia, cuatro preguntas antes de reservar y cuándo se agotan las fechas de invierno. Guía independiente, no representamos a ningún fotógrafo.',
+    'pt-BR': 'Quanto custa um fotógrafo de casamento na Lapônia, quatro perguntas antes de reservar e quando as datas de inverno esgotam. Guia independente, não representamos nenhum fotógrafo.',
+    'zh-CN': '拉普兰婚礼摄影师的费用、预订前要问的四个问题，以及冬季档期何时订满。独立指南，不代理任何摄影师。',
+    ko: '라플란드 웨딩 촬영 비용, 예약 전 확인할 네 가지 질문, 겨울 날짜가 마감되는 시기. 독립적인 안내서이며 어떤 포토그래퍼도 대리하지 않습니다.',
+    fr: 'Ce que coûte un photographe de mariage en Laponie, quatre questions à poser avant de réserver et quand les dates d’hiver se remplissent. Guide indépendant, aucun photographe représenté.',
+    it: 'Quanto costa un fotografo di matrimonio in Lapponia, quattro domande da fare prima di prenotare e quando si esauriscono le date invernali. Guida indipendente, nessun fotografo rappresentato.',
+    nl: 'Wat een trouwfotograaf in Lapland kost, vier vragen om te stellen voor u boekt en wanneer de winterdata vol raken. Onafhankelijke gids, wij vertegenwoordigen geen fotograaf.',
+    sv: 'Vad en bröllopsfotograf kostar i Lappland, fyra frågor att ställa innan du bokar och när vinterdatumen tar slut. Oberoende guide, vi företräder ingen fotograf.',
   },
   title: {
-    en: 'Lapland wedding photographers',
-    fi: 'Lapin häävalokuvaajat',
-    de: 'Hochzeitsfotografen in Lappland',
-    ja: 'ラップランドのウェディングフォトグラファー',
-    es: 'Fotógrafos de bodas en Laponia',
-    'pt-BR': 'Fotógrafos de casamento na Lapônia',
-    'zh-CN': '拉普兰婚礼摄影师',
-    ko: '라플란드 웨딩 포토그래퍼',
-    fr: 'Photographes de mariage en Laponie',
-    it: 'Fotografi di matrimonio in Lapponia',
-    nl: 'Trouwfotografen in Lapland', sv: 'Bröllopsfotografer i Lappland',
+    en: 'Wedding photography in Lapland',
+    fi: 'Hääkuvaus Lapissa',
+    de: 'Hochzeitsfotografie in Lappland',
+    ja: 'ラップランドでフォトウェディング',
+    es: 'Fotografía de boda en Laponia',
+    'pt-BR': 'Fotografia de casamento na Lapônia',
+    'zh-CN': '拉普兰婚礼摄影',
+    ko: '라플란드 웨딩 촬영',
+    fr: 'Photographe de mariage en Laponie',
+    it: 'Fotografia di matrimonio in Lapponia',
+    nl: 'Trouwfotografie in Lapland',
+    sv: 'Bröllopsfotografering i Lappland',
   },
   subtitle: {
-    en: 'Six of the most experienced wedding photographers in Lapland. Aurora-calibrated, snow-chapel lighting, glass-igloo composition. All proven in sub-zero conditions.',
-    fi: 'Tähän on koottu kuusi Lapin kokeneinta hääjvalokuvaajaa. Revontulikalibrointi, lumikappelivalaistus, lasi-iglu-kuvaus. Kaikki testattuja pakkasessa.',
-    de: 'Sechs der erfahrensten Hochzeitsfotografen Lapplands. Auf Polarlichter kalibriert, Schneekapellen-Beleuchtung, Glasiglu-Komposition. Alles bei Minusgraden erprobt.',
-    ja: 'ラップランドで最も経験豊富なウェディングフォトグラファー6人。オーロラに最適化した設定、スノーチャペルのライティング、グラスイグルーの構図。すべて氷点下で実証済み。',
-    es: 'Seis de los fotógrafos de bodas con más experiencia de Laponia. Calibrados para auroras, iluminación de capillas de nieve, composición en iglús de cristal: todo probado bajo cero.',
-    'pt-BR': 'Seis dos fotógrafos de casamento mais experientes da Lapônia. Calibrados para a aurora, iluminação de capelas de neve, composição em iglus de vidro. Tudo testado abaixo de zero.',
-    'zh-CN': '拉普兰最具经验的六位婚礼摄影师。专为极光校准、雪教堂布光、玻璃冰屋构图，全部在零下环境中久经验证。',
-    ko: '라플란드에서 가장 노련한 웨딩 포토그래퍼 6인. 오로라 맞춤 세팅, 스노우 채플 조명, 글래스 이글루 구도. 모두 영하의 환경에서 검증되었습니다.',
-    fr: 'Six des photographes de mariage les plus expérimentés de Laponie. Réglages calibrés pour les aurores, éclairage en chapelle de neige, composition en igloo de verre. Le tout éprouvé par grand froid.',
-    it: 'Sei fotografi di matrimonio tra i più esperti della Lapponia. Tarati sull’aurora, illuminazione per cappelle di neve, composizione negli igloo di vetro. Tutto collaudato sotto zero.',
-    nl: 'Zes van de meest ervaren trouwfotografen van Lapland. Gekalibreerd op het noorderlicht, belichting in sneeuwkapellen, compositie in glazen iglo’s. Alles bewezen bij temperaturen onder nul.', sv: 'Six of the most experienced wedding photographers in Lapland. Aurora-calibrated, snow-chapel lighting, glass-igloo composition. All proven in sub-zero conditions.',
+    en: 'What it costs, what to ask before you book, and when the winter dates go. Tell us what you have in mind and we pass the request on to wedding businesses in Lapland, free and without commitment.',
+    fi: 'Mitä kuvaus maksaa, mitä kysyä ennen varausta ja milloin talven päivät täyttyvät. Kerro toiveesi, niin välitämme pyynnön Lapin hääalan yrityksille maksutta ja sitoumuksetta.',
+    de: 'Was die Fotografie kostet, was Sie vor der Buchung fragen sollten und wann die Wintertermine vergeben sind. Schildern Sie uns Ihre Wünsche, wir leiten die Anfrage kostenlos und unverbindlich an Hochzeitsanbieter in Lappland weiter.',
+    ja: '撮影にかかる費用、予約前に確認したいこと、冬の日程が埋まる時期。ご希望をお聞かせください。無料・無条件でラップランドのウェディング事業者にお取り次ぎします。',
+    es: 'Cuánto cuesta, qué preguntar antes de reservar y cuándo se agotan las fechas de invierno. Cuéntenos su idea y transmitimos la solicitud a empresas de bodas en Laponia, gratis y sin compromiso.',
+    'pt-BR': 'Quanto custa, o que perguntar antes de reservar e quando as datas de inverno esgotam. Conte o que você tem em mente e nós encaminhamos o pedido a empresas de casamento na Lapônia, grátis e sem compromisso.',
+    'zh-CN': '费用多少、预订前该问什么、冬季档期何时订满。告诉我们您的想法，我们会免费且无义务地把请求转给拉普兰的婚礼服务商。',
+    ko: '촬영 비용, 예약 전에 물어볼 것, 겨울 날짜가 마감되는 시기. 원하시는 내용을 알려 주시면 무료로, 아무 조건 없이 라플란드의 웨딩 업체에 전달해 드립니다.',
+    fr: 'Ce que cela coûte, quoi demander avant de réserver et quand les dates d’hiver partent. Dites-nous ce que vous envisagez, nous transmettons la demande aux prestataires de mariage en Laponie, gratuitement et sans engagement.',
+    it: 'Quanto costa, cosa chiedere prima di prenotare e quando finiscono le date invernali. Ci racconti la Sua idea e trasmettiamo la richiesta alle imprese di matrimonio in Lapponia, gratis e senza impegno.',
+    nl: 'Wat het kost, wat u vraagt voor u boekt en wanneer de winterdata weg zijn. Vertel ons wat u voor ogen heeft en wij geven de aanvraag gratis en vrijblijvend door aan trouwbedrijven in Lapland.',
+    sv: 'Vad det kostar, vad du bör fråga innan du bokar och när vinterdatumen tar slut. Berätta vad du tänker dig, så för vi förfrågan vidare till bröllopsföretag i Lappland, gratis och utan förbindelse.',
   },
   imageAlt: {
-    en: 'Wedding couple in winter Lapland',
-    fi: 'Hääpari talvisessa Lapissa',
-    de: 'Hochzeitspaar im winterlichen Lappland',
-    ja: '冬のラップランドの結婚式カップル',
-    es: 'Pareja de novios en la Laponia invernal',
-    'pt-BR': 'Casal de noivos na Lapônia no inverno',
-    'zh-CN': '冬季拉普兰的新婚夫妇',
-    ko: '겨울 라플란드의 신혼부부',
-    fr: 'Couple de mariés en Laponie hivernale',
-    it: 'Coppia di sposi nella Lapponia invernale',
-    nl: 'Bruidspaar in winters Lapland', sv: 'Brudpar i vinterns Lappland',
+    en: 'Bright bands of northern lights over Levi fell',
+    fi: 'Kirkkaat revontulinauhat Levitunturin yllä',
+    de: 'Helle Polarlichtbänder über dem Levi-Fjäll',
+    ja: 'レヴィ山の上空に広がる明るいオーロラの帯',
+    es: 'Bandas brillantes de auroras boreales sobre el fjäll de Levi',
+    'pt-BR': 'Faixas brilhantes de aurora boreal sobre o monte Levi',
+    'zh-CN': '莱维山上空明亮的极光带',
+    ko: '레비 산 위로 펼쳐진 밝은 오로라 띠',
+    fr: 'Bandes lumineuses d’aurores boréales au-dessus du fjäll de Levi',
+    it: 'Bande luminose di aurora boreale sopra il fjäll di Levi',
+    nl: 'Heldere noorderlichtbanden boven de Levi-fjäll',
+    sv: 'Ljusa norrskensband över Levifjället',
   },
-  sourceNote: {
-    en: 'Information sourced from public photographer websites. LaplandWeddings does not have a contractual relationship with every photographer listed. Contact directly via their own sites.',
-    fi: 'Tiedot kerätty valokuvaajien omilta julkisilta sivuilta. LaplandWeddings ei ole sopimussuhteessa kaikkiin listattuihin. Yhteyshenkilöt heidän omista sivustaan.',
-    de: 'Angaben aus den öffentlichen Websites der Fotografen. LaplandWeddings steht nicht mit allen Gelisteten in einem Vertragsverhältnis. Wenden Sie sich direkt über deren eigene Seiten an sie.',
-    ja: '情報は各フォトグラファーの公開ウェブサイトから収集しています。LaplandWeddingsは掲載者全員と契約関係にあるわけではありません。各自の公式サイトから直接ご連絡ください。',
-    es: 'Información obtenida de los sitios web públicos de los fotógrafos. LaplandWeddings no mantiene una relación contractual con todos los listados: contáctelos directamente a través de sus propios sitios.',
-    'pt-BR': 'Informações obtidas dos sites públicos dos fotógrafos. A LaplandWeddings não tem relação contratual com todos os listados. Entre em contato diretamente pelos sites de cada um.',
-    'zh-CN': '信息来源于摄影师的公开网站。LaplandWeddings 并未与所有列出的摄影师建立合同关系，请通过他们各自的网站直接联系。',
-    ko: '정보는 각 포토그래퍼의 공개 웹사이트에서 수집했습니다. LaplandWeddings는 게재된 모든 분과 계약 관계에 있지 않습니다. 각자의 사이트를 통해 직접 연락하세요.',
-    fr: 'Informations issues des sites web publics des photographes. LaplandWeddings n’est pas lié par contrat à tous les photographes répertoriés. Contactez-les directement via leurs propres sites.',
-    it: 'Informazioni tratte dai siti web pubblici dei fotografi. LaplandWeddings non ha un rapporto contrattuale con tutti gli elencati. Li contatti direttamente tramite i loro siti.',
-    nl: 'Informatie afkomstig van de openbare websites van de fotografen. LaplandWeddings heeft geen contractuele relatie met alle vermelde fotografen. Neem rechtstreeks contact op via hun eigen sites.', sv: 'Information sourced from public photographer websites. LaplandWeddings does not have a contractual relationship with every photographer listed. Contact directly via their own sites.',
+  costTitle: {
+    en: 'What wedding photography costs in Lapland',
+    fi: 'Mitä hääkuvaus maksaa Lapissa',
+    de: 'Was Hochzeitsfotografie in Lappland kostet',
+    ja: 'ラップランドの結婚式撮影の費用',
+    es: 'Cuánto cuesta la fotografía de boda en Laponia',
+    'pt-BR': 'Quanto custa a fotografia de casamento na Lapônia',
+    'zh-CN': '拉普兰婚礼摄影的费用',
+    ko: '라플란드 웨딩 촬영 비용',
+    fr: 'Ce que coûte la photographie de mariage en Laponie',
+    it: 'Quanto costa la fotografia di matrimonio in Lapponia',
+    nl: 'Wat trouwfotografie in Lapland kost',
+    sv: 'Vad bröllopsfotografering kostar i Lappland',
+  },
+  costBody: {
+    en: 'One Rovaniemi photographer’s public price list gives the scale: the ceremony alone around 450 €, a portrait session 680 €, a fully documented day 1 960 to 2 600 €. Christmas weeks carry a surcharge and travel outside Rovaniemi is billed per kilometre. The full breakdown, with its source, is on our price page.',
+    fi: 'Yhden rovaniemeläisen kuvaajan julkinen hinnasto antaa mittakaavan: pelkkä seremonia noin 450 €, potrettikuvaus 680 €, koko päivän dokumentointi 1 960–2 600 €. Jouluviikoilla on lisä, ja matka Rovaniemen ulkopuolelle laskutetaan kilometreittäin. Koko erittely lähteineen on hintasivullamme.',
+    de: 'Die öffentliche Preisliste eines Fotografen aus Rovaniemi zeigt die Größenordnung: nur die Trauung rund 450 €, ein Porträtshooting 680 €, ein vollständig dokumentierter Tag 1.960 bis 2.600 €. In den Weihnachtswochen gilt ein Zuschlag, Anfahrten außerhalb von Rovaniemi werden pro Kilometer berechnet. Die vollständige Aufstellung mit Quelle finden Sie auf unserer Preisseite.',
+    ja: 'ロヴァニエミのあるフォトグラファーの公開料金表が目安になります。挙式のみ約450ユーロ、ポートレート撮影680ユーロ、一日密着1,960〜2,600ユーロ。クリスマス期は割増、ロヴァニエミ外への出張は距離に応じて加算されます。出典付きの内訳は料金ページをご覧ください。',
+    es: 'La lista de precios pública de un fotógrafo de Rovaniemi da la escala: solo la ceremonia unos 450 €, una sesión de retratos 680 €, un día completo documentado de 1 960 a 2 600 €. Las semanas de Navidad tienen recargo y los desplazamientos fuera de Rovaniemi se cobran por kilómetro. El desglose completo, con su fuente, está en nuestra página de precios.',
+    'pt-BR': 'A tabela pública de um fotógrafo de Rovaniemi dá a escala: só a cerimônia por volta de € 450, uma sessão de retratos € 680, um dia inteiro documentado de € 1.960 a € 2.600. As semanas de Natal têm acréscimo e o deslocamento fora de Rovaniemi é cobrado por quilômetro. O detalhamento completo, com a fonte, está na nossa página de preços.',
+    'zh-CN': '罗瓦涅米一位摄影师的公开价目表可作参考：仅仪式约 450 欧元，人像拍摄 680 欧元，全天纪实 1 960 至 2 600 欧元。圣诞周有加价，罗瓦涅米以外按公里计费。带出处的完整明细见我们的价格页。',
+    ko: '로바니에미의 한 포토그래퍼가 공개한 요금표가 기준이 됩니다. 예식만 약 450유로, 포트레이트 촬영 680유로, 하루 종일 기록은 1,960~2,600유로. 크리스마스 주간에는 할증이 붙고, 로바니에미 밖으로의 이동은 킬로미터당 청구됩니다. 출처가 있는 전체 내역은 요금 페이지에 있습니다.',
+    fr: 'La grille tarifaire publique d’un photographe de Rovaniemi donne l’ordre de grandeur : la cérémonie seule environ 450 €, une séance de portraits 680 €, une journée entièrement couverte de 1 960 à 2 600 €. Les semaines de Noël sont majorées et les déplacements hors de Rovaniemi sont facturés au kilomètre. Le détail complet, avec sa source, se trouve sur notre page des prix.',
+    it: 'Il listino pubblico di un fotografo di Rovaniemi dà la scala: la sola cerimonia circa 450 €, una sessione di ritratti 680 €, una giornata interamente documentata da 1.960 a 2.600 €. Le settimane di Natale hanno un supplemento e gli spostamenti fuori Rovaniemi si pagano a chilometro. Il dettaglio completo, con la fonte, è nella nostra pagina dei prezzi.',
+    nl: 'De openbare prijslijst van een fotograaf uit Rovaniemi geeft de orde van grootte: alleen de ceremonie ongeveer € 450, een portretsessie € 680, een volledig gedocumenteerde dag € 1.960 tot € 2.600. In de kerstweken geldt een toeslag en reizen buiten Rovaniemi wordt per kilometer berekend. De volledige uitsplitsing, met bron, staat op onze prijzenpagina.',
+    sv: 'En Rovaniemifotografs offentliga prislista ger skalan: enbart vigseln omkring 450 €, en porträttfotografering 680 €, en helt dokumenterad dag 1 960 till 2 600 €. Julveckorna har ett tillägg och resor utanför Rovaniemi debiteras per kilometer. Hela uppställningen med källa finns på vår prissida.',
+  },
+  costLink: {
+    en: 'See the price page',
+    fi: 'Katso hintasivu',
+    de: 'Zur Preisseite',
+    ja: '料金ページを見る',
+    es: 'Ver la página de precios',
+    'pt-BR': 'Ver a página de preços',
+    'zh-CN': '查看价格页',
+    ko: '요금 페이지 보기',
+    fr: 'Voir la page des prix',
+    it: 'Vedi la pagina dei prezzi',
+    nl: 'Bekijk de prijzenpagina',
+    sv: 'Se prissidan',
+  },
+  askTitle: {
+    en: 'Four questions before you book',
+    fi: 'Neljä kysymystä ennen varausta',
+    de: 'Vier Fragen vor der Buchung',
+    ja: '予約前に確認したい4つのこと',
+    es: 'Cuatro preguntas antes de reservar',
+    'pt-BR': 'Quatro perguntas antes de reservar',
+    'zh-CN': '预订前要问的四个问题',
+    ko: '예약 전 확인할 네 가지 질문',
+    fr: 'Quatre questions avant de réserver',
+    it: 'Quattro domande prima di prenotare',
+    nl: 'Vier vragen voor u boekt',
+    sv: 'Fyra frågor innan du bokar',
+  },
+  ask1: {
+    en: 'Show me aurora photos with people in them. A sky alone is easy; a couple sharp under a moving aurora is the skill you are paying for.',
+    fi: 'Näytä revontulikuvia, joissa on ihmisiä. Pelkkä taivas on helppo; terävä pari liikkuvien revontulten alla on se taito, josta maksat.',
+    de: 'Zeigen Sie mir Polarlichtfotos mit Menschen darauf. Der Himmel allein ist einfach; ein scharfes Paar unter bewegten Polarlichtern ist das Können, für das Sie bezahlen.',
+    ja: '人物が写っているオーロラ写真を見せてもらいましょう。空だけなら簡単ですが、揺れるオーロラの下でふたりをぶれずに写すのが、料金に見合う技術です。',
+    es: 'Pida fotos de auroras con personas. El cielo solo es fácil; una pareja nítida bajo una aurora en movimiento es la habilidad que usted paga.',
+    'pt-BR': 'Peça fotos de aurora com pessoas. Só o céu é fácil; um casal nítido sob uma aurora em movimento é a habilidade pela qual você paga.',
+    'zh-CN': '请对方出示有人物的极光照片。只拍天空很容易；在流动的极光下把新人拍清楚，才是您付费购买的技术。',
+    ko: '사람이 함께 나온 오로라 사진을 보여 달라고 하세요. 하늘만 찍는 건 쉽지만, 움직이는 오로라 아래에서 두 사람을 선명하게 담는 것이 돈을 지불할 만한 기술입니다.',
+    fr: 'Demandez des photos d’aurores avec des personnes. Le ciel seul est facile ; un couple net sous une aurore en mouvement, c’est la compétence que vous payez.',
+    it: 'Si faccia mostrare foto di aurore con persone. Il cielo da solo è facile; una coppia nitida sotto un’aurora in movimento è l’abilità per cui si paga.',
+    nl: 'Vraag naar noorderlichtfoto’s met mensen erop. Alleen de lucht is makkelijk; een scherp bruidspaar onder bewegend noorderlicht is het vakmanschap waarvoor u betaalt.',
+    sv: 'Be att få se norrskensbilder med människor i. Enbart himlen är enkel; ett skarpt par under ett rörligt norrsken är den skicklighet du betalar för.',
+  },
+  ask2: {
+    en: 'How do the camera, the batteries and you cope with hard frost? Batteries drain fast in the cold and lenses fog when you step inside; an experienced photographer has a routine for both.',
+    fi: 'Miten kamera, akut ja kuvaaja itse kestävät kovaa pakkasta? Akut tyhjenevät pakkasessa nopeasti ja linssit huurtuvat sisälle tullessa; kokeneella kuvaajalla on rutiini molempiin.',
+    de: 'Wie kommen Kamera, Akkus und Sie selbst mit strengem Frost zurecht? Akkus entladen sich in der Kälte schnell, Objektive beschlagen beim Hineingehen; ein erfahrener Fotograf hat für beides eine Routine.',
+    ja: 'カメラ、バッテリー、そして撮影者本人は厳しい寒さにどう対処しますか。バッテリーは寒さで急速に減り、屋内に入るとレンズが曇ります。経験豊富なフォトグラファーにはどちらにも決まった手順があります。',
+    es: '¿Cómo aguantan la cámara, las baterías y el propio fotógrafo un frío intenso? Las baterías se agotan rápido con el frío y las lentes se empañan al entrar; un fotógrafo con experiencia tiene una rutina para ambas cosas.',
+    'pt-BR': 'Como a câmera, as baterias e o próprio fotógrafo lidam com o frio intenso? As baterias descarregam rápido no frio e as lentes embaçam ao entrar; um fotógrafo experiente tem uma rotina para as duas coisas.',
+    'zh-CN': '相机、电池和摄影师本人如何应对严寒？电池在低温下耗电很快，进入室内镜头会起雾；有经验的摄影师对这两点都有固定的应对流程。',
+    ko: '카메라와 배터리, 그리고 촬영자 본인은 혹한을 어떻게 견디나요? 배터리는 추위에서 빨리 닳고 실내로 들어오면 렌즈에 김이 서립니다. 경험 있는 포토그래퍼는 두 가지 모두에 대비한 루틴이 있습니다.',
+    fr: 'Comment l’appareil, les batteries et vous-même supportez-vous un froid intense ? Les batteries se vident vite au froid et les objectifs s’embuent en rentrant ; un photographe expérimenté a une routine pour les deux.',
+    it: 'Come reggono la fotocamera, le batterie e Lei stesso il gelo intenso? Le batterie si scaricano in fretta al freddo e gli obiettivi si appannano entrando al chiuso; un fotografo esperto ha una routine per entrambe le cose.',
+    nl: 'Hoe gaan de camera, de accu’s en uzelf om met strenge vorst? Accu’s lopen in de kou snel leeg en lenzen beslaan als u naar binnen gaat; een ervaren fotograaf heeft voor beide een routine.',
+    sv: 'Hur klarar kameran, batterierna och du själv sträng kyla? Batterier töms snabbt i kylan och objektiv immar igen när man går in; en erfaren fotograf har en rutin för båda.',
+  },
+  ask3: {
+    en: 'Is travel included? Most photographers are based in Rovaniemi or Levi and bill the drive to Saariselkä, Kilpisjärvi or Inari separately.',
+    fi: 'Sisältyykö matka hintaan? Useimmat kuvaajat toimivat Rovaniemeltä tai Leviltä ja laskuttavat ajon Saariselälle, Kilpisjärvelle tai Inariin erikseen.',
+    de: 'Ist die Anfahrt enthalten? Die meisten Fotografen sind in Rovaniemi oder Levi ansässig und berechnen die Fahrt nach Saariselkä, Kilpisjärvi oder Inari separat.',
+    ja: '出張費は含まれていますか。多くのフォトグラファーはロヴァニエミかレヴィを拠点にしており、サーリセルカ、キルピスヤルヴィ、イナリへの移動は別料金になります。',
+    es: '¿Está incluido el desplazamiento? La mayoría de los fotógrafos trabaja desde Rovaniemi o Levi y cobra aparte el viaje a Saariselkä, Kilpisjärvi o Inari.',
+    'pt-BR': 'O deslocamento está incluído? A maioria dos fotógrafos trabalha a partir de Rovaniemi ou Levi e cobra separadamente a viagem até Saariselkä, Kilpisjärvi ou Inari.',
+    'zh-CN': '路费是否包含在内？大多数摄影师常驻罗瓦涅米或莱维，前往萨里塞尔卡、基尔皮斯耶尔维或伊纳里的车程另行收费。',
+    ko: '이동 비용이 포함되어 있나요? 대부분의 포토그래퍼는 로바니에미나 레비를 거점으로 하며, 사리셀카, 킬피스야르비, 이나리까지의 이동은 별도로 청구합니다.',
+    fr: 'Le déplacement est-il inclus ? La plupart des photographes sont basés à Rovaniemi ou à Levi et facturent à part le trajet vers Saariselkä, Kilpisjärvi ou Inari.',
+    it: 'Il viaggio è incluso? La maggior parte dei fotografi lavora da Rovaniemi o Levi e fattura a parte lo spostamento verso Saariselkä, Kilpisjärvi o Inari.',
+    nl: 'Zit reizen in de prijs? De meeste fotografen werken vanuit Rovaniemi of Levi en rekenen de rit naar Saariselkä, Kilpisjärvi of Inari apart.',
+    sv: 'Ingår resan? De flesta fotografer utgår från Rovaniemi eller Levi och debiterar körningen till Saariselkä, Kilpisjärvi eller Enare separat.',
+  },
+  ask4: {
+    en: 'When do we get the photos, and may we publish them? Agree the delivery time and the usage rights in writing before the day.',
+    fi: 'Milloin saamme kuvat ja saammeko julkaista ne? Sopikaa toimitusaika ja käyttöoikeudet kirjallisesti ennen hääpäivää.',
+    de: 'Wann bekommen wir die Fotos, und dürfen wir sie veröffentlichen? Vereinbaren Sie Lieferzeit und Nutzungsrechte vor dem Hochzeitstag schriftlich.',
+    ja: '写真はいつ受け取れますか。公開してもよいですか。納期と使用権は当日より前に書面で取り決めておきましょう。',
+    es: '¿Cuándo recibimos las fotos y podemos publicarlas? Acuerde por escrito el plazo de entrega y los derechos de uso antes del día de la boda.',
+    'pt-BR': 'Quando recebemos as fotos e podemos publicá-las? Combine por escrito o prazo de entrega e os direitos de uso antes do dia do casamento.',
+    'zh-CN': '什么时候能拿到照片，我们可以公开发布吗？请在婚礼当天之前以书面形式约定交付时间和使用权。',
+    ko: '사진은 언제 받을 수 있고, 공개해도 되나요? 전달 시기와 사용 권한은 결혼식 전에 서면으로 정해 두세요.',
+    fr: 'Quand recevons-nous les photos, et pouvons-nous les publier ? Convenez par écrit du délai de livraison et des droits d’utilisation avant le jour J.',
+    it: 'Quando riceviamo le foto e possiamo pubblicarle? Concordi per iscritto i tempi di consegna e i diritti d’uso prima del giorno del matrimonio.',
+    nl: 'Wanneer krijgen we de foto’s en mogen we ze publiceren? Leg de levertijd en de gebruiksrechten schriftelijk vast voor de trouwdag.',
+    sv: 'När får vi bilderna och får vi publicera dem? Kom skriftligt överens om leveranstid och nyttjanderätt före bröllopsdagen.',
+  },
+  whenTitle: {
+    en: 'When to book',
+    fi: 'Milloin varata',
+    de: 'Wann buchen',
+    ja: '予約のタイミング',
+    es: 'Cuándo reservar',
+    'pt-BR': 'Quando reservar',
+    'zh-CN': '何时预订',
+    ko: '예약 시기',
+    fr: 'Quand réserver',
+    it: 'Quando prenotare',
+    nl: 'Wanneer boeken',
+    sv: 'När du bör boka',
+  },
+  whenBody: {
+    en: 'The photographers who work in Lapland are few, and the weekends between December and March go first. A symbolic ceremony can be timed to the photographer’s calendar and to the weather, which is the practical advantage of not being tied to a registry office slot.',
+    fi: 'Lapissa toimivia hääkuvaajia on vähän, ja joulukuun ja maaliskuun väliset viikonloput menevät ensimmäisinä. Symbolisen seremonian voi ajoittaa kuvaajan kalenterin ja sään mukaan; se on käytännön etu siitä, ettei olla sidottuja virkailijan aikaan.',
+    de: 'Die in Lappland tätigen Hochzeitsfotografen sind wenige, und die Wochenenden zwischen Dezember und März sind zuerst vergeben. Eine freie Trauung lässt sich nach dem Kalender des Fotografen und nach dem Wetter legen; das ist der praktische Vorteil, wenn man nicht an einen Standesamtstermin gebunden ist.',
+    ja: 'ラップランドで活動するウェディングフォトグラファーは多くなく、12月から3月の週末は先に埋まります。シンボリック挙式なら、フォトグラファーの予定と天候に合わせて日程を決められます。役所の枠に縛られないことの実際的な利点です。',
+    es: 'Los fotógrafos que trabajan en Laponia son pocos, y los fines de semana entre diciembre y marzo se reservan primero. Una ceremonia simbólica puede ajustarse al calendario del fotógrafo y al tiempo; esa es la ventaja práctica de no depender de una cita en el registro civil.',
+    'pt-BR': 'Os fotógrafos que trabalham na Lapônia são poucos, e os fins de semana entre dezembro e março são reservados primeiro. Uma cerimônia simbólica pode se ajustar à agenda do fotógrafo e ao tempo; essa é a vantagem prática de não depender de um horário no cartório.',
+    'zh-CN': '在拉普兰工作的婚礼摄影师不多，十二月至三月的周末最先订满。象征性仪式可以按摄影师的日程和天气来安排，这正是不受登记处时段约束的实际好处。',
+    ko: '라플란드에서 활동하는 웨딩 포토그래퍼는 많지 않고, 12월부터 3월 사이의 주말이 가장 먼저 마감됩니다. 상징 예식은 포토그래퍼의 일정과 날씨에 맞춰 잡을 수 있습니다. 관공서 예약 시간에 묶이지 않는다는 실질적인 장점입니다.',
+    fr: 'Les photographes qui travaillent en Laponie sont peu nombreux, et les week-ends de décembre à mars partent en premier. Une cérémonie symbolique peut se caler sur l’agenda du photographe et sur la météo ; c’est l’avantage pratique de ne pas dépendre d’un créneau en mairie.',
+    it: 'I fotografi che lavorano in Lapponia sono pochi, e i fine settimana tra dicembre e marzo si prenotano per primi. Una cerimonia simbolica si può fissare in base all’agenda del fotografo e al meteo; è il vantaggio pratico di non dipendere da un appuntamento al comune.',
+    nl: 'De fotografen die in Lapland werken zijn schaars, en de weekenden tussen december en maart gaan het eerst. Een symbolische ceremonie kan worden afgestemd op de agenda van de fotograaf en op het weer; dat is het praktische voordeel van niet vastzitten aan een tijdslot bij de burgerlijke stand.',
+    sv: 'Fotograferna som arbetar i Lappland är få, och helgerna mellan december och mars går först. En symbolisk ceremoni kan läggas efter fotografens kalender och efter vädret; det är den praktiska fördelen med att inte vara bunden till en tid hos vigselförrättaren.',
+  },
+  note: {
+    en: 'We represent no photographer and take no commission from any of them. Your request goes out with your details only when you send the form.',
+    fi: 'Emme edusta yhtäkään kuvaajaa emmekä saa heiltä provisiota. Pyyntösi lähtee tietoinesi vain, kun lähetät lomakkeen.',
+    de: 'Wir vertreten keinen Fotografen und erhalten von keinem eine Provision. Ihre Anfrage geht mit Ihren Angaben erst hinaus, wenn Sie das Formular absenden.',
+    ja: '当サイトは特定のフォトグラファーを代理しておらず、手数料も受け取っていません。ご依頼内容は、フォームを送信されたときにのみお客様の情報とともに送られます。',
+    es: 'No representamos a ningún fotógrafo ni cobramos comisión de ninguno. Su solicitud se envía con sus datos solo cuando usted manda el formulario.',
+    'pt-BR': 'Não representamos nenhum fotógrafo nem recebemos comissão de nenhum deles. Seu pedido só é enviado com seus dados quando você manda o formulário.',
+    'zh-CN': '我们不代理任何摄影师，也不从他们那里收取佣金。只有在您提交表单时，您的请求和资料才会被发送。',
+    ko: '저희는 어떤 포토그래퍼도 대리하지 않으며 수수료도 받지 않습니다. 요청은 양식을 보내실 때에만 입력하신 정보와 함께 전달됩니다.',
+    fr: 'Nous ne représentons aucun photographe et ne touchons aucune commission. Votre demande ne part avec vos coordonnées que lorsque vous envoyez le formulaire.',
+    it: 'Non rappresentiamo nessun fotografo e non riceviamo commissioni da nessuno di loro. La Sua richiesta parte con i Suoi dati solo quando invia il modulo.',
+    nl: 'Wij vertegenwoordigen geen fotograaf en ontvangen van geen van hen commissie. Uw aanvraag gaat pas met uw gegevens de deur uit als u het formulier verstuurt.',
+    sv: 'Vi företräder ingen fotograf och tar ingen provision från någon av dem. Din förfrågan skickas med dina uppgifter först när du sänder formuläret.',
   },
 };
 
 export default function Photographers() {
-  const { lang, dataLang } = useLang();
+  const { lang, tr } = useLang();
+  const t = (k: keyof typeof P) => pickLocalized(P[k], lang);
+  const questions = [t('ask1'), t('ask2'), t('ask3'), t('ask4')];
   return (
     <>
       <SEO
-        title={pickLocalized(P.seoTitle, lang)}
-        description={pickLocalized(P.seoDesc, lang)}
+        title={t('seoTitle')}
+        description={t('seoDesc')}
         path="/photographers"
+        image="/images/heroes/aurora-levi-bands-rasanen.jpg"
       />
       <PageHero
         compact
         eyebrow={ui('eyebrowPhotographers', lang)}
-        title={pickLocalized(P.title, lang)}
-        subtitle={pickLocalized(P.subtitle, lang)}
-        image="/images/types/elopement.webp"
-        imageAlt={pickLocalized(P.imageAlt, lang)}
+        title={t('title')}
+        subtitle={t('subtitle')}
+        image="/images/heroes/aurora-levi-bands-rasanen.jpg"
+        avifSrcSet="/images/heroes/aurora-levi-bands-rasanen-800.avif 800w, /images/heroes/aurora-levi-bands-rasanen-1200.avif 1200w"
+        webpSrcSet="/images/heroes/aurora-levi-bands-rasanen-800.webp 800w, /images/heroes/aurora-levi-bands-rasanen-1200.webp 1200w"
+        credit={{ name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Aurora_curtain_and_bands_over_Levi,_Kittil%C3%A4,_Lapland,_Finland,_2023_September.jpg' }}
+        lang={lang}
+        sizes="100vw"
+        objectPosition="50% 45%"
+        imageAlt={t('imageAlt')}
       />
 
-      <Section>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-          {photographers.map((p) => (
-            <article
-              key={p.slug}
-              className="bg-night-light border border-white/5 rounded-2xl p-6 flex flex-col"
+      <Section title={t('costTitle')}>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-gray-300 leading-relaxed text-base sm:text-lg">{t('costBody')}</p>
+          <p className="mt-6">
+            <L
+              to="/pricing"
+              className="inline-flex items-center px-6 py-3 border border-white/20 hover:bg-white/5 text-white rounded-full transition-colors"
             >
-              <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">
-                {p.baseLocation[dataLang]}
-              </p>
-              <h3 className="font-heading text-xl text-white tracking-wide mb-1">{p.name}</h3>
-              <p className="text-sm text-gray-500 mb-3">{p.style[dataLang]}</p>
-              <p className="text-sm text-gray-300 leading-relaxed mb-4 flex-1">{p.description[dataLang]}</p>
-              <p className="text-xs text-aurora-green italic mb-4">★ {p.highlight[dataLang]}</p>
-              <div className="flex items-center justify-between text-xs pt-4 border-t border-white/5">
-                <a
-                  href={withReferral(p.website, 'photographers')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-aurora-pink hover:text-rose transition-colors font-semibold"
-                >
-                  {ui('website', lang)}
-                </a>
-                {p.instagram && (
-                  <span className="text-gray-500">{p.instagram}</span>
-                )}
-              </div>
-            </article>
-          ))}
+              {t('costLink')}
+            </L>
+          </p>
         </div>
+      </Section>
 
-        <p className="text-center text-xs text-gray-500 mt-10 max-w-2xl mx-auto">
-          {pickLocalized(P.sourceNote, lang)}
-        </p>
+      <Section title={t('askTitle')} className="bg-night-light/30">
+        <ol className="max-w-3xl mx-auto grid gap-4 list-none p-0">
+          {questions.map((q, i) => (
+            <li key={i} className="flex gap-4 bg-night-light border border-white/5 rounded-2xl p-5 sm:p-6">
+              <span className="font-heading text-3xl text-rose tracking-wide leading-none shrink-0" aria-hidden="true">
+                {i + 1}
+              </span>
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{q}</p>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section title={t('whenTitle')}>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-gray-300 leading-relaxed text-base sm:text-lg">{t('whenBody')}</p>
+        </div>
+      </Section>
+
+      <Section className="bg-night-light/30" title={tr.contact.formTitle} subtitle={tr.contact.formSub}>
+        <LeadForm />
+        <p className="text-center text-xs text-gray-500 mt-8 max-w-2xl mx-auto">{t('note')}</p>
       </Section>
     </>
   );

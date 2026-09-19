@@ -23,7 +23,7 @@ export default function Privacy() {
   const unsubHref = `https://laplandvibes.com/${seg ? `${seg}/` : ''}unsubscribe/`;
   return (
     <>
-      <SEO title={metaTitle} description="Privacy policy" path="/privacy" />
+      <SEO title={metaTitle} description={paragraphs[0]} /* localized: the hardcoded English literal overwrote every locale's prerendered description on hydration (es/en passes 19.9.2026) */ path="/privacy" />
       <Section title={title}>
         <div className="prose prose-invert max-w-3xl mx-auto text-gray-300 space-y-4">
           <p>

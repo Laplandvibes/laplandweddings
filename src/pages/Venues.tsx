@@ -37,40 +37,41 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     en: 'Lapland Wedding Venues: 21 places | LaplandWeddings',
     fi: 'Hääpaikat Lapissa: 21 kohdetta | LaplandWeddings',
     de: 'Hochzeitslocations in Lappland | LaplandWeddings',
-    ja: 'ラップランドのウェディング会場：21か所 | LaplandWeddings',
+    ja: 'ラップランドのウェディング会場：20か所 | LaplandWeddings',
     es: 'Lugares para bodas en Laponia: 21 | LaplandWeddings',
     'pt-BR': 'Locais para casamento na Lapônia | LaplandWeddings',
-    'zh-CN': '拉普兰婚礼场地：21 个场地 | LaplandWeddings',
-    ko: '라플란드 웨딩 장소: 21곳 | LaplandWeddings',
+    'zh-CN': '拉普兰婚礼场地：20 个场地 | LaplandWeddings',
+    ko: '라플란드 웨딩 장소: 20곳 | LaplandWeddings',
     fr: 'Lieux de mariage en Laponie | LaplandWeddings',
     it: 'Location per matrimoni in Lapponia | LaplandWeddings',
-    nl: 'Trouwlocaties in Lapland: 21 locaties | LaplandWeddings', sv: 'Bröllopsplatser i Lappland: 21 platser | LaplandWeddings',
+    nl: 'Trouwlocaties in Lapland: 20 locaties | LaplandWeddings', sv: 'Bröllopsplatser i Lappland: 20 platser | LaplandWeddings',
   },
   seoDesc: {
     en: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village and more. 21 Lapland wedding venues across the regions. We represent none of them.',
-    fi: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village ja muita. 21 hääpaikkaa Lapin paikkakunnilla. Emme edusta yhtäkään niistä.',
+    fi: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village ja muita. 20 hääpaikkaa Lapin paikkakunnilla. Emme edusta yhtäkään niistä.',
     de: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village und mehr. 21 Hochzeitsorte in ganz Lappland. Wir vertreten keinen davon.',
-    ja: 'カクスラウッタネン、ノーザンライツ・ランチ、アークティック・スノーホテル、スノービレッジほか。各地域の会場21か所。いずれの代理店でもありません。',
-    es: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village y más. 21 lugares para bodas en toda Laponia. No representamos a ninguno.',
-    'pt-BR': 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e mais. 21 locais de casamento em toda a Lapônia. Não representamos nenhum.',
+    ja: 'カクスラウッタネン、ノーザンライツ・ランチ、アークティック・スノーホテル、スノービレッジほか。各地域の会場20か所。いずれの代理店でもありません。',
+    es: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village y más. 20 lugares para bodas en toda Laponia. No representamos a ninguno.',
+    'pt-BR': 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e mais. 20 locais de casamento em toda a Lapônia. Não representamos nenhum.',
     'zh-CN': 'Kakslauttanen、Northern Lights Ranch、Arctic SnowHotel、Snow Village 等。遍布拉普兰各地的 21 个婚礼场地。我们不代理其中任何一家。',
-    ko: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village 등. 라플란드 전역의 웨딩 장소 21곳. 저희는 그 어느 곳도 대리하지 않습니다.',
-    fr: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village et plus. 21 lieux de mariage dans toute la Laponie. Nous n’en représentons aucun.',
-    it: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e altri. 21 location per matrimoni in tutta la Lapponia. Non ne rappresentiamo nessuna.',
+    ko: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village 등. 라플란드 전역의 웨딩 장소 20곳. 저희는 그 어느 곳도 대리하지 않습니다.',
+    fr: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village et plus. 20 lieux de mariage dans toute la Laponie. Nous n’en représentons aucun.',
+    it: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e altri. 20 location per matrimoni in tutta la Lapponia. Non ne rappresentiamo nessuna.',
     nl: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 21 trouwlocaties verspreid over Lapland. Wij vertegenwoordigen er geen enkele.', sv: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. 21 bröllopsplatser runt om i Lappland. Vi företräder ingen av dem.',
   },
   imageAlt: {
-    en: 'Glass igloo under the Northern Lights at Kakslauttanen',
-    fi: 'Lasi-iglu revontulien alla Kakslauttasella',
-    de: 'Glasiglu unter den Polarlichtern in Kakslauttanen',
-    ja: 'カクスラウッタネンのオーロラの下のガラスのイグルー',
-    es: 'Iglú de cristal bajo la aurora boreal en Kakslauttanen',
-    'pt-BR': 'Iglu de vidro sob a aurora boreal em Kakslauttanen',
-    'zh-CN': 'Kakslauttanen 北极光下的玻璃冰屋',
-    ko: 'Kakslauttanen의 오로라 아래 글래스 이글루',
-    fr: 'Igloo de verre sous les aurores boréales à Kakslauttanen',
-    it: 'Igloo di vetro sotto l’aurora boreale a Kakslauttanen',
-    nl: 'Glazen iglo onder het noorderlicht in Kakslauttanen', sv: 'Glasiglo under norrskenet på Kakslauttanen',
+    en: 'Green aurora curtain over Levi fell',
+    fi: 'Vihreä revontuliverho Levitunturin yllä',
+    de: 'Grüner Polarlichtvorhang über dem Levi-Fjäll',
+    ja: 'レヴィ山の上空にかかる緑のオーロラのカーテン',
+    es: 'Cortina verde de auroras boreales sobre el fjäll de Levi',
+    'pt-BR': 'Cortina verde de aurora boreal sobre o monte Levi',
+    'zh-CN': '莱维山上空绿色的极光帷幕',
+    ko: '레비 산 위로 드리운 초록빛 오로라 커튼',
+    fr: 'Rideau d’aurores boréales vertes au-dessus du fjäll de Levi',
+    it: 'Cortina verde di aurora boreale sopra il fjäll di Levi',
+    nl: 'Groen noorderlichtgordijn boven de Levi-fjäll',
+    sv: 'Grön norrskensridå över Levifjället',
   },
   affordable: {
     en: 'affordable', fi: 'edullinen', de: 'günstig', ja: 'お手頃',
@@ -137,7 +138,9 @@ export default function Venues() {
         eyebrow={ui('eyebrowVenues', lang)}
         title={tr.venues.indexTitle}
         subtitle={tr.venues.indexIntro}
-        image="/images/heroes/glass-igloo-aurora.jpg"
+        image="/images/heroes/aurora-levi-curtain2-rasanen.jpg"
+        credit={{ name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Green_aurora_curtain_over_Levi,_Kittil%C3%A4,_Lapland,_Finland,_2023_September_-_2.jpg' }}
+        lang={lang}
         imageAlt={pickLocalized(P.imageAlt, lang)}
       />
       <Section>

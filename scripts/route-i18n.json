@@ -102,7 +102,7 @@
       },
       {
         "slug": "levin-iglut",
-        "region": "Levi · auf dem Gipfel des Fjells",
+        "region": "Levi · auf dem Gipfel des Fjälls",
         "desc": "Glasiglus auf dem Gipfel des Levi-Fjells: der beste Blickwinkel auf die Polarlichter in Lappland, Suite-Iglus für Paare."
       },
       {
@@ -147,7 +147,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Auf dem Gipfel des Levi-Fjells",
+        "region": "Auf dem Gipfel des Levi-Fjälls",
         "desc": "Flaggschiff von Lapland Hotels auf dem Gipfel des Levi-Fjells. Panoramafenster, Zugang mit der Gondelbahn."
       },
       {
@@ -169,11 +169,6 @@
         "slug": "lapland-hotels-luostotunturi",
         "region": "Luosto, Sodankylä",
         "desc": "Hotel im Blockhausdorf Luosto: Amethyst Spa, 500 m zu den Pisten, neben dem Nationalpark Pyhä-Luosto."
-      },
-      {
-        "slug": "santas-hotel-santamus",
-        "region": "Weihnachtsmanndorf",
-        "desc": "Das einzige für Hochzeiten konzipierte Hotel im Weihnachtsmanndorf. Rentier- und Husky-Pakete inklusive."
       },
       {
         "slug": "nova-skyland",
@@ -354,11 +349,6 @@
         "desc": "Luostoのログハウス村にあるホテル：Amethyst Spa、ゲレンデまで500 m、Pyhä-Luosto国立公園の隣。"
       },
       {
-        "slug": "santas-hotel-santamus",
-        "region": "サンタクロース村",
-        "desc": "Santa Claus Villageで唯一、結婚式のために設計されたホテル。トナカイとハスキーのパッケージ込み。"
-      },
-      {
         "slug": "nova-skyland",
         "region": "サンタクロース村",
         "desc": "Santa Claus Villageにある、コンパクトでモダンなブティックホテル。"
@@ -535,11 +525,6 @@
         "slug": "lapland-hotels-luostotunturi",
         "region": "Luosto, Sodankylä",
         "desc": "Hotel en el pueblo de troncos de Luosto: Amethyst Spa, a 500 m de las pistas, junto al Parque Nacional Pyhä-Luosto."
-      },
-      {
-        "slug": "santas-hotel-santamus",
-        "region": "Pueblo de Papá Noel",
-        "desc": "El único hotel del Pueblo de Papá Noel diseñado para bodas. Incluye paquetes de renos y huskies."
       },
       {
         "slug": "nova-skyland",
@@ -720,11 +705,6 @@
         "desc": "Hotel na vila de casas de troncos de Luosto: Amethyst Spa, 500 m das pistas, ao lado do Parque Nacional Pyhä-Luosto."
       },
       {
-        "slug": "santas-hotel-santamus",
-        "region": "Vila do Papai Noel",
-        "desc": "O único hotel da Vila do Papai Noel projetado para casamentos. Pacotes de renas e huskies incluídos."
-      },
-      {
         "slug": "nova-skyland",
         "region": "Vila do Papai Noel",
         "desc": "Hotel boutique compacto e moderno na Vila do Papai Noel."
@@ -901,11 +881,6 @@
         "slug": "lapland-hotels-luostotunturi",
         "region": "卢奥斯托，索丹屈莱",
         "desc": "位于 Luosto 木屋村的酒店：Amethyst Spa，距雪道 500 m，紧邻 Pyhä-Luosto 国家公园。"
-      },
-      {
-        "slug": "santas-hotel-santamus",
-        "region": "圣诞老人村",
-        "desc": "圣诞老人村中唯一为婚礼而设计的酒店。含驯鹿和哈士奇套餐。"
       },
       {
         "slug": "nova-skyland",
@@ -1086,11 +1061,6 @@
         "desc": "Luosto 통나무 마을에 있는 호텔. Amethyst Spa, 슬로프까지 500 m, Pyhä-Luosto 국립공원 옆."
       },
       {
-        "slug": "santas-hotel-santamus",
-        "region": "산타클로스 마을",
-        "desc": "산타클로스 마을에서 유일하게 결혼식을 위해 설계된 호텔. 순록·허스키 패키지 포함."
-      },
-      {
         "slug": "nova-skyland",
         "region": "산타클로스 마을",
         "desc": "산타클로스 마을에 있는 아담하고 현대적인 부티크 호텔."
@@ -1102,7 +1072,7 @@
       {
         "slug": "rovaniemi",
         "name": "Rovaniemi",
-        "desc": "La capitale de la Laponie, la plus facile à rejoindre en vol international. Des lieux de mariage allant de la chapelle de glace aux igloos de verre près du village du Père Noël."
+        "desc": "La capitale de la Laponie, facile d’accès en vol international. Lieux de mariage : de la chapelle de glace aux igloos de verre, près du Village du Père Noël."
       },
       {
         "slug": "saariselka",
@@ -1269,11 +1239,6 @@
         "desc": "Hôtel dans le village de rondins de Luosto : Amethyst Spa, 500 m des pistes, à côté du parc national de Pyhä-Luosto."
       },
       {
-        "slug": "santas-hotel-santamus",
-        "region": "Village du Père Noël",
-        "desc": "Le seul hôtel du village du Père Noël conçu pour les mariages. Forfaits rennes et huskys inclus."
-      },
-      {
         "slug": "nova-skyland",
         "region": "Village du Père Noël",
         "desc": "Hôtel boutique compact et moderne au village du Père Noël."
@@ -1351,7 +1316,7 @@
       },
       {
         "slug": "vow-renewal",
-        "name": "Rinnovo dei voti",
+        "name": "Rinnovo delle promesse",
         "desc": "Rinnovi le Sue promesse nella neve della Lapponia: nessuna pratica burocratica, cerimonia completamente su misura."
       }
     ],
@@ -1450,11 +1415,6 @@
         "slug": "lapland-hotels-luostotunturi",
         "region": "Luosto, Sodankylä",
         "desc": "Hotel nel villaggio di case in legno di Luosto: Amethyst Spa, 500 m dalle piste, accanto al Parco Nazionale Pyhä-Luosto."
-      },
-      {
-        "slug": "santas-hotel-santamus",
-        "region": "Villaggio di Babbo Natale",
-        "desc": "L’unico hotel del Santa Claus Village progettato per i matrimoni. Pacchetti con renne e husky inclusi."
       },
       {
         "slug": "nova-skyland",
@@ -1635,11 +1595,6 @@
         "desc": "Hotel in het blokhutdorp Luosto: Amethyst Spa, 500 m naar de pistes, naast Nationaal Park Pyhä-Luosto."
       },
       {
-        "slug": "santas-hotel-santamus",
-        "region": "Kerstmandorp",
-        "desc": "Het enige hotel in Santa Claus Village dat voor bruiloften is ontworpen. Rendier- en huskypakketten inbegrepen."
-      },
-      {
         "slug": "nova-skyland",
         "region": "Kerstmandorp",
         "desc": "Compact, modern boetiekhotel in Santa Claus Village."
@@ -1651,7 +1606,7 @@
       {
         "slug": "rovaniemi",
         "name": "Rovaniemi",
-        "desc": "Lapplands huvudstad, enklast att nå med internationella flyg. Bröllopsplatser från iskapell till glasigloor nära Santa Claus Village."
+        "desc": "Lapplands huvudstad, enklast att nå med internationella flyg. Bröllopsplatser från iskapell till glasigloor nära Jultomtens by."
       },
       {
         "slug": "saariselka",
@@ -1769,7 +1724,7 @@
       },
       {
         "slug": "wilderness-hotel-inari",
-        "region": "Vid Enaresjöns strand",
+        "region": "Vid Enare träsks strand",
         "desc": "Vid Enaresjöns strand, mitt i den samiska kulturen. Aurora-stugor med fri sikt mot sjöhorisonten."
       },
       {
@@ -1818,14 +1773,9 @@
         "desc": "Hotell i Luostos timmerby: Amethyst Spa, 500 m till backarna, intill Pyhä-Luosto nationalpark."
       },
       {
-        "slug": "santas-hotel-santamus",
-        "region": "Jultomtens by",
-        "desc": "Det enda hotellet i Santa Claus Village som är utformat för bröllop. Ren- och huskypaket ingår."
-      },
-      {
         "slug": "nova-skyland",
         "region": "Jultomtens by",
-        "desc": "Kompakt, modernt boutiquehotell i Santa Claus Village."
+        "desc": "Kompakt, modernt boutiquehotell i Jultomtens by."
       }
     ]
   }

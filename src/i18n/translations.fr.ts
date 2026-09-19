@@ -28,9 +28,9 @@ const t_fr = {
   },
   home: {
     heroTitle: 'Mariages en Laponie, tout en un seul endroit',
-    heroSubtitle: 'Igloos de verre · Chapelles de neige · Aurore boréale · Soleil de minuit. Mis en relation avec les organisateurs les plus expérimentés de Laponie.',
+    heroSubtitle: 'Igloos de verre · Chapelles de neige · Aurore boréale · Soleil de minuit. Nous transmettons votre demande aux organisateurs de mariage et aux lieux de Laponie, gratuitement et sans engagement.',
     heroTitleSummer: 'Mariages sous le soleil de minuit en Laponie',
-    heroSubtitleSummer: 'Vœux au bord du lac · Cérémonies au sommet des fjälls · Toits de verre sous un ciel qui ne s’assombrit jamais · Longues soirées lumineuses. Mis en relation avec les organisateurs les plus expérimentés de Laponie.',
+    heroSubtitleSummer: 'Vœux au bord du lac · Cérémonies au sommet des fjälls · Toits de verre sous un ciel qui ne s’assombrit jamais · Longues soirées lumineuses. Nous transmettons votre demande aux organisateurs de mariage et aux lieux de Laponie, gratuitement et sans engagement.',
     heroReassure: 'Gratuit et sans engagement · réponse sous 1–7 jours',
     whyTitle: 'Pourquoi se marier en Laponie',
     whyP: 'En Laponie, on se marie dans des igloos de verre, des chapelles de neige et au sommet des fells, et la cérémonie est le plus souvent symbolique. Ce site rassemble les lieux, les saisons et ce que les choses coûtent réellement. Nous n’organisons pas de mariages et ne représentons aucun lieu : vous nous dites ce que vous souhaitez, nous le transmettons à des wedding planners en Laponie.',
@@ -76,7 +76,7 @@ const t_fr = {
   },
   venues: {
     indexTitle: 'Les lieux de mariage les plus populaires de Laponie',
-    indexIntro: '21 lieux où l’on célèbre des mariages en Laponie. Les informations proviennent des sources propres à chaque lieu. Filtrez par région, type de mariage ou gamme de prix.',
+    indexIntro: '20 lieux où l’on célèbre des mariages en Laponie. Les informations proviennent des sources propres à chaque lieu. Filtrez par région, type de mariage ou gamme de prix.',
     filterByLocation: 'Filtrer par région',
     filterByType: 'Filtrer par type',
     filterByPrice: 'Filtrer par prix',

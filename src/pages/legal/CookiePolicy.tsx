@@ -7,7 +7,7 @@ export default function CookiePolicy() {
   const { metaTitle, title, paragraphs } = tr.legal.cookies;
   return (
     <>
-      <SEO title={metaTitle} description="Cookie policy" path="/cookie-policy" />
+      <SEO title={metaTitle} description={paragraphs[0]} /* localized: the hardcoded English literal overwrote every locale's prerendered description on hydration (es/en passes 19.9.2026) */ path="/cookie-policy" />
       <Section title={title}>
         <div className="prose prose-invert max-w-3xl mx-auto text-gray-300 space-y-4">
           {paragraphs.map((p, i) => (

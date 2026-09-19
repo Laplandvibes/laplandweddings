@@ -100,7 +100,7 @@ const CONTENT: Localized<ChecklistContent> = {
   de: {
     seoTitle: 'DVV-Checkliste für ausländische Paare | LaplandWeddings',
     seoDesc: 'Eine einseitige Checkliste für ausländische Paare, die im finnischen Lappland heiraten möchten. DVV-Unterlagen, Trauzeugen, Trauredner. Als PDF drucken.',
-    eyebrow: 'Lead-Magnet',
+    eyebrow: 'Kostenloser Download',
     title: 'Heiraten in Lappland: DVV-Checkliste für ausländische Paare',
     subtitle: 'Eine einseitige Checkliste mit allen Dokumenten und Schritten, die ein ausländisches Paar für eine Hochzeit im finnischen Lappland benötigt. Drucken oder als PDF für Ihre Reiseunterlagen speichern.',
     printBtn: 'Drucken oder als PDF speichern',
@@ -225,7 +225,7 @@ const CONTENT: Localized<ChecklistContent> = {
     footerNote: 'LaplandVibes 网络的一部分 · info@laplandvibes.com · 2026 年更新',
     items: [
       { sec: 'A', do: '向 DVV 申请婚姻障碍审查（Examination of Impediments）', why: '举行仪式前必须办理。免费。', link: DVV_LINK },
-      { sec: 'A', do: '在你的祖国申请无障碍证明（CNI）', why: '大多数国家都需要。如文件非英语、芬兰语或瑞典语，需附加海牙认证和宣誓翻译。' },
+      { sec: 'A', do: '在你的祖国申请无婚姻障碍证明（CNI）', why: '大多数国家都需要。如文件非英语、芬兰语或瑞典语，需附加海牙认证和宣誓翻译。' },
       { sec: 'A', do: '聘请拉普兰的婚礼策划师或场地', why: '他们会确认主婚人、证婚人和文件方案。' },
       { sec: 'B', do: '将 CNI 与婚姻障碍审查一并提交给 DVV', why: 'DVV 确认你们可以结婚。外国情侣需 3–5 周。' },
       { sec: 'B', do: '确认主婚人及其语言能力', why: '会讲英语的主婚人通常由你的策划师安排。' },
@@ -282,9 +282,9 @@ const CONTENT: Localized<ChecklistContent> = {
     items: [
       { sec: 'A', do: 'Demandez l’examen des empêchements au DVV', why: 'Nécessaire avant que la cérémonie puisse être célébrée. Gratuit.', link: DVV_LINK },
       { sec: 'A', do: 'Demandez un certificat de non-empêchement (CNI) dans votre pays d’origine', why: 'Requis dans la plupart des pays. Joignez une apostille et une traduction assermentée si le document n’est pas en anglais, finnois ou suédois.' },
-      { sec: 'A', do: 'Engagez un wedding planner ou un lieu en Laponie', why: 'Ils confirment l’officiant, les témoins et le plan des documents.' },
+      { sec: 'A', do: 'Engagez un organisateur de mariage ou un lieu en Laponie', why: 'Ils confirment l’officiant, les témoins et le plan des documents.' },
       { sec: 'B', do: 'Envoyez le CNI + l’examen des empêchements au DVV', why: 'Le DVV confirme que vous pouvez vous marier. 3 à 5 semaines pour les couples étrangers.' },
-      { sec: 'B', do: 'Confirmez l’officiant et ses compétences linguistiques', why: 'Un officiant anglophone est généralement organisé par votre planner.' },
+      { sec: 'B', do: 'Confirmez l’officiant et ses compétences linguistiques', why: 'Un officiant anglophone est généralement organisé par votre organisateur.' },
       { sec: 'B', do: 'Assurez-vous d’avoir 2 témoins', why: 'La loi finlandaise en exige exactement deux. Ils ne doivent pas forcément être finlandais. La plupart des lieux les fournissent sur place.' },
       { sec: 'C', do: 'Confirmez les transferts depuis l’aéroport et l’hébergement des invités', why: 'Le froid de la Laponie peut surprendre. Un point d’arrivée chauffé est important pour les invités.' },
       { sec: 'C', do: 'Confirmez l’horaire de la cérémonie avec le lieu', why: 'Les chapelles de neige se maintiennent entre –3 et –7 °C. Limitez les cérémonies à 15–30 min.' },

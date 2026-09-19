@@ -362,7 +362,7 @@ const LOCALE_DICTS: Record<SupportedLang, Required<NewsletterPopupDict>> = {
   es: {
     successHeadline: 'Ya casi.',
     successBody: 'Confirme su suscripción desde el correo que acabamos de enviarle.',
-    alreadyHeadline: '¡Ya estabas en la lista!',
+    alreadyHeadline: '¡Ya estaba en la lista!',
     alreadyBody: 'Su suscripción ya estaba activa. Sabrá de mí cuando haya algo que contar.',
     emailPlaceholder: 'Su correo electrónico',
     submit: '¡Me apunto!',

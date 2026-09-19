@@ -115,7 +115,6 @@ export const VENUE_BOOKING: Record<string, VenueBooking> = {
   // instead (Sembo FI-H22788 / Trip 2164549) — a DIFFERENT hotel in the same
   // chain. This is exactly the mismatch the venue review sync already refused
   // to guess on 2026-07-29. Left empty; the button degrades.
-  'santas-hotel-santamus': { town: 'Rovaniemi' },
   // Sembo + Trip: "Nova Skyland Hotel"
   'nova-skyland': { town: 'Rovaniemi', semboHotel: '905083', semboPoly: '360049', tripHotel: '11619373', tripCity: '1794' },
 };
