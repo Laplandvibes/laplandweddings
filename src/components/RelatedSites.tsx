@@ -28,13 +28,13 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string> }> = [
     fi: 'Järviterassi ja laituri koivujen keskellä Kemijärven rannalla kesällä',
     de: 'Eine Seeterrasse mit Steg zwischen Birken am Kemijärvi im Sommer',
     ja: '夏のケミヤルヴィ湖畔、白樺に囲まれた桟橋付きのテラス',
-    es: 'Una terraza junto al lago con embarcadero entre abedules en el lago Kemijärvi en verano',
-    'pt-BR': 'Um terraço à beira do lago com píer entre bétulas no lago Kemijärvi no verão',
+    es: 'Una terraza con embarcadero entre abedules junto al lago Kemijärvi en verano',
+    'pt-BR': 'Um terraço com píer entre bétulas à beira do lago Kemijärvi no verão',
     'zh-CN': '夏日凯米耶尔维湖畔白桦间带码头的湖景露台',
-    ko: '여름 케미얘르비 호숫가, 자작나무 사이 선착장이 있는 테라스',
+    ko: '여름 케미야르비 호숫가, 자작나무 사이 선착장이 있는 테라스',
     fr: 'Une terrasse au bord du lac avec un ponton parmi les bouleaux, lac Kemijärvi en été',
-    it: 'Una terrazza sul lago con pontile tra le betulle sul lago Kemijärvi d’estate',
-    nl: 'Een terras aan het meer met een steiger tussen berken aan het Kemijärvi-meer in de zomer',
+    it: 'Una terrazza con pontile tra le betulle sul lago Kemijärvi d’estate',
+    nl: 'Een terras met een steiger tussen berken aan het Kemijärvi-meer in de zomer',
     sv: 'En sjöterrass med brygga bland björkar vid Kemijärvi på sommaren',
   } },
   { src: '/images/own/road-to-the-fells-kittila-pyha.webp', alt: {
@@ -42,7 +42,7 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string> }> = [
     fi: 'Suora kesäinen tie kohti tuntureita Kittilän ja Pyhän välillä',
     de: 'Eine gerade Sommerstraße Richtung Fjells zwischen Kittilä und Pyhä',
     ja: 'キッティラとピュハの間、山々へまっすぐ続く夏の道',
-    es: 'Una carretera recta de verano hacia las colinas entre Kittilä y Pyhä',
+    es: 'Una carretera recta de verano hacia los fells entre Kittilä y Pyhä',
     'pt-BR': 'Uma estrada reta de verão rumo às montanhas entre Kittilä e Pyhä',
     'zh-CN': '基蒂莱与皮哈之间笔直通向群山的夏日公路',
     ko: '키틸래와 퓌해 사이, 산으로 곧게 뻗은 여름 도로',
@@ -62,7 +62,7 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string> }> = [
     ko: '여름날 키틸래 공항 터미널과 주차장',
     fr: 'L’aérogare et le parking de l’aéroport de Kittilä par une journée d’été',
     it: 'Il terminal e il parcheggio dell’aeroporto di Kittilä in un giorno d’estate',
-    nl: 'Het terminalgebouw en de parkeerplaats van Kittilä Airport op een zomerdag',
+    nl: 'Het terminalgebouw en de parkeerplaats van de luchthaven Kittilä op een zomerdag',
     sv: 'Terminalbyggnaden och parkeringen vid Kittilä flygplats en sommardag',
   } },
 ];
@@ -178,14 +178,17 @@ const COPY: Record<Lang, Block> = {
       { href: 'https://laplandvisit.com/itineraries/', label: 'Plan uw hele reis door Lapland', body: 'Wat te zien en te doen voor en na de ceremonie: een complete reisgids voor Lapland.' },
       { href: 'https://laplandtransport.com/lapland-guide/', label: 'Naar Lapland reizen', body: 'Vluchten, treinen en luchthaventransfers naar Rovaniemi, Kittilä en Ivalo voor het hele gezelschap.' },
     ],
-  }, sv: {
-    eyebrow: 'Planning your Lapland wedding',
-    title: 'Get everyone there, and somewhere to stay',
-    subtitle: 'A Lapland wedding is also a trip for your guests. These sister guides cover the rest of the journey.',
+  },
+  /* sv was a verbatim copy of the English block until 19.9.2026 — found by the reviewer of
+     the new alt texts, not by any gate (a Swedish reader saw English here on every visit). */
+  sv: {
+    eyebrow: 'Planera ert Lapplandsbröllop',
+    title: 'Ta dit alla, och någonstans att bo',
+    subtitle: 'Ett bröllop i Lappland är också en resa för era gäster. Dessa systerguider täcker resten av resan.',
     cards: [
-      { href: 'https://laplandstays.com/property-types/', label: 'Where to stay for the wedding party', body: 'Cabins, glass igloos and hotels with room blocks for your guests across Lapland.' },
-      { href: 'https://laplandvisit.com/itineraries/', label: 'Plan your wider Lapland trip', body: 'What to see and do before and after the ceremony: a full Lapland travel guide.' },
-      { href: 'https://laplandtransport.com/lapland-guide/', label: 'Getting to Lapland', body: 'Flights, trains and airport transfers to Rovaniemi, Kittilä and Ivalo for the whole party.' },
+      { href: 'https://laplandstays.com/property-types/', label: 'Var bröllopssällskapet bor', body: 'Stugor, glasigloor och hotell med rumsblock för era gäster runt om i Lappland.' },
+      { href: 'https://laplandvisit.com/itineraries/', label: 'Planera er Lapplandsresa', body: 'Vad ni ska se och göra före och efter vigseln: en komplett reseguide till Lappland.' },
+      { href: 'https://laplandtransport.com/lapland-guide/', label: 'Så kommer ni till Lappland', body: 'Flyg, tåg och flygplatstransfer till Rovaniemi, Kittilä och Ivalo för hela sällskapet.' },
     ],
   },
 };
