@@ -86,7 +86,7 @@ export default function FeaturedPartnerSlot({
     return (
       <div className={wrap} data-featured-partner={placement}>
         <p className="flex flex-wrap items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-cream-mute mb-2">
-          <span className="inline-flex items-center rounded-full bg-[#EC4899] px-2 py-0.5 text-white">
+          <span className="inline-flex items-center rounded-full bg-[#DB2777] px-2 py-0.5 text-white">
             {m.ad}
           </span>
           <span>
