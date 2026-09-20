@@ -30,9 +30,11 @@ const WINTER_HERO_CREDIT: ImageCredit = { name: 'Simo Räsänen', license: 'CC B
 const SUMMER_HERO_CREDIT: ImageCredit = { name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(5).jpg' };
 
 // Per-locale string picker — every visible string lists fi/en/de/ja/es/ko/fr/it/nl/sv.
-// pt-BR / zh-CN still fall back to en until we add native copy (es was added
-// 2026-09-01: the whole front page body rendered in English on /es/).
-type Bag = { fi: string; en: string; de: string; ja: string; es: string; 'pt-BR': string; ko: string; fr: string; it: string; nl: string; sv: string };
+// Every locale has native copy here. es was added 2026-09-01, pt-BR 2026-09-19 and
+// zh-CN 2026-09-20 — each time the front page had been rendering in English for that
+// reader while the rest of the site was translated, and each time a native reviewer
+// found it, not a gate.
+type Bag = { fi: string; en: string; de: string; ja: string; es: string; 'pt-BR': string; 'zh-CN': string; ko: string; fr: string; it: string; nl: string; sv: string };
 const pick = (lang: Lang, b: Bag): string => {
   switch (lang) {
     case 'fi': return b.fi;
@@ -40,6 +42,7 @@ const pick = (lang: Lang, b: Bag): string => {
     case 'ja': return b.ja;
     case 'es': return b.es;
     case 'pt-BR': return b['pt-BR'];
+    case 'zh-CN': return b['zh-CN'];
     case 'ko': return b.ko;
     case 'fr': return b.fr;
     case 'it': return b.it;
@@ -85,6 +88,7 @@ export default function Home() {
     ja: '独立した立場でまとめたラップランド結婚式ガイド。会場20か所、エリア8か所、シンボリック挙式と法的婚姻、実際にかかる費用。当サイトはいずれの会場の代理店でもありません。',
     es: 'Una guía independiente para casarse en Laponia: 20 lugares, 8 regiones, ceremonia simbólica y matrimonio civil, costos reales. No representamos a ninguno de los lugares.',
     'pt-BR': 'Um guia independente para casar na Lapônia: 20 locais, 8 regiões, cerimônias simbólicas e legais, custos reais. Não representamos nenhum dos locais.',
+    'zh-CN': '拉普兰婚礼独立指南：20个场地、8个地区、象征性仪式与法定仪式、真实费用。我们不代理任何一家场地。',
     ko: '라플란드 결혼식을 위한 독립적인 안내서입니다. 결혼식 장소 20곳, 지역 8곳, 상징 예식과 법적 혼인, 실제 비용을 정리했습니다. 저희는 어떤 장소도 대리하지 않습니다.',
     fr: 'Un guide indépendant pour se marier en Laponie : 20 lieux, 8 régions, cérémonie symbolique ou mariage civil, coûts réels. Nous ne représentons aucun de ces lieux.',
     it: 'Una guida indipendente per sposarsi in Lapponia: 20 location, 8 regioni, cerimonia simbolica e matrimonio civile, costi reali. Non rappresentiamo nessuna delle location.',
@@ -161,6 +165,7 @@ export default function Home() {
           ja: '夏至の頃、イナリ湖の上に輝く真夜中の太陽',
           es: 'El sol de medianoche sobre el lago Inari en pleno verano',
           'pt-BR': 'O sol da meia-noite sobre o lago Inari no auge do verão',
+          'zh-CN': '仲夏时节，伊纳里湖上空的午夜阳光。',
           ko: '한여름 이나리 호수 위의 백야의 태양',
           fr: 'Le soleil de minuit sur le lac Inari autour du solstice d’été',
           it: 'Il sole di mezzanotte sul lago Inari intorno al solstizio d’estate',
@@ -173,6 +178,7 @@ export default function Home() {
           ja: 'フィンランド・ラップランドの夜空、針葉樹林の上に広がる緑と紫のオーロラ',
           es: 'Auroras boreales verdes y violetas sobre un bosque de abetos en el cielo nocturno de la Laponia finlandesa',
           'pt-BR': 'Aurora boreal verde e violeta sobre uma floresta de abetos no céu noturno da Lapônia finlandesa',
+          'zh-CN': '芬兰拉普兰夜空下，绿色与紫色的极光笼罩着云杉林。',
           ko: '핀란드 라플란드 밤하늘, 가문비나무 숲 위로 펼쳐진 초록빛과 보랏빛 오로라',
           fr: 'Aurores boréales vertes et violettes au-dessus d’une forêt d’épicéas dans le ciel nocturne de la Laponie finlandaise',
           it: 'Aurora boreale verde e viola sopra un bosco di abeti nel cielo notturno della Lapponia finlandese',
@@ -209,6 +215,7 @@ export default function Home() {
           ja: '結婚式のタイプ',
           es: 'Tipos de boda',
           'pt-BR': 'Tipos de casamento',
+          'zh-CN': '婚礼类型',
           ko: '결혼식 유형',
           fr: 'Types de mariage',
           it: 'Tipologie di matrimonio',
@@ -263,6 +270,7 @@ export default function Home() {
           ja: 'ラップランドの結婚式の瞬間',
           es: 'Momentos de boda en Laponia',
           'pt-BR': 'Momentos de casamento na Lapônia',
+          'zh-CN': '拉普兰婚礼时刻',
           ko: '라플란드 결혼식의 순간들',
           fr: 'Instants de mariage en Laponie',
           it: 'Istanti di matrimonio in Lapponia',
@@ -276,6 +284,7 @@ export default function Home() {
           ja: 'ゲストが何年も語り続ける、忘れられない瞬間',
           es: 'Los momentos de los que sus invitados hablarán durante años',
           'pt-BR': 'Os momentos que os convidados vão lembrar por anos',
+          'zh-CN': '宾客多年后仍会津津乐道的时刻',
           ko: '하객들이 오랜 세월 잊지 못할 순간들',
           fr: 'Les instants dont vos invités parleront pendant des années',
           it: 'I momenti di cui i Suoi ospiti parleranno per anni',
@@ -296,6 +305,7 @@ export default function Home() {
                 ja: 'ハスキー犬で登場',
                 es: 'Llegada en trineo de huskies',
                 'pt-BR': 'Chegada com huskies',
+                'zh-CN': '哈士奇雪橇登场',
                 ko: '허스키 썰매로 입장',
                 fr: 'Arrivée en traîneau à huskies',
                 it: 'Arrivo con gli husky',
@@ -309,6 +319,7 @@ export default function Home() {
                 ja: '新郎新婦が8頭のハスキーが引くそりで挙式会場に到着。到着の瞬間は全員がカメラを向ける場面です。',
                 es: 'Los novios llegan a la ceremonia en un trineo tirado por 8 huskies. La llegada es el momento que todo el mundo fotografía.',
                 'pt-BR': 'O casal chega à cerimônia puxado por 8 huskies. A chegada é o momento que todo mundo fotografa.',
+                'zh-CN': '新人乘坐8只哈士奇拉的雪橇抵达婚礼现场。抵达的瞬间，是所有人争相拍摄的画面。',
                 ko: '신랑 신부가 허스키 8마리가 끄는 썰매를 타고 예식장에 도착합니다. 도착하는 순간은 모두가 카메라를 드는 장면입니다.',
                 fr: 'Les mariés arrivent à la cérémonie en traîneau tiré par 8 huskies. L’arrivée est le moment que tout le monde photographie.',
                 it: 'Gli sposi arrivano alla cerimonia su una slitta trainata da 8 husky. L’arrivo è l’istante che tutti fotografano.',
@@ -326,6 +337,7 @@ export default function Home() {
                 ja: '凍った湖',
                 es: 'Lagos helados',
                 'pt-BR': 'Lagos congelados',
+                'zh-CN': '冰封湖泊',
                 ko: '얼어붙은 호수',
                 fr: 'Lacs gelés',
                 it: 'Laghi ghiacciati',
@@ -339,6 +351,7 @@ export default function Home() {
                 ja: '夕暮れのイナリ湖、一面の氷原が山まで広がります。',
                 es: 'En el lago Inari al anochecer, la capa de hielo se extiende hasta los fells.',
                 'pt-BR': 'No lago Inari ao entardecer, a camada de gelo se estende até os montes.',
+                'zh-CN': '黄昏时分的伊纳里湖，整片冰原一直延伸到山丘脚下。',
                 ko: '해 질 녘의 이나리 호수, 광활한 빙판이 산자락까지 펼쳐집니다.',
                 fr: 'Sur le lac Inari au crépuscule, la banquise s’étend jusqu’aux fjälls.',
                 it: 'Sul lago Inari al tramonto, la distesa di ghiaccio si estende fino ai fjäll.',
@@ -356,6 +369,7 @@ export default function Home() {
                 ja: 'サウナから雪へ',
                 es: 'De la sauna a la nieve',
                 'pt-BR': 'Da sauna para a neve',
+                'zh-CN': '从桑拿到雪地',
                 ko: '사우나에서 눈밭으로',
                 fr: 'Du sauna à la neige',
                 it: 'Dalla sauna alla neve',
@@ -369,6 +383,7 @@ export default function Home() {
                 ja: '結婚式の夜のサウナのあと、はだしのまま雪へ。フィンランドならではの伝統です。',
                 es: 'Sauna en la noche de bodas y después, descalzos a la nieve. Un ritual genuinamente finlandés.',
                 'pt-BR': 'Sauna na noite de núpcias e depois, descalços, direto para a neve. Um ritual genuinamente finlandês.',
+                'zh-CN': '新婚之夜后，光着脚从桑拿房走进雪地。这是芬兰人独有的传统。',
                 ko: '결혼식 밤의 사우나를 마친 뒤 맨발로 눈밭으로 나서는, 핀란드만의 전통입니다.',
                 fr: 'Sauna du soir de noces, puis pieds nus dans la neige. Un rituel typiquement finlandais.',
                 it: 'La sauna della notte di nozze e poi a piedi nudi nella neve. Un rito tipicamente finlandese.',
@@ -386,6 +401,7 @@ export default function Home() {
                 ja: '氷の湖 + シャンパン',
                 es: 'Baño helado y champán',
                 'pt-BR': 'Banho de gelo + espumante',
+                'zh-CN': '冰浴 + 香槟',
                 ko: '얼음 호수와 샴페인',
                 fr: 'Bain glacé et champagne',
                 it: 'Bagno nel ghiaccio e champagne',
@@ -399,6 +415,7 @@ export default function Home() {
                 ja: 'ウェディング衣装のまま、シャンパン片手にアヴァント（氷の穴）へ。まさにインスタ映え。',
                 es: 'En traje de novios, copa de champán en la mano, al agujero abierto en el hielo. Instagram puro.',
                 'pt-BR': 'Em trajes de casamento, taça de espumante na mão, direto para o gelo. Puro Instagram.',
+                'zh-CN': '身着婚礼盛装跃入冰洞，手持一杯香槟。绝佳的Instagram时刻。',
                 ko: '웨딩 의상을 입은 채 샴페인 잔을 들고 얼음 호수로, 인스타그램에 최적인 순간입니다.',
                 fr: 'En tenue de mariage, coupe de champagne à la main, plongée dans l’avanto. L’instant Instagram par excellence.',
                 it: 'In abito da sposi, calice di champagne in mano, giù nell’acqua gelata. L’istante perfetto per Instagram.',
@@ -441,6 +458,7 @@ export default function Home() {
           ja: 'エリア',
           es: 'Regiones',
           'pt-BR': 'Regiões',
+          'zh-CN': '地区',
           ko: '지역',
           fr: 'Régions',
           it: 'Regioni',
@@ -528,9 +546,10 @@ export default function Home() {
                 ja: '会場を見る',
                 es: 'Ver los lugares',
                 'pt-BR': 'Ver os locais',
+                'zh-CN': '查看婚礼场地',
                 ko: '예식장 보기',
                 fr: 'Voir les lieux',
-                it: 'Vedi le location',
+                it: 'Vedete le location',
                 nl: 'Bekijk de locaties',
                 sv: 'Se vigselplatserna',
               }),
@@ -542,6 +561,7 @@ export default function Home() {
                 ja: '会場を調査',
                 es: 'lugares registrados',
                 'pt-BR': 'locais mapeados',
+                'zh-CN': '家场地已调查',
                 ko: '곳을 조사',
                 fr: 'lieux recensés',
                 it: 'location censite',
@@ -555,6 +575,7 @@ export default function Home() {
                 ja: 'いずれの代理店でもなく、販売もしていません。掲載順は買えません。',
                 es: 'No representamos ni vendemos ninguno de ellos. El orden no se compra.',
                 'pt-BR': 'Não representamos nenhum deles nem vendemos nenhum. A ordem não pode ser comprada.',
+                'zh-CN': '我们不代理也不出售其中任何一家。排名无法购买。',
                 ko: '어느 곳도 대리하거나 판매하지 않습니다. 순서는 살 수 없습니다.',
                 fr: 'Nous n’en représentons aucun et n’en vendons aucun. L’ordre ne s’achète pas.',
                 it: 'Non ne rappresentiamo e non ne vendiamo nessuna. L’ordine non si compra.',
@@ -571,9 +592,10 @@ export default function Home() {
                 ja: 'シンボリックか法的か：ガイドを読む',
                 es: 'Simbólica o legal: lea la guía',
                 'pt-BR': 'Simbólica ou legal: leia o guia',
-                ko: '상징 예식과 법적 혼인: 안내 보기',
+                'zh-CN': '象征性婚礼还是法定婚姻：阅读指南',
+                ko: '상징 예식 또는 법적 혼인: 안내 보기',
                 fr: 'Symbolique ou civil : lire le guide',
-                it: 'Simbolico o legale: leggi la guida',
+                it: 'Simbolico o legale: leggete la guida',
                 nl: 'Symbolisch of wettelijk: lees de gids',
                 sv: 'Symbolisk eller juridisk: läs guiden',
               }),
@@ -585,6 +607,7 @@ export default function Home() {
                 ja: '許可も書類も不要',
                 es: 'permisos o papeleo',
                 'pt-BR': 'autorizações ou papelada',
+                'zh-CN': '项许可或手续',
                 ko: '허가도 서류도 없이',
                 fr: 'démarche administrative',
                 it: 'permessi o documenti',
@@ -598,6 +621,7 @@ export default function Home() {
                 ja: 'シンボリック挙式に役所の手続きは不要。法的な婚姻は多くが母国で行います。',
                 es: 'Una ceremonia simbólica no exige nada a las autoridades. La mayoría de las parejas registra el matrimonio legalmente en su país.',
                 'pt-BR': 'Uma cerimônia simbólica não exige nada das autoridades. A maioria dos casais registra o casamento legalmente em seu país de origem.',
+                'zh-CN': '象征性仪式无需任何官方手续。法定婚姻，大多数新人会在本国办理。',
                 ko: '상징 예식에는 관공서 절차가 필요 없습니다. 법적 혼인은 대부분 본국에서 합니다.',
                 fr: 'Une cérémonie symbolique n’exige aucune formalité. Le mariage légal se fait le plus souvent au pays.',
                 it: 'Una cerimonia simbolica non richiede nulla alle autorità. Il matrimonio legale si registra a casa.',
@@ -618,10 +642,11 @@ export default function Home() {
                 ja: '結婚式のタイプと季節を見る',
                 es: 'Ver tipos de boda y temporadas',
                 'pt-BR': 'Ver tipos de casamento e estações',
+                'zh-CN': '查看婚礼类型与季节',
                 ko: '결혼식 유형과 시즌 보기',
                 fr: 'Voir les types de mariage et les saisons',
-                it: 'Vedi i tipi di matrimonio e le stagioni',
-                nl: 'Bekijk soorten bruiloft en seizoenen',
+                it: 'Vedete i tipi di matrimonio e le stagioni',
+                nl: 'Bekijk soorten bruiloften en seizoenen',
                 sv: 'Se bröllopstyper och säsonger',
               }),
               stat: pick(lang, {
@@ -631,6 +656,7 @@ export default function Home() {
                 ja: '冬',
                 es: 'Invierno',
                 'pt-BR': 'Inverno',
+                'zh-CN': '冬',
                 ko: '겨울',
                 fr: 'L’hiver',
                 it: 'Inverno',
@@ -644,6 +670,7 @@ export default function Home() {
                 ja: 'シーズンは12〜3月',
                 es: 'temporada de dic. a mar.',
                 'pt-BR': 'temporada dez.–mar.',
+                'zh-CN': '旺季12月–3月',
                 ko: '성수기 12~3월',
                 fr: 'saison déc.–mars',
                 it: 'stagione dic.–mar.',
@@ -657,6 +684,7 @@ export default function Home() {
                 ja: '雪とオーロラがもっとも確実な時期です。夏至の頃は太陽が沈みません。',
                 es: 'La nieve y la aurora son entonces las más fiables. Alrededor del solsticio de verano el sol no se pone en absoluto.',
                 'pt-BR': 'A neve e a aurora boreal estão mais garantidas nessa época. Perto do solstício de verão, o sol não se põe.',
+                'zh-CN': '那时积雪与极光最为稳定可靠。仲夏前后，太阳整日不落。',
                 ko: '눈과 오로라가 가장 확실한 시기입니다. 한여름 무렵에는 해가 지지 않습니다.',
                 fr: 'La neige et les aurores sont alors les plus fiables. Autour du solstice d’été, le soleil ne se couche pas.',
                 it: 'Neve e aurora sono allora più affidabili. Intorno al solstizio d’estate il sole non tramonta.',
@@ -704,6 +732,7 @@ export default function Home() {
           ja: '独立した調査',
           es: 'Registro independiente',
           'pt-BR': 'Levantamento independente',
+          'zh-CN': '独立调查',
           ko: '독립적인 조사',
           fr: 'Recensement indépendant',
           it: 'Ricognizione indipendente',
@@ -717,6 +746,7 @@ export default function Home() {
           ja: 'ラップランドで人気の高い結婚式会場',
           es: 'Los lugares de boda más populares de Laponia',
           'pt-BR': 'Os locais de casamento mais populares da Lapônia',
+          'zh-CN': '拉普兰最受欢迎的婚礼场地',
           ko: '라플란드에서 인기 있는 결혼식 장소',
           fr: 'Les lieux de mariage les plus populaires de Laponie',
           it: 'Le location per matrimoni più popolari della Lapponia',
@@ -736,6 +766,7 @@ export default function Home() {
             ja: 'ラップランドで結婚式が行われている、よく知られた場所を集めました。当サイトはこれらの会場の代理店ではなく、結婚式の運営も行いません。すでに希望の会場がある場合はフォームにご記入ください。ご希望はそのままの形でお伝えします。',
             es: 'Estos son los lugares más conocidos de Laponia donde se celebran bodas. No los representamos y no organizamos bodas. Si ya tiene un lugar en mente, escríbalo en el formulario y su deseo se transmite tal y como usted lo escribió.',
             'pt-BR': 'Estes são os locais mais conhecidos da Lapônia onde se realizam casamentos. Não os representamos nem organizamos casamentos. Se vocês já têm um local em mente, escrevam no formulário e o pedido será repassado exatamente como foi enviado.',
+            'zh-CN': '这些是拉普兰最知名的婚礼举办地。我们不代理这些场地，也不承办婚礼。如果您心中已有中意的场地，请填写在表单中，您的心愿将原样转达。',
             ko: '라플란드에서 결혼식이 열리는 잘 알려진 장소들입니다. 저희는 이곳들을 대리하지 않으며 결혼식을 직접 주최하지도 않습니다. 이미 마음에 둔 장소가 있다면 양식에 적어 주세요. 그 희망은 그대로 전달됩니다.',
             fr: 'Voici les lieux les plus connus de Laponie où l’on célèbre des mariages. Nous ne les représentons pas et nous n’organisons pas de mariages. Si un lieu vous tient déjà à cœur, indiquez-le dans le formulaire : votre souhait sera transmis tel quel.',
             it: 'Questi sono i luoghi più noti della Lapponia in cui si celebrano matrimoni. Non li rappresentiamo e non organizziamo matrimoni. Se ha già una location in mente, la scriva nel modulo: il Suo desiderio viene trasmesso così com’è.',

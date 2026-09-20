@@ -3,7 +3,7 @@
 const t_ptBR = {
   nav: {
     home: 'Início',
-    locations: 'Locais',
+    locations: 'Regiões',
     types: 'Tipos de casamento',
     venues: 'Locais',
     photographers: 'Fotógrafos',
@@ -27,7 +27,7 @@ const t_ptBR = {
     bookStay: 'Reservar hospedagem',
   },
   home: {
-    heroTitle: 'Sim, sob a aurora boreal.',
+    heroTitle: 'Aceito, sob a aurora boreal.',
     heroTitleSummer: 'Casamentos sob o sol da meia-noite na Lapônia',
     heroSubtitle: 'Aurora boreal acima do teto de vidro, velas na capela de neve, uma rena esperando no pátio. Encaminhamos seus desejos a organizadores de casamento e locais da Lapônia, grátis e sem compromisso.',
     heroSubtitleSummer: 'Votos à beira do lago · Cerimônias no topo do monte · Tetos de vidro sob o céu que nunca escurece · Longas noites luminosas. Em finlandês e inglês. Encaminhamos seu pedido a organizadores de casamento e locais da Lapônia, grátis e sem compromisso.',

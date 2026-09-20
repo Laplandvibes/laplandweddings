@@ -62,7 +62,7 @@ export default function Navigation() {
               key={it.to}
               to={it.to}
               className={({ isActive }) =>
-                `px-3 py-2 rounded-full text-sm font-medium transition-all ${
+                `px-3 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                   isActive ? 'bg-rose/20 text-rose' : 'text-gray-300 hover:text-white hover:bg-white/5'
                 }`
               }

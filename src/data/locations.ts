@@ -208,7 +208,7 @@ export const locations: Location[] = [
       ja: 'サーリセルカ、カウニスパー山の荒野にいる若いトナカイ',
       es: 'Un reno joven en el páramo del fjäll Kaunispää, Saariselkä',
       'pt-BR': 'Uma rena jovem na charneca do monte Kaunispää, Saariselkä',
-      'zh-CN': '萨里塞尔卡考尼斯帕山荒原上的小驯鹿',
+      'zh-CN': '萨利色尔卡考尼斯帕山荒原上的小驯鹿',
       ko: '사리셀카 카우니스패 산의 황야에 있는 어린 순록',
       fr: 'Un jeune renne sur la lande du fjäll Kaunispää, à Saariselkä',
       it: 'Una giovane renna sulla brughiera del fjäll Kaunispää, Saariselkä',

@@ -344,7 +344,7 @@ const top = {
           description: 'Free and with no commitment. Reply within 1–7 days. We respond within 1–2 business days. Tell us briefly about your dream and we route it to the right planners.' },
     fi: { title: 'Pyydä 1–3 tarjousta Lapin häihin | LaplandWeddings',
           description: 'Maksuton ja sitoumukseton. Vastaus 1–7 päivän sisällä. Vastaamme 1–2 työpäivän sisällä. Kuvaa lyhyesti unelmasi, välitämme sen sopiville suunnittelijoille.' },
-    de: { title: '1–3 Angebote für Ihre Hochzeit in Lappland | LaplandWeddings',
+    de: { title: 'Fordern Sie 1–3 Angebote für Ihre Hochzeit in Lappland an | LaplandWeddings',
           description: 'Kostenfrei und unverbindlich. Antwort innerhalb von 1–7 Tagen. Wir antworten innerhalb von 1–2 Werktagen. Beschreiben Sie kurz Ihren Traum, wir leiten ihn an die passenden Hochzeitsplaner weiter.' },
     ja: { title: 'ラップランド挙式の見積もりを1〜3件依頼 | LaplandWeddings',
           description: '無料で契約義務なし。1〜7日以内にご返信します。 1〜2営業日以内にご返信します。あなたの理想を簡単にお聞かせください、適切なプランナーへお繋ぎします。' },

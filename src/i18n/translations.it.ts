@@ -27,7 +27,7 @@ const t_it = {
     bookStay: 'Prenoti un soggiorno',
   },
   home: {
-    heroTitle: 'Sì, sotto l’aurora boreale.',
+    heroTitle: 'Sì, lo voglio, sotto l’aurora boreale.',
     heroSubtitle: 'L’aurora boreale sopra il tetto di vetro, candele nella cappella di neve, una renna che aspetta nel cortile. Trasmettiamo i Suoi desideri a wedding planner e location della Lapponia, gratis e senza impegno.',
     heroTitleSummer: 'Matrimoni sotto il sole di mezzanotte in Lapponia',
     heroSubtitleSummer: 'Promesse in riva al lago · Cerimonie in cima ai fjäll · Tetti di vetro sotto un cielo che non si fa mai buio · Lunghe sere luminose. Trasmettiamo la Sua richiesta a wedding planner e location della Lapponia, gratis e senza impegno.',

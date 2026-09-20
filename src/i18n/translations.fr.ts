@@ -28,9 +28,9 @@ const t_fr = {
   },
   home: {
     heroTitle: 'Oui, sous les aurores boréales.',
-    heroSubtitle: 'Des aurores boréales au-dessus du toit de verre, des bougies dans la chapelle de neige, un renne qui attend dans la cour. Nous transmettons vos souhaits aux organisateurs de mariage et aux lieux de Laponie, gratuitement et sans engagement.',
+    heroSubtitle: 'Des aurores boréales au-dessus du toit de verre, des bougies dans la chapelle de neige, un renne qui attend dans la cour. Nous transmettons vos souhaits aux organisateurs de mariage et aux lieux de mariage en Laponie, gratuitement et sans engagement.',
     heroTitleSummer: 'Mariages sous le soleil de minuit en Laponie',
-    heroSubtitleSummer: 'Vœux au bord du lac · Cérémonies au sommet des fjälls · Toits de verre sous un ciel qui ne s’assombrit jamais · Longues soirées lumineuses. Nous transmettons votre demande aux organisateurs de mariage et aux lieux de Laponie, gratuitement et sans engagement.',
+    heroSubtitleSummer: 'Vœux au bord du lac · Cérémonies au sommet des fjälls · Toits de verre sous un ciel qui ne s’assombrit jamais · Longues soirées lumineuses. Nous transmettons votre demande aux organisateurs de mariage et aux lieux de mariage en Laponie, gratuitement et sans engagement.',
     heroReassure: 'Gratuit et sans engagement · réponse sous 1–7 jours',
     whyTitle: 'Pourquoi se marier en Laponie',
     whyP: 'En Laponie, on se marie dans des igloos de verre, des chapelles de neige et au sommet des fells, et la cérémonie est le plus souvent symbolique. Ce site rassemble les lieux, les saisons et ce que les choses coûtent réellement. Nous n’organisons pas de mariages et ne représentons aucun lieu : vous nous dites ce que vous souhaitez, nous le transmettons à des wedding planners en Laponie.',

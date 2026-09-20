@@ -21,13 +21,13 @@ export const DIAG = {
   shoulder: {
     fi: 'Kevät ja syksy, edullisempi', en: 'Spring and autumn, cheaper', de: 'Frühling und Herbst, günstiger',
     ja: '春と秋、より手頃', es: 'Primavera y otoño, más barato', 'pt-BR': 'Primavera e outono, mais barato',
-    'zh-CN': '春秋两季，价格更低', ko: '봄과 가을, 더 저렴', fr: 'Printemps et automne, moins cher',
-    it: 'Primavera e autunno, più economico', nl: 'Lente en herfst, goedkoper', sv: 'Vår och höst, billigare',
+    'zh-CN': '春秋两季，价格更低', ko: '봄과 가을, 더 저렴함', fr: 'Printemps et automne, moins cher',
+    it: 'Primavera e autunno, più economica', nl: 'Lente en herfst, goedkoper', sv: 'Vår och höst, billigare',
   },
   summer: {
     fi: 'Keskiyön aurinko 23.5.–24.7.', en: 'Midnight sun 23 May – 24 Jul', de: 'Mitternachtssonne 23.5.–24.7.',
     ja: '白夜 5月23日〜7月24日', es: 'Sol de medianoche 23 may – 24 jul', 'pt-BR': 'Sol da meia-noite 23/5 – 24/7',
-    'zh-CN': '极昼 5月23日–7月24日', ko: '백야 5월 23일–7월 24일', fr: 'Soleil de minuit 23 mai – 24 juil.',
+    'zh-CN': '午夜阳光 5月23日–7月24日', ko: '백야 5월 23일–7월 24일', fr: 'Soleil de minuit 23 mai – 24 juil.',
     it: 'Sole di mezzanotte 23 mag – 24 lug', nl: 'Middernachtzon 23 mei – 24 jul', sv: 'Midnattssol 23.5–24.7',
   },
 
@@ -57,7 +57,7 @@ export const DIAG = {
   },
   cheaper: {
     fi: 'edullisempi', en: 'cheaper', de: 'günstiger', ja: 'より手頃', es: 'más barato', 'pt-BR': 'mais barato',
-    'zh-CN': '更便宜', ko: '더 저렴', fr: 'moins cher', it: 'più economico', nl: 'goedkoper', sv: 'billigare',
+    'zh-CN': '更便宜', ko: '더 저렴함', fr: 'moins cher', it: 'più economico', nl: 'goedkoper', sv: 'billigare',
   },
   dearer: {
     fi: 'kalliimpi', en: 'more expensive', de: 'teurer', ja: 'より高い', es: 'más caro', 'pt-BR': 'mais caro',
@@ -110,10 +110,10 @@ export const DIAG = {
     fr: 'Examen des empêchements', it: 'Esame degli impedimenti', nl: 'Onderzoek naar huwelijksbeletselen', sv: 'Hindersprövning',
   },
   legCert: {
-    fi: 'Todistus kotimaasta + apostille', en: 'Certificate from home + apostille', de: 'Bescheinigung von zu Hause + Apostille',
+    fi: 'Todistus kotimaasta + apostille', en: 'Certificate from home + apostille', de: 'Bescheinigung aus dem Heimatland + Apostille',
     ja: '母国の証明書＋アポスティーユ', es: 'Certificado de su país + apostilla', 'pt-BR': 'Certidão do país de origem + apostila',
     'zh-CN': '本国证明 + 海牙认证', ko: '본국 증명서 + 아포스티유', fr: 'Certificat du pays + apostille',
-    it: 'Certificato dal Paese + apostille', nl: 'Verklaring uit thuisland + apostille', sv: 'Intyg hemifrån + apostille',
+    it: 'Certificato dal Paese d’origine + apostille', nl: 'Verklaring uit thuisland + apostille', sv: 'Intyg hemifrån + apostille',
   },
   legWeeks: {
     fi: 'Varaa 4–8 viikkoa', en: 'Allow 4–8 weeks', de: '4–8 Wochen einplanen', ja: '4〜8週間を見込む',
@@ -129,7 +129,7 @@ export const DIAG = {
   /* /contact page */
   contactSeoTitle: {
     fi: 'Pyydä 1–3 tarjousta Lapin häihin | LaplandWeddings', en: 'Request 1–3 Lapland wedding quotes | LaplandWeddings',
-    de: '1–3 Angebote für Ihre Hochzeit in Lappland | LaplandWeddings', ja: 'ラップランド挙式の見積もりを1〜3件依頼 | LaplandWeddings',
+    de: 'Fordern Sie 1–3 Angebote für Ihre Hochzeit in Lappland an | LaplandWeddings', ja: 'ラップランド挙式の見積もりを1〜3件依頼 | LaplandWeddings',
     es: 'Pida 1–3 presupuestos para su boda en Laponia | LaplandWeddings', 'pt-BR': 'Peça 1–3 orçamentos para seu casamento na Lapônia | LaplandWeddings',
     'zh-CN': '索取 1–3 份拉普兰婚礼报价 | LaplandWeddings', ko: '라플란드 결혼식 견적 1~3건 요청 | LaplandWeddings',
     fr: 'Demandez 1 à 3 devis pour votre mariage en Laponie | LaplandWeddings', it: 'Richiedete 1–3 preventivi per il matrimonio in Lapponia | LaplandWeddings',

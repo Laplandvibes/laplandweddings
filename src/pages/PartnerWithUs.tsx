@@ -455,11 +455,11 @@ const C: Record<CKey, Localized<string>> = {
   heroImageAlt: {
     en: 'Hikers on the top of Kaunispää in autumn colours, Saariselkä',
     fi: 'Vaeltajia Kaunispään laella ruska-aikaan Saariselällä',
-    de: 'Wanderer auf dem Kaunispää im Herbstlaub, Saariselkä',
+    de: 'Wanderer auf dem Gipfel des Kaunispää im Herbstlaub, Saariselkä',
     ja: '秋の紅葉の中、サーリセルカのカウニスパー山頂を歩くハイカーたち',
     es: 'Senderistas en la cima del Kaunispää con los colores del otoño, Saariselkä',
     'pt-BR': 'Caminhantes no topo do Kaunispää nas cores do outono, Saariselkä',
-    'zh-CN': '秋色中萨里塞尔卡考尼斯帕山顶的徒步者',
+    'zh-CN': '秋色中萨利色尔卡考尼斯帕山顶的徒步者',
     ko: '가을빛 속 사리셀카 카우니스패 정상의 하이커들',
     fr: 'Randonneurs au sommet du Kaunispää aux couleurs de l’automne, Saariselkä',
     it: 'Escursionisti in cima al Kaunispää nei colori dell’autunno, Saariselkä',

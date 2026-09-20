@@ -62,7 +62,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
   imageAlt: {
     en: 'The purple-lit snow corridor and ice stairs inside Levi Ice Castle',
     fi: 'Levi Ice Castlen violetiksi valaistu lumikäytävä ja jääportaat',
-    de: 'Der violett beleuchtete Schneegang und die Eistreppe im Levi Ice Castle',
+    de: 'Der violett beleuchtete Schneekorridor und die Eistreppe im Levi Ice Castle',
     ja: 'レヴィ・アイスキャッスル内、紫色にライトアップされた雪の回廊と氷の階段',
     es: 'El pasillo de nieve iluminado en violeta y las escaleras de hielo dentro de Levi Ice Castle',
     'pt-BR': 'O corredor de neve iluminado em violeta e a escada de gelo dentro do Levi Ice Castle',
@@ -70,7 +70,7 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     ko: '레비 아이스 캐슬 내부, 보랏빛 조명의 눈 복도와 얼음 계단',
     fr: 'Le couloir de neige éclairé en violet et l’escalier de glace du Levi Ice Castle',
     it: 'Il corridoio di neve illuminato di viola e la scala di ghiaccio del Levi Ice Castle',
-    nl: 'De paars verlichte sneeuwgang en ijstrap in het Levi Ice Castle',
+    nl: 'De paars verlichte sneeuwtunnel en ijstrap in het Levi Ice Castle',
     sv: 'Den violettbelysta snögången och istrappan i Levi Ice Castle',
   },
   affordable: {
@@ -149,7 +149,7 @@ export default function Venues() {
         ja: '写真：レヴィ・アイスキャッスル',
         es: 'En la imagen: Levi Ice Castle',
         'pt-BR': 'Na foto: Levi Ice Castle',
-        'zh-CN': '图为莱维冰堡（Levi Ice Castle）',
+        'zh-CN': '图为莱维冰堡',
         ko: '사진: 레비 아이스 캐슬',
         fr: 'Sur la photo : Levi Ice Castle',
         it: 'Nella foto: Levi Ice Castle',

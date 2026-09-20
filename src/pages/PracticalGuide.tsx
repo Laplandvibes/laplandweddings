@@ -346,7 +346,7 @@ const UI: Record<string, Localized<string>> = {
   heroImageAlt: {
     en: 'A couple walking hand in hand along a snowy trail between snow-laden trees',
     fi: 'Pari kävelee käsi kädessä lumisella polulla lumen painamien puiden välissä',
-    de: 'Ein Paar geht Hand in Hand auf einem verschneiten Pfad zwischen schneebedeckten Bäumen',
+    de: 'Ein Paar geht Hand in Hand auf einem verschneiten Pfad zwischen schneebeladenen Bäumen',
     ja: '雪をかぶった木々の間の雪道を手をつないで歩くカップル',
     es: 'Una pareja camina de la mano por un sendero nevado entre árboles cargados de nieve',
     'pt-BR': 'Um casal caminha de mãos dadas por uma trilha de neve entre árvores cobertas de neve',
