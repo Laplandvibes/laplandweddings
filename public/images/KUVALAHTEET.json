@@ -205,20 +205,6 @@
       "note": "PARAS lupausten uusiminen -kortti. Kaksi takaa jäätyneellä vesistöllä, lumen painamat kuuset. Uskottavin Lappi-tunnelma koko F-ryhmässä. 3:4 pysty."
     },
     {
-      "file": "stock/type-vow-renewal-px5215946.webp",
-      "kind": "stock-pexels",
-      "source": "https://www.pexels.com/photo/a-couple-holding-hands-5215946/",
-      "id": "5215946",
-      "author": "Yan Krukau",
-      "license": "Pexels License (kaupallinen kaytto sallittu, ei attribuutiopakkoa, EI editorial-rajoitusta)",
-      "published": "2020-10-10",
-      "location": "ei sijaintimetatietoa (Pexels ei tallenna); lumimetsa ilman tunnistettavaa maamerkkia",
-      "original": "5472x3648",
-      "crop": "cover-centre",
-      "ours": "1600x1200",
-      "note": "Pari takaa kädestä pitäen mäntymetsässä, arkivaatteet. Sopii lupausten uusimiseen, ei hääpukukorttiin."
-    },
-    {
       "file": "stock/loc-saariselka-kaunispaa-rasanen.webp",
       "kind": "stock-commons",
       "source": "https://commons.wikimedia.org/wiki/File:Young_reindeer_on_Kaunisp%C3%A4%C3%A4_fell_in_Saariselk%C3%A4,_Inari,_Lapland,_Finland,_2021_September.jpg",
@@ -463,6 +449,20 @@
       "ours": "1200x750 (+600 srcset)",
       "used_on": "etusivun sisarsivustokortti: perille pääsy",
       "location": "Kittilän lentoasema 21.7.2026 klo 10:56 (eri ruutu kuin 105609/105617/105631)",
+      "fetched": "2026-09-19"
+    },
+    {
+      "file": "stock/type-vow-renewal-px6462544.webp",
+      "kind": "stock-pexels",
+      "source": "https://www.pexels.com/photo/two-people-standing-on-snow-covered-ground-6462544/",
+      "id": "6462544",
+      "author": "Kryštof Rozumek",
+      "license": "Pexels",
+      "original": "3456x5184",
+      "crop": "cover-centre",
+      "ours": "1200x1600",
+      "used_on": "/wedding-types lupausten uusiminen -kortti",
+      "note": "Vaihdettu 20.9.2026: edellinen (px5215946, pari takaa mäntymetsässä) oli lähes identtinen elopement-kortin kanssa. Vesa: \"eikö tässä ole vähän samanlaisia kuvia\". Tässä kaksi pientä hahmoa laajassa lumimaisemassa — eri mittakaava, ei tunnistettavia kasvoja.",
       "fetched": "2026-09-19"
     }
   ],

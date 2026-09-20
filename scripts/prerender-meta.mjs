@@ -484,7 +484,7 @@ const types = [
   { slug: 'glass-igloo', en: { name: 'Glass Igloo Wedding', desc: 'Wedding night beneath the Northern Lights in a heated glass dome: Kakslauttanen, Levin Iglut, Apukka.' }, fi: { name: 'Lasi-iglu-häät', desc: 'Hääyö revontulien alla lämpimässä lasikuvussa: Kakslauttanen, Levin Iglut, Apukka.' }, img: '/images/venues/kakslauttanen.jpg' },
   { slug: 'midnight-sun', en: { name: 'Midnight Sun Wedding', desc: 'Marry when the sun never sets: May 23 to July 24, warm weather, no snow gear needed.' }, fi: { name: 'Keskiyön auringon häät', desc: 'Vihille kun aurinko ei laske: 23.5.–24.7., lämmin sää, ei lumipukuja.' }, img: '/images/stock/type-midnight-sun-utsjoki-maasaak.webp' },
   { slug: 'elopement', en: { name: 'Lapland Elopement', desc: 'Just the two of you, the officiant and a photographer. Turnkey packages from €1 600.' }, fi: { name: 'Elopement Lapissa: kahdestaan vihille', desc: 'Pelkästään te kaksi, vihkijä ja valokuvaaja. Avaimet käteen -paketit alkaen 1 600 €.' }, img: '/images/stock/type-elopement-px10757612.webp' },
-  { slug: 'vow-renewal', en: { name: 'Vow Renewal in Lapland', desc: 'Renew your vows in the Lapland snow: no paperwork, fully bespoke ceremony.' }, fi: { name: 'Lupausten uusiminen Lapissa', desc: 'Uudistakaa lupauksenne Lapin lumessa: ei papereita, täysin räätälöity seremonia.' }, img: '/images/stock/type-vow-renewal-px5215946.webp' },
+  { slug: 'vow-renewal', en: { name: 'Vow Renewal in Lapland', desc: 'Renew your vows in the Lapland snow: no paperwork, fully bespoke ceremony.' }, fi: { name: 'Lupausten uusiminen Lapissa', desc: 'Uudistakaa lupauksenne Lapin lumessa: ei papereita, täysin räätälöity seremonia.' }, img: '/images/stock/type-vow-renewal-px6462544.webp' },
 ];
 
 const venues = [
