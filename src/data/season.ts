@@ -23,6 +23,14 @@ import type { ImageCredit } from '../components/ImgCredit';
  * revontulivideota, joka voi pyöriä jo syyskuussa. Älä yhdistä näitä kahta.
  */
 export function isWinterSeason(now: Date = new Date()): boolean {
+  /* Katseluvipu: ?kausi=talvi tai ?kausi=kesa näyttää toisen kauden kuvat heti,
+     jotta vaihtoa ei tarvitse odottaa lokakuuhun nähdäkseen miltä se näyttää.
+     Ei vaikuta mihinkään muuhun eikä jää muistiin — pelkkä osoitteen parametri. */
+  if (typeof window !== 'undefined') {
+    const forced = new URLSearchParams(window.location.search).get('kausi');
+    if (forced === 'talvi' || forced === 'winter') return true;
+    if (forced === 'kesa' || forced === 'kesä' || forced === 'summer') return false;
+  }
   const m = now.getMonth() + 1;
   return m >= 10 || m <= 4;
 }

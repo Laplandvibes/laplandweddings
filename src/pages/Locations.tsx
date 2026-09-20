@@ -5,6 +5,7 @@ import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { useLang } from '../i18n/LangContext';
 import { locations, locationImage } from '../data/locations';
+import { seasonal, type SeasonalImage } from '../data/season';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
@@ -52,7 +53,38 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
   },
 };
 
+/* Hero vaihtuu kauden mukaan 1.10. (Vesa 20.9.2026). Sama silta molemmissa: kesällä
+   keskiyön aurinko, talvella jäätynyt Kemijoki — lukija näkee saman paikan kahtena vuodenaikana. */
+const HERO_SUMMER: SeasonalImage = {
+  src: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid.jpg',
+  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-800.avif 800w, /images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-800.webp 800w, /images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-1200.webp 1200w',
+  credit: { name: 'Xepheid', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_sun_in_Rovaniemi.jpg' },
+  alt: P.imageAlt,
+};
+const HERO_WINTER: SeasonalImage = {
+  src: '/images/heroes/rovaniemi-jatkankynttila-winter-card.jpg',
+  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-800.avif 800w, /images/heroes/rovaniemi-jatkankynttila-winter-card-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-800.webp 800w, /images/heroes/rovaniemi-jatkankynttila-winter-card-1200.webp 1200w',
+  credit: { name: 'Card', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:J%C3%A4tk%C3%A4nkynttil%C3%A4_March_2010.jpg' },
+  alt: {
+    en: 'The Jätkänkynttilä bridge over the frozen Kemijoki river in Rovaniemi in winter',
+    fi: 'Jätkänkynttilä-silta jäätyneen Kemijoen yllä Rovaniemellä talvella',
+    de: 'Die Jätkänkynttilä-Brücke über den zugefrorenen Kemijoki in Rovaniemi im Winter',
+    ja: '冬、凍ったケミ川に架かるロヴァニエミのヤトカンキュンッティラ橋',
+    es: 'El puente Jätkänkynttilä sobre el río Kemijoki helado en Rovaniemi en invierno',
+    'pt-BR': 'A ponte Jätkänkynttilä sobre o rio Kemijoki congelado em Rovaniemi no inverno',
+    'zh-CN': '冬季罗瓦涅米，横跨封冻凯米河的耶特坎金蒂莱桥',
+    ko: '겨울, 얼어붙은 케미강 위로 놓인 로바니에미의 얜트캉퀸틸래 다리',
+    fr: 'Le pont Jätkänkynttilä au-dessus du fleuve Kemijoki gelé à Rovaniemi en hiver',
+    it: 'Il ponte Jätkänkynttilä sul fiume Kemijoki ghiacciato a Rovaniemi d’inverno',
+    nl: 'De Jätkänkynttilä-brug over de bevroren rivier Kemijoki in Rovaniemi in de winter',
+    sv: 'Bron Jätkänkynttilä över frusna Kemi älv i Rovaniemi på vintern',
+  },
+};
+
 export default function Locations() {
+  const hero = seasonal(HERO_WINTER, HERO_SUMMER);
   const { lang, dataLang, tr } = useLang();
   return (
     <>
@@ -76,10 +108,13 @@ export default function Locations() {
         eyebrow={ui('eyebrowRegions', lang)}
         title={tr.locations.indexTitle}
         subtitle={tr.locations.indexIntro}
-        image="/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid.jpg"
-        credit={{ name: 'Xepheid', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_sun_and_Jatkankynttila_bridge_2020.jpg' }}
+        image={hero.src}
+        avifSrcSet={hero.avifSrcSet}
+        webpSrcSet={hero.webpSrcSet}
+        sizes="100vw"
+        credit={hero.credit}
         lang={lang}
-        imageAlt={pickLocalized(P.imageAlt, lang)}
+        imageAlt={pickLocalized(hero.alt, lang)}
       />
       <Section>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
