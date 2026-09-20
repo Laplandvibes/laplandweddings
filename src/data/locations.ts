@@ -1,5 +1,6 @@
 import type { Localized } from './localized';
 import type { ImageCredit } from '../components/ImgCredit';
+import { isWinterSeason } from './season';
 
 export interface Location {
   slug: string;
@@ -14,7 +15,17 @@ export interface Location {
   heroImage: string;
   heroAlt: Localized<string>;
   heroCredit?: ImageCredit;
+  /** Talvikuva 1.10.–30.4. (Vesa 20.9.2026: "lokakuun alusta talvikuvat").
+      Jos puuttuu, näytetään kesäkuva ympäri vuoden — ei rikkinäistä kuvaa. */
+  winter?: { src: string; alt: Localized<string>; credit?: ImageCredit };
   seasonNote: Localized<string>;
+}
+
+/** Paikkakunnan kuva kauden mukaan. KAIKKI pinnat lukevat tämän kautta, jottei
+    kausisääntö pääse eroamaan kortin ja sivun välillä. */
+export function locationImage(loc: Location, now?: Date): { src: string; alt: Localized<string>; credit?: ImageCredit } {
+  if (isWinterSeason(now) && loc.winter) return loc.winter;
+  return { src: loc.heroImage, alt: loc.heroAlt, credit: loc.heroCredit };
 }
 
 export const locations: Location[] = [

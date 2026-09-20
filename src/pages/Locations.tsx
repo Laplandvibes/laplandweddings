@@ -4,7 +4,7 @@ import ImgCredit from '../components/ImgCredit';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import { useLang } from '../i18n/LangContext';
-import { locations } from '../data/locations';
+import { locations, locationImage } from '../data/locations';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
@@ -94,15 +94,15 @@ export default function Locations() {
                     banned and reusing another region's picture would misrepresent
                     the place, so fall back to the house gradient rather than
                     shipping a broken <img>. */}
-                {loc.heroImage ? (
-                  <img src={loc.heroImage} alt={loc.heroAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
+                {locationImage(loc).src ? (
+                  <img src={locationImage(loc).src} alt={locationImage(loc).alt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
                 ) : (
-                  <div role="img" aria-label={loc.heroAlt[dataLang]} className="w-full h-full bg-gradient-to-br from-[#3A2A24] via-[#1F1612] to-[#2A1F18]" />
+                  <div role="img" aria-label={locationImage(loc).alt[dataLang]} className="w-full h-full bg-gradient-to-br from-[#3A2A24] via-[#1F1612] to-[#2A1F18]" />
                 )}
               </div>
               <div className="p-6">
                 <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
-                <ImgCredit credit={loc.heroCredit} lang={lang} plain />
+                <ImgCredit credit={locationImage(loc).credit} lang={lang} plain />
                 <h3 className="font-heading text-2xl text-white mb-2 tracking-wide">{loc.name[dataLang]}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed line-clamp-3 mb-3">{loc.intro[dataLang]}</p>
                 <div className="text-xs text-gray-500">

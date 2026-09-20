@@ -9,7 +9,7 @@ import NewsletterSignup from '../components/NewsletterSignup';
 import RelatedSites from '../components/RelatedSites';
 import { useLang } from '../i18n/LangContext';
 import { t as translations, type Lang } from '../i18n/translations';
-import { locations } from '../data/locations';
+import { locations, locationImage } from '../data/locations';
 import { weddingTypes } from '../data/weddingTypes';
 import { venues } from '../data/venues';
 import L from '../components/L';
@@ -476,8 +476,8 @@ export default function Home() {
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src={loc.heroImage}
-                  alt={loc.heroAlt[dataLang]}
+                  src={locationImage(loc).src}
+                  alt={locationImage(loc).alt[dataLang]}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                  decoding="async" width="800" height="600"/>
@@ -485,7 +485,7 @@ export default function Home() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
-                <ImgCredit credit={loc.heroCredit} lang={lang} plain />
+                <ImgCredit credit={locationImage(loc).credit} lang={lang} plain />
                 <h3 className="font-heading text-2xl text-white tracking-wide">{loc.name[dataLang]}</h3>
               </div>
             </L>

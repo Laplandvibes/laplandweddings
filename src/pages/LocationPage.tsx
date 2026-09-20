@@ -3,7 +3,7 @@ import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
-import { locations } from '../data/locations';
+import { locations, locationImage } from '../data/locations';
 import { getVenueBySlug } from '../data/venues';
 import { useLang } from '../i18n/LangContext';
 import NotFound from './NotFound';
@@ -69,7 +69,7 @@ export default function LocationPage() {
         title={`${loc.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.weddings, lang)} | LaplandWeddings`}
         description={loc.intro[dataLang].slice(0, 160)}
         path={`/locations/${loc.slug}`}
-        image={loc.heroImage}
+        image={locationImage(loc).src}
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Place',
@@ -84,9 +84,9 @@ export default function LocationPage() {
         eyebrow={loc.region[dataLang]}
         title={loc.name[dataLang]}
         subtitle={loc.intro[dataLang]}
-        image={loc.heroImage}
-        imageAlt={loc.heroAlt[dataLang]}
-        credit={loc.heroCredit}
+        image={locationImage(loc).src}
+        imageAlt={locationImage(loc).alt[dataLang]}
+        credit={locationImage(loc).credit}
         lang={lang}
       />
 
