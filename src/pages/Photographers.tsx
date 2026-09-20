@@ -3,6 +3,7 @@ import Section from '../components/Section';
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
 import SeasonBand from '../components/SeasonBand';
+import { seasonal, type SeasonalImage } from '../data/season';
 import L from '../components/L';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
@@ -336,7 +337,37 @@ const P: Record<
   },
 };
 
+const HERO_SUMMER: SeasonalImage = {
+  src: '/images/heroes/inari-midnight-sun-pier-teker.jpg',
+  avifSrcSet: '/images/heroes/inari-midnight-sun-pier-teker-800.avif 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/inari-midnight-sun-pier-teker-800.webp 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.webp 1200w',
+  credit: { name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(4).jpg' },
+  alt: P.imageAlt,
+};
+/* Talvella hääkuvaajan kysytyin tilaus on revontulikuva — hero näyttää sen (Vesa 20.9.2026). */
+const HERO_WINTER: SeasonalImage = {
+  src: '/images/heroes/aurora-saana-winter.jpg',
+  avifSrcSet: '/images/heroes/aurora-saana-winter-800.avif 800w, /images/heroes/aurora-saana-winter-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/aurora-saana-winter-800.webp 800w, /images/heroes/aurora-saana-winter-1200.webp 1200w',
+  credit: { name: 'WikiLucas00', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Aurora_borealis_over_Saana_fell.jpg' },
+  alt: {
+    en: 'Northern lights above the Saana fell beyond snow-covered tundra',
+    fi: 'Revontulet Saana-tunturin yllä lumisen tunturikankaan takana',
+    de: 'Polarlichter über dem Saana hinter verschneiter Fjälltundra',
+    ja: '雪のツンドラの向こう、サーナ山の上に広がるオーロラ',
+    es: 'Auroras boreales sobre el fell Saana tras la tundra nevada',
+    'pt-BR': 'Aurora boreal acima do fell Saana, atrás da tundra nevada',
+    'zh-CN': '雪原之上，极光在萨纳山上空舞动',
+    ko: '눈 덮인 툰드라 너머 사나 산 위로 펼쳐진 오로라',
+    fr: 'Aurores boréales au-dessus du fjäll Saana, derrière la toundra enneigée',
+    it: 'Aurora boreale sopra il fjäll Saana, oltre la tundra innevata',
+    nl: 'Noorderlicht boven de Saana-fjäll achter besneeuwde toendra',
+    sv: 'Norrsken över Saanafjället bortom snötäckt fjällhed',
+  },
+};
+
 export default function Photographers() {
+  const hero = seasonal(HERO_WINTER, HERO_SUMMER);
   const { lang } = useLang();
   const t = (k: keyof typeof P) => pickLocalized(P[k], lang);
   const questions = [t('ask1'), t('ask2'), t('ask3'), t('ask4')];
@@ -353,14 +384,14 @@ export default function Photographers() {
         eyebrow={ui('eyebrowPhotographers', lang)}
         title={t('title')}
         subtitle={t('subtitle')}
-        image="/images/heroes/inari-midnight-sun-pier-teker.jpg"
-        avifSrcSet="/images/heroes/inari-midnight-sun-pier-teker-800.avif 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.avif 1200w"
-        webpSrcSet="/images/heroes/inari-midnight-sun-pier-teker-800.webp 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.webp 1200w"
+        image={hero.src}
+        avifSrcSet={hero.avifSrcSet}
+        webpSrcSet={hero.webpSrcSet}
         sizes="100vw"
         objectPosition="50% 55%"
-        credit={{ name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(4).jpg' }}
+        credit={hero.credit}
         lang={lang}
-        imageAlt={t('imageAlt')}
+        imageAlt={pickLocalized(hero.alt, lang)}
       />
 
       <Section title={t('costTitle')}>

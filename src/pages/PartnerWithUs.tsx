@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import PartnerForm from '../components/PartnerForm';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
+import { seasonal, type SeasonalImage } from '../data/season';
 import { Inbox, Megaphone, ShieldCheck, Handshake, Globe, Languages, Sun } from 'lucide-react';
 
 /**
@@ -718,7 +719,34 @@ const C: Record<CKey, Localized<string>> = {
   },
 };
 
+const HERO_SUMMER: SeasonalImage = {
+  src: '/images/heroes/saariselka-kaunispaa-hikers-rasanen.jpg',
+  credit: { name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Hikers_on_Kaunisp%C3%A4%C3%A4_fell_in_Saariselk%C3%A4,_Inari,_Lapland,_Finland,_2016_September.jpg' },
+  alt: C.heroImageAlt,
+};
+const HERO_WINTER: SeasonalImage = {
+  src: '/images/heroes/lommoltunturi-panorama-winter.jpg',
+  avifSrcSet: '/images/heroes/lommoltunturi-panorama-winter-800.avif 800w, /images/heroes/lommoltunturi-panorama-winter-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/lommoltunturi-panorama-winter-800.webp 800w, /images/heroes/lommoltunturi-panorama-winter-1200.webp 1200w',
+  credit: { name: 'Simo Räsänen', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Moody_view_towards_Keimi%C3%B6tunturi_and_Sammaltunturi_from_Lommoltunturi_in_Muonio,_Lapland,_Finland,_2019_January.jpg' },
+  alt: {
+    en: 'Wind-carved snow on the top of Lommoltunturi, distant fells under a pink winter sky',
+    fi: 'Tuulen muovaamaa hankea Lommoltunturin laella, kaukana Keimiötunturi ruskean vaaleanpunaisen taivaan alla',
+    de: 'Windgeformter Schnee auf dem Gipfel des Lommoltunturi, ferne Fjälls unter rosa Winterhimmel',
+    ja: 'ロンモルトゥントゥリの山頂、風が削った雪と桃色の冬空の下に遠い山々',
+    es: 'Nieve esculpida por el viento en la cima de Lommoltunturi, con fells lejanos bajo un cielo invernal rosado',
+    'pt-BR': 'Neve esculpida pelo vento no alto de Lommoltunturi, com fells distantes sob um céu de inverno rosado',
+    'zh-CN': '洛莫尔山顶被风塑形的积雪，远处群山映着粉色的冬日天空',
+    ko: '바람이 깎은 롬몰툰투리 정상의 눈, 분홍빛 겨울 하늘 아래 멀리 보이는 산들',
+    fr: 'Neige sculptée par le vent au sommet du Lommoltunturi, fjälls lointains sous un ciel d’hiver rose',
+    it: 'Neve scolpita dal vento sulla cima del Lommoltunturi, fjäll lontani sotto un cielo invernale rosa',
+    nl: 'Door de wind gevormde sneeuw op de top van Lommoltunturi, verre fjälls onder een roze winterhemel',
+    sv: 'Vindformad snö på toppen av Lommoltunturi, avlägsna fjäll under en rosa vinterhimmel',
+  },
+};
+
 export default function PartnerWithUs() {
+  const hero = seasonal(HERO_WINTER, HERO_SUMMER);
   const { lang } = useLang();
   const c = (k: CKey) => pickLocalized(C[k], lang);
 
@@ -747,8 +775,11 @@ export default function PartnerWithUs() {
         eyebrow={c('heroEyebrow')}
         title={c('heroTitle')}
         subtitle={c('heroSubtitle')}
-        image="/images/heroes/saariselka-kaunispaa-hikers-rasanen.jpg"
-        credit={{ name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Hikers_on_Kaunisp%C3%A4%C3%A4_in_Saariselk%C3%A4,_Inari,_Lapland,_Finland,_2021_September.jpg' }}
+        image={hero.src}
+        avifSrcSet={hero.avifSrcSet}
+        webpSrcSet={hero.webpSrcSet}
+        sizes="100vw"
+        credit={hero.credit}
         lang={lang}
         imageAlt={c('heroImageAlt')}
       >

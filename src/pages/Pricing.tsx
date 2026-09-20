@@ -8,6 +8,7 @@ import { pickLocalized, type Localized } from '../data/localized';
 import CostRangeChart, { type CostRangeRow } from '../components/CostRangeChart';
 import { GuestScale, PriceSeasonBand, NightsSplit } from '../components/PriceDrivers';
 import { DIAG } from '../data/diagramText';
+import { seasonal, type SeasonalImage } from '../data/season';
 /**
  * What the parts cost, 2026-07-29.
  *
@@ -563,7 +564,34 @@ const P: Record<PKey, Localized<string>> = {
   },
 };
 
+const HERO_SUMMER: SeasonalImage = {
+  src: '/images/heroes/savukoski-luirojoki-rasanen.jpg',
+  credit: { name: 'Simo Räsänen', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Luiro_river_at_Tanhua_in_Savukoski,_Lapland,_Finland,_2021_June.jpg' },
+  alt: P.heroImageAlt,
+};
+const HERO_WINTER: SeasonalImage = {
+  src: '/images/heroes/pallastunturi-panorama-winter.jpg',
+  avifSrcSet: '/images/heroes/pallastunturi-panorama-winter-800.avif 800w, /images/heroes/pallastunturi-panorama-winter-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/pallastunturi-panorama-winter-800.webp 800w, /images/heroes/pallastunturi-panorama-winter-1200.webp 1200w',
+  credit: { name: 'RicHard-59', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Pallas_from_north_30032017.jpg' },
+  alt: {
+    en: 'The snow-covered summits of the Pallastunturi fells beyond a boreal forest in winter',
+    fi: 'Pallastunturin lumiset laet havumetsän takana talvella',
+    de: 'Die verschneiten Gipfel der Pallastunturi-Fjälls hinter einem Nadelwald im Winter',
+    ja: '冬、針葉樹林の向こうに連なるパラストゥントゥリの雪の峰々',
+    es: 'Las cumbres nevadas de los fells Pallastunturi tras un bosque boreal en invierno',
+    'pt-BR': 'Os cumes nevados dos fells Pallastunturi além da floresta boreal no inverno',
+    'zh-CN': '冬季，针叶林之外白雪覆盖的帕拉斯山群峰',
+    ko: '겨울, 침엽수림 너머 눈 덮인 팔라스툰투리 산마루',
+    fr: 'Les sommets enneigés des fjälls de Pallastunturi derrière une forêt boréale en hiver',
+    it: 'Le cime innevate dei fjäll di Pallastunturi oltre la foresta boreale d’inverno',
+    nl: 'De besneeuwde toppen van de Pallastunturi-fjälls achter een naaldbos in de winter',
+    sv: 'Pallastunturis snötäckta toppar bortom barrskogen på vintern',
+  },
+};
+
 export default function Pricing() {
+  const hero = seasonal(HERO_WINTER, HERO_SUMMER);
   const { lang } = useLang();
   const p = (k: PKey) => pickLocalized(P[k], lang);
 
@@ -579,10 +607,13 @@ export default function Pricing() {
         eyebrow={p('heroEyebrow')}
         title={p('heroTitle')}
         subtitle={p('heroSubtitle')}
-        image="/images/heroes/savukoski-luirojoki-rasanen.jpg"
-        credit={{ name: 'Simo Räsänen', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Luiro_river_at_Tanhua_in_Savukoski,_Lapland,_Finland,_2021_June.jpg' }}
+        image={hero.src}
+        avifSrcSet={hero.avifSrcSet}
+        webpSrcSet={hero.webpSrcSet}
+        sizes="100vw"
+        credit={hero.credit}
         lang={lang}
-        imageAlt={p('heroImageAlt')}
+        imageAlt={pickLocalized(hero.alt, lang)}
       />
 
       <Section

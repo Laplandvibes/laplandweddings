@@ -2,6 +2,8 @@ import { ArrowUpRight } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import type { Lang } from '../i18n/translations';
 import Section from './Section';
+import ImgCredit, { type ImageCredit } from './ImgCredit';
+import { isWinterSeason } from '../data/season';
 
 /**
  * Contextual sibling links into the LaplandVibes network for couples planning a
@@ -22,8 +24,25 @@ type Card = { href: string; label: string; body: string };
 
 /** One own photograph per card (Vesa 19.9.: "jättää tosi kylmäksi … kuvat voisivat nostaa tämän arvoa").
     July 2026 road trip, masters in D:\_puhelin_staging\kuvat; receipts in public/images/KUVALAHTEET.json. */
-const IMAGES: Array<{ src: string; alt: Record<Lang, string> }> = [
-  { src: '/images/own/kemijarvi-lake-terrace-summer.webp', alt: {
+const IMAGES: Array<{ src: string; alt: Record<Lang, string>; winter: { src: string; alt: Record<Lang, string>; credit: ImageCredit } }> = [
+  { src: '/images/own/kemijarvi-lake-terrace-summer.webp', winter: {
+    src: '/images/winter/cabin-lakeside-winter.webp',
+    credit: { name: 'Tadeáš Gregor', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Ailakkaj%C3%A4rvi_wilderness_hut.jpg' },
+    alt: {
+      en: 'A small wooden cabin half-buried in snow on open fell tundra at sunset',
+      fi: 'Pieni puinen mökki puoliksi lumen peitossa avotunturissa auringonlaskun aikaan',
+      de: 'Eine kleine Holzhütte halb im Schnee auf offener Fjälltundra bei Sonnenuntergang',
+      ja: '夕暮れの開けた山の雪原で、半ば雪に埋もれた小さな木の小屋',
+      es: 'Una pequeña cabaña de madera medio enterrada en la nieve en la tundra abierta al atardecer',
+      'pt-BR': 'Uma pequena cabana de madeira meio enterrada na neve na tundra aberta ao pôr do sol',
+      'zh-CN': '日落时分，空旷雪原上半埋于积雪中的小木屋',
+      ko: '해질 녘, 탁 트인 설원에 눈에 반쯤 묻힌 작은 나무 오두막',
+      fr: 'Un petit chalet en bois à demi enseveli sous la neige sur la toundra, au coucher du soleil',
+      it: 'Una piccola baita di legno mezza sepolta dalla neve nella tundra aperta al tramonto',
+      nl: 'Een klein houten hutje half bedolven onder de sneeuw op open toendra bij zonsondergang',
+      sv: 'En liten trästuga halvt begravd i snö på öppen fjällhed i solnedgången',
+    },
+  }, alt: {
     en: 'A lakeside terrace with a jetty among birches on Lake Kemijärvi in summer',
     fi: 'Järviterassi ja laituri koivujen keskellä Kemijärven rannalla kesällä',
     de: 'Eine Seeterrasse mit Steg zwischen Birken am Kemijärvi im Sommer',
@@ -37,7 +56,24 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string> }> = [
     nl: 'Een terras met een steiger tussen berken aan het Kemijärvi-meer in de zomer',
     sv: 'En sjöterrass med brygga bland björkar vid Kemijärvi på sommaren',
   } },
-  { src: '/images/own/road-to-the-fells-kittila-pyha.webp', alt: {
+  { src: '/images/own/road-to-the-fells-kittila-pyha.webp', winter: {
+    src: '/images/winter/road-to-the-fells-winter.webp',
+    credit: { name: 'Simo Räsänen', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Finnish_national_road_21_%26_Saana,_Ala-Kilpisj%C3%A4rvi.JPG' },
+    alt: {
+      en: 'A plowed winter road curving through snow towards the snow-capped Saana fell',
+      fi: 'Auratun talvitien mutka lumessa kohti lumista Saana-tunturia',
+      de: 'Eine geräumte Winterstraße führt durch den Schnee auf den verschneiten Saana zu',
+      ja: '雪の中を除雪された冬の道が、雪をかぶったサーナ山へと続く',
+      es: 'Una carretera invernal despejada que serpentea por la nieve hacia el nevado fell Saana',
+      'pt-BR': 'Uma estrada de inverno limpa de neve que serpenteia rumo ao nevado fell Saana',
+      'zh-CN': '清扫过的冬季公路在雪中蜿蜒，通向积雪的萨纳山',
+      ko: '눈을 치운 겨울 도로가 눈 덮인 사나 산을 향해 굽이친다',
+      fr: 'Une route d’hiver déneigée serpente dans la neige vers le fjäll Saana enneigé',
+      it: 'Una strada invernale sgombrata che curva nella neve verso il fjäll Saana innevato',
+      nl: 'Een sneeuwvrij gemaakte winterweg buigt door de sneeuw naar de besneeuwde Saana-fjäll',
+      sv: 'En plogad vinterväg svänger genom snön mot det snöklädda Saanafjället',
+    },
+  }, alt: {
     en: 'A straight summer road towards the fells between Kittilä and Pyhä',
     fi: 'Suora kesäinen tie kohti tuntureita Kittilän ja Pyhän välillä',
     de: 'Eine gerade Sommerstraße Richtung Fjälls zwischen Kittilä und Pyhä',
@@ -51,7 +87,24 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string> }> = [
     nl: 'Een rechte zomerweg richting de fjälls tussen Kittilä en Pyhä',
     sv: 'En rak sommarväg mot fjällen mellan Kittilä och Pyhä',
   } },
-  { src: '/images/own/kittila-airport-terminal-summer.webp', alt: {
+  { src: '/images/own/kittila-airport-terminal-summer.webp', winter: {
+    src: '/images/winter/airport-terminal-winter.webp',
+    credit: { name: 'flightlog', license: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:EFRO_terminal_20120209_01.jpg' },
+    alt: {
+      en: 'The terminal and snow-covered apron of Rovaniemi Airport on a winter day',
+      fi: 'Rovaniemen lentoaseman terminaali ja luminen asemataso talvipäivänä',
+      de: 'Terminal und schneebedecktes Vorfeld des Flughafens Rovaniemi an einem Wintertag',
+      ja: '冬の日、ロヴァニエミ空港のターミナルと雪に覆われたエプロン',
+      es: 'La terminal y la plataforma nevada del aeropuerto de Rovaniemi en un día de invierno',
+      'pt-BR': 'O terminal e o pátio coberto de neve do aeroporto de Rovaniemi num dia de inverno',
+      'zh-CN': '冬日的罗瓦涅米机场航站楼与积雪的停机坪',
+      ko: '겨울날 로바니에미 공항의 터미널과 눈 덮인 주기장',
+      fr: 'L’aérogare et l’aire de trafic enneigée de l’aéroport de Rovaniemi un jour d’hiver',
+      it: 'Il terminal e il piazzale innevato dell’aeroporto di Rovaniemi in una giornata d’inverno',
+      nl: 'De terminal en het besneeuwde platform van Rovaniemi Airport op een winterse dag',
+      sv: 'Terminalen och den snötäckta plattan vid Rovaniemi flygplats en vinterdag',
+    },
+  }, alt: {
     en: 'The terminal building and car park of Kittilä Airport on a summer day',
     fi: 'Kittilän lentoaseman terminaali ja pysäköintialue kesäpäivänä',
     de: 'Terminal und Parkplatz des Flughafens Kittilä an einem Sommertag',
@@ -195,6 +248,9 @@ const COPY: Record<Lang, Block> = {
 
 export default function RelatedSites() {
   const { lang } = useLang();
+  /* Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Omat heinäkuun kuvat eivät kelpaa talveen. */
+  const pic = (i: number): { src: string; alt: Record<Lang, string>; credit?: ImageCredit } =>
+    isWinterSeason() ? IMAGES[i].winter : IMAGES[i];
   const t = COPY[lang] ?? COPY.en;
 
   return (
@@ -209,18 +265,19 @@ export default function RelatedSites() {
             className="on-card group bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden flex flex-col transition-all"
           >
             {IMAGES[i] && (
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 <img
-                  src={IMAGES[i].src}
-                  srcSet={`${IMAGES[i].src.replace('.webp', '-600.webp')} 600w, ${IMAGES[i].src} 1200w`}
+                  src={pic(i).src}
+                  srcSet={`${pic(i).src.replace('.webp', '-600.webp')} 600w, ${pic(i).src} 1200w`}
                   sizes="(min-width: 640px) 33vw, 100vw"
-                  alt={IMAGES[i].alt[lang] ?? IMAGES[i].alt.en}
+                  alt={pic(i).alt[lang] ?? pic(i).alt.en}
                   loading="lazy"
                   decoding="async"
                   width="1200"
                   height="750"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
+                <ImgCredit credit={pic(i).credit} lang={lang} plain />
               </div>
             )}
             <div className="p-6 flex flex-col flex-1">
