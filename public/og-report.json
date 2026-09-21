@@ -1,24 +1,25 @@
 {
-  "version": "20260905",
+  "version": "20260921",
   "domain": "laplandweddings.online",
   "brand": "WEDDINGS",
   "tagline": "Arctic venues and marriage paperwork",
-  "generated": "2026-09-21T08:31:06.496Z",
+  "generated": "2026-09-21T11:35:29.560Z",
   "staticFallbackSeason": "summer",
   "seasons": {
     "summer": {
+      "tagline": "Midnight sun venues and paperwork",
       "heroUrl": "https://laplandweddings.online/images/heroes/midnight-sun-inari-teker-1200.avif?v=1896c1b3",
       "heroAlt": "The midnight sun over Lake Inari around midsummer",
       "heroSha": "1896c1b390217ab4",
-      "bytes": 93071,
-      "sha256": "87229a2a7f0380287ccc44b7fb8258d85e18ce80721c9131227e7f1ac057b841",
+      "bytes": 92271,
+      "sha256": "0ab3398e5acddf5599b27e467f89b73ba8ac84fb7c6c35540a0c3a78227d062e",
       "bandH": 168,
       "photoPct": 73.3,
-      "ink": 19772,
+      "ink": 19558,
       "inkBox": [
-        329,
+        348,
         493,
-        870,
+        852,
         603
       ],
       "safe": true,
@@ -27,7 +28,7 @@
       "whiteP10": 17.08,
       "whiteMed": 17.08,
       "mean": 104.5,
-      "centerSq": 115.1,
+      "centerSq": 115,
       "photoRegion": 128.4,
       "photoRegionRef": 128.4,
       "overlayPixels": 0,
@@ -36,7 +37,7 @@
         "size": 74,
         "lines": 1,
         "ts": 30,
-        "tagW": 542,
+        "tagW": 507,
         "fits": true,
         "bandH": 168
       },
@@ -45,6 +46,7 @@
       "errors": []
     },
     "winter": {
+      "tagline": "Arctic venues and marriage paperwork",
       "heroUrl": "https://laplandweddings.online/images/heroes/aurora-levi-rasanen-1200.avif?v=b8f2c4e3",
       "heroAlt": "Green and violet northern lights over a spruce forest in the Finnish Lapland night sky",
       "heroSha": "b8f2c4e3f39df933",
