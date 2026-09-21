@@ -12,11 +12,12 @@ https://laplandweddings.pages.dev/*
 # <<< LV-PAGESDEV-NOINDEX
 
 # >>> LV-LINK-PRELOAD (managed by apply_link_preload_headers.py)
-/
-  Link: </images/heroes/midnight-sun-hero.jpg>; rel=preload; as=image; fetchpriority=high
-
-/index.html
-  Link: </images/heroes/midnight-sun-hero.jpg>; rel=preload; as=image; fetchpriority=high
+# 🔴 LOHKO POISTETTU 21.9.2026. Se osoitti tiedostoon jota ei ole (images/heroes/midnight-sun-hero.jpg)
+# eli tuotti 404:n jokaisella sivulatauksella. Sita ei palautettu osoittamaan oikeaan
+# tiedostoon, koska kiintea preload on tassa vaara kahdesta syysta: hero vaihtuu
+# vuodenajan mukaan, ja `Link:`-otsakkeesta puuttuu `imagesrcset`, jolloin se lataisi
+# taysikokoisen kuvan samalla kun selain hakee srcsetista pienemman. Jos preload
+# palautetaan, se tarvitsee molemmat: oikean tiedoston JA imagesrcset+imagesizes.
 # <<< LV-LINK-PRELOAD
 
 /*

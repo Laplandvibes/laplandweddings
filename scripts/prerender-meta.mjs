@@ -155,10 +155,29 @@ function sectionStrings(lang, section) {
   TRANS_CACHE[key] = out;
   return out;
 }
+// 🔴🔴 LEVEYS, EI MERKKIMAARA. Googlen snippetin raja on pikseleissa ja CJK-merkki on
+// noin kaksi kertaa latinalaisen levyinen, joten 70 merkin alaraja pitaa taysimittaista
+// japanin kuvausta liian lyhyena ja liimaa perään sivun leipatekstia. Mitattu 21.9.2026
+// livesta: /ja/ 112 merkkia = 217 leveysyksikkoa, lahdeteksti 52 merkkia.
+// Latinalaisiin nama eivat kosketa: 70 merkkia = 70 yksikkoa, 160 merkkia = 160.
+const LEVEA_DESC = /[ᄀ-ᇿ⺀-꓏ꥠ-꥿가-퟿豈-﫿︰-﹏＀-｠￠-￦]/;
+const leveysDesc = (x) => [...String(x)].reduce((n, c) => n + (LEVEA_DESC.test(c) ? 2 : 1), 0);
+const riittavaDesc = (x) => String(x).length >= 70 || leveysDesc(x) >= 100;
+/** Leikkaa merkkijonon niin etta sen leveys on enintaan w. */
+const sliceWDesc = (x, w) => {
+  let n = 0, out = '';
+  for (const c of String(x)) {
+    const step = LEVEA_DESC.test(c) ? 2 : 1;
+    if (n + step > w) break;
+    n += step; out += c;
+  }
+  return out;
+};
+
 function extendFromTranslations(path, lang, current) {
   let cur = String(current || '').trim();
   const section = STATIC_SECTION[path];
-  if (cur.length >= 70 || !section) return cur;
+  if (riittavaDesc(cur) || !section) return cur;
   const cjk = isCjk(lang);
   const text = sectionStrings(lang, section).join(cjk ? '' : ' ');
   const sentences = (cjk ? text.split(/(?<=[。！？])/) : text.split(/(?<=[.!?])\s+/)).map((x) => x.trim()).filter((x) => x.length > 3);
@@ -166,9 +185,9 @@ function extendFromTranslations(path, lang, current) {
     if (cur.includes(sen) || sen.includes(cur)) continue;
     const joiner = /[.!?。！？]$/.test(cur) ? ' ' : (cjk ? '。' : '. ');
     const next = cur + joiner + sen;
-    if (next.length > 160) { if (cur.length >= 70) break; continue; }
+    if (next.length > 160 || leveysDesc(next) > 200) { if (riittavaDesc(cur)) break; continue; }
     cur = next;
-    if (cur.length >= 70) break;
+    if (riittavaDesc(cur)) break;
   }
   return clampDescription(cur);
 }
@@ -664,10 +683,10 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, no
 
 function clampDescription(d, max = 160) {
   const s = String(d || '').trim();
-  if (s.length <= max) return s;
-  const head = s.slice(0, max);
+  if (s.length <= max && leveysDesc(s) <= 200) return s;
+  const head = sliceWDesc(s.slice(0, max), 200);
   const lastEnd = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '), head.lastIndexOf('。'));
-  if (lastEnd >= 90) return head.slice(0, lastEnd + 1).trim();
+  if (lastEnd >= 90 || (lastEnd > 0 && riittavaDesc(head.slice(0, lastEnd + 1)))) return head.slice(0, lastEnd + 1).trim();
   return head.replace(/\s+\S*$/, '').replace(/[,;:\s]+$/, '');
 }
 
