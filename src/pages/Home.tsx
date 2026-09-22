@@ -63,18 +63,18 @@ export default function Home() {
   // HOME meta <title> — leads with the "Lapland Weddings" keyword + concrete
   // value (venues + marriage paperwork). All 12 locales native (no EN bleed).
   const SEO_TITLE: Record<Lang, string> = {
-    en: 'Lapland Weddings 2026: Arctic Venues & Marriage Paperwork',
-    fi: 'Häät Lapissa 2026: hääpaikat ja DVV-paperit',
-    de: 'Hochzeit in Lappland 2026: Locations & Heiratspapiere',
-    ja: 'ラップランドの結婚式2026：会場と婚姻手続き',
-    es: 'Bodas en Laponia 2026: lugares y trámites de boda',
-    'pt-BR': 'Casamentos na Lapônia 2026: locais e documentação',
-    'zh-CN': '拉普兰婚礼2026：婚礼场地与结婚手续',
-    ko: '라플란드 결혼식 2026: 예식장과 혼인 서류',
-    fr: 'Mariage en Laponie 2026 : lieux, prix et démarches',
-    it: 'Matrimonio in Lapponia 2026: location e pratiche di nozze',
-    nl: 'Trouwen in Lapland 2026: locaties en huwelijkspapieren',
-    sv: 'Bröllop i Lappland 2026: vigselplatser och äktenskapspapper',
+    en: 'Lapland Weddings: 20 Arctic Venues and What They Cost',
+    fi: 'Häät Lapissa: 20 hääpaikkaa jääkappelista lasi-igluun',
+    de: 'Hochzeit in Lappland: Locations & Heiratspapiere',
+    ja: 'ラップランドの結婚式：会場と婚姻手続き',
+    es: 'Bodas en Laponia: lugares y trámites de boda',
+    'pt-BR': 'Casamentos na Lapônia: locais e documentação',
+    'zh-CN': '拉普兰婚礼：婚礼场地与结婚手续',
+    ko: '라플란드 결혼식: 예식장과 혼인 서류',
+    fr: 'Mariage en Laponie : lieux, prix et démarches',
+    it: 'Matrimonio in Lapponia: location e pratiche di nozze',
+    nl: 'Trouwen in Lapland: locaties en huwelijkspapieren',
+    sv: 'Bröllop i Lappland: vigselplatser och äktenskapspapper',
   };
   const seoTitle = SEO_TITLE[lang];
   // Description states only what the site actually contains. The old version
