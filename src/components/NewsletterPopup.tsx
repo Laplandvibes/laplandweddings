@@ -1,4 +1,5 @@
 import SharedNewsletterPopup from '../shared/NewsletterPopup';
+import { POPUP_THEME, POPUP_COPY } from './newsletterPopupSite';
 import { useLang } from '../i18n/LangContext';
 
 // Shared network creds (public anon key) — this site has no .env, same
@@ -17,6 +18,8 @@ export default function NewsletterPopup() {
   const { lang } = useLang();
   return (
     <SharedNewsletterPopup
+      theme={POPUP_THEME}
+      copy={POPUP_COPY}
       lang={lang as 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv'}
       siteId="laplandweddings"
       brandWord="WEDDINGS"
