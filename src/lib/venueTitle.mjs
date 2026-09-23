@@ -6,8 +6,9 @@
  * regions are the CJK transliterations. OpenSEO counted 76 duplicate venue
  * titles. The localizable part is the descriptor: what kind of page this is.
  *
- * Candidates, first that fits 60 characters wins (the brand suffix is added
- * only when the whole line still fits):
+ * Candidates, first that fits 60 characters wins. No brand suffix: Google shows
+ * the site name above every result (Vesa 22.9.2026), and the prerender uses the
+ * same base (scripts/prerender-meta.mjs), so static and client titles match:
  *   1. "<Venue>: <Region> – hääpaikka"
  *   2. "<Venue>: <Region up to the first ' · '> – hääpaikka"
  *   3. "<Venue> – hääpaikka"
@@ -45,8 +46,6 @@ export function venueTitleBase(name, region, lang) {
   return `${name}${sep}${regionFirst}`;
 }
 
-export function venueTitle(name, region, lang, brand = 'LaplandWeddings') {
-  const base = venueTitleBase(name, region, lang);
-  const full = `${base} | ${brand}`;
-  return full.length <= 60 ? full : base;
+export function venueTitle(name, region, lang) {
+  return venueTitleBase(name, region, lang);
 }
