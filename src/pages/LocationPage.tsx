@@ -66,7 +66,7 @@ export default function LocationPage() {
   return (
     <>
       <SEO
-        title={`${loc.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.weddings, lang)} | LaplandWeddings`}
+        title={`${loc.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.weddings, lang)}`}
         description={loc.intro[dataLang].slice(0, 160)}
         path={`/locations/${loc.slug}`}
         image={locationImage(loc).src}

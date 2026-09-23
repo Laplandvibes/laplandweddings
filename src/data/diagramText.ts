@@ -128,12 +128,12 @@ export const DIAG = {
 
   /* /contact page */
   contactSeoTitle: {
-    fi: 'Pyydä 1–3 tarjousta Lapin häihin | LaplandWeddings', en: 'Request 1–3 Lapland wedding quotes | LaplandWeddings',
-    de: 'Fordern Sie 1–3 Angebote für Ihre Hochzeit in Lappland an | LaplandWeddings', ja: 'ラップランド挙式の見積もりを1〜3件依頼 | LaplandWeddings',
-    es: 'Pida 1–3 presupuestos para su boda en Laponia | LaplandWeddings', 'pt-BR': 'Peça 1–3 orçamentos para seu casamento na Lapônia | LaplandWeddings',
-    'zh-CN': '索取 1–3 份拉普兰婚礼报价 | LaplandWeddings', ko: '라플란드 결혼식 견적 1~3건 요청 | LaplandWeddings',
-    fr: 'Demandez 1 à 3 devis pour votre mariage en Laponie | LaplandWeddings', it: 'Richiedete 1–3 preventivi per il matrimonio in Lapponia | LaplandWeddings',
-    nl: 'Vraag 1–3 offertes aan voor uw bruiloft in Lapland | LaplandWeddings', sv: 'Begär 1–3 offerter för ert bröllop i Lappland | LaplandWeddings',
+    fi: 'Pyydä 1–3 tarjousta Lapin häihin', en: 'Request 1–3 Lapland wedding quotes',
+    de: 'Fordern Sie 1–3 Angebote für Ihre Hochzeit in Lappland an', ja: 'ラップランド挙式の見積もりを1〜3件依頼',
+    es: 'Pida 1–3 presupuestos para su boda en Laponia', 'pt-BR': 'Peça 1–3 orçamentos para seu casamento na Lapônia',
+    'zh-CN': '索取 1–3 份拉普兰婚礼报价', ko: '라플란드 결혼식 견적 1~3건 요청',
+    fr: 'Demandez 1 à 3 devis pour votre mariage en Laponie', it: 'Richiedete 1–3 preventivi per il matrimonio in Lapponia',
+    nl: 'Vraag 1–3 offertes aan voor uw bruiloft in Lapland', sv: 'Begär 1–3 offerter för ert bröllop i Lappland',
   },
 } satisfies Record<string, Localized<string>>;
 

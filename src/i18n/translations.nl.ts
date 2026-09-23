@@ -160,7 +160,7 @@ const t_nl = {
   footerLine: 'Onderdeel van het LaplandVibes-netwerk · We zijn geen planner, we vergelijken de besten voor u.',
   legal: {
     terms: {
-      metaTitle: 'Gebruiksvoorwaarden | LaplandWeddings',
+      metaTitle: 'Gebruiksvoorwaarden',
       title: 'Gebruiksvoorwaarden',
       paragraphs: [
         'LaplandWeddings.online is een informatiesite die wordt beheerd door LaPeso Oy. Wij zijn geen bruiloftsplanningsbureau, wij sturen aanvragen door naar bruiloftsplanners.',
@@ -170,7 +170,7 @@ const t_nl = {
       ],
     },
     privacy: {
-      metaTitle: 'Privacyverklaring | LaplandWeddings',
+      metaTitle: 'Privacyverklaring',
       title: 'Privacybeleid',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
@@ -192,7 +192,7 @@ const t_nl = {
       ],
     },
     cookies: {
-      metaTitle: 'Cookiebeleid | LaplandWeddings',
+      metaTitle: 'Cookiebeleid',
       title: 'Cookiebeleid',
       paragraphs: [
         'Wij gebruiken strikt noodzakelijke cookies voor de werking van de site (taalvoorkeur, toestemming).',

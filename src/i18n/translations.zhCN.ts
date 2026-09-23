@@ -160,7 +160,7 @@ const t_zhCN = {
   footerLine: 'LaplandVibes 网络的一部分 · 我们不是策划师，我们为您比较最佳选择。',
   legal: {
     terms: {
-      metaTitle: '使用条款 | LaplandWeddings',
+      metaTitle: '使用条款',
       title: '使用条款',
       paragraphs: [
         'LaplandWeddings.online 是由 LaPeso Oy 运营的信息网站。我们不是婚礼策划机构，我们将咨询转交给婚礼策划师。',
@@ -170,7 +170,7 @@ const t_zhCN = {
       ],
     },
     privacy: {
-      metaTitle: '隐私 | LaplandWeddings',
+      metaTitle: '隐私',
       title: '隐私政策',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
@@ -192,7 +192,7 @@ const t_zhCN = {
       ],
     },
     cookies: {
-      metaTitle: 'Cookie 政策 | LaplandWeddings',
+      metaTitle: 'Cookie 政策',
       title: 'Cookie 政策',
       paragraphs: [
         '我们使用网站运行所必需的 Cookie（语言偏好、同意设置）。',

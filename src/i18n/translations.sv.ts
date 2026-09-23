@@ -160,7 +160,7 @@ const t_sv = {
   footerLine: 'Del av LaplandVibes-nätverket · Vi är inte en planerare, vi jämför de bästa åt dig.',
   legal: {
     terms: {
-      metaTitle: 'Användarvillkor | LaplandWeddings',
+      metaTitle: 'Användarvillkor',
       title: 'Användarvillkor',
       paragraphs: [
         'LaplandWeddings.online är en informationssajt som drivs av LaPeso Oy. Vi är inte en bröllopsbyrå, vi vidarebefordrar förfrågningar till bröllopsplanerare.',
@@ -170,7 +170,7 @@ const t_sv = {
       ],
     },
     privacy: {
-      metaTitle: 'Integritet | LaplandWeddings',
+      metaTitle: 'Integritet',
       title: 'Integritetspolicy',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
@@ -192,7 +192,7 @@ const t_sv = {
       ],
     },
     cookies: {
-      metaTitle: 'Cookiepolicy | LaplandWeddings',
+      metaTitle: 'Cookiepolicy',
       title: 'Cookiepolicy',
       paragraphs: [
         'Vi använder strikt nödvändiga cookies för att sajten ska fungera (språkval, samtycke).',

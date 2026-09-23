@@ -160,7 +160,7 @@ const t_ja = {
   footerLine: '#LaplandVibesネットワークの一部 · 当社はプランニング会社ではありません、あなたのために最適な選択肢を比較します。',
   legal: {
     terms: {
-      metaTitle: '利用規約 | LaplandWeddings',
+      metaTitle: '利用規約',
       title: '利用規約',
       paragraphs: [
         'LaplandWeddings.online は LaPeso Oy が運営する情報サイトです。当社はウェディングプランニング会社ではなく、お問い合わせをウェディングプランナーに取り次ぎます。',
@@ -170,7 +170,7 @@ const t_ja = {
       ],
     },
     privacy: {
-      metaTitle: 'プライバシー | LaplandWeddings',
+      metaTitle: 'プライバシー',
       title: 'プライバシーポリシー',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
@@ -192,7 +192,7 @@ const t_ja = {
       ],
     },
     cookies: {
-      metaTitle: 'Cookie ポリシー | LaplandWeddings',
+      metaTitle: 'Cookie ポリシー',
       title: 'Cookie ポリシー',
       paragraphs: [
         '当社はサイトの機能（言語設定、同意管理）のために必須の Cookie を使用します。',

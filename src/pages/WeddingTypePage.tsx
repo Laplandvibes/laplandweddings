@@ -67,7 +67,7 @@ export default function WeddingTypePage() {
   return (
     <>
       <SEO
-        title={`${wt.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.titleSuffix, lang)} | LaplandWeddings`}
+        title={`${wt.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.titleSuffix, lang)}`}
         description={wt.tagline[dataLang] + ': ' + wt.description[dataLang].slice(0, 140)}
         path={`/wedding-types/${wt.slug}`}
         image={wt.heroImage}

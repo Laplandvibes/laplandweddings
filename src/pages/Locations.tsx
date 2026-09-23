@@ -12,17 +12,17 @@ import { ui } from '../data/uiStrings';
 
 const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
   seoTitle: {
-    en: 'Lapland Wedding Regions: Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings',
-    fi: 'Häät Lapin paikkakunnilla | LaplandWeddings',
-    de: 'Hochzeitsregionen in Lappland | LaplandWeddings',
-    ja: 'ラップランドの結婚式地域：ロヴァニエミ、レヴィ、サーリセルカ、ユッラス | LaplandWeddings',
-    es: 'Regiones para bodas en Laponia | LaplandWeddings',
-    'pt-BR': 'Regiões para casamento na Lapônia | LaplandWeddings',
-    'zh-CN': '拉普兰婚礼地区：罗瓦涅米、莱维、萨利色尔卡、于拉斯 | LaplandWeddings',
-    ko: '라플란드 웨딩 지역: 로바니에미, 레비, 사리셀카, 윌래스 | LaplandWeddings',
-    fr: 'Régions de mariage en Laponie | LaplandWeddings',
-    it: 'Regioni per matrimoni in Lapponia | LaplandWeddings',
-    nl: 'Trouwregio’s in Lapland: Rovaniemi & meer | LaplandWeddings', sv: 'Bröllopsregioner i Lappland: Rovaniemi, Levi, Saariselkä, Ylläs | LaplandWeddings',
+    en: 'Lapland Wedding Regions: Rovaniemi, Levi, Saariselkä, Ylläs',
+    fi: 'Häät Lapin paikkakunnilla',
+    de: 'Hochzeitsregionen in Lappland',
+    ja: 'ラップランドの結婚式地域：ロヴァニエミ、レヴィ、サーリセルカ、ユッラス',
+    es: 'Regiones para bodas en Laponia',
+    'pt-BR': 'Regiões para casamento na Lapônia',
+    'zh-CN': '拉普兰婚礼地区：罗瓦涅米、莱维、萨利色尔卡、于拉斯',
+    ko: '라플란드 웨딩 지역: 로바니에미, 레비, 사리셀카, 윌래스',
+    fr: 'Régions de mariage en Laponie',
+    it: 'Regioni per matrimoni in Lapponia',
+    nl: 'Trouwregio’s in Lapland: Rovaniemi & meer', sv: 'Bröllopsregioner i Lappland: Rovaniemi, Levi, Saariselkä, Ylläs',
   },
   seoDesc: {
     en: 'Seven Lapland wedding regions plus city-option Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Compare seasons, flights, and venues.',

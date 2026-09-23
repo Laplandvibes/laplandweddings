@@ -402,17 +402,17 @@ type CKey =
 
 const C: Record<CKey, Localized<string>> = {
   seoTitle: {
-    en: 'Become a partner: Lapland wedding leads year-round | LaplandWeddings',
-    fi: 'Liity kumppaniksi: Lapin hääliidejä | LaplandWeddings',
-    de: 'Partner werden: Lappland-Hochzeitsleads | LaplandWeddings',
-    ja: 'パートナーになる：通年でラップランドの結婚式リードを | LaplandWeddings',
-    es: 'Hágase socio: leads de bodas en Laponia | LaplandWeddings',
-    'pt-BR': 'Torne-se parceiro: leads de casamento | LaplandWeddings',
-    'zh-CN': '成为合作伙伴，全年拉普兰婚礼线索 | LaplandWeddings',
-    ko: '파트너 되기: 연중 라플란드 웨딩 리드 | LaplandWeddings',
-    fr: 'Devenir partenaire : leads de mariage | LaplandWeddings',
-    it: 'Diventare partner: lead di matrimoni | LaplandWeddings',
-    nl: 'Word partner: Laplandse trouwleads | LaplandWeddings', sv: 'Bli partner: bröllopsleads från Lappland året runt | LaplandWeddings',
+    en: 'Become a partner: Lapland wedding leads year-round',
+    fi: 'Liity kumppaniksi: Lapin hääliidejä',
+    de: 'Partner werden: Lappland-Hochzeitsleads',
+    ja: 'パートナーになる：通年でラップランドの結婚式リードを',
+    es: 'Hágase socio: leads de bodas en Laponia',
+    'pt-BR': 'Torne-se parceiro: leads de casamento',
+    'zh-CN': '成为合作伙伴，全年拉普兰婚礼线索',
+    ko: '파트너 되기: 연중 라플란드 웨딩 리드',
+    fr: 'Devenir partenaire : leads de mariage',
+    it: 'Diventare partner: lead di matrimoni',
+    nl: 'Word partner: Laplandse trouwleads', sv: 'Bli partner: bröllopsleads från Lappland året runt',
   },
   seoDesc: {
     en: 'Become a LaplandWeddings partner: qualified Lapland wedding leads year-round, pay only for the leads you receive, no monthly fee. First lead free.',
