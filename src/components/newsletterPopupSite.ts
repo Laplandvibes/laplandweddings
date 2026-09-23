@@ -33,7 +33,7 @@ export const POPUP_COPY: NewsletterPopupCopy = {
     description: 'LaplandVibes創業者。フェルでの結婚式、小さな挙式、フェルに囲まれた会場。書類の手続きで早めに済ませておきたいことと、おふたりの日にぴったりの場所をお伝えします。',
   },
   es: {
-    description: 'Fundador de LaplandVibes. Bodas en el fjäll, ceremonias íntimas y espacios para celebrar en plena montaña ártica. Le cuento qué papeleo conviene resolver con tiempo y qué lugares son los indicados para su día.',
+    description: 'Fundador de LaplandVibes. Bodas en el fell, ceremonias íntimas y espacios para celebrar en plena montaña ártica. Le cuento qué papeleo conviene resolver con tiempo y qué lugares son los indicados para su día.',
   },
   'pt-BR': {
     description: 'Fundador do LaplandVibes. Casamentos, pequenas cerimônias e locais de celebração em meio aos montes. Conto o que vale a pena adiantar na papelada e quais lugares têm tudo a ver com o dia de vocês.',

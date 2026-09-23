@@ -474,7 +474,7 @@ const C: Record<CKey, Localized<string>> = {
   },
   conceptEyebrow: {
     en: 'What is LaplandVibes', fi: 'Mikä on LaplandVibes', de: 'Was ist LaplandVibes', ja: 'LaplandVibesとは',
-    es: 'Qué es LaplandVibes', 'pt-BR': 'O que é a LaplandVibes', 'zh-CN': '什么是 LaplandVibes', ko: 'LaplandVibes란',
+    es: 'Qué es LaplandVibes', 'pt-BR': 'O que é o LaplandVibes', 'zh-CN': '什么是 LaplandVibes', ko: 'LaplandVibes란',
     fr: 'Qu’est-ce que LaplandVibes', it: 'Cos’è LaplandVibes', nl: 'Wat is LaplandVibes', sv: 'Vad är LaplandVibes',
   },
   conceptTitle: {
@@ -735,7 +735,7 @@ const HERO_WINTER: SeasonalImage = {
     de: 'Windgeformter Schnee auf dem Gipfel des Lommoltunturi, ferne Fjälls unter rosa Winterhimmel',
     ja: 'ロンモルトゥントゥリの山頂、風が削った雪と桃色の冬空の下に遠い山々',
     es: 'Nieve esculpida por el viento en la cima de Lommoltunturi, con fells lejanos bajo un cielo invernal rosado',
-    'pt-BR': 'Neve esculpida pelo vento no alto de Lommoltunturi, com fells distantes sob um céu de inverno rosado',
+    'pt-BR': 'Neve esculpida pelo vento no alto de Lommoltunturi, com montes distantes sob um céu de inverno rosado',
     'zh-CN': '洛莫尔山顶被风塑形的积雪，远处群山映着粉色的冬日天空',
     ko: '바람이 깎은 롬몰툰투리 정상의 눈, 분홍빛 겨울 하늘 아래 멀리 보이는 산들',
     fr: 'Neige sculptée par le vent au sommet du Lommoltunturi, fjälls lointains sous un ciel d’hiver rose',

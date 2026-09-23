@@ -291,7 +291,7 @@ const T: Record<FormKey, Localized<string>> = {
     de: 'Ich bin damit einverstanden, dass das LaplandVibes-Team mich zur Partnerschaft kontaktiert. Ich kann jederzeit widerrufen.',
     ja: 'LaplandVibesチームがパートナーシップについて連絡することに同意します。いつでも撤回できます。',
     es: 'Acepto que el equipo de LaplandVibes me contacte sobre la colaboración. Puedo retirarme en cualquier momento.',
-    'pt-BR': 'Concordo que a equipe da LaplandVibes entre em contato sobre a parceria. Posso cancelar a qualquer momento.',
+    'pt-BR': 'Concordo que a equipe do LaplandVibes entre em contato sobre a parceria. Posso cancelar a qualquer momento.',
     'zh-CN': '我同意 LaplandVibes 团队就合作事宜与我联系。我可随时撤回。',
     ko: 'LaplandVibes 팀이 파트너십에 관해 연락하는 데 동의합니다. 언제든 철회할 수 있습니다.',
     fr: 'J’accepte que l’équipe LaplandVibes me contacte au sujet du partenariat. Je peux me retirer à tout moment.',

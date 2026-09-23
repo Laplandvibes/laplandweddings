@@ -33,7 +33,7 @@ const t_fr = {
     heroSubtitleSummer: 'Vœux au bord du lac · Cérémonies au sommet des fjälls · Toits de verre sous un ciel qui ne s’assombrit jamais · Longues soirées lumineuses. Nous transmettons votre demande aux organisateurs de mariage et aux lieux de mariage en Laponie, gratuitement et sans engagement.',
     heroReassure: 'Gratuit et sans engagement · réponse sous 1–7 jours',
     whyTitle: 'Pourquoi se marier en Laponie',
-    whyP: 'En Laponie, on se marie dans des igloos de verre, des chapelles de neige et au sommet des fells, et la cérémonie est le plus souvent symbolique. Ce site rassemble les lieux, les saisons et ce que les choses coûtent réellement. Nous n’organisons pas de mariages et ne représentons aucun lieu : vous nous dites ce que vous souhaitez, nous le transmettons à des wedding planners en Laponie.',
+    whyP: 'En Laponie, on se marie dans des igloos de verre, des chapelles de neige et au sommet des fjälls, et la cérémonie est le plus souvent symbolique. Ce site rassemble les lieux, les saisons et ce que les choses coûtent réellement. Nous n’organisons pas de mariages et ne représentons aucun lieu : vous nous dites ce que vous souhaitez, nous le transmettons à des wedding planners en Laponie.',
     audienceTitle: 'En finnois pour les Finlandais en anglais pour les couples internationaux',
     audienceFi: 'Couple finlandais ? Obtenez des organisateurs finlandais et des fourchettes de prix claires dans votre langue.',
     audienceEn: 'Couple international ? Obtenez des organisateurs de mariage finlandais expérimentés avec les démarches juridiques étrangères, DVV pris en charge.',

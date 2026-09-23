@@ -356,7 +356,7 @@ const HERO_WINTER: SeasonalImage = {
     de: 'Polarlichter über dem Saana hinter verschneiter Fjälltundra',
     ja: '雪のツンドラの向こう、サーナ山の上に広がるオーロラ',
     es: 'Auroras boreales sobre el fell Saana tras la tundra nevada',
-    'pt-BR': 'Aurora boreal acima do fell Saana, atrás da tundra nevada',
+    'pt-BR': 'Aurora boreal acima do monte Saana, atrás da tundra nevada',
     'zh-CN': '雪原之上，极光在萨纳山上空舞动',
     ko: '눈 덮인 툰드라 너머 사나 산 위로 펼쳐진 오로라',
     fr: 'Aurores boréales au-dessus du fjäll Saana, derrière la toundra enneigée',

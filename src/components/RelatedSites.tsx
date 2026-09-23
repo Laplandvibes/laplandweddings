@@ -65,7 +65,7 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string>; winter: { src: str
       de: 'Eine geräumte Winterstraße führt durch den Schnee auf den verschneiten Saana zu',
       ja: '雪の中を除雪された冬の道が、雪をかぶったサーナ山へと続く',
       es: 'Una carretera invernal despejada que serpentea por la nieve hacia el nevado fell Saana',
-      'pt-BR': 'Uma estrada de inverno limpa de neve que serpenteia rumo ao nevado fell Saana',
+      'pt-BR': 'Uma estrada de inverno limpa de neve que serpenteia rumo ao nevado monte Saana',
       'zh-CN': '清扫过的冬季公路在雪中蜿蜒，通向积雪的萨纳山',
       ko: '눈을 치운 겨울 도로가 눈 덮인 사나 산을 향해 굽이친다',
       fr: 'Une route d’hiver déneigée serpente dans la neige vers le fjäll Saana enneigé',

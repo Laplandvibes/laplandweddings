@@ -33,7 +33,7 @@ const t_ptBR = {
     heroSubtitleSummer: 'Votos à beira do lago · Cerimônias no topo do monte · Tetos de vidro sob o céu que nunca escurece · Longas noites luminosas. Em finlandês e inglês. Encaminhamos seu pedido a organizadores de casamento e locais da Lapônia, grátis e sem compromisso.',
     heroReassure: 'Grátis e sem compromisso · resposta em 1–7 dias',
     whyTitle: 'Por que a Lapônia para seu casamento',
-    whyP: 'Na Lapônia os casamentos acontecem em iglus de vidro, capelas de neve e no alto dos fells, e na maioria das vezes a cerimônia é simbólica. Este site reúne os locais, as estações e quanto as coisas custam de verdade. Não organizamos casamentos nem representamos nenhum local: vocês nos contam o que desejam e nós repassamos a organizadores de casamento na Lapônia.',
+    whyP: 'Na Lapônia os casamentos acontecem em iglus de vidro, capelas de neve e no alto dos montes, e na maioria das vezes a cerimônia é simbólica. Este site reúne os locais, as estações e quanto as coisas custam de verdade. Não organizamos casamentos nem representamos nenhum local: vocês nos contam o que desejam e nós repassamos a organizadores de casamento na Lapônia.',
     audienceTitle: 'Em finlandês para finlandeses, em inglês para casais internacionais',
     audienceFi: 'Sim, atendemos também em finlandês para casais locais.',
     audienceEn: 'Casal internacional? Organizadores de casamento finlandeses com experiência em documentação estrangeira: o DVV fica por nossa conta.',
