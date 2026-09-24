@@ -124,7 +124,10 @@ export default function Locations() {
               to={`/locations/${loc.slug}`}
               className="group bg-night-light border border-white/5 hover:border-aurora-pink/40 rounded-2xl overflow-hidden transition-all"
             >
-              <div className="aspect-[16/10] overflow-hidden">
+              {/* `relative` keeps the credit on this card's own photo. Without a positioned
+                  ancestor inside the card, every card's credit resolved to the same outer
+                  corner and the credits stacked on top of each other. */}
+              <div className="aspect-[16/10] overflow-hidden relative">
                 {/* A region can exist before it has its own photo — stock imagery is
                     banned and reusing another region's picture would misrepresent
                     the place, so fall back to the house gradient rather than
@@ -134,10 +137,10 @@ export default function Locations() {
                 ) : (
                   <div role="img" aria-label={locationImage(loc).alt[dataLang]} className="w-full h-full bg-gradient-to-br from-[#3A2A24] via-[#1F1612] to-[#2A1F18]" />
                 )}
+                <ImgCredit credit={locationImage(loc).credit} lang={lang} plain />
               </div>
               <div className="p-6">
                 <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
-                <ImgCredit credit={locationImage(loc).credit} lang={lang} plain />
                 <h3 className="font-heading text-2xl text-white mb-2 tracking-wide">{loc.name[dataLang]}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed line-clamp-3 mb-3">{loc.intro[dataLang]}</p>
                 <div className="text-xs text-gray-500">

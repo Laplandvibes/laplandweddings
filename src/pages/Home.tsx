@@ -239,7 +239,9 @@ export default function Home() {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                decoding="async" width="1920" height="1080" fetchPriority="high"/>
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(15,12,10,0.92) 0%, rgba(15,12,10,0.55) 45%, rgba(15,12,10,0.05) 100%)' }} />
-              <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-6">
+              {/* pb-7 below sm: in the two-up phone grid the photo credit in the bottom-right
+                  corner wraps to two lines (~22 px), and the capacity line has to sit above it. */}
+              <div className="absolute inset-x-0 bottom-0 p-3.5 pb-7 sm:p-6">
                 <h3 className="font-heading text-base sm:text-3xl text-white tracking-wide mb-1 sm:mb-1.5 leading-tight">
                   {wt.name[dataLang]}
                 </h3>
