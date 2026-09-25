@@ -219,18 +219,23 @@
       "note": "PARAS Saariselkä. Nuori poro Kaunispään tunturikankaalla, 5000x3333."
     },
     {
-      "file": "stock/loc-kilpisjarvi-saana-rasanen.webp",
+      "file": "stock/loc-kilpisjarvi-salmivaara-rasanen.webp",
       "kind": "stock-commons",
-      "source": "https://commons.wikimedia.org/wiki/File:Saana_over_Ala-Kilpisj%C3%A4rvi,_Lapland,_Finland,_2015_April.jpg",
-      "id": "Saana over Ala-Kilpisjärvi, Lapland, Finland, 2015 April.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:View_towards_Kilpisj%C3%A4rvi_and_Saana_from_Salmivaara,_Enonteki%C3%B6,_Lapland,_Finland,_2026_August.jpg",
+      "id": "View towards Kilpisjärvi and Saana from Salmivaara, Enontekiö, Lapland, Finland, 2026 August.jpg",
       "author": "Ximonic (Simo Räsänen)",
+      "attribution": "Simo Räsänen (lisenssimallineen {{cc-by-sa-4.0|Simo Räsänen}} nimeämä muoto)",
       "license": "CC BY-SA 4.0",
-      "published": "2015-04-28 12:16:45",
-      "location": "GPS 68.935853, 20.911972",
-      "original": "3600x2400",
-      "crop": "cover-centre",
-      "ours": "2000x1500",
-      "note": "PARAS Kilpisjärvi. Luminen Saana Ala-Kilpisjärven yli. Ikoninen."
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "published": "2026-08-02",
+      "location": "GPS 69.004642, 20.873558 (Salmivaara, kylän lounaispuolella)",
+      "original": "6600x3240 (sha1 f45e74de04a5879d223c001270da26b51c6ae759)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA)",
+      "ours": "2000x982 webp + avif",
+      "used_on": "Kilpisjärven sijaintisivun hero + kortit (etusivu, /locations), kesä touko–syyskuu; talvella winter/kilpisjarvi-saana-winter.webp",
+      "price_eur": 0,
+      "fetched": "2026-09-25",
+      "note": "Vaihdettu 25.9.2026: edellinen kesäkuva *Saana over Ala-Kilpisjärvi, Lapland, Finland, 2015 April.jpg* oli jo laplandwellnessilla (käytössä 17.9. alkaen, weddings 19.9.), ja yksi kuva = yksi sivusto. Uusi on eri kuvauspaikka (Salmivaara, ei Ala-Kilpisjärven etelärannalta) ja oikea kesäkuva kesäpaikkaan. Verkoston grep 25.9. (29 sivustoa, kukin erikseen): ei muualla. Pikseliero (64x36 harmaa) weddingsin muihin kuviin ja verkoston Kilpisjärvi-kuviin vähintään 32,6/255."
     },
     {
       "file": "stock/loc-oulu-hupisaaret-estormiz.webp",

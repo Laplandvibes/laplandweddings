@@ -1,3 +1,4 @@
+import type { MouseEvent } from 'react';
 import type { Localized } from '../data/localized';
 
 /**
@@ -17,6 +18,22 @@ export interface ImageCredit {
   url: string;
   /** What the picture actually shows when the card names something else, e.g. "Kemi SnowCastle". */
   caption?: Localized<string>;
+  /** Licence deed; derived from `license` when omitted (see licenseHref). */
+  licenseUrl?: string;
+}
+
+/**
+ * The licence itself must be one click away, not only the file page: CC BY-SA 4.0
+ * §3(a)(1)(C), CC BY 2.0/2.5 §4(a). Added 2026-09-25; until then the hero credit linked
+ * to the Commons file page only. "Public domain" has no deed and stays plain text.
+ */
+export function licenseHref(credit: ImageCredit): string | undefined {
+  if (credit.licenseUrl) return credit.licenseUrl;
+  const cc = /^CC (BY(?:-SA)?) (\d\.\d)$/.exec(credit.license.trim());
+  if (cc) return `https://creativecommons.org/licenses/${cc[1].toLowerCase()}/${cc[2]}/`;
+  if (/^CC0\b/.test(credit.license)) return 'https://creativecommons.org/publicdomain/zero/1.0/';
+  if (credit.license === 'Pexels') return 'https://www.pexels.com/license/';
+  return undefined;
 }
 
 interface Props {
@@ -36,16 +53,34 @@ export default function ImgCredit({ credit, lang, className, plain }: Props) {
   const text = [caption, credit.name, credit.license].filter(Boolean).join(' · ');
   const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-white/60 bg-black/30 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
   if (plain) return <span className={cls}>{text}</span>;
+  const deed = licenseHref(credit);
+  const stop = (e: MouseEvent) => e.stopPropagation();
   return (
-    <a
-      href={credit.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => e.stopPropagation()}
-      className={`${cls} hover:text-white hover:bg-black/60`}
-      aria-label={[caption, credit.name, credit.license].filter(Boolean).join(', ')}
-    >
-      {text}
-    </a>
+    <span className={`${cls} hover:bg-black/60`}>
+      <a
+        href={credit.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={stop}
+        className="text-inherit no-underline hover:text-white"
+        aria-label={[caption, credit.name].filter(Boolean).join(', ')}
+      >
+        {[caption, credit.name].filter(Boolean).join(' · ')}
+      </a>
+      {' · '}
+      {deed ? (
+        <a
+          href={deed}
+          target="_blank"
+          rel="license noopener noreferrer"
+          onClick={stop}
+          className="text-inherit no-underline whitespace-nowrap hover:text-white"
+        >
+          {credit.license}
+        </a>
+      ) : (
+        credit.license
+      )}
+    </span>
   );
 }
