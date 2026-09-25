@@ -138,7 +138,18 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
       <div className="relative z-10 w-full max-w-5xl mx-auto px-5 sm:px-6 py-12 sm:py-20 text-center">
         {eyebrow && (
           <p className="hero-text-light uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[10px] sm:text-sm font-semibold mb-3 sm:mb-4" style={{ color: '#FCE8E1', textShadow: '0 1px 8px rgba(0,0,0,0.4)' }}>
-            {eyebrow}
+            {/* The eyebrow sits above the headline scrim, and on a bright frame (lit snow
+                arch, pale sky) it fell to 4.0–4.5:1 behind the glyphs (measured 25.9.2026).
+                A soft pill behind the eyebrow's own letters fixes it without widening the
+                scrim over the photo (Vesa 2026-07-28). Cloned per line, so a phone-width
+                eyebrow that wraps gets one pill per line instead of a full-width stripe.
+                text-shadow does not count: it is not what sits behind the letters. */}
+            <span
+              className="rounded-full px-2 py-0.5 box-decoration-clone"
+              style={{ backgroundColor: 'rgba(15,12,10,0.3)', boxShadow: '0 0 12px 4px rgba(15,12,10,0.3)' }}
+            >
+              {eyebrow}
+            </span>
           </p>
         )}
         <h1
