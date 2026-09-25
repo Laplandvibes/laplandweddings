@@ -59,13 +59,20 @@ const HERO_SUMMER: SeasonalImage = {
   src: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid.jpg',
   avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-800.avif 800w, /images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-1200.avif 1200w',
   webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-800.webp 800w, /images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-1200.webp 1200w',
-  credit: { name: 'Xepheid', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_sun_in_Rovaniemi.jpg' },
+  credit: { name: 'Xepheid', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_sun_and_Jatkankynttila_bridge_2020.jpg' },
   alt: P.imageAlt,
 };
 const HERO_WINTER: SeasonalImage = {
   src: '/images/heroes/rovaniemi-jatkankynttila-winter-card.jpg',
-  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-800.avif 800w, /images/heroes/rovaniemi-jatkankynttila-winter-card-1200.avif 1200w',
-  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-800.webp 800w, /images/heroes/rovaniemi-jatkankynttila-winter-card-1200.webp 1200w',
+  /* Panoraama rajaamatta (CC BY-SA: vain pienennys, 25.9.2026). object-cover skaalaa korkeuden
+     mukaan, joten piirretty leveys ≈ heron korkeus (compact: 68vh) × kuvasuhde. */
+  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-1200.avif 1200w, /images/heroes/rovaniemi-jatkankynttila-winter-card-2400.avif 2400w, /images/heroes/rovaniemi-jatkankynttila-winter-card.avif 4183w',
+  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-1200.webp 1200w, /images/heroes/rovaniemi-jatkankynttila-winter-card-2400.webp 2400w, /images/heroes/rovaniemi-jatkankynttila-winter-card.webp 4183w',
+  sizes: '(min-aspect-ratio: 216/100) 100vw, 216vh',
+  /* Vasemmassa reunassa (0–13 %) ovat K-Citymarketin pylväs ja Lapland Safarisin kyltti, jotka
+     rajaus ennen piilotti. 80 % pitää ne ruudun ulkopuolella 16:9-näytöillä (piilossa 14 %) ja
+     tuo sillan pylonin (69 %) puhelimen kapeaan näkymään. */
+  objectPosition: '80% 50%',
   credit: { name: 'Card', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:J%C3%A4tk%C3%A4nkynttil%C3%A4_March_2010.jpg' },
   alt: {
     en: 'The Jätkänkynttilä bridge over the frozen Kemijoki river in Rovaniemi in winter',
@@ -111,7 +118,8 @@ export default function Locations() {
         image={hero.src}
         avifSrcSet={hero.avifSrcSet}
         webpSrcSet={hero.webpSrcSet}
-        sizes="100vw"
+        sizes={hero.sizes ?? '100vw'}
+        objectPosition={hero.objectPosition}
         credit={hero.credit}
         lang={lang}
         imageAlt={pickLocalized(hero.alt, lang)}

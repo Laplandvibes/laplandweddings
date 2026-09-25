@@ -721,13 +721,18 @@ const C: Record<CKey, Localized<string>> = {
 
 const HERO_SUMMER: SeasonalImage = {
   src: '/images/heroes/saariselka-kaunispaa-hikers-rasanen.jpg',
-  credit: { name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Hikers_on_Kaunisp%C3%A4%C3%A4_fell_in_Saariselk%C3%A4,_Inari,_Lapland,_Finland,_2016_September.jpg' },
+  avifSrcSet: '/images/heroes/saariselka-kaunispaa-hikers-rasanen-800.avif 800w, /images/heroes/saariselka-kaunispaa-hikers-rasanen-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/saariselka-kaunispaa-hikers-rasanen-800.webp 800w, /images/heroes/saariselka-kaunispaa-hikers-rasanen-1200.webp 1200w',
+  credit: { name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Hikers_on_Kaunisp%C3%A4%C3%A4_in_Saariselk%C3%A4,_Inari,_Lapland,_Finland,_2021_September.jpg' },
   alt: C.heroImageAlt,
 };
 const HERO_WINTER: SeasonalImage = {
   src: '/images/heroes/lommoltunturi-panorama-winter.jpg',
-  avifSrcSet: '/images/heroes/lommoltunturi-panorama-winter-800.avif 800w, /images/heroes/lommoltunturi-panorama-winter-1200.avif 1200w',
-  webpSrcSet: '/images/heroes/lommoltunturi-panorama-winter-800.webp 800w, /images/heroes/lommoltunturi-panorama-winter-1200.webp 1200w',
+  /* Panoraama rajaamatta (CC BY-SA: vain pienennys, 25.9.2026). object-cover skaalaa korkeuden
+     mukaan, joten piirretty leveys ≈ heron korkeus (compact: 68vh) × kuvasuhde. */
+  avifSrcSet: '/images/heroes/lommoltunturi-panorama-winter-1200.avif 1200w, /images/heroes/lommoltunturi-panorama-winter-2400.avif 2400w, /images/heroes/lommoltunturi-panorama-winter.avif 3713w',
+  webpSrcSet: '/images/heroes/lommoltunturi-panorama-winter-1200.webp 1200w, /images/heroes/lommoltunturi-panorama-winter-2400.webp 2400w, /images/heroes/lommoltunturi-panorama-winter.webp 3713w',
+  sizes: '(min-aspect-ratio: 187/100) 100vw, 187vh',
   credit: { name: 'Simo Räsänen', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Moody_view_towards_Keimi%C3%B6tunturi_and_Sammaltunturi_from_Lommoltunturi_in_Muonio,_Lapland,_Finland,_2019_January.jpg' },
   alt: {
     en: 'Wind-carved snow on the top of Lommoltunturi, distant fells under a pink winter sky',
@@ -778,7 +783,8 @@ export default function PartnerWithUs() {
         image={hero.src}
         avifSrcSet={hero.avifSrcSet}
         webpSrcSet={hero.webpSrcSet}
-        sizes="100vw"
+        sizes={hero.sizes ?? '100vw'}
+        objectPosition={hero.objectPosition}
         credit={hero.credit}
         lang={lang}
         imageAlt={c('heroImageAlt')}

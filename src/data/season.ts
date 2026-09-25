@@ -41,6 +41,12 @@ export interface SeasonalImage {
   /** avif/webp srcset samalla tiedostonimellä, jos generoitu */
   avifSrcSet?: string;
   webpSrcSet?: string;
+  /**
+   * srcsetin sizes, oletus 100vw. Panoraamalle (CC BY-SA -kuvaa ei rajata, 25.9.2026)
+   * object-cover skaalaa kuvan heron KORKEUDEN mukaan, joten piirretty leveys on
+   * korkeus × kuvasuhde eikä 100vw — ilman tätä selain valitsee liian pienen kuvan.
+   */
+  sizes?: string;
   objectPosition?: string;
   credit?: ImageCredit;
   alt: Localized<string>;

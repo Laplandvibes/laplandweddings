@@ -566,13 +566,18 @@ const P: Record<PKey, Localized<string>> = {
 
 const HERO_SUMMER: SeasonalImage = {
   src: '/images/heroes/savukoski-luirojoki-rasanen.jpg',
+  avifSrcSet: '/images/heroes/savukoski-luirojoki-rasanen-800.avif 800w, /images/heroes/savukoski-luirojoki-rasanen-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/savukoski-luirojoki-rasanen-800.webp 800w, /images/heroes/savukoski-luirojoki-rasanen-1200.webp 1200w',
   credit: { name: 'Simo Räsänen', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Luiro_river_at_Tanhua_in_Savukoski,_Lapland,_Finland,_2021_June.jpg' },
   alt: P.heroImageAlt,
 };
 const HERO_WINTER: SeasonalImage = {
   src: '/images/heroes/pallastunturi-panorama-winter.jpg',
-  avifSrcSet: '/images/heroes/pallastunturi-panorama-winter-800.avif 800w, /images/heroes/pallastunturi-panorama-winter-1200.avif 1200w',
-  webpSrcSet: '/images/heroes/pallastunturi-panorama-winter-800.webp 800w, /images/heroes/pallastunturi-panorama-winter-1200.webp 1200w',
+  /* Panoraama rajaamatta (CC BY-SA: vain pienennys, 25.9.2026). object-cover skaalaa korkeuden
+     mukaan, joten piirretty leveys ≈ heron korkeus (compact: 68vh) × kuvasuhde. */
+  avifSrcSet: '/images/heroes/pallastunturi-panorama-winter-1200.avif 1200w, /images/heroes/pallastunturi-panorama-winter-2400.avif 2400w, /images/heroes/pallastunturi-panorama-winter.avif 4832w',
+  webpSrcSet: '/images/heroes/pallastunturi-panorama-winter-1200.webp 1200w, /images/heroes/pallastunturi-panorama-winter-2400.webp 2400w, /images/heroes/pallastunturi-panorama-winter.webp 4832w',
+  sizes: '(min-aspect-ratio: 254/100) 100vw, 254vh',
   credit: { name: 'RicHard-59', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Pallas_from_north_30032017.jpg' },
   alt: {
     en: 'The snow-covered summits of the Pallastunturi fells beyond a boreal forest in winter',
@@ -610,7 +615,8 @@ export default function Pricing() {
         image={hero.src}
         avifSrcSet={hero.avifSrcSet}
         webpSrcSet={hero.webpSrcSet}
-        sizes="100vw"
+        sizes={hero.sizes ?? '100vw'}
+        objectPosition={hero.objectPosition}
         credit={hero.credit}
         lang={lang}
         imageAlt={pickLocalized(hero.alt, lang)}

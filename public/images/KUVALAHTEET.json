@@ -101,10 +101,11 @@
       "license": "CC BY-SA 4.0",
       "published": "2023-09-14",
       "location": "GPS 67.792002, 24.845273",
-      "original": "4200x2800",
-      "crop": "cover-centre",
-      "ours": "2400x1350",
-      "note": "HERO. Vihreä revontuliverho Levitunturin yllä, metsähorisontti. 3:2."
+      "original": "4200x2800 (sha1 c21353912fa716245a2a12abe190c452707c9455)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2400x1600 jpg+webp+avif (+800/1200 srcset webp+avif)",
+      "note": "HERO. Vihreä revontuliverho Levitunturin yllä, metsähorisontti. 3:2.",
+      "resized": "2026-09-25"
     },
     {
       "file": "heroes/midnight-sun-inari-teker.webp",
@@ -143,10 +144,11 @@
       "license": "CC BY-SA 3.0",
       "published": "2021-06-16",
       "location": "GPS 67.530249, 27.525175",
-      "original": "3600x2387",
-      "crop": "cover-centre",
-      "ours": "2400x1350",
-      "note": "Ilmakuva Luirojoesta kesäyöllä, ruskan värit."
+      "original": "3600x2387 (sha1 7c8a16e1fb7e7e4e860f430edbfffcbdc664e2b9)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2400x1591 jpg+webp+avif (+800/1200 srcset webp+avif)",
+      "note": "Ilmakuva Luirojoesta kesäyöllä, ruskan värit. 25.9.2026: /pricing-hero sai avif/webp-srcsetin (ennen 2400 px JPG, 628 kt, kaikille laitteille).",
+      "resized": "2026-09-25"
     },
     {
       "file": "stock/type-northern-lights-inari-rasanen.webp",
@@ -157,10 +159,11 @@
       "license": "CC BY-SA 4.0",
       "published": "2018-03-23",
       "location": "GPS 68.910677, 27.029693",
-      "original": "2700x1800",
-      "crop": "cover-centre",
-      "ours": "1600x1200",
-      "note": "Kirkas vihreä kierre kuusisiluettien yllä. 2700x1800 eli ALLE 3000 px hero-rajan."
+      "original": "2700x1800 (sha1 5a60810da3ce04ce420e54bc1d03199685abc1d4)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1800x1200 webp+avif",
+      "note": "Kirkas vihreä kierre kuusisiluettien yllä. 2700x1800 eli ALLE 3000 px hero-rajan.",
+      "resized": "2026-09-25"
     },
     {
       "file": "stock/type-snow-chapel-kemi-lumilinna.webp",
@@ -171,10 +174,11 @@
       "license": "CC BY-SA 3.0",
       "published": "2012-04-08 15:55:04",
       "location": "(ei GPS:aa tiedostossa; sijainti Commons-kuvauksesta)",
-      "original": "1600x1199",
-      "crop": "cover-centre",
-      "ours": "1600x1200",
-      "note": "PARAS C. Lumikappeli sisältä: penkkirivit, risti, lämmin keltainen valaistus. Kuvassa: Kemin LumiLinna."
+      "original": "1600x1199 (sha1 ec7f2689f4ef253b4c8611612a1da3c028502cdd)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1600x1199 webp+avif",
+      "note": "PARAS C. Lumikappeli sisältä: penkkirivit, risti, lämmin keltainen valaistus. Kuvassa: Kemin LumiLinna.",
+      "resized": "2026-09-25"
     },
     {
       "file": "stock/type-midnight-sun-utsjoki-maasaak.webp",
@@ -185,10 +189,11 @@
       "license": "CC BY-SA 4.0",
       "published": "2015-07-16 00:25:05",
       "location": "GPS 69.682896, 27.080638",
-      "original": "4000x2600",
-      "crop": "cover-centre",
-      "ours": "1600x1200",
-      "note": "PARAS D. Oranssi keskiyön valo Kenesjärven yllä, Utsjoki. Ei lunta. 4000x2600."
+      "original": "4000x2600 (sha1 f563f6d352ec3610baf0a326e6ed09ab72d2b594)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1846x1200 webp+avif",
+      "note": "PARAS D. Oranssi keskiyön valo Kenesjärven yllä, Utsjoki. Ei lunta. 4000x2600.",
+      "resized": "2026-09-25"
     },
     {
       "file": "stock/type-elopement-px10757612.webp",
@@ -213,10 +218,11 @@
       "license": "CC BY-SA 4.0",
       "published": "2021-09-18 11:12:13",
       "location": "GPS 68.434137, 27.442238",
-      "original": "5000x3333",
-      "crop": "cover-centre",
-      "ours": "2000x1500",
-      "note": "PARAS Saariselkä. Nuori poro Kaunispään tunturikankaalla, 5000x3333."
+      "original": "5000x3333 (sha1 afe5f273f03820098d8567d9b13f9ea06b1d29e2)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2250x1500 webp+avif",
+      "note": "PARAS Saariselkä. Nuori poro Kaunispään tunturikankaalla, 5000x3333.",
+      "resized": "2026-09-25"
     },
     {
       "file": "stock/loc-kilpisjarvi-salmivaara-rasanen.webp",
@@ -274,10 +280,11 @@
       "license": "CC BY-SA 4.0",
       "published": "2019-11-06 00:39:46",
       "location": "(ei GPS:aa tiedostossa; sijainti Commons-kuvauksesta)",
-      "original": "3000x2000",
-      "crop": "cover-centre",
-      "ours": "1200x1600",
-      "note": "Tähtijäljet jäätyneen Inarijärven yllä, vene jäässä. Tunnelmallinen ja tumma. 3000x2000."
+      "original": "3000x2000 (sha1 27fa2958ccf8755391a585995918d7626e06e01c)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1800x1200 webp+avif",
+      "note": "Tähtijäljet jäätyneen Inarijärven yllä, vene jäässä. Tunnelmallinen ja tumma. 3000x2000.",
+      "resized": "2026-09-25"
     },
     {
       "file": "stock/exp-savusauna-newtonsyms.webp",
@@ -288,10 +295,11 @@
       "license": "CC BY-SA 2.0",
       "published": "2007-02-12 07:58",
       "location": "GPS 66.272313, 29.687461",
-      "original": "1600x1200",
-      "crop": "cover-centre",
-      "ours": "1200x1600",
-      "note": "Hirsinen savusauna lumessa. GPS 66,27/29,69 = Kuusamon seutu, ei Lappi. Vain 1600x1200."
+      "original": "1600x1200 (sha1 0679f2cbee23fb37056118174984a37cefbadd2c)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1600x1200 webp+avif",
+      "note": "Hirsinen savusauna lumessa. GPS 66,27/29,69 = Kuusamon seutu, ei Lappi. Vain 1600x1200.",
+      "resized": "2026-09-25"
     },
     {
       "file": "stock/exp-avanto-vesahjr.webp",
@@ -302,10 +310,11 @@
       "license": "CC BY-SA 3.0",
       "published": "2012-01-07",
       "location": "(ei GPS:aa tiedostossa; sijainti Commons-kuvauksesta)",
-      "original": "4608x3072",
-      "crop": "cover-centre",
-      "ours": "1200x1600",
-      "note": "Avanto ja tikkaat jäätyneellä järvellä, ei ihmisiä. Sijainti Jyväskylä, siis paikaton yksityiskohta, ei Lappi."
+      "original": "4608x3072 (sha1 da9d62b967e0c2a1642958e36f2e02714639156d)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1800x1200 webp+avif",
+      "note": "Avanto ja tikkaat jäätyneellä järvellä, ei ihmisiä. Sijainti Jyväskylä, siis paikaton yksityiskohta, ei Lappi. 25.9.2026: rajaamattoman kuvan vasemmassa reunassa kolme kaukaista pulkkailijaa (aikuinen + 2 lasta), kasvot eivät erotu täydelläkään resoluutiolla; 3:4-kortissa ne jäävät object-coverin ulkopuolelle.",
+      "resized": "2026-09-25"
     },
     {
       "file": "venues/levi-panorama.jpg",
@@ -332,12 +341,13 @@
       "license": "CC BY-SA 4.0",
       "published": "2020-06-20 00:28:29",
       "location": "GPS 66.501442, 25.743804",
-      "original": "4128x3096",
-      "crop": "cover-centre",
-      "ours": "2400x1350 (+800/1200 srcset)",
-      "note": "PARAS Rovaniemi. Jätkänkynttilä, Kemijoki ja keskiyön aurinko juhannuksena. 4128x3096.",
+      "original": "4128x3096 (sha1 080146f46efe2154521c4890daca7c1c6f927b9a)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2400x1800 jpg+webp+avif (+800/1200 srcset webp+avif)",
+      "note": "PARAS Rovaniemi. Jätkänkynttilä, Kemijoki ja keskiyön aurinko juhannuksena. 4128x3096. 25.9.2026: /locations-sivun krediitti osoitti Commonsissa olemattomaan tiedostoon (Midnight_sun_in_Rovaniemi.jpg) ja srcset olemattomiin -800/-1200-tiedostoihin (404 livenä) — molemmat korjattu.",
       "used_on": "/locations hero",
-      "fetched": "2026-09-19"
+      "fetched": "2026-09-19",
+      "resized": "2026-09-25"
     },
     {
       "file": "heroes/lainio-snow-village-estormiz.webp",
@@ -364,12 +374,13 @@
       "license": "CC BY-SA 4.0",
       "published": "2021-09-18 11:16:32",
       "location": "GPS 68.433605, 27.444115",
-      "original": "4200x2928",
-      "crop": "cover-centre",
-      "ours": "2400x1350 (+800/1200 srcset)",
-      "note": "Vaeltajia Kaunispään laella, ruska. Saariselkä-kortti.",
+      "original": "4200x2928 (sha1 541ed6910e7d8ef8acbab59c5838f0d6f14af9e0)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2400x1673 jpg+webp+avif (+800/1200 srcset webp+avif)",
+      "note": "Vaeltajia Kaunispään laella, ruska. Saariselkä-kortti. 25.9.2026: /partner-with-us-krediitti osoitti olemattomaan tiedostoon (…fell…2016 September.jpg) — korjattu oikeaan; hero sai avif/webp-srcsetin (ennen 2400 px JPG kaikille laitteille).",
       "used_on": "/partner-with-us hero",
-      "fetched": "2026-09-19"
+      "fetched": "2026-09-19",
+      "resized": "2026-09-25"
     },
     {
       "file": "heroes/inari-midnight-sun-pier-teker.webp",
@@ -515,8 +526,8 @@
       "source": "https://commons.wikimedia.org/wiki/File:Hissi_Pyh%C3%A4tunturilla_1.jpg",
       "author": "kallerna",
       "license": "CC BY-SA 3.0",
-      "original": "4000x3000",
-      "crop": "cover-centre",
+      "original": "4000x3000 (sha1 c32f60f2e34962815e7102103939280d532fed08)",
+      "crop": "ei rajausta: alkuperäinen 4000x3000 on jo 4:3, joten 2000x1500 on puhdas pienennys (tarkistettu 25.9.2026, pikseliero alkuperäisen pienennökseen 0.64/255); tiedostoa ei tehty uudelleen",
       "ours": "2000x1500",
       "used_on": "Pyhä-Luoston kortti, talvi",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026: lokakuun alusta talvikuvat). Kesäkuva säilyy touko–syyskuussa.",
@@ -528,12 +539,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Aurore_bor%C3%A9ale_%C3%A0_Saariselk%C3%A4,_Laponie_2019_(33382939708).jpg",
       "author": "Nicolas Buffler",
       "license": "CC BY-SA 2.0",
-      "original": "3008x2008",
-      "crop": "cover-centre",
-      "ours": "2000x1500",
+      "original": "3008x2008 (sha1 a6e4dd53fba02c8e3719a00278155c6dadf0524f)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2247x1500 webp+avif",
       "used_on": "Saariselän kortti, talvi",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026: lokakuun alusta talvikuvat). Kesäkuva säilyy touko–syyskuussa.",
-      "fetched": "2026-09-20"
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "winter/kemijarvi-suomu-winter.webp",
@@ -541,12 +553,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Suomu_March_7_2009.jpg",
       "author": "Lauri Silvennoinen",
       "license": "CC BY-SA 3.0",
-      "original": "4252x2823",
-      "crop": "cover-centre",
-      "ours": "2000x1500",
+      "original": "4252x2823 (sha1 1f43f4c2e8f75eefc6126337fd08cc99291a847b)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2259x1500 webp+avif",
       "used_on": "Kemijärven kortti, talvi (Suomutunturi on Kemijärven kuntaa)",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026: lokakuun alusta talvikuvat). Kesäkuva säilyy touko–syyskuussa.",
-      "fetched": "2026-09-20"
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "winter/kilpisjarvi-saana-winter.webp",
@@ -554,12 +567,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Saana_at_Kilpisj%C3%A4rvi,_2012_March.jpg",
       "author": "Simo Räsänen",
       "license": "CC BY-SA 3.0",
-      "original": "2550x1700",
-      "crop": "cover-centre",
-      "ours": "2000x1500",
+      "original": "2550x1700 (sha1 c70adbc2124c2b77e5ec1e8703884d0699bcfe1a)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2250x1500 webp+avif",
       "used_on": "Kilpisjärven kortti, talvi",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026: lokakuun alusta talvikuvat). Kesäkuva säilyy touko–syyskuussa.",
-      "fetched": "2026-09-20"
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "winter/oulu-market-square-winter.webp",
@@ -580,12 +594,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:J%C3%A4tk%C3%A4nkynttil%C3%A4_March_2010.jpg",
       "author": "Card",
       "license": "CC BY-SA 4.0",
-      "original": "4183x1319",
-      "crop": "cover-centre",
-      "ours": "2400x1350 (+800/1200 srcset)",
+      "original": "4183x1319 (sha1 79a2013f8a6310cdda314e5f4f95426f5d49fb26)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "4183x1319 jpg+webp+avif (+1200/2400 srcset webp+avif); -800-variantit poistettu (panoraama: kapeaa ei koskaan valita, korkeus ratkaisee)",
       "used_on": "/locations hero, talvi",
-      "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026: lokakuun alusta talvikuvat). Kesäkuva säilyy touko–syyskuussa.",
-      "fetched": "2026-09-20"
+      "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026: lokakuun alusta talvikuvat). Kesäkuva säilyy touko–syyskuussa. 25.9.2026: rajaamattoman kuvan vasemmassa reunassa (0–13 % leveydestä) näkyvät K-Citymarketin pylväs ja Lapland Safarisin kyltti, jotka 16:9-rajaus ennen piilotti. Hero näyttää kuvan objectPosition 80 % 50 %:lla, joten ne jäävät ruudun ulkopuolelle 16:9-näytöillä ja puhelimessa; 21:9-näytöllä (leveys > korkeus × 3,17) ne näkyvät pieninä.",
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "winter/cabin-lakeside-winter.webp",
@@ -593,12 +608,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Ailakkaj%C3%A4rvi_wilderness_hut.jpg",
       "author": "Tadeáš Gregor",
       "license": "CC BY-SA 4.0",
-      "original": "3072x2304",
-      "crop": "cover-centre",
-      "ours": "1200x750 (+600)",
+      "original": "3072x2304 (sha1 084bed58a244cba6968d088c047bbe2e7f9b0b02)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1200x900 webp (+600 srcset webp)",
       "used_on": "etusivun sisarsivustokortti: majoitus, talvi",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi.",
-      "fetched": "2026-09-20"
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "winter/road-to-the-fells-winter.webp",
@@ -606,12 +622,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Finnish_national_road_21_%26_Saana,_Ala-Kilpisj%C3%A4rvi.JPG",
       "author": "Simo Räsänen",
       "license": "CC BY-SA 3.0",
-      "original": "3264x1840",
-      "crop": "cover-centre",
-      "ours": "1200x750 (+600)",
+      "original": "3264x1840 (sha1 084708d07137fbccc194533ec580ac78ccb2b349)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "1200x676 webp (+600 srcset webp)",
       "used_on": "etusivun sisarsivustokortti: matka, talvi",
-      "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi.",
-      "fetched": "2026-09-20"
+      "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi. 25.9.2026: Commonsin API:n LicenseShortName on CC BY 2.5, koska tiedosto on monilisensoitu (GFDL, CC BY-SA 3.0, CC BY 2.5); kuitti ja krediitti pitävät CC BY-SA 3.0:n. 🔴 Sama tiedosto on myös transportilla ja hubilla (erillinen tehtävä).",
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "winter/airport-terminal-winter.webp",
@@ -632,12 +649,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Aurora_borealis_over_Saana_fell.jpg",
       "author": "WikiLucas00",
       "license": "CC BY-SA 4.0",
-      "original": "4574x2572",
-      "crop": "cover-centre",
-      "ours": "2400x1350 (+800/1200)",
+      "original": "4574x2572 (sha1 f47a7d0bb56e19953e4099fc86d7ceb193b0a1e0)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "2400x1350 jpg+webp+avif (+800/1200 srcset webp+avif)",
       "used_on": "/photographers hero, talvi",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi.",
-      "fetched": "2026-09-20"
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "heroes/lommoltunturi-panorama-winter.jpg",
@@ -645,12 +663,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Moody_view_towards_Keimi%C3%B6tunturi_and_Sammaltunturi_from_Lommoltunturi_in_Muonio,_Lapland,_Finland,_2019_January.jpg",
       "author": "Simo Räsänen",
       "license": "CC BY-SA 3.0",
-      "original": "4500x1636",
-      "crop": "cover-centre",
-      "ours": "2400x1350 (+800/1200)",
+      "original": "4500x1636 (sha1 6e5b1c38738a43a0e0239fda0e6ec55ca19dcb4c)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "3713x1350 jpg+webp+avif (+1200/2400 srcset webp+avif); -800-variantit poistettu (panoraama: kapeaa ei koskaan valita, korkeus ratkaisee)",
       "used_on": "/partner-with-us hero, talvi",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi.",
-      "fetched": "2026-09-20"
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     },
     {
       "file": "heroes/pallastunturi-panorama-winter.jpg",
@@ -658,12 +677,13 @@
       "source": "https://commons.wikimedia.org/wiki/File:Pallas_from_north_30032017.jpg",
       "author": "RicHard-59",
       "license": "CC BY-SA 4.0",
-      "original": "4832x1296",
-      "crop": "cover-centre",
-      "ours": "2400x1350 (+800/1200)",
+      "original": "4832x1296 (sha1 7958c44355f2b8d6fbe23a4d1adf7a55b98c3d85)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
+      "ours": "4832x1296 jpg+webp+avif (+1200/2400 srcset webp+avif); -800-variantit poistettu (panoraama: kapeaa ei koskaan valita, korkeus ratkaisee)",
       "used_on": "/pricing hero, talvi",
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi.",
-      "fetched": "2026-09-20"
+      "fetched": "2026-09-20",
+      "resized": "2026-09-25"
     }
   ],
   "ai_remaining_20260919": [
