@@ -26,7 +26,9 @@ import { AURORA_VIDEO } from '../data/heroVideo';
 import ImgCredit, { type ImageCredit } from '../components/ImgCredit';
 
 // Licensed stills for the seasonal hero (receipts: public/images/KUVALAHTEET.json).
-const WINTER_HERO_CREDIT: ImageCredit = { name: 'Simo Räsänen', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Green_aurora_curtain_over_Levi,_Kittil%C3%A4,_Lapland,_Finland,_2023_September.jpg' };
+// Talvihero vaihdettu 26.9.2026: Räsäsen Levin revontulikuva oli laplandwellnessillä jo 17.9. Tämä on Pexels-kuva
+// (ei CC BY-SA), koska sivuston talvijakokortti (/og-winter.jpg) rakennetaan tästä kuvasta (lv_permanent_rules §34.2).
+const WINTER_HERO_CREDIT: ImageCredit = { name: 'Mark Davis', license: 'Pexels', url: 'https://www.pexels.com/photo/aurora-lights-during-night-time-11544401/' };
 const SUMMER_HERO_CREDIT: ImageCredit = { name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(5).jpg' };
 
 // Per-locale string picker — every visible string lists fi/en/de/ja/es/ko/fr/it/nl/sv.
@@ -150,13 +152,13 @@ export default function Home() {
         /* Aurora season (Sep–Apr): a real aurora time-lapse frame by a Finnish photographer as
            the still (poster), and the same clip as an ambient loop on wide screens. Replaced the
            AI reindeer-sleigh render on 19.9.2026; receipt in src/data/heroVideo.ts. */
-        image={summer ? '/images/heroes/midnight-sun-inari-teker.jpg' : '/images/heroes/aurora-levi-rasanen.jpg'}
+        image={summer ? '/images/heroes/midnight-sun-inari-teker.jpg' : '/images/heroes/aurora-fell-davis.jpg'}
         credit={summer ? SUMMER_HERO_CREDIT : WINTER_HERO_CREDIT}
         lang={lang}
         objectPosition={summer ? '50% 60%' : '50% 40%'}
         video={summer ? undefined : AURORA_VIDEO}
-        avifSrcSet={summer ? '/images/heroes/midnight-sun-inari-teker-800.avif 800w, /images/heroes/midnight-sun-inari-teker-1200.avif 1200w' : '/images/heroes/aurora-levi-rasanen-800.avif 800w, /images/heroes/aurora-levi-rasanen-1200.avif 1200w'}
-        webpSrcSet={summer ? '/images/heroes/midnight-sun-inari-teker-800.webp 800w, /images/heroes/midnight-sun-inari-teker-1200.webp 1200w' : '/images/heroes/aurora-levi-rasanen-800.webp 800w, /images/heroes/aurora-levi-rasanen-1200.webp 1200w'}
+        avifSrcSet={summer ? '/images/heroes/midnight-sun-inari-teker-800.avif 800w, /images/heroes/midnight-sun-inari-teker-1200.avif 1200w' : '/images/heroes/aurora-fell-davis-800.avif 800w, /images/heroes/aurora-fell-davis-1200.avif 1200w'}
+        webpSrcSet={summer ? '/images/heroes/midnight-sun-inari-teker-800.webp 800w, /images/heroes/midnight-sun-inari-teker-1200.webp 1200w' : '/images/heroes/aurora-fell-davis-800.webp 800w, /images/heroes/aurora-fell-davis-1200.webp 1200w'}
         sizes="100vw"
         imageAlt={summer ? pick(lang, {
           fi: 'Keskiyön aurinko Inarijärven yllä juhannuksen aikaan',
@@ -172,18 +174,18 @@ export default function Home() {
           nl: 'De middernachtzon boven het Inarimeer rond midzomer',
           sv: 'Midnattssolen över Enare träsk kring midsommar',
         }) : pick(lang, {
-          fi: 'Vihreät ja violetit revontulet kuusimetsän yllä Suomen Lapin yötaivaalla',
-          en: 'Green and violet northern lights over a spruce forest in the Finnish Lapland night sky',
-          de: 'Grüne und violette Polarlichter über einem Fichtenwald am Nachthimmel von Finnisch-Lappland',
-          ja: 'フィンランド・ラップランドの夜空、針葉樹林の上に広がる緑と紫のオーロラ',
-          es: 'Auroras boreales verdes y violetas sobre un bosque de abetos en el cielo nocturno de la Laponia finlandesa',
-          'pt-BR': 'Aurora boreal verde e violeta sobre uma floresta de abetos no céu noturno da Lapônia finlandesa',
-          'zh-CN': '芬兰拉普兰夜空下，绿色与紫色的极光笼罩着云杉林。',
-          ko: '핀란드 라플란드 밤하늘, 가문비나무 숲 위로 펼쳐진 초록빛과 보랏빛 오로라',
-          fr: 'Aurores boréales vertes et violettes au-dessus d’une forêt d’épicéas dans le ciel nocturne de la Laponie finlandaise',
-          it: 'Aurora boreale verde e viola sopra un bosco di abeti nel cielo notturno della Lapponia finlandese',
-          nl: 'Groen en paars noorderlicht boven een sparrenbos aan de nachthemel van Fins Lapland',
-          sv: 'Grönt och violett norrsken över en granskog på finska Lapplands natthimmel',
+          fi: 'Revontulet tummien, lumisten tunturien yllä talviyönä',
+          en: 'Northern lights over dark, snowy fells on a winter night',
+          de: 'Polarlichter über dunklen, verschneiten Fjälls in einer Winternacht',
+          ja: '冬の夜、雪に覆われた暗いフェルの上に広がるオーロラ',
+          es: 'Auroras boreales sobre fells oscuros y nevados en una noche de invierno',
+          'pt-BR': 'Aurora boreal sobre montes escuros e nevados numa noite de inverno',
+          'zh-CN': '冬夜里，白雪覆盖的幽暗山丘上空的极光。',
+          ko: '겨울밤, 눈 덮인 어두운 산 위로 펼쳐진 오로라',
+          fr: 'Aurores boréales au-dessus de fjälls sombres et enneigés par une nuit d’hiver',
+          it: 'Aurora boreale sopra fjäll scuri e innevati in una notte d’inverno',
+          nl: 'Noorderlicht boven donkere, besneeuwde fjälls op een winternacht',
+          sv: 'Norrsken över mörka, snötäckta fjäll en vinternatt',
         })}
       >
         <div className="flex flex-col items-center gap-3 w-full">

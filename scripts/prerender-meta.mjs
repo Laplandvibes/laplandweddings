@@ -246,7 +246,7 @@ const top = {
           description: 'Zeven bruiloftsregio’s in Lapland plus stadsoptie Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Vergelijk seizoenen, vluchten en locaties.' },
     sv: { title: 'Bröllopsregioner i Lappland',
           description: 'Sju bröllopsregioner i Lappland plus stadsalternativet Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Jämför säsonger, flyg och vigselplatser.' },
-    image: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid.jpg',
+    image: '/images/heroes/rovaniemi-jatkankynttila-june-andrew.jpg',
   },
   '/wedding-types': {
     en: { title: 'Lapland Wedding Types: Aurora, Snow Chapel, Glass Igloo',
@@ -488,7 +488,7 @@ const top = {
 
 const locations = [
   { slug: 'rovaniemi', en: { name: 'Rovaniemi', desc: 'The capital of Lapland, easiest to reach via international flights. Wedding venues from ice chapel to glass igloos near Santa Claus Village.' }, fi: { name: 'Rovaniemi', desc: 'Lapin pääkaupunki, helpoin saavuttaa kansainvälisen lennon kautta. Hääpaikkoja jääkappelista lasi-igluihin Joulupukin pajakylän tuntumassa.' }, img: '/images/own/rovaniemi-santa-claus-village-summer.webp' },
-  { slug: 'saariselka', en: { name: 'Saariselkä & Inari', desc: 'The heart of Northern Lapland: aurora on average every other night (FMI) and Kakslauttanen’s glass teepee chapel.' }, fi: { name: 'Saariselkä & Inari', desc: 'Pohjois-Lapin sydän: revontulia keskimäärin joka toisena yönä (Ilmatieteen laitos) ja Kakslauttasen lasi-teepee-kappeli.' }, img: '/images/stock/loc-saariselka-kaunispaa-rasanen.webp' },
+  { slug: 'saariselka', en: { name: 'Saariselkä & Inari', desc: 'The heart of Northern Lapland: aurora on average every other night (FMI) and Kakslauttanen’s glass teepee chapel.' }, fi: { name: 'Saariselkä & Inari', desc: 'Pohjois-Lapin sydän: revontulia keskimäärin joka toisena yönä (Ilmatieteen laitos) ja Kakslauttasen lasi-teepee-kappeli.' }, img: '/images/stock/loc-saariselka-ukk-reindeer-lindman.webp' },
   { slug: 'levi', en: { name: 'Levi & Kittilä', desc: 'Finland’s largest fell resort: Lainio Snow Village, Northern Lights Ranch Snow Chapel, direct flights from London.' }, fi: { name: 'Levi & Kittilä', desc: 'Suomen suurin tunturikeskus: Lainion lumikylä, Northern Lights Ranchin lumikappeli, suorat lennot Lontoosta.' }, img: '/images/own/levi-slopes-summer.webp' },
   { slug: 'yllas', en: { name: 'Ylläs', desc: 'Quieter than Levi: Lapland’s cleanest air, Saaga’s wedding-friendly spa hotel, easy reach to Lainio Snow Village.' }, fi: { name: 'Ylläs', desc: 'Levin hiljaisempi naapuri: Lapin puhtainta ilmaa, Saagan häihin sopiva spa-hotelli, lyhyt matka Lainion lumikylään.' }, img: '/images/own/yllas-reindeer-akaslompolo-summer.webp' },
   { slug: 'pyha-luosto', en: { name: 'Pyhä-Luosto', desc: 'The quieter side of eastern Lapland: two hotels in the Luosto log village on the edge of Pyhä-Luosto National Park.' }, fi: { name: 'Pyhä-Luosto', desc: 'Itä-Lapin hiljaisempi puoli: kaksi hotellia Luoston hirsikylässä Pyhä-Luoston kansallispuiston laidalla.' }, img: '/images/own/pyha-chairlift-panorama-summer.webp' },

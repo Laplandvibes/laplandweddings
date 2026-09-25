@@ -38,55 +38,51 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
     nl: 'Zeven trouwregio’s in Lapland plus stadsoptie Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Vergelijk seizoenen, vluchten en locaties.', sv: 'Sju bröllopsregioner i Lappland plus stadsalternativet Oulu: Rovaniemi, Saariselkä, Levi, Ylläs, Pyhä-Luosto, Kilpisjärvi, Kemijärvi, Oulu. Jämför säsonger, flyg och vigselplatser.',
   },
   imageAlt: {
-    en: 'The Jätkänkynttilä bridge and the midnight sun over the Kemijoki river in Rovaniemi',
-    fi: 'Jätkänkynttilä-silta ja keskiyön aurinko Kemijoella Rovaniemellä',
-    de: 'Die Jätkänkynttilä-Brücke und die Mitternachtssonne über dem Kemijoki in Rovaniemi',
-    ja: 'ロヴァニエミ、ケミ川にかかるヤトカンキュンッティラ橋と真夜中の太陽',
-    es: 'El puente Jätkänkynttilä y el sol de medianoche sobre el río Kemijoki en Rovaniemi',
-    'pt-BR': 'A ponte Jätkänkynttilä e o sol da meia-noite sobre o rio Kemijoki em Rovaniemi',
-    'zh-CN': '罗瓦涅米凯米河上的耶特坎金蒂莱桥与午夜太阳',
-    ko: '로바니에미 케미강 위의 얘트캉퀸틸래 다리와 백야의 태양',
-    fr: 'Le pont Jätkänkynttilä et le soleil de minuit sur le fleuve Kemijoki à Rovaniemi',
-    it: 'Il ponte Jätkänkynttilä e il sole di mezzanotte sul fiume Kemijoki a Rovaniemi',
-    nl: 'De Jätkänkynttilä-brug en de middernachtzon boven de rivier Kemijoki in Rovaniemi',
-    sv: 'Bron Jätkänkynttilä och midnattssolen över Kemi älv i Rovaniemi',
+    en: 'The Jätkänkynttilä bridge over the Kemijoki river in Rovaniemi on a June morning',
+    fi: 'Jätkänkynttilä-silta Kemijoen yllä Rovaniemellä kesäkuun aamuna',
+    de: 'Die Jätkänkynttilä-Brücke über den Kemijoki in Rovaniemi an einem Junimorgen',
+    ja: '6月の朝、ロヴァニエミのケミ川に架かるヤトカンキュンッティラ橋',
+    es: 'El puente Jätkänkynttilä sobre el río Kemijoki en Rovaniemi una mañana de junio',
+    'pt-BR': 'A ponte Jätkänkynttilä sobre o rio Kemijoki em Rovaniemi numa manhã de junho',
+    'zh-CN': '六月清晨，罗瓦涅米横跨凯米河的耶特坎金蒂莱桥',
+    ko: '6월 아침, 로바니에미 케미강 위의 얘트캉퀸틸래 다리',
+    fr: 'Le pont Jätkänkynttilä au-dessus du fleuve Kemijoki à Rovaniemi, un matin de juin',
+    it: 'Il ponte Jätkänkynttilä sul fiume Kemijoki a Rovaniemi in una mattina di giugno',
+    nl: 'De Jätkänkynttilä-brug over de rivier Kemijoki in Rovaniemi op een junimorgen',
+    sv: 'Bron Jätkänkynttilä över Kemi älv i Rovaniemi en junimorgon',
   },
 };
 
-/* Hero vaihtuu kauden mukaan 1.10. (Vesa 20.9.2026). Sama silta molemmissa: kesällä
-   keskiyön aurinko, talvella jäätynyt Kemijoki — lukija näkee saman paikan kahtena vuodenaikana. */
+/* Hero vaihtuu kauden mukaan 1.10. (Vesa 20.9.2026). Sama silta molemmissa kausissa, jotta lukija
+   näkee saman paikan kahtena vuodenaikana: kesällä kesäkuun aamu, talvikaudella huhtikuun rantajää.
+   Vaihdettu 26.9.2026: edelliset kuvat (Xepheid 2020, Card 2010) olivat jo laplandwellnessillä (17.9.)
+   ja laplandactivitiesilla (19.9.). Lumista, käyttämätöntä ja muusta kuin sisarruudusta otettua kuvaa
+   sillasta ei löytynyt Commonsista eikä Pexelsistä, joten talvikuva on huhtikuulta. */
 const HERO_SUMMER: SeasonalImage = {
-  src: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid.jpg',
-  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-800.avif 800w, /images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-1200.avif 1200w',
-  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-800.webp 800w, /images/heroes/rovaniemi-jatkankynttila-midnight-sun-xepheid-1200.webp 1200w',
-  credit: { name: 'Xepheid', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_sun_and_Jatkankynttila_bridge_2020.jpg' },
+  src: '/images/heroes/rovaniemi-jatkankynttila-june-andrew.jpg',
+  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-june-andrew-800.avif 800w, /images/heroes/rovaniemi-jatkankynttila-june-andrew-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-june-andrew-800.webp 800w, /images/heroes/rovaniemi-jatkankynttila-june-andrew-1200.webp 1200w',
+  credit: { name: 'Andrew 鐘', license: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:J%C3%A4tk%C3%A4nkynttil%C3%A4_Bridge.jpg' },
   alt: P.imageAlt,
 };
 const HERO_WINTER: SeasonalImage = {
-  src: '/images/heroes/rovaniemi-jatkankynttila-winter-card.jpg',
-  /* Panoraama rajaamatta (CC BY-SA: vain pienennys, 25.9.2026). object-cover skaalaa korkeuden
-     mukaan, joten piirretty leveys ≈ heron korkeus (compact: 68vh) × kuvasuhde. */
-  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-1200.avif 1200w, /images/heroes/rovaniemi-jatkankynttila-winter-card-2400.avif 2400w, /images/heroes/rovaniemi-jatkankynttila-winter-card.avif 4183w',
-  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-winter-card-1200.webp 1200w, /images/heroes/rovaniemi-jatkankynttila-winter-card-2400.webp 2400w, /images/heroes/rovaniemi-jatkankynttila-winter-card.webp 4183w',
-  sizes: '(min-aspect-ratio: 216/100) 100vw, 216vh',
-  /* Vasemmassa reunassa (0–13 %) ovat K-Citymarketin pylväs ja Lapland Safarisin kyltti, jotka
-     rajaus ennen piilotti. 80 % pitää ne ruudun ulkopuolella 16:9-näytöillä (piilossa 14 %) ja
-     tuo sillan pylonin (69 %) puhelimen kapeaan näkymään. */
-  objectPosition: '80% 50%',
-  credit: { name: 'Card', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:J%C3%A4tk%C3%A4nkynttil%C3%A4_March_2010.jpg' },
+  src: '/images/heroes/rovaniemi-jatkankynttila-april-liu.jpg',
+  avifSrcSet: '/images/heroes/rovaniemi-jatkankynttila-april-liu-800.avif 800w, /images/heroes/rovaniemi-jatkankynttila-april-liu-1200.avif 1200w',
+  webpSrcSet: '/images/heroes/rovaniemi-jatkankynttila-april-liu-800.webp 800w, /images/heroes/rovaniemi-jatkankynttila-april-liu-1200.webp 1200w',
+  credit: { name: 'Mingyang LIU', license: 'Pexels', url: 'https://www.pexels.com/photo/modern-cable-stayed-bridge-in-winter-landscape-37143145/' },
   alt: {
-    en: 'The Jätkänkynttilä bridge over the frozen Kemijoki river in Rovaniemi in winter',
-    fi: 'Jätkänkynttilä-silta jäätyneen Kemijoen yllä Rovaniemellä talvella',
-    de: 'Die Jätkänkynttilä-Brücke über den zugefrorenen Kemijoki in Rovaniemi im Winter',
-    ja: '冬、凍ったケミ川に架かるロヴァニエミのヤトカンキュンッティラ橋',
-    es: 'El puente Jätkänkynttilä sobre el río Kemijoki helado en Rovaniemi en invierno',
-    'pt-BR': 'A ponte Jätkänkynttilä sobre o rio Kemijoki congelado em Rovaniemi no inverno',
-    'zh-CN': '冬季罗瓦涅米，横跨封冻凯米河的耶特坎金蒂莱桥',
-    ko: '겨울, 얼어붙은 케미강 위로 놓인 로바니에미의 얜트캉퀸틸래 다리',
-    fr: 'Le pont Jätkänkynttilä au-dessus du fleuve Kemijoki gelé à Rovaniemi en hiver',
-    it: 'Il ponte Jätkänkynttilä sul fiume Kemijoki ghiacciato a Rovaniemi d’inverno',
-    nl: 'De Jätkänkynttilä-brug over de bevroren rivier Kemijoki in Rovaniemi in de winter',
-    sv: 'Bron Jätkänkynttilä över frusna Kemi älv i Rovaniemi på vintern',
+    en: 'The Jätkänkynttilä bridge over the Kemijoki river in Rovaniemi in April, with shore ice along the bank',
+    fi: 'Jätkänkynttilä-silta Kemijoen yllä Rovaniemellä huhtikuussa, rannassa vielä jäätä',
+    de: 'Die Jätkänkynttilä-Brücke über den Kemijoki in Rovaniemi im April, mit Eis am Ufer',
+    ja: '4月、岸辺に氷が残るロヴァニエミのケミ川とヤトカンキュンッティラ橋',
+    es: 'El puente Jätkänkynttilä sobre el río Kemijoki en Rovaniemi en abril, con hielo en la orilla',
+    'pt-BR': 'A ponte Jätkänkynttilä sobre o rio Kemijoki em Rovaniemi em abril, com gelo na margem',
+    'zh-CN': '四月，罗瓦涅米凯米河岸边残冰与耶特坎金蒂莱桥',
+    ko: '4월, 강가에 얼음이 남은 로바니에미 케미강과 얘트캉퀸틸래 다리',
+    fr: 'Le pont Jätkänkynttilä au-dessus du fleuve Kemijoki à Rovaniemi en avril, avec de la glace sur la rive',
+    it: 'Il ponte Jätkänkynttilä sul fiume Kemijoki a Rovaniemi ad aprile, con il ghiaccio lungo la riva',
+    nl: 'De Jätkänkynttilä-brug over de rivier Kemijoki in Rovaniemi in april, met ijs langs de oever',
+    sv: 'Bron Jätkänkynttilä över Kemi älv i Rovaniemi i april, med is längs stranden',
   },
 };
 
