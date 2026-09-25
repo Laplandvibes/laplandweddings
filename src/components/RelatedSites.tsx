@@ -57,21 +57,24 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string>; winter: { src: str
     sv: 'En sjöterrass med brygga bland björkar vid Kemijärvi på sommaren',
   } },
   { src: '/images/own/road-to-the-fells-kittila-pyha.webp', winter: {
-    src: '/images/winter/road-to-the-fells-winter.webp',
-    credit: { name: 'Simo Räsänen', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Finnish_national_road_21_%26_Saana,_Ala-Kilpisj%C3%A4rvi.JPG' },
+    src: '/images/winter/road-955-winter-sun.webp',
+    // 25.9.2026: the previous winter photo (Finnish national road 21 & Saana, Ala-Kilpisjärvi) was the same
+    // Commons file as on laplandtransport (19.9.) and the hub (23.9.), and laplandcarrental shows the same view
+    // (-tele, 18.9.). Resized only, not cropped (CC BY-SA 4.0); receipt in public/images/KUVALAHTEET.json.
+    credit: { name: 'Kolbkorr', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Road_955_and_the_sun_in_Finland._November_2007.jpg' },
     alt: {
-      en: 'A plowed winter road curving through snow towards the snow-capped Saana fell',
-      fi: 'Auratun talvitien mutka lumessa kohti lumista Saana-tunturia',
-      de: 'Eine geräumte Winterstraße führt durch den Schnee auf den verschneiten Saana zu',
-      ja: '雪の中を除雪された冬の道が、雪をかぶったサーナ山へと続く',
-      es: 'Una carretera invernal despejada que serpentea por la nieve hacia el nevado fell Saana',
-      'pt-BR': 'Uma estrada de inverno limpa de neve que serpenteia rumo ao nevado monte Saana',
-      'zh-CN': '清扫过的冬季公路在雪中蜿蜒，通向积雪的萨纳山',
-      ko: '눈을 치운 겨울 도로가 눈 덮인 사나 산을 향해 굽이친다',
-      fr: 'Une route d’hiver déneigée serpente dans la neige vers le fjäll Saana enneigé',
-      it: 'Una strada invernale sgombrata che curva nella neve verso il fjäll Saana innevato',
-      nl: 'Een sneeuwvrij gemaakte winterweg buigt door de sneeuw naar de besneeuwde Saana-fjäll',
-      sv: 'En plogad vinterväg svänger genom snön mot det snöklädda Saanafjället',
+      en: 'A snow-covered road through spruce forest under a low November sun, road 955 south-west of Inari',
+      fi: 'Luminen tie kuusimetsän läpi matalan marraskuun auringon alla, maantie 955 Inarin lounaispuolella',
+      de: 'Eine verschneite Straße durch Fichtenwald unter tiefer Novembersonne, Straße 955 südwestlich von Inari',
+      ja: '11月の低い太陽の下、トウヒの森を抜ける雪の道。イナリ南西の955号線',
+      es: 'Una carretera nevada entre abetos bajo el sol rasante de noviembre, la 955 al suroeste de Inari',
+      'pt-BR': 'Uma estrada coberta de neve entre abetos sob o sol baixo de novembro, a rodovia 955 a sudoeste de Inari',
+      'zh-CN': '十一月低垂的太阳下，穿过云杉林的积雪道路，伊纳里西南的955号公路',
+      ko: '11월 낮게 뜬 해 아래 가문비나무 숲을 지나는 눈 덮인 도로, 이나리 남서쪽 955번 도로',
+      fr: 'Une route enneigée à travers une forêt d’épicéas sous le soleil bas de novembre, la route 955 au sud-ouest d’Inari',
+      it: 'Una strada innevata tra gli abeti rossi sotto il sole basso di novembre, la strada 955 a sud-ovest di Inari',
+      nl: 'Een besneeuwde weg door sparrenbos onder de lage novemberzon, weg 955 ten zuidwesten van Inari',
+      sv: 'En snötäckt väg genom granskog under den låga novembersolen, väg 955 sydväst om Enare',
     },
   }, alt: {
     en: 'A straight summer road towards the fells between Kittilä and Pyhä',

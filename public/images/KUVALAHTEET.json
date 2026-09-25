@@ -617,18 +617,22 @@
       "resized": "2026-09-25"
     },
     {
-      "file": "winter/road-to-the-fells-winter.webp",
+      "file": "winter/road-955-winter-sun.webp",
       "kind": "stock-commons",
-      "source": "https://commons.wikimedia.org/wiki/File:Finnish_national_road_21_%26_Saana,_Ala-Kilpisj%C3%A4rvi.JPG",
-      "author": "Simo Räsänen",
-      "license": "CC BY-SA 3.0",
-      "original": "3264x1840 (sha1 084708d07137fbccc194533ec580ac78ccb2b349)",
-      "crop": "ei rajausta, vain pienennys (CC BY-SA); tehty 25.9.2026 suoraan Commonsin alkuperäisestä, sha1 tarkistettu",
-      "ours": "1200x676 webp (+600 srcset webp)",
+      "source": "https://commons.wikimedia.org/wiki/File:Road_955_and_the_sun_in_Finland._November_2007.jpg",
+      "id": "Road 955 and the sun in Finland. November 2007.jpg",
+      "author": "Kolbkorr",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "published": "2007-11-28",
+      "location": "Maantie 955 (Kittiläntie) noin 60 km Inarin kirkonkylästä lounaaseen, Commonsin kuvauksen mukaan",
+      "original": "2048x1536 (sha1 29298b07c1a0798d2b770a5efe571570994a28d2)",
+      "crop": "ei rajausta, vain pienennys (CC BY-SA); kortti rajaa 16:10:ksi CSS:llä",
+      "ours": "1200x900 (+600x450)",
       "used_on": "etusivun sisarsivustokortti: matka, talvi",
-      "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi. 25.9.2026: Commonsin API:n LicenseShortName on CC BY 2.5, koska tiedosto on monilisensoitu (GFDL, CC BY-SA 3.0, CC BY 2.5); kuitti ja krediitti pitävät CC BY-SA 3.0:n. 🔴 Sama tiedosto on myös transportilla ja hubilla (erillinen tehtävä).",
-      "fetched": "2026-09-20",
-      "resized": "2026-09-25"
+      "price_eur": 0,
+      "note": "Vaihdettu 25.9.2026: edellinen talvikuva *Finnish national road 21 & Saana, Ala-Kilpisjärvi.JPG* (winter/road-to-the-fells-winter.webp) oli sama Commons-tiedosto kuin laplandtransportilla (19.9.) ja hubilla (23.9.), ja laplandcarrental käyttää saman ruudun -tele-versiota (18.9.) = sama näkymä; carrental oli ensin. Talvikuva 1.10.–30.4. (Vesa 20.9.2026); katseluvipu ?kausi=talvi.",
+      "fetched": "2026-09-25"
     },
     {
       "file": "winter/airport-terminal-winter.webp",
