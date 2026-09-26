@@ -67,7 +67,7 @@ export default function WeddingTypesIndex() {
         title={tr.types.indexTitle}
         subtitle={tr.types.indexIntro}
         image="/images/heroes/kemi-lumilinna-jaasali.jpg"
-        credit={{ name: 'Art of Backpacking', license: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:SnowCastle,_Kemi,_Finland.jpg', caption: {
+        credit={{ name: 'Art of Backpacking', license: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:SnowCastle,_Kemi,_Finland.jpg', cropped: true, caption: {
         en: 'Pictured: Kemi SnowCastle',
         fi: 'Kuvassa Kemin LumiLinna',
         de: 'Im Bild: SnowCastle Kemi',

@@ -29,7 +29,7 @@ import ImgCredit, { type ImageCredit } from '../components/ImgCredit';
 // Talvihero vaihdettu 26.9.2026: Räsäsen Levin revontulikuva oli laplandwellnessillä jo 17.9. Tämä on Pexels-kuva
 // (ei CC BY-SA), koska sivuston talvijakokortti (/og-winter.jpg) rakennetaan tästä kuvasta (lv_permanent_rules §34.2).
 const WINTER_HERO_CREDIT: ImageCredit = { name: 'Mark Davis', license: 'Pexels', url: 'https://www.pexels.com/photo/aurora-lights-during-night-time-11544401/' };
-const SUMMER_HERO_CREDIT: ImageCredit = { name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(5).jpg' };
+const SUMMER_HERO_CREDIT: ImageCredit = { name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(5).jpg', cropped: true };
 
 // Per-locale string picker — every visible string lists fi/en/de/ja/es/ko/fr/it/nl/sv.
 // Every locale has native copy here. es was added 2026-09-01, pt-BR 2026-09-19 and

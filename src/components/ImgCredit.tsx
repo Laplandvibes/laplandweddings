@@ -20,7 +20,16 @@ export interface ImageCredit {
   caption?: Localized<string>;
   /** Licence deed; derived from `license` when omitted (see licenseHref). */
   licenseUrl?: string;
+  /** The file is cropped from the original (receipt: "cover-centre"). Shown as "cropped" in the reader's
+   *  language, because the licence asks us to say we changed the work (CC BY 4.0 §3(a)(1)(B)). Only ever on
+   *  CC BY / CC0 / PD photos: a CC BY-SA file is never cropped (26.9.2026). */
+  cropped?: boolean;
 }
+
+const CROPPED: Localized<string> = {
+  en: 'cropped', fi: 'rajattu', de: 'zugeschnitten', ja: 'トリミング', es: 'recortada', 'pt-BR': 'recortada',
+  'zh-CN': '已裁剪', ko: '자른 이미지', fr: 'recadrée', it: 'ritagliata', nl: 'bijgesneden', sv: 'beskuren',
+};
 
 /**
  * The licence itself must be one click away, not only the file page: CC BY-SA 4.0
@@ -50,7 +59,8 @@ interface Props {
 export default function ImgCredit({ credit, lang, className, plain }: Props) {
   if (!credit) return null;
   const caption = credit.caption ? credit.caption[lang] || credit.caption.en : '';
-  const text = [caption, credit.name, credit.license].filter(Boolean).join(' · ');
+  const cropped = credit.cropped ? CROPPED[lang] || CROPPED.en : '';
+  const text = [caption, credit.name, credit.license, cropped].filter(Boolean).join(' · ');
   const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-white/60 bg-black/30 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
   if (plain) return <span className={cls}>{text}</span>;
   const deed = licenseHref(credit);
@@ -81,6 +91,7 @@ export default function ImgCredit({ credit, lang, className, plain }: Props) {
       ) : (
         credit.license
       )}
+      {cropped ? <span className="whitespace-nowrap">{' · '}{cropped}</span> : null}
     </span>
   );
 }

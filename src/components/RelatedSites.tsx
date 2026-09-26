@@ -92,7 +92,7 @@ const IMAGES: Array<{ src: string; alt: Record<Lang, string>; winter: { src: str
   } },
   { src: '/images/own/kittila-airport-terminal-summer.webp', winter: {
     src: '/images/winter/airport-terminal-winter.webp',
-    credit: { name: 'flightlog', license: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:EFRO_terminal_20120209_01.jpg' },
+    credit: { name: 'flightlog', license: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:EFRO_terminal_20120209_01.jpg', cropped: true },
     alt: {
       en: 'The terminal and snow-covered apron of Rovaniemi Airport on a winter day',
       fi: 'Rovaniemen lentoaseman terminaali ja luminen asemataso talvipäivänä',

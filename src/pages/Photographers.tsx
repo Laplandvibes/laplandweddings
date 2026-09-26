@@ -341,7 +341,7 @@ const HERO_SUMMER: SeasonalImage = {
   src: '/images/heroes/inari-midnight-sun-pier-teker.jpg',
   avifSrcSet: '/images/heroes/inari-midnight-sun-pier-teker-800.avif 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.avif 1200w',
   webpSrcSet: '/images/heroes/inari-midnight-sun-pier-teker-800.webp 800w, /images/heroes/inari-midnight-sun-pier-teker-1200.webp 1200w',
-  credit: { name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(4).jpg' },
+  credit: { name: 'Tevfik Teker', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Midnight_Sun_in_Inari_-_panoramio_(4).jpg', cropped: true },
   alt: P.imageAlt,
 };
 /* Talvella hääkuvaajan kysytyin tilaus on revontulikuva — hero näyttää sen (Vesa 20.9.2026). */
