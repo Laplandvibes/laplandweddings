@@ -219,7 +219,7 @@ const top = {
           description: 'Een onafhankelijke gids voor trouwen in Lapland. 20 locaties, het papierwerk, echte prijzen en praktische gidsen.' },
     sv: { title: 'Bröllop i Lappland: vigselplatser och äktenskapspapper',
           description: 'En oberoende guide till att gifta sig i Lappland. 20 vigselplatser, vigselpapperen, verkliga priser och praktiska guider för ditt bröllop i Arktis.' },
-    image: '/og.jpg?v=20260921',
+    image: '/og.jpg?v=d20d8a53',
   },
   '/locations': {
     en: { title: 'Lapland Wedding Regions: Rovaniemi, Levi, Saariselkä, Ylläs',
@@ -273,7 +273,7 @@ const top = {
           description: 'Zeven bruiloftstypes in Lapland: noorderlicht, sneeuwkapel, glaziglo, middernachtszon, eloperen en geloftehernieuwing.' },
     sv: { title: 'Bröllopstyper i Lappland',
           description: 'Sex bröllopstyper i Lappland: norrsken, snökapell, glasigloo, midnattssol, elopement och förnyade löften.' },
-    image: '/og.jpg?v=20260921',
+    image: '/og.jpg?v=d20d8a53',
   },
   '/venues': {
     en: { title: 'Lapland Wedding Venues: 20 venues',
@@ -452,7 +452,7 @@ const top = {
     it: { title: 'Informativa sulla privacy', description: 'Informativa sulla privacy di laplandweddings.online: come trattiamo i dati delle richieste e l’analitica.' },
     nl: { title: 'Privacyverklaring', description: 'Privacybeleid voor laplandweddings.online: hoe wij omgaan met aanvraaggegevens en analyses.' },
     sv: { title: 'Integritetspolicy', description: 'Integritetspolicy för laplandweddings.online: hur vi hanterar förfrågningsdata och analys.' },
-    image: '/og.jpg?v=20260921',
+    image: '/og.jpg?v=d20d8a53',
   },
   '/terms': {
     en: { title: 'Terms of Use', description: 'Terms of use for laplandweddings.online: what the guide is, how venue and price information is sourced, affiliate links, and the limits of our liability.' },
@@ -467,7 +467,7 @@ const top = {
     it: { title: 'Condizioni d’uso', description: 'Condizioni d’uso di laplandweddings.online: cos’è la guida, da dove provengono i dati su location e prezzi, link di affiliazione e limiti di responsabilità.' },
     nl: { title: 'Gebruiksvoorwaarden', description: 'Gebruiksvoorwaarden van laplandweddings.online: wat de gids is, herkomst van locatie- en prijsinformatie, affiliate-links en onze aansprakelijkheidsgrenzen.' },
     sv: { title: 'Användarvillkor', description: 'Användarvillkor för laplandweddings.online: vad guiden är, varifrån uppgifter om vigselplatser och priser kommer, affiliatelänkar och ansvarsbegränsningar.' },
-    image: '/og.jpg?v=20260921',
+    image: '/og.jpg?v=d20d8a53',
   },
   '/cookie-policy': {
     en: { title: 'Cookie Policy', description: 'Which cookies laplandweddings.online sets, what they are for, how long they last and how to change or withdraw your consent at any time.' },
@@ -482,7 +482,7 @@ const top = {
     it: { title: 'Informativa sui cookie', description: 'Quali cookie utilizza laplandweddings.online, a cosa servono, quanto durano e come modificare o revocare il consenso in qualsiasi momento.' },
     nl: { title: 'Cookiebeleid', description: 'Welke cookies laplandweddings.online plaatst, waarvoor ze dienen, hoe lang ze bewaard blijven en hoe u uw toestemming op elk moment kunt wijzigen of intrekken.' },
     sv: { title: 'Cookiepolicy', description: 'Vilka cookies laplandweddings.online använder, vad de är till för, hur länge de sparas och hur du när som helst ändrar eller återkallar ditt samtycke.' },
-    image: '/og.jpg?v=20260921',
+    image: '/og.jpg?v=d20d8a53',
   },
 };
 

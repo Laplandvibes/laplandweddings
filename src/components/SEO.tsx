@@ -16,7 +16,7 @@ interface SEOProps {
 }
 
 const SITE = 'https://laplandweddings.online';
-const DEFAULT_IMAGE = 'https://laplandweddings.online/og.jpg?v=20260905'; // was a hotlink to a third-party photographer's site (19.9.2026)
+const DEFAULT_IMAGE = 'https://laplandweddings.online/og.jpg?v=d20d8a53'; // was a hotlink to a third-party photographer's site (19.9.2026)
 
 const SUPPORTED: Lang[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 const URL_PREFIX_OF: Record<Lang, string> = {
