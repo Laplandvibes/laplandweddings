@@ -3,11 +3,24 @@ import type { Localized } from '../data/localized';
 
 /**
  * Photo credit for a licensed stock image (Wikimedia Commons CC BY / CC BY-SA, Pexels).
- * Rendered as a very small link on the bottom edge of the image (Vesa 19.9.2026: not big, not
- * floating mid-image), so the attribution
- * travels with the picture on every surface (card, hero, OG preview aside). Own
- * photographs and partner-supplied photos carry no credit object and render nothing.
- * Receipts for every file: public/images/KUVALAHTEET.json.
+ * Rendered as a very small link on the bottom edge of the image (not big, not floating
+ * mid-image), so the attribution travels with the picture on every surface (card, hero,
+ * OG preview aside). Own photographs and partner-supplied photos carry no credit object
+ * and render nothing. Receipts for every file: public/images/KUVALAHTEET.json.
+ *
+ * The credit stays unobtrusive through its size and place (9 px, bottom-right corner),
+ * not through contrast: it is the attribution the licence requires, so it has to be
+ * readable, and it can land on any photo, snow and white sky included. The 55 % black
+ * plate and fully white text are a pair. Over a pure white photo the plate paints as
+ * #737373 and white text on it measures 4.74:1 (WCAG AA for small text: 4.5:1); a darker
+ * photo only raises that. Lighter pairs fail in the same spot: white on a 30 % plate
+ * measures 2.12:1, 60 % white on a 30 % plate 1.61:1.
+ *
+ * The ink is written as `text-[#fff]`, not `text-white`: this site's warm theme repaints
+ * `.text-white` (index.css) to cream on the page and to charcoal inside ivory cards, so a
+ * credit on a card photo would turn dark on its dark plate (measured 1.0:1 on the
+ * /wedding-types cards). `text-[#fff]` is pure white in every scope, and the links inside
+ * the linked variant inherit it (`text-inherit`).
  */
 export interface ImageCredit {
   /** Author exactly as the source names them (username when that is all the source gives). */
@@ -61,7 +74,7 @@ export default function ImgCredit({ credit, lang, className, plain }: Props) {
   const caption = credit.caption ? credit.caption[lang] || credit.caption.en : '';
   const cropped = credit.cropped ? CROPPED[lang] || CROPPED.en : '';
   const text = [caption, credit.name, credit.license, cropped].filter(Boolean).join(' · ');
-  const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-white/60 bg-black/30 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
+  const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-[#fff] bg-black/55 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
   if (plain) return <span className={cls}>{text}</span>;
   const deed = licenseHref(credit);
   const stop = (e: MouseEvent) => e.stopPropagation();
