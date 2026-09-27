@@ -1,5 +1,5 @@
 # robots.txt for laplandweddings.online
-# Generated 2026-05-08 — LaplandVibes ecosystem-wide AI-crawler allowlist.
+# LaplandVibes ecosystem-wide AI-crawler allowlist.
 
 User-agent: *
 Allow: /
