@@ -43,6 +43,18 @@ function setMeta(name: string, content: string, attr: 'name' | 'property' = 'nam
   el.setAttribute('content', content);
 }
 
+// Share image the prerenderer wrote for the URL the visitor landed on. Read once at
+// module load, before any effect runs: on that URL it is kept, so crawlers that run
+// JavaScript see the same og:image and twitter:image as crawlers that read the
+// static HTML. After a client-side navigation the `image` prop is used.
+const LANDED =
+  typeof document === 'undefined'
+    ? null
+    : {
+        path: window.location.pathname,
+        og: document.head.querySelector('meta[property="og:image"]')?.getAttribute('content') || null,
+      };
+
 function setLink(rel: string, href: string, hreflang?: string) {
   if (typeof document === 'undefined') return;
   const selector = hreflang
@@ -108,7 +120,8 @@ export default function SEO({ title, description, path, image, type = 'website',
     setMeta('og:description', description, 'property');
     setMeta('og:type', type, 'property');
     setMeta('og:url', currentUrl, 'property');
-    setMeta('og:image', og, 'property');
+    const ogImage = LANDED?.og && LANDED.path === window.location.pathname ? LANDED.og : og;
+    setMeta('og:image', ogImage, 'property');
     setMeta('og:locale', OG_LOCALE[lang], 'property');
     setMeta('og:site_name', 'LaplandWeddings', 'property');
 
@@ -125,7 +138,7 @@ export default function SEO({ title, description, path, image, type = 'website',
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', title);
     setMeta('twitter:description', description);
-    setMeta('twitter:image', og);
+    setMeta('twitter:image', ogImage);
 
     setLink('canonical', currentUrl);
     // Clear old hreflang and rebuild.
