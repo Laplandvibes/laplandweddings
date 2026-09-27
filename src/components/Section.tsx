@@ -5,11 +5,13 @@ interface SectionProps {
   eyebrow?: string;
   title?: string;
   subtitle?: string;
+  /** Otsikon taso: h1 kun osion otsikko on sivun ainoa otsikko (lakisivut), muuten h2. Ulkoasu sama. */
+  titleAs?: 'h1' | 'h2';
   children: ReactNode;
   className?: string;
 }
 
-export default function Section({ id, eyebrow, title, subtitle, children, className = '' }: SectionProps) {
+export default function Section({ id, eyebrow, title, subtitle, titleAs: Title = 'h2', children, className = '' }: SectionProps) {
   return (
     <section id={id} className={`py-10 sm:py-20 ${className}`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-6">
@@ -21,9 +23,9 @@ export default function Section({ id, eyebrow, title, subtitle, children, classN
               </p>
             )}
             {title && (
-              <h2 className="font-heading text-[26px] leading-tight sm:text-4xl text-white mb-3 sm:mb-4 tracking-wide [text-wrap:balance]">
+              <Title className="font-heading text-[26px] leading-tight sm:text-4xl text-white mb-3 sm:mb-4 tracking-wide [text-wrap:balance]">
                 {title}
-              </h2>
+              </Title>
             )}
             {subtitle && (
               <p className="text-[15px] sm:text-lg text-gray-400 leading-relaxed [text-wrap:pretty]">{subtitle}</p>

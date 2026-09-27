@@ -8,7 +8,7 @@ export default function CookiePolicy() {
   return (
     <>
       <SEO title={metaTitle} description={paragraphs[0]} /* localized: the hardcoded English literal overwrote every locale's prerendered description on hydration (es/en passes 19.9.2026) */ path="/cookie-policy" />
-      <Section title={title}>
+      <Section title={title} titleAs="h1">
         <div className="prose prose-invert max-w-3xl mx-auto text-gray-300 space-y-4">
           {paragraphs.map((p, i) => (
             <p key={i}>{p}</p>
