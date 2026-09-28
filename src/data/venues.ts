@@ -846,7 +846,7 @@ const venueRegistry: Venue[] = [
     name: 'Wilderness Hotel Juutua',
     locationSlug: 'saariselka',
     region: {
-      fi: 'Inari · keskustassa',
+      fi: 'Inarin keskustassa',
       en: 'Inari · in the centre',
       de: 'Inari · im Zentrum',
       ja: 'イナリ · 中心部',
@@ -1089,7 +1089,7 @@ const venueRegistry: Venue[] = [
     name: 'Hotelli Hullu Poro',
     locationSlug: 'levi',
     region: {
-      fi: 'Levi keskustassa',
+      fi: 'Levin keskustassa',
       en: 'Central Levi',
       de: 'Zentrum von Levi',
       ja: 'レヴィ中心部',
@@ -1170,7 +1170,7 @@ const venueRegistry: Venue[] = [
     name: 'Hotel Levi Panorama',
     locationSlug: 'levi',
     region: {
-      fi: 'Levin tunturin huipulla',
+      fi: 'Levitunturin huipulla',
       en: 'On Levi fell summit',
       de: 'Auf dem Gipfel des Levi-Fjälls',
       ja: 'レヴィのフェル頂上',
