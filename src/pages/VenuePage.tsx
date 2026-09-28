@@ -314,9 +314,14 @@ export default function VenuePage() {
             >
               {v.name}
             </h1>
+            {/* White like the h1 and PageHero's subtitle (index.css: hero text is
+                always white). In the longer languages this lead wraps to five or six
+                lines on a phone and its first lines reach the bright part of the
+                photo, where the old 95 % cream fell to 4.0:1; white keeps it above
+                4.5:1 without darkening the photo. */}
             <p
               className="text-base sm:text-lg max-w-2xl leading-relaxed mb-6"
-              style={{ color: 'rgba(245,235,224,0.95)', textShadow: '0 1px 12px rgba(0,0,0,0.7)' }}
+              style={{ color: '#FFFFFF', textShadow: '0 1px 12px rgba(0,0,0,0.7)' }}
             >
               {v.description[dataLang].split('.').slice(0, 2).join('.') + '.'}
             </p>
