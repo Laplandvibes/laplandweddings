@@ -285,11 +285,12 @@ export default function VenuePage() {
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 pb-10 sm:pb-16 pt-24 sm:pt-32">
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+              {/* Solid rose chip: at 85 % a bright photo showed through and the white 11 px text fell under 4.5:1; solid #C9466A is 4.6:1 */}
               {v.region[dataLang].split('·').map((part) => (
                 <span
                   key={part}
                   className="whitespace-nowrap text-[11px] sm:text-xs uppercase tracking-[0.3em] font-semibold px-3 py-1.5 rounded-full"
-                  style={{ background: 'rgba(201,70,106,0.85)', color: '#FFFFFF' }}
+                  style={{ background: '#C9466A', color: '#FFFFFF' }}
                 >
                   {part.trim()}
                 </span>
