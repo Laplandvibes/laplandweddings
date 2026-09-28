@@ -46,7 +46,7 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md" style={{ background: 'rgba(31, 22, 18, 0.92)', borderBottom: '1px solid rgba(245,235,224,0.10)' }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3">
         <div className="flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
           <L to="/" className="font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap inline-flex items-center min-h-11" onClick={() => setOpen(false)}>
@@ -93,9 +93,11 @@ export default function Navigation() {
               375px header overflowing, which left the only mobile control buried at
               the bottom of the drawer. Restored as the compact ISO-code select: the
               wordmark + ecosystem button already crowd this bar, so it shows `label`
-              (FR) rather than `native` (Français) and is width-capped. Verified: no
-              horizontal overflow at 375px. */}
-          <div className="xl:hidden flex items-center gap-1.5 shrink-0">
+              (FR) rather than `native` (Français) and is width-capped. At 360px the bar is
+              8 + 228.5 (ecosystem 57 + 12 + wordmark 159.5) + 6 + 108 (switcher 68 + 4 +
+              button 44 − 8) + 8 = 358.5px, so the two gaps here are 6 and 4px: at 8 and 6
+              it came to 362.5px and every page scrolled sideways by 2px. */}
+          <div className="xl:hidden flex items-center gap-1 shrink-0">
             <div className="relative inline-block">
               <LanguageSwitcher tone={'dark'} />
             </div>
