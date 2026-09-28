@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { priceTierLabel } from '../components/PriceTierBadge';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
@@ -148,7 +149,7 @@ export default function LocationPage() {
                   <p className="text-sm text-gray-400 line-clamp-2">{v.description[dataLang]}</p>
                   <div className="mt-3 text-xs text-gray-500 flex items-center justify-between">
                     <span>{v.capacity.min}–{v.capacity.max} {ui('guests', lang)}</span>
-                    <span className="text-gold">{v.priceTier}</span>
+                    <span className="text-gold">{priceTierLabel(v.priceTier, lang)}</span>
                   </div>
                 </div>
               </L>

@@ -3,7 +3,7 @@ import { venueTitle } from '../lib/venueTitle.mjs';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
-import PriceTierBadge from '../components/PriceTierBadge';
+import PriceTierBadge, { priceTierLabel } from '../components/PriceTierBadge';
 import { getVenueBySlug, venues } from '../data/venues';
 import { weddingTypes } from '../data/weddingTypes';
 import { useLang } from '../i18n/LangContext';
@@ -21,7 +21,7 @@ import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
 type VKey =
-  | 'getQuoteVenue' | 'checkPrices' | 'seeStaysIn'
+  | 'checkPrices' | 'seeStaysIn'
   | 'affordable' | 'midRange' | 'premium'
   | 'open' | 'yearRound' | 'seasonal' | 'open12' | 'winterSeason'
   | 'suitsWeddings' | 'weddingTypesCount' | 'tailoredProposal'
@@ -31,14 +31,6 @@ type VKey =
   | 'whatMakesSpecial' | 'stylesItFits' | 'otherRegionVenues' | 'getQuoteFor';
 
 const V: Record<VKey, Localized<string>> = {
-  getQuoteVenue: {
-    en: 'Get a quote for this venue', fi: 'Pyydä tarjous tähän venueen',
-    de: 'Angebot für diese Location anfordern', ja: 'この会場の見積もりを依頼',
-    es: 'Solicite un presupuesto para este lugar', 'pt-BR': 'Peça um orçamento para este local',
-    'zh-CN': '获取此场地的报价', ko: '이 웨딩 장소 견적 받기',
-    fr: 'Demander un devis pour ce lieu', it: 'Richieda un preventivo per questa location',
-    nl: 'Vraag een offerte aan voor deze locatie', sv: 'Begär offert för den här platsen',
-  },
   checkPrices: {
     en: 'Check rates & book', fi: 'Tarkista hinnat & varaa',
     de: 'Preise prüfen & buchen', ja: '料金を確認して予約',
@@ -269,23 +261,18 @@ export default function VenuePage() {
         }}
       />
 
-      {/* CUSTOM HERO — bottom-aligned editorial layout, avoids face/branding collisions in venue photos */}
-      <section className="relative min-h-[72vh] sm:min-h-[82vh] overflow-hidden flex items-end">
-        <div className="absolute inset-0">
-          <img src={v.image} alt={v.imageAlt[dataLang]} className="w-full h-full object-cover" loading="eager" fetchPriority="high"  decoding="async" width="1920" height="1080"/>
-          {/* Strong cinematic gradient — content area always readable */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'linear-gradient(to bottom, rgba(15,12,10,0.35) 0%, rgba(15,12,10,0.20) 35%, rgba(15,12,10,0.55) 65%, rgba(15,12,10,0.95) 100%)',
-            }}
-          />
+      {/* HERO, model C (Vesa 2026-09-28): the photo is shown whole and clean, and the
+          chips, name, lead and buttons sit below it on the page's own background, as
+          on laplandtransport. On a phone the old text-over-photo block covered most of
+          the picture (the couple's faces on Arctic SnowHotel) and fell under AA on
+          bright snow at a real phone height (375×812: h1 2.0:1, lead 2.7:1). */}
+      <section>
+        <div className="relative h-[42svh] min-h-[240px] sm:h-[380px] md:h-[440px] lg:h-[500px] xl:h-[560px] 2xl:h-[600px] overflow-hidden">
+          <img src={v.image} alt={v.imageAlt[dataLang]} className="absolute inset-0 w-full h-full object-cover" loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" />
         </div>
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 pb-10 sm:pb-16 pt-24 sm:pt-32">
+        <div className="w-full max-w-6xl mx-auto px-5 sm:px-8 pt-6 sm:pt-8 pb-2 sm:pb-4">
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
-              {/* Solid rose chip: at 85 % a bright photo showed through and the white 11 px text fell under 4.5:1; solid #C9466A is 4.6:1 */}
               {v.region[dataLang].split('·').map((part) => (
                 <span
                   key={part}
@@ -297,41 +284,33 @@ export default function VenuePage() {
               ))}
               <span
                 className="whitespace-nowrap text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold px-3 py-1.5 rounded-full"
-                style={{ background: 'rgba(0,0,0,0.55)', color: '#FFFFFF', backdropFilter: 'blur(4px)' }}
+                style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.22)', color: '#FFFFFF' }}
               >
                 {v.capacity.min}–{v.capacity.max} {guests}
-              </span>
-              <span
-                className="whitespace-nowrap text-[11px] sm:text-xs uppercase tracking-[0.25em] font-semibold px-3 py-1.5 rounded-full"
-                style={{ background: 'rgba(0,0,0,0.55)', color: '#FFFFFF', backdropFilter: 'blur(4px)' }}
-              >
-                {v.priceTier}
               </span>
             </div>
             <h1
               className="font-heading text-4xl sm:text-6xl md:text-7xl mb-4 sm:mb-5 tracking-wide leading-[1.05]"
-              style={{ color: '#FFFFFF', textShadow: '0 2px 16px rgba(0,0,0,0.7), 0 0 40px rgba(0,0,0,0.5)' }}
+              style={{ color: '#FFFFFF' }}
             >
               {v.name}
             </h1>
-            {/* White like the h1 and PageHero's subtitle (index.css: hero text is
-                always white). In the longer languages this lead wraps to five or six
-                lines on a phone and its first lines reach the bright part of the
-                photo, where the old 95 % cream fell to 4.0:1; white keeps it above
-                4.5:1 without darkening the photo. */}
             <p
               className="text-base sm:text-lg max-w-2xl leading-relaxed mb-6"
-              style={{ color: '#FFFFFF', textShadow: '0 1px 12px rgba(0,0,0,0.7)' }}
+              style={{ color: '#FFFFFF' }}
             >
               {v.description[dataLang].split('.').slice(0, 2).join('.') + '.'}
             </p>
+            {/* One line each, in every language (Vesa 2026-09-28): the long per-venue
+                sentences wrapped in de/it/es. The quote button uses the venue cards'
+                own short label, so the card and the page say the same thing. */}
             <div className="flex flex-wrap gap-3">
               <a
                 href="#quote"
-                className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full whitespace-nowrap transition-colors"
                 style={{ background: '#C9466A', color: '#FFFFFF', boxShadow: '0 8px 24px -4px rgba(201,70,106,0.5)' }}
               >
-                {vt('getQuoteVenue')} →
+                {tr.cta.getQuote} →
               </a>
               {/* Property-level deep link. Before 2026-08-02 this passed the
                   venue NAME as ?ss= and reached a property page 0 times out of
@@ -344,8 +323,8 @@ export default function VenuePage() {
                 href={venueLodgingLink({ slug: v.slug, ...VENUE_BOOKING[v.slug], town: venueTown(v.slug) }, lang)}
                 target="_blank"
                 rel={AFFILIATE_REL}
-                className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full transition-colors"
-                style={{ color: '#FFFFFF', background: 'rgba(255,255,255,0.10)', border: '2px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(6px)' }}
+                className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full whitespace-nowrap transition-colors"
+                style={{ color: '#FFFFFF', background: 'rgba(255,255,255,0.06)', border: '2px solid rgba(255,255,255,0.4)' }}
               >
                 {venueIsBookable(v.slug, lang)
                   ? vt('checkPrices')
@@ -372,8 +351,7 @@ export default function VenuePage() {
           </div>
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
             <p className="text-xs uppercase tracking-[0.2em] font-semibold mb-2" style={{ color: 'var(--color-rose-ink)' }}>{tr.sections.priceRange}</p>
-            {/* PriceTierBadge already renders "€€€€ · Premium" — printing the tier
-                label again below it read as a duplicate on every venue. */}
+            {/* The price level as a word only; the €€€ marks are not shown. */}
             <PriceTierBadge tier={v.priceTier} lang={lang} />
           </div>
           <div className="bg-night-light rounded-2xl p-6 border border-line-light">
@@ -508,7 +486,7 @@ export default function VenuePage() {
                     )}
                     <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: 'var(--color-rose-ink)' }}>{sib.region[dataLang]}</p>
                     <h4 className="font-heading tracking-wide text-xl mb-1" style={{ color: '#1F1612' }}>{sib.name}</h4>
-                    <p className="text-xs" style={{ color: '#5A4F48' }}>{sib.capacity.min}–{sib.capacity.max} {guests} · {sib.priceTier}</p>
+                    <p className="text-xs" style={{ color: '#5A4F48' }}>{sib.capacity.min}–{sib.capacity.max} {guests} · {priceTierLabel(sib.priceTier, lang)}</p>
                   </div>
                 </L>
                 <div className="px-5 pt-3 pb-5 mt-auto">

@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { priceTierLabel } from '../components/PriceTierBadge';
 import { ChevronDown } from 'lucide-react';
 import L from '../components/L';
 
@@ -18,7 +19,7 @@ import EditorsPickChip from '../components/EditorsPickChip';
 import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
-const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' | 'premium' | 'independence', Localized<string>> = {
+const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'independence', Localized<string>> = {
   independence: {
     fi: 'Nämä ovat Lapin tunnetuimmat paikat, joissa häitä vietetään. Emme edusta niitä emmekä järjestä häitä. Jos jokin paikka on jo mielessänne, kirjoittakaa se lomakkeeseen, niin toive kulkee sellaisenaan eteenpäin.',
     en: 'These are the best-known places in Lapland where weddings are held. We do not represent them and we do not organise weddings. If you already have a venue in mind, write it in the form and your wish is passed on exactly as you gave it.',
@@ -72,21 +73,6 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'affordable' | 'midRange' 
     it: 'Il corridoio di neve illuminato di viola e la scala di ghiaccio del Levi Ice Castle',
     nl: 'De paars verlichte sneeuwtunnel en ijstrap in het Levi Ice Castle',
     sv: 'Den violettbelysta snögången och istrappan i Levi Ice Castle',
-  },
-  affordable: {
-    en: 'affordable', fi: 'edullinen', de: 'günstig', ja: 'お手頃',
-    es: 'económico', 'pt-BR': 'acessível', 'zh-CN': '经济实惠', ko: '합리적',
-    fr: 'abordable', it: 'economico', nl: 'betaalbaar', sv: 'prisvärd',
-  },
-  midRange: {
-    en: 'mid-range', fi: 'keskihinta', de: 'Mittelklasse', ja: '中価格帯',
-    es: 'gama media', 'pt-BR': 'intermediário', 'zh-CN': '中档', ko: '중급',
-    fr: 'milieu de gamme', it: 'fascia media', nl: 'middensegment', sv: 'mellanklass',
-  },
-  premium: {
-    en: 'premium', fi: 'premium', de: 'Premium', ja: 'プレミアム',
-    es: 'premium', 'pt-BR': 'premium', 'zh-CN': '高端', ko: '프리미엄',
-    fr: 'premium', it: 'premium', nl: 'premium', sv: 'premium',
   },
 };
 
@@ -184,9 +170,9 @@ export default function Venues() {
           <div className="relative">
             <select aria-label="Filter by price" value={tier} onChange={(e) => setTier(e.target.value as PriceTier | '')} className="w-full rounded-lg bg-night-light border border-white/10 focus:border-rose px-3 py-2.5 pr-9 text-white outline-none appearance-none">
               <option value="">{tr.venues.allPrices}</option>
-              <option value="€€">€€ {pickLocalized(P.affordable, lang)}</option>
-              <option value="€€€">€€€ {pickLocalized(P.midRange, lang)}</option>
-              <option value="€€€€">€€€€ {pickLocalized(P.premium, lang)}</option>
+              <option value="€€">{priceTierLabel('€€', lang)}</option>
+              <option value="€€€">{priceTierLabel('€€€', lang)}</option>
+              <option value="€€€€">{priceTierLabel('€€€€', lang)}</option>
             </select>
             <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-white/60" aria-hidden="true" />
           </div>

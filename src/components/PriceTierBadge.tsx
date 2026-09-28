@@ -47,13 +47,16 @@ const labels: Record<PriceTier, Localized<string>> = {
   },
 };
 
+/** The price level as a word. The €€ / €€€ / €€€€ marks are not shown anywhere
+    (Vesa 2026-09-28: "näyttää tyhmältä"); the tier stays only as data and filter value. */
+export function priceTierLabel(tier: PriceTier, lang: Lang): string {
+  return pickLocalized(labels[tier], lang);
+}
+
 export default function PriceTierBadge({ tier, lang }: { tier: PriceTier; lang: Lang }) {
-  const label = pickLocalized(labels[tier], lang);
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-gold/10 border border-gold/30 px-2.5 py-1 text-xs font-semibold text-gold">
-      <span>{tier}</span>
-      <span className="text-gold/70">·</span>
-      <span>{label}</span>
+    <span className="inline-flex items-center rounded-full bg-gold/10 border border-gold/30 px-2.5 py-1 text-xs font-semibold text-gold">
+      {priceTierLabel(tier, lang)}
     </span>
   );
 }
