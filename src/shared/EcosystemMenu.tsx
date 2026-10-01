@@ -86,7 +86,13 @@ const APP = 'app.laplandvibes.com';
 /** Same landing as the network-wide AppPromo: opens straight onto the install offer. */
 const APP_URL = 'https://app.laplandvibes.com/?install=1&utm_source=web&utm_medium=network_menu';
 /** The app's own front page, a real capture (shipped as public/images on every site by AppPromo). */
-const APP_SHOT = '/images/app-screenshot.webp';
+// Appin oma etusivu lukijan kielellä (shared/appPromo/shots, 1.10.2026). Ennen sama englanninkielinen kuva 12 kielellä.
+// ?v= = appimainoksen kuvien tiiviste (shared/appPromo/screens.ts SHOTS_V). Kirjaimellinen rivi eikä tuonti: prebuild-sync
+// päivittää tämän tiedoston myös sivustoille, joilla src/shared/appPromo/ ei vielä ole (christmas 2.10.2026). lv-opsin
+// app_promo_shots.mjs ja rollout_apppromo.mjs pitävät rivin samana, gate:apppromo-kopiot vertaa.
+const APP_SHOT_V = '6aa1e051';
+const APP_SHOT_LANGS = new Set(['en', 'fi', 'sv', 'de', 'fr', 'es', 'it', 'nl', 'pt-BR', 'ja', 'ko', 'zh-CN']);
+const appShot = (L: string) => `/images/app-promo/now-${APP_SHOT_LANGS.has(L) ? L : 'en'}.webp?v=${APP_SHOT_V}`;
 
 /**
  * Network wordmark font. The `#LAPLANDVIBES` lockup is ALWAYS Bebas Neue, on
@@ -620,7 +626,7 @@ export default function EcosystemMenu({ currentDomain = HUB, lang, variant = 'da
                 <span className="lv-eco-app-cta"><Download size={13} strokeWidth={2.4} aria-hidden="true" />{app.cta}</span>
               </span>
               <span className="lv-eco-app-shot" aria-hidden="true">
-                <img src={APP_SHOT} alt="" loading="lazy" decoding="async" width={468} height={1013} onError={(e) => { (e.currentTarget.parentElement as HTMLElement).style.display = 'none'; }} />
+                <img src={appShot(L)} alt="" loading="lazy" decoding="async" width={468} height={1013} onError={(e) => { (e.currentTarget.parentElement as HTMLElement).style.display = 'none'; }} />
               </span>
             </a>
           </div>
