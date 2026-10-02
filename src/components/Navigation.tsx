@@ -16,6 +16,9 @@ const WM_STYLE = { '--lv-wm-k': 6.65, '--lv-wm-max-md': '30px' } as CSSPropertie
 export default function Navigation() {
   const [open, setOpen] = useState(false);
   const { lang, tr } = useLang();
+  // fi/ja 1280–1439 px: standardinavissa (reunat 32 px) kielivalitsin työntyi 9–10 px
+  // oikeaan reunatilaan (mitattu 2.10.2026), joten linkkien sivutila 12 → 10 px vain niille.
+  const linkPad = lang === 'fi' || lang === 'ja' ? 'px-2.5 min-[90rem]:px-3' : 'px-3';
 
 
 
@@ -51,7 +54,7 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md" style={{ background: 'rgba(31, 22, 18, 0.92)', borderBottom: '1px solid rgba(245,235,224,0.10)' }}>
-      <div className="lv-navrivi max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3">
+      <div className="lv-navrivi max-w-screen-2xl mx-auto flex items-center justify-between gap-1.5 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3 xl:h-16 xl:px-8 xl:py-0">
         <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
           <div className="lv-wm-paikka">
@@ -69,7 +72,7 @@ export default function Navigation() {
               key={it.to}
               to={it.to}
               className={({ isActive }) =>
-                `px-3 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                `${linkPad} py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                   isActive ? 'bg-rose/20 text-rose' : 'text-gray-300 hover:text-white hover:bg-white/5'
                 }`
               }
