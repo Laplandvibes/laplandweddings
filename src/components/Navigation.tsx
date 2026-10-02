@@ -6,6 +6,11 @@ import { useLang } from '../i18n/LangContext';
 import type { Lang } from '../i18n/translations';
 import EcosystemMenu from '../shared/EcosystemMenu';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
+import type { CSSProperties } from 'react';
+
+// Sanamerkin leveys 1 px:n fontilla (Bebas Neue + tracking-wide). Puhelin- ja tablettinavissa koko lasketaan
+// tästä ja vapaasta tilasta (index.css LV-NAV-SANAMERKKI): 24 px (tabletilla 30 px), pienempi vain kun ei mahdu.
+const WM_STYLE = { '--lv-wm-k': 6.65, '--lv-wm-max-md': '30px' } as CSSProperties;
 
 
 export default function Navigation() {
@@ -46,14 +51,16 @@ export default function Navigation() {
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md" style={{ background: 'rgba(31, 22, 18, 0.92)', borderBottom: '1px solid rgba(245,235,224,0.10)' }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3">
-        <div className="flex items-center gap-3 sm:gap-5 shrink-0">
+      <div className="lv-navrivi max-w-7xl mx-auto flex items-center justify-between gap-1.5 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3">
+        <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
-          <L to="/" className="font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap inline-flex items-center min-h-11" onClick={() => setOpen(false)}>
-            <span style={{ color: '#F472B6' }}>#</span>
-            <span style={{ color: '#FFFFFF' }}>LAPLAND</span>
-            <span style={{ color: '#F472B6' }}>WEDDINGS</span>
-          </L>
+          <div className="lv-wm-paikka">
+            <L to="/" className="lv-wm font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap inline-flex items-center min-h-11" data-lv-sanamerkki="" style={WM_STYLE} onClick={() => setOpen(false)}>
+              <span style={{ color: '#F472B6' }}>#</span>
+              <span style={{ color: '#FFFFFF' }}>LAPLAND</span>
+              <span style={{ color: '#F472B6' }}>WEDDINGS</span>
+            </L>
+          </div>
         </div>
 
         <nav className="hidden xl:flex items-center gap-1">
