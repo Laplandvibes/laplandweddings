@@ -160,7 +160,6 @@ const t_ptBR = {
   footerLine: 'Parte da rede LaplandVibes · Não somos organizadores, comparamos as melhores opções para você.',
   legal: {
     terms: {
-      metaTitle: 'Termos de Uso',
       title: 'Termos de Uso',
       paragraphs: [
         'LaplandWeddings.online é um site informativo operado pela LaPeso Oy. Não somos uma agência de organização de casamentos, encaminhamos as solicitações a organizadores de casamentos.',
@@ -170,7 +169,6 @@ const t_ptBR = {
       ],
     },
     privacy: {
-      metaTitle: 'Privacidade',
       title: 'Política de Privacidade',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
@@ -192,7 +190,6 @@ const t_ptBR = {
       ],
     },
     cookies: {
-      metaTitle: 'Política de Cookies',
       title: 'Política de Cookies',
       paragraphs: [
         'Utilizamos cookies estritamente necessários para o funcionamento do site (preferência de idioma, consentimento).',

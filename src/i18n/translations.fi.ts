@@ -160,7 +160,6 @@ const t_fi = {
   footerLine: 'LaplandVibes-verkostosta · ei suunnittelutoimisto, vaan vertaamme parhaat puolestasi.',
   legal: {
     terms: {
-      metaTitle: 'Käyttöehdot',
       title: 'Käyttöehdot',
       paragraphs: [
         'LaplandWeddings.online on LaPeso Oy:n ylläpitämä infosivusto. Emme ole hääsuunnittelutoimisto, välitämme tiedustelut hääsuunnittelijoille.',
@@ -170,7 +169,6 @@ const t_fi = {
       ],
     },
     privacy: {
-      metaTitle: 'Tietosuoja',
       title: 'Tietosuojaseloste',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
@@ -192,7 +190,6 @@ const t_fi = {
       ],
     },
     cookies: {
-      metaTitle: 'Evästeseloste',
       title: 'Evästeseloste',
       paragraphs: [
         'Käytämme välttämättömiä evästeitä sivuston toiminnan vuoksi (kielivalinta, suostumukset).',

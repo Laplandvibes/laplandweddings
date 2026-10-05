@@ -1,12 +1,13 @@
 import Section from '../../components/Section';
 import SEO from '../../components/SEO';
+import { LEGAL_META } from '../../lib/legalMeta.mjs';
 import { useTr, useLang } from '../../i18n/LangContext';
 
 export default function Privacy() {
   const tr = useTr();
   // useLang palauttaa koko kontekstin, ei kielikoodia — vrt. LangContextValue.
   const { dataLang } = useLang();
-  const { metaTitle, title, controllerLabel, paragraphs, newsletterBefore, unsubLabel, newsletterAfter } =
+  const { title, controllerLabel, paragraphs, newsletterBefore, unsubLabel, newsletterAfter } =
     tr.legal.privacy;
 
   /**
@@ -23,7 +24,7 @@ export default function Privacy() {
   const unsubHref = `https://laplandvibes.com/${seg ? `${seg}/` : ''}unsubscribe/`;
   return (
     <>
-      <SEO title={metaTitle} description={paragraphs[0]} /* localized: the hardcoded English literal overwrote every locale's prerendered description on hydration (es/en passes 19.9.2026) */ path="/privacy" />
+      <SEO title={LEGAL_META['/privacy'][dataLang].title} description={LEGAL_META['/privacy'][dataLang].description} path="/privacy" />
       <Section title={title} titleAs="h1">
         <div className="prose prose-invert max-w-3xl mx-auto text-gray-300 space-y-4">
           <p>
