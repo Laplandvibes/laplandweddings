@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { venueTitle } from '../lib/venueTitle.mjs';
+import { VENUE_DESCRIPTION } from '../lib/venueMeta.mjs';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
@@ -247,7 +248,7 @@ export default function VenuePage() {
     <>
       <SEO
         title={venueTitle(v.name, v.region[dataLang], dataLang)}
-        description={v.description[dataLang].slice(0, 160)}
+        description={VENUE_DESCRIPTION[v.slug]?.[dataLang] ?? ''}
         path={`/venues/${v.slug}`}
         image={v.image}
         jsonLd={{

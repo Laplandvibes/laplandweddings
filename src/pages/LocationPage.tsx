@@ -3,6 +3,8 @@ import { priceTierLabel } from '../components/PriceTierBadge';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import { locationTitle } from '../lib/routeTitle.mjs';
+import { LOCATION_DESCRIPTION } from '../lib/locationMeta.mjs';
 import LeadForm from '../components/LeadForm';
 import { locations, locationImage } from '../data/locations';
 import { getVenueBySlug } from '../data/venues';
@@ -17,20 +19,7 @@ import EditorsPickChip from '../components/EditorsPickChip';
 import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
-const P: Record<'weddings' | 'venuesInRegion', Localized<string>> = {
-  weddings: {
-    en: 'Weddings',
-    fi: 'Häät',
-    de: 'Hochzeiten',
-    ja: '結婚式',
-    es: 'Bodas',
-    'pt-BR': 'Casamentos',
-    'zh-CN': '婚礼',
-    ko: '웨딩',
-    fr: 'Mariages',
-    it: 'Matrimoni',
-    nl: 'Bruiloften', sv: 'Bröllop',
-  },
+const P: Record<'venuesInRegion', Localized<string>> = {
   venuesInRegion: {
     en: 'Wedding venues in this region',
     fi: 'Hääpaikat tällä alueella',
@@ -67,8 +56,8 @@ export default function LocationPage() {
   return (
     <>
       <SEO
-        title={`${loc.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.weddings, lang)}`}
-        description={loc.intro[dataLang].slice(0, 160)}
+        title={locationTitle(loc.name[dataLang], dataLang)}
+        description={LOCATION_DESCRIPTION[loc.slug]?.[dataLang] ?? ''}
         path={`/locations/${loc.slug}`}
         image={locationImage(loc).src}
         jsonLd={{

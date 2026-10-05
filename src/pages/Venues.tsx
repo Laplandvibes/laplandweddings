@@ -6,6 +6,7 @@ import L from '../components/L';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import { STATIC_META } from '../lib/staticMeta.mjs';
 import { useLang } from '../i18n/LangContext';
 import { venues, type PriceTier } from '../data/venues';
 import { locations } from '../data/locations';
@@ -19,7 +20,7 @@ import EditorsPickChip from '../components/EditorsPickChip';
 import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
-const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'independence', Localized<string>> = {
+const P: Record<'imageAlt' | 'independence', Localized<string>> = {
   independence: {
     fi: 'Nämä ovat Lapin tunnetuimmat paikat, joissa häitä vietetään. Emme edusta niitä emmekä järjestä häitä. Jos jokin paikka on jo mielessänne, kirjoittakaa se lomakkeeseen, niin toive kulkee sellaisenaan eteenpäin.',
     en: 'These are the best-known places in Lapland where weddings are held. We do not represent them and we do not organise weddings. If you already have a venue in mind, write it in the form and your wish is passed on exactly as you gave it.',
@@ -33,32 +34,6 @@ const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt' | 'independence', Localized<
     it: 'Questi sono i luoghi più noti della Lapponia in cui si celebrano matrimoni. Non li rappresentiamo e non organizziamo matrimoni. Se ha già una location in mente, la scriva nel modulo: il Suo desiderio viene trasmesso così com’è.',
     nl: 'Dit zijn de bekendste plekken in Lapland waar bruiloften worden gevierd. Wij vertegenwoordigen ze niet en organiseren geen bruiloften. Heeft u al een locatie op het oog, zet die dan in het formulier: uw wens gaat ongewijzigd door.',
     sv: 'Det här är de mest kända platserna i Lappland där bröllop hålls. Vi företräder dem inte och vi arrangerar inga bröllop. Har ni redan en plats i tankarna, skriv in den i formuläret så förs önskemålet vidare precis som ni angav det.',
-  },
-  seoTitle: {
-    en: 'Lapland Wedding Venues: 21 places',
-    fi: 'Hääpaikat Lapissa: 21 kohdetta',
-    de: 'Hochzeitslocations in Lappland',
-    ja: 'ラップランドのウェディング会場：20か所',
-    es: 'Lugares para bodas en Laponia: 21',
-    'pt-BR': 'Locais para casamento na Lapônia',
-    'zh-CN': '拉普兰婚礼场地：20 个场地',
-    ko: '라플란드 웨딩 장소: 20곳',
-    fr: 'Lieux de mariage en Laponie',
-    it: 'Location per matrimoni in Lapponia',
-    nl: 'Trouwlocaties in Lapland: 20 locaties', sv: 'Bröllopsplatser i Lappland: 20 platser',
-  },
-  seoDesc: {
-    en: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village and more. 21 Lapland wedding venues across the regions. We represent none of them.',
-    fi: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village ja muita. 20 hääpaikkaa Lapin paikkakunnilla. Emme edusta yhtäkään niistä.',
-    de: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village und mehr. 21 Hochzeitsorte in ganz Lappland. Wir vertreten keinen davon.',
-    ja: 'カクスラウッタネン、ノーザンライツ・ランチ、アークティック・スノーホテル、スノービレッジほか。各地域の会場20か所。いずれの代理店でもありません。',
-    es: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village y más. 20 lugares para bodas en toda Laponia. No representamos a ninguno.',
-    'pt-BR': 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e mais. 20 locais de casamento em toda a Lapônia. Não representamos nenhum.',
-    'zh-CN': 'Kakslauttanen、Northern Lights Ranch、Arctic SnowHotel、Snow Village 等。遍布拉普兰各地的 21 个婚礼场地。我们不代理其中任何一家。',
-    ko: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village 등. 라플란드 전역의 웨딩 장소 20곳. 저희는 그 어느 곳도 대리하지 않습니다.',
-    fr: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village et plus. 20 lieux de mariage dans toute la Laponie. Nous n’en représentons aucun.',
-    it: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e altri. 20 location per matrimoni in tutta la Lapponia. Non ne rappresentiamo nessuna.',
-    nl: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 21 trouwlocaties verspreid over Lapland. Wij vertegenwoordigen er geen enkele.', sv: 'Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. 21 bröllopsplatser runt om i Lappland. Vi företräder ingen av dem.',
   },
   imageAlt: {
     en: 'The purple-lit snow corridor and ice stairs inside Levi Ice Castle',
@@ -105,8 +80,8 @@ export default function Venues() {
   return (
     <>
       <SEO
-        title={pickLocalized(P.seoTitle, lang)}
-        description={pickLocalized(P.seoDesc, lang)}
+        title={STATIC_META['/venues'][lang].title}
+        description={STATIC_META['/venues'][lang].description}
         path="/venues"
         jsonLd={{
           '@context': 'https://schema.org',

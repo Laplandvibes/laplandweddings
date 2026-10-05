@@ -5,6 +5,7 @@ import nordicnestPicks from '../shared/ads/data/nordicnestPicks'
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import { STATIC_META } from '../lib/staticMeta.mjs';
 import NewsletterSignup from '../components/NewsletterSignup';
 import RelatedSites from '../components/RelatedSites';
 import { useLang } from '../i18n/LangContext';
@@ -62,41 +63,9 @@ const isSummerSeason = (): boolean => { const m = new Date().getMonth() + 1; ret
 export default function Home() {
   const { lang, dataLang, tr } = useLang();
 
-  // HOME meta <title> — leads with the "Lapland Weddings" keyword + concrete
-  // value (venues + marriage paperwork). All 12 locales native (no EN bleed).
-  const SEO_TITLE: Record<Lang, string> = {
-    en: 'Lapland Weddings: 20 Arctic Venues and What They Cost',
-    fi: 'Häät Lapissa: 20 hääpaikkaa jääkappelista lasi-igluun',
-    de: 'Hochzeit in Lappland: Locations & Heiratspapiere',
-    ja: 'ラップランドの結婚式：会場と婚姻手続き',
-    es: 'Bodas en Laponia: lugares y trámites de boda',
-    'pt-BR': 'Casamentos na Lapônia: locais e documentação',
-    'zh-CN': '拉普兰婚礼：婚礼场地与结婚手续',
-    ko: '라플란드 결혼식: 예식장과 혼인 서류',
-    fr: 'Mariage en Laponie : lieux, prix et démarches',
-    it: 'Matrimonio in Lapponia: location e pratiche di nozze',
-    nl: 'Trouwen in Lapland: locaties en huwelijkspapieren',
-    sv: 'Bröllop i Lappland: vigselplatser och äktenskapspapper',
-  };
-  const seoTitle = SEO_TITLE[lang];
-  // Description states only what the site actually contains. The old version
-  // promised "7 planners"; the data holds 6 wedding *photographers* and no
-  // planner directory at all, so both the number and the profession were wrong
-  // (same class of error as the "11 languages" claim, Vesa 2026-07-27).
-  const seoDesc = pick(lang, {
-    fi: 'Riippumaton opas häihin Lapissa: 20 hääpaikkaa, 8 paikkakuntaa, symbolinen ja juridinen seremonia, todelliset kustannukset. Emme edusta yhtäkään paikkaa.',
-    en: 'An independent guide to getting married in Lapland: 20 venues, 8 regions, symbolic and legal ceremonies, real costs. We represent none of the venues.',
-    de: 'Unabhängiger Leitfaden zum Heiraten in Lappland: 20 Locations, 8 Regionen, symbolische und rechtsgültige Trauung, echte Kosten. Wir vertreten keine davon.',
-    ja: '独立した立場でまとめたラップランド結婚式ガイド。会場20か所、エリア8か所、シンボリック挙式と法的婚姻、実際にかかる費用。当サイトはいずれの会場の代理店でもありません。',
-    es: 'Una guía independiente para casarse en Laponia: 20 lugares, 8 regiones, ceremonia simbólica y matrimonio civil, costos reales. No representamos a ninguno de los lugares.',
-    'pt-BR': 'Um guia independente para casar na Lapônia: 20 locais, 8 regiões, cerimônias simbólicas e legais, custos reais. Não representamos nenhum dos locais.',
-    'zh-CN': '拉普兰婚礼独立指南：20个场地、8个地区、象征性仪式与法定仪式、真实费用。我们不代理任何一家场地。',
-    ko: '라플란드 결혼식을 위한 독립적인 안내서입니다. 결혼식 장소 20곳, 지역 8곳, 상징 예식과 법적 혼인, 실제 비용을 정리했습니다. 저희는 어떤 장소도 대리하지 않습니다.',
-    fr: 'Un guide indépendant pour se marier en Laponie : 20 lieux, 8 régions, cérémonie symbolique ou mariage civil, coûts réels. Nous ne représentons aucun de ces lieux.',
-    it: 'Una guida indipendente per sposarsi in Lapponia: 20 location, 8 regioni, cerimonia simbolica e matrimonio civile, costi reali. Non rappresentiamo nessuna delle location.',
-    nl: 'Een onafhankelijke gids voor trouwen in Lapland: 20 locaties, 8 regio’s, symbolische en wettelijke ceremonie, echte kosten. Wij vertegenwoordigen geen enkele locatie.',
-    sv: 'En oberoende guide till att gifta sig i Lappland: 20 platser, 8 regioner, symbolisk och juridisk vigsel, verkliga kostnader. Vi företräder ingen av platserna.',
-  });
+  // <title> and meta description: src/lib/staticMeta.mjs, the same object scripts/prerender-meta.mjs writes
+  // into the prerendered HTML (one source since 2026-10-05).
+  const seo = STATIC_META['/'][lang];
 
   const featuredVenues = venues.slice(0, 6);
 
@@ -128,15 +97,15 @@ export default function Home() {
   return (
     <>
       <SEO
-        title={seoTitle}
-        description={seoDesc}
+        title={seo.title}
+        description={seo.description}
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'LaplandWeddings',
           url: 'https://laplandweddings.online',
-          description: seoDesc,
+          description: seo.description,
           areaServed: 'Finnish Lapland',
           parentOrganization: {
             '@type': 'Organization',

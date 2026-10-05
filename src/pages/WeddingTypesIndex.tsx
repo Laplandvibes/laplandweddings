@@ -3,39 +3,14 @@ import PageHero from '../components/PageHero';
 import ImgCredit from '../components/ImgCredit';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import { STATIC_META } from '../lib/staticMeta.mjs';
 import { useLang } from '../i18n/LangContext';
 import { weddingTypes } from '../data/weddingTypes';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
 
-const P: Record<'seoTitle' | 'seoDesc' | 'imageAlt', Localized<string>> = {
-  seoTitle: {
-    en: 'Lapland Wedding Types: Aurora, Snow Chapel, Glass Igloo',
-    fi: 'Häätyypit Lapissa: revontulet',
-    de: 'Hochzeitsarten in Lappland',
-    ja: 'ラップランドの結婚式タイプ：オーロラ、雪の礼拝堂、グラスイグルー',
-    es: 'Tipos de boda en Laponia',
-    'pt-BR': 'Tipos de casamento na Lapônia',
-    'zh-CN': '拉普兰婚礼类型：北极光、雪教堂、玻璃冰屋',
-    ko: '라플란드 웨딩 유형: 오로라, 스노우 채플, 글래스 이글루',
-    fr: 'Types de mariage en Laponie',
-    it: 'Tipi di matrimonio in Lapponia',
-    nl: 'Soorten bruiloften in Lapland', sv: 'Bröllopstyper i Lappland: norrsken, snökapell, glasiglo',
-  },
-  seoDesc: {
-    en: 'Six Lapland wedding types: Northern Lights, snow chapel, glass igloo, midnight sun, elopement, and vow renewal.',
-    fi: 'Kuusi häätyyppiä Lapissa: revontuli, lumikappeli, lasi-iglu, keskiyön aurinko, elopement ja lupausten uusiminen.',
-    de: 'Sechs Hochzeitsarten in Lappland: Polarlichter, Schneekapelle, Glasiglu, Mitternachtssonne, Elopement und Erneuerung des Eheversprechens.',
-    ja: 'ラップランドの6つの結婚式タイプ：オーロラ、雪の礼拝堂、グラスイグルー、白夜、エロープメント、誓いの更新。',
-    es: 'Seis tipos de boda en Laponia: auroras boreales, capilla de nieve, iglú de cristal, sol de medianoche, elopement y renovación de votos.',
-    'pt-BR': 'Seis tipos de casamento na Lapônia: aurora boreal, capela de neve, iglu de vidro, sol da meia-noite, elopement e renovação de votos.',
-    'zh-CN': '拉普兰六种婚礼类型：北极光、雪教堂、玻璃冰屋、午夜阳光、私奔婚礼和重申誓言。',
-    ko: '라플란드의 여섯 가지 웨딩 유형: 오로라, 스노우 채플, 글래스 이글루, 백야, 엘로프먼트, 서약 갱신.',
-    fr: 'Six types de mariage en Laponie : aurores boréales, chapelle de neige, igloo de verre, soleil de minuit, elopement et renouvellement des vœux.',
-    it: 'Sei tipi di matrimonio in Lapponia: aurora boreale, cappella di neve, igloo di vetro, sole di mezzanotte, elopement e rinnovo delle promesse.',
-    nl: 'Zes soorten bruiloften in Lapland: noorderlicht, sneeuwkapel, glazen iglo, middernachtzon, elopement en hernieuwing van geloften.', sv: 'Sex bröllopstyper i Lappland: norrsken, snökapell, glasigloo, midnattssol, elopement och förnyade löften.',
-  },
+const P: Record<'imageAlt', Localized<string>> = {
   imageAlt: {
     en: 'The ice hall of Kemi SnowCastle in blue light',
     fi: 'Kemin LumiLinnan jääsali sinisessä valossa',
@@ -57,8 +32,8 @@ export default function WeddingTypesIndex() {
   return (
     <>
       <SEO
-        title={pickLocalized(P.seoTitle, lang)}
-        description={pickLocalized(P.seoDesc, lang)}
+        title={STATIC_META['/wedding-types'][lang].title}
+        description={STATIC_META['/wedding-types'][lang].description}
         path="/wedding-types"
       />
       <PageHero

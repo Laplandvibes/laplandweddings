@@ -1,6 +1,7 @@
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import { STATIC_META } from '../lib/staticMeta.mjs';
 import LeadForm from '../components/LeadForm';
 import SeasonBand from '../components/SeasonBand';
 import { seasonal, type SeasonalImage } from '../data/season';
@@ -33,7 +34,7 @@ import { ui } from '../data/uiStrings';
 type Bag = Localized<string>;
 
 const P: Record<
-  | 'seoTitle' | 'seoDesc' | 'title' | 'subtitle' | 'imageAlt'
+  | 'title' | 'subtitle' | 'imageAlt'
   | 'costTitle' | 'costBody' | 'costLink'
   | 'askTitle' | 'ask1' | 'ask2' | 'ask3' | 'ask4'
   | 'whenTitle' | 'whenBody' | 'whenPeak' | 'whenOff'
@@ -41,34 +42,6 @@ const P: Record<
   | 'note',
   Bag
 > = {
-  seoTitle: {
-    en: 'Wedding Photography in Lapland: Costs, Questions, Timing',
-    fi: 'Hääkuvaus Lapissa: hinnat, kysymykset ja ajoitus',
-    de: 'Hochzeitsfotografie in Lappland: Kosten, Fragen, Zeitplan',
-    ja: 'フィンランド・ラップランドでフォトウェディング：費用と準備',
-    es: 'Fotografía de boda en Laponia: costos, preguntas y fechas',
-    'pt-BR': 'Fotografia de casamento na Lapônia: custos, perguntas e datas',
-    'zh-CN': '拉普兰婚礼摄影：费用、问题与时间',
-    ko: '라플란드 웨딩 촬영: 비용, 질문, 예약 시기',
-    fr: 'Photographe de mariage en Laponie : tarifs, questions, calendrier',
-    it: 'Fotografo di matrimonio in Lapponia: costi, domande, tempi',
-    nl: 'Trouwfotografie in Lapland: kosten, vragen, timing',
-    sv: 'Bröllopsfotograf i Lappland: kostnad, frågor, tidpunkt',
-  },
-  seoDesc: {
-    en: 'What a wedding photographer costs in Lapland, four questions to ask before booking, and when the winter dates fill up. Independent guide, no photographer represented.',
-    fi: 'Mitä hääkuvaaja maksaa Lapissa, neljä kysymystä ennen varausta ja milloin talven päivät täyttyvät. Riippumaton opas, emme edusta yhtäkään kuvaajaa.',
-    de: 'Was ein Hochzeitsfotograf in Lappland kostet, vier Fragen vor der Buchung und wann die Wintertermine voll sind. Unabhängiger Leitfaden, wir vertreten keinen Fotografen.',
-    ja: 'ラップランドの結婚式撮影の費用、予約前に確認したい4つの質問、冬の日程が埋まる時期。独立した立場のガイドで、特定のフォトグラファーを代理していません。',
-    es: 'Cuánto cuesta un fotógrafo de boda en Laponia, cuatro preguntas antes de reservar y cuándo se agotan las fechas de invierno. Guía independiente, no representamos a ningún fotógrafo.',
-    'pt-BR': 'Quanto custa um fotógrafo de casamento na Lapônia, quatro perguntas antes de reservar e quando as datas de inverno esgotam. Guia independente, não representamos nenhum fotógrafo.',
-    'zh-CN': '拉普兰婚礼摄影师的费用、预订前要问的四个问题，以及冬季档期何时订满。独立指南，不代理任何摄影师。',
-    ko: '라플란드 웨딩 촬영 비용, 예약 전 확인할 네 가지 질문, 겨울 날짜가 마감되는 시기. 독립적인 안내서이며 어떤 포토그래퍼도 대리하지 않습니다.',
-    fr: 'Ce que coûte un photographe de mariage en Laponie, quatre questions à poser avant de réserver et quand les dates d’hiver se remplissent. Guide indépendant, aucun photographe représenté.',
-    it: 'Quanto costa un fotografo di matrimonio in Lapponia, quattro domande da fare prima di prenotare e quando si esauriscono le date invernali. Guida indipendente, nessun fotografo rappresentato.',
-    nl: 'Wat een trouwfotograaf in Lapland kost, vier vragen om te stellen voor u boekt en wanneer de winterdata vol raken. Onafhankelijke gids, wij vertegenwoordigen geen fotograaf.',
-    sv: 'Vad en bröllopsfotograf kostar i Lappland, fyra frågor att ställa innan du bokar och när vinterdatumen tar slut. Oberoende guide, vi företräder ingen fotograf.',
-  },
   title: {
     en: 'Wedding photography in Lapland',
     fi: 'Hääkuvaus Lapissa',
@@ -374,8 +347,8 @@ export default function Photographers() {
   return (
     <>
       <SEO
-        title={t('seoTitle')}
-        description={t('seoDesc')}
+        title={STATIC_META['/photographers'][lang].title}
+        description={STATIC_META['/photographers'][lang].description}
         path="/photographers"
         image="/images/heroes/inari-midnight-sun-pier-teker.jpg"
       />

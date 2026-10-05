@@ -7,13 +7,17 @@
  *   src/data/weddingTypes.ts  name{12}   →  route-i18n.json  types[].name
  *   src/data/venues.ts        region{12} →  route-i18n.json  venues[].region
  *
+ * All 12 locales, en and fi included (2026-10-05). Before that en and fi came
+ * from a hand-kept copy inside prerender-meta.mjs, which had drifted from the
+ * registry in five venue regions, and the browser builds the same <title> from
+ * the registry: one source means both sides read these values.
+ *
  * ── WHY THIS EXISTS ──────────────────────────────────────────────────────────
- * `scripts/prerender-meta.mjs` carries its own copy of the route data. For the
- * DESCRIPTIONS that duplication is deliberate and must stay: the registries hold
- * page prose (venues.ts description.en for kakslauttanen is 306 chars) while the
- * prerenderer holds a meta description written to survive Google's ~155-char
- * truncation (the same venue: 119 chars). Replacing one with the other would
- * make the search result worse, so this script does NOT touch `desc`.
+ * The registries hold page prose (venues.ts description.en for kakslauttanen is
+ * 306 chars), while a meta description is written to survive Google's ~155-char
+ * truncation (the same venue: 119 chars). So the DESCRIPTIONS are not synced
+ * from the registry: they live in src/lib/{venue,location,type}Meta.mjs, which
+ * both the prerenderer and the page components import.
  *
  * The NAMES are a different case. `name` / `region` are short identifiers with
  * exactly the same job in both places, and the registries are the hand-maintained,
@@ -24,7 +28,7 @@
  * (Weihnachtsmanndorf, Kerstmandorp, Jultomtens by, サンタクロース村 …) while the
  * generated file kept English for de, es, it, ja, nl, pt-BR and sv.
  *
- * So: names come from the registry, descriptions stay hand-written per surface.
+ * So: names come from the registry, meta descriptions from src/lib/*Meta.mjs.
  *
  * ── FAIL LOUD ────────────────────────────────────────────────────────────────
  * Same contract as `sync-venues.mjs`: these registries are TypeScript parsed with
@@ -43,7 +47,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const TARGET = resolve(__dirname, 'route-i18n.json');
 
-const LOCALES = ['de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
+const LOCALES = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 
 /**
  * Pull `slug` → { locale: value } for one multilingual field out of a registry.
@@ -108,8 +112,9 @@ for (const [group, { data, field }] of Object.entries(registry)) {
       const en = data[entry.slug]?.en;
       before[`${group}.${field}`] ??= 0;
       after[`${group}.${field}`] ??= 0;
-      if (entry[field] === en) before[`${group}.${field}`]++;
-      if (authoritative === en) after[`${group}.${field}`]++;
+      // The English row equals English by definition: count only the other locales.
+      if (locale !== 'en' && entry[field] === en) before[`${group}.${field}`]++;
+      if (locale !== 'en' && authoritative === en) after[`${group}.${field}`]++;
 
       if (entry[field] !== authoritative) {
         entry[field] = authoritative;

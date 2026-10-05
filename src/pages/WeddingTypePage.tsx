@@ -3,6 +3,8 @@ import PageHero from '../components/PageHero';
 import { AURORA_VIDEO } from '../data/heroVideo';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import { typeTitle } from '../lib/routeTitle.mjs';
+import { TYPE_DESCRIPTION } from '../lib/typeMeta.mjs';
 import LeadForm from '../components/LeadForm';
 import { weddingTypes } from '../data/weddingTypes';
 import { getVenueBySlug } from '../data/venues';
@@ -17,20 +19,7 @@ import EditorsPickChip from '../components/EditorsPickChip';
 import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
 import { editorialCopy } from '../data/editorialCopy';
 
-const P: Record<'titleSuffix' | 'suitableVenues', Localized<string>> = {
-  titleSuffix: {
-    en: 'Lapland Weddings',
-    fi: 'Häät Lapissa',
-    de: 'Hochzeiten in Lappland',
-    ja: 'ラップランドの結婚式',
-    es: 'Bodas en Laponia',
-    'pt-BR': 'Casamentos na Lapônia',
-    'zh-CN': '拉普兰婚礼',
-    ko: '라플란드 웨딩',
-    fr: 'Mariages en Laponie',
-    it: 'Matrimoni in Lapponia',
-    nl: 'Bruiloften in Lapland', sv: 'Bröllop i Lappland',
-  },
+const P: Record<'suitableVenues', Localized<string>> = {
   suitableVenues: {
     en: 'Suitable venues',
     fi: 'Sopivat hääpaikat',
@@ -67,8 +56,8 @@ export default function WeddingTypePage() {
   return (
     <>
       <SEO
-        title={`${wt.name[dataLang]}${lang === 'ja' || lang === 'zh-CN' ? '：' : lang === 'fr' ? ' : ' : ': '}${pickLocalized(P.titleSuffix, lang)}`}
-        description={wt.tagline[dataLang] + ': ' + wt.description[dataLang].slice(0, 140)}
+        title={typeTitle(wt.slug, wt.name[dataLang], dataLang)}
+        description={TYPE_DESCRIPTION[wt.slug]?.[dataLang] ?? ''}
         path={`/wedding-types/${wt.slug}`}
         image={wt.heroImage}
       />

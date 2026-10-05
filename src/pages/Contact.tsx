@@ -1,8 +1,7 @@
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
 import { useLang } from '../i18n/LangContext';
-import { pickLocalized } from '../data/localized';
-import { DIAG } from '../data/diagramText';
+import { STATIC_META } from '../lib/staticMeta.mjs';
 
 /**
  * /contact — the quote form on its own page, form first.
@@ -15,10 +14,10 @@ import { DIAG } from '../data/diagramText';
  */
 export default function Contact() {
   const { lang, tr } = useLang();
-  const description = `${tr.contact.formSub} ${tr.contact.subtitle}`;
+  const lead = `${tr.contact.formSub} ${tr.contact.subtitle}`;
   return (
     <>
-      <SEO title={pickLocalized(DIAG.contactSeoTitle, lang)} description={description} path="/contact" />
+      <SEO title={STATIC_META['/contact'][lang].title} description={STATIC_META['/contact'][lang].description} path="/contact" />
       <section id="quote" className="pt-10 sm:pt-16 pb-10 sm:pb-20">
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <div className="text-center mb-8 sm:mb-14 max-w-3xl mx-auto">
@@ -28,7 +27,7 @@ export default function Contact() {
             <h1 className="font-heading text-[26px] leading-tight sm:text-4xl text-white mb-3 sm:mb-4 tracking-wide [text-wrap:balance]">
               {tr.contact.formTitle}
             </h1>
-            <p className="text-[15px] sm:text-lg text-gray-400 leading-relaxed [text-wrap:pretty]">{description}</p>
+            <p className="text-[15px] sm:text-lg text-gray-400 leading-relaxed [text-wrap:pretty]">{lead}</p>
           </div>
           <LeadForm />
         </div>

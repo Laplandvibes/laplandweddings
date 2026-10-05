@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Printer } from 'lucide-react';
 import SEO from '../components/SEO';
+import { STATIC_META } from '../lib/staticMeta.mjs';
 import ChecklistGate from '../components/ChecklistGate';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
@@ -20,8 +21,6 @@ interface ChecklistItem {
 }
 
 interface ChecklistContent {
-  seoTitle: string;
-  seoDesc: string;
   eyebrow: string;
   title: string;
   subtitle: string;
@@ -42,8 +41,6 @@ const DVV_LINK = { url: 'https://dvv.fi/en/examination-of-impediments-to-marriag
 
 const CONTENT: Localized<ChecklistContent> = {
   en: {
-    seoTitle: 'DVV Wedding Checklist for Foreign Couples',
-    seoDesc: 'A one-page checklist for foreign couples planning to marry in Finnish Lapland. DVV paperwork, witnesses, officiant. Print as PDF.',
     eyebrow: 'Free download',
     title: 'Marrying in Lapland: DVV checklist for foreign couples',
     subtitle: 'A one-page checklist covering every document and step required when a foreign couple wants to marry in Finnish Lapland. Print or save as PDF for your travel folder.',
@@ -70,8 +67,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   fi: {
-    seoTitle: 'DVV-tarkistuslista: vihille Lapissa',
-    seoDesc: 'Yksisivuinen tarkistuslista ulkomaalaisille pareille, jotka aikovat vihille Suomen Lapissa. DVV-paperit, todistajat, vihkijä. Printtaa PDF:nä.',
     eyebrow: 'Lead magnet',
     title: 'Vihille Lapissa: DVV-tarkistuslista ulkomaalaisille pareille',
     subtitle: 'Tämä yksisivuinen tarkistuslista käy läpi kaikki paperit ja askeleet, jotka tarvitaan kun ulkomaalainen pari haluaa vihille Suomen Lapissa. Printtaa tai tallenna PDF:nä matkalle.',
@@ -98,8 +93,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   de: {
-    seoTitle: 'DVV-Checkliste für ausländische Paare',
-    seoDesc: 'Eine einseitige Checkliste für ausländische Paare, die im finnischen Lappland heiraten möchten. DVV-Unterlagen, Trauzeugen, Trauredner. Als PDF drucken.',
     eyebrow: 'Kostenloser Download',
     title: 'Heiraten in Lappland: DVV-Checkliste für ausländische Paare',
     subtitle: 'Eine einseitige Checkliste mit allen Dokumenten und Schritten, die ein ausländisches Paar für eine Hochzeit im finnischen Lappland benötigt. Drucken oder als PDF für Ihre Reiseunterlagen speichern.',
@@ -126,8 +119,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   ja: {
-    seoTitle: '外国人カップル向けDVVウェディング・チェックリスト',
-    seoDesc: 'フィンランド領ラップランドで結婚を予定する外国人カップルのための1ページのチェックリスト。DVV手続き、証人、司式者。PDFで印刷可能。',
     eyebrow: '特典コンテンツ',
     title: 'ラップランドで結婚：外国人カップル向けDVVチェックリスト',
     subtitle: '外国人カップルがフィンランド領ラップランドで結婚する際に必要な書類とステップをすべて網羅した1ページのチェックリスト。印刷するか、旅行用フォルダにPDFで保存できます。',
@@ -154,8 +145,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   es: {
-    seoTitle: 'Lista DVV para parejas extranjeras',
-    seoDesc: 'Una lista de una página para parejas extranjeras que planean casarse en la Laponia finlandesa. Trámites del DVV, testigos, oficiante. Imprima o guarde en PDF.',
     eyebrow: 'Recurso gratuito',
     title: 'Casarse en Laponia: lista de verificación DVV para parejas extranjeras',
     subtitle: 'Una lista de una página con todos los documentos y pasos necesarios cuando una pareja extranjera quiere casarse en la Laponia finlandesa. Imprima o guarde como PDF para su carpeta de viaje.',
@@ -182,8 +171,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   'pt-BR': {
-    seoTitle: 'Checklist do DVV para casais estrangeiros',
-    seoDesc: 'Uma checklist de uma página para casais estrangeiros que planejam se casar na Lapônia finlandesa. Documentação do DVV, testemunhas, celebrante.',
     eyebrow: 'Material gratuito',
     title: 'Casar na Lapônia: checklist do DVV para casais estrangeiros',
     subtitle: 'Uma checklist de uma página com todos os documentos e etapas necessários quando um casal estrangeiro quer se casar na Lapônia finlandesa. Imprima ou salve como PDF para sua pasta de viagem.',
@@ -210,8 +197,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   'zh-CN': {
-    seoTitle: '外国情侣 DVV 婚礼清单',
-    seoDesc: '为计划在芬兰拉普兰结婚的外国情侣准备的一页清单。DVV 手续、证婚人、主婚人，可打印为 PDF。',
     eyebrow: '免费资源',
     title: '在拉普兰结婚，外国情侣 DVV 清单',
     subtitle: '一页清单，涵盖外国情侣在芬兰拉普兰结婚所需的所有文件和步骤。可打印或保存为 PDF 放入旅行资料夹。',
@@ -238,8 +223,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   ko: {
-    seoTitle: '외국인 커플을 위한 DVV 웨딩 체크리스트',
-    seoDesc: '핀란드 라플란드에서 결혼을 계획하는 외국인 커플을 위한 한 장짜리 체크리스트. DVV 서류, 증인, 주례. PDF으로 인쇄 가능.',
     eyebrow: '무료 리드 마그넷',
     title: '라플란드에서 결혼하기: 외국인 커플을 위한 DVV 체크리스트',
     subtitle: '외국인 커플이 핀란드 라플란드에서 결혼할 때 필요한 모든 서류와 단계를 담은 한 장짜리 체크리스트. 인쇄하거나 여행 폴더에 PDF으로 저장하세요.',
@@ -266,8 +249,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   fr: {
-    seoTitle: 'Checklist DVV pour les couples étrangers',
-    seoDesc: 'Une checklist d’une page pour les couples étrangers qui prévoient de se marier en Laponie finlandaise. Formalités DVV, témoins, officiant. À imprimer en PDF.',
     eyebrow: 'Ressource gratuite',
     title: 'Se marier en Laponie : checklist DVV pour les couples étrangers',
     subtitle: 'Une checklist d’une page couvrant tous les documents et étapes nécessaires lorsqu’un couple étranger souhaite se marier en Laponie finlandaise. Imprimez-la ou enregistrez-la en PDF pour votre dossier de voyage.',
@@ -294,8 +275,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   it: {
-    seoTitle: 'Checklist DVV per coppie straniere',
-    seoDesc: 'Una checklist di una pagina per le coppie straniere che vogliono sposarsi nella Lapponia finlandese. Documenti DVV, testimoni, celebrante. Da stampare in PDF.',
     eyebrow: 'Risorsa gratuita',
     title: 'Sposarsi in Lapponia: checklist DVV per coppie straniere',
     subtitle: 'Una checklist di una pagina con tutti i documenti e i passaggi necessari quando una coppia straniera vuole sposarsi nella Lapponia finlandese. La stampi o la salvi in PDF per la Sua cartella di viaggio.',
@@ -322,8 +301,6 @@ const CONTENT: Localized<ChecklistContent> = {
     ],
   },
   nl: {
-    seoTitle: 'DVV-checklist voor buitenlandse stellen',
-    seoDesc: 'Een checklist van één pagina voor buitenlandse stellen die in Fins Lapland willen trouwen. DVV-papierwerk, getuigen, voltrekker. Print als pdf.',
     eyebrow: 'Gratis weggever',
     title: 'Trouwen in Lapland: DVV-checklist voor buitenlandse stellen',
     subtitle: 'Een checklist van één pagina met elk document en elke stap die nodig is wanneer een buitenlands stel in Fins Lapland wil trouwen. Print of bewaar als pdf voor uw reismap.',
@@ -349,8 +326,6 @@ const CONTENT: Localized<ChecklistContent> = {
       { sec: 'D', do: 'Registreer het huwelijk in uw eigen land', why: 'In EU-landen meestal binnen een maand. Daarna is het huwelijk zowel thuis als in Finland geregistreerd.' },
     ],
   }, sv: {
-    seoTitle: 'DVV Wedding Checklist for Foreign Couples',
-    seoDesc: 'A one-page checklist for foreign couples planning to marry in Finnish Lapland. DVV paperwork, witnesses, officiant. Print as PDF.',
     eyebrow: 'Free download',
     title: 'Marrying in Lapland: DVV checklist for foreign couples',
     subtitle: 'A one-page checklist covering every document and step required when a foreign couple wants to marry in Finnish Lapland. Print or save as PDF for your travel folder.',
@@ -438,7 +413,7 @@ export default function Checklist() {
 
   return (
     <>
-      <SEO title={t.seoTitle} description={t.seoDesc} path="/checklist/dvv-foreign-couples" />
+      <SEO title={STATIC_META['/checklist/dvv-foreign-couples'][lang].title} description={STATIC_META['/checklist/dvv-foreign-couples'][lang].description} path="/checklist/dvv-foreign-couples" />
 
       <ChecklistGate>
       <div className="checklist-print bg-white text-night max-w-4xl mx-auto px-5 sm:px-10 py-12 sm:py-16">

@@ -125,16 +125,6 @@ export const DIAG = {
     'pt-BR': '6 etapas abaixo', 'zh-CN': '下方 6 个步骤', ko: '아래 6단계', fr: '6 étapes ci-dessous',
     it: '6 passaggi qui sotto', nl: '6 stappen hieronder', sv: '6 steg nedan',
   },
-
-  /* /contact page */
-  contactSeoTitle: {
-    fi: 'Pyydä 1–3 tarjousta Lapin häihin', en: 'Request 1–3 Lapland wedding quotes',
-    de: 'Fordern Sie 1–3 Angebote für Ihre Hochzeit in Lappland an', ja: 'ラップランド挙式の見積もりを1〜3件依頼',
-    es: 'Pida 1–3 presupuestos para su boda en Laponia', 'pt-BR': 'Peça 1–3 orçamentos para seu casamento na Lapônia',
-    'zh-CN': '索取 1–3 份拉普兰婚礼报价', ko: '라플란드 결혼식 견적 1~3건 요청',
-    fr: 'Demandez 1 à 3 devis pour votre mariage en Laponie', it: 'Richiedete 1–3 preventivi per il matrimonio in Lapponia',
-    nl: 'Vraag 1–3 offertes aan voor uw bruiloft in Lapland', sv: 'Begär 1–3 offerter för ert bröllop i Lappland',
-  },
 } satisfies Record<string, Localized<string>>;
 
 export type DiagKey = keyof typeof DIAG;

@@ -1,6 +1,7 @@
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
+import { STATIC_META } from '../lib/staticMeta.mjs';
 import { useLang } from '../i18n/LangContext';
 import type { Lang } from '../i18n/translations';
 import { tripToLapland, carRentalLink, AFFILIATE_REL } from '../lib/affiliate';
@@ -290,34 +291,6 @@ const UI: Record<string, Localized<string>> = {
     it: 'È possibile anche per le coppie straniere, ma è un’aggiunta e non la soluzione di base. Possono celebrare il matrimonio solo il DVV, un tribunale distrettuale e le comunità religiose registrate; noi no. Prima della cerimonia serve l’esame degli impedimenti, e richiede settimane: nulla osta dal Suo Paese, spesso apostille e traduzione asseverata. Lo metta in calendario prima di fissare la data. I passaggi qui sotto descrivono questa via.',
     nl: 'Ook voor buitenlandse paren kan dit, maar het is een aanvulling en niet de standaard. Alleen het DVV, een rechtbank en geregistreerde religieuze gemeenschappen mogen het huwelijk voltrekken; wij niet. Voor de ceremonie is een onderzoek naar huwelijksbeletselen vereist, en dat duurt weken: een verklaring van geen bezwaar uit uw eigen land, vaak met apostille en beëdigde vertaling. Plan dat in voordat u de datum vastlegt. De stappen hieronder beschrijven deze route.',
     sv: 'Det går även för utländska par, men det är ett tillägg och inte grundlösningen. Endast DVV, en tingsrätt och registrerade religiösa samfund får viga, inte vi. Före vigseln krävs en hindersprövning, och den tar veckor: intyg om äktenskapshinder från ert eget land, ofta apostille och auktoriserad översättning. Planera in det innan ni spikar datumet. Stegen nedan beskriver den här vägen.',
-  },
-  seoTitle: {
-    fi: 'Avioliiton esteiden tutkinta ja vihkiminen Lapissa',
-    en: 'Getting Married in Lapland: Paperwork, Officiant, Witnesses',
-    de: 'Heiraten in Lappland: Unterlagen & Trauredner',
-    ja: 'ラップランドで結婚：書類、婚姻執行者、実践ガイド',
-    es: 'Casarse en Laponia: los trámites',
-    'pt-BR': 'Casar na Lapônia: a documentação',
-    'zh-CN': '在拉普兰结婚，文书、主婚人、实用指南',
-    ko: '라플란드에서 결혼하기: 서류, 주례, 실용 가이드',
-    fr: 'Se marier en Laponie : les démarches',
-    it: 'Sposarsi in Lapponia: le pratiche',
-    nl: 'Trouwen in Lapland: het papierwerk',
-    sv: 'Gifta sig i Lappland: papper, vigselförrättare, praktisk guide',
-  },
-  seoDescription: {
-    fi: 'Esteiden tutkinta (suomalaisille 1–2 viikkoa), DVV:n vihkijä Rovaniemellä, Inarissa, Kittilässä tai Sodankylässä, todistajat ja symbolinen vaihtoehto.',
-    en: 'Practical guide for foreign couples: the examination of impediments (3–5 weeks), a civil officiant, two witnesses and registering the marriage at home.',
-    de: 'Praktischer Leitfaden für ausländische Paare: die Unterlagen, Ehefähigkeitsprüfung (3–5 Wochen), Trauzeugen, Trauredner, Registrierung im Heimatland.',
-    ja: '外国人カップルのための実践ガイド：必要書類、婚姻障害の調査（3〜5週間）、証人、婚姻執行者、母国での登録。',
-    es: 'Guía práctica para parejas extranjeras: los trámites, examen de impedimentos (3-5 semanas), testigos, oficiante y registro en el país de origen.',
-    'pt-BR': 'Guia prático para casais estrangeiros: a documentação, exame de impedimentos (3-5 semanas), testemunhas, celebrante e registro no país de origem.',
-    'zh-CN': '面向外籍新人的实用指南：所需文书、婚姻障碍审查（3–5周）、证婚人、主婚人、原籍国登记。',
-    ko: '외국인 커플을 위한 실용 가이드: 필요 서류, 혼인 요건 심사(3~5주), 증인, 주례, 본국 등록.',
-    fr: 'Guide pratique pour les couples étrangers : les démarches, examen des empêchements (3-5 semaines), témoins, officiant, enregistrement dans le pays d’origine.',
-    it: 'Guida pratica per coppie straniere: le pratiche, esame degli impedimenti (3-5 settimane), testimoni, celebrante, registrazione nel Paese d’origine.',
-    nl: 'Praktische gids voor buitenlandse stellen: het papierwerk, onderzoek naar huwelijksbeletselen (3-5 weken), getuigen, voltrekker, registratie in het thuisland.',
-    sv: 'Praktisk guide för utländska par: pappren, hindersprövning (3–5 veckor), vittnen, vigselförrättare och registrering i hemlandet.',
   },
   howToName: {
     fi: 'Häät Lapissa: DVV-prosessi',
@@ -951,8 +924,8 @@ export default function PracticalGuide() {
   return (
     <>
       <SEO
-        title={pl(UI.seoTitle)}
-        description={pl(UI.seoDescription)}
+        title={STATIC_META['/practical-guide'][lang as Lang].title}
+        description={STATIC_META['/practical-guide'][lang as Lang].description}
         path="/practical-guide"
         jsonLd={{
           '@context': 'https://schema.org',

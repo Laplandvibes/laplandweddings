@@ -927,7 +927,7 @@ const venueRegistry: Venue[] = [
     name: 'Northern Lights Village Saariselkä',
     locationSlug: 'saariselka',
     region: {
-      fi: 'Saariselkä keskustassa',
+      fi: 'Saariselän keskustassa',
       en: 'Central Saariselkä',
       de: 'Zentrum von Saariselkä',
       ja: 'サーリセルカ中心部',
