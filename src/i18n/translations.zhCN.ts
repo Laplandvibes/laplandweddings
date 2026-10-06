@@ -186,7 +186,11 @@ const t_zhCN = {
         '处理的法律依据是应您的请求而采取的订立合同前的措施。咨询通过 Resend 以电子邮件送达，网站由 Cloudflare 提供服务，二者均作为我们的受托处理方。我们不出售您的数据，也不将其用于广告。',
         '我们保留数据的期限最长为 24 个月。您可以写信至 info@laplandvibes.com 请求删除您的数据。',
         '根据 GDPR，您有权访问、更正、删除、限制和迁移您的个人数据，并有权反对对其进行处理。如需行使这些权利，请联系 info@laplandvibes.com。',
-        '我们使用经过匿名化处理的 Google Analytics 4 来估算访客量。',
+        // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
+        // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
+        '我们使用经过匿名化处理的 Google Analytics 4 来估算访客量，并通过 Umami 收集不使用 cookie 的访客统计。',
+        '我们还使用 Umami Cloud 统计页面浏览量和表单的各个步骤，例如电子简报表单何时显示、何时开始填写、何时提交。Umami 不使用 cookie，也不会在您的设备上存储任何内容，因此无论您是否接受 cookie，它都会运行。它记录页面地址和标题、您来自的网站、浏览器、操作系统、设备类型、屏幕尺寸、语言以及大致位置（国家、地区和城市）。您的 IP 地址仅用于计算该位置和一个匿名访问标识符，绝不会被存储。该标识符是一个哈希值，每月初更换。表单事件只记录是哪个表单、哪个步骤，以及在表单让您无法继续时对应的字段名称（例如“email”），绝不记录您输入的内容。',
+        '通过 Umami 进行不使用 cookie 的访客统计，其法律依据是合法利益（第6(1)(f)条）。我们的利益在于了解哪些页面和表单有效；Umami 不会在您的设备上存储任何内容，也不会保留您的 IP 地址。分析数据在 Umami 中最多保留2年。向 Umami（Umami Software, Inc.，美国；服务器位于美国和欧盟）的数据传输受标准合同条款（SCC）保护。',
       ],
     },
     cookies: {

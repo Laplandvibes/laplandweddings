@@ -186,7 +186,11 @@ const t_it = {
         'La base giuridica sono le misure precontrattuali adottate su Sua richiesta. Le richieste vengono recapitate via e-mail tramite Resend e il sito è servito da Cloudflare; entrambi agiscono come responsabili del trattamento per nostro conto. Non vendiamo i Suoi dati né li usiamo per pubblicità.',
         'Conserviamo i dati per un massimo di 24 mesi. Può richiedere la cancellazione dei Suoi dati scrivendo a info@laplandvibes.com.',
         'Ai sensi del GDPR ha il diritto di accedere, rettificare, cancellare, limitare e portare i Suoi dati personali, nonché di opporsi al loro trattamento. Per esercitare questi diritti, scriva a info@laplandvibes.com.',
-        'Utilizziamo Google Analytics 4 in forma anonimizzata per le stime dei visitatori.',
+        // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
+        // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
+        'Utilizziamo Google Analytics 4 in forma anonimizzata per le stime dei visitatori e raccogliamo statistiche di visita senza cookie tramite Umami.',
+        'Utilizziamo inoltre Umami Cloud per contare le visualizzazioni di pagina e i passaggi dei nostri moduli, ad esempio quando un modulo della newsletter viene mostrato, iniziato o inviato. Umami non usa cookie e non salva nulla sul Suo dispositivo, quindi funziona sia che Lei accetti i cookie sia che non li accetti. Registra indirizzo e titolo della pagina, il sito da cui proviene, il browser, il sistema operativo, il tipo di dispositivo, le dimensioni dello schermo, la lingua e la posizione approssimativa (paese, regione e città). Il Suo indirizzo IP viene usato solo per ricavare tale posizione e un identificativo anonimo della visita, e non viene mai memorizzato. L\'identificativo è un hash che cambia all\'inizio di ogni mese. Gli eventi dei moduli registrano solo di quale modulo e passaggio si tratta e, se un modulo La blocca, il nome del campo (ad esempio «email»), mai ciò che ha scritto.',
+        'La base giuridica per le statistiche di visita senza cookie con Umami è il legittimo interesse (Art. 6(1)(f)). Il nostro interesse è sapere quali pagine e moduli funzionano; Umami non salva nulla sul Suo dispositivo e non conserva il Suo indirizzo IP. I dati analitici sono conservati fino a 2 anni in Umami. I trasferimenti verso Umami (Umami Software, Inc., USA; server negli USA e nell\'UE) sono coperti dalle clausole contrattuali tipo.',
       ],
     },
     cookies: {

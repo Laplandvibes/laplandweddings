@@ -186,7 +186,11 @@ const t_ptBR = {
         'A base legal são as diligências pré-contratuais realizadas a seu pedido. As solicitações são entregues por e-mail via Resend e o site é servido pela Cloudflare; ambos atuam como operadores em nosso nome. Não vendemos seus dados nem os utilizamos para publicidade.',
         'Conservamos os dados por no máximo 24 meses. Você pode solicitar a exclusão dos seus dados escrevendo para info@laplandvibes.com.',
         'De acordo com o RGPD, você tem o direito de acessar, retificar, apagar, restringir e portar seus dados pessoais, bem como de se opor ao seu tratamento. Para exercer esses direitos, escreva para info@laplandvibes.com.',
-        'Utilizamos o Google Analytics 4 de forma anonimizada para estimativas de visitantes.',
+        // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
+        // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
+        'Utilizamos o Google Analytics 4 de forma anonimizada para estimativas de visitantes e coletamos estatísticas de visitas sem cookies por meio do Umami.',
+        'Também usamos o Umami Cloud para contar as visualizações de página e as etapas dos nossos formulários, por exemplo quando um formulário do boletim é exibido, começa a ser preenchido ou é enviado. O Umami não usa cookies nem armazena nada no seu dispositivo, por isso funciona quer você aceite os cookies, quer não. Ele registra o endereço e o título da página, o site de onde você veio, seu navegador, sistema operacional, tipo de dispositivo, tamanho da tela, idioma e localização aproximada (país, região e cidade). Seu endereço IP é usado apenas para calcular essa localização e um identificador anônimo da visita, e nunca é armazenado. O identificador é um hash que muda no início de cada mês. Os eventos dos formulários registram apenas o formulário e a etapa e, se um formulário impedir você de continuar, o nome do campo (por exemplo, "email"), nunca o que você digitou.',
+        'A base legal para as estatísticas de visitas sem cookies com o Umami é o interesse legítimo (Art. 6(1)(f) GDPR / Art. 7º, IX LGPD). Nosso interesse é saber quais páginas e formulários funcionam; o Umami não armazena nada no seu dispositivo nem guarda o seu endereço IP. Os dados analíticos são retidos por até 2 anos no Umami. As transferências para o Umami (Umami Software, Inc., EUA; servidores nos EUA e na UE) são cobertas pelas Cláusulas Contratuais Padrão.',
       ],
     },
     cookies: {

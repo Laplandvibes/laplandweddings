@@ -186,7 +186,11 @@ const t_sv = {
         'Den rättsliga grunden är de åtgärder som vidtas på din begäran innan avtal ingås. Förfrågningar levereras via e-post genom Resend och webbplatsen levereras av Cloudflare; båda agerar som personuppgiftsbiträden för vår räkning. Vi säljer inte dina uppgifter och använder dem inte för annonsering.',
         'Vi sparar uppgifterna i högst 24 månader. Du kan begära radering av dina uppgifter genom att skriva till info@laplandvibes.com.',
         'Enligt GDPR har du rätt att få tillgång till, rätta, radera, begränsa och flytta dina personuppgifter samt att invända mot behandlingen av dem. Kontakta info@laplandvibes.com för att utöva dessa rättigheter.',
-        'Vi använder Google Analytics 4 i anonymiserad form för besökaruppskattningar.',
+        // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
+        // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
+        'Vi använder Google Analytics 4 i anonymiserad form för besökaruppskattningar och samlar in besöksstatistik utan cookies via Umami.',
+        'Vi använder också Umami Cloud för att räkna sidvisningar och stegen i våra formulär, till exempel när ett nyhetsbrevsformulär visas, påbörjas eller skickas. Umami använder inga cookies och sparar ingenting på din enhet, så det fungerar oavsett om du godkänner cookies eller inte. Det registrerar sidans adress och titel, webbplatsen du kom från, din webbläsare, ditt operativsystem, enhetstyp, skärmstorlek, språk och ungefärlig plats (land, region och stad). Din IP-adress används bara för att räkna fram platsen och en anonym besöksidentifierare och sparas aldrig. Identifieraren är en hash som byts i början av varje månad. Formulärhändelser registrerar bara vilket formulär och steg det gäller och, om ett formulär stoppar dig, fältets namn (till exempel "email"), aldrig det du har skrivit.',
+        'Den rättsliga grunden för besöksstatistik utan cookies med Umami är berättigat intresse (artikel 6.1 f). Vårt intresse är att veta vilka sidor och formulär som fungerar; Umami sparar ingenting på din enhet och behåller inte din IP-adress. Analysdata sparas i högst 2 år i Umami. Överföringar till Umami (Umami Software, Inc., USA; servrar i USA och EU) omfattas av standardavtalsklausuler.',
       ],
     },
     cookies: {

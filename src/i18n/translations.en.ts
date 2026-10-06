@@ -186,7 +186,11 @@ const t_en = {
         'The legal basis is the steps taken at your request before entering into a contract. Enquiries are delivered by email through Resend and the site is served by Cloudflare; both act as processors on our behalf. We do not sell your data or use it for advertising.',
         'We retain data for up to 24 months. You may request deletion of your data by writing to info@laplandvibes.com.',
         'Under the GDPR you have the right to access, rectify, erase, restrict and port your personal data, and to object to its processing. To exercise these rights, contact info@laplandvibes.com.',
-        'We use Google Analytics 4 anonymised for visitor estimates.',
+        // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
+        // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
+        'We use Google Analytics 4 anonymised for visitor estimates and collect cookieless visitor statistics via Umami.',
+        'We also use Umami Cloud to count page views and the steps of our forms, for example when a newsletter form is shown, started or submitted. Umami uses no cookies and stores nothing on your device, so it runs whether or not you accept cookies. It records the page address and title, the site you came from, your browser, operating system, device type, screen size, language and approximate location (country, region and city). Your IP address is used only to work out that location and an anonymous visit identifier, and it is never stored. The identifier is a hash that changes at the start of every month. Form events record only which form and step it was and, if a form stops you, the name of the field (for example "email"), never what you typed.',
+        'The legal basis for cookieless visitor statistics with Umami is legitimate interest (Art. 6(1)(f)). Our interest is knowing which pages and forms work; Umami stores nothing on your device and does not keep your IP address. Analytics data is retained for up to 2 years in Umami. Transfers to Umami (Umami Software, Inc., USA; servers in the US and the EU) are covered by Standard Contractual Clauses.',
       ],
     },
     cookies: {

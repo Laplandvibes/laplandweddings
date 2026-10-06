@@ -186,7 +186,11 @@ const t_fi = {
         'Käsittelyn oikeusperuste on pyynnöstäsi toteutettavat toimet ennen sopimuksen tekemistä. Tiedustelut toimitetaan sähköpostitse Resendin kautta ja sivustoa palvelee Cloudflare; molemmat toimivat käsittelijöinä lukuumme. Emme myy tietojasi emmekä käytä niitä mainontaan.',
         'Säilytämme tietoja enintään 24 kuukautta. Voit pyytää tietojesi poistamista kirjoittamalla osoitteeseen info@laplandvibes.com.',
         'GDPR:n nojalla sinulla on oikeus saada pääsy henkilötietoihisi, oikaista ja poistaa ne, rajoittaa ja siirtää niitä sekä vastustaa niiden käsittelyä. Voit käyttää näitä oikeuksia ottamalla yhteyttä osoitteeseen info@laplandvibes.com.',
-        'Käytämme Google Analytics 4:ää anonymisoituna kävijämääräarvioille.',
+        // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
+        // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
+        'Käytämme Google Analytics 4:ää anonymisoituna kävijämääräarvioille ja keräämme evästeettömiä kävijätilastoja Umamin kautta.',
+        'Käytämme lisäksi Umami Cloud -palvelua sivujen katselukertojen ja lomakkeidemme vaiheiden laskemiseen, esimerkiksi kun uutiskirjelomake näytetään, sen täyttäminen aloitetaan tai se lähetetään. Umami ei käytä evästeitä eikä tallenna laitteellesi mitään, joten se toimii riippumatta siitä, hyväksytkö evästeet. Se tallentaa sivun osoitteen ja otsikon, sivuston, jolta tulit, selaimen, käyttöjärjestelmän, laitetyypin, näytön koon, kielen ja likimääräisen sijainnin (maa, alue ja kaupunki). IP-osoitettasi käytetään vain tämän sijainnin ja nimettömän käyntitunnisteen laskemiseen, eikä sitä tallenneta koskaan. Tunniste on tiiviste, joka vaihtuu jokaisen kuukauden alussa. Lomaketapahtumiin tallentuu vain se, mikä lomake ja vaihe oli kyseessä, ja jos lomake pysäyttää sinut, kentän nimi (esimerkiksi "email"), ei koskaan kirjoittamaasi tekstiä.',
+        'Käsittelyn oikeusperuste evästeettömiä kävijätilastoja varten (Umami) on oikeutettu etu (6 art. 1 kohta f). Oikeutettu etumme on tietää, mitkä sivut ja lomakkeet toimivat; Umami ei tallenna laitteellesi mitään eikä säilytä IP-osoitettasi. Analytiikkatietoja säilytetään Umamissa enintään 2 vuotta. Umami (Umami Software, Inc., Yhdysvallat; palvelimet Yhdysvalloissa ja EU:ssa) hyödyntää tiedonsiirroissa vakiosopimuslausekkeita (SCC).',
       ],
     },
     cookies: {
