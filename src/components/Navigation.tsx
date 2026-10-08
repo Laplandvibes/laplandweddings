@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import L, { NL } from './L';
 
 import { Menu, X} from 'lucide-react';
@@ -15,6 +15,13 @@ const WM_STYLE = { '--lv-wm-k': 6.65, '--lv-wm-max-md': '30px' } as CSSPropertie
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  // LV-VALIKKO-VAAKA (8.10.2026): Escape sulkee mobiilivalikon.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
   const { lang, tr } = useLang();
   // fi/ja 1280–1439 px: standardinavissa (reunat 32 px) kielivalitsin työntyi 9–10 px
   // oikeaan reunatilaan (mitattu 2.10.2026), joten linkkien sivutila 12 → 10 px vain niille.
@@ -123,14 +130,17 @@ export default function Navigation() {
         </div>
       </div>
 
+      {/* LV-VALIKKO-VAAKA (8.10.2026): laatikko oli navin sisällä ilman korkeusrajaa, joten vaakapuhelimessa
+          alimmat linkit jäivät ruudun ulkopuolelle. Nyt enintään näkyvän ruudun korkuinen ja vierittyvä,
+          ≥ 640 px palstoina; z-[45] verkostovalikon vihjeen (z 40) yli. */}
       {open && (
-        <div className="xl:hidden border-t border-white/10 bg-night-light">
-          <nav className="px-4 py-3 flex flex-col gap-1">
+        <div className="xl:hidden border-t border-white/10 bg-night-light max-h-[calc(100vh_-_4.5rem)] supports-[height:100dvh]:max-h-[calc(100dvh_-_4.5rem)] overflow-y-auto overscroll-contain relative z-[45]">
+          <nav className="px-4 py-3 flex flex-col gap-1 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-x-4 sm:content-start">
             <L
               to="/contact"
               onClick={() => setOpen(false)}
               data-umami-event="cta_quote_nav"
-              className="mb-1 inline-flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold"
+              className="mb-1 inline-flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold sm:col-span-full"
               style={{ color: '#FFFFFF', background: '#C9466A' }}
             >
               {tr.cta.getThreeQuotes}
