@@ -456,7 +456,13 @@ export default function Home() {
                  decoding="async" width="800" height="600"/>
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(15,12,10,0.85) 0%, rgba(15,12,10,0.35) 50%, rgba(15,12,10,0) 100%)' }} />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-5">
+              {/* Tekstilohkolla oma tummennus, häivytys pt-14:ssä (sama malli kuin activitiesin
+                  .lv-scrim-text): talven Ylläs-kuvan lumi paistoi 12 px aluerivin läpi, pahin 3,2:1
+                  kaikilla 12 kielellä (raja 4,5:1, korttiteksti 8.10.2026). Kuva tekstin yllä ennallaan. */}
+              <div
+                className="absolute bottom-0 left-0 right-0 p-5 pt-14"
+                style={{ background: 'linear-gradient(to top, rgba(15,12,10,0.72) 0%, rgba(15,12,10,0.72) calc(100% - 3.5rem), rgba(15,12,10,0) 100%)' }}
+              >
                 <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
                 <ImgCredit credit={locationImage(loc).credit} lang={lang} plain />
                 <h3 className="font-heading text-2xl text-white tracking-wide">{loc.name[dataLang]}</h3>
