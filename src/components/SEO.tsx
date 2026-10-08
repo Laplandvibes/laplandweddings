@@ -114,7 +114,7 @@ export default function SEO({ title, description, path, image, type = 'website',
     document.title = title;
     document.documentElement.lang = bcp47;
     setMeta('description', description);
-    setMeta('robots', noindex ? 'noindex,nofollow' : 'index,follow');
+    setMeta('robots', noindex ? 'noindex,nofollow' : 'index,follow,max-image-preview:large');
 
     setMeta('og:title', title, 'property');
     setMeta('og:description', description, 'property');
