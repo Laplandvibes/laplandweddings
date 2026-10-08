@@ -27,8 +27,10 @@ const BCP47: Record<Lang, string> = {
   en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES',
   'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE',
 };
+// en_GB = sama kuin esirenderöijän LOCALES (scripts/prerender-meta.mjs) ja sivuston päivämäärät (en-GB). Ennen 8.10.2026
+// tässä oli en_US, ja JS vaihtoi staattisen og:localen englanninkielisillä sivuilla (gate:og-js "korvattu").
 const OG_LOCALE: Record<Lang, string> = {
-  en: 'en_US', fi: 'fi_FI', de: 'de_DE', ja: 'ja_JP', es: 'es_ES',
+  en: 'en_GB', fi: 'fi_FI', de: 'de_DE', ja: 'ja_JP', es: 'es_ES',
   'pt-BR': 'pt_BR', 'zh-CN': 'zh_CN', ko: 'ko_KR', fr: 'fr_FR', it: 'it_IT', nl: 'nl_NL', sv: 'sv_SE',
 };
 
@@ -125,15 +127,9 @@ export default function SEO({ title, description, path, image, type = 'website',
     setMeta('og:locale', OG_LOCALE[lang], 'property');
     setMeta('og:site_name', 'LaplandWeddings', 'property');
 
-    // og:locale:alternate × 10 others
-    document.head.querySelectorAll('meta[property="og:locale:alternate"][data-seo-alt]').forEach((el) => el.remove());
-    SUPPORTED.filter((l) => l !== lang).forEach((l) => {
-      const m = document.createElement('meta');
-      m.setAttribute('property', 'og:locale:alternate');
-      m.setAttribute('content', OG_LOCALE[l]);
-      m.setAttribute('data-seo-alt', 'true');
-      document.head.appendChild(m);
-    });
+    // og:locale:alternate EI täällä (8.10.2026): esirenderöijä (scripts/prerender-meta.mjs) kirjoittaa sivun 11 muuta
+    // kieltä staattiseen HTML:ään, ja tämä hook lisäsi niiden rinnalle toisen joukon (en_US eikä en_GB) ⇒ gate:og-js
+    // "ristiriita" jokaisella ei-englanninkielisellä sivulla. Staattiset jäävät DOMiin sellaisinaan.
 
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', title);
