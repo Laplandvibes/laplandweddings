@@ -3,6 +3,7 @@ import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
 import L from './L';
 import FounderByline from '../shared/FounderByline';
+import { NEWSLETTER_FUNCTION_URL, NEWSLETTER_SUPABASE_PUBLISHABLE_KEY } from '../lib/newsletter';
 
 /**
  * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
@@ -14,9 +15,6 @@ function track(event: string, data?: Record<string, unknown>) {
     (window as unknown as { umami?: { track: (e: string, d?: unknown) => void } }).umami?.track(event, data);
   } catch { /* ignore */ }
 }
-
-const NEWSLETTER_ENDPOINT = (import.meta as unknown as { env: Record<string, string | undefined> }).env.VITE_NEWSLETTER_ENDPOINT
-  || 'https://laplandvibes-newsletter.vercel.app/api/subscribe';
 
 const L11: Record<'thanks' | 'failed', Localized<string>> = {
   thanks: {
@@ -123,13 +121,21 @@ export default function NewsletterSignup() {
     setStatus('loading');
     track('nl_submit', funnelData);
     try {
-      const res = await fetch(NEWSLETTER_ENDPOINT, {
+      // Sama jaettu putki ja sama kenttärakenne kuin popupissa
+      // (shared/NewsletterPopup.tsx): palvelin vaatii consent + ageConfirmed
+      // + consentText, ja sivusto, kieli ja kanava kulkevat omissa kentissään.
+      const res = await fetch(NEWSLETTER_FUNCTION_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${NEWSLETTER_SUPABASE_PUBLISHABLE_KEY}`,
+        },
         body: JSON.stringify({
           email,
-          source: 'laplandweddings.online',
-          lang,
+          source: 'laplandweddings-inline',
+          site: 'laplandweddings',
+          language: lang,
+          channel: 'inline',
           consent: true,
           ageConfirmed: true,
           consentText,
