@@ -16,20 +16,66 @@ function track(event: string, data?: Record<string, unknown>) {
   } catch { /* ignore */ }
 }
 
-const L11: Record<'thanks' | 'failed', Localized<string>> = {
-  thanks: {
-    en: 'Thanks! You are on the list.',
-    fi: 'Kiitos! Olet listalla.',
-    de: 'Danke! Sie sind auf der Liste.',
-    ja: 'ありがとうございます！登録が完了しました。',
-    es: '¡Gracias! Ya está en la lista.',
-    'pt-BR': 'Obrigado! Você está na lista.',
-    'zh-CN': '谢谢！您已加入订阅列表。',
-    ko: '감사합니다! 목록에 등록되었습니다.',
-    fr: 'Merci ! Vous êtes inscrit·e à la liste.',
-    it: 'Grazie! Ora è nella lista.',
-    nl: 'Bedankt! U staat op de lijst.',
-    sv: 'Tack! Du är med på listan.',
+// Onnistumistekstit sanasta sanaan jaetusta popupista (shared/NewsletterPopup.tsx), jotta
+// lomake ja popup sanovat saman: tilaus odottaa vahvistusta sähköpostista, tai osoite oli
+// jo vahvistettu (palvelin vastaa alreadySubscribed eikä lähetä viestiä). Vanha "olet
+// listalla" oli väärin: vahvistamaton tilaaja ei saa vielä mitään (8.10.2026).
+const L11: Record<'successHeadline' | 'successBody' | 'alreadyHeadline' | 'alreadyBody' | 'failed', Localized<string>> = {
+  successHeadline: {
+    en: 'Almost there.',
+    fi: 'Melkein valmista.',
+    de: 'Fast geschafft.',
+    ja: 'あと少しです。',
+    es: 'Ya casi.',
+    'pt-BR': 'Quase lá.',
+    'zh-CN': '就快好了。',
+    ko: '거의 다 됐습니다.',
+    fr: 'Presque fini.',
+    it: 'Ci siamo quasi.',
+    nl: 'Bijna klaar.',
+    sv: 'Nästan klart.',
+  },
+  successBody: {
+    en: 'Confirm your subscription from the email we just sent you.',
+    fi: 'Käy vahvistamassa tilaus sähköpostiisi tulleesta viestistä.',
+    de: 'Bestätigen Sie Ihr Abo über die E-Mail, die wir Ihnen gerade geschickt haben.',
+    ja: 'いまお送りしたメールから登録を確認してください。',
+    es: 'Confirme su suscripción desde el correo que acabamos de enviarle.',
+    'pt-BR': 'Confirme sua inscrição no e-mail que acabamos de enviar.',
+    'zh-CN': '请在我们刚发送的邮件中确认订阅。',
+    ko: '방금 보내드린 이메일에서 구독을 확인해 주세요.',
+    fr: 'Confirmez votre inscription depuis l\'e-mail que nous venons de vous envoyer.',
+    it: 'Confermi l\'iscrizione dall\'e-mail che Le abbiamo appena inviato.',
+    nl: 'Bevestig uw aanmelding via de e-mail die we net hebben gestuurd.',
+    sv: 'Bekräfta din prenumeration i mejlet vi just skickade.',
+  },
+  alreadyHeadline: {
+    en: 'Already on the list!',
+    fi: 'Olit jo listalla.',
+    de: 'Schon auf der Liste!',
+    ja: 'すでに登録済みです!',
+    es: '¡Ya estaba en la lista!',
+    'pt-BR': 'Já está na lista!',
+    'zh-CN': '您已在订阅列表中!',
+    ko: '이미 구독 중입니다!',
+    fr: 'Déjà inscrit·e !',
+    it: 'È già nella lista!',
+    nl: 'Al op de lijst!',
+    sv: 'Du står redan på listan!',
+  },
+  alreadyBody: {
+    en: "You were already subscribed. You'll hear from me when there's something worth telling.",
+    fi: 'Tilauksesi oli jo voimassa. Kuulet minusta, kun on kerrottavaa.',
+    de: 'Sie waren bereits angemeldet. Sie hören von mir, wenn es etwas zu erzählen gibt.',
+    ja: 'すでにご登録いただいています。お伝えしたいことがあるときにご連絡します。',
+    es: 'Su suscripción ya estaba activa. Sabrá de mí cuando haya algo que contar.',
+    'pt-BR': 'Sua inscrição já estava ativa. Você vai saber de mim quando houver algo para contar.',
+    'zh-CN': '您的订阅已经生效。有值得分享的内容时，我会告诉您。',
+    ko: '이미 구독하고 계십니다. 전할 소식이 있을 때 연락드릴게요.',
+    fr: 'Votre inscription était déjà active. Vous aurez de mes nouvelles quand il y aura quelque chose à raconter.',
+    it: 'La Sua iscrizione era già attiva. Le scrivo quando c\'è qualcosa da raccontare.',
+    nl: 'U was al aangemeld. U hoort van mij als er iets te vertellen valt.',
+    sv: 'Din prenumeration var redan aktiv. Du hör av mig när det finns något att berätta.',
   },
   failed: {
     en: 'Subscription failed. Please try again.',
@@ -83,7 +129,7 @@ export default function NewsletterSignup() {
   const { lang, tr } = useLang();
   const [email, setEmail] = useState('');
   const [consented, setConsented] = useState(false);
-  const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'already' | 'error'>('idle');
 
   const consentText = pickLocalized(CONSENT_COPY.checkbox, lang);
 
@@ -142,8 +188,15 @@ export default function NewsletterSignup() {
         }),
       });
       if (!res.ok) throw new Error('failed');
-      setStatus('ok');
-      track('nl_success', funnelData);
+      // Jo vahvistettu osoite: palvelin ei lähetä viestiä, joten ei luvata sitä (sama kuin popup).
+      const data = (await res.json().catch(() => ({}))) as { alreadySubscribed?: boolean };
+      if (data.alreadySubscribed) {
+        setStatus('already');
+        track('nl_success', { ...funnelData, already: true });
+      } else {
+        setStatus('ok');
+        track('nl_success', funnelData);
+      }
       setEmail('');
     } catch {
       setStatus('error');
@@ -158,8 +211,15 @@ export default function NewsletterSignup() {
           {tr.home.newsletterTitle}
         </h3>
         <p className="text-sm sm:text-base text-gray-300 mb-5 sm:mb-6 leading-relaxed">{tr.home.newsletterSub}</p>
-        {status === 'ok' ? (
-          <p className="text-aurora-green font-semibold">{pickLocalized(L11.thanks, lang)}</p>
+        {status === 'ok' || status === 'already' ? (
+          <div role="status">
+            <p className="text-aurora-green font-semibold">
+              {pickLocalized(status === 'ok' ? L11.successHeadline : L11.alreadyHeadline, lang)}
+            </p>
+            <p className="mt-1.5 text-sm sm:text-base text-gray-300 leading-relaxed">
+              {pickLocalized(status === 'ok' ? L11.successBody : L11.alreadyBody, lang)}
+            </p>
+          </div>
         ) : (
           <><FounderByline tone="pink" />
           <form
