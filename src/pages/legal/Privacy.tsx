@@ -7,7 +7,7 @@ export default function Privacy() {
   const tr = useTr();
   // useLang palauttaa koko kontekstin, ei kielikoodia — vrt. LangContextValue.
   const { dataLang } = useLang();
-  const { title, controllerLabel, paragraphs, newsletterBefore, unsubLabel, newsletterAfter } =
+  const { title, updated, controllerLabel, paragraphs, newsletterBefore, unsubLabel, newsletterAfter } =
     tr.legal.privacy;
 
   /**
@@ -27,6 +27,7 @@ export default function Privacy() {
       <SEO title={LEGAL_META['/privacy'][dataLang].title} description={LEGAL_META['/privacy'][dataLang].description} path="/privacy" />
       <Section title={title} titleAs="h1">
         <div className="prose prose-invert max-w-3xl mx-auto text-gray-300 space-y-4">
+          <p className="text-sm text-gray-400">{updated}</p>
           <p>
             {controllerLabel}: <strong>LaPeso Oy</strong>, info@laplandvibes.com.
           </p>

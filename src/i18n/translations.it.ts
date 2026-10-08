@@ -170,6 +170,7 @@ const t_it = {
     },
     privacy: {
       title: 'Informativa sulla privacy',
+      updated: 'Ultimo aggiornamento: ottobre 2026',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_it = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         'Utilizziamo Google Analytics 4 in forma anonimizzata per le stime dei visitatori e raccogliamo statistiche di visita senza cookie tramite Umami.',
+        'Consenso (Art. 6(1)(a)): per i cookie analitici (Google Analytics 4), lo script partner di GetYourGuide e altri cookie non essenziali. Lei presta il consenso tramite il banner dei cookie e può ritirarlo in qualsiasi momento.',
+        'Cookie di GetYourGuide: impostati dallo script partner di GetYourGuide, che si carica solo dopo che Lei ha accettato i cookie. Contano le visualizzazioni e i clic dei widget delle attività e attribuiscono le prenotazioni al sito.',
         'Utilizziamo inoltre Umami Cloud per contare le visualizzazioni di pagina, i clic su alcuni dei nostri link e pulsanti (ad esempio verso i nostri siti gemelli o la nostra app) e i passaggi dei nostri moduli e strumenti, ad esempio quando un modulo della newsletter viene mostrato, iniziato o inviato. Umami non usa cookie e non salva nulla sul Suo dispositivo, quindi funziona sia che Lei accetti i cookie sia che non li accetti. Registra indirizzo e titolo della pagina, il sito da cui proviene, il browser, il sistema operativo, il tipo di dispositivo, le dimensioni dello schermo, la lingua e la posizione approssimativa (paese, regione e città). Il Suo indirizzo IP viene usato solo per ricavare tale posizione e un identificativo pseudonimo della visita, e non viene mai memorizzato. L\'identificativo è un hash che cambia all\'inizio di ogni mese. Questi eventi registrano solo che cosa è stato cliccato o scelto e di quale passaggio si tratta (ad esempio il sito gemello che ha aperto) e, se un modulo La blocca, il nome del campo (ad esempio «email»), mai ciò che ha scritto.',
         'La base giuridica per le statistiche di visita senza cookie con Umami è il legittimo interesse (Art. 6(1)(f)). Il nostro interesse è sapere quali pagine e moduli funzionano; Umami non salva nulla sul Suo dispositivo e non conserva il Suo indirizzo IP. I dati analitici sono conservati fino a 2 anni in Umami. I trasferimenti verso Umami (Umami Software, Inc., USA; server negli USA e nell\'UE) sono coperti dalle clausole contrattuali tipo.',
       ],
     },
     cookies: {
       title: 'Informativa sui cookie',
+      updated: 'Ultimo aggiornamento: ottobre 2026',
       paragraphs: [
-        'Utilizziamo cookie strettamente necessari per il funzionamento del sito (preferenza della lingua, consenso).',
-        'Con il Suo consenso utilizziamo Google Analytics 4 per l’analisi dei visitatori.',
+        'Il sito non ha bisogno di cookie per funzionare. La Sua scelta di accettare o rifiutare viene salvata nel localStorage del Suo browser, non in un cookie, così non Le chiediamo di nuovo a ogni visita.',
+        'Con il Suo consenso utilizziamo Google Analytics 4 per l’analisi dei visitatori (cookie _ga e _ga_*, 2 anni).',
         'Non utilizziamo il tracciamento pubblicitario, quindi il Suo consenso non è necessario per la profilazione pubblicitaria.',
       ],
+      storageIntro: 'Nel localStorage del Suo browser vengono memorizzate piccole voci per rendere il sito meno fastidioso, ad esempio:',
+      storageConsent: 'la Sua scelta di accettare o rifiutare',
+      storageLang: 'La Sua scelta della lingua, perché il sito possa aprirsi nella stessa lingua la prossima volta.',
+      gygTitle: 'Cookie di GetYourGuide',
+      gygBody: 'Con il Suo consenso, questo sito carica lo script partner di GetYourGuide (GetYourGuide, Berlino, UE; ID partner VRMKD7N), che mostra anche i widget delle attività. Lo script salva il cookie visitor_id su getyourguide.com (cookie di terze parti, 400 giorni), il cookie session_id sul dominio di questo sito (fino alla fine della sessione), il cookie __cf_bm su widget.getyourguide.com (meno di 1 giorno, impostato dalla rete di distribuzione dei contenuti di GetYourGuide), oltre a partner_id nel localStorage e gyg_visitor_id nel sessionStorage. GetYourGuide li usa per contare le visualizzazioni e i clic dei widget e attribuire le prenotazioni a LaplandWeddings. Senza il Suo consenso i link alle attività funzionano comunque, e in tal caso getyourguide.com imposta i propri cookie solo quando Lei visita il suo sito. Le prenotazioni avvengono su getyourguide.com secondo la sua informativa sulla privacy.',
+      managingTitle: 'Gestione delle preferenze sui cookie',
+      managing: 'Può modificare o revocare la Sua scelta in qualsiasi momento con il pulsante qui sotto. Il pulsante cancella la scelta salvata, le voci che gli script dei partner hanno salvato nel Suo browser e i cookie impostati sul dominio di questo sito, poi ricarica la pagina, così il banner di consenso viene mostrato di nuovo. I cookie sui domini di altre aziende, come getyourguide.com, si eliminano dalle impostazioni del browser. Può anche bloccare completamente i cookie nel browser, ma ciò potrebbe influire sul funzionamento del sito.',
+      withdrawButton: 'Modifica la scelta sui cookie',
     },
   },
 } as const;

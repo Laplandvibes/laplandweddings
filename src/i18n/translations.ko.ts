@@ -170,6 +170,7 @@ const t_ko = {
     },
     privacy: {
       title: '개인정보 처리방침',
+      updated: '최종 업데이트: 2026년 10월',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_ko = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         '저희는 방문자 수 추정을 위해 익명화된 Google Analytics 4를 사용하고, Umami를 통해 쿠키를 사용하지 않는 방문자 통계를 수집합니다.',
+        '동의(제6조 제1항 (a)): 분석 쿠키(Google Analytics 4), GetYourGuide 파트너 스크립트 및 기타 비필수 쿠키. 쿠키 배너를 통해 동의하시며 언제든지 철회하실 수 있습니다.',
+        'GetYourGuide 쿠키: GetYourGuide 파트너 스크립트가 설정하며, 이 스크립트는 쿠키에 동의하신 후에만 불러옵니다. 액티비티 위젯의 노출 수와 클릭 수 집계 및 예약의 사이트 귀속에 사용됩니다.',
         '또한 당사는 Umami Cloud를 사용해 페이지 조회수, 일부 링크와 버튼의 클릭(예: 자매 사이트나 앱으로 연결되는 링크), 양식과 도구의 각 단계(예: 뉴스레터 양식이 표시되거나, 작성이 시작되거나, 제출된 경우)를 집계합니다. Umami는 쿠키를 사용하지 않고 귀하의 기기에 아무것도 저장하지 않으므로, 쿠키 동의 여부와 관계없이 작동합니다. 페이지 주소와 제목, 유입 사이트, 브라우저, 운영체제, 기기 유형, 화면 크기, 언어, 대략적인 위치(국가, 지역, 도시)를 기록합니다. IP 주소는 이 위치와 가명 처리된 방문 식별자를 계산하는 데에만 사용되며 저장되지 않습니다. 이 식별자는 매월 초에 바뀌는 해시값입니다. 이러한 이벤트에는 무엇을 클릭하거나 선택했는지와 어떤 단계인지(예: 열어 본 자매 사이트), 그리고 양식에서 더 진행할 수 없었을 경우 해당 항목 이름(예: "email")만 기록되며, 입력한 내용은 기록되지 않습니다.',
         'Umami를 이용한 쿠키 없는 방문자 통계의 법적 근거는 정당한 이익(제6조 제1항 (f))입니다. 당사의 이익은 어떤 페이지와 양식이 제대로 작동하는지 아는 것이며, Umami는 귀하의 기기에 아무것도 저장하지 않고 IP 주소도 보관하지 않습니다. 분석 데이터는 Umami에서 최대 2년간 보관됩니다. Umami(Umami Software, Inc., 미국; 서버는 미국과 EU에 위치)로의 데이터 이전에는 표준계약조항(SCC)이 적용됩니다.',
       ],
     },
     cookies: {
       title: '쿠키 정책',
+      updated: '최종 업데이트: 2026년 10월',
       paragraphs: [
-        '저희는 사이트 기능(언어 설정, 동의)을 위해 필수 쿠키를 사용합니다.',
-        '귀하의 동의를 받아 방문자 분석을 위해 Google Analytics 4를 사용합니다.',
+        '본 사이트는 작동하는 데 쿠키가 필요하지 않습니다. 수락 또는 거부 선택은 쿠키가 아닌 브라우저의 localStorage에 저장되므로 방문하실 때마다 다시 묻지 않습니다.',
+        '귀하의 동의를 받아 방문자 분석을 위해 Google Analytics 4를 사용합니다(쿠키 _ga, _ga_*, 보관 기간 2년).',
         '저희는 광고 추적을 사용하지 않으며, 광고 타기팅을 위해 귀하의 동의가 필요하지 않습니다.',
       ],
+      storageIntro: '사이트를 더 편리하게 이용하실 수 있도록 브라우저의 localStorage에 작은 항목을 저장합니다. 예를 들면 다음과 같습니다:',
+      storageConsent: '귀하의 수락/거부 선택',
+      storageLang: '귀하의 언어 선택(다음 방문 때 같은 언어로 사이트를 열기 위해 저장)',
+      gygTitle: 'GetYourGuide 쿠키',
+      gygBody: '동의하시는 경우에만 본 사이트는 GetYourGuide 파트너 스크립트(GetYourGuide, 독일 베를린, EU, 파트너 ID VRMKD7N)를 불러옵니다. 이 스크립트는 액티비티 위젯도 표시합니다. 스크립트는 getyourguide.com에 visitor_id(제3자 쿠키, 400일), 본 사이트 도메인에 session_id(세션 종료 시까지), widget.getyourguide.com에 __cf_bm(1일 미만, GetYourGuide의 콘텐츠 전송 네트워크가 설정)을 저장하고, localStorage에 partner_id, sessionStorage에 gyg_visitor_id를 저장합니다. GetYourGuide는 이 정보를 이용해 위젯의 노출 수와 클릭 수를 집계하고 예약을 LaplandWeddings에 귀속시킵니다. 동의하지 않으셔도 액티비티 링크는 정상적으로 작동하며, 이 경우 getyourguide.com은 귀하가 해당 사이트로 이동하실 때에만 자체 쿠키를 설정합니다. 예약은 getyourguide.com에서 해당 회사의 개인정보 처리방침에 따라 이루어집니다.',
+      managingTitle: '쿠키 설정 관리',
+      managing: '아래 버튼으로 언제든지 선택을 변경하거나 철회하실 수 있습니다. 버튼을 누르시면 저장된 선택, 파트너 스크립트가 브라우저에 저장한 항목, 본 사이트 자체 도메인에 설정된 쿠키가 삭제되고, 페이지가 새로 고침되어 동의 배너가 다시 표시됩니다. getyourguide.com 등 다른 회사 도메인의 쿠키는 브라우저 설정에서 삭제하실 수 있습니다. 브라우저에서 쿠키를 완전히 차단하실 수도 있지만 사이트 기능에 영향을 줄 수 있습니다.',
+      withdrawButton: '쿠키 선택 변경',
     },
   },
 } as const;

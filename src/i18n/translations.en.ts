@@ -170,6 +170,7 @@ const t_en = {
     },
     privacy: {
       title: 'Privacy Policy',
+      updated: 'Last updated: October 2026',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_en = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         'We use Google Analytics 4 anonymised for visitor estimates and collect cookieless visitor statistics via Umami.',
+        'Consent (Art. 6(1)(a)): for analytics cookies (Google Analytics 4), GetYourGuide’s partner script and any other non-essential cookies. You give consent via the cookie banner and can withdraw it at any time.',
+        'GetYourGuide cookies: placed by GetYourGuide’s partner script, which loads only after you accept cookies. They count activity widget views and clicks and attribute bookings to the site.',
         'We also use Umami Cloud to count page views, clicks on some of our links and buttons (for example to our sister sites or our app) and the steps of our forms and tools, for example when a newsletter form is shown, started or submitted. Umami uses no cookies and stores nothing on your device, so it runs whether or not you accept cookies. It records the page address and title, the site you came from, your browser, operating system, device type, screen size, language and approximate location (country, region and city). Your IP address is used only to work out that location and a pseudonymous visit identifier, and it is never stored. The identifier is a hash that changes at the start of every month. These events record only what was clicked or chosen and which step it was (for example the sister site you opened) and, if a form stops you, the name of the field (for example "email"), never what you typed.',
         'The legal basis for cookieless visitor statistics with Umami is legitimate interest (Art. 6(1)(f)). Our interest is knowing which pages and forms work; Umami stores nothing on your device and does not keep your IP address. Analytics data is retained for up to 2 years in Umami. Transfers to Umami (Umami Software, Inc., USA; servers in the US and the EU) are covered by Standard Contractual Clauses.',
       ],
     },
     cookies: {
       title: 'Cookie Policy',
+      updated: 'Last updated: October 2026',
       paragraphs: [
-        'We use strictly necessary cookies for site function (language preference, consent).',
-        'With your consent we use Google Analytics 4 for visitor analytics.',
+        'This site does not need cookies to work. Your accept/decline choice is saved in your browser’s localStorage, not in a cookie, so we don’t ask you on every visit.',
+        'With your consent we use Google Analytics 4 for visitor analytics (cookies _ga and _ga_*, 2 years).',
         'We do not use advertising tracking, so your consent is not required for ad targeting.',
       ],
+      storageIntro: 'Small entries are stored in your browser’s localStorage to make the site less annoying, for example:',
+      storageConsent: 'your accept/decline choice',
+      storageLang: 'Your language choice, so the site can open in the same language next time.',
+      gygTitle: 'GetYourGuide cookies',
+      gygBody: 'With your consent, this site loads GetYourGuide’s partner script (GetYourGuide, Berlin, EU; partner ID VRMKD7N), which also displays the activity widgets. The script stores visitor_id on getyourguide.com (a third-party cookie, 400 days), session_id on this site’s domain (until the end of the session), __cf_bm on widget.getyourguide.com (less than 1 day, set by GetYourGuide’s content delivery network), partner_id in localStorage and gyg_visitor_id in sessionStorage. GetYourGuide uses them to count widget views and clicks and to attribute bookings to LaplandWeddings. Without your consent, activity links still work, and in that case getyourguide.com sets its own cookies only when you go there. Bookings are made on getyourguide.com under its own privacy policy.',
+      managingTitle: 'Managing Your Cookie Preferences',
+      managing: 'You can change or withdraw your choice at any time with the button below. It deletes your saved choice, the entries partner scripts stored in your browser and the cookies set on this site’s own domain, then reloads the page so the consent banner appears again. Cookies on other companies’ domains, such as getyourguide.com, can be deleted in your browser settings. You can also block cookies entirely in your browser, though this may affect how the site works.',
+      withdrawButton: 'Change cookie choice',
     },
   },
 } as const;

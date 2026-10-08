@@ -170,6 +170,7 @@ const t_zhCN = {
     },
     privacy: {
       title: '隐私政策',
+      updated: '最后更新：2026年10月',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_zhCN = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         '我们使用经过匿名化处理的 Google Analytics 4 来估算访客量，并通过 Umami 收集不使用 cookie 的访客统计。',
+        '同意（第6(1)(a)条）：用于分析 cookie（Google Analytics 4）、GetYourGuide 合作伙伴脚本及其他非必要 cookie。您通过 cookie 横幅给予同意，并可随时撤回。',
+        'GetYourGuide cookie：由 GetYourGuide 合作伙伴脚本设置，该脚本只有在您接受 cookie 后才会加载。用于统计活动小组件的展示和点击次数，并将预订归因于本网站。',
         '我们还使用 Umami Cloud 统计页面浏览量、部分链接和按钮的点击（例如前往我们的姊妹网站或应用的链接）以及表单和工具的各个步骤，例如电子简报表单何时显示、何时开始填写、何时提交。Umami 不使用 cookie，也不会在您的设备上存储任何内容，因此无论您是否接受 cookie，它都会运行。它记录页面地址和标题、您来自的网站、浏览器、操作系统、设备类型、屏幕尺寸、语言以及大致位置（国家、地区和城市）。您的 IP 地址仅用于计算该位置和一个假名化的访问标识符，绝不会被存储。该标识符是一个哈希值，每月初更换。这些事件只记录点击或选择了什么、是哪个步骤（例如您打开的姊妹网站），以及在表单让您无法继续时对应的字段名称（例如“email”），绝不记录您输入的内容。',
         '通过 Umami 进行不使用 cookie 的访客统计，其法律依据是合法利益（第6(1)(f)条）。我们的利益在于了解哪些页面和表单有效；Umami 不会在您的设备上存储任何内容，也不会保留您的 IP 地址。分析数据在 Umami 中最多保留2年。向 Umami（Umami Software, Inc.，美国；服务器位于美国和欧盟）的数据传输受标准合同条款（SCC）保护。',
       ],
     },
     cookies: {
       title: 'Cookie 政策',
+      updated: '最后更新：2026年10月',
       paragraphs: [
-        '我们使用网站运行所必需的 Cookie（语言偏好、同意设置）。',
-        '在您同意的情况下，我们使用 Google Analytics 4 进行访客分析。',
+        '本网站无需 Cookie 即可运行。您的接受或拒绝选择保存在浏览器的 localStorage 中，而不是 Cookie 中，这样我们就无需在每次访问时再次询问。',
+        '在您同意的情况下，我们使用 Google Analytics 4 进行访客分析（Cookie：_ga、_ga_*，保留期限2年）。',
         '我们不使用广告跟踪，广告定向无需您的同意。',
       ],
+      storageIntro: '为了减少打扰，我们会在您浏览器的 localStorage 中存储一些小条目，例如：',
+      storageConsent: '您的接受/拒绝选择',
+      storageLang: '您的语言选择，以便下次以同一语言打开网站。',
+      gygTitle: 'GetYourGuide Cookie',
+      gygBody: '只有在您同意后，本网站才会加载 GetYourGuide 的合作伙伴脚本（GetYourGuide，德国柏林，欧盟；合作伙伴 ID VRMKD7N），该脚本也负责显示活动小组件。脚本会在 getyourguide.com 上保存 visitor_id（第三方 Cookie，400天），在本网站域名上保存 session_id（至会话结束），在 widget.getyourguide.com 上保存 __cf_bm（不到1天，由 GetYourGuide 的内容分发网络设置），并在 localStorage 中保存 partner_id、在 sessionStorage 中保存 gyg_visitor_id。GetYourGuide 用它们统计小组件的展示和点击次数，并将预订归因于 LaplandWeddings。即使您不同意，活动链接仍可正常使用，此时 getyourguide.com 只有在您访问其网站时才会设置自己的 Cookie。预订在 getyourguide.com 上完成，适用其自身的隐私政策。',
+      managingTitle: '管理您的 Cookie 偏好',
+      managing: '您可以随时通过下方按钮更改或撤回您的选择。该按钮会删除已保存的选择、合作伙伴脚本存储在您浏览器中的条目以及本网站自身域名下的 Cookie，然后重新加载页面，同意横幅会再次出现。其他公司域名（例如 getyourguide.com）下的 Cookie 可在浏览器设置中删除。您也可以在浏览器中完全阻止 Cookie，但这可能会影响网站功能。',
+      withdrawButton: '更改 Cookie 选择',
     },
   },
 } as const;

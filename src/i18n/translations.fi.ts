@@ -170,6 +170,7 @@ const t_fi = {
     },
     privacy: {
       title: 'Tietosuojaseloste',
+      updated: 'Viimeksi päivitetty: lokakuu 2026',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_fi = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         'Käytämme Google Analytics 4:ää anonymisoituna kävijämääräarvioille ja keräämme evästeettömiä kävijätilastoja Umamin kautta.',
+        'Suostumus (6 art. 1 kohta a): analytiikkaevästeitä (Google Analytics 4), GetYourGuiden kumppaniskriptiä ja muita ei-välttämättömiä evästeitä varten. Annat suostumuksen evästebannerista ja voit perua sen milloin tahansa.',
+        'GetYourGuide-evästeet: GetYourGuiden kumppaniskripti asettaa ne vasta, kun olet hyväksynyt evästeet. Niiden avulla lasketaan aktiviteettiwidgettien näytöt ja klikkaukset ja kohdistetaan varaukset sivustolle.',
         'Käytämme lisäksi Umami Cloud -palvelua sivujen katselukertojen, joidenkin linkkiemme ja painikkeidemme klikkausten (esimerkiksi sisarsivustoillemme tai sovellukseemme) sekä lomakkeidemme ja työkalujemme vaiheiden laskemiseen, esimerkiksi kun uutiskirjelomake näytetään, sen täyttäminen aloitetaan tai se lähetetään. Umami ei käytä evästeitä eikä tallenna laitteellesi mitään, joten se toimii riippumatta siitä, hyväksytkö evästeet. Se tallentaa sivun osoitteen ja otsikon, sivuston, jolta tulit, selaimen, käyttöjärjestelmän, laitetyypin, näytön koon, kielen ja likimääräisen sijainnin (maa, alue ja kaupunki). IP-osoitettasi käytetään vain tämän sijainnin ja pseudonyymin käyntitunnisteen laskemiseen, eikä sitä tallenneta koskaan. Tunniste on tiiviste, joka vaihtuu jokaisen kuukauden alussa. Näihin tapahtumiin tallentuu vain se, mitä klikattiin tai valittiin ja mikä vaihe oli kyseessä (esimerkiksi sisarsivusto, jolle siirryit), ja jos lomake pysäyttää sinut, kentän nimi (esimerkiksi "email"), ei koskaan kirjoittamaasi tekstiä.',
         'Käsittelyn oikeusperuste evästeettömiä kävijätilastoja varten (Umami) on oikeutettu etu (6 art. 1 kohta f). Oikeutettu etumme on tietää, mitkä sivut ja lomakkeet toimivat; Umami ei tallenna laitteellesi mitään eikä säilytä IP-osoitettasi. Analytiikkatietoja säilytetään Umamissa enintään 2 vuotta. Umami (Umami Software, Inc., Yhdysvallat; palvelimet Yhdysvalloissa ja EU:ssa) hyödyntää tiedonsiirroissa vakiosopimuslausekkeita (SCC).',
       ],
     },
     cookies: {
       title: 'Evästeseloste',
+      updated: 'Viimeksi päivitetty: lokakuu 2026',
       paragraphs: [
-        'Käytämme välttämättömiä evästeitä sivuston toiminnan vuoksi (kielivalinta, suostumukset).',
-        'Suostumuksellasi käytämme Google Analytics 4 -palvelua kävijämäärien analysointiin.',
+        'Sivusto ei tarvitse evästeitä toimiakseen. Valintasi (hyväksy tai hylkää) tallennetaan selaimesi localStorage-tallenteeseen eikä evästeeseen, joten emme kysy sitä joka vierailulla.',
+        'Suostumuksellasi käytämme Google Analytics 4 -palvelua kävijämäärien analysointiin (evästeet _ga ja _ga_*, 2 vuotta).',
         'Emme käytä mainosseurantaa, suostumustasi ei tarvita mainonnan kohdistamiseen.',
       ],
+      storageIntro: 'Selaimesi localStorage-tallenteeseen kirjoitetaan pieniä merkintöjä, jotta sivusto olisi vähemmän ärsyttävä, esimerkiksi:',
+      storageConsent: 'suostumusvalintasi (hyväksytty tai hylätty)',
+      storageLang: 'Kielivalintasi, jotta sivusto voi avautua seuraavalla kerralla samalla kielellä.',
+      gygTitle: 'GetYourGuide-evästeet',
+      gygBody: 'Kun annat suostumuksesi, sivusto lataa GetYourGuiden kumppaniskriptin (GetYourGuide, Berliini, EU; kumppanitunnus VRMKD7N), joka näyttää myös sivun aktiviteettiwidgetit. Skripti tallentaa evästeen visitor_id getyourguide.com-domainiin (kolmannen osapuolen eväste, 400 päivää), evästeen session_id tämän sivuston domainiin (istunnon loppuun), evästeen __cf_bm widget.getyourguide.com-domainiin (alle vuorokauden, GetYourGuiden sisällönjakeluverkon asettama) sekä merkinnän partner_id localStorageen ja merkinnän gyg_visitor_id sessionStorageen. GetYourGuide laskee niiden avulla widgettien näytöt ja klikkaukset ja kohdistaa varaukset sivustolle LaplandWeddings. Ilman suostumusta aktiviteettilinkit toimivat silti, ja tällöin getyourguide.com asettaa omat evästeensä vasta, kun siirryt sinne. Varaukset tehdään getyourguide.com-sivustolla sen oman tietosuojakäytännön mukaisesti.',
+      managingTitle: 'Evästeasetusten hallinta',
+      managing: 'Voit muuttaa tai perua valintasi milloin tahansa alla olevalla painikkeella. Se poistaa tallennetun valintasi, kumppaniskriptien selaimeesi tallentamat merkinnät ja tämän sivuston omaan domainiin asetetut evästeet ja lataa sivun uudelleen, jolloin suostumusbanneri näkyy taas. Muiden yritysten domaineihin (esimerkiksi getyourguide.com) asetetut evästeet voit poistaa selaimesi asetuksista. Voit myös estää evästeet kokonaan selaimessasi, mikä voi vaikuttaa sivuston toimintaan.',
+      withdrawButton: 'Muuta evästevalintaa',
     },
   },
 } as const;

@@ -170,6 +170,7 @@ const t_ja = {
     },
     privacy: {
       title: 'プライバシーポリシー',
+      updated: '最終更新：2026年10月',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_ja = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         '当社は訪問者数の推計のため、匿名化した Google Analytics 4 を使用し、Umami を通じてクッキーを使用しない訪問者統計を収集しています。',
+        '同意（第6条第1項(a)）：解析クッキー（Google Analytics 4）、GetYourGuide のパートナースクリプト、およびその他の非必須クッキーについて。クッキーバナーで同意していただき、いつでも撤回できます。',
+        'GetYourGuide のクッキー：GetYourGuide のパートナースクリプトが設定します。このスクリプトはクッキーに同意した後にのみ読み込まれます。アクティビティのウィジェットの表示回数とクリック数を数え、予約をサイトに帰属させます。',
         'また、Umami Cloud を使って、ページの閲覧数、一部のリンクやボタンのクリック（姉妹サイトやアプリへのリンクなど）、フォームやツールの各段階（ニュースレターのフォームが表示された、入力が始まった、送信された など）を数えています。Umami はクッキーを使用せず、お客様の端末に何も保存しないため、クッキーに同意されたかどうかにかかわらず動作します。記録されるのは、ページのアドレスとタイトル、参照元のサイト、ブラウザ、OS、端末の種類、画面サイズ、言語、おおよその所在地（国・地域・都市）です。IP アドレスはこの所在地と仮名化された訪問識別子を算出するためだけに使われ、保存されることはありません。識別子はハッシュ値で、毎月初めに変わります。これらのイベントに記録されるのは、何がクリック・選択されたか、どの段階か（例：開いた姉妹サイト）と、フォームで先に進めなかった場合の項目名（例：「email」）だけで、入力した内容が記録されることはありません。',
         'Umami によるクッキーを使用しない訪問者統計の法的根拠は、正当な利益（第6条第1項(f)）です。当方の利益は、どのページやフォームが機能しているかを知ることです。Umami はお客様の端末に何も保存せず、IP アドレスも保持しません。解析データは Umami 内で最長2年間保管されます。Umami（Umami Software, Inc.、米国。サーバーは米国と EU）へのデータ移転は、標準契約条項（SCC）の対象です。',
       ],
     },
     cookies: {
       title: 'Cookie ポリシー',
+      updated: '最終更新：2026年10月',
       paragraphs: [
-        '当社はサイトの機能（言語設定、同意管理）のために必須の Cookie を使用します。',
-        'お客様の同意のもと、訪問者分析のために Google Analytics 4 を使用します。',
+        '本サイトの動作に Cookie は必要ありません。同意または拒否の選択は、Cookie ではなくブラウザの localStorage に保存されるため、ご訪問のたびにお尋ねすることはありません。',
+        'お客様の同意のもと、訪問者分析のために Google Analytics 4 を使用します（Cookie：_ga、_ga_*、保存期間2年）。',
         '当社は広告トラッキングを使用しません。広告ターゲティングのためにお客様の同意は必要ありません。',
       ],
+      storageIntro: 'サイトを快適にご利用いただくため、ブラウザの localStorage に小さなエントリを保存しています。例：',
+      storageConsent: 'お客様の同意または拒否の選択',
+      storageLang: '言語の選択（次回も同じ言語でサイトを表示するため）',
+      gygTitle: 'GetYourGuide の Cookie',
+      gygBody: '同意をいただいた場合に限り、本サイトは GetYourGuide のパートナースクリプト（GetYourGuide、ベルリン、EU、パートナーID VRMKD7N）を読み込みます。このスクリプトはアクティビティのウィジェットも表示します。スクリプトは、getyourguide.com に visitor_id（サードパーティ Cookie、400日）、本サイトのドメインに session_id（セッション終了まで）、widget.getyourguide.com に __cf_bm（1日未満、GetYourGuide のコンテンツ配信ネットワークが設定）を保存し、さらに localStorage に partner_id、sessionStorage に gyg_visitor_id を保存します。GetYourGuide はこれらを使ってウィジェットの表示回数とクリック数を数え、予約を LaplandWeddings に帰属させます。同意がなくてもアクティビティへのリンクは機能し、その場合 getyourguide.com は、お客様が同サイトにアクセスしたときにのみ独自の Cookie を設定します。予約は getyourguide.com 上で同社のプライバシーポリシーに基づいて行われます。',
+      managingTitle: 'Cookie 設定の管理',
+      managing: '下のボタンから、いつでも選択を変更または撤回できます。ボタンを押すと、保存された選択、パートナースクリプトがブラウザに保存したエントリ、本サイトのドメインに設定された Cookie が削除され、ページが再読み込みされて同意バナーが再び表示されます。getyourguide.com など他社のドメインに設定された Cookie は、ブラウザの設定から削除できます。ブラウザで Cookie を完全にブロックすることもできますが、サイトの機能に影響する場合があります。',
+      withdrawButton: 'Cookie の選択を変更',
     },
   },
 } as const;

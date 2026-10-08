@@ -170,6 +170,7 @@ const t_nl = {
     },
     privacy: {
       title: 'Privacybeleid',
+      updated: 'Laatst bijgewerkt: oktober 2026',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_nl = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         'Wij gebruiken Google Analytics 4 in geanonimiseerde vorm voor bezoekersschattingen en verzamelen bezoekersstatistieken zonder cookies via Umami.',
+        'Toestemming (Art. 6(1)(a)): voor analysecookies (Google Analytics 4), het partnerscript van GetYourGuide en andere niet-essentiële cookies. U geeft toestemming via de cookiebanner en kunt deze op elk moment intrekken.',
+        'GetYourGuide-cookies: geplaatst door het partnerscript van GetYourGuide, dat pas wordt geladen nadat u cookies heeft geaccepteerd. Ze tellen weergaven van en klikken op de activiteitenwidgets en wijzen boekingen toe aan de site.',
         'Daarnaast gebruiken wij Umami Cloud om paginaweergaven, klikken op sommige van onze links en knoppen (bijvoorbeeld naar onze zustersites of onze app) en de stappen van onze formulieren en hulpmiddelen te tellen, bijvoorbeeld wanneer een nieuwsbriefformulier wordt getoond, ingevuld of verzonden. Umami gebruikt geen cookies en slaat niets op uw apparaat op, dus het werkt ongeacht of u cookies accepteert. Het registreert het adres en de titel van de pagina, de site waar u vandaan komt, uw browser, besturingssysteem, apparaattype, schermformaat, taal en globale locatie (land, regio en stad). Uw IP-adres wordt alleen gebruikt om die locatie en een gepseudonimiseerde bezoek-ID te berekenen en wordt nooit opgeslagen. De ID is een hash die aan het begin van elke maand verandert. Deze gebeurtenissen registreren alleen waarop is geklikt of wat is gekozen en om welke stap het gaat (bijvoorbeeld de zustersite die u hebt geopend) en, als een formulier u tegenhoudt, de naam van het veld (bijvoorbeeld "email"), nooit wat u hebt ingevuld.',
         'De rechtsgrond voor bezoekersstatistieken zonder cookies met Umami is gerechtvaardigd belang (Art. 6(1)(f)). Ons belang is weten welke pagina\'s en formulieren werken; Umami slaat niets op uw apparaat op en bewaart uw IP-adres niet. Analysegegevens worden maximaal 2 jaar bewaard in Umami. Doorgiften aan Umami (Umami Software, Inc., VS; servers in de VS en de EU) worden gedekt door de standaardcontractbepalingen.',
       ],
     },
     cookies: {
       title: 'Cookiebeleid',
+      updated: 'Laatst bijgewerkt: oktober 2026',
       paragraphs: [
-        'Wij gebruiken strikt noodzakelijke cookies voor de werking van de site (taalvoorkeur, toestemming).',
-        'Met uw toestemming gebruiken wij Google Analytics 4 voor bezoekersanalyse.',
+        'De website heeft geen cookies nodig om te werken. Uw keuze om te accepteren of te weigeren wordt opgeslagen in de localStorage van uw browser, niet in een cookie, zodat wij u niet bij elk bezoek opnieuw hoeven te vragen.',
+        'Met uw toestemming gebruiken wij Google Analytics 4 voor bezoekersanalyse (cookies _ga en _ga_*, 2 jaar).',
         'Wij gebruiken geen advertentietracking, uw toestemming is niet vereist voor advertentietargeting.',
       ],
+      storageIntro: 'Kleine vermeldingen worden opgeslagen in de localStorage van uw browser om de site minder vervelend te maken, bijvoorbeeld:',
+      storageConsent: 'uw keuze (accepteren of weigeren)',
+      storageLang: 'Uw taalkeuze, zodat de site de volgende keer in dezelfde taal kan openen.',
+      gygTitle: 'GetYourGuide-cookies',
+      gygBody: 'Met uw toestemming laadt deze site het partnerscript van GetYourGuide (GetYourGuide, Berlijn, EU; partner-ID VRMKD7N), dat ook de activiteitenwidgets toont. Het script plaatst de cookie visitor_id op getyourguide.com (cookie van derden, 400 dagen), de cookie session_id op het domein van deze site (tot het einde van de sessie) en de cookie __cf_bm op widget.getyourguide.com (minder dan 1 dag, geplaatst door het contentdistributienetwerk van GetYourGuide), en bewaart partner_id in de localStorage en gyg_visitor_id in de sessionStorage. GetYourGuide gebruikt ze om weergaven van en klikken op de widgets te tellen en boekingen toe te wijzen aan LaplandWeddings. Zonder uw toestemming werken de activiteitenlinks gewoon, en in dat geval plaatst getyourguide.com zijn eigen cookies pas wanneer u naar die site gaat. De boekingen zelf vinden plaats op getyourguide.com onder het eigen privacybeleid van GetYourGuide.',
+      managingTitle: 'Uw cookievoorkeuren beheren',
+      managing: 'U kunt uw keuze op elk moment wijzigen of intrekken met de knop hieronder. Die wist uw opgeslagen keuze, de vermeldingen die partnerscripts in uw browser hebben opgeslagen en de cookies op het eigen domein van deze site, en laadt de pagina opnieuw zodat de toestemmingsbanner weer verschijnt. Cookies op domeinen van andere bedrijven, zoals getyourguide.com, verwijdert u via uw browserinstellingen. U kunt cookies ook volledig blokkeren in uw browser, maar dat kan de werking van de site beïnvloeden.',
+      withdrawButton: 'Cookiekeuze wijzigen',
     },
   },
 } as const;

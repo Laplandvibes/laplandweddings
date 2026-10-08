@@ -170,6 +170,7 @@ const t_sv = {
     },
     privacy: {
       title: 'Integritetspolicy',
+      updated: 'Senast uppdaterad: oktober 2026',
       // 🔴 Uutiskirjekappale: sivustolla on NewsletterPopup, joka kerää
       // osoitteita verkoston yhteiselle listalle, mutta tämä seloste kuvasi
       // 22.8.2026 asti VAIN yhteydenottolomakkeen. GDPR 13 art. vaatii
@@ -189,17 +190,28 @@ const t_sv = {
         // Umami-kappaleet: verkoston jaetun tietosuojaselosteen (shared/Legal/PrivacyContent.tsx) kentät
         // s2Body, s4Umami, s2aItems, s6Body ja s8aItems sanasta sanaan, liitossanat tämän selosteen rakenteeseen.
         'Vi använder Google Analytics 4 i anonymiserad form för besökaruppskattningar och samlar in besöksstatistik utan cookies via Umami.',
+        'Samtycke (artikel 6.1 a): för analyscookies (Google Analytics 4), GetYourGuides partnerskript och andra icke nödvändiga cookies. Du lämnar samtycke via cookiebannern och kan när som helst återkalla det.',
+        'GetYourGuide-cookies: placeras av GetYourGuides partnerskript, som laddas först när du accepterar cookies. De räknar visningar av och klick på aktivitetswidgetarna och kopplar bokningar till webbplatsen.',
         'Vi använder också Umami Cloud för att räkna sidvisningar, klick på vissa av våra länkar och knappar (till exempel till våra systersajter eller vår app) och stegen i våra formulär och verktyg, till exempel när ett nyhetsbrevsformulär visas, påbörjas eller skickas. Umami använder inga cookies och sparar ingenting på din enhet, så det fungerar oavsett om du godkänner cookies eller inte. Det registrerar sidans adress och titel, webbplatsen du kom från, din webbläsare, ditt operativsystem, enhetstyp, skärmstorlek, språk och ungefärlig plats (land, region och stad). Din IP-adress används bara för att räkna fram platsen och en pseudonym besöksidentifierare och sparas aldrig. Identifieraren är en hash som byts i början av varje månad. Dessa händelser registrerar bara vad som klickades på eller valdes och vilket steg det gäller (till exempel systersajten du öppnade) och, om ett formulär stoppar dig, fältets namn (till exempel "email"), aldrig det du har skrivit.',
         'Den rättsliga grunden för besöksstatistik utan cookies med Umami är berättigat intresse (artikel 6.1 f). Vårt intresse är att veta vilka sidor och formulär som fungerar; Umami sparar ingenting på din enhet och behåller inte din IP-adress. Analysdata sparas i högst 2 år i Umami. Överföringar till Umami (Umami Software, Inc., USA; servrar i USA och EU) omfattas av standardavtalsklausuler.',
       ],
     },
     cookies: {
       title: 'Cookiepolicy',
+      updated: 'Senast uppdaterad: oktober 2026',
       paragraphs: [
-        'Vi använder strikt nödvändiga cookies för att sajten ska fungera (språkval, samtycke).',
-        'Med ditt samtycke använder vi Google Analytics 4 för besökaranalys.',
+        'Webbplatsen behöver inga cookies för att fungera. Ditt val att acceptera eller avböja sparas i webbläsarens localStorage, inte i en cookie, så att vi inte behöver fråga dig vid varje besök.',
+        'Med ditt samtycke använder vi Google Analytics 4 för besökaranalys (cookies _ga och _ga_*, 2 år).',
         'Vi använder inte annonsspårning, ditt samtycke krävs inte för annonsinriktning.',
       ],
+      storageIntro: 'Små poster lagras i din webbläsares localStorage för att göra webbplatsen mindre irriterande, till exempel:',
+      storageConsent: 'ditt val att acceptera/avböja',
+      storageLang: 'Ditt språkval, så att webbplatsen kan öppnas på samma språk nästa gång.',
+      gygTitle: 'GetYourGuide-cookies',
+      gygBody: 'Med ditt samtycke laddar webbplatsen GetYourGuides partnerskript (GetYourGuide, Berlin, EU; partner-ID VRMKD7N), som också visar aktivitetswidgetarna. Skriptet sparar cookien visitor_id på getyourguide.com (tredjepartscookie, 400 dagar), cookien session_id på den här webbplatsens domän (tills sessionen tar slut) och cookien __cf_bm på widget.getyourguide.com (mindre än 1 dag, satt av GetYourGuides nätverk för innehållsleverans) samt partner_id i localStorage och gyg_visitor_id i sessionStorage. GetYourGuide använder dem för att räkna visningar av och klick på widgetarna och för att koppla bokningar till LaplandWeddings. Utan ditt samtycke fungerar aktivitetslänkarna ändå, och i så fall sätter getyourguide.com sina egna cookies först när du går till deras webbplats. Bokningarna görs på getyourguide.com enligt deras integritetspolicy.',
+      managingTitle: 'Hantera dina cookieinställningar',
+      managing: 'Du kan ändra eller återkalla ditt val när som helst med knappen nedan. Den raderar ditt sparade val, de poster som partnerskript har sparat i webbläsaren och de cookies som har satts på webbplatsens egen domän och laddar sedan om sidan, så att samtyckesbannern visas igen. Cookies på andra företags domäner, till exempel getyourguide.com, raderar du i webbläsarens inställningar. Du kan också blockera cookies helt i webbläsaren, även om det kan påverka hur webbplatsen fungerar.',
+      withdrawButton: 'Ändra cookieval',
     },
   },
 } as const;
