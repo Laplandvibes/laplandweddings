@@ -205,7 +205,7 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div ref={sectionRef} className="bg-gradient-to-br from-aurora-purple/20 via-rose/15 to-aurora-pink/20 rounded-3xl p-6 sm:p-10 border border-white/10">
+    <div ref={sectionRef} className="bg-gradient-to-br from-aurora-purple/20 via-rose/15 to-aurora-pink/20 rounded-3xl p-4 sm:p-10 border border-white/10">
       <div className="max-w-2xl mx-auto text-center">
         <h3 className="font-heading text-2xl sm:text-3xl text-white mb-2.5 sm:mb-3 tracking-wide [text-wrap:balance]">
           {tr.home.newsletterTitle}
