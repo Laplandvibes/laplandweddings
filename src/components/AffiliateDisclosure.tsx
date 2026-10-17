@@ -6,9 +6,9 @@ import { useLang } from '../i18n/LangContext';
  * flights, etc.).
  */
 const TEXT: Record<string, string> = {
-  en: 'LaplandWeddings is part of the LaplandVibes network. This site contains partner links (e.g. Trip.com, EconomyBookings): if you click and book, we earn a small commission at no extra cost to you. It funds the site. Thank you for using our links.',
-  fi: 'LaplandWeddings on osa LaplandVibes-verkostoa. Sivuilla on kumppanilinkkejä (mm. Trip.com, EconomyBookings): kun klikkaat ja varaat, saamme pienen palkkion ilman lisäkustannusta sinulle. Tämä rahoittaa sivustomme. Kiitos kun käytät linkkejämme.',
-  de: 'LaplandWeddings ist Teil des LaplandVibes-Netzwerks. Diese Seite enthält Partnerlinks (z. B. Trip.com, EconomyBookings): Wenn Sie klicken und buchen, erhalten wir eine kleine Provision ohne Mehrkosten für Sie. Damit finanzieren wir die Seite. Danke, dass Sie unsere Links verwenden.',
+  en: 'LaplandWeddings is part of the LaplandVibes network. This site contains partner links (e.g. Sembo, Trip.com, EconomyBookings): if you click and book, we earn a small commission at no extra cost to you. It funds the site. Thank you for using our links.',
+  fi: 'LaplandWeddings on osa LaplandVibes-verkostoa. Sivuilla on kumppanilinkkejä (mm. Sembo, Trip.com, EconomyBookings): kun klikkaat ja varaat, saamme pienen palkkion ilman lisäkustannusta sinulle. Tämä rahoittaa sivustomme. Kiitos kun käytät linkkejämme.',
+  de: 'LaplandWeddings ist Teil des LaplandVibes-Netzwerks. Diese Seite enthält Partnerlinks (z. B. Sembo, Trip.com, EconomyBookings): Wenn Sie klicken und buchen, erhalten wir eine kleine Provision ohne Mehrkosten für Sie. Damit finanzieren wir die Seite. Danke, dass Sie unsere Links verwenden.',
   ja: 'LaplandWeddings は LaplandVibes ネットワークの一部です。このサイトにはパートナーリンク（Trip.com、EconomyBookings など）が含まれています。クリックしてご予約いただくと、お客様への追加費用なしで当社に少額の手数料が支払われます。サイトの運営費用となります。リンクのご利用ありがとうございます。',
   es: 'LaplandWeddings forma parte de la red LaplandVibes. Este sitio contiene enlaces de socios (Trip.com, EconomyBookings, etc.): si hace clic y reserva, recibimos una pequeña comisión sin costo adicional para usted. Así financiamos el sitio. Gracias por usar nuestros enlaces.',
   'pt-BR': 'LaplandWeddings faz parte da rede LaplandVibes. Este site contém links de parceiros (Trip.com, EconomyBookings, etc.): se você clicar e reservar, recebemos uma pequena comissão sem custo adicional para você. Isso financia o site. Obrigado por usar nossos links.',
@@ -17,7 +17,7 @@ const TEXT: Record<string, string> = {
   fr: "LaplandWeddings fait partie du réseau LaplandVibes. Ce site contient des liens partenaires (Trip.com, EconomyBookings, etc.) : si vous cliquez et réservez, nous touchons une petite commission sans frais supplémentaires pour vous. Cela finance le site. Merci d'utiliser nos liens.",
   it: 'LaplandWeddings fa parte della rete LaplandVibes. Questo sito contiene link partner (Trip.com, EconomyBookings, ecc.): se clicca e prenota, riceviamo una piccola commissione senza costi aggiuntivi per Lei. In questo modo finanziamo il sito. Grazie per aver utilizzato i nostri link.',
   nl: 'LaplandWeddings maakt deel uit van het LaplandVibes-netwerk. Deze site bevat partnerlinks (bijv. Trip.com, EconomyBookings): als u klikt en boekt, ontvangen wij een kleine commissie zonder extra kosten voor u. Dit financiert de site. Bedankt voor het gebruik van onze links.',
-  sv: 'LaplandWeddings är en del av LaplandVibes-nätverket. Sajten innehåller partnerlänkar (t.ex. Trip.com, EconomyBookings): om du klickar och bokar får vi en liten provision utan extra kostnad för dig. Det finansierar sajten. Tack för att du använder våra länkar.',
+  sv: 'LaplandWeddings är en del av LaplandVibes-nätverket. Sajten innehåller partnerlänkar (t.ex. Sembo, Trip.com, EconomyBookings): om du klickar och bokar får vi en liten provision utan extra kostnad för dig. Det finansierar sajten. Tack för att du använder våra länkar.',
 };
 
 export default function AffiliateDisclosure() {
