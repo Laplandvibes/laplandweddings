@@ -75,7 +75,7 @@ export const page: TraditionsPage = {
       title: 'Morsiusryöstö',
       teaser: 'Kesken juhlan bestman ystävineen vie morsiamen, ja sulhanen saa hänet takaisin tehtäviä suorittamalla.',
       body: [
-        'Morsiusryöstössä bestman apujoukkoineen tai polttariporukka kaappaa morsiamen kesken juhlan. Sulhanen saa hänet takaisin suorittamalla tehtäviä, joilla Ylen mukaan koetellaan hänen mieskuntoaan.',
+        'Morsiusryöstö on hääleikki, jossa bestman apujoukkoineen tai polttariporukka kaappaa morsiamen kesken juhlan. Sulhanen saa hänet takaisin suorittamalla tehtäviä, joilla Ylen mukaan koetellaan hänen mieskuntoaan.',
         'Tavan alkuperää ei ole jäljitetty. Tutkijat ovat Ylen haastattelussa pitäneet sitä patriarkaalisena, joten hääpari päättää itse, kuuluuko leikki heidän juhlaansa.',
       ],
     },
