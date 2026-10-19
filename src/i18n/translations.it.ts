@@ -28,9 +28,9 @@ const t_it = {
   },
   home: {
     heroTitle: 'Sì, lo voglio, sotto l’aurora boreale.',
-    heroSubtitle: 'L’aurora boreale sopra il tetto di vetro, candele nella cappella di neve, una renna che aspetta nel cortile. Trasmettiamo i Suoi desideri a wedding planner e location della Lapponia, gratis e senza impegno.',
+    heroSubtitle: 'L’aurora boreale sopra il tetto di vetro, candele nella cappella di neve, una renna che aspetta nel cortile. Trasmettiamo i Suoi desideri ai wedding planner della Lapponia, gratis e senza impegno.',
     heroTitleSummer: 'Matrimoni sotto il sole di mezzanotte in Lapponia',
-    heroSubtitleSummer: 'Promesse in riva al lago · Cerimonie in cima ai fjäll · Tetti di vetro sotto un cielo che non si fa mai buio · Lunghe sere luminose. Trasmettiamo la Sua richiesta a wedding planner e location della Lapponia, gratis e senza impegno.',
+    heroSubtitleSummer: 'Promesse in riva al lago · Cerimonie in cima ai fjäll · Tetti di vetro sotto un cielo che non si fa mai buio · Lunghe sere luminose. Trasmettiamo la Sua richiesta ai wedding planner della Lapponia, gratis e senza impegno.',
     heroReassure: 'Gratis e senza impegno · risposta in 1–7 giorni',
     whyTitle: 'Perché sposarsi in Lapponia',
     whyP: 'In Lapponia ci si sposa negli igloo di vetro, nelle cappelle di neve e in cima ai fjäll, e nella maggior parte dei casi la cerimonia è simbolica. Questo sito raccoglie i luoghi, le stagioni e quanto costano davvero le cose. Non organizziamo matrimoni e non rappresentiamo alcuna location: Lei ci dice che cosa desidera e noi lo trasmettiamo ai wedding planner in Lapponia.',

@@ -19,6 +19,7 @@ const Photographers = lazy(() => import('./pages/Photographers'))
 const Checklist = lazy(() => import('./pages/Checklist'))
 const PracticalGuide = lazy(() => import('./pages/PracticalGuide'))
 const Pricing = lazy(() => import('./pages/Pricing'))
+const Traditions = lazy(() => import('./pages/Traditions'))
 const Contact = lazy(() => import('./pages/Contact'))
 const PartnerWithUs = lazy(() => import('./pages/PartnerWithUs'))
 const NotFound = lazy(() => import('./pages/NotFound'))
@@ -38,6 +39,7 @@ const routes = [
   { path: 'checklist/dvv-foreign-couples', element: <Checklist /> },
   { path: 'practical-guide', element: <PracticalGuide /> },
   { path: 'pricing', element: <Pricing /> },
+  { path: 'traditions', element: <Traditions /> },
   { path: 'partner-with-us', element: <PartnerWithUs /> },
   { path: 'contact', element: <Contact /> },
   { path: 'privacy', element: <Privacy /> },

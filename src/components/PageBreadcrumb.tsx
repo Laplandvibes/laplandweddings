@@ -1,6 +1,13 @@
 import Breadcrumbs from '../shared/Breadcrumbs';
 import { useLang } from '../i18n/LangContext';
 import { ui } from '../data/uiStrings';
+import { pickLocalized, type Localized } from '../data/localized';
+
+const TRADITIONS: Localized<string> = {
+  fi: 'Hääperinteet', en: 'Wedding traditions', de: 'Hochzeitsbräuche', ja: '結婚式の伝統', es: 'Tradiciones de boda',
+  'pt-BR': 'Tradições de casamento', 'zh-CN': '婚礼传统', ko: '결혼 전통', fr: 'Traditions de mariage',
+  it: 'Tradizioni nuziali', nl: 'Bruiloftstradities', sv: 'Bröllopstraditioner',
+};
 
 /**
  * Ecosystem breadcrumb ("murupolku"), rendered BELOW the hero (mounted once
@@ -22,6 +29,7 @@ export default function PageBreadcrumb() {
     '/photographers': ui('eyebrowPhotographers', lang),
     '/practical-guide': tr.nav.practical,
     '/pricing': tr.nav.pricing,
+    '/traditions': pickLocalized(TRADITIONS, lang),
     '/contact': tr.nav.contact,
   };
   return (

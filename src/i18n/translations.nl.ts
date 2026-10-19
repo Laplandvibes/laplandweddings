@@ -28,9 +28,9 @@ const t_nl = {
   },
   home: {
     heroTitle: 'Ja, onder het noorderlicht.',
-    heroSubtitle: 'Noorderlicht boven het glazen dak, kaarsen in de sneeuwkapel, een rendier dat op het erf wacht. Wij geven uw wensen gratis en vrijblijvend door aan weddingplanners en locaties in Lapland.',
+    heroSubtitle: 'Noorderlicht boven het glazen dak, kaarsen in de sneeuwkapel, een rendier dat op het erf wacht. Wij geven uw wensen gratis en vrijblijvend door aan weddingplanners in Lapland.',
     heroTitleSummer: 'Trouwen onder de middernachtzon in Lapland',
-    heroSubtitleSummer: 'Geloften aan het meer · Ceremonies op de fjäll · Glazen daken onder een hemel die nooit donker wordt · Lange lichte avonden. Wij geven uw aanvraag gratis en vrijblijvend door aan weddingplanners en locaties in Lapland.',
+    heroSubtitleSummer: 'Geloften aan het meer · Ceremonies op de fjäll · Glazen daken onder een hemel die nooit donker wordt · Lange lichte avonden. Wij geven uw aanvraag gratis en vrijblijvend door aan weddingplanners in Lapland.',
     heroReassure: 'Gratis & vrijblijvend · antwoord binnen 1–7 dagen',
     whyTitle: 'Waarom trouwen in Lapland',
     whyP: 'In Lapland trouwt men in glazen iglo’s, sneeuwkapellen en op de top van een fjäll, en meestal is de ceremonie symbolisch. Deze site verzamelt de plekken, de seizoenen en wat dingen werkelijk kosten. Wij organiseren geen bruiloften en vertegenwoordigen geen enkele locatie: u vertelt ons uw wens, wij geven die door aan weddingplanners in Lapland.',

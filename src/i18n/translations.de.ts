@@ -28,9 +28,9 @@ const t_de = {
   },
   home: {
     heroTitle: 'Ja, unter dem Polarlicht.',
-    heroSubtitle: 'Polarlichter über dem Glasdach, Kerzen in der Schneekapelle, ein Rentier wartet im Hof. Wir leiten Ihre Wünsche kostenlos und unverbindlich an Hochzeitsplaner und Locations in Lappland weiter.',
+    heroSubtitle: 'Polarlichter über dem Glasdach, Kerzen in der Schneekapelle, ein Rentier wartet im Hof. Wir leiten Ihre Wünsche kostenlos und unverbindlich an Hochzeitsplaner in Lappland weiter.',
     heroTitleSummer: 'Heiraten unter der Mitternachtssonne.',
-    heroSubtitleSummer: 'Trauung am Seeufer · Bogen am Fuß des Fjälls · helle Nächte ohne Dunkelheit. Wir leiten Ihre Anfrage kostenlos und unverbindlich an Hochzeitsplaner und Locations in Lappland weiter.',
+    heroSubtitleSummer: 'Trauung am Seeufer · Bogen am Fuß des Fjälls · helle Nächte ohne Dunkelheit. Wir leiten Ihre Anfrage kostenlos und unverbindlich an Hochzeitsplaner in Lappland weiter.',
     heroReassure: 'Kostenlos & unverbindlich · Antwort in 1–7 Tagen',
     whyTitle: 'Warum Lappland für Ihre Hochzeit',
     whyP: 'In Lappland wird in Glasiglus, Schneekapellen und auf Fjällgipfeln geheiratet, und meistens ist die Zeremonie symbolisch. Diese Seite sammelt die Orte, die Jahreszeiten und die tatsächlichen Kosten. Wir richten keine Hochzeiten aus und vertreten keine Location: Sie nennen uns Ihren Wunsch, wir geben ihn an Hochzeitsplaner in Lappland weiter.',

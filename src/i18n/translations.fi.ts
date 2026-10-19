@@ -28,9 +28,9 @@ const t_fi = {
   },
   home: {
     heroTitle: 'Tahdon, revontulten alla.',
-    heroSubtitle: 'Revontulet lasikaton takana, kynttilät lumikappelissa, poro odottamassa pihalla. Välitämme toiveesi Lapin hääsuunnittelijoille ja hääpaikoille maksutta ja sitoumuksetta.',
+    heroSubtitle: 'Revontulet lasikaton takana, kynttilät lumikappelissa, poro odottamassa pihalla. Välitämme toiveesi Lapin hääsuunnittelijoille maksutta ja sitoumuksetta.',
     heroTitleSummer: 'Tahdon, yöttömän auringon alla.',
-    heroSubtitleSummer: 'Vihkiminen järven rannalla, koristekaari tunturin juurella, valoisa ilta, joka ei pimene. Välitämme toiveesi Lapin hääsuunnittelijoille ja hääpaikoille maksutta ja sitoumuksetta.',
+    heroSubtitleSummer: 'Vihkiminen järven rannalla, koristekaari tunturin juurella, valoisa ilta, joka ei pimene. Välitämme toiveesi Lapin hääsuunnittelijoille maksutta ja sitoumuksetta.',
     heroReassure: 'Maksuton & sitoumukseton · vastaus 1–7 päivässä',
     whyTitle: 'Miksi Lappi häämatkakohteena',
     whyP: 'Lapissa vietetään häitä lasi-igluissa, lumikappeleissa ja tuntureiden laella, ja useimmiten seremonia on symbolinen. Tälle sivustolle on koottu paikat, ajankohdat ja todelliset kustannukset. Emme järjestä häitä emmekä edusta yhtäkään paikkaa: te kerrotte toiveenne, me välitämme sen Lapin hääsuunnittelijoille.',

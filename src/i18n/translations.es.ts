@@ -28,9 +28,9 @@ const t_es = {
   },
   home: {
     heroTitle: 'Sí, quiero, bajo la aurora boreal.',
-    heroSubtitle: 'Auroras boreales sobre el techo de cristal, velas en la capilla de nieve, un reno esperando en el patio. Transmitimos sus deseos a organizadores de bodas y lugares de Laponia, gratis y sin compromiso.',
+    heroSubtitle: 'Auroras boreales sobre el techo de cristal, velas en la capilla de nieve, un reno esperando en el patio. Transmitimos sus deseos a organizadores de bodas de Laponia, gratis y sin compromiso.',
     heroTitleSummer: 'Bodas bajo el sol de medianoche en Laponia',
-    heroSubtitleSummer: 'Votos a la orilla del lago · Ceremonias en la cima de los fells · Techos de cristal bajo un cielo que nunca oscurece · Largas tardes luminosas. En finlandés y en inglés. Transmitimos su solicitud a organizadores de bodas y lugares de Laponia, gratis y sin compromiso.',
+    heroSubtitleSummer: 'Votos a la orilla del lago · Ceremonias en la cima de los fells · Techos de cristal bajo un cielo que nunca oscurece · Largas tardes luminosas. En finlandés y en inglés. Transmitimos su solicitud a organizadores de bodas de Laponia, gratis y sin compromiso.',
     heroReassure: 'Gratis y sin compromiso · respuesta en 1–7 días',
     whyTitle: 'Por qué Laponia para su boda',
     whyP: 'En Laponia las bodas se celebran en iglús de cristal, capillas de nieve y en lo alto de los fells, y la mayoría de las veces la ceremonia es simbólica. Esta web reúne los lugares, las temporadas y lo que cuestan realmente las cosas. No organizamos bodas ni representamos a ningún lugar: usted nos cuenta lo que desea y nosotros lo transmitimos a organizadores de bodas en Laponia.',

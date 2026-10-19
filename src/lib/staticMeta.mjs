@@ -417,6 +417,56 @@ export const STATIC_META = {
       "description": "Vad kostar ett bröllop i Lappland? 5 000 € är den minsta budgeten för ett bröllop med gäster; ett rymningspaket för två börjar kring 1 600 €."
     }
   },
+  "/traditions": {
+    "en": {
+      "title": "Finnish Wedding Traditions: Bridal Sauna, Waltz and Crown",
+      "description": "The bridal sauna, uninvited guests, the wedding waltz, bride kidnapping and Lapland’s fell chapels: Finnish wedding traditions, each with its source."
+    },
+    "fi": {
+      "title": "Hääperinteet: morsiussauna, häävalssi ja kuokkavieraat",
+      "description": "Morsiussauna, kuokkavieraat, häävalssi, morsiusryöstö ja Lapin tunturikappelit: suomalaiset hääperinteet lähteineen ja miten ne näkyvät häissä nyt."
+    },
+    "de": {
+      "title": "Finnische Hochzeitsbräuche: Brautsauna, Walzer und Krone",
+      "description": "Brautsauna, ungeladene Gäste, Hochzeitswalzer, Brautentführung und Lapplands Fjällkapellen: finnische Hochzeitsbräuche, jeweils mit Quelle."
+    },
+    "ja": {
+      "title": "フィンランドの結婚式の伝統：花嫁サウナ、ワルツ、花嫁の冠",
+      "description": "花嫁サウナ、招かれざる客、ウェディングワルツ、花嫁の連れ去り、ラップランドのフェルの礼拝堂。フィンランドの結婚式の伝統を出典とともに紹介します。"
+    },
+    "es": {
+      "title": "Tradiciones de boda finlandesas: sauna, vals y corona",
+      "description": "La sauna de la novia, los invitados sin invitación, el vals, el rapto de la novia y las capillas de Laponia: tradiciones finlandesas con sus fuentes."
+    },
+    "pt-BR": {
+      "title": "Tradições de casamento finlandesas: sauna, valsa e coroa",
+      "description": "A sauna da noiva, os convidados sem convite, a valsa, o rapto da noiva e as capelas da Lapônia: tradições finlandesas de casamento com as fontes."
+    },
+    "zh-CN": {
+      "title": "芬兰婚礼传统：新娘桑拿、婚礼华尔兹与新娘冠",
+      "description": "新娘桑拿、不请自来的客人、婚礼华尔兹、“抢新娘”游戏以及拉普兰的山间小教堂：附出处介绍芬兰的婚礼传统，以及它们在今天婚礼上的样子。"
+    },
+    "ko": {
+      "title": "핀란드 결혼 전통: 신부 사우나, 웨딩 왈츠, 신부 왕관",
+      "description": "신부 사우나, 초대받지 않은 손님, 웨딩 왈츠, 신부 납치 놀이, 라플란드의 펠 예배당까지. 출처와 함께 소개하는 핀란드의 결혼 전통입니다."
+    },
+    "fr": {
+      "title": "Traditions de mariage finlandaises : sauna, valse, couronne",
+      "description": "Le sauna de la mariée, les invités non conviés, la valse, l’enlèvement de la mariée et les chapelles de Laponie : traditions finlandaises et sources."
+    },
+    "it": {
+      "title": "Tradizioni nuziali finlandesi: sauna, valzer e corona",
+      "description": "La sauna della sposa, gli ospiti non invitati, il valzer, il rapimento della sposa e le cappelle della Lapponia: tradizioni finlandesi con le fonti."
+    },
+    "nl": {
+      "title": "Finse bruiloftstradities: bruidssauna, wals en bruidskroon",
+      "description": "Bruidssauna, ongenode gasten, de bruiloftswals, bruidsroof en de fjellkapellen van Lapland: Finse bruiloftstradities, elk met de bron erbij."
+    },
+    "sv": {
+      "title": "Finska bröllopstraditioner: brudbastu, vals och brudkrona",
+      "description": "Brudbastu, objudna gäster, bröllopsvalsen, brudrov och Lapplands fjällkapell: finska bröllopstraditioner med källor och hur de lever i dag."
+    }
+  },
   "/checklist/dvv-foreign-couples": {
     "en": {
       "title": "DVV Wedding Checklist for Foreign Couples (printable PDF)",

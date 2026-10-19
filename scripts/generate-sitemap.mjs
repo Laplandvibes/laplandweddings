@@ -23,7 +23,7 @@ const venues = [
 
 const enPaths = [
   '/', '/locations', '/wedding-types', '/venues', '/photographers',
-  '/practical-guide', '/pricing', '/contact',
+  '/practical-guide', '/pricing', '/traditions', '/contact',
   '/checklist/dvv-foreign-couples',
   '/privacy', '/terms', '/cookie-policy',
   ...locations.map((s) => `/locations/${s}`),

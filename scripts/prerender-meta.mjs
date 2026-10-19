@@ -213,6 +213,7 @@ const top = {
   '/practical-guide': { ...STATIC_META['/practical-guide'], image: '/images/heroes/couple-snow-trail-px19478687.jpg' },
   '/contact': { ...STATIC_META['/contact'], image: '/images/heroes/couple-snow-trail-px19478687.jpg' },
   '/pricing': { ...STATIC_META['/pricing'], image: '/images/venues/lapland-hotels-saaga.jpg' },
+  '/traditions': { ...STATIC_META['/traditions'], image: '/images/traditions/traditions-og.jpg' },
   '/checklist/dvv-foreign-couples': { ...STATIC_META['/checklist/dvv-foreign-couples'], image: '/images/venues/wilderness-hotel-inari.jpg' },
   '/privacy': { ...LEGAL_META['/privacy'], image: '/og.jpg?v=d20d8a53' },
   '/terms': { ...LEGAL_META['/terms'], image: '/og.jpg?v=d20d8a53' },

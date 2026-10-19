@@ -28,9 +28,9 @@ const t_en = {
   },
   home: {
     heroTitle: 'I do, under the northern lights.',
-    heroSubtitle: 'Northern lights above a glass roof, candles in a snow chapel, a reindeer waiting in the yard. We forward your wishes to wedding planners and venues in Lapland, free and without commitment.',
+    heroSubtitle: 'Northern lights above a glass roof, candles in a snow chapel, a reindeer waiting in the yard. We forward your wishes to wedding planners in Lapland, free and without commitment.',
     heroTitleSummer: 'Midnight Sun Weddings in Lapland',
-    heroSubtitleSummer: 'Lakeside vows · Fell-top ceremonies · Glass roofs under the never-dark sky · Long luminous evenings. In Finnish and English. We forward your request to wedding planners and venues in Lapland, free and without commitment.',
+    heroSubtitleSummer: 'Lakeside vows · Fell-top ceremonies · Glass roofs under the never-dark sky · Long luminous evenings. In Finnish and English. We forward your request to wedding planners in Lapland, free and without commitment.',
     heroReassure: 'Free & no commitment · reply within 1–7 days',
     whyTitle: 'Why Lapland for your wedding',
     whyP: 'Weddings in Lapland happen in glass igloos, snow chapels and on fell tops, and most of the time the ceremony is symbolic. This site gathers the places, the seasons and what things actually cost. We do not organise weddings and we represent no venue: you tell us what you want and we pass it on to wedding planners in Lapland.',

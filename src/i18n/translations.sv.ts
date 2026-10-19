@@ -28,9 +28,9 @@ const t_sv = {
   },
   home: {
     heroTitle: 'Ja, under norrskenet.',
-    heroSubtitle: 'Norrsken ovanför glastaket, levande ljus i snökapellet, en ren som väntar på gården. Vi för era önskemål vidare till bröllopsplanerare och vigselplatser i Lappland, gratis och utan förbindelse.',
+    heroSubtitle: 'Norrsken ovanför glastaket, levande ljus i snökapellet, en ren som väntar på gården. Vi för era önskemål vidare till bröllopsplanerare i Lappland, gratis och utan förbindelse.',
     heroTitleSummer: 'Midnattssolsbröllop i Lappland',
-    heroSubtitleSummer: 'Löften vid sjön · Ceremonier på fjälltoppen · Glastak under en himmel som aldrig mörknar · Långa ljusa kvällar. På finska och engelska. Vi för din förfrågan vidare till bröllopsplanerare och vigselplatser i Lappland, gratis och utan förbindelse.',
+    heroSubtitleSummer: 'Löften vid sjön · Ceremonier på fjälltoppen · Glastak under en himmel som aldrig mörknar · Långa ljusa kvällar. På finska och engelska. Vi för din förfrågan vidare till bröllopsplanerare i Lappland, gratis och utan förbindelse.',
     heroReassure: 'Gratis och utan förbindelse · svar inom 1–7 dagar',
     whyTitle: 'Varför gifta sig i Lappland',
     whyP: 'I Lappland hålls bröllop i glasigloor, snökapell och på fjälltoppar, och för det mesta är ceremonin symbolisk. Den här sajten samlar platserna, årstiderna och vad saker faktiskt kostar. Vi arrangerar inga bröllop och företräder ingen plats: ni berättar vad ni önskar, vi för det vidare till bröllopsplanerare i Lappland.',

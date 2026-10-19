@@ -1,4 +1,4 @@
-
+import { Suspense } from 'react';
 import ProductRail, { type RailLang } from '../shared/ads/ProductRail'
 import nordicnestRail from '../shared/ads/rails/nordicnest'
 import nordicnestPicks from '../shared/ads/data/nordicnestPicks'
@@ -18,6 +18,7 @@ import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
 import VenueCard from '../components/VenueCard';
+import TraditionsSection from '../components/TraditionsSection';
 import { pickLocalized } from '../data/localized';
 import { AppPromoHero } from '../components/AppPromo';
 import { AURORA_VIDEO } from '../data/heroVideo';
@@ -222,193 +223,13 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Experiences — visual storytelling */}
-      <Section
-        eyebrow={pick(lang, {
-          fi: 'Lapin häämomentit',
-          en: 'Lapland wedding moments',
-          de: 'Lappland-Hochzeitsmomente',
-          ja: 'ラップランドの結婚式の瞬間',
-          es: 'Momentos de boda en Laponia',
-          'pt-BR': 'Momentos de casamento na Lapônia',
-          'zh-CN': '拉普兰婚礼时刻',
-          ko: '라플란드 결혼식의 순간들',
-          fr: 'Instants de mariage en Laponie',
-          it: 'Istanti di matrimonio in Lapponia',
-          nl: 'Bruiloftsmomenten in Lapland',
-          sv: 'Bröllopsstunder i Lappland',
-        })}
-        title={pick(lang, {
-          fi: 'Hetket joista vieraat puhuvat vuosia',
-          en: 'The moments your guests will remember for years',
-          de: 'Momente, von denen Ihre Gäste noch jahrelang erzählen',
-          ja: 'ゲストが何年も語り続ける、忘れられない瞬間',
-          es: 'Los momentos de los que sus invitados hablarán durante años',
-          'pt-BR': 'Os momentos que os convidados vão lembrar por anos',
-          'zh-CN': '宾客多年后仍会津津乐道的时刻',
-          ko: '하객들이 오랜 세월 잊지 못할 순간들',
-          fr: 'Les instants dont vos invités parleront pendant des années',
-          it: 'I momenti di cui i Suoi ospiti parleranno per anni',
-          nl: 'De momenten die uw gasten nog jaren zullen herinneren',
-          sv: 'Stunderna som era gäster minns i åratal',
-        })}
-        className="bg-night-light/30"
-      >
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-6xl mx-auto">
-          {[
-            {
-              img: '/images/stock/exp-husky-levi-granat.webp',
-              credit: { name: 'Евгений Гранат', license: 'Public domain', url: 'https://commons.wikimedia.org/wiki/File:Levi_-_Huskies_Safari.JPG' } as ImageCredit,
-              title: pick(lang, {
-                fi: 'Husky-saapuminen',
-                en: 'Husky arrival',
-                de: 'Ankunft mit Huskys',
-                ja: 'ハスキー犬で登場',
-                es: 'Llegada en trineo de huskies',
-                'pt-BR': 'Chegada com huskies',
-                'zh-CN': '哈士奇雪橇登场',
-                ko: '허스키 썰매로 입장',
-                fr: 'Arrivée en traîneau à huskies',
-                it: 'Arrivo con gli husky',
-                nl: 'Aankomst per huskyslee',
-                sv: 'Ankomst med husky',
-              }),
-              body: pick(lang, {
-                fi: 'Valjakko vetää reen hangen poikki kuusikon halki. Moni pari ajaa viimeisen matkan vihkipaikalle juuri näin.',
-                en: 'A dog team pulls the sled across the snow through the spruce forest. Many couples travel the last stretch to the ceremony exactly like this.',
-                de: 'Ein Hundegespann zieht den Schlitten durch den Schnee im Fichtenwald. Viele Paare legen die letzte Strecke zur Trauung genau so zurück.',
-                ja: '犬ぞりのチームがトウヒの森の雪を進みます。多くのカップルが挙式会場までの最後の道のりをこの方法で移動します。',
-                es: 'Un tiro de perros arrastra el trineo por la nieve entre los abetos. Muchas parejas recorren así el último tramo hasta la ceremonia.',
-                'pt-BR': 'Uma matilha puxa o trenó pela neve entre os abetos. Muitos casais percorrem assim o último trecho até a cerimônia.',
-                'zh-CN': '一队雪橇犬拉着雪橇穿过云杉林的积雪。许多新人正是这样走完通往仪式现场的最后一段路。',
-                ko: '개 썰매 팀이 가문비나무 숲의 눈길을 가로질러 썰매를 끕니다. 많은 커플이 예식장까지의 마지막 구간을 이렇게 이동합니다.',
-                fr: 'Un attelage tire le traîneau dans la neige à travers la forêt d’épicéas. Beaucoup de couples parcourent ainsi les derniers mètres jusqu’à la cérémonie.',
-                it: 'Una muta traina la slitta sulla neve tra gli abeti. Molte coppie percorrono così l’ultimo tratto fino alla cerimonia.',
-                nl: 'Een span honden trekt de slee door de sneeuw tussen de sparren. Veel stellen leggen het laatste stuk naar de ceremonie precies zo af.',
-                sv: 'Ett hundspann drar släden genom snön i granskogen. Många par tar sig den sista biten till vigseln just så.',
-              }),
-            },
-            {
-              img: '/images/stock/exp-frozen-inari-stojanovski.webp',
-              credit: { name: 'Martin Stojanovski', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Star_trail_over_frozen_Lake_Inari.jpg' } as ImageCredit,
-              title: pick(lang, {
-                fi: 'Jäätyneet järvet',
-                en: 'Frozen lakes',
-                de: 'Gefrorene Seen',
-                ja: '凍った湖',
-                es: 'Lagos helados',
-                'pt-BR': 'Lagos congelados',
-                'zh-CN': '冰封湖泊',
-                ko: '얼어붙은 호수',
-                fr: 'Lacs gelés',
-                it: 'Laghi ghiacciati',
-                nl: 'Bevroren meren',
-                sv: 'Frusna sjöar',
-              }),
-              body: pick(lang, {
-                fi: 'Inarijärvi jäätyy niin, että veneet jäävät talveksi paikoilleen. Yössä tähdet piirtävät kaaria ja revontulet nousevat jään ylle.',
-                en: 'Lake Inari freezes so hard that boats stay put for the winter. At night the stars draw arcs and the aurora rises over the ice.',
-                de: 'Der Inarisee friert so fest zu, dass Boote den Winter über an Ort und Stelle bleiben. Nachts ziehen die Sterne Bögen und das Polarlicht steigt über das Eis.',
-                ja: 'イナリ湖は船が冬のあいだそのまま残るほど厚く凍ります。夜には星が弧を描き、氷の上にオーロラが立ちのぼります。',
-                es: 'El lago Inari se hiela tanto que los barcos se quedan en su sitio todo el invierno. De noche las estrellas trazan arcos y la aurora boreal se alza sobre el hielo.',
-                'pt-BR': 'O lago Inari congela a ponto de os barcos ficarem parados o inverno inteiro. À noite as estrelas desenham arcos e a aurora boreal sobe acima do gelo.',
-                'zh-CN': '伊纳里湖结冰之厚，让船整个冬天都留在原地。夜里星辰划出弧线，极光在冰面上方升起。',
-                ko: '이나리 호수는 배가 겨우내 제자리에 그대로 있을 만큼 단단히 얼어붙습니다. 밤이면 별이 호를 그리고 얼음 위로 오로라가 떠오릅니다.',
-                fr: 'Le lac Inari gèle au point que les bateaux restent sur place tout l’hiver. La nuit, les étoiles tracent des arcs et l’aurore boréale se lève au-dessus de la glace.',
-                it: 'Il lago Inari gela a tal punto che le barche restano ferme per tutto l’inverno. Di notte le stelle disegnano archi e l’aurora boreale sale sopra il ghiaccio.',
-                nl: 'Het Inarimeer vriest zo dicht dat boten de hele winter blijven staan. ’s Nachts trekken de sterren bogen en rijst het noorderlicht boven het ijs.',
-                sv: 'Enare träsk fryser så hårt att båtar blir stående hela vintern. På natten ritar stjärnorna bågar och norrskenet stiger över isen.',
-              }),
-            },
-            {
-              img: '/images/stock/exp-savusauna-newtonsyms.webp',
-              credit: { name: 'Timo Newton-Syms', license: 'CC BY-SA 2.0', url: 'https://commons.wikimedia.org/wiki/File:Smoke_Sauna_(395139052).jpg' } as ImageCredit,
-              title: pick(lang, {
-                fi: 'Saunasta lumeen',
-                en: 'Sauna to snow',
-                de: 'Aus der Sauna in den Schnee',
-                ja: 'サウナから雪へ',
-                es: 'De la sauna a la nieve',
-                'pt-BR': 'Da sauna para a neve',
-                'zh-CN': '从桑拿到雪地',
-                ko: '사우나에서 눈밭으로',
-                fr: 'Du sauna à la neige',
-                it: 'Dalla sauna alla neve',
-                nl: 'Van sauna de sneeuw in',
-                sv: 'Från bastu till snö',
-              }),
-              body: pick(lang, {
-                fi: 'Savusauna lämpiää tuntikausia ennen ensimmäisiä löylyjä. Siitä astutaan paljain jaloin lumeen: suomalaisten oma tapa.',
-                en: 'A smoke sauna is heated for hours before the first steam. From there you step barefoot into the snow: the Finnish way.',
-                de: 'Eine Rauchsauna wird stundenlang geheizt, bevor der erste Aufguss kommt. Von dort geht es barfuß in den Schnee: die finnische Art.',
-                ja: 'スモークサウナは最初の蒸気までに何時間もかけて温めます。そこから裸足で雪へ。フィンランドならではの習わしです。',
-                es: 'Una sauna de humo se calienta durante horas antes del primer vapor. Desde ahí se sale descalzo a la nieve: la costumbre finlandesa.',
-                'pt-BR': 'Uma sauna de fumaça é aquecida por horas antes do primeiro vapor. De lá se sai descalço para a neve: o jeito finlandês.',
-                'zh-CN': '烟熏桑拿要预热数小时才迎来第一股蒸汽。从里面赤脚走进雪地，这是芬兰人的做法。',
-                ko: '연기 사우나는 첫 증기가 오르기까지 몇 시간을 데웁니다. 그곳에서 맨발로 눈 위로 나서는 것이 핀란드식입니다.',
-                fr: 'Un sauna à fumée chauffe des heures avant la première vapeur. De là, on sort pieds nus dans la neige : la manière finlandaise.',
-                it: 'Una sauna a fumo si scalda per ore prima del primo vapore. Da lì si esce scalzi nella neve: l’usanza finlandese.',
-                nl: 'Een rooksauna wordt uren voorverwarmd voor de eerste stoom. Vandaar stapt men blootsvoets de sneeuw in: de Finse manier.',
-                sv: 'En rökbastu värms i timmar före första badet. Därifrån går man barfota ut i snön – det finska sättet.',
-              }),
-            },
-            {
-              img: '/images/stock/exp-avanto-vesahjr.webp',
-              credit: { name: 'Vesahjr', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:K%C3%B6hni%C3%B6nj%C3%A4rvi3.JPG' } as ImageCredit,
-              title: pick(lang, {
-                fi: 'Avanto',
-                en: 'The ice hole',
-                de: 'Das Eisloch',
-                ja: '氷の穴',
-                es: 'El agujero en el hielo',
-                'pt-BR': 'O buraco no gelo',
-                'zh-CN': '冰洞',
-                ko: '얼음 구멍',
-                fr: 'Le trou dans la glace',
-                it: 'Il foro nel ghiaccio',
-                nl: 'Het wak',
-                sv: 'Vaken',
-              }),
-              body: pick(lang, {
-                fi: 'Avanto pidetään auki koko talven: laituri, portaat ja pelastusrengas valmiina. Hääpuvussa siihen astuminen on se kuva, joka kiertää.',
-                en: 'The ice hole is kept open all winter: jetty, steps and a life ring ready. Stepping in wearing the dress is the picture that travels.',
-                de: 'Das Eisloch wird den ganzen Winter offen gehalten: Steg, Treppe und Rettungsring bereit. Im Brautkleid hineinzusteigen ist das Bild, das die Runde macht.',
-                ja: '氷の穴は冬のあいだ開けたままにされ、桟橋も階段も浮き輪も用意されています。ドレスのまま入るその一枚が、みんなに回ります。',
-                es: 'El agujero en el hielo se mantiene abierto todo el invierno: embarcadero, escalera y salvavidas listos. Meterse con el vestido puesto es la foto que circula.',
-                'pt-BR': 'O buraco no gelo fica aberto o inverno todo: píer, escada e boia prontos. Entrar de vestido é a foto que circula.',
-                'zh-CN': '冰洞整个冬天都保持不冻：码头、台阶和救生圈都已备好。穿着礼服下水的那一张，才是会被传开的照片。',
-                ko: '얼음 구멍은 겨우내 열어 둡니다. 선착장과 계단, 구명환이 준비돼 있습니다. 드레스를 입은 채 들어가는 그 한 장이 퍼지는 사진입니다.',
-                fr: 'Le trou dans la glace reste ouvert tout l’hiver : ponton, marches et bouée prêts. Y entrer en robe, c’est la photo qui circule.',
-                it: 'Il foro nel ghiaccio resta aperto tutto l’inverno: pontile, gradini e salvagente pronti. Entrarci in abito da sposa è la foto che gira.',
-                nl: 'Het wak blijft de hele winter open: steiger, trap en reddingsboei klaar. Er in de jurk in stappen is de foto die rondgaat.',
-                sv: 'Vaken hålls öppen hela vintern: brygga, trappa och livboj redo. Att kliva i med klänningen på är bilden som sprids.',
-              }),
-            },
-          ].map((exp) => (
-            <div key={exp.title} className="on-image group relative aspect-[3/4] overflow-hidden rounded-2xl bg-night-light">
-              <ImgCredit credit={exp.credit} lang={lang} />
-              <img
-                src={exp.img}
-                alt={exp.title}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-               decoding="async" width="800" height="600"/>
-              <div
-                className="absolute inset-0"
-                style={{ background: 'linear-gradient(to top, rgba(15,12,10,0.92) 0%, rgba(15,12,10,0.45) 50%, rgba(15,12,10,0.05) 100%)' }}
-              />
-              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                <h3 className="font-heading text-xl sm:text-2xl text-white mb-1.5 leading-tight tracking-wide">
-                  {exp.title}
-                </h3>
-                <p className="text-[12px] sm:text-[13px] text-gray-200 leading-relaxed line-clamp-3">
-                  {exp.body}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
+      {/* Finnish wedding traditions (19.10.2026). Replaced the "wedding moments" cards
+          (husky arrival, frozen lakes, sauna to snow, ice hole): Vesa asked whether anyone
+          really steps into an ice hole at a wedding, and nobody does. Copy is loaded for
+          the reader's language only, below the fold, so the fallback just holds the space. */}
+      <Suspense fallback={<div className="min-h-[640px]" aria-hidden="true" />}>
+        <TraditionsSection />
+      </Suspense>
 
       {/* Locations */}
       <Section
@@ -663,15 +484,16 @@ export default function Home() {
             /* The display token sits in a fixed-height box so the labels and
                body copy start on the same line in all three cards regardless of
                how tall the token renders in a given language. */
-            <L key={stat.label} to={stat.to} className="group bg-night-light hover:bg-night-light/70 p-7 sm:p-8 lg:p-9 flex flex-col transition-colors">
-              <p className="font-heading text-[44px] sm:text-5xl lg:text-[52px] leading-none text-rose tracking-wide min-h-[52px] sm:min-h-[48px] lg:min-h-[52px] flex items-end">
+            /* Number and label centred in the tile (lv_permanent_rules §42, Vesa 17.10.2026). */
+            <L key={stat.label} to={stat.to} className="group bg-night-light hover:bg-night-light/70 p-7 sm:p-8 lg:p-9 flex flex-col items-center text-center transition-colors">
+              <p className="font-heading text-[44px] sm:text-5xl lg:text-[52px] leading-none text-rose tracking-wide min-h-[52px] sm:min-h-[48px] lg:min-h-[52px] flex items-end justify-center">
                 {stat.stat}
               </p>
               <p className="text-[11px] sm:text-xs uppercase tracking-[0.16em] text-aurora-pink font-semibold mt-3.5 mb-3 leading-snug [text-wrap:balance]">
                 {stat.label}
               </p>
-              <p className="text-sm text-gray-300 leading-[1.7] max-w-[34ch]">{stat.body}</p>
-              <p className="mt-5 text-sm font-semibold underline underline-offset-4 group-hover:opacity-80 transition-opacity" style={{ color: 'var(--color-rose-ink)' }}>{stat.cta} →</p>
+              <p className="text-sm text-gray-300 leading-[1.7] max-w-[34ch] [text-wrap:balance]">{stat.body}</p>
+              <p className="mt-auto pt-5 text-sm font-semibold underline underline-offset-4 group-hover:opacity-80 transition-opacity" style={{ color: 'var(--color-rose-ink)' }}>{stat.cta} →</p>
             </L>
           ))}
         </div>

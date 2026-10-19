@@ -691,6 +691,145 @@
       "note": "Talvikuva 1.10.–30.4. (Vesa 20.9.2026). Kesäkuva säilyy touko–syyskuussa; katseluvipu ?kausi=talvi.",
       "fetched": "2026-09-20",
       "resized": "2026-09-25"
+    },
+    {
+      "kind": "archive",
+      "fetched": "2026-10-19",
+      "price": "0 €",
+      "license_check": "Finna-tietueen kuvan oikeudet -kenttä luettu 19.10.2026",
+      "file": "traditions/bridal-sauna-1894.webp",
+      "source": "https://www.finna.fi/Record/kuhmu.F8735367256F8F9E53EEBE608ECA6910",
+      "title": "Vienankarjalaiset häät: antilasta pyritetään kylyyn",
+      "year": "1894",
+      "place": "Vienan Karjala (nyk. Venäjä)",
+      "author": "I. K. Inha",
+      "organisation": "Kuopion kulttuurihistoriallinen museo",
+      "license": "CC BY 4.0",
+      "original": "1200×875",
+      "ours": "1200×875 webp, ei rajausta",
+      "used": [
+        "/traditions morsiussauna",
+        "etusivun perinneosio"
+      ]
+    },
+    {
+      "kind": "archive",
+      "fetched": "2026-10-19",
+      "price": "0 €",
+      "license_check": "Finna-tietueen kuvan oikeudet -kenttä luettu 19.10.2026",
+      "file": "traditions/wedding-feast-1900.webp",
+      "source": "https://www.finna.fi/Record/museovirasto.159B4F2251C39C4CDF731EB65FA8ECA2",
+      "title": "tiukkalaista hääväkeä pitopöydässä talon pihassa, pöydän päässä hääparin paikalla lehvämaja",
+      "year": "1900",
+      "place": "Tiukka (nyk. Kristiinankaupunki)",
+      "author": "Ina Roos",
+      "organisation": "Museovirasto, Kansatieteen kuvakokoelma",
+      "license": "CC BY 4.0",
+      "original": "1200×852",
+      "ours": "1200×852 webp, ei rajausta",
+      "used": [
+        "/traditions kuokkavieraat",
+        "etusivun perinneosio"
+      ],
+      "note": "Henkilökuvat vain ennen 1940 otetuista (Museoviraston ehto: henkilökuvan käyttö markkinoinnissa vaatii kuvatun suostumuksen); 1949 Helsingin häävalssikuva hylättiin siksi."
+    },
+    {
+      "kind": "archive",
+      "fetched": "2026-10-19",
+      "price": "0 €",
+      "license_check": "Finna-tietueen kuvan oikeudet -kenttä luettu 19.10.2026",
+      "file": "traditions/wedding-dance-1928.webp",
+      "source": "https://www.finna.fi/Record/museovirasto.9480D1CCC95EED740308F4549931BBFF",
+      "title": "Korhosten häätanssiaiset",
+      "year": "1928",
+      "place": "Kauhajoki, Harjan kylä",
+      "author": "Alfred Niemistö",
+      "organisation": "Museovirasto, Historian kuvakokoelma",
+      "license": "CC BY 4.0",
+      "original": "1200×767",
+      "ours": "rajattu alareunasta 1200×690 (arkistonumero 'N:o 352. II. 1928' pois), merkitty 'rajattu' krediittiin",
+      "used": [
+        "/traditions häävalssi",
+        "etusivun perinneosio"
+      ]
+    },
+    {
+      "kind": "archive",
+      "fetched": "2026-10-19",
+      "price": "0 €",
+      "license_check": "Finna-tietueen kuvan oikeudet -kenttä luettu 19.10.2026",
+      "file": "traditions/traditions-og.jpg",
+      "source": "https://www.finna.fi/Record/museovirasto.9480D1CCC95EED740308F4549931BBFF",
+      "title": "Korhosten häätanssiaiset (jakokuva)",
+      "year": "1928",
+      "author": "Alfred Niemistö",
+      "organisation": "Museovirasto, Historian kuvakokoelma",
+      "license": "CC BY 4.0",
+      "ours": "rajattu 1200×630 jpg",
+      "used": [
+        "og:image /traditions"
+      ]
+    },
+    {
+      "kind": "archive",
+      "fetched": "2026-10-19",
+      "price": "0 €",
+      "license_check": "Finna-tietueen kuvan oikeudet -kenttä luettu 19.10.2026",
+      "file": "traditions/bridal-crown-1876.webp",
+      "source": "https://www.finna.fi/Record/museovirasto.B1976663C259845CBE430A837220512F",
+      "title": "morsian ja morsiuskruunu",
+      "year": "1876",
+      "place": "Ylikiiminki",
+      "author": "Johan Björkman",
+      "organisation": "Museovirasto, Kansatieteen kuvakokoelma",
+      "license": "CC BY 4.0",
+      "original": "766×1200",
+      "ours": "766×1200 webp, ei rajausta",
+      "used": [
+        "/traditions morsiuskruunu"
+      ]
+    },
+    {
+      "kind": "archive",
+      "fetched": "2026-10-19",
+      "price": "0 €",
+      "license_check": "Finna-tietueen kuvan oikeudet -kenttä luettu 19.10.2026",
+      "file": "traditions/pielpajarvi-church-1974.webp",
+      "source": "https://www.finna.fi/Record/museovirasto.29A66F2697402A76676E3F37FFC930EA",
+      "commons": "https://commons.wikimedia.org/wiki/File:Pielpaj%C3%A4rvi_Wilderness_Church_interior_1974_RHO11417_44.jpg",
+      "title": "Interior of Pielpajärvi Wilderness Church towards the altar",
+      "year": "1974",
+      "place": "Inari",
+      "author": "O. Kallionpää",
+      "organisation": "Museovirasto",
+      "license": "CC BY 4.0",
+      "original": "1200×741",
+      "ours": "1200×741 webp, ei rajausta",
+      "checks": "ei ihmisiä",
+      "used": [
+        "/traditions tunturikappelit",
+        "etusivun perinneosio"
+      ]
+    },
+    {
+      "kind": "archive",
+      "fetched": "2026-10-19",
+      "price": "0 €",
+      "license_check": "Finna-tietueen kuvan oikeudet -kenttä luettu 19.10.2026",
+      "file": "traditions/rovaniemi-wedding-1930.webp",
+      "source": "https://www.finna.fi/Record/museovirasto.AD56EB6D0FBE899F8D5E8DC3037C6826",
+      "title": "Aino Nivan ja Väinö Alanärän hääkuva",
+      "year": "n. 1930",
+      "place": "Rovaniemi",
+      "author": "kuvaaja tuntematon",
+      "organisation": "Museovirasto, Kansatieteen kuvakokoelma",
+      "license": "CC BY 4.0",
+      "original": "2170×3000",
+      "ours": "pienennetty 868×1200 webp, ei rajausta",
+      "used": [
+        "/traditions hero"
+      ],
+      "note": "Henkilökuvat vain ennen 1940 otetuista (Museoviraston ehto: henkilökuvan käyttö markkinoinnissa vaatii kuvatun suostumuksen); 1949 Helsingin häävalssikuva hylättiin siksi."
     }
   ],
   "ai_remaining_20260919": [

@@ -39,7 +39,7 @@ export interface ImageCredit {
   cropped?: boolean;
 }
 
-const CROPPED: Localized<string> = {
+export const CROPPED: Localized<string> = {
   en: 'cropped', fi: 'rajattu', de: 'zugeschnitten', ja: 'トリミング', es: 'recortada', 'pt-BR': 'recortada',
   'zh-CN': '已裁剪', ko: '자른 이미지', fr: 'recadrée', it: 'ritagliata', nl: 'bijgesneden', sv: 'beskuren',
 };
