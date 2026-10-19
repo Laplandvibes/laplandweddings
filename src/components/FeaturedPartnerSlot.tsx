@@ -5,9 +5,8 @@
  * Miksi (Vesa 2026-07-26): sivuston 21 nimettyä hääpaikkaa saivat isot
  * kuva+kuvaus-kortit JA oman kokonaisen `/venues/:slug`-sivun ilmaiseksi samalla
  * kun molemmat myydyt mainospaikat olivat tyhjinä. Nyt jokainen venue-ruudukko
- * alkaa yhdellä myytävällä paikalla, ja toimituksellinen kärkivalinta on pelkkä
- * ansaittu chip normaalikortilla (ks. `bestGoogleRated` / `EditorsPickChip` —
- * sitä ei myydä; peruste on aito Google-arvio, ei mikään tässä tiedostossa).
+ * alkaa yhdellä myytävällä paikalla. Tavallisissa korteissa ei ole merkkejä eikä
+ * arvioita (19.10.2026, `VenueCard`); Google-arvio näkyy vain hääpaikan omalla sivulla.
  *
  * Kanoninen malli: laplandhoteldeals `FeaturedPartnerSlot` (commit `f67c6d6`),
  * alkumalli laplanddining `CityFeaturedSlot` (`bdf9b37`). Sama rakenne,

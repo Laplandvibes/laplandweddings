@@ -49,7 +49,6 @@ export const AD_SLOTS: HomeAdSlotsConfig = {
  *    noudattaa bear-precedenttia ("maksettu esittely, ei komissiolinkki").
  *    Valokuvaajien UTM-referral-linkit (`withReferral`, 6 kpl 25.7.) ja venue-
  *    korttien affiliate-CTA:t pysyvät omissa reiteissään koskemattomina.
- *  - Ansaittu `EditorsPickChip` EI ole osa tätä inventaaria eikä myynnissä.
  *
  * Myynti: täytä alla oleva kenttä Partner-objektilla → build → deploy.
  */

@@ -16,10 +16,6 @@ import type { Localized } from './localized';
  * format.
  */
 export type EditorialCopy = {
-  /** Chip label, e.g. "Toimituksen valinta". */
-  pickLabel: Localized<string>;
-  /** Why this card has the chip — the derivation stated in words. */
-  pickReason: Localized<string>;
   /** One card's Google score. Must attribute the number to Google. */
   ratingLine: Localized<string>;
   /** Accessible name for the rating link (it opens Google's review list). */
@@ -29,34 +25,6 @@ export type EditorialCopy = {
 };
 
 export const editorialCopy: EditorialCopy = {
-  pickLabel: {
-    fi: 'Toimituksen valinta',
-    en: 'Editor’s pick',
-    de: 'Redaktionsempfehlung',
-    ja: '編集部の選定',
-    es: 'Selección editorial',
-    'pt-BR': 'Escolha da redação',
-    'zh-CN': '编辑之选',
-    ko: '편집부 추천',
-    fr: 'Choix de la rédaction',
-    it: 'Scelta della redazione',
-    nl: 'Keuze van de redactie',
-    sv: 'Redaktionens val',
-  },
-  pickReason: {
-    fi: 'Sivun paras Google-arvio',
-    en: 'Highest Google rating on this page',
-    de: 'Beste Google-Bewertung auf dieser Seite',
-    ja: 'このページで最も高いGoogle評価',
-    es: 'La mejor valoración de Google de esta página',
-    'pt-BR': 'A melhor avaliação do Google desta página',
-    'zh-CN': '本页最高的Google评分',
-    ko: '이 페이지에서 가장 높은 Google 평점',
-    fr: 'Meilleure note Google de cette page',
-    it: 'Miglior valutazione Google di questa pagina',
-    nl: 'Hoogste Google-beoordeling op deze pagina',
-    sv: 'Sidans högsta Google-betyg',
-  },
   ratingLine: {
     fi: 'Google {r} · {n} arvostelua',
     en: 'Google {r} · {n} reviews',

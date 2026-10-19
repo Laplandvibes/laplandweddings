@@ -4,7 +4,7 @@ import { VENUE_DESCRIPTION } from '../lib/venueMeta.mjs';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
 import LeadForm from '../components/LeadForm';
-import PriceTierBadge, { priceTierLabel } from '../components/PriceTierBadge';
+import PriceTierBadge from '../components/PriceTierBadge';
 import { getVenueBySlug, venues } from '../data/venues';
 import { weddingTypes } from '../data/weddingTypes';
 import { useLang } from '../i18n/LangContext';
@@ -17,9 +17,8 @@ import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
 import GoogleRatingRow from '../components/GoogleRatingRow';
-import EditorsPickChip from '../components/EditorsPickChip';
-import { bestGoogleRated, editorialPickNote } from '../data/googleReviews';
-import { editorialCopy } from '../data/editorialCopy';
+import VenueCard from '../components/VenueCard';
+import { cardBlurb } from '../lib/cardBlurb';
 
 type VKey =
   | 'checkPrices' | 'seeStaysIn'
@@ -107,12 +106,12 @@ const V: Record<VKey, Localized<string>> = {
     fr: 'types de mariage', it: 'tipi di matrimonio', nl: 'soorten bruiloften', sv: 'bröllopstyper',
   },
   tailoredProposal: {
-    en: 'Get a tailored proposal', fi: 'Pyydä räätälöity ehdotus',
-    de: 'Maßgeschneidertes Angebot anfordern', ja: 'オーダーメイドの提案を依頼',
-    es: 'Reciba una propuesta a medida', 'pt-BR': 'Receba uma proposta sob medida',
-    'zh-CN': '获取量身定制方案', ko: '맞춤 제안 받기',
-    fr: 'Recevoir une proposition sur mesure', it: 'Riceva una proposta su misura',
-    nl: 'Ontvang een voorstel op maat', sv: 'Få ett skräddarsytt förslag',
+    en: 'Send a wedding enquiry', fi: 'Lähetä hääkysely',
+    de: 'Hochzeitsanfrage senden', ja: '結婚式について問い合わせる',
+    es: 'Enviar una consulta de boda', 'pt-BR': 'Enviar uma consulta',
+    'zh-CN': '发送婚礼咨询', ko: '결혼식 문의 보내기',
+    fr: 'Envoyer une demande', it: 'Invia una richiesta',
+    nl: 'Trouwaanvraag versturen', sv: 'Skicka en bröllopsförfrågan',
   },
   atAGlance: {
     en: 'This venue at a glance', fi: 'Tämä venue lyhyesti',
@@ -163,28 +162,30 @@ const V: Record<VKey, Localized<string>> = {
     nl: 'Vergelijk alternatieven in de buurt', sv: 'Jämför alternativ i närheten',
   },
   freeQuote: {
-    en: 'Free quote', fi: 'Maksuton tarjous',
-    de: 'Kostenloses Angebot', ja: '無料見積もり',
-    es: 'Presupuesto gratuito', 'pt-BR': 'Orçamento gratuito',
-    'zh-CN': '免费报价', ko: '무료 견적',
-    fr: 'Devis gratuit', it: 'Preventivo gratuito',
-    nl: 'Gratis offerte', sv: 'Kostnadsfri offert',
+    en: 'Free enquiry', fi: 'Maksuton kysely',
+    de: 'Kostenlose Anfrage', ja: '無料のお問い合わせ',
+    es: 'Consulta gratuita', 'pt-BR': 'Consulta gratuita',
+    'zh-CN': '免费咨询', ko: '무료 문의',
+    fr: 'Demande gratuite', it: 'Richiesta gratuita',
+    nl: 'Gratis aanvraag', sv: 'Kostnadsfri förfrågan',
   },
   // No delivery SLA and no quote count here: the planner network is real, but the
   // turnaround is not ours to promise (Vesa 2026-07-27). Planners reply directly.
+  // Vesa 19.10.2026: "Pyydä tarjous: Kakslauttanen" read as if we had a contract with
+  // the venue. We have none with any venue, so the form says so before anything else.
   leadIntro: {
-    en: 'Fill in the form and the LaplandWeddings team will route your enquiry to wedding planners who work in this region. They send you tailored quotes directly.',
-    fi: 'Täytä lomake, niin LaplandWeddings-tiimi ohjaa kyselysi hääsuunnittelijoille, jotka työskentelevät tällä alueella. He lähettävät räätälöidyt tarjoukset sinulle suoraan.',
-    de: 'Füllen Sie das Formular aus, und das LaplandWeddings-Team leitet Ihre Anfrage an Hochzeitsplaner weiter, die in dieser Region arbeiten. Ihre maßgeschneiderten Angebote erhalten Sie direkt von ihnen.',
-    ja: 'フォームにご記入いただくと、LaplandWeddingsチームがこの地域で活動するウェディングプランナーへお問い合わせを取り次ぎます。オーダーメイドのお見積もりはプランナーから直接お届けします。',
-    es: 'Rellene el formulario y el equipo de LaplandWeddings dirigirá su consulta a organizadores de bodas que trabajan en esta región. Ellos le enviarán sus presupuestos a medida directamente.',
-    'pt-BR': 'Preencha o formulário e a equipe da LaplandWeddings encaminhará sua solicitação a organizadores de casamento que atuam nesta região. Eles enviam os orçamentos sob medida diretamente para você.',
-    'zh-CN': '填写表单，LaplandWeddings 团队会将你的咨询转给在该地区工作的婚礼策划师。量身定制的报价将由策划师直接发送给你。',
-    ko: '양식을 작성하시면 LaplandWeddings 팀이 귀하의 문의를 이 지역에서 활동하는 웨딩 플래너에게 전달합니다. 맞춤 견적은 플래너가 직접 보내드립니다.',
-    fr: 'Remplissez le formulaire et l’équipe LaplandWeddings transmettra votre demande aux organisateurs de mariage qui travaillent dans cette région. Ils vous envoient directement leurs devis sur mesure.',
-    it: 'Compili il modulo e il team LaplandWeddings inoltrerà la Sua richiesta ai wedding planner che lavorano in questa regione. Saranno loro a inviarLe direttamente i preventivi su misura.',
-    nl: 'Vul het formulier in en het LaplandWeddings-team stuurt uw aanvraag door naar trouwplanners die in deze regio werken. Zij sturen u rechtstreeks offertes op maat.',
-    sv: 'Fyll i formuläret så vidarebefordrar LaplandWeddings-teamet din förfrågan till bröllopsplanerare som arbetar i den här regionen. De skickar sina skräddarsydda offerter direkt till dig.',
+    en: 'We do not represent this venue and cannot book it for you. Tell us what you have in mind and we pass it on to wedding planners who work in this region. They reply to you directly.',
+    fi: 'Emme edusta tätä paikkaa emmekä tee varauksia sen puolesta. Kertokaa toiveenne, niin välitämme ne tällä alueella työskenteleville hääsuunnittelijoille, ja he vastaavat teille suoraan.',
+    de: 'Wir vertreten diese Location nicht und können sie nicht für Sie buchen. Erzählen Sie uns, was Sie sich vorstellen, und wir leiten es an Hochzeitsplaner weiter, die in dieser Region arbeiten. Sie antworten Ihnen direkt.',
+    ja: '当サイトはこの会場の代理店ではなく、予約の代行も行っていません。ご希望をお聞かせいただければ、この地域で活動するウェディングプランナーへお伝えし、プランナーから直接ご連絡が届きます。',
+    es: 'No representamos este lugar ni podemos reservarlo por usted. Cuéntenos lo que tiene en mente y se lo trasladaremos a organizadores de bodas que trabajan en esta región. Ellos le responderán directamente.',
+    'pt-BR': 'Não representamos este local nem podemos reservá-lo por vocês. Contem o que vocês imaginam e repassamos a organizadores de casamento que atuam nesta região. Eles respondem diretamente a vocês.',
+    'zh-CN': '我们不代理该场地，也无法代为预订。请告诉我们您的设想，我们会转达给在该地区工作的婚礼策划师，由他们直接回复您。',
+    ko: '저희는 이 장소를 대리하지 않으며 대신 예약해 드릴 수도 없습니다. 원하시는 내용을 알려 주시면 이 지역에서 활동하는 웨딩 플래너에게 전달하고, 플래너가 직접 답변을 드립니다.',
+    fr: 'Nous ne représentons pas ce lieu et ne pouvons pas le réserver pour vous. Dites-nous ce que vous imaginez : nous le transmettons aux organisateurs de mariage qui travaillent dans cette région, et ils vous répondent directement.',
+    it: 'Non rappresentiamo questa location e non possiamo prenotarla per Lei. Ci descriva ciò che desidera: lo inoltreremo ai wedding planner che lavorano in questa regione, che Le risponderanno direttamente.',
+    nl: 'Wij vertegenwoordigen deze locatie niet en kunnen haar niet voor u boeken. Vertel ons wat u voor ogen heeft, dan sturen wij het door naar trouwplanners die in deze regio werken. Zij antwoorden u rechtstreeks.',
+    sv: 'Vi företräder inte den här platsen och kan inte boka den åt er. Berätta vad ni önskar, så skickar vi det vidare till bröllopsplanerare som arbetar i regionen. De svarar er direkt.',
   },
   // Templates — {name} / {region} are substituted at render time.
   whatMakesSpecial: {
@@ -212,12 +213,12 @@ const V: Record<VKey, Localized<string>> = {
     nl: 'Andere locaties in {region}', sv: 'Andra platser i {region}',
   },
   getQuoteFor: {
-    en: 'Get a quote: {name}', fi: 'Pyydä tarjous: {name}',
-    de: 'Angebot anfordern: {name}', ja: '見積もりを依頼：{name}',
-    es: 'Solicite un presupuesto: {name}', 'pt-BR': 'Peça um orçamento: {name}',
-    'zh-CN': '获取报价：{name}', ko: '견적 받기: {name}',
-    fr: 'Demander un devis : {name}', it: 'Richieda un preventivo: {name}',
-    nl: 'Vraag een offerte aan: {name}', sv: 'Begär offert: {name}',
+    en: 'A wedding at this venue?', fi: 'Häät tässä paikassa?',
+    de: 'Hochzeit an diesem Ort?', ja: 'この会場での結婚式をお考えですか？',
+    es: '¿Una boda en este lugar?', 'pt-BR': 'Um casamento neste local?',
+    'zh-CN': '想在这里举办婚礼？', ko: '이곳에서 결혼식을 계획하시나요?',
+    fr: 'Un mariage dans ce lieu ?', it: 'Un matrimonio in questa location?',
+    nl: 'Trouwen op deze locatie?', sv: 'Bröllop på den här platsen?',
   },
 };
 
@@ -233,16 +234,6 @@ export default function VenuePage() {
   const siblings = venues
     .filter((x) => x.locationSlug === v.locationSlug && x.slug !== v.slug)
     .slice(0, 3);
-
-  // No chip on this page's own venue: a single venue is not a field, so there
-  // is nothing to be "top of". The chip belongs to the sibling grid below,
-  // where several venues are actually compared. bestGoogleRated enforces the
-  // same rule anyway (it returns null below two eligible venues).
-  const siblingPick = bestGoogleRated(siblings);
-  const siblingPickNote = editorialPickNote(siblingPick, lang, {
-    pickReason: pickLocalized(editorialCopy.pickReason, lang),
-    verifiedOn: pickLocalized(editorialCopy.verifiedOn, lang),
-  });
 
   return (
     <>
@@ -300,7 +291,7 @@ export default function VenuePage() {
               className="text-base sm:text-lg max-w-2xl leading-relaxed mb-6"
               style={{ color: '#FFFFFF' }}
             >
-              {v.description[dataLang].split('.').slice(0, 2).join('.') + '.'}
+              {cardBlurb(v.description[dataLang], 220)}
             </p>
             {/* One line each, in every language (Vesa 2026-09-28): the long per-venue
                 sentences wrapped in de/it/es. The quote button uses the venue cards'
@@ -311,7 +302,7 @@ export default function VenuePage() {
                 className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full whitespace-nowrap transition-colors"
                 style={{ background: '#C9466A', color: '#FFFFFF', boxShadow: '0 8px 24px -4px rgba(201,70,106,0.5)' }}
               >
-                {tr.cta.getQuote} →
+                {vt('tailoredProposal')} →
               </a>
               {/* Property-level deep link. Before 2026-08-02 this passed the
                   venue NAME as ?ss= and reached a property page 0 times out of
@@ -469,38 +460,14 @@ export default function VenuePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {siblings.map((sib) => (
-              // The rating row is an <a>, so it sits BESIDE the card link, not
-              // inside it: nested anchors are invalid HTML.
-              <div key={sib.slug} className="group flex flex-col bg-night-light rounded-2xl overflow-hidden border border-line-light transition-all hover:scale-[1.02]">
-                <L to={`/venues/${sib.slug}`} className="block">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img src={sib.image} alt={sib.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
-                  </div>
-                  <div className="px-5 pt-5">
-                    {siblingPick === sib && (
-                      <EditorsPickChip
-                        label={pickLocalized(editorialCopy.pickLabel, lang)}
-                        reason={pickLocalized(editorialCopy.pickReason, lang)}
-                        note={siblingPickNote}
-                        className="mb-3"
-                      />
-                    )}
-                    <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: 'var(--color-rose-ink)' }}>{sib.region[dataLang]}</p>
-                    <h4 className="font-heading tracking-wide text-xl mb-1" style={{ color: '#1F1612' }}>{sib.name}</h4>
-                    <p className="text-xs" style={{ color: '#5A4F48' }}>{sib.capacity.min}–{sib.capacity.max} {guests} · {priceTierLabel(sib.priceTier, lang)}</p>
-                  </div>
-                </L>
-                <div className="px-5 pt-3 pb-5 mt-auto">
-                  <GoogleRatingRow venue={sib} />
-                </div>
-              </div>
+              <VenueCard key={sib.slug} venue={sib} sid="venue_related" />
             ))}
           </div>
         </Section>
       )}
 
       {/* LEAD FORM */}
-      <Section id="quote" eyebrow={vt('freeQuote')} title={vt('getQuoteFor').replace('{name}', v.name)} subtitle={vt('leadIntro')}>
+      <Section id="quote" eyebrow={vt('freeQuote')} title={vt('getQuoteFor')} subtitle={vt('leadIntro')}>
         <LeadForm presetVenue={v.name} presetLocation={v.locationSlug} />
         <div className="mt-8">
           <AffiliateDisclosure />

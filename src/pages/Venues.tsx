@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import { priceTierLabel } from '../components/PriceTierBadge';
 import { ChevronDown } from 'lucide-react';
-import L from '../components/L';
 
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
@@ -15,10 +14,7 @@ import AffiliateDisclosure from '../components/AffiliateDisclosure';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
-import GoogleRatingRow from '../components/GoogleRatingRow';
-import EditorsPickChip from '../components/EditorsPickChip';
-import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
-import { editorialCopy } from '../data/editorialCopy';
+import VenueCard from '../components/VenueCard';
 
 const P: Record<'imageAlt' | 'independence', Localized<string>> = {
   independence: {
@@ -64,18 +60,6 @@ export default function Venues() {
       (!tier || v.priceTier === tier),
     );
   }, [loc, type, tier]);
-
-  // Earned, derived, unpurchasable: the best real Google rating among the
-  // venues actually shown. Computed from `filtered`, not from the full
-  // registry, so "highest rated on this page" stays true as the reader narrows
-  // the filters. Every card below prints its own rating and links to Google's
-  // review list, so the claim can be checked on the spot. The sellable surface
-  // is the slot above the grid.
-  const pick = bestGoogleRated(filtered);
-  const pickNote = editorialPickNote(pick, lang, {
-    pickReason: pickLocalized(editorialCopy.pickReason, lang),
-    verifiedOn: pickLocalized(editorialCopy.verifiedOn, lang),
-  });
 
   return (
     <>
@@ -162,37 +146,8 @@ export default function Venues() {
           <p className="text-center text-gray-400 py-12">{tr.venues.noResults}</p>
         ) : (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {pickFirst(filtered, pick).map((v) => (
-              // The rating row is an <a>, so it sits BESIDE the card link, not
-              // inside it: nested anchors are invalid HTML.
-              <div key={v.slug} className="group flex flex-col bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all">
-                <L to={`/venues/${v.slug}`} className="block">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img src={v.image} alt={v.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
-                  </div>
-                  <div className="px-5 pt-5">
-                    {pick === v && (
-                      <EditorsPickChip
-                        label={pickLocalized(editorialCopy.pickLabel, lang)}
-                        reason={pickLocalized(editorialCopy.pickReason, lang)}
-                        note={pickNote}
-                        className="mb-3"
-                      />
-                    )}
-                    <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{v.region[dataLang]}</p>
-                    <h3 className="font-heading text-lg text-white mb-1 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
-                    {/* Capacity and price-tier chips removed 2026-07-28 (Vesa):
-                        on a card they read as terms we can quote, and we have
-                        no agreement with any of these venues. Both figures
-                        remain on the venue page, and both filters above still
-                        work off the same data. */}
-                    <p className="text-sm text-gray-400 line-clamp-3 mt-2 mb-1">{v.description[dataLang]}</p>
-                  </div>
-                </L>
-                <div className="px-5 pt-3 pb-5 mt-auto">
-                  <GoogleRatingRow venue={v} />
-                </div>
-              </div>
+            {filtered.map((v) => (
+              <VenueCard key={v.slug} venue={v} sid="venues" />
             ))}
           </div>
         )}

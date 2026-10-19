@@ -17,10 +17,7 @@ import L from '../components/L';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import FeaturedPartnerSlot from '../components/FeaturedPartnerSlot';
-import GoogleRatingRow from '../components/GoogleRatingRow';
-import EditorsPickChip from '../components/EditorsPickChip';
-import { bestGoogleRated, editorialPickNote, pickFirst } from '../data/googleReviews';
-import { editorialCopy } from '../data/editorialCopy';
+import VenueCard from '../components/VenueCard';
 import { pickLocalized } from '../data/localized';
 import { AppPromoHero } from '../components/AppPromo';
 import { AURORA_VIDEO } from '../data/heroVideo';
@@ -69,15 +66,6 @@ export default function Home() {
 
   const featuredVenues = venues.slice(0, 6);
 
-  // Earned, derived, unpurchasable: the best real Google rating among the six
-  // venues shown here (see bestGoogleRated). Every card prints its own rating
-  // and links to Google's review list, so the reader can check the claim on the
-  // spot. The sellable surface is the slot above the grid.
-  const venuePick = bestGoogleRated(featuredVenues);
-  const venuePickNote = editorialPickNote(venuePick, lang, {
-    pickReason: pickLocalized(editorialCopy.pickReason, lang),
-    verifiedOn: pickLocalized(editorialCopy.verifiedOn, lang),
-  });
 
   // Seasonal hero copy flips with the SAME isSummerSeason() that drives the hero
   // image. Summer = midnight-sun / white-night wording (no aurora, no snow).
@@ -760,51 +748,8 @@ export default function Home() {
         <FeaturedPartnerSlot placement="home_featured" locale={lang} />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {pickFirst(featuredVenues, venuePick).map((v) => (
-            // The rating row is an <a>, so it sits BESIDE the card link, not
-            // inside it: nested anchors are invalid HTML.
-            <div
-              key={v.slug}
-              className="group flex flex-col bg-night-light border border-white/5 hover:border-rose/40 rounded-2xl overflow-hidden transition-all"
-            >
-              <L to={`/venues/${v.slug}`} className="block">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={v.image} alt={v.imageAlt[dataLang]} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"  decoding="async" width="800" height="600"/>
-                </div>
-                <div className="px-5 pt-5">
-                  {venuePick === v && (
-                    <EditorsPickChip
-                      label={pickLocalized(editorialCopy.pickLabel, lang)}
-                      reason={pickLocalized(editorialCopy.pickReason, lang)}
-                      note={venuePickNote}
-                      className="mb-3"
-                    />
-                  )}
-                  <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{v.region[dataLang]}</p>
-                  <h3 className="font-heading text-lg text-white mb-2 tracking-wide group-hover:text-rose transition-colors">{v.name}</h3>
-                  {/* Capacity and price-tier chips removed 2026-07-28. Side by
-                      side on a card they read as a bookable product with terms
-                      we can quote, and we have spoken to none of these venues.
-                      Both figures still live on the venue page, where there is
-                      room to say where they came from. */}
-                  <p className="text-sm text-gray-400 line-clamp-3 mb-1">{v.description[dataLang]}</p>
-                </div>
-              </L>
-              {/* Vesa 19.9. (ilta): "mikä näiden funktio on?" — the card's job is to send a couple to
-                  the venue page and its quote form, so every card ends with the same button. The
-                  rating stays where Google has one (16/21; the rest have no certain Google match). */}
-              <div className="px-5 pt-3 pb-5 mt-auto flex items-center justify-between gap-3 flex-wrap">
-                <GoogleRatingRow venue={v} />
-                <L
-                  to={`/venues/${v.slug}#quote`}
-                  data-umami-event="cta_quote_venue_card"
-                  className="ml-auto inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap hover:bg-pink transition-colors"
-                  style={{ color: '#FFFFFF', background: '#C9466A' }}
-                >
-                  {tr.cta.getQuote} →
-                </L>
-              </div>
-            </div>
+          {featuredVenues.map((v) => (
+            <VenueCard key={v.slug} venue={v} sid="home" />
           ))}
         </div>
         <div className="text-center mt-10">
