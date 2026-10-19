@@ -37,7 +37,14 @@ export interface ImageCredit {
    *  language, because the licence asks us to say we changed the work (CC BY 4.0 §3(a)(1)(B)). Only ever on
    *  CC BY / CC0 / PD photos: a CC BY-SA file is never cropped (26.9.2026). */
   cropped?: boolean;
+  /** Tone changed (e.g. darkened so the hero text reaches 4.5:1). Shown as "edited", same reason as `cropped`. */
+  edited?: boolean;
 }
+
+export const EDITED: Localized<string> = {
+  en: 'edited', fi: 'muokattu', de: 'bearbeitet', ja: '加工', es: 'editada', 'pt-BR': 'editada',
+  'zh-CN': '已调整', ko: '보정', fr: 'retouchée', it: 'modificata', nl: 'bewerkt', sv: 'bearbetad',
+};
 
 export const CROPPED: Localized<string> = {
   en: 'cropped', fi: 'rajattu', de: 'zugeschnitten', ja: 'トリミング', es: 'recortada', 'pt-BR': 'recortada',
@@ -72,7 +79,9 @@ interface Props {
 export default function ImgCredit({ credit, lang, className, plain }: Props) {
   if (!credit) return null;
   const caption = credit.caption ? credit.caption[lang] || credit.caption.en : '';
-  const cropped = credit.cropped ? CROPPED[lang] || CROPPED.en : '';
+  const cropped = [credit.cropped ? CROPPED[lang] || CROPPED.en : '', credit.edited ? EDITED[lang] || EDITED.en : '']
+    .filter(Boolean)
+    .join(', ');
   const text = [caption, credit.name, credit.license, cropped].filter(Boolean).join(' · ');
   const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-[#fff] bg-black/55 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
   if (plain) return <span className={cls}>{text}</span>;

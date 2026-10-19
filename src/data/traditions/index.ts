@@ -215,6 +215,7 @@ export const HERO_IMAGE: TraditionImage | undefined = {
     name: 'Museovirasto',
     license: 'CC BY 4.0',
     url: 'https://www.finna.fi/Record/museovirasto.AD56EB6D0FBE899F8D5E8DC3037C6826',
+    edited: true,
   },
   alt: {
     fi: 'Hääpari Rovaniemellä, 1930',
