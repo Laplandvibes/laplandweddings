@@ -582,7 +582,7 @@ const HERO_WINTER: SeasonalImage = {
     en: 'The snow-covered summits of the Pallastunturi fells beyond a boreal forest in winter',
     fi: 'Pallastunturin lumiset laet havumetsän takana talvella',
     de: 'Die verschneiten Gipfel der Pallastunturi-Fjälls hinter einem Nadelwald im Winter',
-    ja: '冬、針葉樹林の向こうに連なるパラストゥントゥリの雪の峰々',
+    ja: '冬、針葉樹林の向こうに連なるパッラストゥントゥリの雪の峰々',
     es: 'Las cumbres nevadas de los fells Pallastunturi tras un bosque boreal en invierno',
     'pt-BR': 'Os cumes nevados dos montes de Pallastunturi além da floresta boreal no inverno',
     'zh-CN': '冬季，针叶林之外白雪覆盖的帕拉斯山群峰',
