@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'O banho de sauna tradicional, cujo exemplo mais conhecido é a sauna da noiva, faz parte do Inventário Nacional do Patrimônio Vivo da Finlândia. A cultura finlandesa da sauna foi incluída em 2020 na Lista Representativa do Patrimônio Cultural Imaterial da Humanidade da UNESCO.',
         'Hoje, a sauna da noiva acontece na maioria das vezes na despedida de solteira. Na Ostrobótnia do Sul, o costume foi revivido num evento tradicional de casamento com coroa em Nurmo.',
       ],
-      inLapland: 'Se o local do casamento de vocês tiver sauna, a sauna da noiva pode acontecer na noite anterior ao casamento. Mencionem isso no pedido, e o desejo chega ao organizador exatamente como vocês escreveram.',
+      inLapland: 'Se o local do casamento de vocês tiver sauna, a sauna da noiva pode acontecer na noite anterior ao casamento. Mencionem isso no pedido, e vamos levar o desejo em conta na nossa resposta.',
     },
     'wedding-crashers': {
       title: 'Os penetras',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Um casamento na Lapônia com as tradições de vocês',
-    body: 'Digam no pedido quais tradições vocês querem incluir, e nós repassamos esses desejos aos organizadores de casamento que atuam na região.',
+    body: 'Digam no pedido quais tradições vocês querem incluir, e nós respondemos pessoalmente.',
     venues: 'Ver os locais',
     enquiry: 'Enviar uma consulta',
   },

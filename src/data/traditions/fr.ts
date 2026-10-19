@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'La pratique traditionnelle du sauna, dont le sauna de la mariée est l’exemple le plus connu, figure dans l’Inventaire national finlandais du patrimoine vivant. La culture finlandaise du sauna a été inscrite en 2020 sur la Liste représentative du patrimoine culturel immatériel de l’humanité de l’UNESCO.',
         'Aujourd’hui, le sauna de la mariée a lieu le plus souvent lors de l’enterrement de vie de jeune fille. En Ostrobotnie du Sud, la coutume a été remise à l’honneur lors d’une fête traditionnelle de noces à la couronne organisée à Nurmo.',
       ],
-      inLapland: 'Si votre lieu de réception dispose d’un sauna, le sauna de la mariée peut avoir lieu le soir précédant le mariage. Mentionnez-le dans votre demande : votre souhait sera transmis à l’organisateur tel que vous l’avez formulé.',
+      inLapland: 'Si votre lieu de réception dispose d’un sauna, le sauna de la mariée peut avoir lieu le soir précédant le mariage. Mentionnez-le dans votre demande : nous en tiendrons compte dans notre réponse.',
     },
     'wedding-crashers': {
       title: 'Les invités non conviés',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Un mariage en Laponie, avec vos propres traditions',
-    body: 'Indiquez dans votre demande les traditions que vous aimeriez inclure : nous transmettons vos souhaits aux organisateurs de mariage qui travaillent dans la région.',
+    body: 'Indiquez dans votre demande les traditions que vous aimeriez inclure : nous vous répondrons personnellement.',
     venues: 'Voir les lieux',
     enquiry: 'Envoyer une demande',
   },

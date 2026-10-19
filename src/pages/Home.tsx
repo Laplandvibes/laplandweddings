@@ -341,7 +341,7 @@ export default function Home() {
                 nl: 'Bekijk de locaties',
                 sv: 'Se vigselplatserna',
               }),
-              stat: '20',
+              stat: String(venues.length),
               label: pick(lang, {
                 fi: 'hääpaikkaa kartoitettu',
                 en: 'venues surveyed',
@@ -529,18 +529,18 @@ export default function Home() {
           sv: 'Oberoende kartläggning',
         })}
         title={pick(lang, {
-          fi: 'Lapin suosituimmat hääpaikat',
-          en: 'The most popular wedding venues in Lapland',
-          de: 'Die beliebtesten Hochzeitsorte Lapplands',
-          ja: 'ラップランドで人気の高い結婚式会場',
-          es: 'Los lugares de boda más populares de Laponia',
-          'pt-BR': 'Os locais de casamento mais populares da Lapônia',
-          'zh-CN': '拉普兰最受欢迎的婚礼场地',
-          ko: '라플란드에서 인기 있는 결혼식 장소',
-          fr: 'Les lieux de mariage les plus populaires de Laponie',
-          it: 'Le location per matrimoni più popolari della Lapponia',
-          nl: 'De populairste trouwlocaties van Lapland',
-          sv: 'Lapplands populäraste bröllopsplatser',
+          fi: 'Lapin tunnetuimmat hääpaikat',
+          en: 'Lapland’s best-known wedding venues',
+          de: 'Die bekanntesten Hochzeitsorte Lapplands',
+          ja: 'ラップランドでよく知られた結婚式会場',
+          es: 'Los lugares de boda más conocidos de Laponia',
+          'pt-BR': 'Os locais de casamento mais conhecidos da Lapônia',
+          'zh-CN': '拉普兰最知名的婚礼场地',
+          ko: '라플란드에서 잘 알려진 결혼식 장소',
+          fr: 'Les lieux de mariage les plus connus de Laponie',
+          it: 'Le location per matrimoni più note della Lapponia',
+          nl: 'De bekendste trouwlocaties van Lapland',
+          sv: 'Lapplands mest kända bröllopsplatser',
         })}
         className="bg-night-light/30"
       >
@@ -549,18 +549,18 @@ export default function Home() {
             has a venue in mind will not be steered somewhere else. */}
         <p className="text-center text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10">
           {pick(lang, {
-            fi: 'Nämä ovat Lapin tunnetuimmat paikat, joissa häitä vietetään. Emme edusta niitä emmekä järjestä häitä. Jos jokin paikka on jo mielessänne, kirjoittakaa se lomakkeeseen, niin toive kulkee sellaisenaan eteenpäin.',
-            en: 'These are the best-known places in Lapland where weddings are held. We do not represent them and we do not organise weddings. If you already have a venue in mind, write it in the form and your wish is passed on exactly as you gave it.',
-            de: 'Das sind die bekanntesten Orte Lapplands, an denen Hochzeiten gefeiert werden. Wir vertreten sie nicht und richten keine Hochzeiten aus. Wenn Sie bereits einen Ort im Sinn haben, tragen Sie ihn ins Formular ein, Ihr Wunsch wird unverändert weitergegeben.',
-            ja: 'ラップランドで結婚式が行われている、よく知られた場所を集めました。当サイトはこれらの会場の代理店ではなく、結婚式の運営も行いません。すでに希望の会場がある場合はフォームにご記入ください。ご希望はそのままの形でお伝えします。',
-            es: 'Estos son los lugares más conocidos de Laponia donde se celebran bodas. No los representamos y no organizamos bodas. Si ya tiene un lugar en mente, escríbalo en el formulario y su deseo se transmite tal y como usted lo escribió.',
-            'pt-BR': 'Estes são os locais mais conhecidos da Lapônia onde se realizam casamentos. Não os representamos nem organizamos casamentos. Se vocês já têm um local em mente, escrevam no formulário e o pedido será repassado exatamente como foi enviado.',
-            'zh-CN': '这些是拉普兰最知名的婚礼举办地。我们不代理这些场地，也不承办婚礼。如果您心中已有中意的场地，请填写在表单中，您的心愿将原样转达。',
-            ko: '라플란드에서 결혼식이 열리는 잘 알려진 장소들입니다. 저희는 이곳들을 대리하지 않으며 결혼식을 직접 주최하지도 않습니다. 이미 마음에 둔 장소가 있다면 양식에 적어 주세요. 그 희망은 그대로 전달됩니다.',
-            fr: 'Voici les lieux les plus connus de Laponie où l’on célèbre des mariages. Nous ne les représentons pas et nous n’organisons pas de mariages. Si un lieu vous tient déjà à cœur, indiquez-le dans le formulaire : votre souhait sera transmis tel quel.',
-            it: 'Questi sono i luoghi più noti della Lapponia in cui si celebrano matrimoni. Non li rappresentiamo e non organizziamo matrimoni. Se ha già una location in mente, la scriva nel modulo: il Suo desiderio viene trasmesso così com’è.',
-            nl: 'Dit zijn de bekendste plekken in Lapland waar bruiloften worden gevierd. Wij vertegenwoordigen ze niet en organiseren geen bruiloften. Heeft u al een locatie op het oog, zet die dan in het formulier: uw wens gaat ongewijzigd door.',
-            sv: 'Det här är de mest kända platserna i Lappland där bröllop hålls. Vi företräder dem inte och vi arrangerar inga bröllop. Har ni redan en plats i tankarna, skriv in den i formuläret så förs önskemålet vidare precis som ni angav det.',
+            fi: 'Nämä ovat Lapin tunnetuimmat paikat, joissa häitä vietetään. Emme edusta niitä emmekä järjestä häitä. Jos jokin paikka on jo mielessänne, kirjoittakaa se lomakkeeseen, niin otamme sen vastauksessa huomioon sellaisenaan.',
+            en: 'These are the best-known places in Lapland where weddings are held. We do not represent them and we do not organise weddings. If you already have a venue in mind, write it in the form and we take it into account in our reply exactly as you gave it.',
+            de: 'Das sind die bekanntesten Orte Lapplands, an denen Hochzeiten gefeiert werden. Wir vertreten sie nicht und richten keine Hochzeiten aus. Wenn Sie bereits einen Ort im Sinn haben, tragen Sie ihn ins Formular ein, dann berücksichtigen wir ihn in unserer Antwort genau so, wie Sie ihn angegeben haben.',
+            ja: 'ラップランドで結婚式が行われている、よく知られた場所を集めました。当サイトはこれらの会場の代理店ではなく、結婚式の運営も行いません。すでに希望の会場がある場合はフォームにご記入ください。お返事では、ご記入いただいた会場をそのまま前提にご案内します。',
+            es: 'Estos son los lugares más conocidos de Laponia donde se celebran bodas. No los representamos y no organizamos bodas. Si ya tiene un lugar en mente, escríbalo en el formulario y lo tendremos en cuenta en nuestra respuesta tal y como usted lo escribió.',
+            'pt-BR': 'Estes são os locais mais conhecidos da Lapônia onde se realizam casamentos. Não os representamos nem organizamos casamentos. Se vocês já têm um local em mente, escrevam no formulário e vamos levá-lo em conta na resposta exatamente como foi informado.',
+            'zh-CN': '这些是拉普兰最知名的婚礼举办地。我们不代理这些场地，也不承办婚礼。如果您心中已有中意的场地，请填写在表单中，我们回复时会以您写下的场地为准。',
+            ko: '라플란드에서 결혼식이 열리는 잘 알려진 장소들입니다. 저희는 이곳들을 대리하지 않으며 결혼식을 직접 주최하지도 않습니다. 이미 마음에 둔 장소가 있다면 양식에 적어 주세요. 적어 주신 장소를 그대로 반영해 답변드립니다.',
+            fr: 'Voici les lieux les plus connus de Laponie où l’on célèbre des mariages. Nous ne les représentons pas et nous n’organisons pas de mariages. Si un lieu vous tient déjà à cœur, indiquez-le dans le formulaire : nous en tiendrons compte dans notre réponse, tel que vous l’avez indiqué.',
+            it: 'Questi sono i luoghi più noti della Lapponia in cui si celebrano matrimoni. Non li rappresentiamo e non organizziamo matrimoni. Se ha già una location in mente, la scriva nel modulo: ne terremo conto nella nostra risposta esattamente come l’ha indicata.',
+            nl: 'Dit zijn de bekendste plekken in Lapland waar bruiloften worden gevierd. Wij vertegenwoordigen ze niet en organiseren geen bruiloften. Heeft u al een locatie op het oog, zet die dan in het formulier: wij houden er in ons antwoord rekening mee, precies zoals u die opgaf.',
+            sv: 'Det här är de mest kända platserna i Lappland där bröllop hålls. Vi företräder dem inte och vi arrangerar inga bröllop. Har ni redan en plats i tankarna, skriv in den i formuläret så tar vi hänsyn till den i vårt svar, precis som ni angav den.',
           })}
         </p>
 

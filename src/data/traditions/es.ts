@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'El baño de sauna tradicional, cuyo ejemplo más conocido es la sauna de la novia, forma parte del Inventario Nacional del Patrimonio Vivo de Finlandia. La cultura finlandesa de la sauna se inscribió en 2020 en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad de la UNESCO.',
         'Hoy, la sauna de la novia se celebra en la mayoría de los casos durante la despedida de soltera. En Ostrobotnia del Sur, la costumbre se ha recuperado en un evento tradicional de bodas con corona en Nurmo.',
       ],
-      inLapland: 'Si el lugar de su boda tiene sauna, la sauna de la novia puede celebrarse la noche anterior a la boda. Menciónelo en su consulta y el deseo llegará al organizador tal como usted lo escribió.',
+      inLapland: 'Si el lugar de su boda tiene sauna, la sauna de la novia puede celebrarse la noche anterior a la boda. Menciónelo en su consulta y lo tendremos en cuenta en nuestra respuesta.',
     },
     'wedding-crashers': {
       title: 'Los colados',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Una boda en Laponia con sus propias tradiciones',
-    body: 'Indíquenos en su consulta qué tradiciones desea incluir y trasladaremos sus deseos a los organizadores de bodas que trabajan en la región.',
+    body: 'Indíquenos en su consulta qué tradiciones desea incluir y le responderemos personalmente.',
     venues: 'Ver los lugares',
     enquiry: 'Enviar una consulta de boda',
   },

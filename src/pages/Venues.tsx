@@ -31,19 +31,22 @@ const P: Record<'imageAlt' | 'independence', Localized<string>> = {
     nl: 'Dit zijn de bekendste plekken in Lapland waar bruiloften worden gevierd. Wij vertegenwoordigen ze niet en organiseren geen bruiloften. Heeft u al een locatie op het oog, zet die dan in het formulier: uw wens gaat ongewijzigd door.',
     sv: 'Det här är de mest kända platserna i Lappland där bröllop hålls. Vi företräder dem inte och vi arrangerar inga bröllop. Har ni redan en plats i tankarna, skriv in den i formuläret så förs önskemålet vidare precis som ni angav det.',
   },
+  // The photo is levi.fi's own picture of the Luvattumaa ice castle near Levi (2018). Until
+  // 19.10.2026 it was captioned as a venue called "Levi Ice Castle", which no longer exists as
+  // a wedding venue; the venue was removed and the caption now says what the picture shows.
   imageAlt: {
-    en: 'The purple-lit snow corridor and ice stairs inside Levi Ice Castle',
-    fi: 'Levi Ice Castlen violetiksi valaistu lumikäytävä ja jääportaat',
-    de: 'Der violett beleuchtete Schneekorridor und die Eistreppe im Levi Ice Castle',
-    ja: 'レヴィ・アイスキャッスル内、紫色にライトアップされた雪の回廊と氷の階段',
-    es: 'El pasillo de nieve iluminado en violeta y las escaleras de hielo dentro de Levi Ice Castle',
-    'pt-BR': 'O corredor de neve iluminado em violeta e a escada de gelo dentro do Levi Ice Castle',
-    'zh-CN': '莱维冰堡内紫色灯光下的雪廊与冰阶',
-    ko: '레비 아이스 캐슬 내부, 보랏빛 조명의 눈 복도와 얼음 계단',
-    fr: 'Le couloir de neige éclairé en violet et l’escalier de glace du Levi Ice Castle',
-    it: 'Il corridoio di neve illuminato di viola e la scala di ghiaccio del Levi Ice Castle',
-    nl: 'De paars verlichte sneeuwtunnel en ijstrap in het Levi Ice Castle',
-    sv: 'Den violettbelysta snögången och istrappan i Levi Ice Castle',
+    en: 'The purple-lit snow corridor and ice stairs of the Luvattumaa ice castle near Levi, 2018',
+    fi: 'Luvattumaan jäälinnan violetiksi valaistu lumikäytävä ja jääportaat Levin lähellä, 2018',
+    de: 'Der violett beleuchtete Schneegang und die Eistreppe im Eisschloss Luvattumaa bei Levi, 2018',
+    ja: 'レヴィ近郊、ルヴァットゥマーの氷の城の紫色にライトアップされた雪の回廊と氷の階段（2018年）',
+    es: 'El pasillo de nieve iluminado en violeta y la escalera de hielo del castillo de hielo de Luvattumaa, cerca de Levi, 2018',
+    'pt-BR': 'O corredor de neve iluminado em violeta e a escada de gelo do castelo de gelo de Luvattumaa, perto de Levi, 2018',
+    'zh-CN': '莱维附近 Luvattumaa 冰堡内紫色灯光下的雪廊与冰阶，2018 年',
+    ko: '레비 근처 루밧투마 얼음성의 보랏빛 조명 눈 복도와 얼음 계단, 2018년',
+    fr: 'Le couloir de neige éclairé en violet et l’escalier de glace du château de glace de Luvattumaa, près de Levi, 2018',
+    it: 'Il corridoio di neve illuminato di viola e la scala di ghiaccio del castello di ghiaccio di Luvattumaa, vicino a Levi, 2018',
+    nl: 'De paars verlichte sneeuwgang en ijstrap van het ijskasteel Luvattumaa bij Levi, 2018',
+    sv: 'Den violettbelysta snögången och istrappan i isslottet Luvattumaa nära Levi, 2018',
   },
 };
 
@@ -87,19 +90,19 @@ export default function Venues() {
         avifSrcSet="/images/heroes/levi-ice-castle-corridor-800.avif 800w, /images/heroes/levi-ice-castle-corridor-1200.avif 1200w"
         webpSrcSet="/images/heroes/levi-ice-castle-corridor-800.webp 800w, /images/heroes/levi-ice-castle-corridor-1200.webp 1200w"
         sizes="100vw"
-        credit={{ name: '', license: '', url: 'https://www.levi.fi/en/info/general/groups/weddings/', caption: {
-        en: 'Pictured: Levi Ice Castle',
-        fi: 'Kuvassa Levi Ice Castle',
-        de: 'Im Bild: Levi Ice Castle',
-        ja: '写真：レヴィ・アイスキャッスル',
-        es: 'En la imagen: Levi Ice Castle',
-        'pt-BR': 'Na foto: Levi Ice Castle',
-        'zh-CN': '图为莱维冰堡',
-        ko: '사진: 레비 아이스 캐슬',
-        fr: 'Sur la photo : Levi Ice Castle',
-        it: 'Nella foto: Levi Ice Castle',
-        nl: 'Op de foto: Levi Ice Castle',
-        sv: 'På bilden: Levi Ice Castle',
+        credit={{ name: 'Levi', license: '', url: 'https://www.levi.fi/en/activities/places-to-visit/snow-castles/', caption: {
+        en: 'Pictured: the Luvattumaa ice castle near Levi, 2018',
+        fi: 'Kuvassa Luvattumaan jäälinna Levin lähellä, 2018',
+        de: 'Im Bild: das Eisschloss Luvattumaa bei Levi, 2018',
+        ja: '写真：レヴィ近郊のルヴァットゥマーの氷の城（2018年）',
+        es: 'En la imagen: el castillo de hielo de Luvattumaa, cerca de Levi, 2018',
+        'pt-BR': 'Na foto: o castelo de gelo de Luvattumaa, perto de Levi, 2018',
+        'zh-CN': '图为莱维附近的 Luvattumaa 冰堡，2018 年',
+        ko: '사진: 레비 근처 루밧투마 얼음성, 2018년',
+        fr: 'Sur la photo : le château de glace de Luvattumaa, près de Levi, 2018',
+        it: 'Nella foto: il castello di ghiaccio di Luvattumaa, vicino a Levi, 2018',
+        nl: 'Op de foto: het ijskasteel Luvattumaa bij Levi, 2018',
+        sv: 'På bilden: isslottet Luvattumaa nära Levi, 2018',
       } }}
         lang={lang}
         imageAlt={pickLocalized(P.imageAlt, lang)}

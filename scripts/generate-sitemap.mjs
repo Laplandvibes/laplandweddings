@@ -14,7 +14,7 @@ const today = new Date().toISOString().slice(0, 10);
 const locations = ['rovaniemi', 'saariselka', 'levi', 'yllas', 'pyha-luosto', 'kilpisjarvi', 'oulu', 'kemijarvi'];
 const types = ['northern-lights', 'snow-chapel', 'glass-igloo', 'midnight-sun', 'elopement', 'vow-renewal'];
 const venues = [
-  'kakslauttanen', 'arctic-snowhotel', 'snow-village-lainio', 'northern-lights-ranch', 'levi-ice-castle',
+  'kakslauttanen', 'arctic-snowhotel', 'snow-village-lainio', 'northern-lights-ranch',
   'levin-iglut', 'apukka-resort', 'arctic-treehouse', 'wilderness-hotel-muotka', 'wilderness-hotel-inari',
   'wilderness-hotel-juutua', 'northern-lights-village-saariselka', 'northern-lights-village-levi',
   'hotelli-hullu-poro', 'levi-panorama', 'lapland-hotels-saaga', 'tundrea-kilpisjarvi', 'santas-hotel-aurora',

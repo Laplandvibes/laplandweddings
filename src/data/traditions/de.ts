@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'Das traditionelle Saunabaden, dessen bekanntestes Beispiel die Brautsauna ist, steht im nationalen Verzeichnis des lebendigen Kulturerbes Finnlands. Die finnische Saunakultur wurde 2020 in die Repräsentative Liste des immateriellen Kulturerbes der Menschheit der UNESCO aufgenommen.',
         'Heute findet die Brautsauna meist beim Junggesellinnenabschied statt. In Südösterbotten wurde der Brauch bei einem traditionellen Kronenhochzeitsfest in Nurmo wiederbelebt.',
       ],
-      inLapland: 'Hat Ihre Location eine Sauna, kann die Brautsauna am Vorabend der Hochzeit stattfinden. Erwähnen Sie den Wunsch in Ihrer Anfrage, dann geht er genau so an den Planer, wie Sie ihn formuliert haben.',
+      inLapland: 'Hat Ihre Location eine Sauna, kann die Brautsauna am Vorabend der Hochzeit stattfinden. Erwähnen Sie den Wunsch in Ihrer Anfrage, dann berücksichtigen wir ihn in unserer Antwort.',
     },
     'wedding-crashers': {
       title: 'Ungeladene Gäste',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Hochzeit in Lappland mit Ihren eigenen Bräuchen',
-    body: 'Schreiben Sie in Ihrer Anfrage, welche Bräuche Sie einbeziehen möchten, und wir geben Ihre Wünsche an Hochzeitsplaner weiter, die in der Region arbeiten.',
+    body: 'Schreiben Sie in Ihrer Anfrage, welche Bräuche Sie einbeziehen möchten, und wir antworten Ihnen persönlich.',
     venues: 'Locations ansehen',
     enquiry: 'Hochzeitsanfrage senden',
   },

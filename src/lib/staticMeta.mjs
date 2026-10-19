@@ -19,52 +19,52 @@
 export const STATIC_META = {
   "/": {
     "en": {
-      "title": "Lapland Weddings: 20 Arctic Venues and What They Cost",
-      "description": "An independent guide to getting married in Lapland: 20 venues, 8 regions, symbolic and legal ceremonies, real costs. We represent none of the venues."
+      "title": "Lapland Weddings: 19 Arctic Venues and What They Cost",
+      "description": "An independent guide to getting married in Lapland: 19 venues, 8 regions, symbolic and legal ceremonies, real costs. We represent none of the venues."
     },
     "fi": {
-      "title": "Häät Lapissa: 20 hääpaikkaa jääkappelista lasi-igluun",
-      "description": "20 hääpaikkaa Lapissa: jääkappelit, lasi-iglut ja tunturihotellit. Hinnat, varausajat ja se, miten avioliiton esteiden tutkinta hoituu ulkomailta."
+      "title": "Häät Lapissa: 19 hääpaikkaa jääkappelista lasi-igluun",
+      "description": "19 hääpaikkaa Lapissa: jääkappelit, lasi-iglut ja tunturihotellit. Hinnat, varausajat ja se, miten avioliiton esteiden tutkinta hoituu ulkomailta."
     },
     "de": {
       "title": "Hochzeit in Lappland: Locations & Heiratspapiere",
-      "description": "Unabhängiger Leitfaden zum Heiraten in Lappland. 20 Hochzeitslocations, die nötigen Papiere, echte Preise und praktische Leitfäden."
+      "description": "Unabhängiger Leitfaden zum Heiraten in Lappland. 19 Hochzeitslocations, die nötigen Papiere, echte Preise und praktische Leitfäden."
     },
     "ja": {
       "title": "ラップランドの結婚式：会場と婚姻手続き",
-      "description": "ラップランドでの結婚式を独立した立場でまとめたガイド。20か所の会場、婚姻手続き、実際の価格、実用的なガイド。"
+      "description": "ラップランドでの結婚式を独立した立場でまとめたガイド。19か所の会場、婚姻手続き、実際の価格、実用的なガイド。"
     },
     "es": {
       "title": "Bodas en Laponia: lugares y trámites de boda",
-      "description": "Una guía independiente para casarse en Laponia. 20 lugares, los trámites, precios reales y guías prácticas."
+      "description": "Una guía independiente para casarse en Laponia. 19 lugares, los trámites, precios reales y guías prácticas."
     },
     "pt-BR": {
       "title": "Casamentos na Lapônia: locais e documentação",
-      "description": "Um guia independente para casar na Lapônia. 20 locais, a documentação, preços reais e guias práticos."
+      "description": "Um guia independente para casar na Lapônia. 19 locais, a documentação, preços reais e guias práticos."
     },
     "zh-CN": {
       "title": "拉普兰婚礼：婚礼场地与结婚手续",
-      "description": "一份独立的拉普兰婚礼指南。20 个场地、结婚手续、真实价格和实用指南。玻璃屋顶上方是极光，雪教堂里点着烛光，院子里有驯鹿在等候。"
+      "description": "一份独立的拉普兰婚礼指南。19 个场地、结婚手续、真实价格和实用指南。玻璃屋顶上方是极光，雪教堂里点着烛光，院子里有驯鹿在等候。"
     },
     "ko": {
       "title": "라플란드 결혼식: 예식장과 혼인 서류",
-      "description": "라플란드 결혼식을 위한 독립적인 안내서입니다. 20곳의 예식장, 혼인 서류, 실제 가격과 실용적인 가이드."
+      "description": "라플란드 결혼식을 위한 독립적인 안내서입니다. 19곳의 예식장, 혼인 서류, 실제 가격과 실용적인 가이드."
     },
     "fr": {
       "title": "Mariage en Laponie : lieux, prix et démarches",
-      "description": "Un guide indépendant pour se marier en Laponie. 20 lieux, les démarches, prix réels et guides pratiques."
+      "description": "Un guide indépendant pour se marier en Laponie. 19 lieux, les démarches, prix réels et guides pratiques."
     },
     "it": {
       "title": "Matrimonio in Lapponia: location e pratiche di nozze",
-      "description": "Una guida indipendente per sposarsi in Lapponia. 20 location, le pratiche, prezzi reali e guide pratiche."
+      "description": "Una guida indipendente per sposarsi in Lapponia. 19 location, le pratiche, prezzi reali e guide pratiche."
     },
     "nl": {
       "title": "Trouwen in Lapland: locaties en huwelijkspapieren",
-      "description": "Een onafhankelijke gids voor trouwen in Lapland. 20 locaties, het papierwerk, echte prijzen en praktische gidsen."
+      "description": "Een onafhankelijke gids voor trouwen in Lapland. 19 locaties, het papierwerk, echte prijzen en praktische gidsen."
     },
     "sv": {
       "title": "Bröllop i Lappland: vigselplatser och äktenskapspapper",
-      "description": "En oberoende guide till att gifta sig i Lappland. 20 vigselplatser, vigselpapperen, verkliga priser och praktiska guider för ditt bröllop i Arktis."
+      "description": "En oberoende guide till att gifta sig i Lappland. 19 vigselplatser, vigselpapperen, verkliga priser och praktiska guider för ditt bröllop i Arktis."
     }
   },
   "/locations": {
@@ -169,52 +169,52 @@ export const STATIC_META = {
   },
   "/venues": {
     "en": {
-      "title": "Lapland Wedding Venues: 20 venues",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village and more. 20 Lapland wedding venues across the regions."
+      "title": "Lapland Wedding Venues: 19 venues",
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village and more. 19 Lapland wedding venues across the regions."
     },
     "fi": {
       "title": "Hääpaikat Lapissa",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village ja muita. 20 hääpaikkaa Lapin paikkakunnilla."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village ja muita. 19 hääpaikkaa Lapin paikkakunnilla."
     },
     "de": {
       "title": "Hochzeitslocations in Lappland",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village und viele mehr. 20 Hochzeitslocations in Lappland."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village und viele mehr. 19 Hochzeitslocations in Lappland."
     },
     "ja": {
-      "title": "ラップランドの結婚式会場：20か所",
-      "description": "Kakslauttanen、Northern Lights Ranch、Arctic SnowHotel、Snow Villageなど。地域を横断する20か所の結婚式会場。"
+      "title": "ラップランドの結婚式会場：19か所",
+      "description": "Kakslauttanen、Northern Lights Ranch、Arctic SnowHotel、Snow Villageなど。地域を横断する19か所の結婚式会場。"
     },
     "es": {
       "title": "Lugares para bodas en Laponia",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village y muchos más. 20 lugares de boda en las regiones de Laponia."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village y muchos más. 19 lugares de boda en las regiones de Laponia."
     },
     "pt-BR": {
       "title": "Locais para casamento na Lapônia",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e muitos outros. 20 locais de casamento nas regiões da Lapônia."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e muitos outros. 19 locais de casamento nas regiões da Lapônia."
     },
     "zh-CN": {
-      "title": "拉普兰婚礼场地：20 个场地",
-      "description": "卡克斯劳塔宁、北极光牧场、北极雪酒店、雪村等。覆盖拉普兰各地区的 20 个婚礼场地，我们不代理其中任何一家。"
+      "title": "拉普兰婚礼场地：19 个场地",
+      "description": "卡克斯劳塔宁、北极光牧场、北极雪酒店、雪村等。覆盖拉普兰各地区的 19 个婚礼场地，我们不代理其中任何一家。"
     },
     "ko": {
-      "title": "라플란드 예식장 20곳",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village 외. 라플란드 전역에 걸친 20곳의 예식장입니다."
+      "title": "라플란드 예식장 19곳",
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village 외. 라플란드 전역에 걸친 19곳의 예식장입니다."
     },
     "fr": {
       "title": "Lieux de mariage en Laponie",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village et bien d’autres. 20 lieux de mariage dans toute la Laponie."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village et bien d’autres. 19 lieux de mariage dans toute la Laponie."
     },
     "it": {
       "title": "Location di matrimonio in Lapponia",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e molte altre. 20 location di matrimonio nelle regioni della Lapponia."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village e molte altre. 19 location di matrimonio nelle regioni della Lapponia."
     },
     "nl": {
       "title": "Bruiloftslocaties in Lapland",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 20 bruiloftslocaties in heel Lapland."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village en meer. 19 bruiloftslocaties in heel Lapland."
     },
     "sv": {
       "title": "Bröllopsplatser i Lappland",
-      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. 20 bröllopsplatser i hela Lappland."
+      "description": "Kakslauttanen, Northern Lights Ranch, Arctic SnowHotel, Snow Village med flera. 19 bröllopsplatser i hela Lappland."
     }
   },
   "/photographers": {
@@ -319,102 +319,102 @@ export const STATIC_META = {
   },
   "/contact": {
     "en": {
-      "title": "Request 1–3 Lapland wedding quotes",
-      "description": "Free and with no commitment. Reply within 1–7 days. We respond within 1–2 business days. Tell us briefly about your dream and we route it to the right planners."
+      "title": "Lapland Wedding Enquiry: We Reply Personally",
+      "description": "Tell us briefly about your Lapland wedding plans. Your enquiry comes straight to us and we reply personally. Free and without commitment."
     },
     "fi": {
-      "title": "Pyydä 1–3 tarjousta Lapin häihin",
-      "description": "Maksuton ja sitoumukseton. Vastaus 1–7 päivän sisällä. Vastaamme 1–2 työpäivän sisällä. Kuvaa lyhyesti unelmasi, välitämme sen sopiville suunnittelijoille."
+      "title": "Häät Lapissa: lähetä hääkysely",
+      "description": "Kuvatkaa lyhyesti toiveenne häistä Lapissa. Kysely tulee suoraan meille, ja vastaamme henkilökohtaisesti. Maksuton ja sitoumukseton."
     },
     "de": {
-      "title": "Fordern Sie 1–3 Angebote für Ihre Hochzeit in Lappland an",
-      "description": "Kostenfrei und unverbindlich. Antwort innerhalb von 1–7 Tagen. Wir antworten innerhalb von 1–2 Werktagen."
+      "title": "Hochzeitsanfrage für Lappland: Wir antworten persönlich",
+      "description": "Erzählen Sie uns kurz von Ihren Hochzeitsplänen in Lappland. Ihre Anfrage geht direkt an uns, und wir antworten persönlich. Kostenlos und unverbindlich."
     },
     "ja": {
-      "title": "ラップランド挙式の見積もりを1〜3件依頼",
-      "description": "無料で契約義務なし。1〜7日以内にご返信します。1〜2営業日以内にご返信します。あなたの理想を簡単にお聞かせください、適切なプランナーへお繋ぎします。"
+      "title": "ラップランド挙式のお問い合わせ：個別にお返事します",
+      "description": "ラップランドでの結婚式のご計画を簡単にお聞かせください。お問い合わせは当サイトに直接届き、私たちが個別にお返事します。無料で、契約の義務はありません。"
     },
     "es": {
-      "title": "Pida 1–3 presupuestos para su boda en Laponia",
-      "description": "Gratis y sin compromiso. Respuesta en 1 a 7 días. Respondemos en 1 a 2 días laborables."
+      "title": "Consulta de boda en Laponia: le respondemos personalmente",
+      "description": "Cuéntenos brevemente sus planes de boda en Laponia. Su consulta nos llega directamente y le respondemos personalmente. Gratis y sin compromiso."
     },
     "pt-BR": {
-      "title": "Peça 1–3 orçamentos para seu casamento na Lapônia",
-      "description": "Grátis e sem compromisso. Resposta em 1 a 7 dias. Respondemos em 1 a 2 dias úteis. Conte-nos brevemente seu sonho, encaminhamos aos organizadores certos."
+      "title": "Consulta de casamento na Lapônia: respondemos pessoalmente",
+      "description": "Conte brevemente seus planos de casamento na Lapônia. O pedido chega diretamente a nós, e respondemos pessoalmente. Grátis e sem compromisso."
     },
     "zh-CN": {
-      "title": "索取 1–3 份拉普兰婚礼报价",
-      "description": "免费且无承诺。1–7 天内回复。我们将在 1–2 个工作日内回复。简单告诉我们您的梦想，我们会转发给合适的策划师。"
+      "title": "拉普兰婚礼咨询：由我们亲自回复",
+      "description": "请简单介绍您在拉普兰举办婚礼的计划和心愿。您的咨询会直接发送给我们，由我们亲自回复。完全免费，也没有任何义务。"
     },
     "ko": {
-      "title": "라플란드 결혼식 견적 1~3건 요청",
-      "description": "무료, 부담 없음. 1~7일 내 답변. 1~2 영업일 내에 답변드립니다. 꿈에 대해 간단히 알려주시면 적합한 플래너에게 연결해 드립니다."
+      "title": "라플란드 결혼식 문의: 저희가 직접 답변드립니다",
+      "description": "라플란드 결혼식 계획을 간단히 알려 주세요. 문의는 저희에게 바로 전달되며, 저희가 직접 답변드립니다. 무료이며 부담 없이 문의하실 수 있습니다."
     },
     "fr": {
-      "title": "Demandez 1 à 3 devis pour votre mariage en Laponie",
-      "description": "Gratuit, sans engagement. Réponse sous 1–7 jours. Nous répondons sous 1 à 2 jours ouvrés."
+      "title": "Mariage en Laponie : nous vous répondons personnellement",
+      "description": "Parlez-nous de votre projet de mariage en Laponie. Votre demande nous parvient directement et nous vous répondons personnellement. Gratuit et sans engagement."
     },
     "it": {
-      "title": "Richiedete 1–3 preventivi per il matrimonio in Lapponia",
-      "description": "Gratis e senza impegno. Risposta entro 1–7 giorni. Rispondiamo entro 1–2 giorni lavorativi."
+      "title": "Matrimonio in Lapponia: Le rispondiamo personalmente",
+      "description": "Ci racconti in breve i Suoi progetti di matrimonio in Lapponia. La richiesta arriva direttamente a noi e Le rispondiamo personalmente. Gratis e senza impegno."
     },
     "nl": {
-      "title": "Vraag 1–3 offertes aan voor uw bruiloft in Lapland",
-      "description": "Gratis en vrijblijvend. Reactie binnen 1–7 dagen. We reageren binnen 1–2 werkdagen. Vertel kort over uw droom, wij sturen het door naar de juiste planners."
+      "title": "Trouwaanvraag voor Lapland: wij antwoorden persoonlijk",
+      "description": "Vertel ons kort over uw trouwplannen in Lapland. Uw aanvraag komt rechtstreeks bij ons binnen en u krijgt persoonlijk antwoord. Gratis en vrijblijvend."
     },
     "sv": {
-      "title": "Begär 1–3 offerter för ert bröllop i Lappland",
-      "description": "Gratis och utan förbindelse. Svar inom 1–7 dagar. Vi svarar inom 1–2 arbetsdagar. Berätta kort om er dröm, så skickar vi den vidare till rätt planerare."
+      "title": "Bröllopsförfrågan i Lappland: vi svarar personligen",
+      "description": "Berätta kort om era bröllopsplaner i Lappland. Förfrågan kommer direkt till oss, och vi svarar personligen. Gratis och utan förbindelse."
     }
   },
   "/pricing": {
     "en": {
-      "title": "Lapland wedding with guests: our EUR 5,000 minimum",
-      "description": "What does a wedding in Lapland cost? EUR 5,000 is our minimum budget for a wedding with guests; an elopement for two starts at about EUR 1,600."
+      "title": "What a Lapland Wedding Costs: Published Prices",
+      "description": "Prices Lapland businesses publish for weddings: officiant, photography, glass igloo and guest activities. What makes up the total and what pushes it up."
     },
     "fi": {
-      "title": "Häät vieraiden kanssa: pienin budjetti 5 000 €",
-      "description": "Mitä häät Lapissa maksavat? 5 000 € on pienin budjetti häille, joissa on vieraita. Kahden hengen elopement-paketti alkaa noin 1 600 eurosta."
+      "title": "Mitä häät Lapissa maksavat: hinnat lähteineen",
+      "description": "Lappilaisten yritysten julkaisemat hinnat häihin: vihkijä, valokuvaus, lasi-iglu ja vieraiden ohjelma. Mistä summa koostuu ja mikä sitä nostaa."
     },
     "de": {
-      "title": "Hochzeit mit Gästen in Lappland: Mindestbudget 5.000 €",
-      "description": "Was kostet eine Hochzeit in Lappland? 5.000 € ist das kleinste Budget für eine Hochzeit mit Gästen. Ein Elopement-Paket zu zweit beginnt bei rund 1.600 €."
+      "title": "Was eine Hochzeit in Lappland kostet: Preise mit Quellen",
+      "description": "Was Anbieter in Lappland für Hochzeiten veröffentlichen: Trauredner, Fotografie, Glasiglu und Gästeprogramm. Woraus sich die Summe ergibt und was sie erhöht."
     },
     "ja": {
-      "title": "ゲストを招く結婚式：最小のご予算5,000ユーロ",
-      "description": "ラップランドの結婚式はいくら？ゲストを招く結婚式の最小のご予算は5,000ユーロです。二人だけのエロープメントの公表パッケージは約1,600ユーロから。項目ごとの価格帯もご紹介します。"
+      "title": "ラップランドの結婚式の費用：事業者の公開価格",
+      "description": "ラップランドの事業者が公開している結婚式関連の価格：司式者、写真撮影、グラスイグルー、ゲスト向けアクティビティ。総額の内訳と、費用を押し上げる要因をご紹介します。"
     },
     "es": {
-      "title": "Boda con invitados en Laponia: presupuesto mínimo 5 000 €",
-      "description": "¿Cuánto cuesta una boda en Laponia? 5 000 € es el presupuesto mínimo para una boda con invitados; un paquete de elopement para dos parte de unos 1 600 €."
+      "title": "Cuánto cuesta una boda en Laponia: precios publicados",
+      "description": "Precios que publican proveedores de Laponia para bodas: oficiante, fotografía, iglú de cristal, actividades para invitados. Qué compone el total y qué lo eleva."
     },
     "pt-BR": {
-      "title": "Casamento com convidados na Lapônia: orçamento mínimo € 5.000",
-      "description": "Quanto custa um casamento na Lapônia? € 5.000 é o orçamento mínimo para um casamento com convidados; um pacote de elopement a dois parte de cerca de € 1.600."
+      "title": "Quanto custa um casamento na Lapônia: preços publicados",
+      "description": "Preços que operadores da Lapônia publicam para casamentos: celebrante, fotografia, iglu de vidro e atividades para convidados. Do que se compõe o total."
     },
     "zh-CN": {
-      "title": "有宾客的拉普兰婚礼：最低预算 5,000 欧元",
-      "description": "在拉普兰办婚礼要花多少钱？有宾客的婚礼，我们承接的最低预算为 5,000 欧元；两人私奔婚礼的公开套餐约 1,600 欧元起。本页列出各项开支的价格区间。"
+      "title": "在拉普兰办婚礼要花多少钱：经营者公开价格",
+      "description": "拉普兰经营者公开的婚礼相关价格：主婚人、摄影、玻璃冰屋和宾客活动。本页说明婚礼总额由哪些部分构成，以及哪些因素会推高费用。"
     },
     "ko": {
-      "title": "하객이 있는 라플란드 결혼식: 최소 예산 5,000유로",
-      "description": "라플란드 결혼식 비용은 얼마일까요? 하객이 있는 결혼식의 최소 예산은 5,000유로이며, 두 사람만의 엘로프먼트 공개 패키지는 약 1,600유로부터입니다."
+      "title": "라플란드 결혼식 비용: 업체들이 공개한 가격",
+      "description": "라플란드 업체들이 공개한 결혼식 관련 가격: 주례, 사진 촬영, 글래스 이글루, 하객 액티비티. 총액의 구성과 비용을 높이는 요인을 정리했습니다."
     },
     "fr": {
-      "title": "Mariage avec invités en Laponie : budget minimum 5 000 €",
-      "description": "Combien coûte un mariage en Laponie ? 5 000 € est le budget minimum pour un mariage avec invités ; un forfait elopement à deux démarre autour de 1 600 €."
+      "title": "Ce que coûte un mariage en Laponie : les prix publiés",
+      "description": "Prix publiés par les prestataires de Laponie : officiant, photographie, igloo de verre et activités des invités. Ce qui compose le total et le fait grimper."
     },
     "it": {
-      "title": "Matrimonio con ospiti in Lapponia: budget minimo 5.000 €",
-      "description": "Quanto costa un matrimonio in Lapponia? 5.000 € è il budget minimo per un matrimonio con ospiti; un pacchetto elopement per due parte da circa 1.600 €."
+      "title": "Quanto costa un matrimonio in Lapponia: prezzi pubblicati",
+      "description": "Prezzi pubblicati dagli operatori della Lapponia: celebrante, fotografia, igloo di vetro e attività per gli ospiti. Come si forma il totale e cosa lo fa salire."
     },
     "nl": {
-      "title": "Bruiloft met gasten in Lapland: minimumbudget € 5.000",
-      "description": "Wat kost een bruiloft in Lapland? € 5.000 is het kleinste budget voor een bruiloft met gasten; een elopementpakket voor twee begint rond € 1.600."
+      "title": "Wat een bruiloft in Lapland kost: gepubliceerde prijzen",
+      "description": "Prijzen die Laplandse aanbieders publiceren voor bruiloften: voltrekker, fotografie, glazen iglo en activiteiten voor gasten. Waaruit het totaal bestaat."
     },
     "sv": {
-      "title": "Bröllop med gäster i Lappland: minsta budget 5 000 €",
-      "description": "Vad kostar ett bröllop i Lappland? 5 000 € är den minsta budgeten för ett bröllop med gäster; ett rymningspaket för två börjar kring 1 600 €."
+      "title": "Vad ett bröllop i Lappland kostar: publicerade priser",
+      "description": "Priser som lappländska aktörer publicerar för bröllop: vigselförrättare, foto, glasigloo och gästaktiviteter. Vad summan består av och vad som höjer den."
     }
   },
   "/traditions": {

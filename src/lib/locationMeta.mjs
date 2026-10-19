@@ -121,7 +121,7 @@ export const LOCATION_DESCRIPTION = {
     "ja": "Leviより静かなエリア：ラップランドでもっとも澄んだ空気、挙式に向くSaagaのスパホテル、Lainio Snow Villageまでも近い距離。",
     "es": "Más tranquilo que Levi: el aire más limpio de Laponia, el hotel spa de Saaga apto para bodas y un trayecto corto hasta Lainio Snow Village.",
     "pt-BR": "Mais tranquilo que Levi: o ar mais puro da Lapônia, o spa-hotel do Saaga preparado para casamentos, fácil acesso ao Lainio Snow Village.",
-    "zh-CN": "紧邻莱维的更宁静之选。Lapland Hotels Saaga在TripAdvisor上赢得了婚礼美誉，莱尼奥Snow Village则离于拉斯最近。适合向往山间宁静、不愿置身滑雪场喧嚣的新人。",
+    "zh-CN": "紧邻莱维的更宁静之选。Lapland Hotels Saaga设有三家餐厅和水疗中心，莱尼奥Snow Village则位于于拉斯与莱维之间。适合向往山间宁静、不愿置身滑雪场喧嚣的新人。",
     "ko": "Levi보다 조용한 곳. 라플란드에서 가장 깨끗한 공기, 결혼식에 어울리는 Saaga의 스파 호텔, Lainio Snow Village까지 짧은 이동.",
     "fr": "Plus calme que Levi : l’air le plus pur de Laponie, l’hôtel spa Saaga adapté aux mariages, Lainio Snow Village à courte distance.",
     "it": "Più tranquilla di Levi: l’aria più pulita della Lapponia, lo spa hotel Saaga adatto ai matrimoni, Lainio Snow Village a breve distanza.",

@@ -136,7 +136,6 @@ const TARGETS = {
     allowSeasonalClosure: true,
   },
   'northern-lights-ranch': { queryCity: 'Köngäs, Kittilä, Lapland, Finland', locality: ['kongas', 'levi', 'sirkka', 'kittila'] },
-  'levi-ice-castle': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila'] },
   'levin-iglut': { queryCity: 'Levi, Kittilä, Lapland, Finland', locality: ['levi', 'sirkka', 'kittila', 'utsuvaara'] },
   'apukka-resort': { queryCity: 'Rovaniemi, Lapland, Finland', locality: ['rovaniemi', 'apukka'] },
   'arctic-treehouse': { queryCity: 'Rovaniemi, Lapland, Finland', locality: ['rovaniemi'] },

@@ -231,7 +231,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   // Qualification follow-up (Vesa 2026-07-10): ~1 hour after submission the
   // couple gets a short, personalised set of easy questions built from their
-  // own answers. A reply = a genuinely warm lead we can forward to partners;
+  // own answers. A reply = a genuinely warm lead worth a personal answer;
   // silence filters out the cold ones. Sent via Resend scheduled_at (server-
   // side schedule — fires even when nothing of ours is running). From-address
   // is info@ so replies land straight in the monitored inbox.
@@ -459,11 +459,11 @@ export function buildQualificationEmail(f: {
   const replySubject = li('Answers — our Lapland wedding', 'Vastaukset — Lapin-häämme');
   const replyTemplate = qs.map((q, i) => `${i + 1}. ${q.short}:\n`).join('\n');
   // The recap rides along at the bottom of the reply so a submitted answer email
-  // is self-contained (original enquiry + answers) and forwards to a planner as-is.
+  // is self-contained (original enquiry + answers).
   const recapPlain = recap.map(([k, v]) => `${k}: ${v}`).join('\n');
   const recapDivider = li(
-    '— — — your enquiry (our planners see this — no need to edit) — — —',
-    '— — — tiedustelunne (suunnittelijat näkevät tämän — ei tarvitse muokata) — — —',
+    '— — — your enquiry, for reference (no need to edit) — — —',
+    '— — — tiedustelunne muistiksi (ei tarvitse muokata) — — —',
   );
   const mailtoBody =
     replyTemplate + '\n' + li('Anything else on your mind:', 'Muuta mielessä:') + '\n\n' +
@@ -505,18 +505,18 @@ export function buildQualificationEmail(f: {
       );
 
   const why = li(
-    'To match you with the right planners (up to three, and only ones that genuinely fit), a few quick questions — short answers are perfectly fine:',
-    'Jotta osaamme valita teille juuri oikeat suunnittelijat (enintään kolme, ja vain aidosti sopivia), muutama nopea kysymys — lyhyet vastaukset riittävät mainiosti:',
+    'So that we can reply properly, a few quick questions. Short answers are perfectly fine:',
+    'Jotta osaamme vastata teille kunnolla, muutama nopea kysymys. Lyhyet vastaukset riittävät mainiosti:',
   );
   const outro = li(
-    'Just hit reply — I read every answer personally. As soon as we hear back, we forward your wishes to the planners that fit, and they contact you directly with real proposals.',
-    'Vastaa suoraan tähän viestiin — luen jokaisen vastauksen itse. Heti kun kuulemme teistä, välitämme toiveenne sopiville suunnittelijoille, ja he ottavat teihin suoraan yhteyttä konkreettisin ehdotuksin.',
+    'Just hit reply. I read every answer myself and reply to you personally: which venues and services fit your plans, and who to contact.',
+    'Vastaa suoraan tähän viestiin. Luen jokaisen vastauksen itse ja vastaan teille henkilökohtaisesti: mitkä paikat ja palvelut sopivat toiveisiinne ja keneen kannattaa olla yhteydessä.',
   );
   // Expectation management (Vesa 2026-07-10): the service language is English
-  // (+ Finnish) — say it out loud so no one expects planners to speak e.g. German.
+  // (+ Finnish): say it out loud so no one expects a reply in e.g. German.
   const langNote = li(
-    'We work with you and our planners in English (and Finnish).',
-    'Palvelemme teitä englanniksi ja suomeksi — myös suunnittelijamme toimivat näillä kielillä.',
+    'We reply in English and Finnish.',
+    'Vastaamme englanniksi ja suomeksi.',
   );
   const subject = li(
     'Your Lapland wedding — a few quick questions',
@@ -769,39 +769,39 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
 
   const eyebrow = isFi ? 'Vahvistus tiedustelusta' : 'Enquiry confirmed';
   const heroLine = isFi
-    ? 'Tiimi on jo aloittanut työn toiveidenne parissa.'
-    : 'Our team has already started working on your wishes.';
+    ? 'Kysely tuli perille, ja luemme sen itse.'
+    : 'Your enquiry has arrived, and we read it ourselves.';
 
   const valueProps = isFi
     ? [
-        ['Maksuton ja sitoumukseton', 'Et maksa meille mitään. Voit valita yhden suunnittelijan, kaikki tai et yhtäkään — vapaasti.'],
-        ['1–3 räätälöityä tarjousta 7 päivässä', 'Et joudu kontaktoimaan suunnittelijoita yksi kerrallaan. Me hoidamme sen — säästät 8–12 tuntia tutkimisaikaa.'],
-        ['Vain Lapin parhaita', 'Verkostossamme on vain vakiintuneita Suomi/UK-pohjaisia toimijoita, joilla on todistettu kokemus Lapin häistä.'],
+        ['Maksuton ja sitoumukseton', 'Ette maksa meille mitään ettekä sitoudu mihinkään.'],
+        ['Vastaamme itse', 'Emme edusta yhtäkään hääpaikkaa, suunnittelijaa tai kuvaajaa. Kerromme, mitkä paikat ja palvelut sopivat toiveisiinne ja mistä tarjouksia kannattaa pyytää.'],
+        ['Tiedot lähteineen', 'Sivuston hinnat ja tiedot on luettu yritysten omilta sivuilta, ja lähde on merkitty.'],
       ]
     : [
-        ['Free & no obligation', 'You pay us nothing. Pick one planner, all of them, or none — entirely your call.'],
-        ['1–3 personalised proposals in 7 days', 'You will not be contacting planners one by one. We do the legwork — saving you 8–12 hours of research.'],
-        ['Only Lapland’s best', 'Our network includes only established Finland/UK-based operators with a proven track record of Lapland weddings.'],
+        ['Free & no obligation', 'You pay us nothing and commit to nothing.'],
+        ['We reply ourselves', 'We represent no venue, planner or photographer. We tell you which venues and services fit your plans, and where to ask for quotes.'],
+        ['Sourced information', 'Prices and details on the site are read from the businesses’ own pages, with the source shown.'],
       ];
 
   const stepsTitle = isFi ? 'Mitä seuraavaksi' : 'What happens next';
   const steps = isFi
     ? [
-        ['1', 'Ensin · sovitamme tiedustelunne', 'Käymme pyyntönne läpi ja valitsemme verkostostamme enintään kolme suunnittelijaa, joiden tyyli, hintataso ja erikoisalat sopivat teille parhaiten.'],
-        ['2', '1–7 päivän sisällä · suunnittelijat ottavat yhteyttä suoraan teihin', 'Valitut suunnittelijat lähettävät ehdotuksensa suoraan sähköpostiinne: paketit, esimerkkihäät, valokuvat, hinnat ja vapaat päivät. Vertailette rauhassa — meille ei tarvitse tehdä mitään.'],
-        ['3', 'Te päätätte', 'Kun yksi tuntuu oikealta, jatkatte suoraan hänen kanssaan — hän hoitaa kaiken DVV-papereista vihkijään, valokuvaajaan, yöpymisiin ja vieraiden kuljetuksiin.'],
+        ['1', 'Noin tunnin kuluttua · muutama kysymys', 'Saatte sähköpostin, jossa on muutama tarkentava kysymys. Voitte vastata suoraan siihen viestiin.'],
+        ['2', 'Vastaamme henkilökohtaisesti', 'Kun tiedämme enemmän, kerromme, mitkä paikat ja palvelut sopivat teille ja keneen kannattaa olla yhteydessä.'],
+        ['3', 'Te päätätte', 'Sovitte ja varaatte suoraan hääpaikan ja palveluiden kanssa.'],
       ]
     : [
-        ['1', 'First · we match your enquiry', 'We review your request and shortlist up to three planners from our network whose style, price tier, and specialty fit you best.'],
-        ['2', 'Within 1–7 days · planners contact you directly', 'The matched planners send their proposals straight to your inbox: packages, real wedding examples, photos, pricing, and availability. Compare freely — there is nothing you need to do.'],
-        ['3', 'You decide', 'When one feels right, you continue directly with them — they handle everything from DVV paperwork to officiant, photographer, your stay, and your guests’ transfers.'],
+        ['1', 'In about an hour · a few questions', 'You get an email with a few follow-up questions. You can simply reply to it.'],
+        ['2', 'We reply personally', 'Once we know more, we tell you which venues and services fit you, and who to contact.'],
+        ['3', 'You decide', 'You agree and book directly with the venue and the services.'],
       ];
 
   const networkLabel = isFi ? 'Finnish Lapland Network' : 'Finnish Lapland Network';
   const networkTitle = isFi ? 'Suunnittele matkanne yhdellä brändillä' : 'Plan your whole trip under one brand';
   const networkP = isFi
-    ? 'LaplandWeddings on osa LaplandVibes-verkostoa — Suomen Lapin laajin matkasivustokokonaisuus. Vieraille majoitusta, aktiviteetteja, ravintoloita, autovuokrausta.'
-    : 'LaplandWeddings is part of LaplandVibes — the largest Finnish Lapland travel network. Lodging, activities, dining, and car rental for you and your guests.';
+    ? 'LaplandWeddings on osa LaplandVibes-verkostoa: majoitusta, aktiviteetteja, ravintoloita ja autovuokrausta teille ja vieraillenne.'
+    : 'LaplandWeddings is part of the LaplandVibes network: lodging, activities, dining and car rental for you and your guests.';
 
   const networkLinks: Array<[string, string, string]> = [
     [isFi ? 'Majoitus' : 'Stays', 'https://laplandstays.com', isFi ? 'Lasi-iglut, hotellit, mökit vieraille' : 'Glass igloos, hotels, cabins for guests'],
@@ -815,13 +815,13 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
   // agreement with any of them (Vesa 2026-07-28). Em dash also removed, it is
   // banned in LV copy.
   const ctaP = isFi
-    ? '21 paikkaa, joissa Lapissa vietetään häitä, jokaisella oma sivu tiloineen, hintatasoineen ja kuvineen.'
-    : '21 places where weddings are held in Lapland, each with its own page: spaces, price level and photos.';
+    ? '19 paikkaa, joissa Lapissa vietetään häitä, jokaisella oma sivu tiloineen, hintatasoineen ja kuvineen.'
+    : '19 places where weddings are held in Lapland, each with its own page: spaces, price level and photos.';
   const ctaButton = isFi ? 'Selaa hääpaikkoja' : 'Browse venues';
 
   const ps = isFi
-    ? 'Teidän ei tarvitse tehdä mitään — valitut suunnittelijat ottavat teihin yhteyttä suoraan. Sillä välin voitte ladata maksuttoman <a href="https://laplandweddings.online/fi/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapin häiden muistilistan</a>, jonka mukana saatte myös suunnitteluvinkkimme sähköpostiinne.'
-    : 'There is nothing you need to do — the matched planners will contact you directly. In the meantime, grab our free <a href="https://laplandweddings.online/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapland wedding checklist</a>, which also signs you up for our occasional planning tips.';
+    ? 'Sillä välin voitte ladata maksuttoman <a href="https://laplandweddings.online/fi/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapin häiden muistilistan</a>, jonka mukana saatte myös suunnitteluvinkkimme sähköpostiinne.'
+    : 'In the meantime, grab our free <a href="https://laplandweddings.online/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapland wedding checklist</a>, which also signs you up for our occasional planning tips.';
 
   const sig = isFi
     ? 'Lapeso Oy · LaplandVibes-verkosto'
@@ -858,8 +858,8 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
           <h1 style="margin:0 0 12px;font-size:24px;color:#0F172A;font-weight:700;letter-spacing:-0.01em">${greeting} 👋</h1>
           <p style="margin:0;font-size:16px;line-height:1.65;color:#334155">
             ${isFi
-              ? 'Saimme häät-tiedustelusi Lappiin — kiitos luottamuksesta. Verkostomme yhdistää teidät <strong>Lapin kokeneimpiin hääsuunnittelijoihin</strong>, jotka ovat vastuussa kaikesta DVV-papereista vihkijään, kuljetuksiin ja vieraiden majoitukseen.'
-              : 'We received your Lapland wedding enquiry — thank you for trusting us. Our network connects you with <strong>Lapland’s most experienced wedding planners</strong>, who handle everything from DVV paperwork to officiants, transfers, and your guests’ accommodation.'}
+              ? 'Saimme hääkyselynne Lappiin, kiitos. Kysely tuli suoraan meille, ja <strong>vastaamme teille henkilökohtaisesti</strong>. Emme edusta yhtäkään hääpaikkaa tai suunnittelijaa, joten vastauksemme on oma arviomme siitä, mikä teille sopii.'
+              : 'We received your Lapland wedding enquiry, thank you. It came straight to us, and <strong>we will reply to you personally</strong>. We represent no venue or planner, so our reply is our own view of what fits you.'}
           </p>
         </td></tr>
 

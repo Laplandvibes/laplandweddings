@@ -248,7 +248,6 @@ const venues = [
   { slug: 'arctic-snowhotel', name: 'Arctic SnowHotel & Glass Igloos', img: '/images/venues/arctic-snowhotel.jpg' },
   { slug: 'snow-village-lainio', name: 'Lapland Hotels SnowVillage (Lainio)', img: '/images/venues/snow-village-lainio.jpg' },
   { slug: 'northern-lights-ranch', name: 'Northern Lights Ranch', img: '/images/venues/northern-lights-ranch.webp' },
-  { slug: 'levi-ice-castle', name: 'Levi Ice Castle', img: '/images/venues/levi-ice-castle.jpg' },
   { slug: 'levin-iglut', name: 'Levin Iglut · Golden Crown', img: '/images/venues/levin-iglut.jpg' },
   { slug: 'apukka-resort', name: 'Apukka Resort', img: '/images/venues/apukka-resort.jpeg' },
   { slug: 'arctic-treehouse', name: 'Arctic TreeHouse Hotel', img: '/images/venues/arctic-treehouse.jpg' },

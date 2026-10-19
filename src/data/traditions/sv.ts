@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'Traditionellt bastubad, där brudbastun är det mest kända exemplet, finns med i Finlands nationella förteckning över levande kulturarv. Den finska bastukulturen fördes 2020 in på Unescos representativa lista över mänsklighetens immateriella kulturarv.',
         'I dag hålls brudbastun oftast på möhippan. I Sydösterbotten har seden väckts till liv igen vid ett evenemang med traditionellt kronbröllop i Nurmo.',
       ],
-      inLapland: 'Har er bröllopsplats en bastu, kan brudbastun hållas kvällen före bröllopet. Nämn det i er förfrågan, så går önskemålet vidare till planeraren precis som ni skrev det.',
+      inLapland: 'Har er bröllopsplats en bastu, kan brudbastun hållas kvällen före bröllopet. Nämn det i er förfrågan, så tar vi hänsyn till det i vårt svar.',
     },
     'wedding-crashers': {
       title: 'Objudna gäster',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Bröllop i Lappland med era egna traditioner',
-    body: 'Berätta i er förfrågan vilka traditioner ni vill ha med, så för vi vidare era önskemål till bröllopsplanerare som arbetar i regionen.',
+    body: 'Berätta i er förfrågan vilka traditioner ni vill ha med, så svarar vi er personligen.',
     venues: 'Se vigselplatserna',
     enquiry: 'Skicka en bröllopsförfrågan',
   },

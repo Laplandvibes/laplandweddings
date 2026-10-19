@@ -67,7 +67,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · 35 km from Rovaniemi"
+        "region": "Lehtojärvi · 26 km from Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -78,24 +78,20 @@
         "region": "Köngäs · 15 min from Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · 7 km from centre"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · on top of the fell"
+        "region": "Levi · on the slope of Utsuvaara"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · 15 min from Santa Claus Village"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 2 km from airport"
+        "region": "Rovaniemi · next to SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · edge of UKK National Park"
+        "region": "Muotka · beside the national park"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -111,7 +107,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · 16 km from the centre"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -119,7 +115,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "On Levi fell summit"
+        "region": "Levi · beside the slopes"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -139,7 +135,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Santa Claus Village"
+        "region": "Rovaniemi · 300 m from Santa Claus Village"
       }
     ]
   },
@@ -211,7 +207,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · 35 km Rovaniemestä"
+        "region": "Lehtojärvi · 26 km Rovaniemeltä"
       },
       {
         "slug": "snow-village-lainio",
@@ -222,24 +218,20 @@
         "region": "Köngäs · 15 min Levistä"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · 7 km keskustasta"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · tunturin huipulla"
+        "region": "Levi · Utsuvaaran rinteellä"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · 15 min Joulupukin pajakylästä"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 2 km lentokentältä"
+        "region": "Rovaniemi · SantaParkin vieressä"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · UKK-puiston laidalla"
+        "region": "Muotka · kansallispuiston kupeessa"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -255,7 +247,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · 16 km keskustasta"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -263,7 +255,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Levitunturin huipulla"
+        "region": "Levi · rinteiden vieressä"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -283,7 +275,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Joulupukin pajakylä"
+        "region": "Rovaniemi · 300 m pajakylästä"
       }
     ]
   },
@@ -355,7 +347,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · 35 km von Rovaniemi"
+        "region": "Lehtojärvi · 26 km von Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -366,24 +358,20 @@
         "region": "Köngäs · 15 Min. von Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · 7 km vom Zentrum"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · auf dem Gipfel des Fjälls"
+        "region": "Levi · am Hang des Utsuvaara"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · 15 Min. vom Weihnachtsmanndorf"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 2 km vom Flughafen"
+        "region": "Rovaniemi · neben dem SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · am Rand des UKK-Nationalparks"
+        "region": "Muotka · am Nationalpark"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -399,7 +387,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · 16 km vom Zentrum"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -407,7 +395,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Auf dem Gipfel des Levi-Fjälls"
+        "region": "Levi · neben den Pisten"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -427,7 +415,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Weihnachtsmanndorf"
+        "region": "Rovaniemi · 300 m vom Weihnachtsmanndorf"
       }
     ]
   },
@@ -499,7 +487,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "レフトヤルヴィ · ロヴァニエミから35km"
+        "region": "レフトヤルヴィ · ロヴァニエミから26km"
       },
       {
         "slug": "snow-village-lainio",
@@ -510,24 +498,20 @@
         "region": "ケンガス · レヴィから15分"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "レヴィ · 中心部から7km"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "レヴィ · フェル（丘陵）の頂上"
+        "region": "レヴィ · ウツヴァーラの斜面"
       },
       {
         "slug": "apukka-resort",
-        "region": "アプッカ · サンタクロース村から15分"
+        "region": "アプッカ、ロヴァニエミ"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 空港から2km"
+        "region": "ロヴァニエミ · SantaParkの隣"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "ムオトカ · UKK国立公園の端"
+        "region": "ムオトカ · 国立公園のそば"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -543,7 +527,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "シルッカ、レヴィ"
+        "region": "レヴィ · 中心部から16km"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -551,7 +535,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "レヴィのフェル頂上"
+        "region": "レヴィ · ゲレンデのそば"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -571,7 +555,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "サンタクロース村"
+        "region": "ロヴァニエミ · サンタクロース村から300m"
       }
     ]
   },
@@ -643,7 +627,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · a 35 km de Rovaniemi"
+        "region": "Lehtojärvi · a 26 km de Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -654,24 +638,20 @@
         "region": "Köngäs · a 15 min de Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · a 7 km del centro"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · en la cima del fell"
+        "region": "Levi · en la ladera del Utsuvaara"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · a 15 min del Pueblo de Papá Noel"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · a 2 km del aeropuerto"
+        "region": "Rovaniemi · junto a SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · en el borde del Parque Nacional UKK"
+        "region": "Muotka · junto al parque nacional"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -687,7 +667,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · a 16 km del centro"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -695,7 +675,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "En la cima del fell de Levi"
+        "region": "Levi · junto a las pistas"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -715,7 +695,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Pueblo de Papá Noel"
+        "region": "Rovaniemi · a 300 m del Pueblo de Papá Noel"
       }
     ]
   },
@@ -787,7 +767,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · a 35 km de Rovaniemi"
+        "region": "Lehtojärvi · a 26 km de Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -798,24 +778,20 @@
         "region": "Köngäs · a 15 min de Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · a 7 km do centro"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · no topo do monte"
+        "region": "Levi · na encosta do Utsuvaara"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · a 15 min da Vila do Papai Noel"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · a 2 km do aeroporto"
+        "region": "Rovaniemi · ao lado do SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · na borda do Parque Nacional UKK"
+        "region": "Muotka · ao lado do parque nacional"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -831,7 +807,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · a 16 km do centro"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -839,7 +815,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "No topo do monte Levi"
+        "region": "Levi · ao lado das pistas"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -859,7 +835,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Vila do Papai Noel"
+        "region": "Rovaniemi · a 300 m da Vila do Papai Noel"
       }
     ]
   },
@@ -931,7 +907,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "莱赫托湖 · 距罗瓦涅米35公里"
+        "region": "莱赫托湖 · 距罗瓦涅米26公里"
       },
       {
         "slug": "snow-village-lainio",
@@ -942,24 +918,20 @@
         "region": "科恩盖斯 · 距莱维15分钟"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "莱维 · 距中心7公里"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "莱维 · 山丘之巅"
+        "region": "莱维 · 乌茨瓦拉山坡"
       },
       {
         "slug": "apukka-resort",
-        "region": "阿普卡 · 距圣诞老人村15分钟"
+        "region": "阿普卡，罗瓦涅米"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 距机场2公里"
+        "region": "罗瓦涅米 · 紧邻SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "穆奥特卡 · UKK国家公园边缘"
+        "region": "穆奥特卡 · 紧邻国家公园"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -975,7 +947,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "锡尔卡，莱维"
+        "region": "莱维 · 距中心16公里"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -983,7 +955,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "莱维山丘之巅"
+        "region": "莱维 · 雪道旁"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -1003,7 +975,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "圣诞老人村"
+        "region": "罗瓦涅米 · 距圣诞老人村300米"
       }
     ]
   },
@@ -1075,7 +1047,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "레흐토야르비 · 로바니에미에서 35km"
+        "region": "레흐토야르비 · 로바니에미에서 26km"
       },
       {
         "slug": "snow-village-lainio",
@@ -1086,24 +1058,20 @@
         "region": "쾽개스 · 레비에서 15분"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "레비 · 중심부에서 7km"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "레비 · 펠(구릉) 정상"
+        "region": "레비 · 우츠바라 비탈"
       },
       {
         "slug": "apukka-resort",
-        "region": "아푸카 · 산타클로스 마을에서 15분"
+        "region": "아푸카, 로바니에미"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 공항에서 2km"
+        "region": "로바니에미 · SantaPark 옆"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "무오트카 · UKK 국립공원 경계"
+        "region": "무오트카 · 국립공원 옆"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -1119,7 +1087,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "시르카, 레비"
+        "region": "레비 · 중심부에서 16km"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -1127,7 +1095,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "레비 펠(구릉) 정상"
+        "region": "레비 · 슬로프 옆"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -1147,7 +1115,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "산타클로스 마을"
+        "region": "로바니에미 · 산타클로스 마을에서 300m"
       }
     ]
   },
@@ -1219,7 +1187,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · à 35 km de Rovaniemi"
+        "region": "Lehtojärvi · à 26 km de Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -1230,24 +1198,20 @@
         "region": "Köngäs · à 15 min de Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · à 7 km du centre"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · au sommet du fjäll"
+        "region": "Levi · sur le versant de l’Utsuvaara"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · à 15 min du Village du Père Noël"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · à 2 km de l’aéroport"
+        "region": "Rovaniemi · à côté de SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · en bordure du parc national UKK"
+        "region": "Muotka · en bordure du parc national"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -1263,7 +1227,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · à 16 km du centre"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -1271,7 +1235,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Au sommet du fjäll de Levi"
+        "region": "Levi · à côté des pistes"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -1291,7 +1255,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Village du Père Noël"
+        "region": "Rovaniemi · à 300 m du Village du Père Noël"
       }
     ]
   },
@@ -1363,7 +1327,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · a 35 km da Rovaniemi"
+        "region": "Lehtojärvi · a 26 km da Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -1374,24 +1338,20 @@
         "region": "Köngäs · a 15 min da Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · a 7 km dal centro"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · in cima al fjäll"
+        "region": "Levi · sul pendio dell’Utsuvaara"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · a 15 min dal Villaggio di Babbo Natale"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · a 2 km dall’aeroporto"
+        "region": "Rovaniemi · accanto a SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · ai margini del Parco Nazionale UKK"
+        "region": "Muotka · accanto al parco nazionale"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -1407,7 +1367,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · a 16 km dal centro"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -1415,7 +1375,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "In cima al fjäll di Levi"
+        "region": "Levi · accanto alle piste"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -1435,7 +1395,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Villaggio di Babbo Natale"
+        "region": "Rovaniemi · a 300 m dal Villaggio di Babbo Natale"
       }
     ]
   },
@@ -1507,7 +1467,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · 35 km van Rovaniemi"
+        "region": "Lehtojärvi · 26 km van Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -1518,24 +1478,20 @@
         "region": "Köngäs · 15 min van Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · 7 km van het centrum"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · op de top van de fjäll"
+        "region": "Levi · op de helling van de Utsuvaara"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · 15 min van het Kerstmandorp"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 2 km van de luchthaven"
+        "region": "Rovaniemi · naast SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · aan de rand van Nationaal Park UKK"
+        "region": "Muotka · naast het nationaal park"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -1551,7 +1507,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · 16 km van het centrum"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -1559,7 +1515,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Op de top van de fjäll van Levi"
+        "region": "Levi · naast de pistes"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -1579,7 +1535,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Kerstmandorp"
+        "region": "Rovaniemi · 300 m van het Kerstmandorp"
       }
     ]
   },
@@ -1651,7 +1607,7 @@
       },
       {
         "slug": "arctic-snowhotel",
-        "region": "Lehtojärvi · 35 km från Rovaniemi"
+        "region": "Lehtojärvi · 26 km från Rovaniemi"
       },
       {
         "slug": "snow-village-lainio",
@@ -1662,24 +1618,20 @@
         "region": "Köngäs · 15 min från Levi"
       },
       {
-        "slug": "levi-ice-castle",
-        "region": "Levi · 7 km från centrum"
-      },
-      {
         "slug": "levin-iglut",
-        "region": "Levi · uppe på fjället"
+        "region": "Levi · på Utsuvaaras sluttning"
       },
       {
         "slug": "apukka-resort",
-        "region": "Apukka · 15 min från Jultomtens by"
+        "region": "Apukka, Rovaniemi"
       },
       {
         "slug": "arctic-treehouse",
-        "region": "SantaPark · 2 km från flygplatsen"
+        "region": "Rovaniemi · intill SantaPark"
       },
       {
         "slug": "wilderness-hotel-muotka",
-        "region": "Muotka · vid kanten av UKK-nationalparken"
+        "region": "Muotka · intill nationalparken"
       },
       {
         "slug": "wilderness-hotel-inari",
@@ -1695,7 +1647,7 @@
       },
       {
         "slug": "northern-lights-village-levi",
-        "region": "Sirkka, Levi"
+        "region": "Levi · 16 km från centrum"
       },
       {
         "slug": "hotelli-hullu-poro",
@@ -1703,7 +1655,7 @@
       },
       {
         "slug": "levi-panorama",
-        "region": "Uppe på Levifjällets topp"
+        "region": "Levi · intill backarna"
       },
       {
         "slug": "lapland-hotels-saaga",
@@ -1723,7 +1675,7 @@
       },
       {
         "slug": "nova-skyland",
-        "region": "Jultomtens by"
+        "region": "Rovaniemi · 300 m från Jultomtens by"
       }
     ]
   }

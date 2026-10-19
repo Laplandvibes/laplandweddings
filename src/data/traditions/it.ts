@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'La sauna tradizionale, di cui la sauna della sposa è l’esempio più noto, fa parte dell’Inventario nazionale del patrimonio vivente della Finlandia. Nel 2020 la cultura finlandese della sauna è stata iscritta nella Lista rappresentativa del patrimonio culturale immateriale dell’umanità dell’UNESCO.',
         'Oggi la sauna della sposa si fa per lo più durante l’addio al nubilato. Nell’Ostrobotnia meridionale l’usanza è stata riportata in vita in un evento tradizionale di nozze con la corona a Nurmo.',
       ],
-      inLapland: 'Se la Sua location dispone di una sauna, la sauna della sposa si può fare la sera prima del matrimonio. Lo indichi nella Sua richiesta: il desiderio arriverà al wedding planner esattamente come Lei l’ha scritto.',
+      inLapland: 'Se la Sua location dispone di una sauna, la sauna della sposa si può fare la sera prima del matrimonio. Lo indichi nella Sua richiesta: ne terremo conto nella nostra risposta.',
     },
     'wedding-crashers': {
       title: 'Gli imbucati',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Un matrimonio in Lapponia con le Sue tradizioni',
-    body: 'Ci indichi nella Sua richiesta quali tradizioni desidera includere: inoltreremo i Suoi desideri ai wedding planner che lavorano nella regione.',
+    body: 'Ci indichi nella Sua richiesta quali tradizioni desidera includere: Le risponderemo personalmente.',
     venues: 'Scopra le location',
     enquiry: 'Invia una richiesta',
   },

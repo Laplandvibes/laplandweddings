@@ -73,18 +73,18 @@ export const TYPE_DESCRIPTION = {
     "sv": "Vigsel under norrskenet: i norra Lappland syns norrsken i genomsnitt varannan natt (FMI)."
   },
   "snow-chapel": {
-    "en": "Marry in a chapel carved from pure snow and ice: Lainio, Northern Lights Ranch, Arctic SnowHotel and Levi Ice Castle.",
-    "fi": "Vihille puhtaaksi veistetyssä lumi- tai jääkappelissa: Lainio, Northern Lights Ranch, Arctic SnowHotel ja Levin jäälinna.",
-    "de": "Trauung in einer aus reinem Schnee und Eis gemeißelten Kapelle: Lainio, Northern Lights Ranch, Arctic SnowHotel und Levi Ice Castle.",
-    "ja": "純粋な雪と氷から削り出したチャペルで挙式：Lainio、Northern Lights Ranch、Arctic SnowHotel、Levi Ice Castle。",
-    "es": "Casarse en una capilla tallada en nieve y hielo puros: Lainio, Northern Lights Ranch, Arctic SnowHotel y Levi Ice Castle.",
-    "pt-BR": "Casem-se em uma capela esculpida em neve e gelo puros: Lainio, Northern Lights Ranch, Arctic SnowHotel e Levi Ice Castle.",
-    "zh-CN": "在由纯净冰雪雕成的教堂里结婚：Lainio、Northern Lights Ranch、Arctic SnowHotel 和 Levi Ice Castle。",
-    "ko": "순수한 눈과 얼음을 깎아 만든 예배당에서 올리는 결혼식. Lainio, Northern Lights Ranch, Arctic SnowHotel, Levi Ice Castle.",
-    "fr": "Mariez-vous dans une chapelle sculptée dans la neige et la glace pures : Lainio, Northern Lights Ranch, Arctic SnowHotel et Levi Ice Castle.",
-    "it": "Si sposi in una cappella scolpita nella neve e nel ghiaccio puri: Lainio, Northern Lights Ranch, Arctic SnowHotel e Levi Ice Castle.",
-    "nl": "Trouwen in een kapel uitgehouwen uit puur sneeuw en ijs: Lainio, Northern Lights Ranch, Arctic SnowHotel en Levi Ice Castle.",
-    "sv": "Gift er i ett kapell format av ren snö och is: Lainio, Northern Lights Ranch, Arctic SnowHotel och Levi Ice Castle."
+    "en": "Marry in a chapel carved from pure snow and ice: Lainio, Northern Lights Ranch and Arctic SnowHotel.",
+    "fi": "Vihille puhtaaksi veistetyssä lumi- tai jääkappelissa: Lainio, Northern Lights Ranch ja Arctic SnowHotel.",
+    "de": "Trauung in einer aus reinem Schnee und Eis gemeißelten Kapelle: Lainio, Northern Lights Ranch und Arctic SnowHotel.",
+    "ja": "純粋な雪と氷から削り出したチャペルで挙式：Lainio、Northern Lights Ranch、Arctic SnowHotel。雪と氷の会場は冬季のみ利用できるため、日程は早めに確認を。",
+    "es": "Casarse en una capilla tallada en nieve y hielo puros: Lainio, Northern Lights Ranch y Arctic SnowHotel.",
+    "pt-BR": "Casem-se em uma capela esculpida em neve e gelo puros: Lainio, Northern Lights Ranch e Arctic SnowHotel.",
+    "zh-CN": "在由纯净冰雪雕成的教堂里结婚：Lainio、Northern Lights Ranch 和 Arctic SnowHotel。冰雪场地仅在冬季开放，请提前确认日期。",
+    "ko": "순수한 눈과 얼음을 깎아 만든 예배당에서 올리는 결혼식. Lainio, Northern Lights Ranch, Arctic SnowHotel.",
+    "fr": "Mariez-vous dans une chapelle sculptée dans la neige et la glace pures : Lainio, Northern Lights Ranch et Arctic SnowHotel.",
+    "it": "Si sposi in una cappella scolpita nella neve e nel ghiaccio puri: Lainio, Northern Lights Ranch e Arctic SnowHotel.",
+    "nl": "Trouwen in een kapel uitgehouwen uit puur sneeuw en ijs: Lainio, Northern Lights Ranch en Arctic SnowHotel.",
+    "sv": "Gift er i ett kapell format av ren snö och is: Lainio, Northern Lights Ranch och Arctic SnowHotel."
   },
   "vow-renewal": {
     "en": "Renew your vows in the Lapland snow: no paperwork, fully bespoke ceremony.",

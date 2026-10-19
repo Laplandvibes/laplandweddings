@@ -15,7 +15,6 @@ const targets = [
   ['arctic-snowhotel', 'https://arcticsnowhotel.fi/en/events/lapland-wedding/'],
   ['snow-village-lainio', 'https://www.laplandhotels.com/en/hotels-and-destinations/yllas-levi/snowvillage'],
   ['northern-lights-ranch', 'https://theranch.fi/about-us/private-events/'],
-  ['levi-ice-castle', 'https://www.levi.fi/en/info/general/groups/weddings/'],
   ['levin-iglut', 'https://leviniglut.fi/'],
   ['apukka-resort', 'https://apukkaresort.fi/'],
   ['arctic-treehouse', 'https://arctictreehousehotel.com/'],

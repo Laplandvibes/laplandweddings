@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'Perinnesaunottaminen, jonka tunnetuin esimerkki morsiussauna on, on mukana Elävän perinnön kansallisessa luettelossa. Suomalainen saunakulttuuri kirjattiin vuonna 2020 UNESCOn ihmiskunnan aineettoman kulttuuriperinnön luetteloon.',
         'Nykyään morsiussauna pidetään useimmiten polttareissa. Etelä-Pohjanmaalla tapa on herätetty henkiin Nurmon kruunuhäätapahtumassa.',
       ],
-      inLapland: 'Jos hääpaikassanne on sauna, morsiussaunan voi pitää hääpäivää edeltävänä iltana. Kertokaa toiveesta hääkyselyssä, niin se kulkee suunnittelijalle sellaisenaan.',
+      inLapland: 'Jos hääpaikassanne on sauna, morsiussaunan voi pitää hääpäivää edeltävänä iltana. Kertokaa toiveesta hääkyselyssä, niin otamme sen vastauksessa huomioon.',
     },
     'wedding-crashers': {
       title: 'Kuokkavieraat',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Häät Lapissa, omilla perinteillänne',
-    body: 'Kertokaa hääkyselyssä, mitkä perinteet haluatte mukaan, niin välitämme toiveet alueella työskenteleville hääsuunnittelijoille.',
+    body: 'Kertokaa hääkyselyssä, mitkä perinteet haluatte mukaan, niin vastaamme henkilökohtaisesti.',
     venues: 'Katso hääpaikat',
     enquiry: 'Lähetä hääkysely',
   },

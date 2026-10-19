@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'Traditioneel saunabaden, waarvan de bruidssauna het bekendste voorbeeld is, staat in de Finse nationale inventaris van levend erfgoed. De Finse saunacultuur werd in 2020 opgenomen in de Representatieve Lijst van het Immaterieel Cultureel Erfgoed van de Mensheid van UNESCO.',
         'Tegenwoordig wordt de bruidssauna meestal tijdens het vrijgezellenfeest gehouden. In Zuid-Österbotten is het gebruik nieuw leven ingeblazen tijdens een evenement met een traditionele kroonbruiloft in Nurmo.',
       ],
-      inLapland: 'Heeft uw locatie een sauna, dan kan de bruidssauna op de avond voor de bruiloft plaatsvinden. Vermeld het in uw aanvraag, dan gaat de wens precies zoals u hem schreef naar de planner.',
+      inLapland: 'Heeft uw locatie een sauna, dan kan de bruidssauna op de avond voor de bruiloft plaatsvinden. Vermeld het in uw aanvraag, dan houden wij er in ons antwoord rekening mee.',
     },
     'wedding-crashers': {
       title: 'Ongenode gasten',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'Trouwen in Lapland met uw eigen tradities',
-    body: 'Vertel ons in uw aanvraag welke tradities u erbij wilt hebben, dan geven wij uw wensen door aan weddingplanners die in de regio werken.',
+    body: 'Vertel ons in uw aanvraag welke tradities u erbij wilt hebben, dan krijgt u persoonlijk antwoord van ons.',
     venues: 'Bekijk de locaties',
     enquiry: 'Trouwaanvraag versturen',
   },

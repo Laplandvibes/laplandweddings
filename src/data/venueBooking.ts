@@ -77,7 +77,6 @@ export const VENUE_BOOKING: Record<string, VenueBooking> = {
   // 🔴 NEITHER partner sells it. Trip's nearest offer is "Luvattumaa - Levi Ice
   // Gallery" (9884273) — a different operator's ice attraction. Left empty on
   // purpose; the button degrades to "See stays in Levi".
-  'levi-ice-castle': { town: 'Levi' },
   // Sembo: "Golden Crown Levin Iglut" · Trip: "Golden Crown - Levin Iglut"
   'levin-iglut': { town: 'Levi', semboHotel: '2512109', semboPoly: '360006', tripHotel: '9528161', tripCity: '38182' },
   // Sembo: "Apukka Resort, Rovaniemi" · Trip: "Apukka Resort"

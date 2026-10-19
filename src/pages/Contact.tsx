@@ -14,7 +14,8 @@ import { STATIC_META } from '../lib/staticMeta.mjs';
  */
 export default function Contact() {
   const { lang, tr } = useLang();
-  const lead = `${tr.contact.formSub} ${tr.contact.subtitle}`;
+  // Full-width ja/zh sentences join without a space.
+  const lead = [tr.contact.formSub, tr.contact.subtitle].join(lang === 'ja' || lang === 'zh-CN' ? '' : ' ');
   return (
     <>
       <SEO title={STATIC_META['/contact'][lang].title} description={STATIC_META['/contact'][lang].description} path="/contact" />

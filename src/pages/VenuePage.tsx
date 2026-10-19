@@ -40,8 +40,9 @@ const V: Record<VKey, Localized<string>> = {
     nl: 'Bekijk prijzen & boek', sv: 'Se priser & boka',
   },
   /**
-   * Degraded label for the two venues no partner sells (Levi Ice Castle,
-   * Santa's Hotel Santamus). "Check rates & book" would promise this venue's own
+   * Degraded label for a venue no partner sells. None is listed since 19.10.2026
+   * (Levi Ice Castle and Santa's Hotel Santamus were the two, both removed), but a
+   * new venue without a property id lands here. "Check rates & book" would promise this venue's own
    * booking page; the link can only offer the town. 🔴 The place name is a
    * separate {town} slot and never baked into the sentence — Finnish needs
    * "Levillä / Rovaniemellä", German "in Levi". Same apposition trap Vesa
@@ -169,23 +170,24 @@ const V: Record<VKey, Localized<string>> = {
     fr: 'Demande gratuite', it: 'Richiesta gratuita',
     nl: 'Gratis aanvraag', sv: 'Kostnadsfri förfrågan',
   },
-  // No delivery SLA and no quote count here: the planner network is real, but the
-  // turnaround is not ours to promise (Vesa 2026-07-27). Planners reply directly.
+  // Vesa 19.10.2026: "ei ole vielä sopimuksia kenenkään kanssa" (no venue, no planner).
+  // The enquiry comes to us and we reply; nothing here may promise a planner, a quote count
+  // or a turnaround.
   // Vesa 19.10.2026: "Pyydä tarjous: Kakslauttanen" read as if we had a contract with
   // the venue. We have none with any venue, so the form says so before anything else.
   leadIntro: {
-    en: 'We do not represent this venue and cannot book it for you. Tell us what you have in mind and we pass it on to wedding planners who work in this region. They reply to you directly.',
-    fi: 'Emme edusta tätä paikkaa emmekä tee varauksia sen puolesta. Kertokaa toiveenne, niin välitämme ne tällä alueella työskenteleville hääsuunnittelijoille, ja he vastaavat teille suoraan.',
-    de: 'Wir vertreten diese Location nicht und können sie nicht für Sie buchen. Erzählen Sie uns, was Sie sich vorstellen, und wir leiten es an Hochzeitsplaner weiter, die in dieser Region arbeiten. Sie antworten Ihnen direkt.',
-    ja: '当サイトはこの会場の代理店ではなく、予約の代行も行っていません。ご希望をお聞かせいただければ、この地域で活動するウェディングプランナーへお伝えし、プランナーから直接ご連絡が届きます。',
-    es: 'No representamos este lugar ni podemos reservarlo por usted. Cuéntenos lo que tiene en mente y se lo trasladaremos a organizadores de bodas que trabajan en esta región. Ellos le responderán directamente.',
-    'pt-BR': 'Não representamos este local nem podemos reservá-lo por vocês. Contem o que vocês imaginam e repassamos a organizadores de casamento que atuam nesta região. Eles respondem diretamente a vocês.',
-    'zh-CN': '我们不代理该场地，也无法代为预订。请告诉我们您的设想，我们会转达给在该地区工作的婚礼策划师，由他们直接回复您。',
-    ko: '저희는 이 장소를 대리하지 않으며 대신 예약해 드릴 수도 없습니다. 원하시는 내용을 알려 주시면 이 지역에서 활동하는 웨딩 플래너에게 전달하고, 플래너가 직접 답변을 드립니다.',
-    fr: 'Nous ne représentons pas ce lieu et ne pouvons pas le réserver pour vous. Dites-nous ce que vous imaginez : nous le transmettons aux organisateurs de mariage qui travaillent dans cette région, et ils vous répondent directement.',
-    it: 'Non rappresentiamo questa location e non possiamo prenotarla per Lei. Ci descriva ciò che desidera: lo inoltreremo ai wedding planner che lavorano in questa regione, che Le risponderanno direttamente.',
-    nl: 'Wij vertegenwoordigen deze locatie niet en kunnen haar niet voor u boeken. Vertel ons wat u voor ogen heeft, dan sturen wij het door naar trouwplanners die in deze regio werken. Zij antwoorden u rechtstreeks.',
-    sv: 'Vi företräder inte den här platsen och kan inte boka den åt er. Berätta vad ni önskar, så skickar vi det vidare till bröllopsplanerare som arbetar i regionen. De svarar er direkt.',
+    en: 'We do not represent this venue and cannot book it for you. Your enquiry comes straight to us and we reply personally.',
+    fi: 'Emme edusta tätä paikkaa emmekä tee varauksia sen puolesta. Kysely tulee suoraan meille, ja vastaamme henkilökohtaisesti.',
+    de: 'Wir vertreten diese Location nicht und können sie nicht für Sie buchen. Ihre Anfrage geht direkt an uns, und wir antworten Ihnen persönlich.',
+    ja: '当サイトはこの会場の代理店ではなく、予約の代行も行っていません。お問い合わせは当サイトに直接届き、私たちが個別にお返事します。',
+    es: 'No representamos este lugar ni podemos reservarlo por usted. Su consulta nos llega directamente y le respondemos personalmente.',
+    'pt-BR': 'Não representamos este local nem podemos reservá-lo por vocês. O pedido de vocês chega diretamente a nós, e respondemos pessoalmente.',
+    'zh-CN': '我们不代理该场地，也无法代为预订。您的咨询会直接发送给我们，由我们亲自回复。',
+    ko: '저희는 이 장소를 대리하지 않으며 대신 예약해 드릴 수도 없습니다. 문의는 저희에게 바로 전달되며, 저희가 직접 답변드립니다.',
+    fr: 'Nous ne représentons pas ce lieu et ne pouvons pas le réserver pour vous. Votre demande nous parvient directement et nous vous répondons personnellement.',
+    it: 'Non rappresentiamo questa location e non possiamo prenotarla per Lei. La Sua richiesta arriva direttamente a noi e Le rispondiamo personalmente.',
+    nl: 'Wij vertegenwoordigen deze locatie niet en kunnen haar niet voor u boeken. Uw aanvraag komt rechtstreeks bij ons binnen en u krijgt persoonlijk antwoord van ons.',
+    sv: 'Vi företräder inte den här platsen och kan inte boka den åt er. Er förfrågan kommer direkt till oss, och vi svarar er personligen.',
   },
   // Templates — {name} / {region} are substituted at render time.
   whatMakesSpecial: {

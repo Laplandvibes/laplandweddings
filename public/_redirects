@@ -65,6 +65,12 @@
 # on tarkoitus.
 
 # 19.9.2026: "Santa's Hotel Santamus" ei ole olemassa (registeristä poistettu) → hääpaikkalista.
+# 19.10.2026: "Levi Ice Castle" ei ole olemassa hääpaikkana (lähin vastine Luvattumaa on nyt kahvila ja
+# tilausravintola, ei jääkappelia). Kohde poistettu; vanhat osoitteet Levin paikkakuntasivulle.
+/venues/levi-ice-castle          /locations/levi/          301
+/venues/levi-ice-castle/         /locations/levi/          301
+/:lang/venues/levi-ice-castle    /:lang/locations/levi/    301
+/:lang/venues/levi-ice-castle/   /:lang/locations/levi/    301
 /venues/santas-hotel-santamus          /venues/          301
 /venues/santas-hotel-santamus/         /venues/          301
 /:lang/venues/santas-hotel-santamus    /:lang/venues/    301

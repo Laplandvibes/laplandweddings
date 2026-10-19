@@ -51,7 +51,7 @@ export const page: TraditionsPage = {
         'Traditional sauna bathing, of which the bridal sauna is the best-known example, is part of Finland’s National Inventory of Living Heritage. Finnish sauna culture was added to UNESCO’s Representative List of the Intangible Cultural Heritage of Humanity in 2020.',
         'Today the bridal sauna is most often held at a hen party. In South Ostrobothnia the custom has been revived at a traditional crown-wedding event in Nurmo.',
       ],
-      inLapland: 'If your venue has a sauna, the bridal sauna can be held on the evening before the wedding. Mention it in your enquiry and the wish is passed to the planner as you wrote it.',
+      inLapland: 'If your venue has a sauna, the bridal sauna can be held on the evening before the wedding. Mention it in your enquiry and we will take it into account in our reply.',
     },
     'wedding-crashers': {
       title: 'Uninvited guests',
@@ -123,7 +123,7 @@ export const page: TraditionsPage = {
   },
   cta: {
     title: 'A Lapland wedding with your own traditions',
-    body: 'Tell us in your enquiry which traditions you would like to include, and we pass your wishes on to wedding planners who work in the region.',
+    body: 'Tell us in your enquiry which traditions you would like to include, and we will reply personally.',
     venues: 'See the venues',
     enquiry: 'Send a wedding enquiry',
   },
