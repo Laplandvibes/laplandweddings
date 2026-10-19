@@ -7,8 +7,9 @@ import compression from 'vite-plugin-compression2'
 
 // https://vite.dev/config/
 import { trailingSlashLinks } from "./src/shared/router/trailingSlashPlugin";
+import { cjkOtsikot } from "./src/shared/cjk/cjkOtsikotPlugin";
 export default defineConfig({
-  plugins: [trailingSlashLinks(), react(), tailwindcss(), compression({ algorithms: ['brotliCompress'], threshold: 1024 })],
+  plugins: [cjkOtsikot(), trailingSlashLinks(), react(), tailwindcss(), compression({ algorithms: ['brotliCompress'], threshold: 1024 })],
   resolve: {
     // Prevent duplicate React when importing from ../../shared (which has its own node_modules).
     // Without this, shared/CookieBanner + shared/Footer resolve React via shared/node_modules,
