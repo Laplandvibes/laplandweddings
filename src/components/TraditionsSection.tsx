@@ -1,7 +1,7 @@
 import { use } from 'react';
 import Section from './Section';
 import L from './L';
-import { CROPPED, licenseHref } from './ImgCredit';
+import { CROPPED, licenseHref, licenseLabel } from './ImgCredit';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
 import { HOME_SLUGS, TRADITION_IMAGES, loadTraditions } from '../data/traditions';
@@ -90,10 +90,10 @@ export default function TraditionsSection() {
                 {', '}
                 {deed ? (
                   <a href={deed} target="_blank" rel="license noopener noreferrer" className="underline underline-offset-2">
-                    {c.license}
+                    {licenseLabel(c.license, lang)}
                   </a>
                 ) : (
-                  c.license
+                  licenseLabel(c.license, lang)
                 )}
                 {c.cropped ? `, ${pickLocalized(CROPPED, lang)}` : ''})
               </span>

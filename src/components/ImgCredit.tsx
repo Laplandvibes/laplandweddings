@@ -46,6 +46,18 @@ export const EDITED: Localized<string> = {
   'zh-CN': '已调整', ko: '보정', fr: 'retouchée', it: 'modificata', nl: 'bewerkt', sv: 'bearbetad',
 };
 
+/** "Public domain" is a description, not a name: translated (gate:a11y-nimet, network
+    glossary 24.10.2026). CC licence names are names and stay as they are. */
+const PUBLIC_DOMAIN: Localized<string> = {
+  en: 'Public domain', fi: 'Tekijänoikeuksista vapaa', de: 'Gemeinfrei', ja: 'パブリックドメイン', es: 'Dominio público',
+  'pt-BR': 'Domínio público', 'zh-CN': '公有领域', ko: '퍼블릭 도메인', fr: 'Domaine public', it: 'Pubblico dominio',
+  nl: 'Publiek domein', sv: 'Allmän egendom',
+};
+
+export function licenseLabel(license: string, lang: keyof Localized<string>): string {
+  return /^public domain$/i.test(license.trim()) ? PUBLIC_DOMAIN[lang] || license : license;
+}
+
 export const CROPPED: Localized<string> = {
   en: 'cropped', fi: 'rajattu', de: 'zugeschnitten', ja: 'トリミング', es: 'recortada', 'pt-BR': 'recortada',
   'zh-CN': '已裁剪', ko: '자른 이미지', fr: 'recadrée', it: 'ritagliata', nl: 'bijgesneden', sv: 'beskuren',
@@ -82,7 +94,8 @@ export default function ImgCredit({ credit, lang, className, plain }: Props) {
   const cropped = [credit.cropped ? CROPPED[lang] || CROPPED.en : '', credit.edited ? EDITED[lang] || EDITED.en : '']
     .filter(Boolean)
     .join(', ');
-  const text = [caption, credit.name, credit.license, cropped].filter(Boolean).join(' · ');
+  const lic = licenseLabel(credit.license, lang);
+  const text = [caption, credit.name, lic, cropped].filter(Boolean).join(' · ');
   const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-[#fff] bg-black/55 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
   if (plain) return <span className={cls}>{text}</span>;
   const deed = licenseHref(credit);
@@ -108,10 +121,10 @@ export default function ImgCredit({ credit, lang, className, plain }: Props) {
           onClick={stop}
           className="text-inherit no-underline whitespace-nowrap hover:text-white"
         >
-          {credit.license}
+          {lic}
         </a>
       ) : (
-        credit.license
+        lic
       )}
       {cropped ? <span className="whitespace-nowrap">{' · '}{cropped}</span> : null}
     </span>
