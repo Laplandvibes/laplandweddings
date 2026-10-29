@@ -38,7 +38,7 @@ const t_fr = {
     typesTitle: 'De quel type de mariage rêvez-vous',
     locationsTitle: 'Choisissez votre coin de Laponie',
     newsletterTitle: 'Recevez les guides mariage Laponie par e-mail',
-    newsletterSub: 'Dans la lettre : lieux disponibles, conseils de saison et un guide PDF des démarches DVV. Nous écrivons seulement quand il y a quelque chose à raconter. Désinscription à tout moment.',
+    newsletterSub: "Des conseils pour comparer les lieux de mariage, organiser la journée et trouver les informations officielles sur le mariage. Désinscription à tout moment.",
     newsletterEmail: 'your-email@example.com',
     newsletterCta: 'Recevoir les conseils mariage',
   },

@@ -38,7 +38,7 @@ const t_ko = {
     typesTitle: '어떤 결혼식을 꿈꾸시나요',
     locationsTitle: '라플란드의 어디에서 결혼할까요',
     newsletterTitle: '라플란드 결혼 가이드를 이메일로',
-    newsletterSub: '레터에는 예약 가능한 예식장, 시즌 팁, DVV 서류 PDF 가이드가 담깁니다. 전할 소식이 있을 때만 씁니다. 언제든 해지할 수 있습니다.',
+    newsletterSub: "예식장 비교, 당일 일정 계획, 혼인 절차에 관한 공식 안내를 찾는 데 도움이 되는 정보를 보내드립니다. 언제든 구독을 취소할 수 있습니다.",
     newsletterEmail: 'your-email@example.com',
     newsletterCta: '웨딩 팁 받기',
   },

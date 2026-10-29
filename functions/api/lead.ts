@@ -308,7 +308,7 @@ export function buildQualificationEmail(f: {
   const budgetLabel = BUDGET_LABELS[f.budget] || '';
   const hasRegion = !!(regionLabel || f.venue);
   const hasGuests = !!f.guests.trim() && !/^0+$/.test(f.guests.trim());
-  const legalPlanned = /legal|virallinen|laillinen/i.test(f.ceremonyType);
+  const ceremonyKnown = /^(legal|symbolic)$/i.test(f.ceremonyType);
   const accomIncluded = /include/i.test(f.accommodation);
   const accomSeparate = /separate|booking/i.test(f.accommodation);
 
@@ -416,28 +416,20 @@ export function buildQualificationEmail(f: {
   }
 
   // 5) Legal vs symbolic.
-  questions.push(legalPlanned
-    ? {
-        full: li(
-          'A legally binding ceremony in Finland needs a bit of DVV paperwork (we guide you through it) — is legally-binding-in-Finland definitely the plan, or would a symbolic ceremony here plus the legal part at home also work?',
-          'Virallinen vihkiminen Suomessa vaatii hieman DVV-paperitöitä (autamme niissä) — onko virallinen vihkiminen Suomessa varma suunnitelma, vai kävisikö myös seremonia täällä ja viralliset paperit kotimaassa?',
-        ),
-        short: li('Ceremony (legal in Finland / symbolic)', 'Vihkiminen (virallinen Suomessa / seremonia)'),
-      }
-    : {
-        full: li(
-          'Would you like a legally binding ceremony in Finland (we guide you through the DVV paperwork), or a symbolic ceremony with the legal part done at home?',
-          'Haluaisitteko virallisen vihkimisen Suomessa (autamme DVV-paperitöissä) vai seremonian, jossa viralliset paperit hoidetaan kotimaassa?',
-        ),
-        short: li('Ceremony (legal in Finland / symbolic)', 'Vihkiminen (virallinen Suomessa / seremonia)'),
-      });
+  if (!ceremonyKnown) questions.push({
+    full: li(
+      'Would you like a legally binding ceremony in Finland or a symbolic celebration? For a legal ceremony, the official requirements must be checked with Finland’s Digital and Population Data Services Agency.',
+      'Haluatteko Suomessa laillisen vihkimisen vai symbolisen juhlahetken? Virallisen vihkimisen vaatimukset tarkistetaan Digi- ja väestötietovirastolta.',
+    ),
+    short: li('Ceremony: legal or symbolic', 'Vihkiminen: virallinen vai symbolinen'),
+  });
 
   // 6) Date firmness OR their story — whichever adds more.
   if (f.preferredDate) {
     questions.push({
       full: li(
-        `How firm is your date (${f.preferredDate}) — and roughly how many days will you stay in Lapland?`,
-        `Kuinka lukkoon lyöty ajankohtanne (${f.preferredDate}) on — ja suunnilleen kuinka monta päivää viivytte Lapissa?`,
+        f.flexibility ? 'How many days would you like to stay in Lapland?' : `How flexible is your date (${f.preferredDate}), and how many days would you like to stay?`,
+        f.flexibility ? 'Kuinka monta päivää haluaisitte viipyä Lapissa?' : `Joustaako ajankohtanne (${f.preferredDate}), ja kuinka monta päivää haluaisitte viipyä?`,
       ),
       short: li('Date firmness + length of stay', 'Ajankohdan varmuus + matkan kesto'),
     });
@@ -490,27 +482,18 @@ export function buildQualificationEmail(f: {
     ? li(`Hi ${f.firstName},`, `Hei ${f.firstName},`)
     : li('Hi,', 'Hei,');
 
-  const openerBits: string[] = [];
-  if (typeLabel) openerBits.push(typeLabel);
-  if (regionLabel) openerBits.push(li(`around ${regionLabel}`, `${regionLabel} -alueella`));
-  else if (f.venue) openerBits.push(li(`at ${f.venue}`, `${f.venue} -paikassa`));
-  const opener = openerBits.length
-    ? li(
-        `I read your enquiry — ${openerBits.join(', ')} sounds lovely, and we would be glad to help make it happen.`,
-        `Luin tiedustelunne — ${openerBits.join(', ')} kuulostaa ihanalta, ja autamme mielellämme sen toteuttamisessa.`,
-      )
-    : li(
-        'I read your enquiry, and we would be glad to help make your Lapland wedding happen.',
-        'Luin tiedustelunne, ja autamme mielellämme Lapin-häidenne toteuttamisessa.',
-      );
+  const opener = li(
+    'Thank you for telling us about your wedding plans. Your enquiry has arrived. This is an automatic acknowledgement; Vesa will read your message and reply personally.',
+    'Kiitos, että kerroitte hääsuunnitelmistanne. Viestinne on tullut perille. Tämä on automaattinen kuittaus. Vesa lukee viestinne ja vastaa henkilökohtaisesti.',
+  );
 
   const why = li(
-    'So that we can reply properly, a few quick questions. Short answers are perfectly fine:',
-    'Jotta osaamme vastata teille kunnolla, muutama nopea kysymys. Lyhyet vastaukset riittävät mainiosti:',
+    'A few details will help Vesa suggest suitable options. You can answer in your own words:',
+    'Muutama lisätieto auttaa Vesaa ehdottamaan sopivia vaihtoehtoja. Voitte vastata omin sanoin:',
   );
   const outro = li(
-    'Just hit reply. I read every answer myself and reply to you personally: which venues and services fit your plans, and who to contact.',
-    'Vastaa suoraan tähän viestiin. Luen jokaisen vastauksen itse ja vastaan teille henkilökohtaisesti: mitkä paikat ja palvelut sopivat toiveisiinne ja keneen kannattaa olla yhteydessä.',
+    'You can reply directly to this email. Vesa will review your wishes and help you compare venues and services. Prices, availability and bookings are agreed directly with the providers.',
+    'Voitte vastata suoraan tähän viestiin. Vesa käy toiveenne läpi ja auttaa vertailemaan paikkoja ja palveluja. Hinnat, saatavuus ja varaukset sovitaan suoraan palveluntarjoajien kanssa.',
   );
   // Expectation management (Vesa 2026-07-10): the service language is English
   // (+ Finnish): say it out loud so no one expects a reply in e.g. German.
@@ -570,7 +553,7 @@ info@laplandvibes.com · laplandweddings.online`;
           </ol>
           <!-- Ready-made answer sheet: one tap opens a pre-filled reply -->
           <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 8px"><tr>
-            <td style="border-radius:10px;background:#EC4899">
+            <td style="border-radius:10px;background:#BE185D">
               <a href="${mailtoHref}" style="display:inline-block;padding:13px 26px;font-size:15px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:10px">${esc(answerCta)} →</a>
             </td>
           </tr></table>
@@ -715,7 +698,7 @@ function renderLeadNotificationEmail(d: LeadEmailData): string {
 
         <!-- Quick CTA -->
         <tr><td style="padding:18px 32px 0">
-          <a href="mailto:${escapeHtml(d.email)}?subject=Re%3A%20Your%20Lapland%20wedding%20enquiry" style="display:inline-block;padding:12px 22px;background:#EC4899;color:#FFFFFF;text-decoration:none;border-radius:999px;font-size:14px;font-weight:700;letter-spacing:0.02em;box-shadow:0 4px 14px rgba(236,72,153,0.35)">→ Reply to ${escapeHtml(d.yourName.split(/\s+/)[0] || 'couple')}</a>
+          <a href="mailto:${escapeHtml(d.email)}?subject=Re%3A%20Your%20Lapland%20wedding%20enquiry" style="display:inline-block;padding:12px 22px;background:#BE185D;color:#FFFFFF;text-decoration:none;border-radius:999px;font-size:14px;font-weight:700;letter-spacing:0.02em;box-shadow:0 4px 14px rgba(236,72,153,0.35)">→ Reply to ${escapeHtml(d.yourName.split(/\s+/)[0] || 'couple')}</a>
         </td></tr>
 
         <!-- Wedding details -->
@@ -762,10 +745,10 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
 
   // Hero image — own brand asset hosted on our domain (JPG for broadest
   // mail-client support; never hotlink third-party photography).
-  const heroImage = 'https://laplandweddings.online/images/heroes/home-cover.jpg';
+  const heroImage = 'https://laplandweddings.online/images/heroes/couple-snow-trail-px19478687.jpg';
   const heroAlt = isFi
-    ? 'Hääpari Lapin lumimaisemassa, revontulet horisontissa'
-    : 'Wedding couple in a Lapland snowscape with the Northern Lights on the horizon';
+    ? 'Pari kävelee käsi kädessä lumisella metsätiellä'
+    : 'A couple walking hand in hand along a snowy forest path';
 
   const eyebrow = isFi ? 'Vahvistus tiedustelusta' : 'Enquiry confirmed';
   const heroLine = isFi
@@ -798,7 +781,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
       ];
 
   const networkLabel = isFi ? 'Finnish Lapland Network' : 'Finnish Lapland Network';
-  const networkTitle = isFi ? 'Suunnittele matkanne yhdellä brändillä' : 'Plan your whole trip under one brand';
+  const networkTitle = isFi ? 'Vinkkejä myös muuhun matkaanne' : 'Ideas for the rest of your trip';
   const networkP = isFi
     ? 'LaplandWeddings on osa LaplandVibes-verkostoa: majoitusta, aktiviteetteja, ravintoloita ja autovuokrausta teille ja vieraillenne.'
     : 'LaplandWeddings is part of the LaplandVibes network: lodging, activities, dining and car rental for you and your guests.';
@@ -833,6 +816,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LaplandWeddings</title>
+<style>table{table-layout:fixed}td,p,a{overflow-wrap:anywhere} @media(max-width:480px){td[width="50%"]{display:block!important;width:auto!important}td{word-wrap:break-word}}</style>
 </head>
 <body style="margin:0;padding:0;background:#0F172A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;color:#1F2937;">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#0F172A;padding:24px 12px">
@@ -847,7 +831,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
         </td></tr>
         <tr><td style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 50%,#7C2D5E 100%);padding:28px 32px 26px;color:#F8FAFC;text-align:center">
           <p style="margin:0 0 12px;font-size:11px;letter-spacing:0.3em;color:#EC4899;text-transform:uppercase;font-weight:700">${eyebrow}</p>
-          <p style="margin:0;font-size:30px;letter-spacing:0.05em;font-weight:700;line-height:1">
+          <p style="margin:0;font-size:22px;letter-spacing:0.02em;font-weight:700;line-height:1.2;white-space:nowrap">
             <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
           </p>
           <p style="margin:14px 0 0;font-size:14px;color:#CBD5E1;line-height:1.5">${heroLine}</p>
@@ -905,7 +889,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
               <p style="margin:0 0 6px;font-size:17px;font-weight:700;color:#F8FAFC;letter-spacing:-0.01em">${ctaTitle}</p>
               <p style="margin:0 0 16px;font-size:14px;color:#94A3B8;line-height:1.5">${ctaP}</p>
               <a href="https://laplandweddings.online/venues/"
-                 style="display:inline-block;padding:12px 26px;background:#EC4899;color:#FFFFFF;font-size:14px;font-weight:700;border-radius:999px;text-decoration:none;letter-spacing:0.02em;box-shadow:0 6px 18px rgba(236,72,153,0.45)">
+                 style="display:inline-block;padding:12px 26px;background:#BE185D;color:#FFFFFF;font-size:14px;font-weight:700;border-radius:999px;text-decoration:none;letter-spacing:0.02em;box-shadow:0 6px 18px rgba(236,72,153,0.45)">
                 ${ctaButton} →
               </a>
             </td></tr>

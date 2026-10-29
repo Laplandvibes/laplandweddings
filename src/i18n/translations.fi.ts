@@ -38,7 +38,7 @@ const t_fi = {
     typesTitle: 'Mistä häistä unelmoitte',
     locationsTitle: 'Mihin Lappiin',
     newsletterTitle: 'Saat sähköpostiisi Lapin hääaiheisia oppaita',
-    newsletterSub: 'Kirjeessä: avoimet venuet, sesonkivinkit ja PDF-opas DVV-papereista. Kirjoitamme vain, kun on kerrottavaa. Voit perua koska tahansa.',
+    newsletterSub: "Saat vinkkejä hääpaikkojen vertailuun, päivän suunnitteluun ja vihkimisen virallisten ohjeiden löytämiseen. Voit perua tilauksen koska tahansa.",
     newsletterEmail: 'sähköpostiosoite@example.com',
     newsletterCta: 'Tilaa häävinkit',
   },

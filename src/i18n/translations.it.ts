@@ -38,7 +38,7 @@ const t_it = {
     typesTitle: 'Che tipo di matrimonio sta sognando',
     locationsTitle: 'Scelga la Sua zona della Lapponia',
     newsletterTitle: 'Guide per matrimoni in Lapponia nella Sua casella',
-    newsletterSub: 'Nella lettera: location disponibili, consigli stagionali e una guida PDF alle pratiche DVV. Scriviamo solo quando c’è qualcosa da raccontare. Si disiscriva quando vuole.',
+    newsletterSub: "Consigli per confrontare le location, organizzare la giornata e trovare le informazioni ufficiali sul matrimonio. Può annullare l’iscrizione in qualsiasi momento.",
     newsletterEmail: 'nome@esempio.com',
     newsletterCta: 'Riceva i consigli per le nozze',
   },

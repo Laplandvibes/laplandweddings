@@ -1,3 +1,13 @@
+function newsletterEmailLabel(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  return ({fi:'Sähköpostiosoite',en:'Email address',de:'E-Mail-Adresse',es:'Correo electrónico',fr:'Adresse e-mail',it:'Indirizzo email',nl:'E-mailadres',sv:'E-postadress',ja:'メールアドレス',ko:'이메일 주소',pt:'Endereço de e-mail',zh:'电子邮箱'} as Record<string,string>)[lang] || 'Email address';
+}
+
+function newsletterLanguageNotice(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  const notes: Record<string, string> = {"fi":"Uutiskirjeet ovat suomeksi.","en":"Newsletters are in English.","de":"Die Newsletter werden auf Englisch versendet.","ja":"ニュースレターは英語でお届けします。","ko":"뉴스레터는 영어로 발송됩니다.","fr":"Les newsletters sont envoyées en anglais.","it":"Le newsletter sono inviate in inglese.","nl":"De nieuwsbrieven zijn in het Engels.","sv":"Nyhetsbreven skickas på engelska.","es":"Los boletines se envían en inglés.","pt":"As newsletters são enviadas em inglês.","zh":"订阅邮件以英语发送。"};
+  return notes[lang] || notes.en;
+}
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
@@ -222,8 +232,7 @@ export default function NewsletterSignup() {
           </div>
         ) : (
           <><FounderByline tone="pink" />
-          <form
-            onSubmit={submit}
+          <form style={{ background: '#0F172A', color: '#F9FAFB', padding: 16, borderRadius: 16 }} onSubmit={submit}
             // [LV-FUNNEL] required-kentät estävät submitin natiivisti ennen
             // submit-handleria — invalid-capture kertoo MIKÄ kenttä pysäytti.
             onInvalidCapture={(e) => {
@@ -236,7 +245,7 @@ export default function NewsletterSignup() {
             className="max-w-xl mx-auto"
           >
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <input
+              <label style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}><span>{newsletterEmailLabel()}</span><span style={{fontSize:13,lineHeight:1.5}}>{newsletterLanguageNotice()}</span><input autoComplete="email" style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
                 type="email"
                 required
                 value={email}
@@ -244,8 +253,8 @@ export default function NewsletterSignup() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={tr.home.newsletterEmail}
                 className="flex-1 min-h-[48px] rounded-full bg-night-light border border-white/10 focus:border-rose focus:ring-1 focus:ring-rose px-5 py-3 text-base text-white placeholder-gray-500 outline-none"
-              />
-              <button
+              /></label>
+              <button style={{ backgroundColor: '#BE185D', color: '#FFFFFF', alignSelf: 'end', minHeight: 48 }}
                 type="submit"
                 disabled={status === 'loading'}
                 className="inline-flex items-center justify-center min-h-[48px] px-6 py-3 bg-rose hover:bg-pink text-white font-semibold rounded-full disabled:opacity-60 shadow-lg shadow-rose/30"
@@ -253,7 +262,7 @@ export default function NewsletterSignup() {
                 {status === 'loading' ? '…' : tr.home.newsletterCta}
               </button>
             </div>
-            <label className="mt-3 sm:mt-4 flex items-start gap-3 text-left text-xs text-gray-400 leading-relaxed">
+            <label style={{color:"#F9FAFB"}} className="mt-3 sm:mt-4 flex items-start gap-3 text-left text-xs text-gray-400 leading-relaxed">
               <input
                 type="checkbox"
                 required
@@ -262,7 +271,7 @@ export default function NewsletterSignup() {
                 onChange={(e) => setConsented(e.target.checked)}
                 className="mt-0.5 w-4 h-4 flex-shrink-0 rounded border-white/20 bg-night-light text-rose focus:ring-rose"
               />
-              <span>
+              <span style={{color:"#F9FAFB"}}>
                 {consentText}{' '}
                 <L to="/privacy" className="text-rose underline underline-offset-2 hover:text-pink">
                   {pickLocalized(CONSENT_COPY.privacyLabel, lang)}

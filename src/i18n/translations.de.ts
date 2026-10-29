@@ -38,7 +38,7 @@ const t_de = {
     typesTitle: 'Wovon träumen Sie für Ihre Hochzeit',
     locationsTitle: 'Wählen Sie Ihre Lappland-Region',
     newsletterTitle: 'Lappland-Hochzeitsguides direkt in Ihr Postfach',
-    newsletterSub: 'Im Brief: freie Venues, Saisontipps und ein PDF-Leitfaden zu den DVV-Papieren. Wir schreiben nur, wenn es etwas zu erzählen gibt. Jederzeit kündbar.',
+    newsletterSub: "Tipps zum Vergleich von Hochzeitsorten, zur Tagesplanung und zu offiziellen Informationen über die Eheschließung. Jederzeit abbestellbar.",
     newsletterEmail: 'ihre-email@beispiel.de',
     newsletterCta: 'Hochzeitstipps erhalten',
   },

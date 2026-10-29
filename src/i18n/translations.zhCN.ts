@@ -38,7 +38,7 @@ const t_zhCN = {
     typesTitle: '您梦想中的是什么样的婚礼？',
     locationsTitle: '选择您的拉普兰目的地',
     newsletterTitle: '将拉普兰婚礼指南发送到您的邮箱',
-    newsletterSub: '信中内容：可预订场地、季节建议，以及 DVV 文件的 PDF 指南。只在有值得分享的内容时才会写信。可随时退订。',
+    newsletterSub: "提供婚礼场地比较、当天行程规划以及查找官方婚姻手续信息的建议。您可以随时退订。",
     newsletterEmail: 'your-email@example.com',
     newsletterCta: '订阅婚礼灵感',
   },

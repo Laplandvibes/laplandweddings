@@ -38,7 +38,7 @@ const t_es = {
     typesTitle: '¿Con qué tipo de boda sueña?',
     locationsTitle: 'Elija su rincón de Laponia',
     newsletterTitle: 'Reciba guías de bodas de Laponia en su correo',
-    newsletterSub: 'En la carta: espacios disponibles, consejos de temporada y una guía PDF del papeleo DVV. Escribimos solo cuando hay algo que contar. Puede darse de baja cuando quiera.',
+    newsletterSub: "Consejos para comparar lugares de boda, organizar el día y encontrar información oficial sobre el matrimonio. Puede darse de baja cuando quiera.",
     newsletterEmail: 'su-correo@example.com',
     newsletterCta: 'Recibir consejos de boda',
   },

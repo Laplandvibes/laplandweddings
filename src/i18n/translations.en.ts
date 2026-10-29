@@ -38,7 +38,7 @@ const t_en = {
     typesTitle: 'What kind of wedding are you dreaming of',
     locationsTitle: 'Pick your part of Lapland',
     newsletterTitle: 'Get Lapland wedding guides in your inbox',
-    newsletterSub: 'In the letter: open venues, seasonal tips and a PDF guide to the DVV paperwork. We write only when there\'s something worth telling. Unsubscribe any time.',
+    newsletterSub: "Tips for comparing wedding venues, planning the day and finding official marriage guidance. Unsubscribe any time.",
     newsletterEmail: 'your-email@example.com',
     newsletterCta: 'Get wedding tips',
   },

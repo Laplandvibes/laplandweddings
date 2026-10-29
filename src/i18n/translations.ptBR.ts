@@ -38,7 +38,7 @@ const t_ptBR = {
     typesTitle: 'Que tipo de casamento vocês sonham?',
     locationsTitle: 'Escolha seu canto da Lapônia',
     newsletterTitle: 'Receba guias de casamento da Lapônia no seu e-mail',
-    newsletterSub: 'Na carta: locais disponíveis, dicas de estação e um guia em PDF da papelada do DVV. Escrevemos só quando há algo para contar. Cancele quando quiser.',
+    newsletterSub: "Dicas para comparar locais de casamento, planejar o dia e encontrar orientações oficiais sobre o casamento. Cancele quando quiser.",
     newsletterEmail: 'seu-email@example.com',
     newsletterCta: 'Receber dicas de casamento',
   },

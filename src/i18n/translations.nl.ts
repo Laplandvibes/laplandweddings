@@ -38,7 +38,7 @@ const t_nl = {
     typesTitle: 'Wat voor bruiloft droomt u',
     locationsTitle: 'Kies uw deel van Lapland',
     newsletterTitle: 'Lapland-bruiloftsgidsen in uw inbox',
-    newsletterSub: 'In de brief: beschikbare venues, seizoenstips en een pdf-gids voor de DVV-papieren. We schrijven alleen als er iets te vertellen valt. Op elk moment opzegbaar.',
+    newsletterSub: "Tips om trouwlocaties te vergelijken, de dag te plannen en officiële informatie over trouwen te vinden. U kunt zich op elk moment afmelden.",
     newsletterEmail: 'your-email@example.com',
     newsletterCta: 'Ontvang trouwtips',
   },

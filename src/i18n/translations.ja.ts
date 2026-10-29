@@ -38,7 +38,7 @@ const t_ja = {
     typesTitle: 'どのような結婚式をお考えですか',
     locationsTitle: 'ラップランドのどのエリアで',
     newsletterTitle: 'ラップランド結婚式のガイドをメールでお届け',
-    newsletterSub: 'レターの内容：空きのある会場、季節のヒント、DVV書類のPDFガイド。お伝えすべきことがあるときだけお送りします。いつでも解除できます。',
+    newsletterSub: "結婚式場の比較、当日の計画、婚姻手続きに関する公的な情報の探し方をご紹介します。いつでも配信を停止できます。",
     newsletterEmail: 'your-email@example.com',
     newsletterCta: 'ウェディングのヒントを受け取る',
   },

@@ -38,7 +38,7 @@ const t_sv = {
     typesTitle: 'Vad för slags bröllop drömmer du om',
     locationsTitle: 'Välj din del av Lappland',
     newsletterTitle: 'Få Lapplands bröllopsguider i din inkorg',
-    newsletterSub: 'I brevet: lediga lokaler, säsongstips och en PDF-guide till DVV-pappren. Vi skriver bara när det finns något att berätta. Avsluta när du vill.',
+    newsletterSub: "Tips för att jämföra bröllopsplatser, planera dagen och hitta officiell information om vigsel. Avsluta när du vill.",
     newsletterEmail: 'din-epost@exempel.se',
     newsletterCta: 'Få bröllopstips',
   },
