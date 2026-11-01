@@ -65,7 +65,7 @@ export default function Navigation() {
         <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
           <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
           <div className="lv-wm-paikka">
-            <L to="/" className="lv-wm font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap inline-flex items-center min-h-11" data-lv-sanamerkki="" style={WM_STYLE} onClick={() => setOpen(false)}>
+            <L translate="no" to="/" className="notranslate lv-wm font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap inline-flex items-center min-h-11" data-lv-sanamerkki="" style={WM_STYLE} onClick={() => setOpen(false)}>
               <span style={{ color: '#F472B6' }}>#</span>
               <span style={{ color: '#FFFFFF' }}>LAPLAND</span>
               <span style={{ color: '#F472B6' }}>WEDDINGS</span>
