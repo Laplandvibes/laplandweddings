@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { Mail } from 'lucide-react';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
 import L from './L';
@@ -18,6 +19,12 @@ const NL_EMAIL_LABEL: Record<string, string> = {
   en: 'Email address', fi: 'Sähköpostiosoite', de: 'E-Mail-Adresse', ja: 'メールアドレス',
   es: 'Correo electrónico', pt: 'E-mail', zh: '电子邮箱', ko: '이메일 주소',
   fr: 'Adresse e-mail', it: 'Indirizzo e-mail', nl: 'E-mailadres', sv: 'E-postadress',
+};
+// Esimerkkiosoite kentän taustalle (4.11.2026): näyttää muodon, ei toista otsikkoa.
+const NL_EMAIL_EXAMPLE: Record<string, string> = {
+  en: 'name@example.com', fi: 'nimi@esimerkki.fi', de: 'name@beispiel.de', ja: 'name@example.com',
+  es: 'nombre@ejemplo.es', pt: 'nome@exemplo.com.br', zh: 'name@example.com', ko: 'name@example.com',
+  fr: 'nom@exemple.fr', it: 'nome@esempio.it', nl: 'naam@voorbeeld.nl', sv: 'namn@exempel.se',
 };
 const nlLang = (l?: string): string => {
   const x = (l || 'en').toLowerCase();
@@ -241,7 +248,10 @@ export default function NewsletterSignup() {
           </div>
         ) : (
           <><FounderByline tone="pink" />
-          <form style={{ background: '#0F172A', color: '#F9FAFB', padding: 16, borderRadius: 16 }} onSubmit={submit}
+          {/* 4.11.2026 (Vesa: kenttä "leijuu" eikä "anna esimerkkiä taustalle"): Codexin 28.10. tumma laatikko pois, otsikko kentän yllä, kenttä ja nappi samalla rivillä, esimerkkiosoite kentässä. */}
+          {/* 🔴 Pohja on tumma espresso (#1F1612 + läpikuultava ruusu/kulta), joten valkoinen teksti käy, mutta tumma
+              deep-night-nappi katoaisi siihen: nappi on sivuston oma rose-deep (#C9466A, valkoinen 4,6:1). */}
+          <form onSubmit={submit}
             // [LV-FUNNEL] required-kentät estävät submitin natiivisti ennen
             // submit-handleria — invalid-capture kertoo MIKÄ kenttä pysäytti.
             onInvalidCapture={(e) => {
@@ -251,28 +261,41 @@ export default function NewsletterSignup() {
               const t = e.target as HTMLInputElement;
               track('nl_blocked', { ...funnelData, reason: t.type === 'checkbox' ? 'consent' : 'email' });
             }}
-            className="max-w-xl mx-auto"
+            className="max-w-xl mx-auto text-left"
           >
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-              <div style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}><label htmlFor="nl-inline-email">{NL_EMAIL_LABEL[nlLang(lang)] ?? NL_EMAIL_LABEL.en}</label>{NL_LANG_NOTICE[nlLang(lang)] && <span id="nl-inline-email-lang" style={{fontSize:13,lineHeight:1.5}}>{NL_LANG_NOTICE[nlLang(lang)]}</span>}<input
-                id="nl-inline-email"
-                aria-describedby={NL_LANG_NOTICE[nlLang(lang)] ? 'nl-inline-email-lang' : undefined} autoComplete="email" style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
-                type="email"
-                required
-                value={email}
-                onFocus={trackStart}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 min-h-[48px] rounded-full bg-night-light border border-white/10 focus:border-rose focus:ring-1 focus:ring-rose px-5 py-3 text-base text-white placeholder-gray-500 outline-none"
-              /></div>
-              <button style={{ backgroundColor: '#BE185D', color: '#FFFFFF', alignSelf: 'end', minHeight: 48 }}
+            <label htmlFor="nl-inline-email" className="block text-white font-semibold text-sm mb-2">
+              {NL_EMAIL_LABEL[nlLang(lang)] ?? NL_EMAIL_LABEL.en}
+            </label>
+            {NL_LANG_NOTICE[nlLang(lang)] && (
+              <p id="nl-inline-email-lang" className="text-white text-[13px] leading-relaxed -mt-1 mb-2">
+                {NL_LANG_NOTICE[nlLang(lang)]}
+              </p>
+            )}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="relative flex-1 min-w-0">
+                <Mail aria-hidden className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 pointer-events-none" />
+                <input
+                  id="nl-inline-email"
+                  aria-describedby={NL_LANG_NOTICE[nlLang(lang)] ? 'nl-inline-email-lang' : undefined}
+                  autoComplete="email"
+                  type="email"
+                  required
+                  value={email}
+                  placeholder={NL_EMAIL_EXAMPLE[nlLang(lang)] ?? NL_EMAIL_EXAMPLE.en}
+                  onFocus={trackStart}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full h-14 bg-white text-slate-900 border border-white rounded-full pl-11 pr-4 text-base placeholder:text-slate-500 focus:outline-none focus:ring-4 focus:ring-white/40 transition-shadow"
+                />
+              </div>
+              <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="inline-flex items-center justify-center min-h-[48px] px-6 py-3 bg-rose hover:bg-pink text-white font-semibold rounded-full disabled:opacity-60 shadow-lg shadow-rose/30"
+                className="h-14 shrink-0 bg-rose-deep hover:bg-rose-ink text-white font-bold px-7 rounded-full shadow-lg shadow-rose/30 transition-colors text-base whitespace-nowrap inline-flex items-center justify-center gap-2 disabled:opacity-60"
               >
                 {status === 'loading' ? '…' : tr.home.newsletterCta}
               </button>
             </div>
-            <label style={{color:"#F9FAFB"}} className="mt-3 sm:mt-4 flex items-start gap-3 text-left text-xs text-gray-400 leading-relaxed">
+            <label className="mt-4 flex items-start gap-3 text-left text-xs text-white leading-relaxed">
               <input
                 type="checkbox"
                 required
@@ -281,9 +304,9 @@ export default function NewsletterSignup() {
                 onChange={(e) => setConsented(e.target.checked)}
                 className="mt-0.5 w-4 h-4 flex-shrink-0 rounded border-white/20 bg-night-light text-rose focus:ring-rose"
               />
-              <span style={{color:"#F9FAFB"}}>
+              <span>
                 {consentText}{' '}
-                <L to="/privacy" className="text-rose underline underline-offset-2 hover:text-pink">
+                <L to="/privacy" className="font-semibold text-white underline underline-offset-2">
                   {pickLocalized(CONSENT_COPY.privacyLabel, lang)}
                 </L>
               </span>
