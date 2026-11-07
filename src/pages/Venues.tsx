@@ -110,7 +110,7 @@ export default function Venues() {
       <Section>
         {/* Same statement as the home page carries, placed above the filters so
             it is read before the grid rather than after it. */}
-        <p className="text-center text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+        <p className="text-center max-lg:text-left text-gray-400 max-w-3xl mx-auto max-lg:w-fit leading-relaxed mb-8">
           {pickLocalized(P.independence, lang)}
         </p>
 

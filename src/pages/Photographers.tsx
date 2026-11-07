@@ -370,7 +370,7 @@ export default function Photographers() {
       <Section title={t('costTitle')}>
         <div className="max-w-3xl mx-auto">
           <p className="text-gray-300 leading-relaxed text-base sm:text-lg">{t('costBody')}</p>
-          <p className="mt-6">
+          <p className="mt-6 text-center lg:text-left">
             <L
               to="/pricing"
               className="inline-flex items-center px-6 py-3 border border-white/20 hover:bg-white/5 text-white rounded-full transition-colors"

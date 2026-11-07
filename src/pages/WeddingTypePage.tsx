@@ -64,7 +64,7 @@ export default function WeddingTypePage() {
         {/* The price-range box is gone (Vesa 2026-07-29): the figure was invented
             and said nothing useful at a 16x span. Money lives on the pricing
             page only, and this card now points there instead of quoting one. */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10 sm:max-lg:[&>:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>:last-child:nth-child(odd)]:w-[calc(50%-12px)]">
           <div className="bg-night-light/60 border border-white/5 rounded-2xl p-6">
             <p className="text-xs uppercase tracking-wider text-aurora-pink font-semibold mb-1">{tr.sections.season}</p>
             <p className="text-base text-white">{wt.bestSeason[dataLang]}</p>
@@ -114,7 +114,7 @@ export default function WeddingTypePage() {
             renderöidy mitään, ja venue-kortisto alla säilyy ennallaan. */}
         <FeaturedPartnerSlot placement="wedding_type_venues" locale={lang} />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:max-lg:[&>:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>:last-child:nth-child(odd)]:w-[calc(50%-10px)]">
           {venues.map((v) => (
             <VenueCard key={v.slug} venue={v} sid="wedding_type" />
           ))}

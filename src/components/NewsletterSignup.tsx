@@ -236,7 +236,7 @@ export default function NewsletterSignup() {
         <h3 className="font-heading text-2xl sm:text-3xl text-white mb-2.5 sm:mb-3 tracking-wide [text-wrap:balance]">
           {tr.home.newsletterTitle}
         </h3>
-        <p className="text-sm sm:text-base text-gray-300 mb-5 sm:mb-6 leading-relaxed">{tr.home.newsletterSub}</p>
+        <p className="text-sm sm:text-base text-gray-300 mb-5 sm:mb-6 leading-relaxed max-lg:mx-auto max-lg:w-fit max-lg:text-left">{tr.home.newsletterSub}</p>
         {status === 'ok' || status === 'already' ? (
           <div role="status">
             <p className="text-aurora-green font-semibold">

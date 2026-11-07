@@ -76,7 +76,7 @@ export default function TraditionsSection() {
         })}
       </div>
       {credited.length > 0 && (
-        <p className="max-w-4xl mx-auto mt-5 text-center text-base leading-relaxed text-gray-400 [text-wrap:pretty]">
+        <p className="max-w-4xl mx-auto max-lg:w-fit mt-5 text-center max-lg:text-left text-base leading-relaxed text-gray-400 [text-wrap:pretty]">
           {pickLocalized(PHOTOS, lang)}
           {credited.map(({ c, title }, i) => {
             const deed = licenseHref(c);

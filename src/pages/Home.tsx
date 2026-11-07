@@ -290,11 +290,11 @@ export default function Home() {
           colour is the warm gold of the aurora tokens; nothing else on the page uses it as a ground. */}
       <section className="py-10 sm:py-14" style={{ background: 'linear-gradient(135deg, #D4A574 0%, #C99B66 100%)' }}>
         <div className="max-w-7xl mx-auto px-5 sm:px-6">
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10">
-            <div className="flex-1 text-center md:text-left">
+          <div className="max-w-4xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
+            <div className="flex-1 text-center lg:text-left">
               <p className="uppercase tracking-[0.25em] text-[11px] sm:text-xs font-semibold mb-2" style={{ color: 'rgba(31,22,18,0.72)' }}>{tr.contact.formSub}</p>
               <h2 className="font-heading text-2xl sm:text-3xl tracking-wide mb-2 leading-tight" style={{ color: '#1F1612' }}>{tr.planners.threeQuotesTitle}</h2>
-              <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#2A1F18' }}>{tr.planners.threeQuotesP}</p>
+              <p className="text-sm sm:text-base leading-relaxed mx-auto w-fit max-w-2xl text-left lg:mx-0 lg:w-auto lg:max-w-none" style={{ color: '#2A1F18' }}>{tr.planners.threeQuotesP}</p>
             </div>
             <L
               to="/contact"
@@ -497,7 +497,7 @@ export default function Home() {
             </L>
           ))}
         </div>
-        <p className="text-center text-gray-400 mt-10 max-w-3xl mx-auto leading-relaxed text-base sm:text-lg">{tr.home.whyP}</p>
+        <p className="text-center max-lg:text-left text-gray-400 mt-10 max-w-3xl mx-auto max-lg:w-fit leading-relaxed text-base sm:text-lg">{tr.home.whyP}</p>
       </Section>
 
       {/* ── LV Media: kakkospääkumppani + 6 premium-paikkaa (tyhjät = house-adit).
@@ -547,7 +547,7 @@ export default function Home() {
         {/* Says the quiet part out loud, before the grid rather than in a
             footnote: this is a list, not a catalogue, and a couple who already
             has a venue in mind will not be steered somewhere else. */}
-        <p className="text-center text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10">
+        <p className="text-center max-lg:text-left text-gray-400 max-w-3xl mx-auto max-lg:w-fit leading-relaxed mb-8 sm:mb-10">
           {pick(lang, {
             fi: 'Nämä ovat Lapin tunnetuimmat paikat, joissa häitä vietetään. Emme edusta niitä emmekä järjestä häitä. Jos jokin paikka on jo mielessänne, kirjoittakaa se lomakkeeseen, niin otamme sen vastauksessa huomioon sellaisenaan.',
             en: 'These are the best-known places in Lapland where weddings are held. We do not represent them and we do not organise weddings. If you already have a venue in mind, write it in the form and we take it into account in our reply exactly as you gave it.',

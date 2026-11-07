@@ -100,7 +100,7 @@ export default function LocationPage() {
             renderöidy mitään, ja venue-kortisto alla säilyy ennallaan. */}
         <FeaturedPartnerSlot placement="location_venues" locale={lang} />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:max-lg:[&>:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>:last-child:nth-child(odd)]:w-[calc(50%-10px)]">
           {venues.map((v) => (
             <VenueCard key={v.slug} venue={v} sid="location" />
           ))}

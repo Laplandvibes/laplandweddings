@@ -28,7 +28,7 @@ export default function Section({ id, eyebrow, title, subtitle, titleAs: Title =
               </Title>
             )}
             {subtitle && (
-              <p className="text-[15px] sm:text-lg text-gray-400 leading-relaxed [text-wrap:pretty]">{subtitle}</p>
+              <p className="text-[15px] sm:text-lg text-gray-400 leading-relaxed [text-wrap:pretty] max-lg:mx-auto max-lg:w-fit max-lg:text-left">{subtitle}</p>
             )}
           </div>
         )}

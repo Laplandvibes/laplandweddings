@@ -265,8 +265,10 @@ export default function VenuePage() {
           <img src={v.image} alt={v.imageAlt[dataLang]} className="absolute inset-0 w-full h-full object-cover" loading="eager" fetchPriority="high" decoding="async" width="1920" height="1080" />
         </div>
         <div className="w-full max-w-6xl mx-auto px-5 sm:px-8 pt-6 sm:pt-8 pb-2 sm:pb-4">
-          <div className="max-w-3xl">
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+          {/* Below 1024 px the name, chips and buttons sit on the page's centre axis and the lead stays
+              left in a centred column (gate:tabletti 7.11.2026); the desktop keeps model C's left edge. */}
+          <div className="max-w-3xl mx-auto text-center lg:mx-0 lg:text-left">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-3 mb-3">
               {v.region[dataLang].split('·').map((part) => (
                 <span
                   key={part}
@@ -290,7 +292,7 @@ export default function VenuePage() {
               {v.name}
             </h1>
             <p
-              className="text-base sm:text-lg max-w-2xl leading-relaxed mb-6"
+              className="text-base sm:text-lg max-w-2xl leading-relaxed mb-6 mx-auto w-fit text-left lg:mx-0 lg:w-auto"
               style={{ color: '#FFFFFF' }}
             >
               {cardBlurb(v.description[dataLang], 220)}
@@ -298,10 +300,10 @@ export default function VenuePage() {
             {/* One line each, in every language (Vesa 2026-09-28): the long per-venue
                 sentences wrapped in de/it/es. The quote button uses the venue cards'
                 own short label, so the card and the page say the same thing. */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center lg:justify-start gap-3 max-w-sm sm:max-w-none mx-auto lg:mx-0">
               <a
                 href="#quote"
-                className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full whitespace-nowrap transition-colors"
+                className="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3 font-semibold rounded-full whitespace-nowrap transition-colors"
                 style={{ background: '#C9466A', color: '#FFFFFF', boxShadow: '0 8px 24px -4px rgba(201,70,106,0.5)' }}
               >
                 {vt('tailoredProposal')} →
@@ -317,7 +319,7 @@ export default function VenuePage() {
                 href={venueLodgingLink({ slug: v.slug, ...VENUE_BOOKING[v.slug], town: venueTown(v.slug) }, lang)}
                 target="_blank"
                 rel={AFFILIATE_REL}
-                className="inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full whitespace-nowrap transition-colors"
+                className="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3 font-semibold rounded-full whitespace-nowrap transition-colors"
                 style={{ color: '#FFFFFF', background: 'rgba(255,255,255,0.06)', border: '2px solid rgba(255,255,255,0.4)' }}
               >
                 {venueIsBookable(v.slug, lang)
@@ -334,7 +336,7 @@ export default function VenuePage() {
         {/* Google's verdict on this venue, on the page that is entirely about
             it. Renders nothing when the sync produced no certain match — the
             common case here (8 of 21 venues), and the fail-closed path. */}
-        <div className="max-w-6xl mx-auto mb-5">
+        <div className="max-w-6xl mx-auto mb-5 text-center lg:text-left">
           <GoogleRatingRow venue={v} tone="dark" />
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
@@ -387,7 +389,7 @@ export default function VenuePage() {
             <h2 className="font-heading text-3xl sm:text-4xl mb-4 tracking-wide" style={{ color: '#F5EBE0' }}>
               {vt('whatMakesSpecial').replace('{name}', v.name)}
             </h2>
-            <p className="text-base sm:text-lg leading-relaxed max-w-3xl mx-auto" style={{ color: '#C9B5A4' }}>
+            <p className="text-base sm:text-lg leading-relaxed max-w-3xl mx-auto max-lg:w-fit max-lg:text-left" style={{ color: '#C9B5A4' }}>
               {v.description[dataLang]}
             </p>
           </div>
@@ -460,7 +462,7 @@ export default function VenuePage() {
             <FeaturedPartnerSlot placement="venue_related" locale={lang} />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto sm:max-lg:[&>:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>:last-child:nth-child(odd)]:w-[calc(50%-10px)]">
             {siblings.map((sib) => (
               <VenueCard key={sib.slug} venue={sib} sid="venue_related" />
             ))}
