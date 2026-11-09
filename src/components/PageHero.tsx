@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from 'react';
 import PageBreadcrumb from './PageBreadcrumb';
 import ImgCredit, { type ImageCredit } from './ImgCredit';
 import type { Localized } from '../data/localized';
+import { erotinOsat } from '../shared/Erotin';
 
 export interface HeroVideo {
   /** VP9 webm, no audio, ≤ 2 MB, loops. */
@@ -145,11 +146,21 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
                 eyebrow that wraps gets one pill per line instead of a full-width stripe.
                 text-shadow does not count: it is not what sits behind the letters. */}
             <span
-              className="rounded-full px-2 py-0.5 box-decoration-clone"
+              className="hidden lg:inline rounded-full px-2 py-0.5 box-decoration-clone"
               style={{ backgroundColor: 'rgba(15,12,10,0.3)', boxShadow: '0 0 12px 4px rgba(15,12,10,0.3)' }}
             >
               {eyebrow}
             </span>
+            {erotinOsat(eyebrow).map((osa) => (
+              <span key={osa} className="block lg:hidden">
+                <span
+                  className="rounded-full px-2 py-0.5 box-decoration-clone"
+                  style={{ backgroundColor: 'rgba(15,12,10,0.3)', boxShadow: '0 0 12px 4px rgba(15,12,10,0.3)' }}
+                >
+                  {osa}
+                </span>
+              </span>
+            ))}
           </p>
         )}
         <h1

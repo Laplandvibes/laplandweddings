@@ -10,6 +10,7 @@ import { seasonal, type SeasonalImage } from '../data/season';
 import L from '../components/L';
 import { pickLocalized, type Localized } from '../data/localized';
 import { ui } from '../data/uiStrings';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 const P: Record<'imageAlt', Localized<string>> = {
   imageAlt: {
@@ -119,7 +120,7 @@ export default function Locations() {
                 <ImgCredit credit={locationImage(loc).credit} lang={lang} plain />
               </div>
               <div className="p-6">
-                <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
+                <Erotinrivi className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1" osat={erotinOsat(loc.region[dataLang])} />
                 <h3 className="font-heading text-2xl text-white mb-2 tracking-wide">{loc.name[dataLang]}</h3>
                 <p className="text-sm text-gray-400 leading-relaxed line-clamp-3 mb-3">{loc.intro[dataLang]}</p>
                 <div className="text-xs text-gray-500">

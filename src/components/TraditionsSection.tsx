@@ -1,10 +1,11 @@
-import { use } from 'react';
+import { use , Fragment } from 'react';
 import Section from './Section';
 import L from './L';
 import { CROPPED, licenseHref, licenseLabel } from './ImgCredit';
 import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
 import { HOME_SLUGS, TRADITION_IMAGES, loadTraditions } from '../data/traditions';
+import { Erotinrivi } from '../shared/Erotin';
 
 /** Label with its own punctuation: full-width colon in ja/zh, a space before it in fr. */
 const PHOTOS: Localized<string> = {
@@ -76,13 +77,12 @@ export default function TraditionsSection() {
         })}
       </div>
       {credited.length > 0 && (
-        <p className="max-w-4xl mx-auto max-lg:w-fit mt-5 text-center max-lg:text-left text-base leading-relaxed text-gray-400 [text-wrap:pretty]">
-          {pickLocalized(PHOTOS, lang)}
-          {credited.map(({ c, title }, i) => {
+        <p className="max-w-4xl mx-auto w-fit mt-5 text-left text-base leading-relaxed text-gray-400">
+          <Erotinrivi as="span" osat={credited.map(({ c, title }, i) => {
             const deed = licenseHref(c);
             return (
-              <span key={c.url}>
-                {i > 0 && ' · '}
+              <Fragment key={c.url}>
+                {i === 0 && pickLocalized(PHOTOS, lang)}
                 {title} (
                 <a href={c.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
                   {c.name}
@@ -96,9 +96,9 @@ export default function TraditionsSection() {
                   licenseLabel(c.license, lang)
                 )}
                 {c.cropped ? `, ${pickLocalized(CROPPED, lang)}` : ''})
-              </span>
+              </Fragment>
             );
-          })}
+          })} />
         </p>
       )}
       <div className="text-center mt-8 sm:mt-10">

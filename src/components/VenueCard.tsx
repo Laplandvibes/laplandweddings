@@ -3,6 +3,7 @@ import { useLang } from '../i18n/LangContext';
 import { pickLocalized, type Localized } from '../data/localized';
 import { cardBlurb } from '../lib/cardBlurb';
 import type { Venue } from '../data/venues';
+import { Erotinrivi, erotinOsat } from '../shared/Erotin';
 
 /**
  * One venue card, the same on every surface (front page, /venues, region,
@@ -52,9 +53,7 @@ export default function VenueCard({ venue: v, sid }: { venue: Venue; sid: string
         />
       </div>
       <div className="flex flex-col flex-1 px-5 pt-5 pb-5">
-        <p className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: 'var(--color-rose-ink)' }}>
-          {v.region[dataLang]}
-        </p>
+        <Erotinrivi className="text-xs uppercase tracking-wider font-semibold mb-1" style={{ color: 'var(--color-rose-ink)' }} osat={erotinOsat(v.region[dataLang])} />
         <h3 className="font-heading text-xl text-white mb-2 tracking-wide leading-tight">{v.name}</h3>
         <p className="text-sm text-gray-400 leading-relaxed">{cardBlurb(v.description[dataLang])}</p>
         <span

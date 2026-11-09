@@ -23,6 +23,7 @@ import { pickLocalized } from '../data/localized';
 import { AppPromoHero } from '../components/AppPromo';
 import { AURORA_VIDEO } from '../data/heroVideo';
 import ImgCredit, { type ImageCredit } from '../components/ImgCredit';
+import { Erotinrivi, erotinOsat, Pinorivi } from '../shared/Erotin';
 
 // Licensed stills for the seasonal hero (receipts: public/images/KUVALAHTEET.json).
 // Talvihero vaihdettu 26.9.2026: Räsäsen Levin revontulikuva oli laplandwellnessillä jo 17.9. Tämä on Pexels-kuva
@@ -160,7 +161,7 @@ export default function Home() {
             className="text-xs sm:text-sm tracking-wide"
             style={{ color: '#FBF6F0', opacity: 0.82, textShadow: '0 1px 10px rgba(0,0,0,0.55)' }}
           >
-            {tr.home.heroReassure}
+            <Pinorivi text={tr.home.heroReassure} />
           </p>
         </div>
       </PageHero>
@@ -272,7 +273,7 @@ export default function Home() {
                 className="absolute bottom-0 left-0 right-0 p-5 pt-14"
                 style={{ background: 'linear-gradient(to top, rgba(15,12,10,0.72) 0%, rgba(15,12,10,0.72) calc(100% - 3.5rem), rgba(15,12,10,0) 100%)' }}
               >
-                <p className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1">{loc.region[dataLang]}</p>
+                <Erotinrivi className="text-xs text-aurora-pink uppercase tracking-wider font-semibold mb-1" osat={erotinOsat(loc.region[dataLang])} />
                 <ImgCredit credit={locationImage(loc).credit} lang={lang} plain />
                 <h3 className="font-heading text-2xl text-white tracking-wide">{loc.name[dataLang]}</h3>
               </div>

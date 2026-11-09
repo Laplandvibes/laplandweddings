@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use , Fragment } from 'react';
 import PageHero from '../components/PageHero';
 import Section from '../components/Section';
 import SEO from '../components/SEO';
@@ -16,6 +16,7 @@ import {
   loadTraditions,
 } from '../data/traditions';
 import ImgCredit from '../components/ImgCredit';
+import { Erotinrivi } from '../shared/Erotin';
 
 /**
  * Below 1024 px the headings, labels and chips are centred, body text stays left
@@ -27,17 +28,14 @@ import ImgCredit from '../components/ImgCredit';
  */
 function SourceLine({ label, sources }: { label: string; sources: { label: string; url: string }[] }) {
   return (
-    <p className="mt-5 text-base leading-relaxed text-gray-400">
-      {label}:{' '}
-      {sources.map((s, i) => (
-        <span key={s.url}>
-          {i > 0 && ' · '}
-          <a href={s.url} target="_blank" rel="noopener" className="underline underline-offset-2">
-            {s.label}
-          </a>
-        </span>
-      ))}
-    </p>
+    <Erotinrivi className="mt-5 text-base leading-relaxed text-gray-400" osat={sources.map((s, i) => (
+      <Fragment key={s.url}>
+        {i === 0 && <>{label}:{' '}</>}
+        <a href={s.url} target="_blank" rel="noopener" className="underline underline-offset-2">
+          {s.label}
+        </a>
+      </Fragment>
+    ))} />
   );
 }
 

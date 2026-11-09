@@ -1,5 +1,6 @@
 import type { MouseEvent } from 'react';
 import type { Localized } from '../data/localized';
+import { Erotinrivi } from '../shared/Erotin';
 
 /**
  * Photo credit for a licensed stock image (Wikimedia Commons CC BY / CC BY-SA, Pexels).
@@ -95,38 +96,38 @@ export default function ImgCredit({ credit, lang, className, plain }: Props) {
     .filter(Boolean)
     .join(', ');
   const lic = licenseLabel(credit.license, lang);
-  const text = [caption, credit.name, lic, cropped].filter(Boolean).join(' · ');
   const cls = `absolute z-10 px-1 py-px text-[9px] leading-none text-[#fff] bg-black/55 no-underline rounded-sm ${className || 'bottom-0.5 right-0.5'}`;
-  if (plain) return <span className={cls}>{text}</span>;
+  if (plain) return <span className={cls}><Erotinrivi as="span" osat={[caption, credit.name, lic, cropped]} /></span>;
   const deed = licenseHref(credit);
   const stop = (e: MouseEvent) => e.stopPropagation();
   return (
     <span className={`${cls} hover:bg-black/60`}>
-      <a
-        href={credit.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={stop}
-        className="text-inherit no-underline hover:text-white"
-        aria-label={[caption, credit.name].filter(Boolean).join(', ')}
-      >
-        {[caption, credit.name].filter(Boolean).join(' · ')}
-      </a>
-      {' · '}
-      {deed ? (
+      <Erotinrivi as="span" osat={[
+        caption,
         <a
-          href={deed}
+          href={credit.url}
           target="_blank"
-          rel="license noopener noreferrer"
+          rel="noopener noreferrer"
           onClick={stop}
-          className="text-inherit no-underline whitespace-nowrap hover:text-white"
+          className="text-inherit no-underline hover:text-white"
         >
-          {lic}
-        </a>
-      ) : (
-        lic
-      )}
-      {cropped ? <span className="whitespace-nowrap">{' · '}{cropped}</span> : null}
+          {credit.name}
+        </a>,
+        deed ? (
+          <a
+            href={deed}
+            target="_blank"
+            rel="license noopener noreferrer"
+            onClick={stop}
+            className="text-inherit no-underline whitespace-nowrap hover:text-white"
+          >
+            {lic}
+          </a>
+        ) : (
+          lic
+        ),
+        cropped ? <span className="whitespace-nowrap">{cropped}</span> : null,
+      ]} />
     </span>
   );
 }
