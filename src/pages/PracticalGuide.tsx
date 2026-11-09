@@ -989,7 +989,7 @@ export default function PracticalGuide() {
             <p className="text-xs uppercase tracking-[0.25em] text-aurora-pink font-semibold mb-1">{pl(UI.downloadEyebrow)}</p>
             <p className="text-white font-semibold text-lg mb-1">{pl(UI.downloadTitle)}</p>
             {/* gray-300 (stone #5A4F48) not gray-400 (#8B7E73, 3.7:1) on ivory — AA */}
-            <p className="text-sm text-gray-300">{pl(UI.downloadDesc)}</p>
+            <p className="text-sm text-gray-300 max-sm:mx-auto max-sm:w-fit max-sm:text-left">{pl(UI.downloadDesc)}</p>
           </div>
           <L
             to="/checklist/dvv-foreign-couples"
@@ -1132,7 +1132,7 @@ export default function PracticalGuide() {
 
       <Section className="bg-night-light/20" title={pl(UI.carTitle)}>
         <div className="max-w-3xl mx-auto bg-night-light/60 border border-white/5 rounded-2xl p-7 text-center">
-          <p className="text-gray-300 leading-relaxed mb-5">{pl(UI.carBody)}</p>
+          <p className="text-gray-300 leading-relaxed mb-5 max-lg:mx-auto max-lg:w-fit max-lg:text-left">{pl(UI.carBody)}</p>
           <a
             href={carRentalLink()}
             target="_blank"

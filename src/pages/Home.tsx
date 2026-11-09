@@ -484,7 +484,9 @@ export default function Home() {
             /* The display token sits in a fixed-height box so the labels and
                body copy start on the same line in all three cards regardless of
                how tall the token renders in a given language. */
-            /* Number and label centred in the tile (lv_permanent_rules §42, Vesa 17.10.2026). */
+            /* Number and label centred in the tile (lv_permanent_rules §42, Vesa 17.10.2026). The body is two
+               sentences of running text: below 1024 px it (and a CTA that wraps) starts from one edge inside the centred tile
+               (gate:tabletti laaja 9.11.2026, "tekstilaatikko ei ole pystykortti"). Desktop unchanged. */
             <L key={stat.label} to={stat.to} className="group bg-night-light hover:bg-night-light/70 p-7 sm:p-8 lg:p-9 flex flex-col items-center text-center transition-colors">
               <p className="font-heading text-[44px] sm:text-5xl lg:text-[52px] leading-none text-rose tracking-wide min-h-[52px] sm:min-h-[48px] lg:min-h-[52px] flex items-end justify-center">
                 {stat.stat}
@@ -492,8 +494,8 @@ export default function Home() {
               <p className="text-[11px] sm:text-xs uppercase tracking-[0.16em] text-aurora-pink font-semibold mt-3.5 mb-3 leading-snug [text-wrap:balance]">
                 {stat.label}
               </p>
-              <p className="text-sm text-gray-300 leading-[1.7] max-w-[34ch] [text-wrap:balance]">{stat.body}</p>
-              <p className="mt-auto pt-5 text-sm font-semibold underline underline-offset-4 group-hover:opacity-80 transition-opacity" style={{ color: 'var(--color-rose-ink)' }}>{stat.cta} →</p>
+              <p className="text-sm text-gray-300 leading-[1.7] max-w-[34ch] [text-wrap:balance] max-lg:text-left">{stat.body}</p>
+              <p className="mt-auto pt-5 text-sm font-semibold underline underline-offset-4 group-hover:opacity-80 transition-opacity max-lg:text-left" style={{ color: 'var(--color-rose-ink)' }}>{stat.cta}{'\u00A0'}→</p>
             </L>
           ))}
         </div>

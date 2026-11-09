@@ -78,7 +78,7 @@ export default function WeddingTypePage() {
             <p className="text-base text-rose">{tr.cta.learnMore} →</p>
           </L>
         </div>
-        <p className="text-gray-300 leading-relaxed text-base sm:text-lg max-w-3xl mx-auto">{wt.description[dataLang]}</p>
+        <p className="text-gray-300 leading-relaxed text-base sm:text-lg max-w-3xl mx-auto max-lg:w-fit max-lg:text-left">{wt.description[dataLang]}</p>
       </Section>
 
       <Section className="bg-night-light/20">

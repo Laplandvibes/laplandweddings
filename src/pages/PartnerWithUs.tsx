@@ -813,12 +813,12 @@ export default function PartnerWithUs() {
                   <Icon className="w-5 h-5 text-gold" strokeWidth={1.5} aria-hidden="true" />
                 </span>
                 <p className="font-heading text-3xl text-white mb-2 tracking-wide">{pickLocalized(data.stat, lang)}</p>
-                <p className="text-sm text-gray-300 leading-relaxed">{label}</p>
+                <p className="text-sm text-gray-300 leading-relaxed max-lg:mx-auto max-lg:w-fit max-lg:text-left">{label}</p>
               </div>
             );
           })}
         </div>
-        <p className="text-sm text-gray-400 leading-relaxed text-center max-w-2xl mx-auto mt-7">
+        <p className="text-sm text-gray-400 leading-relaxed text-center max-w-2xl mx-auto max-lg:w-fit max-lg:text-left mt-7">
           {c('conceptFooter')}
         </p>
       </Section>
@@ -858,7 +858,7 @@ export default function PartnerWithUs() {
                 {step.n}
               </div>
               <h3 className="font-heading text-xl text-white tracking-wide mb-2">{pickLocalized(step.title, lang)}</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">{pickLocalized(step.body, lang)}</p>
+              <p className="text-sm text-gray-300 leading-relaxed max-sm:mx-auto max-sm:w-fit max-sm:text-left">{pickLocalized(step.body, lang)}</p>
             </div>
           ))}
         </div>
@@ -887,7 +887,7 @@ export default function PartnerWithUs() {
             </p>
           </article>
         </div>
-        <p className="text-sm text-gray-400 leading-relaxed text-center max-w-2xl mx-auto mt-6">
+        <p className="text-sm text-gray-400 leading-relaxed text-center max-w-2xl mx-auto max-lg:w-fit max-lg:text-left mt-6">
           {c('priceFooter')}
         </p>
       </Section>

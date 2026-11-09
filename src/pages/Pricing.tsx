@@ -623,7 +623,7 @@ export default function Pricing() {
             ),
           )}
         </div>
-        <p className="text-sm text-gray-400 leading-[1.7] max-w-3xl mx-auto mt-8 text-center">
+        <p className="text-sm text-gray-400 leading-[1.7] max-w-3xl mx-auto mt-8 text-center max-lg:w-fit max-lg:text-left">
           {p('elopementCrossRef')}{' '}
           <L to="/wedding-types/elopement" className="text-rose underline underline-offset-4">
             {p('elopementCrossRefLink')}
@@ -677,7 +677,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="max-w-3xl mx-auto text-center text-base leading-relaxed text-gray-400 mt-6 [text-wrap:pretty]">
+        <p className="max-w-3xl mx-auto text-center max-lg:w-fit max-lg:text-left text-base leading-relaxed text-gray-400 mt-6 [text-wrap:pretty]">
           {p('pricesChecked').replace('{d}', PRICE_VERIFIED_DISPLAY[lang])}
         </p>
 
@@ -694,7 +694,7 @@ export default function Pricing() {
           <p className="text-xs uppercase tracking-[0.2em] text-aurora-pink font-semibold mb-3 text-center">
             {p('quoteOnlyTitle')}
           </p>
-          <p className="text-sm text-gray-300 leading-[1.7] text-center mb-5">{p('quoteOnlyBody')}</p>
+          <p className="text-sm text-gray-300 leading-[1.7] text-center max-lg:mx-auto max-lg:w-fit max-lg:text-left mb-5">{p('quoteOnlyBody')}</p>
           <ul className="flex flex-wrap justify-center gap-2">
             {quotationOnly.map((q) => (
               <li
@@ -716,7 +716,7 @@ export default function Pricing() {
           <h3 className="font-heading text-2xl sm:text-3xl text-white tracking-wide mb-3 leading-tight">
             {p('ctaTitle')}
           </h3>
-          <p className="text-base text-gray-300 leading-relaxed mb-6 max-w-xl mx-auto">
+          <p className="text-base text-gray-300 leading-relaxed mb-6 max-w-xl mx-auto max-lg:w-fit max-lg:text-left">
             {p('ctaBody')}
           </p>
           <a

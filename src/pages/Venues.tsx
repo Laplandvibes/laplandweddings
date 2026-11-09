@@ -148,7 +148,8 @@ export default function Venues() {
         {filtered.length === 0 ? (
           <p className="text-center text-gray-400 py-12">{tr.venues.noResults}</p>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          /* Kahdessa sarakkeessa (640–1023 px) pariton viimeinen kortti keskelle muiden levyisenä (9.11.2026). */
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_10px)]">
             {filtered.map((v) => (
               <VenueCard key={v.slug} venue={v} sid="venues" />
             ))}

@@ -164,14 +164,15 @@ export default function Traditions() {
           <h2 className="font-heading text-2xl sm:text-3xl tracking-wide leading-tight mb-3" style={{ color: '#1F1612' }}>
             {page.cta.title}
           </h2>
-          <p className="text-base leading-relaxed mb-6 max-w-xl mx-auto [text-wrap:pretty]" style={{ color: '#5A4F48' }}>
+          <p className="text-base leading-relaxed mb-6 max-w-xl mx-auto max-lg:w-fit max-lg:text-left [text-wrap:pretty]" style={{ color: '#5A4F48' }}>
             {page.cta.body}
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          {/* Puhelimella (alle 640 px) napit pinossa saman levyisinä (9.11.2026). */}
+          <div className="flex flex-col items-stretch gap-3 max-w-sm mx-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
             <L
               to="/contact#quote"
               data-umami-event="cta_traditions_enquiry"
-              className="inline-flex items-center px-6 py-3 rounded-full font-semibold whitespace-nowrap"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold whitespace-nowrap"
               style={{ color: '#FFFFFF', background: '#C9466A' }}
             >
               {page.cta.enquiry} →
@@ -179,7 +180,7 @@ export default function Traditions() {
             <L
               to="/venues"
               data-umami-event="cta_traditions_venues"
-              className="inline-flex items-center px-6 py-3 rounded-full font-semibold whitespace-nowrap border-2"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold whitespace-nowrap border-2"
               style={{ color: '#1F1612', borderColor: 'rgba(31,22,18,0.25)' }}
             >
               {page.cta.venues} →

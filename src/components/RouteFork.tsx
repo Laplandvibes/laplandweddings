@@ -20,7 +20,9 @@ export default function RouteFork({ lang, symbolicTitle, legalTitle, seeVenues }
   const chip = 'flex items-center gap-2 text-sm text-gray-200';
   return (
     <div className="max-w-4xl mx-auto mb-8">
-      <p className="mx-auto max-w-xl text-center font-heading text-xl sm:text-2xl tracking-wide text-white bg-night-light/20 border border-white/10 rounded-2xl px-5 py-4">
+      {/* Alle 1024 px laatikko halaa tekstiä (yksirivinen kysymys pysyy keskellä), rivittyvä kysymys alkaa yhdestä
+          reunasta (ja 360 px: 3 riviä keskitettynä, gate:tabletti laaja 9.11.2026). Työpöytä ennallaan. */}
+      <p className="mx-auto max-w-xl text-center max-lg:w-fit max-lg:text-left font-heading text-xl sm:text-2xl tracking-wide text-white bg-night-light/20 border border-white/10 rounded-2xl px-5 py-4">
         {p('forkQuestion')}
       </p>
       {/* fork lines, decorative */}
