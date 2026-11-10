@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { Fragment, useEffect, useState, type ReactNode } from 'react';
 import PageBreadcrumb from './PageBreadcrumb';
 import ImgCredit, { type ImageCredit } from './ImgCredit';
 import type { Localized } from '../data/localized';
@@ -151,15 +151,19 @@ export default function PageHero({ eyebrow, title, subtitle, image, imageAlt, av
             >
               {eyebrow}
             </span>
-            {erotinOsat(eyebrow).map((osa) => (
-              <span key={osa} className="block lg:hidden">
+            {/* Alle 1024 px osat allekkain ilman pistettä. Osa on rivielementti ja rivit erottaa <br>, ei
+                lohkoelementti: lohkon rivilaatikko on koko palstan levyinen, jolloin pillerin ulkopuolinen kuva
+                laski heroteksti-portin mittaaman kontrastin 4,07:1:een (/wedding-types/snow-chapel/, 10.11.2026). */}
+            {erotinOsat(eyebrow).map((osa, k) => (
+              <Fragment key={osa}>
+                {k > 0 && <br className="lg:hidden" />}
                 <span
-                  className="rounded-full px-2 py-0.5 box-decoration-clone"
+                  className="lg:hidden rounded-full px-2 py-0.5 box-decoration-clone"
                   style={{ backgroundColor: 'rgba(15,12,10,0.3)', boxShadow: '0 0 12px 4px rgba(15,12,10,0.3)' }}
                 >
                   {osa}
                 </span>
-              </span>
+              </Fragment>
             ))}
           </p>
         )}
