@@ -205,9 +205,9 @@ function extendFromTranslations(path, lang, current) {
 // Title and description: src/lib/staticMeta.mjs, the same object the pages render in the browser
 // (5.10.2026; until then this table was a hand-kept copy that had drifted on 78 of 108 pages).
 const top = {
-  '/': { ...STATIC_META['/'], image: '/og.jpg?v=d20d8a53' },
+  '/': { ...STATIC_META['/'], image: '/og.jpg?v=2fe91594' },
   '/locations': { ...STATIC_META['/locations'], image: '/images/heroes/rovaniemi-jatkankynttila-june-andrew.jpg' },
-  '/wedding-types': { ...STATIC_META['/wedding-types'], image: '/og.jpg?v=d20d8a53' },
+  '/wedding-types': { ...STATIC_META['/wedding-types'], image: '/og.jpg?v=2fe91594' },
   '/venues': { ...STATIC_META['/venues'], image: '/images/heroes/levi-ice-castle-corridor.jpg' },
   '/photographers': { ...STATIC_META['/photographers'], image: '/images/heroes/inari-midnight-sun-pier-teker.jpg' },
   '/practical-guide': { ...STATIC_META['/practical-guide'], image: '/images/heroes/couple-snow-trail-px19478687.jpg' },
@@ -215,9 +215,9 @@ const top = {
   '/pricing': { ...STATIC_META['/pricing'], image: '/images/venues/lapland-hotels-saaga.jpg' },
   '/traditions': { ...STATIC_META['/traditions'], image: '/images/traditions/traditions-og.jpg' },
   '/checklist/dvv-foreign-couples': { ...STATIC_META['/checklist/dvv-foreign-couples'], image: '/images/venues/wilderness-hotel-inari.jpg' },
-  '/privacy': { ...LEGAL_META['/privacy'], image: '/og.jpg?v=d20d8a53' },
-  '/terms': { ...LEGAL_META['/terms'], image: '/og.jpg?v=d20d8a53' },
-  '/cookie-policy': { ...LEGAL_META['/cookie-policy'], image: '/og.jpg?v=d20d8a53' },
+  '/privacy': { ...LEGAL_META['/privacy'], image: '/og.jpg?v=2fe91594' },
+  '/terms': { ...LEGAL_META['/terms'], image: '/og.jpg?v=2fe91594' },
+  '/cookie-policy': { ...LEGAL_META['/cookie-policy'], image: '/og.jpg?v=2fe91594' },
 };
 
 // Rekisterisivujen reitit ja kuvat. Nimet (locations.name, types.name, venues.region) tulevat kaikilla 12
