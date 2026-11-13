@@ -98,6 +98,32 @@ function injectInLanguage(node: unknown, bcp47: string): unknown {
   return node;
 }
 
+// Rakenteisen datan sisäiset osoitteet samaan muotoon kuin kanoninen, hreflang ja sivukartta:
+// sivun OMA kieliversio ja loppukauttaviiva. Sivujen schema-oliot on kirjoitettu englannin
+// kauttaviivattomilla osoitteilla (https://laplandweddings.online/locations/rovaniemi), jolloin esim.
+// /fi/locations/ kertoi Googlelle paikkalistansa osoitteiksi englanninkielisten sivujen 308-ohjautuvat muodot.
+// Mitattu 12.–13.11.2026, mittari lv-ops scripts/audit_jsonld_osoitteet.mjs.
+// - polullinen osoite -> kieliversio + kauttaviiva (/fi/locations/rovaniemi/)
+// - juuri -> https://laplandweddings.online/ ; murupolun item saisi kielijuuren (/fi/)
+// - tiedostot (.jpg), ankkurit (#org) ja ulkoiset osoitteet jäävät ennalleen
+const INTERNAL_URL = /^https:\/\/laplandweddings\.online((?:\/[A-Za-z0-9_-]+)*)\/?$/;
+function localizeUrls(node: unknown, lang: Lang, key = ''): unknown {
+  if (typeof node === 'string') {
+    const m = INTERNAL_URL.exec(node);
+    if (!m) return node;
+    const path = m[1] || '/';
+    if (path === '/' && key !== 'item') return `${SITE}/`;
+    return buildUrl(path, lang);
+  }
+  if (Array.isArray(node)) return node.map((n) => localizeUrls(n, lang, key));
+  if (node && typeof node === 'object') {
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(node as Record<string, unknown>)) out[k] = localizeUrls(v, lang, k);
+    return out;
+  }
+  return node;
+}
+
 export default function SEO({ title, description, path, image, type = 'website', jsonLd, noindex }: SEOProps) {
   const { lang } = useLang();
   const bcp47 = BCP47[lang];
@@ -109,7 +135,7 @@ export default function SEO({ title, description, path, image, type = 'website',
   // <head>) so it lands in the prerendered static HTML — a useEffect injection
   // does not run during SSG/prerender.
   const localizedSchema = jsonLd
-    ? (injectInLanguage(JSON.parse(JSON.stringify(jsonLd)), bcp47) as object)
+    ? (localizeUrls(injectInLanguage(JSON.parse(JSON.stringify(jsonLd)), bcp47), lang) as object)
     : null;
 
   useEffect(() => {
