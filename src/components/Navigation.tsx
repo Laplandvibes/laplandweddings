@@ -70,9 +70,9 @@ export default function Navigation() {
               {/* VIRALLINEN sanamerkki (Vesa 14.11.2026; yläpalkki 15.11.2026 "sama leveys kuin nyt"): piirros ./lvSanamerkki.ts,
                   leveys = entisen tekstin leveys, osat perivät entiset värinsä (currentColor). Teksti ruudunlukijalle ja hakukoneelle. */}
               <svg viewBox={LV_SANAMERKKI.viewBox} aria-hidden="true" focusable="false" style={{ width: `${LV_SANAMERKKI.leveysEm}em`, height: 'auto', display: 'inline-block', verticalAlign: 'middle', overflow: 'visible' }}>
-                <path style={{ color: '#F472B6' }} fill="currentColor" d={LV_SANAMERKKI.d[0]} />
-                <path style={{ color: '#FFFFFF' }} fill="currentColor" d={LV_SANAMERKKI.d[1]} />
-                <path style={{ color: '#F472B6' }} fill="currentColor" d={LV_SANAMERKKI.d[2]} />
+                <path style={{ color: '#F472B6' }} fill="currentColor" fillRule="evenodd" d={LV_SANAMERKKI.d[0]} />
+                <path style={{ color: '#FFFFFF' }} fill="currentColor" fillRule="evenodd" d={LV_SANAMERKKI.d[1]} />
+                <path style={{ color: '#F472B6' }} fill="currentColor" fillRule="evenodd" d={LV_SANAMERKKI.d[2]} />
               </svg>
               <span className="sr-only">#LAPLANDWEDDINGS</span>
             </L>
