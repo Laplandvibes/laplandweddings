@@ -1,9 +1,9 @@
 {
-  "version": "a3bfd28f",
+  "version": "f6fbe936",
   "domain": "laplandweddings.online",
   "brand": "WEDDINGS",
   "tagline": "Arctic venues and marriage paperwork",
-  "generated": "2026-11-15T16:54:30.393Z",
+  "generated": "2026-11-15T17:04:51.754Z",
   "staticFallbackSeason": "winter",
   "seasons": {
     "summer": {
@@ -11,8 +11,8 @@
       "heroUrl": "https://laplandweddings.online/images/heroes/midnight-sun-inari-teker-1200.avif?v=1896c1b3",
       "heroAlt": "The midnight sun over Lake Inari around midsummer",
       "heroSha": "1896c1b390217ab4",
-      "bytes": 90528,
-      "sha256": "c616ee9296208e227e5b3ffe8144bde821a80d8e01495a72ed6f38196d9d9d2c",
+      "bytes": 90589,
+      "sha256": "48aac8abca24a74c0edb20230bb218636062f3e876fe1e61a750ebbbcc096077",
       "bandH": 168,
       "photoPct": 73.3,
       "ink": 23742,
@@ -53,8 +53,8 @@
       "heroUrl": "https://laplandweddings.online/images/heroes/aurora-fell-davis-1200.avif?v=c88b84ac",
       "heroAlt": "Northern lights over dark, snowy fells on a winter night",
       "heroSha": "c88b84acf2a97d38",
-      "bytes": 47012,
-      "sha256": "31005902aa4ca80917c4e3ffd781e41b1ab2b70e58f40bbf00a9397af78e69cf",
+      "bytes": 47073,
+      "sha256": "3a52c39b166bc69ed3642a77cdf7fc97e0feec781044eabf6cf9115f6f910cd4",
       "bandH": 168,
       "photoPct": 73.3,
       "ink": 23956,
