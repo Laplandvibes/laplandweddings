@@ -117,7 +117,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;background:#FFFFFF;border:1px solid #E6E1D8;border-radius:14px;overflow:hidden">
         <tr><td style="padding:24px 30px 18px;border-bottom:1px solid #EFEAE1">
           <p style="margin:0 0 12px;font-size:14px;font-weight:800;letter-spacing:0.04em">
-            <span style="color:#EC4899">#</span><span style="color:#1F1612">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
+            <img src="https://laplandvibes.com/brand/email/laplandweddings-vaalealle.png?v=20261115" width="126" height="13" alt="#LAPLANDWEDDINGS" style="display:inline-block;vertical-align:middle;border:0;outline:none;text-decoration:none;width:126px;height:13px;color:#EC4899;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;">
           </p>
           <p style="margin:0;font-size:11px;letter-spacing:0.22em;color:#EC4899;font-weight:700;text-transform:uppercase">Partner application</p>
           <p style="margin:8px 0 3px;font-size:23px;font-weight:800;color:#1F1612;letter-spacing:0.01em">${escapeHtml(businessName)}</p>

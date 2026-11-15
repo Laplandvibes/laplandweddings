@@ -49,7 +49,7 @@ function welcomeHtml(lang: string, firstName: string): string {
     <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background:#FFFFFF;border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.4)">
       <tr><td style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 50%,#7C2D5E 100%);padding:38px 32px 30px;color:#F8FAFC;text-align:center">
         <p style="margin:0;font-size:30px;letter-spacing:0.05em;font-weight:700">
-          <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
+          <img src="https://laplandvibes.com/brand/email/laplandweddings-tummalle.png?v=20261115" width="252" height="26" alt="#LAPLANDWEDDINGS" style="display:inline-block;vertical-align:middle;border:0;outline:none;text-decoration:none;width:252px;height:26px;color:#EC4899;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;">
         </p>
         <p style="margin:14px 0 0;font-size:12px;letter-spacing:0.3em;color:#EC4899;text-transform:uppercase;font-weight:600">DVV-tarkistuslista on valmis</p>
       </td></tr>
@@ -70,7 +70,7 @@ function welcomeHtml(lang: string, firstName: string): string {
     <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;background:#FFFFFF;border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.4)">
       <tr><td style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 50%,#7C2D5E 100%);padding:38px 32px 30px;color:#F8FAFC;text-align:center">
         <p style="margin:0;font-size:30px;letter-spacing:0.05em;font-weight:700">
-          <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
+          <img src="https://laplandvibes.com/brand/email/laplandweddings-tummalle.png?v=20261115" width="252" height="26" alt="#LAPLANDWEDDINGS" style="display:inline-block;vertical-align:middle;border:0;outline:none;text-decoration:none;width:252px;height:26px;color:#EC4899;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;">
         </p>
         <p style="margin:14px 0 0;font-size:12px;letter-spacing:0.3em;color:#EC4899;text-transform:uppercase;font-weight:600">Your DVV checklist is ready</p>
       </td></tr>

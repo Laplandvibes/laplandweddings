@@ -542,7 +542,7 @@ info@laplandvibes.com · laplandweddings.online`;
     <tr><td align="center">
       <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;width:100%;background:#FFFFFF;border-radius:12px;overflow:hidden;border:1px solid #E2E8F0">
         <tr><td style="background:#0F172A;padding:14px 28px">
-          <span style="font-size:16px;font-weight:700;letter-spacing:0.05em"><span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span></span>
+          <img src="https://laplandvibes.com/brand/email/laplandweddings-tummalle.png?v=20261115" width="136" height="14" alt="#LAPLANDWEDDINGS" style="display:inline-block;vertical-align:middle;border:0;outline:none;text-decoration:none;width:136px;height:14px;color:#EC4899;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;">
         </td></tr>
         <tr><td style="padding:26px 28px 8px;font-size:15px;line-height:1.65">
           <p style="margin:0 0 14px">${esc(greeting)}</p>
@@ -675,7 +675,7 @@ function renderLeadNotificationEmail(d: LeadEmailData): string {
               <td style="vertical-align:middle">
                 <p style="margin:0;font-size:11px;letter-spacing:0.3em;color:#EC4899;font-weight:700;text-transform:uppercase">New Lead</p>
                 <p style="margin:6px 0 0;font-size:22px;font-weight:700;letter-spacing:0.04em">
-                  <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
+                  <img src="https://laplandvibes.com/brand/email/laplandweddings-tummalle.png?v=20261115" width="194" height="20" alt="#LAPLANDWEDDINGS" style="display:inline-block;vertical-align:middle;border:0;outline:none;text-decoration:none;width:194px;height:20px;color:#EC4899;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;">
                 </p>
               </td>
               ${tierBadge ? `<td align="right" style="vertical-align:middle">
@@ -832,7 +832,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
         <tr><td style="background:linear-gradient(135deg,#0F172A 0%,#1E293B 50%,#7C2D5E 100%);padding:28px 32px 26px;color:#F8FAFC;text-align:center">
           <p style="margin:0 0 12px;font-size:11px;letter-spacing:0.3em;color:#EC4899;text-transform:uppercase;font-weight:700">${eyebrow}</p>
           <p style="margin:0;font-size:22px;letter-spacing:0.02em;font-weight:700;line-height:1.2;white-space:nowrap">
-            <span style="color:#EC4899">#</span><span style="color:#E2E8F0">LAPLAND</span><span style="color:#EC4899">WEDDINGS</span>
+            <img src="https://laplandvibes.com/brand/email/laplandweddings-tummalle.png?v=20261115" width="194" height="20" alt="#LAPLANDWEDDINGS" style="display:inline-block;vertical-align:middle;border:0;outline:none;text-decoration:none;width:194px;height:20px;color:#EC4899;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;">
           </p>
           <p style="margin:14px 0 0;font-size:14px;color:#CBD5E1;line-height:1.5">${heroLine}</p>
         </td></tr>
