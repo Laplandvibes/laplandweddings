@@ -171,7 +171,7 @@ const t_ja = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'ニュースレターにご登録いただくと、メールアドレスは Resend と Supabase を通じて安全に保管されます。配信停止は、各メール内のリンクまたは',
+      newsletterBefore: 'ニュースレターにご登録いただくと、メールアドレスは Resend と Supabase を通じて安全に保管されます。ニュースレター内のリンクは、どのリンクがクリックされたかを把握するために Resend のサーバーを経由しており、クリックはお客様のメールアドレスと紐付けて記録されます。この情報はニュースレターの改善にのみ使用し、メールが開封されたかどうかは記録していません。配信停止は、各メール内のリンクまたは',
       unsubLabel: '配信停止ページ',
       newsletterAfter: 'からいつでも可能です。',
       controllerLabel: '管理者',

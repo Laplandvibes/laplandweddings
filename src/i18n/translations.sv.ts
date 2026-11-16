@@ -171,7 +171,7 @@ const t_sv = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'Om du prenumererar på vårt nyhetsbrev lagras din e-postadress säkert via Resend och Supabase. Du kan avregistrera dig när som helst med länken i varje e-postmeddelande eller via vår ',
+      newsletterBefore: 'Om du prenumererar på vårt nyhetsbrev lagras din e-postadress säkert via Resend och Supabase. Länkarna i våra nyhetsbrev går via Resends servrar så att vi kan se vilka länkar som klickas på, och varje klick kopplas till din e-postadress. Vi använder informationen endast för att förbättra nyhetsbrevet och spårar inte om våra e-postmeddelanden öppnas. Du kan avregistrera dig när som helst med länken i varje e-postmeddelande eller via vår ',
       unsubLabel: 'avregistreringssida',
       newsletterAfter: '.',
       controllerLabel: 'Personuppgiftsansvarig',

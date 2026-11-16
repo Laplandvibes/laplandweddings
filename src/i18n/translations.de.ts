@@ -171,7 +171,7 @@ const t_de = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'Wenn Sie unseren Newsletter abonnieren, wird Ihre E-Mail-Adresse über Resend und Supabase sicher gespeichert. Sie können sich jederzeit über den Link in jeder E-Mail abmelden oder über ',
+      newsletterBefore: 'Wenn Sie unseren Newsletter abonnieren, wird Ihre E-Mail-Adresse über Resend und Supabase sicher gespeichert. Die Links in unseren Newslettern werden über die Server von Resend geleitet, damit wir sehen können, welche Links angeklickt werden; jeder Klick wird dabei Ihrer E-Mail-Adresse zugeordnet. Wir verwenden diese Daten ausschließlich, um den Newsletter zu verbessern, und erfassen nicht, ob unsere E-Mails geöffnet werden. Sie können sich jederzeit über den Link in jeder E-Mail abmelden oder über ',
       unsubLabel: 'unsere Abmeldeseite',
       newsletterAfter: '.',
       controllerLabel: 'Verantwortlicher',

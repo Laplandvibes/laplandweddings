@@ -171,7 +171,7 @@ const t_fi = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'Kun tilaat uutiskirjeemme, sähköpostiosoitteesi tallennetaan turvallisesti Resendin ja Supabasen kautta. Voit perua tilauksesi milloin tahansa jokaisesta viestistä löytyvällä linkillä tai ',
+      newsletterBefore: 'Kun tilaat uutiskirjeemme, sähköpostiosoitteesi tallennetaan turvallisesti Resendin ja Supabasen kautta. Jotta näemme, mitä uutiskirjeidemme linkkejä klikataan, linkit kulkevat Resendin palvelimen kautta ja jokainen klikkaus yhdistetään sähköpostiosoitteeseesi. Käytämme tietoa vain uutiskirjeen kehittämiseen emmekä seuraa, avataanko viestejämme. Voit perua tilauksesi milloin tahansa jokaisesta viestistä löytyvällä linkillä tai ',
       unsubLabel: 'peruutussivulta',
       newsletterAfter: '.',
       controllerLabel: 'Rekisterinpitäjä',

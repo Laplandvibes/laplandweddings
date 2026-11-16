@@ -171,7 +171,7 @@ const t_zhCN = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: '如果您订阅了我们的电子简报，您的电子邮件地址将通过 Resend 和 Supabase 安全存储。您可以随时通过每封邮件中的链接或通过我们的',
+      newsletterBefore: '如果您订阅了我们的电子简报，您的电子邮件地址将通过 Resend 和 Supabase 安全存储。我们电子简报中的链接会经过 Resend 的服务器，以便我们了解哪些链接被点击，每次点击都会关联到您的电子邮件地址。我们仅将这些信息用于改进电子简报，也不会追踪邮件是否被打开。您可以随时通过每封邮件中的链接或通过我们的',
       unsubLabel: '取消订阅页面',
       newsletterAfter: '取消订阅。',
       controllerLabel: '数据控制者',

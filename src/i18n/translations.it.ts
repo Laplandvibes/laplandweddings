@@ -171,7 +171,7 @@ const t_it = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'Se Lei si iscrive alla nostra newsletter, il Suo indirizzo email viene conservato in modo sicuro tramite Resend e Supabase. Può disiscriversi in qualsiasi momento tramite il link presente in ogni email o tramite la nostra ',
+      newsletterBefore: 'Se Lei si iscrive alla nostra newsletter, il Suo indirizzo email viene conservato in modo sicuro tramite Resend e Supabase. I link delle nostre newsletter passano attraverso i server di Resend affinché possiamo sapere quali link vengono cliccati, e ogni clic viene associato al Suo indirizzo email. Utilizziamo queste informazioni esclusivamente per migliorare la newsletter e non monitoriamo l\'apertura delle email. Può disiscriversi in qualsiasi momento tramite il link presente in ogni email o tramite la nostra ',
       unsubLabel: 'pagina di disiscrizione',
       newsletterAfter: '.',
       controllerLabel: 'Titolare del trattamento',

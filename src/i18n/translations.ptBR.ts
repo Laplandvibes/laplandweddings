@@ -171,7 +171,7 @@ const t_ptBR = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'Ao se inscrever no nosso boletim, seu endereço de e-mail é armazenado com segurança pela Resend e Supabase. Você pode cancelar a qualquer momento pelo link em cada e-mail ou pela nossa ',
+      newsletterBefore: 'Ao se inscrever no nosso boletim, seu endereço de e-mail é armazenado com segurança pela Resend e Supabase. Os links dos nossos boletins passam pelos servidores da Resend para que possamos saber quais links são clicados, e cada clique fica associado ao seu endereço de e-mail. Usamos essa informação apenas para melhorar o boletim e não monitoramos se os nossos e-mails são abertos. Você pode cancelar a qualquer momento pelo link em cada e-mail ou pela nossa ',
       unsubLabel: 'página de cancelamento',
       newsletterAfter: '.',
       controllerLabel: 'Controlador',

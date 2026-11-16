@@ -171,7 +171,7 @@ const t_en = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'If you subscribe to our newsletter, your email address is stored securely via Resend and Supabase. You can unsubscribe at any time using the link in every email or via our ',
+      newsletterBefore: 'If you subscribe to our newsletter, your email address is stored securely via Resend and Supabase. Links in our newsletters are routed through Resend\'s servers so that we can see which ones are clicked, and each click is associated with your email address. We use this information only to improve the newsletter, and we do not track whether our emails are opened. You can unsubscribe at any time using the link in every email or via our ',
       unsubLabel: 'unsubscribe page',
       newsletterAfter: '.',
       controllerLabel: 'Controller',

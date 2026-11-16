@@ -171,7 +171,7 @@ const t_fr = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'Si vous vous inscrivez à notre infolettre, votre adresse e-mail est stockée en toute sécurité via Resend et Supabase. Vous pouvez vous désinscrire à tout moment via le lien dans chaque e-mail ou via notre ',
+      newsletterBefore: 'Si vous vous inscrivez à notre infolettre, votre adresse e-mail est stockée en toute sécurité via Resend et Supabase. Les liens de nos infolettres passent par les serveurs de Resend afin que nous puissions voir sur quels liens vous cliquez, et chaque clic est associé à votre adresse e-mail. Nous utilisons ces informations uniquement pour améliorer l\'infolettre et ne suivons pas l\'ouverture de nos e-mails. Vous pouvez vous désinscrire à tout moment via le lien dans chaque e-mail ou via notre ',
       unsubLabel: 'page de désinscription',
       newsletterAfter: '.',
       controllerLabel: 'Responsable du traitement',

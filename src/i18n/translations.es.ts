@@ -171,7 +171,7 @@ const t_es = {
       // kertomaan käsittelystä ja suostumuksen perumisen tavan. Teksti on
       // nostettu sellaisenaan verkoston jaetusta shared/Legal/PrivacyContent
       // -komponentista (natiivi 12 kielellä), ei käännetty täällä.
-      newsletterBefore: 'Si se suscribe a nuestro boletín, su dirección de correo electrónico se almacena de forma segura a través de Resend y Supabase. Puede darse de baja en cualquier momento mediante el enlace de cada correo o a través de nuestra ',
+      newsletterBefore: 'Si se suscribe a nuestro boletín, su dirección de correo electrónico se almacena de forma segura a través de Resend y Supabase. Los enlaces de nuestros boletines pasan por los servidores de Resend para que podamos saber en qué enlaces se hace clic, y cada clic queda asociado a su dirección de correo electrónico. Usamos esta información únicamente para mejorar el boletín y no registramos si se abren nuestros correos. Puede darse de baja en cualquier momento mediante el enlace de cada correo o a través de nuestra ',
       unsubLabel: 'página para darse de baja',
       newsletterAfter: '.',
       controllerLabel: 'Responsable del tratamiento',
