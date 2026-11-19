@@ -91,7 +91,7 @@ const venueRegistry: Venue[] = [
       nl: ['Glass Teepee: glazen kapel in de wildernis', 'Celebration House: feestzaal voor 250 gasten', 'Restaurant Planetarium'],
       sv: ['Glass Teepee: glaskapell i vildmarken', 'Celebration House: festsal för 250 gäster', 'Restaurang Planetarium'],
     },
-    website: 'https://www.kakslauttanen.fi/wedding-honeymoon',
+    website: 'https://www.kakslauttanen.fi/weddings-honeymoons',
     image: '/images/venues/kakslauttanen.jpg',
     imageAlt: {
       fi: 'Kakslauttasen lasi-iglu lumipeitteisellä metsäaukealla',
