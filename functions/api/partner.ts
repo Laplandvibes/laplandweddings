@@ -140,7 +140,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
           <div style="padding:16px 18px;background:#FBF6F0;border-left:3px solid #EC4899;border-radius:8px;font-size:15px;color:#1F1612;line-height:1.6;white-space:pre-wrap">${escapeHtml(message)}</div>
         </td></tr>` : ''}
         <tr><td style="padding:15px 30px;background:#FBF8F3;border-top:1px solid #EFEAE1;text-align:center">
-          <p style="margin:0;font-size:11px;color:#8B7E73">laplandweddings.online · partner application · reply-to set to the applicant</p>
+          <p style="margin:0;font-size:11px;color:#8B7E73">laplandweddings.fi · partner application · reply-to set to the applicant</p>
         </td></tr>
       </table>
     </td></tr>

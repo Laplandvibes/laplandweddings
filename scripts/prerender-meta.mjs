@@ -32,7 +32,7 @@ import { locationTitle, typeTitle } from '../src/lib/routeTitle.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, '..', 'dist');
-const SITE = 'https://laplandweddings.online';
+const SITE = 'https://laplandweddings.fi';
 
 if (!existsSync(resolve(DIST, 'index.html'))) {
   console.error('dist/index.html not found — run vite build first');
@@ -303,7 +303,7 @@ function patchHtml({ lang, title, description, image, canonical, ogLocaleStr, no
   description = clampDescription(description);
   out = out.replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/, `<meta name="description" content="${escapeAttr(description)}" />`);
 
-  const og = /^https?:/.test(image) ? image : 'https://laplandweddings.online' + image;
+  const og = /^https?:/.test(image) ? image : 'https://laplandweddings.fi' + image;
   const altOgLocales = LOCALES
     .filter((L) => L.lang !== lang)
     .map((L) => `<meta property="og:locale:alternate" content="${L.og}" />`);

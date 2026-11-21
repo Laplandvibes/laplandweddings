@@ -249,7 +249,7 @@ export default function VenuePage() {
           '@type': 'EventVenue',
           name: v.name,
           description: v.description[dataLang],
-          url: `https://laplandweddings.online/venues/${v.slug}`,
+          url: `https://laplandweddings.fi/venues/${v.slug}`,
           address: { '@type': 'PostalAddress', addressLocality: v.region[dataLang], addressCountry: 'FI' },
           maximumAttendeeCapacity: v.capacity.max,
         }}

@@ -77,7 +77,7 @@ export default function Locations() {
           itemListElement: locations.map((l, i) => ({
             '@type': 'ListItem',
             position: i + 1,
-            url: `https://laplandweddings.online/locations/${l.slug}`,
+            url: `https://laplandweddings.fi/locations/${l.slug}`,
             name: l.name[dataLang],
           })),
         }}

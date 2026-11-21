@@ -64,7 +64,7 @@ export default function Navigation() {
     <header className="sticky top-0 z-40 backdrop-blur-md" style={{ background: 'rgba(31, 22, 18, 0.92)', borderBottom: '1px solid rgba(245,235,224,0.10)' }}>
       <div className="lv-navrivi max-w-screen-2xl mx-auto flex items-center justify-between gap-1.5 sm:gap-3 px-2 sm:px-6 py-2.5 sm:py-3 xl:h-16 xl:px-8 xl:py-0">
         <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
-          <EcosystemMenu lang={lang} currentDomain="laplandweddings.online" />
+          <EcosystemMenu lang={lang} currentDomain="laplandweddings.fi" />
           <div className="lv-wm-paikka">
             <L translate="no" to="/" className="notranslate lv-wm font-logo text-2xl sm:text-3xl tracking-wide whitespace-nowrap inline-flex items-center min-h-11" data-lv-sanamerkki="" style={WM_STYLE} onClick={() => setOpen(false)}>
               {/* VIRALLINEN sanamerkki (Vesa 14.11.2026; yläpalkki 15.11.2026 "sama leveys kuin nyt"): piirros ./lvSanamerkki.ts,

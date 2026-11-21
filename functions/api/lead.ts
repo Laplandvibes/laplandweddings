@@ -531,7 +531,7 @@ ${planLinks.map(([url, name, desc]) => `- ${name} — ${desc}: ${url}`).join('\n
 ${li('Warmly,', 'Lämpimin terveisin,')}
 Vesa Pesola
 LaplandWeddings — ${li('part of the LaplandVibes network', 'osa LaplandVibes-verkostoa')}
-info@laplandvibes.com · laplandweddings.online`;
+info@laplandvibes.com · laplandweddings.fi`;
 
   const esc = escapeHtml;
   const html = `<!doctype html>
@@ -581,7 +581,7 @@ info@laplandvibes.com · laplandweddings.online`;
           <p style="margin:0 0 24px">${esc(li('Warmly,', 'Lämpimin terveisin,'))}<br>
             <strong>Vesa Pesola</strong><br>
             <span style="color:#64748B;font-size:13px">LaplandWeddings — ${esc(li('part of the LaplandVibes network', 'osa LaplandVibes-verkostoa'))}<br>
-            info@laplandvibes.com · laplandweddings.online</span></p>
+            info@laplandvibes.com · laplandweddings.fi</span></p>
         </td></tr>
       </table>
     </td></tr>
@@ -726,7 +726,7 @@ function renderLeadNotificationEmail(d: LeadEmailData): string {
         <!-- Footer -->
         <tr><td style="background:#0F172A;padding:18px 32px;text-align:center">
           <p style="margin:0;font-size:11px;color:#64748B;letter-spacing:0.05em">
-            <a href="https://laplandweddings.online" style="color:#94A3B8;text-decoration:none">laplandweddings.online</a>
+            <a href="https://laplandweddings.fi" style="color:#94A3B8;text-decoration:none">laplandweddings.fi</a>
             &nbsp;·&nbsp; routed via Cloudflare Pages Function
             &nbsp;·&nbsp; reply-to is set to the couple
           </p>
@@ -745,7 +745,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
 
   // Hero image — own brand asset hosted on our domain (JPG for broadest
   // mail-client support; never hotlink third-party photography).
-  const heroImage = 'https://laplandweddings.online/images/heroes/couple-snow-trail-px19478687.jpg';
+  const heroImage = 'https://laplandweddings.fi/images/heroes/couple-snow-trail-px19478687.jpg';
   const heroAlt = isFi
     ? 'Pari kävelee käsi kädessä lumisella metsätiellä'
     : 'A couple walking hand in hand along a snowy forest path';
@@ -803,8 +803,8 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
   const ctaButton = isFi ? 'Selaa hääpaikkoja' : 'Browse venues';
 
   const ps = isFi
-    ? 'Sillä välin voitte ladata maksuttoman <a href="https://laplandweddings.online/fi/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapin häiden muistilistan</a>, jonka mukana saatte myös suunnitteluvinkkimme sähköpostiinne.'
-    : 'In the meantime, grab our free <a href="https://laplandweddings.online/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapland wedding checklist</a>, which also signs you up for our occasional planning tips.';
+    ? 'Sillä välin voitte ladata maksuttoman <a href="https://laplandweddings.fi/fi/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapin häiden muistilistan</a>, jonka mukana saatte myös suunnitteluvinkkimme sähköpostiinne.'
+    : 'In the meantime, grab our free <a href="https://laplandweddings.fi/checklist/dvv-foreign-couples/" style="color:#EC4899;font-weight:600">Lapland wedding checklist</a>, which also signs you up for our occasional planning tips.';
 
   const sig = isFi
     ? 'Lapeso Oy · LaplandVibes-verkosto'
@@ -888,7 +888,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
             <tr><td style="padding:22px 22px 22px;text-align:center">
               <p style="margin:0 0 6px;font-size:17px;font-weight:700;color:#F8FAFC;letter-spacing:-0.01em">${ctaTitle}</p>
               <p style="margin:0 0 16px;font-size:14px;color:#94A3B8;line-height:1.5">${ctaP}</p>
-              <a href="https://laplandweddings.online/venues/"
+              <a href="https://laplandweddings.fi/venues/"
                  style="display:inline-block;padding:12px 26px;background:#BE185D;color:#FFFFFF;font-size:14px;font-weight:700;border-radius:999px;text-decoration:none;letter-spacing:0.02em;box-shadow:0 6px 18px rgba(236,72,153,0.45)">
                 ${ctaButton} →
               </a>
@@ -937,7 +937,7 @@ function renderConfirmEmail({ lang, greeting }: { lang: string; greeting: string
         <tr><td style="background:#0F172A;padding:22px 32px;text-align:center">
           <p style="margin:0 0 8px;font-size:12px;color:#94A3B8;letter-spacing:0.05em">${sig}</p>
           <p style="margin:0;font-size:12px;color:#64748B">
-            <a href="https://laplandweddings.online" style="color:#94A3B8;text-decoration:none">laplandweddings.online</a>
+            <a href="https://laplandweddings.fi" style="color:#94A3B8;text-decoration:none">laplandweddings.fi</a>
             &nbsp;·&nbsp;
             <a href="mailto:info@laplandvibes.com" style="color:#94A3B8;text-decoration:none">info@laplandvibes.com</a>
           </p>

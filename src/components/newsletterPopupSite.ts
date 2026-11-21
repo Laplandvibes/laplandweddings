@@ -1,7 +1,7 @@
 import type { NewsletterPopupCopy, NewsletterPopupTheme } from '../shared/NewsletterPopup';
 
 /**
- * laplandweddings.online: uutiskirjepopupin oma väri ja teksti.
+ * laplandweddings.fi: uutiskirjepopupin oma väri ja teksti.
  *
  * Vesa 23.9.2026: "tekstit ja värimaailma sivustokohtaisiksi" → "kyllä, vie
  * kaikille". Kuva, lomake, nappi ja #LAPLAND-merkki pysyvät verkoston yhteisinä.

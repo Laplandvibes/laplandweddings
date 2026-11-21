@@ -40,7 +40,7 @@ function bad(message: string, status = 400): Response {
 
 function welcomeHtml(lang: string, firstName: string): string {
   const isFi = lang === 'fi';
-  const checklistUrl = `https://laplandweddings.online${isFi ? '/fi' : ''}/checklist/dvv-foreign-couples/`;
+  const checklistUrl = `https://laplandweddings.fi${isFi ? '/fi' : ''}/checklist/dvv-foreign-couples/`;
   const greeting = firstName ? (isFi ? `Hei ${escapeHtml(firstName)}` : `Hello ${escapeHtml(firstName)}`) : (isFi ? 'Tervetuloa' : 'Welcome');
 
   if (isFi) {

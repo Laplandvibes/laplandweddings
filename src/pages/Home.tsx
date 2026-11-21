@@ -94,7 +94,7 @@ export default function Home() {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'LaplandWeddings',
-          url: 'https://laplandweddings.online',
+          url: 'https://laplandweddings.fi',
           description: seo.description,
           areaServed: 'Finnish Lapland',
           parentOrganization: {

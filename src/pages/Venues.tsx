@@ -76,7 +76,7 @@ export default function Venues() {
           itemListElement: venues.map((v, i) => ({
             '@type': 'ListItem',
             position: i + 1,
-            url: `https://laplandweddings.online/venues/${v.slug}`,
+            url: `https://laplandweddings.fi/venues/${v.slug}`,
             name: v.name,
           })),
         }}

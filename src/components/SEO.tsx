@@ -15,8 +15,8 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-const SITE = 'https://laplandweddings.online';
-const DEFAULT_IMAGE = 'https://laplandweddings.online/og.jpg?v=f6fbe936'; // was a hotlink to a third-party photographer's site (19.9.2026)
+const SITE = 'https://laplandweddings.fi';
+const DEFAULT_IMAGE = 'https://laplandweddings.fi/og.jpg?v=f6fbe936'; // was a hotlink to a third-party photographer's site (19.9.2026)
 
 const SUPPORTED: Lang[] = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 const URL_PREFIX_OF: Record<Lang, string> = {
@@ -100,11 +100,11 @@ function injectInLanguage(node: unknown, bcp47: string): unknown {
 
 // Rakenteisen datan sisäiset osoitteet samaan muotoon kuin kanoninen, hreflang ja sivukartta:
 // sivun OMA kieliversio ja loppukauttaviiva. Sivujen schema-oliot on kirjoitettu englannin
-// kauttaviivattomilla osoitteilla (https://laplandweddings.online/locations/rovaniemi), jolloin esim.
+// kauttaviivattomilla osoitteilla (https://laplandweddings.fi/locations/rovaniemi), jolloin esim.
 // /fi/locations/ kertoi Googlelle paikkalistansa osoitteiksi englanninkielisten sivujen 308-ohjautuvat muodot.
 // Mitattu 12.–13.11.2026, mittari lv-ops scripts/audit_jsonld_osoitteet.mjs.
 // - polullinen osoite -> kieliversio + kauttaviiva (/fi/locations/rovaniemi/)
-// - juuri -> https://laplandweddings.online/ ; murupolun item saisi kielijuuren (/fi/)
+// - juuri -> https://laplandweddings.fi/ ; murupolun item saisi kielijuuren (/fi/)
 // - tiedostot (.jpg), ankkurit (#org) ja ulkoiset osoitteet jäävät ennalleen
 const INTERNAL_URL = /^https:\/\/laplandweddings\.online((?:\/[A-Za-z0-9_-]+)*)\/?$/;
 function localizeUrls(node: unknown, lang: Lang, key = ''): unknown {

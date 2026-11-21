@@ -4,14 +4,14 @@
 
 ## Main pages
 
-- [Home](https://laplandweddings.online/): Weddings in Finnish Lapland
-- [Wedding types](https://laplandweddings.online/wedding-types/): Northern Lights, snow chapel, glass igloo, midnight sun, elopement and vow renewal
-- [Venues](https://laplandweddings.online/venues/): Wedding venues across Lapland
-- [Locations](https://laplandweddings.online/locations/): Rovaniemi, Levi, Ylläs, Saariselkä and more
-- [Photographers](https://laplandweddings.online/photographers/): Wedding photographers in Lapland
-- [Practical guide](https://laplandweddings.online/practical-guide/): Practical planning information
-- [Pricing](https://laplandweddings.online/pricing/): Wedding planning services
-- [DVV checklist for foreign couples](https://laplandweddings.online/checklist/dvv-foreign-couples/): Marriage paperwork in Finland
+- [Home](https://laplandweddings.fi/): Weddings in Finnish Lapland
+- [Wedding types](https://laplandweddings.fi/wedding-types/): Northern Lights, snow chapel, glass igloo, midnight sun, elopement and vow renewal
+- [Venues](https://laplandweddings.fi/venues/): Wedding venues across Lapland
+- [Locations](https://laplandweddings.fi/locations/): Rovaniemi, Levi, Ylläs, Saariselkä and more
+- [Photographers](https://laplandweddings.fi/photographers/): Wedding photographers in Lapland
+- [Practical guide](https://laplandweddings.fi/practical-guide/): Practical planning information
+- [Pricing](https://laplandweddings.fi/pricing/): Wedding planning services
+- [DVV checklist for foreign couples](https://laplandweddings.fi/checklist/dvv-foreign-couples/): Marriage paperwork in Finland
 
 ## Languages
 
@@ -20,5 +20,5 @@ English (default), Finnish (/fi/), Swedish (/sv/), German (/de/), French (/fr/),
 ## Network
 
 - [LaplandVibes hub](https://laplandvibes.com/)
-- [Sitemap](https://laplandweddings.online/sitemap.xml)
+- [Sitemap](https://laplandweddings.fi/sitemap.xml)
 - Contact: info@laplandvibes.com

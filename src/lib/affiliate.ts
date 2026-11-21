@@ -15,7 +15,7 @@
  */
 
 const TRIP_SID = '309472136';
-const SITE_TAG = 'laplandweddings.online';
+const SITE_TAG = 'laplandweddings.fi';
 
 // LOCALE: 2026-05-16 — partner-specific locale params so DE/FI users land on
 // the German / Finnish partner pages instead of EN.

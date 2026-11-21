@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SITE = 'https://laplandweddings.online';
+const SITE = 'https://laplandweddings.fi';
 const today = new Date().toISOString().slice(0, 10);
 
 // 🔴 THIRD copy of the location list. Adding a region means editing all three:

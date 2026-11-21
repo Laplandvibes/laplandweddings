@@ -1,4 +1,4 @@
-# robots.txt for laplandweddings.online
+# robots.txt for laplandweddings.fi
 # LaplandVibes ecosystem-wide AI-crawler allowlist.
 
 User-agent: *
@@ -26,7 +26,7 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://laplandweddings.online/sitemap.xml
+Sitemap: https://laplandweddings.fi/sitemap.xml
 
 # LaplandVibes ecosystem
 # https://laplandvibes.com
